@@ -18,7 +18,7 @@ python synthesize.py '안녕하세요.' --model .hf-assets/model/models/cfg-mixe
   --lang ko --steps 8 --output samples/hello.wav
 ```
 
-체크포인트와 교사 궤적 데이터로 같은 학습 단계를 재현하려면 다음 파일 경로를 `train_joint.py`에 전달합니다:
+체크포인트와 교사 궤적 데이터로 선택 모델의 증류 단계를 재현합니다. 다음 받은 파일을 그대로 지정하면 됩니다:
 
 ```text
 .hf-assets/model/reproduction/checkpoints/mixed-v1-initial.pt
@@ -27,32 +27,32 @@ python synthesize.py '안녕하세요.' --model .hf-assets/model/models/cfg-mixe
 
 첫 번째 파일은 600회 CFG 증류의 초기 혼합 폭 가중치이고 두 번째 경로는 훈련/검증 궤적입니다. 원본 Supertonic 모델은 아래 설치 단계의 `download.py`로 고정 리비전에서 받습니다. 새 학습은 하드웨어와 라이브러리 버전에 따라 가중치가 달라질 수 있습니다.
 
-먼저 루트 README의 설치, `download.py`, FP32 캐시 모델 준비를 완료합니다. 아래는 기존 실험 파이프라인을 다시 실행하는 방법입니다. 모델·체크포인트는 Git에 포함되지 않으며 바로 위 Hugging Face 공개 저장소에서 내려받습니다. 학습에는 여러 GB의 RAM·디스크와 Mac MPS가 필요합니다. CPU1·1GB 조건은 완성된 모델의 추론 측정 조건입니다.
+프로젝트를 설치한 뒤 원본 Supertonic을 받고 export용 FP32 캐시 패키지를 만듭니다. 모델·체크포인트는 Git에 포함되지 않으며 위 Hugging Face 저장소에서 받습니다. 학습에는 여러 GB의 RAM·디스크와 Mac MPS가 필요합니다. CPU1·1GB 조건은 완성된 모델의 추론 측정 조건입니다.
 
-## 혼합 폭 CFG 증류
+## 혼합 폭 CFG 증류 재실행
+
+아래는 Hub의 초기 checkpoint와 궤적 데이터에서 선택 후보를 다시 학습·내보내는 최소 경로입니다. 저장된 모델을 단순히 사용하려면 재학습 없이 위의 `synthesize.py` 명령을 실행하세요.
 
 ```bash
 python -m pip install -r requirements-train.txt
-python distill/collect.py
-python distill/train.py --width 512 --iterations 2400 --qat-steps 600 --output distill/student512
-python distill/train.py --width 1024 --iterations 1600 --qat-steps 600 --output distill/student1024
-python distill/train.py --width 1536 --iterations 1600 --qat-steps 600 --output distill/student1536
-python distill/init_mixed.py
-python distill/collect_vectors.py --output distill/trajectories-v1
-python distill/collect_vectors.py --source distill/trajectories-v1 --repeats 5 --output distill/trajectories-v2
-python experiments/guidance.py conditional --source models/supertonic-3 --output models/cfg-student-fp32-source
+python download.py
+python prepare.py --mode fp32-cached --output models/fast-fp32-cached
+python experiments/guidance.py conditional --source models/supertonic-3 \
+  --output models/cfg-student-fp32-source
 python distill/train_joint.py \
-  --checkpoints distill/mixed-v1/initial.pt --data distill/trajectories-v2 \
+  --checkpoints .hf-assets/model/reproduction/checkpoints/mixed-v1-initial.pt \
+  --data .hf-assets/data/trajectories-v2 \
   --graph models/cfg-student-fp32-source/onnx/vector_estimator.onnx --train-all \
   --iterations 2400 --learning-rate 3e-5 --validate-every 200 \
-  --output distill/joint-cfg-mixed-v1
+  --output distill/joint-cfg-mixed-v1-retrained
 python distill/export_joint.py \
-  --checkpoint distill/joint-cfg-mixed-v1/best_step_00600.pt \
+  --checkpoint distill/joint-cfg-mixed-v1-retrained/best_step_00600.pt \
   --graph models/cfg-student-fp32-source/onnx/vector_estimator.onnx \
   --base models/fast-fp32-cached --int8 --cfg-distilled \
   --output models/cfg-mixed-v1-retrained
 ```
 
+Hub에는 이 단계 전에 학습한 혼합 폭 초기 가중치도 함께 저장했습니다. 그래서 위 과정에 별도의 2.2GB 층별 activation 수집과 512/1024/1536 폭 사전학습은 필요하지 않습니다. 전체 초기화부터 다시 학습하려면 Git의 `distill/collect.py`, `distill/train.py`, `distill/init_mixed.py` 코드를 사용하고 새 설정·결과를 별도 기록하세요.
 600회 체크포인트는 기존 선택 후보의 출발점입니다. 새 훈련에서 해당 시점이 best로 저장되지 않거나 하드웨어·연산 차이가 발생하면 기존 가중치와 같지 않습니다. 현재 스크립트는 **검증 손실 best 갱신 시점**을 별도 파일로 남깁니다. 새 실행의 검증과 청취로 선택하고 기존 결과를 그대로 붙이지 마세요. `docs/models/`의 SHA-256은 과거 선택 ONNX의 식별자이며 새 훈련 출력의 일치를 보장하지 않습니다.
 
 층별 원본 FFN은 2048 폭이고 혼합 폭은 512×2, 1024×4, 1536×12, 2048×10입니다. 반복부 파라미터는 64,014,576→50,369,776입니다. frontend/decoder는 FP32, 반복부는 감소 범위·채널별 동적 INT8입니다. 내보내기에서 기존 `condition.onnx`를 제거하고 완전한 단일 경로 그래프를 저장합니다.
