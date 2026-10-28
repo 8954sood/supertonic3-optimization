@@ -59,6 +59,30 @@ python benchmark.py --model models/fast-fp32-cached --steps 8 --repeats 3 \
 
 ## 재현과 후속 작업
 
+학습된 모델과 중간 파일은 공개 Hugging Face 저장소에서 내려받습니다: [모델과 체크포인트](https://huggingface.co/babihoba/supertonic3-optimization), [증류 훈련 데이터](https://huggingface.co/datasets/babihoba/supertonic3-optimization-data). Hugging Face 저장소에는 선택 후보와 비교용 두 모델, 재현용 초기/600회 체크포인트, 1,600개 학습·64개 검증 궤적이 있습니다. 저장소 용량은 약 1.2GB입니다.
+
+```python
+from huggingface_hub import snapshot_download
+
+snapshot_download(
+    repo_id="babihoba/supertonic3-optimization",
+    repo_type="model",
+    local_dir=".hf-assets/model",
+)
+snapshot_download(
+    repo_id="babihoba/supertonic3-optimization-data",
+    repo_type="dataset",
+    local_dir=".hf-assets/data",
+)
+```
+
+```bash
+python synthesize.py '안녕하세요.' --model .hf-assets/model/models/cfg-mixed-v1-selected \
+  --lang ko --steps 8 --output samples/hello.wav
+```
+
+체크포인트·데이터로 학습을 다시 돌리는 방법은 [다운로드 및 학습 재현 안내](docs/REPRODUCING.md)에 있습니다. 두 저장소는 공개이므로 다운로드에는 토큰이 필요하지 않습니다.
+
 - [현재 상태와 인계](records/2026-10-28/HANDOFF_ROUND3.md): 모델 선택, 실패, 시험 사용 이력, 다음 우선순위.
 - [학습 재현](docs/REPRODUCING.md): 수집 → 층별 학습 → 혼합 폭 → CFG 증류 → ONNX 내보내기.
 - [전체 작업 색인](WORK_LOG.md): 1~3차 기록과 성능·ASR·음향 지표.

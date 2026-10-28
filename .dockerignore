@@ -4,6 +4,7 @@ results
 samples
 .git
 .private
+.hf-assets
 .env
 .env.*
 .ssh

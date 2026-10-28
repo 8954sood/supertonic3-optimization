@@ -1,6 +1,33 @@
 # 학습·검증 재현
 
-먼저 루트 README의 설치, `download.py`, FP32 캐시 모델 준비를 완료합니다. 아래는 기존 실험 파이프라인을 다시 실행하는 방법입니다. 모델·체크포인트는 Git에 없으며 정확한 기존 가중치를 복원하는 다운로드 경로도 제공하지 않습니다. 학습에는 여러 GB의 RAM·디스크와 Mac MPS가 필요합니다. CPU1·1GB 조건은 완성된 모델의 추론 측정 조건입니다.
+## Hugging Face에서 모델과 학습 자료 받기
+
+공개 [모델 저장소](https://huggingface.co/babihoba/supertonic3-optimization)에는 세 개의 완전한 ONNX 모델과 `mixed-v1-initial.pt`, 선택된 `cfg-mixed-v1-step-00600.pt`가 있습니다. [데이터셋 저장소](https://huggingface.co/datasets/babihoba/supertonic3-optimization-data)에는 1,600개 훈련 쌍과 64개 검증 쌍이 있습니다. 파일별 SHA-256은 각 저장소의 `asset_manifest.json`에서 확인합니다. 총 다운로드는 약 1.2GB입니다.
+
+```python
+from huggingface_hub import snapshot_download
+
+snapshot_download("babihoba/supertonic3-optimization", repo_type="model", local_dir=".hf-assets/model")
+snapshot_download("babihoba/supertonic3-optimization-data", repo_type="dataset", local_dir=".hf-assets/data")
+```
+
+추론할 선택 모델:
+
+```bash
+python synthesize.py '안녕하세요.' --model .hf-assets/model/models/cfg-mixed-v1-selected \
+  --lang ko --steps 8 --output samples/hello.wav
+```
+
+체크포인트와 교사 궤적 데이터로 같은 학습 단계를 재현하려면 다음 파일 경로를 `train_joint.py`에 전달합니다:
+
+```text
+.hf-assets/model/reproduction/checkpoints/mixed-v1-initial.pt
+.hf-assets/data/trajectories-v2
+```
+
+첫 번째 파일은 600회 CFG 증류의 초기 혼합 폭 가중치이고 두 번째 경로는 훈련/검증 궤적입니다. 원본 Supertonic 모델은 아래 설치 단계의 `download.py`로 고정 리비전에서 받습니다. 새 학습은 하드웨어와 라이브러리 버전에 따라 가중치가 달라질 수 있습니다.
+
+먼저 루트 README의 설치, `download.py`, FP32 캐시 모델 준비를 완료합니다. 아래는 기존 실험 파이프라인을 다시 실행하는 방법입니다. 모델·체크포인트는 Git에 포함되지 않으며 바로 위 Hugging Face 공개 저장소에서 내려받습니다. 학습에는 여러 GB의 RAM·디스크와 Mac MPS가 필요합니다. CPU1·1GB 조건은 완성된 모델의 추론 측정 조건입니다.
 
 ## 혼합 폭 CFG 증류
 
