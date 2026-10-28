@@ -1,0 +1,20 @@
+{
+  "source": "https://cdn.mesmer.tools/paradee/paradee-web-v2.zip",
+  "archive_sha256": "22948ff6b0ae59b2edee04940a35489e97236c72609d3f778359e0446a1f6e09",
+  "c_cpp_headers_in_bundle": [],
+  "observed_design": [
+    "model-specific compiled WASM exports rather than generic ONNX dispatch",
+    "fixed token input allocation before per-call arena mark",
+    "packed 4/6/8-bit model descriptors",
+    "separate text/trunk and chunked DSP decode interface",
+    "shared WASM memory views with copy only for returned audio",
+    "SIMD and relaxed-SIMD builds selected with a feature probe"
+  ],
+  "application_here": [
+    "native custom matmul without Python tensor conversion",
+    "reused thread-local decoded-layer scratch buffer",
+    "packed weights with only one layer expanded at a time",
+    "immutable text/style conditioning split from eight-step loop"
+  ],
+  "limits": "Public bundle includes WASM binaries and JavaScript wrapper; no C/C++ source files were present in this archive. New C operator was implemented independently. This is a partial native backend inside ORT, not a full standalone Supertonic runtime."
+}

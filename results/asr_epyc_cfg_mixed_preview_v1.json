@@ -1,0 +1,25 @@
+{
+  "note": "Two benchmark sentences rendered on the actual remote x86 CPU. Small intelligibility smoke check only.",
+  "rows": [
+    {
+      "file": "samples/epyc_cfg_mixed_preview_v1_8/en_short_8steps.wav",
+      "case": "en_short",
+      "language": "en",
+      "reference": "Hello. This voice is generated locally using a single CPU thread.",
+      "transcript": "Hello, this voice is generated locally using a single CPU thread.",
+      "errors": 0,
+      "reference_units": 11,
+      "error_rate": 0.0
+    },
+    {
+      "file": "samples/epyc_cfg_mixed_preview_v1_8/ko_short_8steps.wav",
+      "case": "ko_short",
+      "language": "ko",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "errors": 0,
+      "reference_units": 25,
+      "error_rate": 0.0
+    }
+  ]
+}

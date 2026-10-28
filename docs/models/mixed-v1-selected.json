@@ -1,0 +1,50 @@
+{
+  "mode": "joint-FFN-distillation",
+  "status": "experimental selected tradeoff; listening equivalence unconfirmed; tested on M4 CPU and EPYC CPU1",
+  "step": 400,
+  "validation_relative_update_mse": 0.019176095132327948,
+  "base": "models/fast-fp32-cached (condition cache removed)",
+  "vector_int8": true,
+  "minimum_steps": 8,
+  "guidance_scale": 4,
+  "training": {
+    "checkpoints": "distill/mixed-v1/initial.pt",
+    "data": "distill/trajectories-v2",
+    "output": "distill/joint-mixed-v1",
+    "iterations": 1200,
+    "learning_rate": 3e-05,
+    "validate_every": 100
+  },
+  "source_export": "models/mixed-v1-preview-int8",
+  "source_step": 400,
+  "checkpoint_note": "The best.pt path in the historical export has since advanced to step1200. The preserved step400 artifact is this ONNX export; original step400 FP32 checkpoint was not archived.",
+  "record": "records/2026-10-28/ROUND2.md",
+  "vector_sha256": "ca5ec5538b736233014c8c086683a51f2b7c735a98f34098ebbe550366e18644",
+  "historical_checkpoint_path": "distill/joint-mixed-v1/best.pt",
+  "checkpoint": null,
+  "validation": {
+    "source": "results/distill_mixed_selected_validation_v1.json",
+    "ko_cer": 0.011363636363636364,
+    "en_wer": 0,
+    "original_ko_cer": 0.022727272727272728,
+    "original_en_wer": 0
+  },
+  "held_out_test": {
+    "source": "results/distill_mixed_selected_test_v1.json",
+    "unique_texts": 12,
+    "ko_cer": 0.028169014084507043,
+    "en_wer": 0.013888888888888888,
+    "original_ko_cer": 0.028169014084507043,
+    "original_en_wer": 0,
+    "note": "Frozen selected model evaluated once. Do not reuse test set for tuning."
+  },
+  "epyc_benchmark": {
+    "source": "results/epyc_mixed_selected_v1_8.json",
+    "ko_seconds": 9.994838939979672,
+    "en_seconds": 9.095747344195843,
+    "sampled_peak_rss_mb": 356.917248,
+    "threads": 1,
+    "steps": 8,
+    "guidance_scale": 4
+  }
+}

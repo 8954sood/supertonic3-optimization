@@ -1,0 +1,8 @@
+{
+  "input": "distill/trajectories-v1/train/000_0.npz",
+  "device": "mps",
+  "rmse": 3.3365208196300955e-07,
+  "relative_rmse": 3.7839839706066414e-07,
+  "max_error": 2.1457672119140625e-06,
+  "seconds": 1.9201512089930475
+}

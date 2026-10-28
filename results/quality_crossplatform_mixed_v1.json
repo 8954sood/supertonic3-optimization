@@ -1,0 +1,40 @@
+{
+  "rows": [
+    {
+      "variant": "mixed-selected",
+      "case": "ko_short",
+      "voice": "M1",
+      "language": "ko",
+      "text": "\uc548\ub155\ud558\uc138\uc694. \uc624\ub798\ub41c \ucef4\ud4e8\ud130\uc5d0\uc11c\ub3c4 \ube60\ub974\uac8c \uc74c\uc131\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4.",
+      "audio": "samples/epyc_mixed_selected_v1_8/ko_short_8steps.wav",
+      "reference_audio": "samples/mac_mixed_selected_crossplatform_v1/ko_short_8steps.wav"
+    },
+    {
+      "variant": "mixed-selected",
+      "case": "en_short",
+      "voice": "M1",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "audio": "samples/epyc_mixed_selected_v1_8/en_short_8steps.wav",
+      "reference_audio": "samples/mac_mixed_selected_crossplatform_v1/en_short_8steps.wav"
+    },
+    {
+      "variant": "full-int8",
+      "case": "ko_short",
+      "voice": "M1",
+      "language": "ko",
+      "text": "\uc548\ub155\ud558\uc138\uc694. \uc624\ub798\ub41c \ucef4\ud4e8\ud130\uc5d0\uc11c\ub3c4 \ube60\ub974\uac8c \uc74c\uc131\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4.",
+      "audio": "samples/epyc_full_int8_8/ko_short_8steps.wav",
+      "reference_audio": "samples/mac_full_int8_crossplatform_v1/ko_short_8steps.wav"
+    },
+    {
+      "variant": "full-int8",
+      "case": "en_short",
+      "voice": "M1",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "audio": "samples/epyc_full_int8_8/en_short_8steps.wav",
+      "reference_audio": "samples/mac_full_int8_crossplatform_v1/en_short_8steps.wav"
+    }
+  ]
+}

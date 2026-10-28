@@ -1,0 +1,45 @@
+{
+  "note": "Same model/text/voice/seed/8 steps on M4 and EPYC. Unaligned waveform correlation is not a perceptual score; differing lengths make it uninformative.",
+  "rows": [
+    {
+      "model": "mixed-selected",
+      "case": "ko_short",
+      "mac_samples": 234613,
+      "server_samples": 234613,
+      "relative_duration_error": 0.0,
+      "unaligned_rmse": 0.04059379340808641,
+      "unaligned_snr_db": 1.3237805454195586,
+      "unaligned_correlation": 0.6312263743082938
+    },
+    {
+      "model": "mixed-selected",
+      "case": "en_short",
+      "mac_samples": 217574,
+      "server_samples": 217574,
+      "relative_duration_error": 0.0,
+      "unaligned_rmse": 0.04250139674776452,
+      "unaligned_snr_db": 0.9592765282614848,
+      "unaligned_correlation": 0.6029703744118399
+    },
+    {
+      "model": "full-int8",
+      "case": "ko_short",
+      "mac_samples": 233237,
+      "server_samples": 240649,
+      "relative_duration_error": 0.03177883440448981,
+      "unaligned_rmse": 0.06206103854272089,
+      "unaligned_snr_db": -2.5179675956340812,
+      "unaligned_correlation": 0.008655961781344108
+    },
+    {
+      "model": "full-int8",
+      "case": "en_short",
+      "mac_samples": 218962,
+      "server_samples": 236769,
+      "relative_duration_error": 0.08132461340323882,
+      "unaligned_rmse": 0.06053769899546976,
+      "unaligned_snr_db": -1.9692682150245995,
+      "unaligned_correlation": 0.04410819899050726
+    }
+  ]
+}

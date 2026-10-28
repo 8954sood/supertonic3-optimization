@@ -1,0 +1,5 @@
+{
+  "relative_rmse": 0.2223082035779953,
+  "max_error": 0.19798175990581512,
+  "note": "One latent input; compare fake U8 activation/S7 per-channel pointwise Conv with ORT reduced-range INT8 MatMul conversion"
+}

@@ -1,0 +1,25 @@
+{
+  "note": "Waveform error is not a speech quality or intelligibility score. Listening/ASR evaluation required for lossy transforms.",
+  "rows": [
+    {
+      "case": "ko_short",
+      "base_samples": 234613,
+      "candidate_samples": 234613,
+      "max_abs_error": 3.182550426572561e-05,
+      "rmse": 1.2762174037561635e-06,
+      "snr_db": 91.24027060581783,
+      "correlation": 0.9999999996243104,
+      "speedup": 4.7646910770893
+    },
+    {
+      "case": "en_short",
+      "base_samples": 217574,
+      "candidate_samples": 217574,
+      "max_abs_error": 5.674920976161957e-05,
+      "rmse": 2.4232779196609044e-06,
+      "snr_db": 85.72282257316385,
+      "correlation": 0.9999999986612481,
+      "speedup": 4.703726222092939
+    }
+  ]
+}

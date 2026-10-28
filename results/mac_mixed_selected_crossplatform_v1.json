@@ -1,0 +1,76 @@
+{
+  "machine": "macOS-27.0.1-arm64-arm-64bit",
+  "processor": "arm",
+  "python": "3.12.13",
+  "onnxruntime": "1.31.1",
+  "numpy": "2.5.4",
+  "providers": [
+    "CPUExecutionProvider"
+  ],
+  "threads": 1,
+  "affinity": null,
+  "voice": "M1",
+  "variant": null,
+  "model": "models/mixed-v1-selected",
+  "low_memory": false,
+  "backend": "ONNX Runtime kernels",
+  "cpu_count": 14,
+  "cpu_affinity": null,
+  "cpu_info": "arm",
+  "load_seconds": 0.3650627080060076,
+  "note": "Measured on this machine only. Apple M4 results do not predict Oracle Ampere A1 performance. Warm synthesis excludes model loading and file I/O. No CPU quota is emulated by this script.",
+  "rows": [
+    {
+      "case": "ko_short",
+      "lang": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 0.3182127919862978,
+          "audio_seconds": 5.320022675736961,
+          "rtf": 0.059814179634528925,
+          "realtime_factor": 16.71844378891607,
+          "stages": {
+            "duration_predictor": 0.0008419170044362545,
+            "text_encoder": 0.004324500012444332,
+            "vector_estimator": 0.2658853339671623,
+            "vocoder": 0.04672174999723211
+          }
+        }
+      ],
+      "median_seconds": 0.3182127919862978,
+      "median_rtf": 0.059814179634528925,
+      "median_realtime_factor": 16.71844378891607,
+      "cpu_wall_ratio": 0.9994412795752551,
+      "rss_mb": 361.775104,
+      "peak": 0.41509947180747986
+    },
+    {
+      "case": "en_short",
+      "lang": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 0.2932556250016205,
+          "audio_seconds": 4.933650793650794,
+          "rtf": 0.05943988281031494,
+          "realtime_factor": 16.823720921375443,
+          "stages": {
+            "duration_predictor": 0.0008279159956146032,
+            "text_encoder": 0.004245499992975965,
+            "vector_estimator": 0.24477920701610856,
+            "vocoder": 0.04301837499951944
+          }
+        }
+      ],
+      "median_seconds": 0.2932556250016205,
+      "median_rtf": 0.05943988281031494,
+      "median_realtime_factor": 16.823720921375443,
+      "cpu_wall_ratio": 0.9999296688627184,
+      "rss_mb": 363.036672,
+      "peak": 0.3784249424934387
+    }
+  ]
+}

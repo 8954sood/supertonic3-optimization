@@ -1,0 +1,218 @@
+{
+  "machine": "macOS-27.0.1-arm64-arm-64bit",
+  "processor": "arm",
+  "python": "3.12.13",
+  "onnxruntime": "1.31.1",
+  "numpy": "2.5.4",
+  "providers": [
+    "CPUExecutionProvider"
+  ],
+  "threads": 1,
+  "affinity": null,
+  "voice": "M1",
+  "variant": "models/int8",
+  "load_seconds": 0.30737187498016283,
+  "note": "Measured on this machine only. ARM results do not predict older x86 CPU speed.",
+  "rows": [
+    {
+      "case": "ko_short",
+      "lang": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 1.6102649169915821,
+          "audio_seconds": 5.3231292517006805,
+          "rtf": 0.30250344127509593,
+          "realtime_factor": 3.3057475173996527,
+          "stages": {
+            "duration_predictor": 0.000835749990073964,
+            "text_encoder": 0.0042979170102626085,
+            "vector_estimator": 1.5684473729634192,
+            "vocoder": 0.0362461669719778
+          }
+        },
+        {
+          "seconds": 1.5790505839977413,
+          "audio_seconds": 5.3231292517006805,
+          "rtf": 0.2966395346296076,
+          "realtime_factor": 3.3710948247293735,
+          "stages": {
+            "duration_predictor": 0.000801375019364059,
+            "text_encoder": 0.004434375005075708,
+            "vector_estimator": 1.5385005829739384,
+            "vocoder": 0.034901084000011906
+          }
+        },
+        {
+          "seconds": 1.5799610409885645,
+          "audio_seconds": 5.3231292517006805,
+          "rtf": 0.29681057255631815,
+          "realtime_factor": 3.369152221861152,
+          "stages": {
+            "duration_predictor": 0.0007875000010244548,
+            "text_encoder": 0.004252374987117946,
+            "vector_estimator": 1.5391372080193833,
+            "vocoder": 0.03536645800340921
+          }
+        }
+      ],
+      "median_seconds": 1.5799610409885645,
+      "median_rtf": 0.29681057255631815,
+      "median_realtime_factor": 3.369152221861152,
+      "cpu_wall_ratio": 0.9993576505889472,
+      "rss_mb": 551.305216,
+      "peak": 0.4126729667186737
+    },
+    {
+      "case": "ko_long",
+      "lang": "ko",
+      "text": "오늘은 인공지능 음성 합성의 속도를 측정합니다. 하나의 CPU 스레드만 사용하면서도 자연스럽고 정확한 한국어를 읽는 것이 목표입니다. 다양한 문장 길이와 추론 단계를 비교하여 실제 사용에 적합한 설정을 찾겠습니다.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 5.0034030840033665,
+          "audio_seconds": 17.660997732426303,
+          "rtf": 0.2833024022655819,
+          "realtime_factor": 3.529797107271084,
+          "stages": {
+            "duration_predictor": 0.002627875015605241,
+            "text_encoder": 0.015745165990665555,
+            "vector_estimator": 4.867032709997147,
+            "vocoder": 0.1172835000033956
+          }
+        },
+        {
+          "seconds": 5.071983749978244,
+          "audio_seconds": 17.660997732426303,
+          "rtf": 0.2871855727984087,
+          "realtime_factor": 3.4820690686365188,
+          "stages": {
+            "duration_predictor": 0.0026359579933341593,
+            "text_encoder": 0.015625250001903623,
+            "vector_estimator": 4.934360873972764,
+            "vocoder": 0.11869091700646095
+          }
+        },
+        {
+          "seconds": 5.000288916984573,
+          "audio_seconds": 17.660997732426303,
+          "rtf": 0.283126072079373,
+          "realtime_factor": 3.531995455789938,
+          "stages": {
+            "duration_predictor": 0.0027009999903384596,
+            "text_encoder": 0.015573416982078925,
+            "vector_estimator": 4.866705663938774,
+            "vocoder": 0.1146135000162758
+          }
+        }
+      ],
+      "median_seconds": 5.0034030840033665,
+      "median_rtf": 0.2833024022655819,
+      "median_realtime_factor": 3.529797107271084,
+      "cpu_wall_ratio": 0.9991129584380106,
+      "rss_mb": 648.134656,
+      "peak": 0.5376234650611877
+    },
+    {
+      "case": "en_short",
+      "lang": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 1.5387400840118062,
+          "audio_seconds": 4.931269841269842,
+          "rtf": 0.3120372913147191,
+          "realtime_factor": 3.2047451629472246,
+          "stages": {
+            "duration_predictor": 0.0008626659982837737,
+            "text_encoder": 0.004529750003712252,
+            "vector_estimator": 1.4995114590565208,
+            "vocoder": 0.03341629201895557
+          }
+        },
+        {
+          "seconds": 1.5228080840024631,
+          "audio_seconds": 4.931269841269842,
+          "rtf": 0.30880648048461445,
+          "realtime_factor": 3.2382740104115872,
+          "stages": {
+            "duration_predictor": 0.000838624982861802,
+            "text_encoder": 0.004356457997346297,
+            "vector_estimator": 1.4833261240564752,
+            "vocoder": 0.033866125013446435
+          }
+        },
+        {
+          "seconds": 1.5278937499970198,
+          "audio_seconds": 4.931269841269842,
+          "rtf": 0.3098377900982143,
+          "realtime_factor": 3.227495263515189,
+          "stages": {
+            "duration_predictor": 0.0008350420102942735,
+            "text_encoder": 0.004511207982432097,
+            "vector_estimator": 1.481731917039724,
+            "vocoder": 0.04039999999804422
+          }
+        }
+      ],
+      "median_seconds": 1.5278937499970198,
+      "median_rtf": 0.3098377900982143,
+      "median_realtime_factor": 3.227495263515189,
+      "cpu_wall_ratio": 0.9981442366711596,
+      "rss_mb": 648.06912,
+      "peak": 0.47654157876968384
+    },
+    {
+      "case": "en_long",
+      "lang": "en",
+      "text": "The morning sunlight came through the window as she opened her book. On an old computer, every unnecessary calculation matters. We measure the time spent preparing the text, generating the speech, and converting it into audio so that the results can be reproduced.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 4.943835707992548,
+          "audio_seconds": 16.900566893424035,
+          "rtf": 0.2925248448273165,
+          "realtime_factor": 3.4185130517386337,
+          "stages": {
+            "duration_predictor": 0.0029207920015323907,
+            "text_encoder": 0.017024542001308873,
+            "vector_estimator": 4.810486249043606,
+            "vocoder": 0.11270791699644178
+          }
+        },
+        {
+          "seconds": 4.938718583987793,
+          "audio_seconds": 16.900566893424035,
+          "rtf": 0.2922220665810586,
+          "realtime_factor": 3.4220550545679376,
+          "stages": {
+            "duration_predictor": 0.002757417008979246,
+            "text_encoder": 0.016635750012937933,
+            "vector_estimator": 4.810250667040236,
+            "vocoder": 0.10840387499774806
+          }
+        },
+        {
+          "seconds": 4.922743250004714,
+          "audio_seconds": 16.900566893424035,
+          "rtf": 0.2912768122541582,
+          "realtime_factor": 3.4331603407120306,
+          "stages": {
+            "duration_predictor": 0.0026972920168191195,
+            "text_encoder": 0.016577250004047528,
+            "vector_estimator": 4.7941355829825625,
+            "vocoder": 0.10865004200604744
+          }
+        }
+      ],
+      "median_seconds": 4.938718583987793,
+      "median_rtf": 0.2922220665810586,
+      "median_realtime_factor": 3.4220550545679376,
+      "cpu_wall_ratio": 0.9995887592283916,
+      "rss_mb": 669.61408,
+      "peak": 0.42480239272117615
+    }
+  ]
+}

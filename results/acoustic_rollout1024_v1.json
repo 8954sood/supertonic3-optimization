@@ -1,0 +1,81 @@
+{
+  "source": "results/quality_rollout1024_v1.json",
+  "definitions": {
+    "analysis_sr": 16000,
+    "hop_samples": 160,
+    "dtw": "MFCC1..19 Euclidean, 15% Sakoe-Chiba band; active frame spectral/pitch comparison",
+    "pitch": "pYIN 65..500Hz; cents only on jointly voiced frames; errors can reflect tracker mistakes",
+    "logmel": "64 bands, 60..7600Hz, absolute 1e-9 power floor, no per-file gain normalization",
+    "warning": "No MOS, speaker similarity, perceptual quality, or exact reproduction score is implied."
+  },
+  "rows": [
+    {
+      "variant": "rollout1024-v1-int8",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/quality_rollout1024_v1/rollout1024-v1-int8_00.wav",
+      "reference_audio": "samples/quality_rollout1024_v1/reference_00.wav",
+      "duration_relative_error": 0.0,
+      "dtw_logmel_mae_db": 4.271243095397949,
+      "dtw_rms_mae_db": 1.675443410873413,
+      "voiced_unvoiced_agreement": 0.8981042654028436,
+      "voiced_pair_frames": 311,
+      "f0_median_abs_cents": 40.00000000000011,
+      "f0_gross_error_over_200_cents": 0.022508038585209004,
+      "unaligned_wave_rmse": 0.0583941712975502,
+      "unaligned_wave_snr_db": -2.115926493506803
+    },
+    {
+      "variant": "rollout1024-v1-int8",
+      "case": 1,
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/quality_rollout1024_v1/rollout1024-v1-int8_01.wav",
+      "reference_audio": "samples/quality_rollout1024_v1/reference_01.wav",
+      "duration_relative_error": 0.0,
+      "dtw_logmel_mae_db": 4.378523349761963,
+      "dtw_rms_mae_db": 1.4901801347732544,
+      "voiced_unvoiced_agreement": 0.944078947368421,
+      "voiced_pair_frames": 247,
+      "f0_median_abs_cents": 39.999999999999694,
+      "f0_gross_error_over_200_cents": 0.05668016194331984,
+      "unaligned_wave_rmse": 0.061083391308784485,
+      "unaligned_wave_snr_db": -1.543809470188443
+    },
+    {
+      "variant": "rollout1024-v1-int8",
+      "case": 4,
+      "language": "en",
+      "voice": "M1",
+      "audio": "samples/quality_rollout1024_v1/rollout1024-v1-int8_04.wav",
+      "reference_audio": "samples/quality_rollout1024_v1/reference_04.wav",
+      "duration_relative_error": 0.0,
+      "dtw_logmel_mae_db": 4.5424346923828125,
+      "dtw_rms_mae_db": 2.1311898231506348,
+      "voiced_unvoiced_agreement": 0.7655786350148368,
+      "voiced_pair_frames": 194,
+      "f0_median_abs_cents": 50.00000000000008,
+      "f0_gross_error_over_200_cents": 0.041237113402061855,
+      "unaligned_wave_rmse": 0.06455659121274948,
+      "unaligned_wave_snr_db": -2.6035428931753337
+    },
+    {
+      "variant": "rollout1024-v1-int8",
+      "case": 5,
+      "language": "en",
+      "voice": "F1",
+      "audio": "samples/quality_rollout1024_v1/rollout1024-v1-int8_05.wav",
+      "reference_audio": "samples/quality_rollout1024_v1/reference_05.wav",
+      "duration_relative_error": 0.0,
+      "dtw_logmel_mae_db": 5.084314346313477,
+      "dtw_rms_mae_db": 2.7251152992248535,
+      "voiced_unvoiced_agreement": 0.9353846153846154,
+      "voiced_pair_frames": 259,
+      "f0_median_abs_cents": 30.00000000000021,
+      "f0_gross_error_over_200_cents": 0.007722007722007722,
+      "unaligned_wave_rmse": 0.06128937005996704,
+      "unaligned_wave_snr_db": -2.348573160609069
+    }
+  ]
+}

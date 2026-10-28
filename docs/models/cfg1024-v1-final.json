@@ -1,0 +1,26 @@
+{
+  "mode": "experimental-CFG-distillation",
+  "status": "experimental; acoustic/ASR/listening validation required",
+  "checkpoint": "distill/joint-cfg-1024-v1/best.pt",
+  "step": 2400,
+  "validation_relative_update_mse": 0.07546113629359752,
+  "base": "models/fast-fp32-cached",
+  "vector_int8": true,
+  "minimum_steps": 8,
+  "training": {
+    "checkpoints": "distill/student1024",
+    "data": "distill/trajectories-v2",
+    "output": "distill/joint-cfg-1024-v1",
+    "iterations": 2400,
+    "learning_rate": 3e-05,
+    "validate_every": 200,
+    "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+    "train_all": true
+  },
+  "teacher_guidance_scale": 4,
+  "student_internal_guidance_scale": 1,
+  "guidance_mode": "learned one-branch approximation; not exact CFG4",
+  "supported_steps": [
+    8
+  ]
+}

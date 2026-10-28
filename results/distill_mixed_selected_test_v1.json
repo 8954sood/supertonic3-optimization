@@ -1,0 +1,632 @@
+{
+  "split": "test",
+  "steps": 8,
+  "guidance_scale": 4,
+  "note": "ASR proxy only; does not assess timbre, prosody or listening quality. Test split must not be reused for tuning.",
+  "rows": [
+    {
+      "variant": "reference",
+      "case": 0,
+      "language": "ko",
+      "reference": "해가 지기 전에 빨래를 걷어서 가지런히 개어 놓았습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/distill_mixed_selected_test_v1/reference_00.wav",
+      "timing": {
+        "seconds": 1.635357125021983,
+        "audio_seconds": 4.497800453514739,
+        "rtf": 0.3635904131193854,
+        "realtime_factor": 2.75034754470176,
+        "stages": {
+          "duration_predictor": 0.000962083984632045,
+          "text_encoder": 0.004583500005537644,
+          "vector_estimator": 1.5729037919954862,
+          "vocoder": 0.03220683298422955
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_00.wav",
+      "text": "해가 지기 전에 빨래를 걷어서 가지런히 개어 놓았습니다.",
+      "transcript": "해가 지기 전에 빨래를 걷어서 가지런히 개워놓았습니다.",
+      "errors": 1,
+      "reference_units": 23
+    },
+    {
+      "variant": "reference",
+      "case": 1,
+      "language": "ko",
+      "reference": "방송을 들으며 준비하던 손님들이 하나둘 자리에서 일어났습니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/distill_mixed_selected_test_v1/reference_01.wav",
+      "timing": {
+        "seconds": 1.627264666982228,
+        "audio_seconds": 5.206507936507936,
+        "rtf": 0.3125443554156287,
+        "realtime_factor": 3.1995458650026714,
+        "stages": {
+          "duration_predictor": 0.0009364169964101166,
+          "text_encoder": 0.004932082985760644,
+          "vector_estimator": 1.5846513319993392,
+          "vocoder": 0.03630858298856765
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_01.wav",
+      "text": "방송을 들으며 준비하던 손님들이 하나둘 자리에서 일어났습니다.",
+      "transcript": "방송을 들으며 준비하던 손님들이 하나 둘 자리에서 일어났습니다.",
+      "errors": 0,
+      "reference_units": 27
+    },
+    {
+      "variant": "reference",
+      "case": 2,
+      "language": "ko",
+      "reference": "낮게 깔린 구름 사이로 푸른 하늘이 조금씩 드러나기 시작했습니다.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/distill_mixed_selected_test_v1/reference_02.wav",
+      "timing": {
+        "seconds": 1.3286856249906123,
+        "audio_seconds": 4.420136054421769,
+        "rtf": 0.3005983545826459,
+        "realtime_factor": 3.3266981829904263,
+        "stages": {
+          "duration_predictor": 0.0009204169909935445,
+          "text_encoder": 0.004701958998339251,
+          "vector_estimator": 1.287963583075907,
+          "vocoder": 0.034681999997701496
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_02.wav",
+      "text": "낮게 깔린 구름 사이로 푸른 하늘이 조금씩 드러나기 시작했습니다.",
+      "transcript": "낮게 깔린 구름 사이로 푸른 하늘이 조금씩 드러나기 시작했습니다.",
+      "errors": 0,
+      "reference_units": 27
+    },
+    {
+      "variant": "reference",
+      "case": 3,
+      "language": "ko",
+      "reference": "문 앞에 놓인 상자를 옮긴 뒤 초인종을 한 번 눌러 주세요.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/distill_mixed_selected_test_v1/reference_03.wav",
+      "timing": {
+        "seconds": 1.6553687500127126,
+        "audio_seconds": 5.324784580498866,
+        "rtf": 0.3108799473457056,
+        "realtime_factor": 3.2166757892813753,
+        "stages": {
+          "duration_predictor": 0.0009271670132875443,
+          "text_encoder": 0.00499954100814648,
+          "vector_estimator": 1.6131464990030508,
+          "vocoder": 0.035816249990602955
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_03.wav",
+      "text": "문 앞에 놓인 상자를 옮긴 뒤 초인종을 한 번 눌러 주세요.",
+      "transcript": "문 앞에 놓은 상자를 옮긴 뒤 초인종을 한번 눌러주세요.",
+      "errors": 1,
+      "reference_units": 22
+    },
+    {
+      "variant": "reference",
+      "case": 4,
+      "language": "ko",
+      "reference": "여행 가방에는 편한 신발과 두꺼운 겉옷을 넣었습니다.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/distill_mixed_selected_test_v1/reference_04.wav",
+      "timing": {
+        "seconds": 1.590575042006094,
+        "audio_seconds": 4.63,
+        "rtf": 0.3435367261352255,
+        "realtime_factor": 2.9108969257812993,
+        "stages": {
+          "duration_predictor": 0.0008522910065948963,
+          "text_encoder": 0.004456958005903289,
+          "vector_estimator": 1.5476044589886442,
+          "vocoder": 0.03723616700153798
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_04.wav",
+      "text": "여행 가방에는 편한 신발과 두꺼운 겉옷을 넣었습니다.",
+      "transcript": "여행 가방에는 편한 신발과 두꺼운 거뒀을 넣었습니다.",
+      "errors": 2,
+      "reference_units": 22
+    },
+    {
+      "variant": "reference",
+      "case": 5,
+      "language": "ko",
+      "reference": "종이에 적힌 약속 시간을 확인하고 집을 나섰습니다.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/distill_mixed_selected_test_v1/reference_05.wav",
+      "timing": {
+        "seconds": 1.3646749169856776,
+        "audio_seconds": 4.093786848072562,
+        "rtf": 0.3333527043862076,
+        "realtime_factor": 2.99982567065496,
+        "stages": {
+          "duration_predictor": 0.0008278749883174896,
+          "text_encoder": 0.004382459010230377,
+          "vector_estimator": 1.3226901259913575,
+          "vocoder": 0.03636454200022854
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_05.wav",
+      "text": "종이에 적힌 약속 시간을 확인하고 집을 나섰습니다.",
+      "transcript": "종이에 적힌 약속 시간을 확인하고 집을 나섰습니다.",
+      "errors": 0,
+      "reference_units": 21
+    },
+    {
+      "variant": "reference",
+      "case": 6,
+      "language": "en",
+      "reference": "The baker wrapped a warm loaf in paper and handed it to the customer.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/distill_mixed_selected_test_v1/reference_06.wav",
+      "timing": {
+        "seconds": 1.5268499579979107,
+        "audio_seconds": 4.696961451247166,
+        "rtf": 0.3250718520571405,
+        "realtime_factor": 3.076242971120803,
+        "stages": {
+          "duration_predictor": 0.0009235829929821193,
+          "text_encoder": 0.004699209006503224,
+          "vector_estimator": 1.4888267899223138,
+          "vocoder": 0.03197883299435489
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_06.wav",
+      "text": "The baker wrapped a warm loaf in paper and handed it to the customer.",
+      "transcript": "The baker wrapped a warm loaf in paper and handed it to the customer.",
+      "errors": 0,
+      "reference_units": 14
+    },
+    {
+      "variant": "reference",
+      "case": 7,
+      "language": "en",
+      "reference": "A bright yellow umbrella stood alone beside the crowded entrance.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/distill_mixed_selected_test_v1/reference_07.wav",
+      "timing": {
+        "seconds": 1.5816751669917721,
+        "audio_seconds": 4.47578231292517,
+        "rtf": 0.35338518641181643,
+        "realtime_factor": 2.8297733986920797,
+        "stages": {
+          "duration_predictor": 0.0008629999938420951,
+          "text_encoder": 0.00438458300777711,
+          "vector_estimator": 1.5440985840104986,
+          "vocoder": 0.03192566701909527
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_07.wav",
+      "text": "A bright yellow umbrella stood alone beside the crowded entrance.",
+      "transcript": "A bright yellow umbrella stood alone beside the crowded entrance.",
+      "errors": 0,
+      "reference_units": 10
+    },
+    {
+      "variant": "reference",
+      "case": 8,
+      "language": "en",
+      "reference": "They followed a winding path until the old stone bridge came into view.",
+      "voice": "M3",
+      "seed": 408,
+      "audio": "samples/distill_mixed_selected_test_v1/reference_08.wav",
+      "timing": {
+        "seconds": 1.2728406249952968,
+        "audio_seconds": 3.8498866213151928,
+        "rtf": 0.3306176909076015,
+        "realtime_factor": 3.0246415346221514,
+        "stages": {
+          "duration_predictor": 0.000911374983843416,
+          "text_encoder": 0.004566167015582323,
+          "vector_estimator": 1.2366954570170492,
+          "vocoder": 0.030268666974734515
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_08.wav",
+      "text": "They followed a winding path until the old stone bridge came into view.",
+      "transcript": "They followed a winding path until the old stone bridge came into view.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "reference",
+      "case": 9,
+      "language": "en",
+      "reference": "After watering the plants, she placed the empty can beside the shed.",
+      "voice": "F3",
+      "seed": 409,
+      "audio": "samples/distill_mixed_selected_test_v1/reference_09.wav",
+      "timing": {
+        "seconds": 1.5527195000031497,
+        "audio_seconds": 4.675396825396826,
+        "rtf": 0.3321043235450634,
+        "realtime_factor": 3.0111020215739814,
+        "stages": {
+          "duration_predictor": 0.0008780840144027025,
+          "text_encoder": 0.004723708028905094,
+          "vector_estimator": 1.5152713319985196,
+          "vocoder": 0.03143162501510233
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_09.wav",
+      "text": "After watering the plants, she placed the empty can beside the shed.",
+      "transcript": "After watering the plants, she placed the empty can beside the shed.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "reference",
+      "case": 10,
+      "language": "en",
+      "reference": "The quiet room slowly filled with voices as the guests arrived.",
+      "voice": "M5",
+      "seed": 410,
+      "audio": "samples/distill_mixed_selected_test_v1/reference_10.wav",
+      "timing": {
+        "seconds": 1.361999583983561,
+        "audio_seconds": 4.208798185941043,
+        "rtf": 0.32360771978403435,
+        "realtime_factor": 3.0901611391328014,
+        "stages": {
+          "duration_predictor": 0.0008316249877680093,
+          "text_encoder": 0.004306415998144075,
+          "vector_estimator": 1.3279518739145715,
+          "vocoder": 0.028504209010861814
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_10.wav",
+      "text": "The quiet room slowly filled with voices as the guests arrived.",
+      "transcript": "The quiet room slowly filled with voices as the guests arrived.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "reference",
+      "case": 11,
+      "language": "en",
+      "reference": "He wrote down the address before folding the letter into his pocket.",
+      "voice": "F5",
+      "seed": 411,
+      "audio": "samples/distill_mixed_selected_test_v1/reference_11.wav",
+      "timing": {
+        "seconds": 1.307091708004009,
+        "audio_seconds": 4.227891156462585,
+        "rtf": 0.30915926158743257,
+        "realtime_factor": 3.2345788214958344,
+        "stages": {
+          "duration_predictor": 0.0008569170022383332,
+          "text_encoder": 0.004486040998017415,
+          "vector_estimator": 1.2692297930188943,
+          "vocoder": 0.03211854200344533
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_11.wav",
+      "text": "He wrote down the address before folding the letter into his pocket.",
+      "transcript": "He wrote down the address before folding the letter into his pocket.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 0,
+      "language": "ko",
+      "reference": "해가 지기 전에 빨래를 걷어서 가지런히 개어 놓았습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/distill_mixed_selected_test_v1/mixed-v1-selected_00.wav",
+      "timing": {
+        "seconds": 0.2743924169917591,
+        "audio_seconds": 4.497800453514739,
+        "rtf": 0.06100591162894726,
+        "realtime_factor": 16.391854056410835,
+        "stages": {
+          "duration_predictor": 0.0008938749961089343,
+          "text_encoder": 0.004404791980050504,
+          "vector_estimator": 0.22962271102005616,
+          "vocoder": 0.039063582982635126
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_00.wav",
+      "text": "해가 지기 전에 빨래를 걷어서 가지런히 개어 놓았습니다.",
+      "transcript": "해가 지기 전에 빨래를 걷어서 가지런히 개워놓았습니다.",
+      "errors": 1,
+      "reference_units": 23
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 1,
+      "language": "ko",
+      "reference": "방송을 들으며 준비하던 손님들이 하나둘 자리에서 일어났습니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/distill_mixed_selected_test_v1/mixed-v1-selected_01.wav",
+      "timing": {
+        "seconds": 0.3089047080138698,
+        "audio_seconds": 5.206507936507936,
+        "rtf": 0.059330497865533974,
+        "realtime_factor": 16.854738051691218,
+        "stages": {
+          "duration_predictor": 0.0009915829868987203,
+          "text_encoder": 0.0046866250049788505,
+          "vector_estimator": 0.25863828998990357,
+          "vocoder": 0.04415954201249406
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_01.wav",
+      "text": "방송을 들으며 준비하던 손님들이 하나둘 자리에서 일어났습니다.",
+      "transcript": "방송을 들으며 준비하던 손님들이 하나 둘 자리에서 일어났습니다.",
+      "errors": 0,
+      "reference_units": 27
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 2,
+      "language": "ko",
+      "reference": "낮게 깔린 구름 사이로 푸른 하늘이 조금씩 드러나기 시작했습니다.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/distill_mixed_selected_test_v1/mixed-v1-selected_02.wav",
+      "timing": {
+        "seconds": 0.27769379201345146,
+        "audio_seconds": 4.420136054421769,
+        "rtf": 0.06282471593507967,
+        "realtime_factor": 15.917302372419107,
+        "stages": {
+          "duration_predictor": 0.0010230419866275042,
+          "text_encoder": 0.005160166008863598,
+          "vector_estimator": 0.23379533397383057,
+          "vocoder": 0.03726720900158398
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_02.wav",
+      "text": "낮게 깔린 구름 사이로 푸른 하늘이 조금씩 드러나기 시작했습니다.",
+      "transcript": "낮게 깔린 구름 사이로 푸른 하늘이 조금씩 드러나기 시작했습니다.",
+      "errors": 0,
+      "reference_units": 27
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 3,
+      "language": "ko",
+      "reference": "문 앞에 놓인 상자를 옮긴 뒤 초인종을 한 번 눌러 주세요.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/distill_mixed_selected_test_v1/mixed-v1-selected_03.wav",
+      "timing": {
+        "seconds": 0.3184799589798786,
+        "audio_seconds": 5.324784580498866,
+        "rtf": 0.059810862611467557,
+        "realtime_factor": 16.719370969384244,
+        "stages": {
+          "duration_predictor": 0.0010073330195154995,
+          "text_encoder": 0.004901584004983306,
+          "vector_estimator": 0.2687279589881655,
+          "vocoder": 0.0433983750117477
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_03.wav",
+      "text": "문 앞에 놓인 상자를 옮긴 뒤 초인종을 한 번 눌러 주세요.",
+      "transcript": "문 앞에 놓은 상자를 옮긴 뒤 초인종을 한번 눌러주세요.",
+      "errors": 1,
+      "reference_units": 22
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 4,
+      "language": "ko",
+      "reference": "여행 가방에는 편한 신발과 두꺼운 겉옷을 넣었습니다.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/distill_mixed_selected_test_v1/mixed-v1-selected_04.wav",
+      "timing": {
+        "seconds": 0.26456020900513977,
+        "audio_seconds": 4.63,
+        "rtf": 0.05714043391039736,
+        "realtime_factor": 17.50074214641269,
+        "stages": {
+          "duration_predictor": 0.0009681250085122883,
+          "text_encoder": 0.004511041013756767,
+          "vector_estimator": 0.22142750106286258,
+          "vocoder": 0.03724362500361167
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_04.wav",
+      "text": "여행 가방에는 편한 신발과 두꺼운 겉옷을 넣었습니다.",
+      "transcript": "여행 가방에는 편한 신발과 두꺼운 거뒀을 넣었습니다.",
+      "errors": 2,
+      "reference_units": 22
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 5,
+      "language": "ko",
+      "reference": "종이에 적힌 약속 시간을 확인하고 집을 나섰습니다.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/distill_mixed_selected_test_v1/mixed-v1-selected_05.wav",
+      "timing": {
+        "seconds": 0.2360194170032628,
+        "audio_seconds": 4.093786848072562,
+        "rtf": 0.05765307910801109,
+        "realtime_factor": 17.345127363042206,
+        "stages": {
+          "duration_predictor": 0.000873792014317587,
+          "text_encoder": 0.00410158300655894,
+          "vector_estimator": 0.19689258097787388,
+          "vocoder": 0.03377633300260641
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_05.wav",
+      "text": "종이에 적힌 약속 시간을 확인하고 집을 나섰습니다.",
+      "transcript": "종이에 적힌 약속 시간을 확인하고 집을 나섰습니다.",
+      "errors": 0,
+      "reference_units": 21
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 6,
+      "language": "en",
+      "reference": "The baker wrapped a warm loaf in paper and handed it to the customer.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/distill_mixed_selected_test_v1/mixed-v1-selected_06.wav",
+      "timing": {
+        "seconds": 0.2683898330142256,
+        "audio_seconds": 4.696961451247166,
+        "rtf": 0.057141161536031146,
+        "realtime_factor": 17.500519294999563,
+        "stages": {
+          "duration_predictor": 0.0009490830125287175,
+          "text_encoder": 0.004435249982634559,
+          "vector_estimator": 0.2247607090685051,
+          "vocoder": 0.03782891601440497
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_06.wav",
+      "text": "The baker wrapped a warm loaf in paper and handed it to the customer.",
+      "transcript": "The baker wrapped a warm warm loaf in paper and handed it to the customer.",
+      "errors": 1,
+      "reference_units": 14
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 7,
+      "language": "en",
+      "reference": "A bright yellow umbrella stood alone beside the crowded entrance.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/distill_mixed_selected_test_v1/mixed-v1-selected_07.wav",
+      "timing": {
+        "seconds": 0.2552746669971384,
+        "audio_seconds": 4.47578231292517,
+        "rtf": 0.05703464761008503,
+        "realtime_factor": 17.533202043018797,
+        "stages": {
+          "duration_predictor": 0.0009138750028796494,
+          "text_encoder": 0.004238665977027267,
+          "vector_estimator": 0.21356633404502645,
+          "vocoder": 0.03618408300098963
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_07.wav",
+      "text": "A bright yellow umbrella stood alone beside the crowded entrance.",
+      "transcript": "A bright yellow umbrella stood alone beside the crowded entrance.",
+      "errors": 0,
+      "reference_units": 10
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 8,
+      "language": "en",
+      "reference": "They followed a winding path until the old stone bridge came into view.",
+      "voice": "M3",
+      "seed": 408,
+      "audio": "samples/distill_mixed_selected_test_v1/mixed-v1-selected_08.wav",
+      "timing": {
+        "seconds": 0.24143604098935612,
+        "audio_seconds": 3.8498866213151928,
+        "rtf": 0.06271250681841563,
+        "realtime_factor": 15.945782599561918,
+        "stages": {
+          "duration_predictor": 0.0009435410029254854,
+          "text_encoder": 0.0044397920137271285,
+          "vector_estimator": 0.19910554299713112,
+          "vocoder": 0.03655770802288316
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_08.wav",
+      "text": "They followed a winding path until the old stone bridge came into view.",
+      "transcript": "They followed a winding path until the old stone bridge came into view.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 9,
+      "language": "en",
+      "reference": "After watering the plants, she placed the empty can beside the shed.",
+      "voice": "F3",
+      "seed": 409,
+      "audio": "samples/distill_mixed_selected_test_v1/mixed-v1-selected_09.wav",
+      "timing": {
+        "seconds": 0.3077029170235619,
+        "audio_seconds": 4.675396825396826,
+        "rtf": 0.06581321939393786,
+        "realtime_factor": 15.194515770673744,
+        "stages": {
+          "duration_predictor": 0.0009628749976400286,
+          "text_encoder": 0.004641792009351775,
+          "vector_estimator": 0.25626208301400766,
+          "vocoder": 0.04542204100289382
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_09.wav",
+      "text": "After watering the plants, she placed the empty can beside the shed.",
+      "transcript": "After watering the plants, she placed the empty can beside the shed.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 10,
+      "language": "en",
+      "reference": "The quiet room slowly filled with voices as the guests arrived.",
+      "voice": "M5",
+      "seed": 410,
+      "audio": "samples/distill_mixed_selected_test_v1/mixed-v1-selected_10.wav",
+      "timing": {
+        "seconds": 0.2558900830044877,
+        "audio_seconds": 4.208798185941043,
+        "rtf": 0.06079884843593976,
+        "realtime_factor": 16.447679943373306,
+        "stages": {
+          "duration_predictor": 0.0009088339866138995,
+          "text_encoder": 0.004479374998481944,
+          "vector_estimator": 0.21400366607122123,
+          "vocoder": 0.03610550001030788
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_10.wav",
+      "text": "The quiet room slowly filled with voices as the guests arrived.",
+      "transcript": "The quiet room slowly filled with voices as the guests arrived.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 11,
+      "language": "en",
+      "reference": "He wrote down the address before folding the letter into his pocket.",
+      "voice": "F5",
+      "seed": 411,
+      "audio": "samples/distill_mixed_selected_test_v1/mixed-v1-selected_11.wav",
+      "timing": {
+        "seconds": 0.25787345800199546,
+        "audio_seconds": 4.227891156462585,
+        "rtf": 0.060993400364108344,
+        "realtime_factor": 16.395216433751273,
+        "stages": {
+          "duration_predictor": 0.0009599160111974925,
+          "text_encoder": 0.004559082997730002,
+          "vector_estimator": 0.2166691259772051,
+          "vocoder": 0.03529483400052413
+        }
+      },
+      "reference_audio": "samples/distill_mixed_selected_test_v1/reference_11.wav",
+      "text": "He wrote down the address before folding the letter into his pocket.",
+      "transcript": "He wrote down the address before folding the letter into his pocket.",
+      "errors": 0,
+      "reference_units": 12
+    }
+  ]
+}

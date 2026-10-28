@@ -1,0 +1,10 @@
+{
+  "returncode": -15,
+  "reason": "system available RAM below reserve",
+  "sampled_peak_child_rss_mb": 536.748032,
+  "minimum_system_available_mb": 79.990784,
+  "elapsed_seconds": 25.938923865556717,
+  "max_rss_budget_mb": 620.0,
+  "reserve_mb": 80.0,
+  "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit."
+}

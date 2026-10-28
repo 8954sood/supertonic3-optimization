@@ -1,0 +1,36 @@
+{
+  "mode": "experimental-CFG-distillation",
+  "status": "selected on validation; one Korean sample listening feedback positive; independent EN ASR regression remains",
+  "checkpoint": "distill/joint-cfg-mixed-v1/best_step_00600.pt",
+  "step": 600,
+  "validation_relative_update_mse": 0.0558609840227291,
+  "base": "models/fast-fp32-cached",
+  "vector_int8": true,
+  "minimum_steps": 8,
+  "training": {
+    "checkpoints": "distill/mixed-v1/initial.pt",
+    "data": "distill/trajectories-v2",
+    "output": "distill/joint-cfg-mixed-v1",
+    "iterations": 2400,
+    "learning_rate": 3e-05,
+    "validate_every": 200,
+    "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+    "train_all": true
+  },
+  "teacher_guidance_scale": 4,
+  "student_internal_guidance_scale": 1,
+  "guidance_mode": "learned one-branch approximation; not exact CFG4",
+  "source_step": 600,
+  "supported_steps": [
+    8
+  ],
+  "source_export": "models/cfg-mixed-v1-preview",
+  "record": "records/2026-10-28/ROUND3.md",
+  "vector_sha256": "d2b63c7a648b93b1d1d94a4443a47bd92ec0aca75299a27dffb6473bc34b93ea",
+  "listening_feedback": {
+    "user_quote": "이제 거의 차이 없는듯",
+    "sample": "samples/epyc_cfg_mixed_preview_v1_8/ko_short_8steps.wav",
+    "reference": "samples/equivalence_fp32_cached/ko_short_reference.wav",
+    "scope": "One Korean M1 sentence, seed42, 8 steps; not a universal quality approval"
+  }
+}

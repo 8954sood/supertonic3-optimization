@@ -1,0 +1,26 @@
+[
+  {
+    "path": "models/fast-avx2-int8/onnx/duration_predictor.onnx",
+    "server_sha256": "3d9cc014d0a50e530dec9a675774b89fa4446daba941403d70bf44d22ee2fb72",
+    "local_sha256": "3d9cc014d0a50e530dec9a675774b89fa4446daba941403d70bf44d22ee2fb72",
+    "equal": true
+  },
+  {
+    "path": "models/fast-avx2-int8/onnx/text_encoder.onnx",
+    "server_sha256": "27b635eaa963e106b179d696744f051c66928217c4679a843cc0183685fb5015",
+    "local_sha256": "27b635eaa963e106b179d696744f051c66928217c4679a843cc0183685fb5015",
+    "equal": true
+  },
+  {
+    "path": "models/fast-avx2-int8/onnx/vector_estimator.onnx",
+    "server_sha256": "0fd06d771466802bb3cf1657c1df3a62e6a7fa137de2b0cc350e56b62b03bcda",
+    "local_sha256": "0fd06d771466802bb3cf1657c1df3a62e6a7fa137de2b0cc350e56b62b03bcda",
+    "equal": true
+  },
+  {
+    "path": "models/fast-avx2-int8/onnx/vocoder.onnx",
+    "server_sha256": "79e24903cc42a44dfda80792f5de87f77a7e38b8149bf977a5a9ce2477898ebe",
+    "local_sha256": "79e24903cc42a44dfda80792f5de87f77a7e38b8149bf977a5a9ce2477898ebe",
+    "equal": true
+  }
+]

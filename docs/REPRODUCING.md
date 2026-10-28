@@ -1,0 +1,67 @@
+# 학습·검증 재현
+
+먼저 루트 README의 설치, `download.py`, FP32 캐시 모델 준비를 완료합니다. 아래는 기존 실험 파이프라인을 다시 실행하는 방법입니다. 모델·체크포인트는 Git에 없으며 정확한 기존 가중치를 복원하는 다운로드 경로도 제공하지 않습니다. 학습에는 여러 GB의 RAM·디스크와 Mac MPS가 필요합니다. CPU1·1GB 조건은 완성된 모델의 추론 측정 조건입니다.
+
+## 혼합 폭 CFG 증류
+
+```bash
+python -m pip install -r requirements-train.txt
+python distill/collect.py
+python distill/train.py --width 512 --iterations 2400 --qat-steps 600 --output distill/student512
+python distill/train.py --width 1024 --iterations 1600 --qat-steps 600 --output distill/student1024
+python distill/train.py --width 1536 --iterations 1600 --qat-steps 600 --output distill/student1536
+python distill/init_mixed.py
+python distill/collect_vectors.py --output distill/trajectories-v1
+python distill/collect_vectors.py --source distill/trajectories-v1 --repeats 5 --output distill/trajectories-v2
+python experiments/guidance.py conditional --source models/supertonic-3 --output models/cfg-student-fp32-source
+python distill/train_joint.py \
+  --checkpoints distill/mixed-v1/initial.pt --data distill/trajectories-v2 \
+  --graph models/cfg-student-fp32-source/onnx/vector_estimator.onnx --train-all \
+  --iterations 2400 --learning-rate 3e-5 --validate-every 200 \
+  --output distill/joint-cfg-mixed-v1
+python distill/export_joint.py \
+  --checkpoint distill/joint-cfg-mixed-v1/best_step_00600.pt \
+  --graph models/cfg-student-fp32-source/onnx/vector_estimator.onnx \
+  --base models/fast-fp32-cached --int8 --cfg-distilled \
+  --output models/cfg-mixed-v1-retrained
+```
+
+600회 체크포인트는 기존 선택 후보의 출발점입니다. 새 훈련에서 해당 시점이 best로 저장되지 않거나 하드웨어·연산 차이가 발생하면 기존 가중치와 같지 않습니다. 현재 스크립트는 **검증 손실 best 갱신 시점**을 별도 파일로 남깁니다. 새 실행의 검증과 청취로 선택하고 기존 결과를 그대로 붙이지 마세요. `docs/models/`의 SHA-256은 과거 선택 ONNX의 식별자이며 새 훈련 출력의 일치를 보장하지 않습니다.
+
+층별 원본 FFN은 2048 폭이고 혼합 폭은 512×2, 1024×4, 1536×12, 2048×10입니다. 반복부 파라미터는 64,014,576→50,369,776입니다. frontend/decoder는 FP32, 반복부는 감소 범위·채널별 동적 INT8입니다. 내보내기에서 기존 `condition.onnx`를 제거하고 완전한 단일 경로 그래프를 저장합니다.
+
+## 평가
+
+```bash
+python -m pip install -r requirements-eval.txt -r requirements-acoustic.txt
+python distill/validate_graphs.py
+python distill/evaluate.py --variants models/cfg-mixed-v1-retrained \
+  --split validation --output results/retrained_validation.json
+python experiments/acoustic_metrics.py results/retrained_validation.json \
+  --output results/retrained_acoustic.json
+```
+
+음향 분석은 생성한 WAV가 필요하며 WAV는 Git에 없습니다. 원시 JSON에는 당시의 상대 WAV 경로를 보존했습니다. Whisper base ASR은 별도 다운로드하며 KO는 공백 제거 문자 오류율, EN은 단어 오류율입니다. logmel/pYIN/DTW는 대리 지표이며 MOS·화자 유사도·음질 일치율이 아닙니다. 커스텀 harmonic/interharmonic 지표는 Paradee의 수치와 직접 비교할 수 없습니다.
+
+기존 두 test 세트는 이미 소비했습니다. 위의 새 모델 검증을 위해 기존 test 점수를 보고 학습하거나 선택하지 말고, 독립 시험은 새로 작성·고정하세요. 고유 train 문장은 40개뿐입니다.
+
+## 제한된 서버에서 측정
+
+완성된 모델 하나와 추론 파일만 복사하고 다음을 실행합니다. 설치·모델 변환·ASR 학습을 제한 서버에서 동시에 돌리지 마세요.
+
+```bash
+python memory_guard.py --max-rss-mb 420 --reserve-mb 80 --seconds 300 \
+  --stats results/guard_selected.json -- \
+  python benchmark.py --model models/cfg-mixed-v1-retrained --steps 8 \
+    --repeats 3 --cases ko_short en_short --affinity 0 \
+    --output results/server_selected.json
+```
+
+`--affinity`에는 해당 프로세스에 허용된 논리 CPU를 지정합니다. 감시기는 Linux cgroup의 강제 상한이 아닙니다. ARM과 x86 각각에서 모델 해시와 출력·속도를 다시 확인해야 합니다. 구형 AVX2에서 양자화 출력 차이가 컸으며 reduced-range만으로 전부 해결되지 않았습니다.
+
+현재 선택 모델을 별도로 보유한 경우 다음으로 최소 실행 패키지를 만들 수 있습니다. 패키지는 Git에서 제외됩니다.
+
+```bash
+python package_runtime.py --model models/cfg-mixed-v1-selected \
+  --output dist/cfg-mixed-v1-runtime.tar.gz
+```

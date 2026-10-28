@@ -1,0 +1,12 @@
+[
+  {
+    "case": "ko_short",
+    "max_abs_error": 0.0,
+    "rmse": 0.0
+  },
+  {
+    "case": "en_short",
+    "max_abs_error": 0.0,
+    "rmse": 0.0
+  }
+]

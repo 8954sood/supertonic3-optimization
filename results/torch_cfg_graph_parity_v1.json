@@ -1,0 +1,5 @@
+{
+  "relative_rmse": 6.868880575439107e-08,
+  "max_error": 4.76837158203125e-07,
+  "note": "Untrained one-branch graph parity only; does not test teacher CFG4 matching."
+}

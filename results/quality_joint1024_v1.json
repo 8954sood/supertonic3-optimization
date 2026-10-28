@@ -1,0 +1,199 @@
+{
+  "steps": 8,
+  "guidance_scale": 4,
+  "split": "validation",
+  "rows": [
+    {
+      "variant": "reference",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "seed": 400,
+      "audio": "samples/quality_joint1024_v1/reference_00.wav",
+      "reference_audio": "samples/quality_joint1024_v1/reference_00.wav",
+      "timing": {
+        "seconds": 1.6631046250113286,
+        "audio_seconds": 5.305736961451247,
+        "rtf": 0.3134540285533547,
+        "realtime_factor": 3.190260481306223,
+        "stages": {
+          "duration_predictor": 0.0010092500015161932,
+          "text_encoder": 0.004934416996547952,
+          "vector_estimator": 1.597750793065643,
+          "vocoder": 0.03808749999734573
+        }
+      },
+      "model": "models/supertonic-3",
+      "vector_override": null
+    },
+    {
+      "variant": "reference",
+      "case": 1,
+      "language": "ko",
+      "voice": "F1",
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "seed": 401,
+      "audio": "samples/quality_joint1024_v1/reference_01.wav",
+      "reference_audio": "samples/quality_joint1024_v1/reference_01.wav",
+      "timing": {
+        "seconds": 1.2664575829985552,
+        "audio_seconds": 4.054557823129252,
+        "rtf": 0.3123540564088245,
+        "realtime_factor": 3.2014951606428004,
+        "stages": {
+          "duration_predictor": 0.0007307500054594129,
+          "text_encoder": 0.003781833016546443,
+          "vector_estimator": 1.2334304580581374,
+          "vocoder": 0.02808708301745355
+        }
+      },
+      "model": "models/supertonic-3",
+      "vector_override": null
+    },
+    {
+      "variant": "reference",
+      "case": 4,
+      "language": "en",
+      "voice": "M1",
+      "text": "The silver kettle began to whistle as the water reached a boil.",
+      "seed": 404,
+      "audio": "samples/quality_joint1024_v1/reference_04.wav",
+      "reference_audio": "samples/quality_joint1024_v1/reference_04.wav",
+      "timing": {
+        "seconds": 1.2769777500070632,
+        "audio_seconds": 4.154965986394558,
+        "rtf": 0.3073377144815454,
+        "realtime_factor": 3.253749712061605,
+        "stages": {
+          "duration_predictor": 0.0008359999919775873,
+          "text_encoder": 0.004332124983193353,
+          "vector_estimator": 1.2414970009995159,
+          "vocoder": 0.02992733399150893
+        }
+      },
+      "model": "models/supertonic-3",
+      "vector_override": null
+    },
+    {
+      "variant": "reference",
+      "case": 5,
+      "language": "en",
+      "voice": "F1",
+      "text": "We waited beneath the shelter until the heavy rain had passed.",
+      "seed": 405,
+      "audio": "samples/quality_joint1024_v1/reference_05.wav",
+      "reference_audio": "samples/quality_joint1024_v1/reference_05.wav",
+      "timing": {
+        "seconds": 1.2867804160050582,
+        "audio_seconds": 4.1210884353741495,
+        "rtf": 0.31224285432938853,
+        "realtime_factor": 3.2026353401992944,
+        "stages": {
+          "duration_predictor": 0.0008492500055581331,
+          "text_encoder": 0.004877792001934722,
+          "vector_estimator": 1.2508898750238586,
+          "vocoder": 0.029726875014603138
+        }
+      },
+      "model": "models/supertonic-3",
+      "vector_override": null
+    },
+    {
+      "variant": "joint1024-v1-int8",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "seed": 400,
+      "audio": "samples/quality_joint1024_v1/joint1024-v1-int8_00.wav",
+      "reference_audio": "samples/quality_joint1024_v1/reference_00.wav",
+      "timing": {
+        "seconds": 0.25147075002314523,
+        "audio_seconds": 5.305736961451247,
+        "rtf": 0.047396007727145584,
+        "realtime_factor": 21.098823465404664,
+        "stages": {
+          "duration_predictor": 0.0009430419886484742,
+          "text_encoder": 0.004794917011167854,
+          "vector_estimator": 0.21011245803674683,
+          "vocoder": 0.03523074998520315
+        }
+      },
+      "model": "models/joint1024-v1-int8",
+      "vector_override": null
+    },
+    {
+      "variant": "joint1024-v1-int8",
+      "case": 1,
+      "language": "ko",
+      "voice": "F1",
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "seed": 401,
+      "audio": "samples/quality_joint1024_v1/joint1024-v1-int8_01.wav",
+      "reference_audio": "samples/quality_joint1024_v1/reference_01.wav",
+      "timing": {
+        "seconds": 0.20478512498084456,
+        "audio_seconds": 4.054557823129252,
+        "rtf": 0.05050738796044453,
+        "realtime_factor": 19.799083666396726,
+        "stages": {
+          "duration_predictor": 0.0007580829842481762,
+          "text_encoder": 0.00405654200585559,
+          "vector_estimator": 0.17184800002723932,
+          "vocoder": 0.027737708995118737
+        }
+      },
+      "model": "models/joint1024-v1-int8",
+      "vector_override": null
+    },
+    {
+      "variant": "joint1024-v1-int8",
+      "case": 4,
+      "language": "en",
+      "voice": "M1",
+      "text": "The silver kettle began to whistle as the water reached a boil.",
+      "seed": 404,
+      "audio": "samples/quality_joint1024_v1/joint1024-v1-int8_04.wav",
+      "reference_audio": "samples/quality_joint1024_v1/reference_04.wav",
+      "timing": {
+        "seconds": 0.20086166699184105,
+        "audio_seconds": 4.154965986394558,
+        "rtf": 0.04834255386194806,
+        "realtime_factor": 20.685708968866276,
+        "stages": {
+          "duration_predictor": 0.0008352499862667173,
+          "text_encoder": 0.004294084006687626,
+          "vector_estimator": 0.16787079299683683,
+          "vocoder": 0.02751966699725017
+        }
+      },
+      "model": "models/joint1024-v1-int8",
+      "vector_override": null
+    },
+    {
+      "variant": "joint1024-v1-int8",
+      "case": 5,
+      "language": "en",
+      "voice": "F1",
+      "text": "We waited beneath the shelter until the heavy rain had passed.",
+      "seed": 405,
+      "audio": "samples/quality_joint1024_v1/joint1024-v1-int8_05.wav",
+      "reference_audio": "samples/quality_joint1024_v1/reference_05.wav",
+      "timing": {
+        "seconds": 0.20229670900152996,
+        "audio_seconds": 4.1210884353741495,
+        "rtf": 0.049088174683434974,
+        "realtime_factor": 20.371505081394982,
+        "stages": {
+          "duration_predictor": 0.00083608299610205,
+          "text_encoder": 0.004331624979386106,
+          "vector_estimator": 0.1686249600024894,
+          "vocoder": 0.028127208002842963
+        }
+      },
+      "model": "models/joint1024-v1-int8",
+      "vector_override": null
+    }
+  ]
+}

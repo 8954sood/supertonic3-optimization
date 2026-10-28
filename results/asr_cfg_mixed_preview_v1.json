@@ -1,0 +1,94 @@
+{
+  "source": "results/quality_cfg_mixed_preview_v1.json",
+  "note": "Development/validation only. ASR is not naturalness or timbre.",
+  "rows": [
+    {
+      "variant": "reference",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/quality_cfg_mixed_preview_v1/reference_00.wav",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "transcript": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "reference",
+      "case": 1,
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/quality_cfg_mixed_preview_v1/reference_01.wav",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "transcript": "자전거를 세우고, 강변 벤치에 앉아 쉬었습니다.",
+      "errors": 0,
+      "reference_units": 19
+    },
+    {
+      "variant": "reference",
+      "case": 4,
+      "language": "en",
+      "voice": "M1",
+      "audio": "samples/quality_cfg_mixed_preview_v1/reference_04.wav",
+      "reference": "The silver kettle began to whistle as the water reached a boil.",
+      "transcript": "The silver kettle began to whistle as the water reached a boil.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "reference",
+      "case": 5,
+      "language": "en",
+      "voice": "F1",
+      "audio": "samples/quality_cfg_mixed_preview_v1/reference_05.wav",
+      "reference": "We waited beneath the shelter until the heavy rain had passed.",
+      "transcript": "We waited beneath the shelter until the heavy rain had passed.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "cfg-mixed-v1-preview",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/quality_cfg_mixed_preview_v1/cfg-mixed-v1-preview_00.wav",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "transcript": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "cfg-mixed-v1-preview",
+      "case": 1,
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/quality_cfg_mixed_preview_v1/cfg-mixed-v1-preview_01.wav",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "transcript": "자전거를 세우고 강변벤치에 앉아 쉬었습니다.",
+      "errors": 0,
+      "reference_units": 19
+    },
+    {
+      "variant": "cfg-mixed-v1-preview",
+      "case": 4,
+      "language": "en",
+      "voice": "M1",
+      "audio": "samples/quality_cfg_mixed_preview_v1/cfg-mixed-v1-preview_04.wav",
+      "reference": "The silver kettle began to whistle as the water reached a boil.",
+      "transcript": "The silver kettle began to whistle as the water reached a boil.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "cfg-mixed-v1-preview",
+      "case": 5,
+      "language": "en",
+      "voice": "F1",
+      "audio": "samples/quality_cfg_mixed_preview_v1/cfg-mixed-v1-preview_05.wav",
+      "reference": "We waited beneath the shelter until the heavy rain had passed.",
+      "transcript": "We waited beneath the shelter until the heavy rain had passed.",
+      "errors": 0,
+      "reference_units": 11
+    }
+  ]
+}

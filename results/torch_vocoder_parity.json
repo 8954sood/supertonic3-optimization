@@ -1,0 +1,6 @@
+{
+  "relative_rmse": 9.689359103504103e-06,
+  "max_error": 8.724629878997803e-06,
+  "input_gradient_finite": true,
+  "input_gradient_norm": 0.001068663434125483
+}

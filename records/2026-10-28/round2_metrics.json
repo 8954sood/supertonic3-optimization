@@ -1,0 +1,1618 @@
+{
+  "round": 2,
+  "note": "Validation/development results, not a held-out evaluation or perceptual quality score.",
+  "files": [
+    {
+      "path": "results/acoustic_ablation_v2.json",
+      "sha256": "7c9d41e65040bffa398b1d97fc6086f493871c6cee0e418987983836bab5e261"
+    },
+    {
+      "path": "results/acoustic_components_v2.json",
+      "sha256": "db17df1e2e8ec0ffd76cc485818bc78d996926f541dc45cb6218ef1037de19b5"
+    },
+    {
+      "path": "results/acoustic_crossplatform_mixed_v1.json",
+      "sha256": "a5b9c91cc9f81d245e4e0291d57616dfcb178edf324120446ece4053777cea3d"
+    },
+    {
+      "path": "results/acoustic_joint1024_v1.json",
+      "sha256": "b775e03551d36b5a5602f0b8da9725a7ce8a49fdc7b923d5ad1f0f42b1a09e94"
+    },
+    {
+      "path": "results/acoustic_joint1536_v1.json",
+      "sha256": "a595df840c119223219165fd246657083520471efd6b718625bb689f6f80d6ce"
+    },
+    {
+      "path": "results/acoustic_mixed_final_v1.json",
+      "sha256": "9154a69297374eb3bfd00762932bd9af54bc95bd930248d0c7d5038429b2acef"
+    },
+    {
+      "path": "results/acoustic_mixed_preview_v1.json",
+      "sha256": "9efb6fd9c314fdeb940497bf8fb3a8d5afa075c605bb0831af17ae855580c7dc"
+    },
+    {
+      "path": "results/acoustic_mixed_selected_v1.json",
+      "sha256": "ca5b1836ec289dc6c91350fa929a7a009b1e2efde3da835dbd773fc81499b921"
+    },
+    {
+      "path": "results/acoustic_mixed_test_v1.json",
+      "sha256": "43085a2a787d3634f45e619800fb8682d6be54434ee3b00f460dea0c30e9a08a"
+    },
+    {
+      "path": "results/acoustic_reducedrange_mixed_v1.json",
+      "sha256": "ac48d61102cb20520944498179a7889fabe487ea8d755f705e0f29dd09486644"
+    },
+    {
+      "path": "results/acoustic_rollout1024_v1.json",
+      "sha256": "d69949048c0fa048aa8a565c0a0c83afcf8638d9a27e53967a6f28995f43f418"
+    },
+    {
+      "path": "results/acoustic_rollout1536_v1.json",
+      "sha256": "99aee373d18604f532cd92c7c94d5f637d1449eea982366942cad9a5263393df"
+    },
+    {
+      "path": "results/acoustic_server_original_mixed_v1.json",
+      "sha256": "49fa2449f3da7effa5fd50422c9fa7e8673cae91a66736411d49df673315b6b0"
+    },
+    {
+      "path": "results/asr_ablation_v2.json",
+      "sha256": "8076a9380a6a23bc36bf46ca35719ee729c61981046ce8187215ffc9266e9a50"
+    },
+    {
+      "path": "results/asr_epyc_mixed_selected_v1.json",
+      "sha256": "93b05b04f8abdaccd591ea0f492f7a5177cc2754dcf7cba0528aa3a9459426af"
+    },
+    {
+      "path": "results/asr_mixed_final_v1.json",
+      "sha256": "5e9f5433efe09864d59638a526a9e31859ef48701ae572b2ad21e0f4383af6a2"
+    },
+    {
+      "path": "results/asr_mixed_preview_v1.json",
+      "sha256": "b6b3e5f822d57805bd4dfcd88fa3157704e6e4e8081d8d5354760f21131384d5"
+    },
+    {
+      "path": "results/asr_mixed_selected_v1.json",
+      "sha256": "2ce6b4287fd3b03633819514439e4f51938db0097589371b58fac70621a073ff"
+    },
+    {
+      "path": "results/asr_rollout1024_v1.json",
+      "sha256": "776ee16fd836734253c121ced7e79144f932cd3f3cec0570ee9ccb0057a2d2f6"
+    },
+    {
+      "path": "results/asr_rollout1536_v1.json",
+      "sha256": "089aa5f2df202b3f69ec41fc96e53191e2ee0876b661d55714dd29600ee892e9"
+    },
+    {
+      "path": "results/crossplatform_mixed_v1.json",
+      "sha256": "d5e500f16e101836b03279f60764c1e3f0148248e2e4885a69aebb1599a08818"
+    },
+    {
+      "path": "results/distill_mixed_selected_test_v1.json",
+      "sha256": "512ff65d76484b91574902777e006e7ea0acd6eacdd1182731d8fe552269a268"
+    },
+    {
+      "path": "results/distill_mixed_selected_validation_v1.json",
+      "sha256": "ea49d6f0607eef70741037db96e0ab35a5390de56d744547de878e9108948019"
+    },
+    {
+      "path": "results/epyc_mixed_cached_v1_8.json",
+      "sha256": "e5196860a477ef253b1c054f5e7518c691e540cda6b087fbc94c0b3bb4cc842d"
+    },
+    {
+      "path": "results/epyc_mixed_selected_v1_8.json",
+      "sha256": "e3a73898138301a2c0d34400e9b7c58ea05bdc77cc7055e9bac2c37d1d9490f2"
+    },
+    {
+      "path": "results/equivalence_mixed_cache_v1.json",
+      "sha256": "d9117c303c9d3d0f3ccdbd22f469f0b5b7c9957671cf636862378630d41be357"
+    },
+    {
+      "path": "results/guard_mixed_cached_v1.json",
+      "sha256": "c3b44a1ddd342e2f5547148d41a2554cae9eb07ee97f78bf67cc2aa83e5df0cd"
+    },
+    {
+      "path": "results/guard_mixed_selected_v1.json",
+      "sha256": "22f965ba1d16c60fc81dec1ab136e4da3a7acf4691bf16fe9b76351ca8e608d8"
+    },
+    {
+      "path": "results/mac_mixed_selected_crossplatform_v1.json",
+      "sha256": "34902e40e24b75c70f3e09a97d6e584b429404899cf97d4cae37d743337aeed4"
+    },
+    {
+      "path": "results/model_hashes_avx2_mixed_v1.json",
+      "sha256": "b0e148a782609fc3faa96eb2425e858c8e61d4ade391353540bb9406a959e4d4"
+    },
+    {
+      "path": "results/model_hashes_crossplatform_mixed_v1.json",
+      "sha256": "0d69e8319f50b94789ff4750c54e18d21101038b64f418a6dd9e76ca197005c4"
+    },
+    {
+      "path": "results/qat_decoder_parity.json",
+      "sha256": "a2dad3ef82a38a9789fb42f429614d124d3f8600479b3b8dd3b2a26193a04365"
+    },
+    {
+      "path": "results/quality_ablation_v2.json",
+      "sha256": "fccbd3827aef7f21ba3be0d69c86a1fcc639e932ff6d5b40eb78f5984e3c8d61"
+    },
+    {
+      "path": "results/quality_components_v2.json",
+      "sha256": "8a4b25fb8b2562de1f3ef627277d39a06337d973ef1d5cc2f38133cc9a0f6a47"
+    },
+    {
+      "path": "results/quality_crossplatform_mixed_v1.json",
+      "sha256": "79d6850c51d8299fb853692f491a7f0971827cf7e870f9b085ac8629625fea31"
+    },
+    {
+      "path": "results/quality_joint1024_v1.json",
+      "sha256": "bb264f36c31bb018bf7541b5b8be8c8f4d79414d72c178b4904b80525606ebbb"
+    },
+    {
+      "path": "results/quality_joint1536_v1.json",
+      "sha256": "8b3854187a88c64e9e3316343639d86b529972fa91e2665edefb28e88f2e288f"
+    },
+    {
+      "path": "results/quality_mixed_final_v1.json",
+      "sha256": "2f0eafa70cc56e969b121aae4df260567c2c167b703a2295056fee1871edc7df"
+    },
+    {
+      "path": "results/quality_mixed_preview_v1.json",
+      "sha256": "633a466d09f4a54f1f7189461bc4810950e5a7217f059301c2829c8b86f260f2"
+    },
+    {
+      "path": "results/quality_mixed_selected_v1.json",
+      "sha256": "e366a2c5727a91b099a65316f5e6792073827f16514bcacbaec241d1ac177d38"
+    },
+    {
+      "path": "results/quality_reducedrange_mixed_v1.json",
+      "sha256": "ca010d352323fd801b7e0f650a185ec0093cd587be0f965bcbfa76a4f4ae48b3"
+    },
+    {
+      "path": "results/quality_rollout1024_v1.json",
+      "sha256": "9d38f36fd1f33bc2f3c9c39106f7ef142a3ff9636f96da6b6175c4827d3e083b"
+    },
+    {
+      "path": "results/quality_rollout1536_v1.json",
+      "sha256": "b077a8d40ebcd5d2513657cc18466cd70e1039d7d03b121dbb837ebcc9d7b846"
+    },
+    {
+      "path": "results/quality_server_original_mixed_v1.json",
+      "sha256": "f8d454d63b768e3c575b2656bc5ea7c207f527d1a42f5fc33e092abf3da91161"
+    },
+    {
+      "path": "results/torch_graph_parity.json",
+      "sha256": "98a75f4c96f48298b7fba76dfe7991d9cbbc973b65ea1f65b1867968c72cfb8e"
+    },
+    {
+      "path": "results/torch_graph_parity_suite.json",
+      "sha256": "6f2d964ef57bd9f358972bd2406cd28262b4837b8e47bf8ca830a1518cb00e7f"
+    },
+    {
+      "path": "results/torch_vocoder_parity.json",
+      "sha256": "9554df49ac9f1cb28e29e42bd9d63130b31866611321c7754dd20ef9ba4bbcac"
+    }
+  ],
+  "acoustic_summary": [
+    {
+      "source": "results/acoustic_ablation_v2.json",
+      "variant": "fp32_cached",
+      "cases": 4,
+      "dtw_logmel_mae_db": 0.00014249372179619968,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 1.0,
+      "f0_median_abs_cents": 0.0,
+      "f0_gross_error_over_200_cents": 0.0
+    },
+    {
+      "source": "results/acoustic_ablation_v2.json",
+      "variant": "full_int8",
+      "cases": 4,
+      "dtw_logmel_mae_db": 2.3815743923187256,
+      "duration_relative_error": 0.0036914303033944718,
+      "voiced_unvoiced_agreement": 0.9471069598641059,
+      "f0_median_abs_cents": 9.999999999999872,
+      "f0_gross_error_over_200_cents": 0.0
+    },
+    {
+      "source": "results/acoustic_ablation_v2.json",
+      "variant": "vector_int8_only",
+      "cases": 4,
+      "dtw_logmel_mae_db": 1.4044659435749054,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.9649159766196043,
+      "f0_median_abs_cents": 5.000000000000008,
+      "f0_gross_error_over_200_cents": 0.0
+    },
+    {
+      "source": "results/acoustic_ablation_v2.json",
+      "variant": "student1024_full_int8",
+      "cases": 4,
+      "dtw_logmel_mae_db": 5.481358528137207,
+      "duration_relative_error": 0.0036914303033944718,
+      "voiced_unvoiced_agreement": 0.8815257294492991,
+      "f0_median_abs_cents": 44.99999999999996,
+      "f0_gross_error_over_200_cents": 0.03665543953665385
+    },
+    {
+      "source": "results/acoustic_ablation_v2.json",
+      "variant": "student1024_vector_fp32",
+      "cases": 4,
+      "dtw_logmel_mae_db": 5.003565192222595,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.8926135541499801,
+      "f0_median_abs_cents": 49.999999999999886,
+      "f0_gross_error_over_200_cents": 0.047801233853865435
+    },
+    {
+      "source": "results/acoustic_ablation_v2.json",
+      "variant": "student1024_vector_int8",
+      "cases": 4,
+      "dtw_logmel_mae_db": 5.079854249954224,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.8718284574728965,
+      "f0_median_abs_cents": 47.49999999999995,
+      "f0_gross_error_over_200_cents": 0.02780100050582904
+    },
+    {
+      "source": "results/acoustic_ablation_v2.json",
+      "variant": "student1536_vector_int8",
+      "cases": 4,
+      "dtw_logmel_mae_db": 3.3643524646759033,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.914798718950185,
+      "f0_median_abs_cents": 23.750000000000156,
+      "f0_gross_error_over_200_cents": 0.0136986301369863
+    },
+    {
+      "source": "results/acoustic_components_v2.json",
+      "variant": "frontend_int8_only",
+      "cases": 4,
+      "dtw_logmel_mae_db": 0.7615028321743011,
+      "duration_relative_error": 0.0036914303033944718,
+      "voiced_unvoiced_agreement": 0.9667967208872208,
+      "f0_median_abs_cents": 0.0,
+      "f0_gross_error_over_200_cents": 0.0
+    },
+    {
+      "source": "results/acoustic_components_v2.json",
+      "variant": "decoder_int8_only",
+      "cases": 4,
+      "dtw_logmel_mae_db": 1.6487988829612732,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.9706575495254988,
+      "f0_median_abs_cents": 0.0,
+      "f0_gross_error_over_200_cents": 0.0
+    },
+    {
+      "source": "results/acoustic_components_v2.json",
+      "variant": "student1024_fp32_frontend",
+      "cases": 4,
+      "dtw_logmel_mae_db": 5.522244453430176,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.8671133931740233,
+      "f0_median_abs_cents": 43.750000000000085,
+      "f0_gross_error_over_200_cents": 0.028055290438099963
+    },
+    {
+      "source": "results/acoustic_crossplatform_mixed_v1.json",
+      "variant": "mixed-selected",
+      "cases": 2,
+      "dtw_logmel_mae_db": 1.9233388304710388,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.8680134631075883,
+      "f0_median_abs_cents": 10.000000000000016,
+      "f0_gross_error_over_200_cents": 0.0
+    },
+    {
+      "source": "results/acoustic_crossplatform_mixed_v1.json",
+      "variant": "full-int8",
+      "cases": 2,
+      "dtw_logmel_mae_db": 15.18354606628418,
+      "duration_relative_error": 0.05655319086905419,
+      "voiced_unvoiced_agreement": 0.6046872810500257,
+      "f0_median_abs_cents": 107.50000000000006,
+      "f0_gross_error_over_200_cents": 0.4033773291925466
+    },
+    {
+      "source": "results/acoustic_joint1024_v1.json",
+      "variant": "joint1024-v1-int8",
+      "cases": 4,
+      "dtw_logmel_mae_db": 4.6305073499679565,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.8789442875667242,
+      "f0_median_abs_cents": 37.500000000000206,
+      "f0_gross_error_over_200_cents": 0.031029350826524423
+    },
+    {
+      "source": "results/acoustic_joint1536_v1.json",
+      "variant": "joint1536-v1-int8",
+      "cases": 4,
+      "dtw_logmel_mae_db": 3.2420188784599304,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.9374985906817568,
+      "f0_median_abs_cents": 20.00000000000007,
+      "f0_gross_error_over_200_cents": 0.008358471593765713
+    },
+    {
+      "source": "results/acoustic_mixed_final_v1.json",
+      "variant": "mixed-v1-quality",
+      "cases": 4,
+      "dtw_logmel_mae_db": 2.9711543917655945,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.9352450908371737,
+      "f0_median_abs_cents": 22.49999999999991,
+      "f0_gross_error_over_200_cents": 0.029467894524725282
+    },
+    {
+      "source": "results/acoustic_mixed_final_v1.json",
+      "variant": "mixed-v1-fast",
+      "cases": 4,
+      "dtw_logmel_mae_db": 3.6790505051612854,
+      "duration_relative_error": 0.0036914303033944718,
+      "voiced_unvoiced_agreement": 0.9249868590286945,
+      "f0_median_abs_cents": 20.00000000000014,
+      "f0_gross_error_over_200_cents": 0.031809078771695594
+    },
+    {
+      "source": "results/acoustic_mixed_preview_v1.json",
+      "variant": "mixed-v1-preview-int8",
+      "cases": 4,
+      "dtw_logmel_mae_db": 2.754322111606598,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.9384240867916884,
+      "f0_median_abs_cents": 20.000000000000068,
+      "f0_gross_error_over_200_cents": 0.03179723823046299
+    },
+    {
+      "source": "results/acoustic_mixed_selected_v1.json",
+      "variant": "mixed-v1-selected",
+      "cases": 4,
+      "dtw_logmel_mae_db": 2.7543224096298218,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.9384240867916884,
+      "f0_median_abs_cents": 20.000000000000068,
+      "f0_gross_error_over_200_cents": 0.03179723823046299
+    },
+    {
+      "source": "results/acoustic_mixed_test_v1.json",
+      "variant": "mixed-v1-selected",
+      "cases": 12,
+      "dtw_logmel_mae_db": 3.255934019883474,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.9260792627196409,
+      "f0_median_abs_cents": 26.666666666666696,
+      "f0_gross_error_over_200_cents": 0.077815596160891
+    },
+    {
+      "source": "results/acoustic_reducedrange_mixed_v1.json",
+      "variant": "reduced-range-full-int8-server",
+      "cases": 1,
+      "dtw_logmel_mae_db": 15.601336479187012,
+      "duration_relative_error": 0.0038885821360181705,
+      "voiced_unvoiced_agreement": 0.7922330097087379,
+      "f0_median_abs_cents": 10.000000000000016,
+      "f0_gross_error_over_200_cents": 0.0060790273556231
+    },
+    {
+      "source": "results/acoustic_reducedrange_mixed_v1.json",
+      "variant": "reduced-range-crossplatform",
+      "cases": 1,
+      "dtw_logmel_mae_db": 10.03128433227539,
+      "duration_relative_error": 0.0014062719729994733,
+      "voiced_unvoiced_agreement": 0.7980582524271844,
+      "f0_median_abs_cents": 10.000000000000016,
+      "f0_gross_error_over_200_cents": 0.08814589665653495
+    },
+    {
+      "source": "results/acoustic_rollout1024_v1.json",
+      "variant": "rollout1024-v1-int8",
+      "cases": 4,
+      "dtw_logmel_mae_db": 4.56912887096405,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.8857866157926793,
+      "f0_median_abs_cents": 40.00000000000002,
+      "f0_gross_error_over_200_cents": 0.03203683041314961
+    },
+    {
+      "source": "results/acoustic_rollout1536_v1.json",
+      "variant": "rollout1536-v1-int8",
+      "cases": 4,
+      "dtw_logmel_mae_db": 3.2420188784599304,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.9374985906817568,
+      "f0_median_abs_cents": 20.00000000000007,
+      "f0_gross_error_over_200_cents": 0.008358471593765713
+    },
+    {
+      "source": "results/acoustic_server_original_mixed_v1.json",
+      "variant": "full-int8-server",
+      "cases": 2,
+      "dtw_logmel_mae_db": 15.55921983718872,
+      "duration_relative_error": 0.05697404959531349,
+      "voiced_unvoiced_agreement": 0.6462940103048519,
+      "f0_median_abs_cents": 85.00000000000011,
+      "f0_gross_error_over_200_cents": 0.2930745668612999
+    },
+    {
+      "source": "results/acoustic_server_original_mixed_v1.json",
+      "variant": "student1024-server",
+      "cases": 2,
+      "dtw_logmel_mae_db": 16.40165662765503,
+      "duration_relative_error": 0.05697404959531349,
+      "voiced_unvoiced_agreement": 0.7293634199637048,
+      "f0_median_abs_cents": 105.0000000000002,
+      "f0_gross_error_over_200_cents": 0.324618406285073
+    },
+    {
+      "source": "results/acoustic_server_original_mixed_v1.json",
+      "variant": "mixed-selected-server",
+      "cases": 2,
+      "dtw_logmel_mae_db": 3.290611743927002,
+      "duration_relative_error": 0.0,
+      "voiced_unvoiced_agreement": 0.8589029391660971,
+      "f0_median_abs_cents": 29.99999999999998,
+      "f0_gross_error_over_200_cents": 0.08160227115357983
+    }
+  ],
+  "asr_summary": [
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "reference",
+      "language": "ko",
+      "errors": 0,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "reference",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "fp32_cached",
+      "language": "ko",
+      "errors": 0,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "fp32_cached",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "full_int8",
+      "language": "ko",
+      "errors": 0,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "full_int8",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "vector_int8_only",
+      "language": "ko",
+      "errors": 0,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "vector_int8_only",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "student1024_full_int8",
+      "language": "ko",
+      "errors": 0,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "student1024_full_int8",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "student1024_vector_fp32",
+      "language": "ko",
+      "errors": 1,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "student1024_vector_fp32",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "student1024_vector_int8",
+      "language": "ko",
+      "errors": 0,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "student1024_vector_int8",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "student1536_vector_int8",
+      "language": "ko",
+      "errors": 1,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_ablation_v2.json",
+      "variant": "student1536_vector_int8",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_epyc_mixed_selected_v1.json",
+      "variant": "unknown",
+      "language": "ko",
+      "errors": 0,
+      "units": 25,
+      "cases": 1
+    },
+    {
+      "source": "results/asr_epyc_mixed_selected_v1.json",
+      "variant": "unknown",
+      "language": "en",
+      "errors": 0,
+      "units": 11,
+      "cases": 1
+    },
+    {
+      "source": "results/asr_mixed_final_v1.json",
+      "variant": "reference",
+      "language": "ko",
+      "errors": 0,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_mixed_final_v1.json",
+      "variant": "reference",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_mixed_final_v1.json",
+      "variant": "mixed-v1-quality",
+      "language": "ko",
+      "errors": 1,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_mixed_final_v1.json",
+      "variant": "mixed-v1-quality",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_mixed_final_v1.json",
+      "variant": "mixed-v1-fast",
+      "language": "ko",
+      "errors": 1,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_mixed_final_v1.json",
+      "variant": "mixed-v1-fast",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_mixed_preview_v1.json",
+      "variant": "reference",
+      "language": "ko",
+      "errors": 0,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_mixed_preview_v1.json",
+      "variant": "reference",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_mixed_preview_v1.json",
+      "variant": "mixed-v1-preview-int8",
+      "language": "ko",
+      "errors": 0,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_mixed_preview_v1.json",
+      "variant": "mixed-v1-preview-int8",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_mixed_selected_v1.json",
+      "variant": "reference",
+      "language": "ko",
+      "errors": 0,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_mixed_selected_v1.json",
+      "variant": "reference",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_mixed_selected_v1.json",
+      "variant": "mixed-v1-selected",
+      "language": "ko",
+      "errors": 0,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_mixed_selected_v1.json",
+      "variant": "mixed-v1-selected",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_rollout1024_v1.json",
+      "variant": "reference",
+      "language": "ko",
+      "errors": 0,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_rollout1024_v1.json",
+      "variant": "reference",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_rollout1024_v1.json",
+      "variant": "rollout1024-v1-int8",
+      "language": "ko",
+      "errors": 4,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_rollout1024_v1.json",
+      "variant": "rollout1024-v1-int8",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_rollout1536_v1.json",
+      "variant": "reference",
+      "language": "ko",
+      "errors": 0,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_rollout1536_v1.json",
+      "variant": "reference",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_rollout1536_v1.json",
+      "variant": "rollout1536-v1-int8",
+      "language": "ko",
+      "errors": 1,
+      "units": 44,
+      "cases": 2
+    },
+    {
+      "source": "results/asr_rollout1536_v1.json",
+      "variant": "rollout1536-v1-int8",
+      "language": "en",
+      "errors": 0,
+      "units": 23,
+      "cases": 2
+    },
+    {
+      "source": "results/distill_mixed_selected_test_v1.json",
+      "variant": "reference",
+      "language": "ko",
+      "errors": 4,
+      "units": 142,
+      "cases": 6
+    },
+    {
+      "source": "results/distill_mixed_selected_test_v1.json",
+      "variant": "reference",
+      "language": "en",
+      "errors": 0,
+      "units": 72,
+      "cases": 6
+    },
+    {
+      "source": "results/distill_mixed_selected_test_v1.json",
+      "variant": "mixed-v1-selected",
+      "language": "ko",
+      "errors": 4,
+      "units": 142,
+      "cases": 6
+    },
+    {
+      "source": "results/distill_mixed_selected_test_v1.json",
+      "variant": "mixed-v1-selected",
+      "language": "en",
+      "errors": 1,
+      "units": 72,
+      "cases": 6
+    },
+    {
+      "source": "results/distill_mixed_selected_validation_v1.json",
+      "variant": "reference",
+      "language": "ko",
+      "errors": 2,
+      "units": 88,
+      "cases": 4
+    },
+    {
+      "source": "results/distill_mixed_selected_validation_v1.json",
+      "variant": "reference",
+      "language": "en",
+      "errors": 0,
+      "units": 46,
+      "cases": 4
+    },
+    {
+      "source": "results/distill_mixed_selected_validation_v1.json",
+      "variant": "mixed-v1-selected",
+      "language": "ko",
+      "errors": 1,
+      "units": 88,
+      "cases": 4
+    },
+    {
+      "source": "results/distill_mixed_selected_validation_v1.json",
+      "variant": "mixed-v1-selected",
+      "language": "en",
+      "errors": 0,
+      "units": 46,
+      "cases": 4
+    }
+  ],
+  "performance": [
+    {
+      "source": "results/epyc_mixed_cached_v1_8.json",
+      "model": "models/mixed-v1-cached",
+      "case": "ko_short",
+      "lang": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 11.21479039080441,
+          "audio_seconds": 5.320022675736961,
+          "rtf": 2.1080343213482395,
+          "realtime_factor": 0.4743755781739019,
+          "stages": {
+            "duration_predictor": 0.0044403523206710815,
+            "text_encoder": 0.049235833808779716,
+            "condition": 0.013465004041790962,
+            "vector_estimator": 9.190526131540537,
+            "vocoder": 1.9122335519641638
+          }
+        },
+        {
+          "seconds": 11.93100898526609,
+          "audio_seconds": 5.320022675736961,
+          "rtf": 2.24266130286998,
+          "realtime_factor": 0.44589880724310865,
+          "stages": {
+            "duration_predictor": 0.004101889207959175,
+            "text_encoder": 0.09334635734558105,
+            "condition": 0.013571616262197495,
+            "vector_estimator": 9.96066140383482,
+            "vocoder": 1.8094541039317846
+          }
+        },
+        {
+          "seconds": 9.66202563419938,
+          "audio_seconds": 5.320022675736961,
+          "rtf": 1.8161624908602367,
+          "realtime_factor": 0.5506115256935759,
+          "stages": {
+            "duration_predictor": 0.003846295177936554,
+            "text_encoder": 0.07949724793434143,
+            "condition": 0.013024788349866867,
+            "vector_estimator": 7.867578849196434,
+            "vocoder": 1.69648271612823
+          }
+        }
+      ],
+      "median_seconds": 11.21479039080441,
+      "median_rtf": 2.1080343213482395,
+      "median_realtime_factor": 0.4743755781739019,
+      "cpu_wall_ratio": 0.9938105829262892,
+      "rss_mb": 373.374976,
+      "peak": 0.4590143859386444
+    },
+    {
+      "source": "results/epyc_mixed_cached_v1_8.json",
+      "model": "models/mixed-v1-cached",
+      "case": "en_short",
+      "lang": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 14.830056650564075,
+          "audio_seconds": 4.933650793650794,
+          "rtf": 3.0058991345007935,
+          "realtime_factor": 0.3326791602959344,
+          "stages": {
+            "duration_predictor": 0.004306092858314514,
+            "text_encoder": 0.09202555008232594,
+            "condition": 0.013234976679086685,
+            "vector_estimator": 9.598925145342946,
+            "vocoder": 5.119305066764355
+          }
+        },
+        {
+          "seconds": 9.1617397274822,
+          "audio_seconds": 4.933650793650794,
+          "rtf": 1.8569899067993647,
+          "realtime_factor": 0.5385058886634235,
+          "stages": {
+            "duration_predictor": 0.027990082278847694,
+            "text_encoder": 0.08368946611881256,
+            "condition": 0.013322113081812859,
+            "vector_estimator": 7.385308211669326,
+            "vocoder": 1.5833789836615324
+          }
+        },
+        {
+          "seconds": 11.918359022587538,
+          "audio_seconds": 4.933650793650794,
+          "rtf": 2.415728133398799,
+          "realtime_factor": 0.4139538659894869,
+          "stages": {
+            "duration_predictor": 0.004047013819217682,
+            "text_encoder": 0.0905462708324194,
+            "condition": 0.014819750562310219,
+            "vector_estimator": 9.004598010331392,
+            "vocoder": 2.802822608500719
+          }
+        }
+      ],
+      "median_seconds": 11.918359022587538,
+      "median_rtf": 2.415728133398799,
+      "median_realtime_factor": 0.4139538659894869,
+      "cpu_wall_ratio": 0.9292650315963549,
+      "rss_mb": 278.728704,
+      "peak": 0.39767715334892273
+    },
+    {
+      "source": "results/epyc_mixed_selected_v1_8.json",
+      "model": "models/mixed-v1-selected",
+      "case": "ko_short",
+      "lang": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 9.994838939979672,
+          "audio_seconds": 5.320022675736961,
+          "rtf": 1.8787211162770332,
+          "realtime_factor": 0.5322769789172592,
+          "stages": {
+            "duration_predictor": 0.0069862306118011475,
+            "text_encoder": 0.08721846528351307,
+            "vector_estimator": 8.00817359611392,
+            "vocoder": 1.887185389176011
+          }
+        },
+        {
+          "seconds": 10.015302924439311,
+          "audio_seconds": 5.320022675736961,
+          "rtf": 1.882567713501697,
+          "realtime_factor": 0.5311893924601181,
+          "stages": {
+            "duration_predictor": 0.01661205291748047,
+            "text_encoder": 0.08484634011983871,
+            "vector_estimator": 8.168013287708163,
+            "vocoder": 1.7296532299369574
+          }
+        },
+        {
+          "seconds": 9.814871368929744,
+          "audio_seconds": 5.320022675736961,
+          "rtf": 1.8448927696666497,
+          "realtime_factor": 0.5420369229267933,
+          "stages": {
+            "duration_predictor": 0.0041447896510362625,
+            "text_encoder": 0.09031368605792522,
+            "vector_estimator": 8.071980938315392,
+            "vocoder": 1.6468952260911465
+          }
+        }
+      ],
+      "median_seconds": 9.994838939979672,
+      "median_rtf": 1.8787211162770332,
+      "median_realtime_factor": 0.5322769789172592,
+      "cpu_wall_ratio": 0.995898618706665,
+      "rss_mb": 353.36192,
+      "peak": 0.4590143859386444
+    },
+    {
+      "source": "results/epyc_mixed_selected_v1_8.json",
+      "model": "models/mixed-v1-selected",
+      "case": "en_short",
+      "lang": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 9.110945839434862,
+          "audio_seconds": 4.933650793650794,
+          "rtf": 1.8466945109207782,
+          "realtime_factor": 0.5415080805657407,
+          "stages": {
+            "duration_predictor": 0.003906169906258583,
+            "text_encoder": 0.09197002463042736,
+            "vector_estimator": 7.473169893026352,
+            "vocoder": 1.5403694193810225
+          }
+        },
+        {
+          "seconds": 9.095747344195843,
+          "audio_seconds": 4.933650793650794,
+          "rtf": 1.843613933094196,
+          "realtime_factor": 0.5424129108862115,
+          "stages": {
+            "duration_predictor": 0.04910544864833355,
+            "text_encoder": 0.05558330751955509,
+            "vector_estimator": 7.466538328677416,
+            "vocoder": 1.5230807419866323
+          }
+        },
+        {
+          "seconds": 9.08256115205586,
+          "audio_seconds": 4.933650793650794,
+          "rtf": 1.84094122829779,
+          "realtime_factor": 0.5432003937054748,
+          "stages": {
+            "duration_predictor": 0.004123060032725334,
+            "text_encoder": 0.08983035944402218,
+            "vector_estimator": 7.465189149603248,
+            "vocoder": 1.521876186132431
+          }
+        }
+      ],
+      "median_seconds": 9.095747344195843,
+      "median_rtf": 1.843613933094196,
+      "median_realtime_factor": 0.5424129108862115,
+      "cpu_wall_ratio": 0.9979907432789447,
+      "rss_mb": 354.623488,
+      "peak": 0.39767715334892273
+    },
+    {
+      "source": "results/mac_mixed_selected_crossplatform_v1.json",
+      "model": "models/mixed-v1-selected",
+      "case": "ko_short",
+      "lang": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 0.3182127919862978,
+          "audio_seconds": 5.320022675736961,
+          "rtf": 0.059814179634528925,
+          "realtime_factor": 16.71844378891607,
+          "stages": {
+            "duration_predictor": 0.0008419170044362545,
+            "text_encoder": 0.004324500012444332,
+            "vector_estimator": 0.2658853339671623,
+            "vocoder": 0.04672174999723211
+          }
+        }
+      ],
+      "median_seconds": 0.3182127919862978,
+      "median_rtf": 0.059814179634528925,
+      "median_realtime_factor": 16.71844378891607,
+      "cpu_wall_ratio": 0.9994412795752551,
+      "rss_mb": 361.775104,
+      "peak": 0.41509947180747986
+    },
+    {
+      "source": "results/mac_mixed_selected_crossplatform_v1.json",
+      "model": "models/mixed-v1-selected",
+      "case": "en_short",
+      "lang": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 0.2932556250016205,
+          "audio_seconds": 4.933650793650794,
+          "rtf": 0.05943988281031494,
+          "realtime_factor": 16.823720921375443,
+          "stages": {
+            "duration_predictor": 0.0008279159956146032,
+            "text_encoder": 0.004245499992975965,
+            "vector_estimator": 0.24477920701610856,
+            "vocoder": 0.04301837499951944
+          }
+        }
+      ],
+      "median_seconds": 0.2932556250016205,
+      "median_rtf": 0.05943988281031494,
+      "median_realtime_factor": 16.823720921375443,
+      "cpu_wall_ratio": 0.9999296688627184,
+      "rss_mb": 363.036672,
+      "peak": 0.3784249424934387
+    }
+  ],
+  "training": [
+    {
+      "source": "distill/joint-mixed-v1/report.json",
+      "config": {
+        "checkpoints": "distill/mixed-v1/initial.pt",
+        "data": "distill/trajectories-v2",
+        "output": "distill/joint-mixed-v1",
+        "iterations": 1200,
+        "learning_rate": 3e-05,
+        "validate_every": 100
+      },
+      "method": "All 28 student FFNs jointly optimized through complete CFG4 denoising graph; teacher trajectories; no decoder or waveform loss yet",
+      "train_pairs": 1600,
+      "validation_pairs": 24,
+      "initial_validation_relative_update_mse": 0.02162883255126265,
+      "history": [
+        {
+          "step": 100,
+          "validation_relative_update_mse": 0.02091417502379045,
+          "train_loss": 0.003979003522545099,
+          "elapsed_seconds": 24.790764000004856
+        },
+        {
+          "step": 200,
+          "validation_relative_update_mse": 0.020753589012504865,
+          "train_loss": 0.014531420543789864,
+          "elapsed_seconds": 44.21133929200005
+        },
+        {
+          "step": 300,
+          "validation_relative_update_mse": 0.020985337857079383,
+          "train_loss": 0.03991799056529999,
+          "elapsed_seconds": 63.64007520899759
+        },
+        {
+          "step": 400,
+          "validation_relative_update_mse": 0.019176095132327948,
+          "train_loss": 0.010564563795924187,
+          "elapsed_seconds": 82.62840412498917
+        },
+        {
+          "step": 500,
+          "validation_relative_update_mse": 0.018920287703319143,
+          "train_loss": 0.0016340530710294843,
+          "elapsed_seconds": 101.81199029198615
+        },
+        {
+          "step": 600,
+          "validation_relative_update_mse": 0.02501473068453682,
+          "train_loss": 0.011957162991166115,
+          "elapsed_seconds": 120.40438454199466
+        },
+        {
+          "step": 700,
+          "validation_relative_update_mse": 0.019776312246297795,
+          "train_loss": 0.013075699098408222,
+          "elapsed_seconds": 137.07390945899533
+        },
+        {
+          "step": 800,
+          "validation_relative_update_mse": 0.018397079926216975,
+          "train_loss": 0.08344221860170364,
+          "elapsed_seconds": 153.70410000000265
+        },
+        {
+          "step": 900,
+          "validation_relative_update_mse": 0.022693732898915187,
+          "train_loss": 0.005684578791260719,
+          "elapsed_seconds": 170.25215370900696
+        },
+        {
+          "step": 1000,
+          "validation_relative_update_mse": 0.018741216520235564,
+          "train_loss": 0.03895632550120354,
+          "elapsed_seconds": 186.79545304199564
+        },
+        {
+          "step": 1100,
+          "validation_relative_update_mse": 0.018994095162876572,
+          "train_loss": 0.009725936688482761,
+          "elapsed_seconds": 204.23735379200662
+        },
+        {
+          "step": 1200,
+          "validation_relative_update_mse": 0.018293191150102455,
+          "train_loss": 0.009207713417708874,
+          "elapsed_seconds": 220.99638716698973
+        }
+      ],
+      "best_validation_relative_update_mse": 0.018293191150102455,
+      "elapsed_seconds": 221.44902112497948,
+      "complete": true
+    },
+    {
+      "source": "distill/joint1024-v1/report.json",
+      "config": {
+        "checkpoints": "distill/student1024",
+        "data": "distill/trajectories-v1",
+        "output": "distill/joint1024-v1",
+        "iterations": 600,
+        "learning_rate": 3e-05,
+        "validate_every": 100
+      },
+      "method": "All 28 student FFNs jointly optimized through complete CFG4 denoising graph; teacher trajectories; no decoder or waveform loss yet",
+      "train_pairs": 320,
+      "validation_pairs": 24,
+      "initial_validation_relative_update_mse": 0.10932725733922173,
+      "history": [
+        {
+          "step": 100,
+          "validation_relative_update_mse": 0.08565723946473251,
+          "train_loss": 0.044830407947301865,
+          "elapsed_seconds": 15.767358459008392
+        },
+        {
+          "step": 200,
+          "validation_relative_update_mse": 0.0800698862488692,
+          "train_loss": 0.04782990366220474,
+          "elapsed_seconds": 28.14946479201899
+        },
+        {
+          "step": 300,
+          "validation_relative_update_mse": 0.07800709122481446,
+          "train_loss": 0.022304348647594452,
+          "elapsed_seconds": 40.44907729199622
+        },
+        {
+          "step": 400,
+          "validation_relative_update_mse": 0.07645643323970337,
+          "train_loss": 0.02219456061720848,
+          "elapsed_seconds": 52.751160584011814
+        },
+        {
+          "step": 500,
+          "validation_relative_update_mse": 0.0750819956107686,
+          "train_loss": 0.04229481890797615,
+          "elapsed_seconds": 65.0348553340009
+        },
+        {
+          "step": 600,
+          "validation_relative_update_mse": 0.08080732574065526,
+          "train_loss": 0.03355766460299492,
+          "elapsed_seconds": 77.18052720901323
+        }
+      ],
+      "best_validation_relative_update_mse": 0.0750819956107686,
+      "elapsed_seconds": 77.24626554199494,
+      "complete": true
+    },
+    {
+      "source": "distill/joint1536-v1/report.json",
+      "config": {
+        "checkpoints": "distill/student1536",
+        "data": "distill/trajectories-v1",
+        "output": "distill/joint1536-v1",
+        "iterations": 1000,
+        "learning_rate": 3e-05,
+        "validate_every": 100
+      },
+      "method": "All 28 student FFNs jointly optimized through complete CFG4 denoising graph; teacher trajectories; no decoder or waveform loss yet",
+      "train_pairs": 320,
+      "validation_pairs": 24,
+      "initial_validation_relative_update_mse": 0.03729187755379826,
+      "history": [
+        {
+          "step": 100,
+          "validation_relative_update_mse": 0.03376566978598324,
+          "train_loss": 0.012394691817462444,
+          "elapsed_seconds": 18.439272332994733
+        },
+        {
+          "step": 200,
+          "validation_relative_update_mse": 0.03526723797161443,
+          "train_loss": 0.01569596491754055,
+          "elapsed_seconds": 34.3513216249994
+        },
+        {
+          "step": 300,
+          "validation_relative_update_mse": 0.03327295545022935,
+          "train_loss": 0.04074251651763916,
+          "elapsed_seconds": 50.03598708298523
+        },
+        {
+          "step": 400,
+          "validation_relative_update_mse": 0.03555134899215773,
+          "train_loss": 0.01659880205988884,
+          "elapsed_seconds": 66.06852912498289
+        },
+        {
+          "step": 500,
+          "validation_relative_update_mse": 0.03617706026610298,
+          "train_loss": 0.015056127682328224,
+          "elapsed_seconds": 82.24556949999533
+        },
+        {
+          "step": 600,
+          "validation_relative_update_mse": 0.03687802897184156,
+          "train_loss": 0.010734500363469124,
+          "elapsed_seconds": 98.306224208005
+        },
+        {
+          "step": 700,
+          "validation_relative_update_mse": 0.03491449048548626,
+          "train_loss": 0.012352569960057735,
+          "elapsed_seconds": 114.4551259999862
+        },
+        {
+          "step": 800,
+          "validation_relative_update_mse": 0.03273389476817101,
+          "train_loss": 0.009823736734688282,
+          "elapsed_seconds": 130.52539629099192
+        },
+        {
+          "step": 900,
+          "validation_relative_update_mse": 0.03131726932285043,
+          "train_loss": 0.01590605080127716,
+          "elapsed_seconds": 146.7228091660072
+        },
+        {
+          "step": 1000,
+          "validation_relative_update_mse": 0.031465543036271505,
+          "train_loss": 0.00549240130931139,
+          "elapsed_seconds": 163.00013033300638
+        }
+      ],
+      "best_validation_relative_update_mse": 0.03131726932285043,
+      "elapsed_seconds": 163.09924191600294,
+      "complete": true
+    },
+    {
+      "source": "distill/rollout1024-v1/report.json",
+      "config": {
+        "initial": "distill/joint1024-v1/best.pt",
+        "layers": "distill/student1024",
+        "data": "distill/trajectories-v1",
+        "output": "distill/rollout1024-v1",
+        "iterations": 200,
+        "learning_rate": 1e-05,
+        "validate_every": 25
+      },
+      "steps": 8,
+      "guidance_scale": 4,
+      "train_utterances": 40,
+      "validation_cases": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "method": "All learned vector-field tensors; 8-step student trajectory with frozen original FP32 decoder; normalized latent MSE + 0.15*(3-resolution spectral convergence + log magnitude L1)",
+      "initial": {
+        "loss": 0.44837525486946106,
+        "latent_relative_mse": 0.264542642980814,
+        "mrstft": 1.2255507707595825
+      },
+      "history": [
+        {
+          "step": 25,
+          "loss": 0.46186472475528717,
+          "latent_relative_mse": 0.2618548423051834,
+          "mrstft": 1.3333991467952728,
+          "elapsed_seconds": 19.656037416978506
+        },
+        {
+          "step": 50,
+          "loss": 0.40811580419540405,
+          "latent_relative_mse": 0.22746232524514198,
+          "mrstft": 1.2043565213680267,
+          "elapsed_seconds": 34.08139795900206
+        },
+        {
+          "step": 75,
+          "loss": 0.3516148701310158,
+          "latent_relative_mse": 0.17957840487360954,
+          "mrstft": 1.1469096839427948,
+          "elapsed_seconds": 48.632557292003185
+        },
+        {
+          "step": 100,
+          "loss": 0.3858181983232498,
+          "latent_relative_mse": 0.2009337618947029,
+          "mrstft": 1.2325629889965057,
+          "elapsed_seconds": 63.12815924998722
+        },
+        {
+          "step": 125,
+          "loss": 0.45826390385627747,
+          "latent_relative_mse": 0.26830076426267624,
+          "mrstft": 1.2664209306240082,
+          "elapsed_seconds": 76.80967087499448
+        },
+        {
+          "step": 150,
+          "loss": 0.42061083018779755,
+          "latent_relative_mse": 0.23527175933122635,
+          "mrstft": 1.2355937957763672,
+          "elapsed_seconds": 90.68719120899914
+        },
+        {
+          "step": 175,
+          "loss": 0.39605705440044403,
+          "latent_relative_mse": 0.21222274750471115,
+          "mrstft": 1.2255620062351227,
+          "elapsed_seconds": 104.06271741699311
+        },
+        {
+          "step": 200,
+          "loss": 0.37321005016565323,
+          "latent_relative_mse": 0.19177867472171783,
+          "mrstft": 1.2095423936843872,
+          "elapsed_seconds": 117.81652504199883
+        }
+      ],
+      "best_loss": 0.3516148701310158,
+      "complete": true,
+      "elapsed_seconds": 117.90407649998087
+    },
+    {
+      "source": "distill/rollout1536-v1/report.json",
+      "config": {
+        "initial": "distill/joint1536-v1/best.pt",
+        "layers": "distill/student1536",
+        "data": "distill/trajectories-v1",
+        "output": "distill/rollout1536-v1",
+        "iterations": 200,
+        "learning_rate": 1e-05,
+        "validate_every": 25,
+        "validation_all": true
+      },
+      "steps": 8,
+      "guidance_scale": 4,
+      "train_utterance_voice_seed_cases": 40,
+      "validation_cases": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "method": "All learned vector-field tensors; 8-step student trajectory with frozen original FP32 decoder; normalized latent MSE + 0.15*(3-resolution spectral convergence + log magnitude L1)",
+      "initial": {
+        "loss": 0.23908578231930733,
+        "latent_relative_mse": 0.09112594416365027,
+        "mrstft": 0.986398883163929
+      },
+      "history": [
+        {
+          "step": 25,
+          "loss": 0.2848172355443239,
+          "latent_relative_mse": 0.12232282664626837,
+          "mrstft": 1.0832960233092308,
+          "elapsed_seconds": 23.257768208015477
+        },
+        {
+          "step": 50,
+          "loss": 0.2886565141379833,
+          "latent_relative_mse": 0.12697946932166815,
+          "mrstft": 1.0778469294309616,
+          "elapsed_seconds": 41.034407500003
+        },
+        {
+          "step": 75,
+          "loss": 0.28387337177991867,
+          "latent_relative_mse": 0.12266725115478039,
+          "mrstft": 1.0747074335813522,
+          "elapsed_seconds": 58.49906166602159
+        },
+        {
+          "step": 100,
+          "loss": 0.2945355735719204,
+          "latent_relative_mse": 0.13121183589100838,
+          "mrstft": 1.08882487565279,
+          "elapsed_seconds": 75.57008529099403
+        },
+        {
+          "step": 125,
+          "loss": 0.39091819152235985,
+          "latent_relative_mse": 0.19488654378801584,
+          "mrstft": 1.3068775907158852,
+          "elapsed_seconds": 92.58711758299614
+        },
+        {
+          "step": 150,
+          "loss": 0.2908982392400503,
+          "latent_relative_mse": 0.1274549812078476,
+          "mrstft": 1.0896216928958893,
+          "elapsed_seconds": 109.17637141601881
+        },
+        {
+          "step": 175,
+          "loss": 0.3004968874156475,
+          "latent_relative_mse": 0.13320479448884726,
+          "mrstft": 1.1152805611491203,
+          "elapsed_seconds": 125.67467666600714
+        },
+        {
+          "step": 200,
+          "loss": 0.29024137184023857,
+          "latent_relative_mse": 0.12588324677199125,
+          "mrstft": 1.0957207754254341,
+          "elapsed_seconds": 142.6749766660214
+        }
+      ],
+      "best_loss": 0.23908578231930733,
+      "complete": true,
+      "elapsed_seconds": 142.79147120800917
+    },
+    {
+      "source": "distill/rollout1536-v2/report.json",
+      "config": {
+        "initial": "distill/rollout1536-v1/best.pt",
+        "layers": "distill/student1536",
+        "data": "distill/trajectories-v2",
+        "output": "distill/rollout1536-v2",
+        "iterations": 400,
+        "learning_rate": 3e-06,
+        "validate_every": 50,
+        "validation_all": true
+      },
+      "steps": 8,
+      "guidance_scale": 4,
+      "train_utterance_voice_seed_cases": 200,
+      "validation_cases": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "method": "All learned vector-field tensors; 8-step student trajectory with frozen original FP32 decoder; normalized latent MSE + 0.15*(3-resolution spectral convergence + log magnitude L1)",
+      "initial": {
+        "loss": 0.23908578231930733,
+        "latent_relative_mse": 0.09112594416365027,
+        "mrstft": 0.986398883163929
+      },
+      "history": [
+        {
+          "step": 50,
+          "loss": 0.25331809744238853,
+          "latent_relative_mse": 0.10331565327942371,
+          "mrstft": 1.0000162720680237,
+          "elapsed_seconds": 38.60509662498953
+        },
+        {
+          "step": 100,
+          "loss": 0.2542550712823868,
+          "latent_relative_mse": 0.10505526792258024,
+          "mrstft": 0.9946653172373772,
+          "elapsed_seconds": 72.04248824997921
+        },
+        {
+          "step": 150,
+          "loss": 0.2645719591528177,
+          "latent_relative_mse": 0.11170388013124466,
+          "mrstft": 1.0191205143928528,
+          "elapsed_seconds": 106.14215004097787
+        },
+        {
+          "step": 200,
+          "loss": 0.259126253426075,
+          "latent_relative_mse": 0.10945753380656242,
+          "mrstft": 0.9977914169430733,
+          "elapsed_seconds": 142.45768808299908
+        },
+        {
+          "step": 250,
+          "loss": 0.275317519903183,
+          "latent_relative_mse": 0.12411605753004551,
+          "mrstft": 1.0080097019672394,
+          "elapsed_seconds": 177.23379329100135
+        },
+        {
+          "step": 300,
+          "loss": 0.2741197030991316,
+          "latent_relative_mse": 0.12522568460553885,
+          "mrstft": 0.9926267489790916,
+          "elapsed_seconds": 216.98064149997663
+        },
+        {
+          "step": 350,
+          "loss": 0.2782224491238594,
+          "latent_relative_mse": 0.1301738154143095,
+          "mrstft": 0.9869908839464188,
+          "elapsed_seconds": 260.11343737499556
+        },
+        {
+          "step": 400,
+          "loss": 0.2760915383696556,
+          "latent_relative_mse": 0.12345069134607911,
+          "mrstft": 1.0176056548953056,
+          "elapsed_seconds": 303.08597724998253
+        }
+      ],
+      "best_loss": 0.23908578231930733,
+      "complete": true,
+      "elapsed_seconds": 303.20305962499697
+    }
+  ]
+}

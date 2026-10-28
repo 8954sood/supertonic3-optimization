@@ -1,0 +1,34 @@
+[
+  {
+    "path": "models/fast-full-int8/onnx/duration_predictor.onnx",
+    "sha256": "380320d1ece756ceec5a9357582f4da19f6515a51fa07c061f9cf5140017c277"
+  },
+  {
+    "path": "models/fast-full-int8/onnx/text_encoder.onnx",
+    "sha256": "d07ec553a3f3827f52184d01276bb1904afcb159cf62a4ce7a48f0e572c2ef51"
+  },
+  {
+    "path": "models/fast-full-int8/onnx/vector_estimator.onnx",
+    "sha256": "7eb304b2092fca2a9aa1c91674a5259edad914d4dd021f5738fb422adc9390e8"
+  },
+  {
+    "path": "models/fast-full-int8/onnx/vocoder.onnx",
+    "sha256": "d6e2e2c450ec821f187c6bc75006497c31ed64cc7f0403ae538150774ffe1bd7"
+  },
+  {
+    "path": "models/mixed-v1-selected/onnx/duration_predictor.onnx",
+    "sha256": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da"
+  },
+  {
+    "path": "models/mixed-v1-selected/onnx/text_encoder.onnx",
+    "sha256": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a"
+  },
+  {
+    "path": "models/mixed-v1-selected/onnx/vector_estimator.onnx",
+    "sha256": "ca5ec5538b736233014c8c086683a51f2b7c735a98f34098ebbe550366e18644"
+  },
+  {
+    "path": "models/mixed-v1-selected/onnx/vocoder.onnx",
+    "sha256": "7698d5858bb47c008c959a1ab94b1904cb69bfb518070bb6b1781211b977c9e9"
+  }
+]

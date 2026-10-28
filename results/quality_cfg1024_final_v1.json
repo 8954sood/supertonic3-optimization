@@ -1,0 +1,319 @@
+{
+  "steps": 8,
+  "reference_guidance_scale": 4,
+  "split": "validation",
+  "rows": [
+    {
+      "variant": "reference",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "seed": 400,
+      "audio": "samples/quality_cfg1024_final_v1/reference_00.wav",
+      "reference_audio": "samples/quality_cfg1024_final_v1/reference_00.wav",
+      "timing": {
+        "seconds": 1.676286333007738,
+        "audio_seconds": 5.305736961451247,
+        "rtf": 0.3159384540143568,
+        "realtime_factor": 3.1651734294887643,
+        "stages": {
+          "duration_predictor": 0.0018031249928753823,
+          "text_encoder": 0.004921040992485359,
+          "vector_estimator": 1.6166978320106864,
+          "vocoder": 0.037255332979839295
+        }
+      },
+      "model": "models/supertonic-3",
+      "model_manifest": {
+        "guidance_scale": 4,
+        "mode": "original"
+      },
+      "vector_override": null
+    },
+    {
+      "variant": "reference",
+      "case": 1,
+      "language": "ko",
+      "voice": "F1",
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "seed": 401,
+      "audio": "samples/quality_cfg1024_final_v1/reference_01.wav",
+      "reference_audio": "samples/quality_cfg1024_final_v1/reference_01.wav",
+      "timing": {
+        "seconds": 1.3482082090049516,
+        "audio_seconds": 4.054557823129252,
+        "rtf": 0.33251670535171285,
+        "realtime_factor": 3.007367701849055,
+        "stages": {
+          "duration_predictor": 0.0007987499993760139,
+          "text_encoder": 0.0039717089966870844,
+          "vector_estimator": 1.312106791039696,
+          "vocoder": 0.030862708983477205
+        }
+      },
+      "model": "models/supertonic-3",
+      "model_manifest": {
+        "guidance_scale": 4,
+        "mode": "original"
+      },
+      "vector_override": null
+    },
+    {
+      "variant": "reference",
+      "case": 4,
+      "language": "en",
+      "voice": "M1",
+      "text": "The silver kettle began to whistle as the water reached a boil.",
+      "seed": 404,
+      "audio": "samples/quality_cfg1024_final_v1/reference_04.wav",
+      "reference_audio": "samples/quality_cfg1024_final_v1/reference_04.wav",
+      "timing": {
+        "seconds": 1.3313592500053346,
+        "audio_seconds": 4.154965986394558,
+        "rtf": 0.3204260286040541,
+        "realtime_factor": 3.12084509600088,
+        "stages": {
+          "duration_predictor": 0.0008795830071903765,
+          "text_encoder": 0.004681833001086488,
+          "vector_estimator": 1.2965524160244968,
+          "vocoder": 0.028820167004596442
+        }
+      },
+      "model": "models/supertonic-3",
+      "model_manifest": {
+        "guidance_scale": 4,
+        "mode": "original"
+      },
+      "vector_override": null
+    },
+    {
+      "variant": "reference",
+      "case": 5,
+      "language": "en",
+      "voice": "F1",
+      "text": "We waited beneath the shelter until the heavy rain had passed.",
+      "seed": 405,
+      "audio": "samples/quality_cfg1024_final_v1/reference_05.wav",
+      "reference_audio": "samples/quality_cfg1024_final_v1/reference_05.wav",
+      "timing": {
+        "seconds": 1.301652833004482,
+        "audio_seconds": 4.1210884353741495,
+        "rtf": 0.31585171088091596,
+        "realtime_factor": 3.166042688864919,
+        "stages": {
+          "duration_predictor": 0.0008200829906854779,
+          "text_encoder": 0.004278666019672528,
+          "vector_estimator": 1.2673085830465425,
+          "vocoder": 0.02884454099694267
+        }
+      },
+      "model": "models/supertonic-3",
+      "model_manifest": {
+        "guidance_scale": 4,
+        "mode": "original"
+      },
+      "vector_override": null
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "seed": 400,
+      "audio": "samples/quality_cfg1024_final_v1/cfg1024-v1-final_00.wav",
+      "reference_audio": "samples/quality_cfg1024_final_v1/reference_00.wav",
+      "timing": {
+        "seconds": 0.18692366700270213,
+        "audio_seconds": 5.305736961451247,
+        "rtf": 0.03523048133761497,
+        "realtime_factor": 28.38451142398436,
+        "stages": {
+          "duration_predictor": 0.001350791979348287,
+          "text_encoder": 0.005077792011434212,
+          "vector_estimator": 0.1293154569575563,
+          "vocoder": 0.050680332991760224
+        }
+      },
+      "model": "models/cfg1024-v1-final",
+      "model_manifest": {
+        "mode": "experimental-CFG-distillation",
+        "status": "experimental; acoustic/ASR/listening validation required",
+        "checkpoint": "distill/joint-cfg-1024-v1/best.pt",
+        "step": 2400,
+        "validation_relative_update_mse": 0.07546113629359752,
+        "base": "models/fast-fp32-cached",
+        "vector_int8": true,
+        "minimum_steps": 8,
+        "training": {
+          "checkpoints": "distill/student1024",
+          "data": "distill/trajectories-v2",
+          "output": "distill/joint-cfg-1024-v1",
+          "iterations": 2400,
+          "learning_rate": 3e-05,
+          "validate_every": 200,
+          "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+          "train_all": true
+        },
+        "teacher_guidance_scale": 4,
+        "student_internal_guidance_scale": 1,
+        "guidance_mode": "learned one-branch approximation; not exact CFG4",
+        "supported_steps": [
+          8
+        ]
+      },
+      "vector_override": null
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 1,
+      "language": "ko",
+      "voice": "F1",
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "seed": 401,
+      "audio": "samples/quality_cfg1024_final_v1/cfg1024-v1-final_01.wav",
+      "reference_audio": "samples/quality_cfg1024_final_v1/reference_01.wav",
+      "timing": {
+        "seconds": 0.13323824998224154,
+        "audio_seconds": 4.054557823129252,
+        "rtf": 0.03286135154422588,
+        "realtime_factor": 30.43088470217567,
+        "stages": {
+          "duration_predictor": 0.0008387499838136137,
+          "text_encoder": 0.0038872500008437783,
+          "vector_estimator": 0.0933565000013914,
+          "vocoder": 0.03474041700246744
+        }
+      },
+      "model": "models/cfg1024-v1-final",
+      "model_manifest": {
+        "mode": "experimental-CFG-distillation",
+        "status": "experimental; acoustic/ASR/listening validation required",
+        "checkpoint": "distill/joint-cfg-1024-v1/best.pt",
+        "step": 2400,
+        "validation_relative_update_mse": 0.07546113629359752,
+        "base": "models/fast-fp32-cached",
+        "vector_int8": true,
+        "minimum_steps": 8,
+        "training": {
+          "checkpoints": "distill/student1024",
+          "data": "distill/trajectories-v2",
+          "output": "distill/joint-cfg-1024-v1",
+          "iterations": 2400,
+          "learning_rate": 3e-05,
+          "validate_every": 200,
+          "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+          "train_all": true
+        },
+        "teacher_guidance_scale": 4,
+        "student_internal_guidance_scale": 1,
+        "guidance_mode": "learned one-branch approximation; not exact CFG4",
+        "supported_steps": [
+          8
+        ]
+      },
+      "vector_override": null
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 4,
+      "language": "en",
+      "voice": "M1",
+      "text": "The silver kettle began to whistle as the water reached a boil.",
+      "seed": 404,
+      "audio": "samples/quality_cfg1024_final_v1/cfg1024-v1-final_04.wav",
+      "reference_audio": "samples/quality_cfg1024_final_v1/reference_04.wav",
+      "timing": {
+        "seconds": 0.1286550420045387,
+        "audio_seconds": 4.154965986394558,
+        "rtf": 0.03096416250477617,
+        "realtime_factor": 32.295399555720316,
+        "stages": {
+          "duration_predictor": 0.0008990410133264959,
+          "text_encoder": 0.0042421249963808805,
+          "vector_estimator": 0.08920258400030434,
+          "vocoder": 0.033940916997380555
+        }
+      },
+      "model": "models/cfg1024-v1-final",
+      "model_manifest": {
+        "mode": "experimental-CFG-distillation",
+        "status": "experimental; acoustic/ASR/listening validation required",
+        "checkpoint": "distill/joint-cfg-1024-v1/best.pt",
+        "step": 2400,
+        "validation_relative_update_mse": 0.07546113629359752,
+        "base": "models/fast-fp32-cached",
+        "vector_int8": true,
+        "minimum_steps": 8,
+        "training": {
+          "checkpoints": "distill/student1024",
+          "data": "distill/trajectories-v2",
+          "output": "distill/joint-cfg-1024-v1",
+          "iterations": 2400,
+          "learning_rate": 3e-05,
+          "validate_every": 200,
+          "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+          "train_all": true
+        },
+        "teacher_guidance_scale": 4,
+        "student_internal_guidance_scale": 1,
+        "guidance_mode": "learned one-branch approximation; not exact CFG4",
+        "supported_steps": [
+          8
+        ]
+      },
+      "vector_override": null
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 5,
+      "language": "en",
+      "voice": "F1",
+      "text": "We waited beneath the shelter until the heavy rain had passed.",
+      "seed": 405,
+      "audio": "samples/quality_cfg1024_final_v1/cfg1024-v1-final_05.wav",
+      "reference_audio": "samples/quality_cfg1024_final_v1/reference_05.wav",
+      "timing": {
+        "seconds": 0.13029791601002216,
+        "audio_seconds": 4.1210884353741495,
+        "rtf": 0.03161735499087696,
+        "realtime_factor": 31.62819914216561,
+        "stages": {
+          "duration_predictor": 0.0008997500117402524,
+          "text_encoder": 0.00422829098533839,
+          "vector_estimator": 0.09081054205307737,
+          "vocoder": 0.033987583010457456
+        }
+      },
+      "model": "models/cfg1024-v1-final",
+      "model_manifest": {
+        "mode": "experimental-CFG-distillation",
+        "status": "experimental; acoustic/ASR/listening validation required",
+        "checkpoint": "distill/joint-cfg-1024-v1/best.pt",
+        "step": 2400,
+        "validation_relative_update_mse": 0.07546113629359752,
+        "base": "models/fast-fp32-cached",
+        "vector_int8": true,
+        "minimum_steps": 8,
+        "training": {
+          "checkpoints": "distill/student1024",
+          "data": "distill/trajectories-v2",
+          "output": "distill/joint-cfg-1024-v1",
+          "iterations": 2400,
+          "learning_rate": 3e-05,
+          "validate_every": 200,
+          "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+          "train_all": true
+        },
+        "teacher_guidance_scale": 4,
+        "student_internal_guidance_scale": 1,
+        "guidance_mode": "learned one-branch approximation; not exact CFG4",
+        "supported_steps": [
+          8
+        ]
+      },
+      "vector_override": null
+    }
+  ]
+}

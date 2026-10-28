@@ -1,0 +1,1027 @@
+{
+  "split": "test",
+  "steps": 8,
+  "reference_guidance_scale": 4,
+  "corpus": "distill/corpus_cfg_v3.json",
+  "note": "ASR proxy only; does not assess timbre, prosody or listening quality. Test split must not be reused for tuning.",
+  "rows": [
+    {
+      "variant": "reference",
+      "case": 0,
+      "language": "ko",
+      "reference": "어두워지기 전에 정원에 놓아둔 의자를 안으로 옮겨 주세요.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/distill_cfg_controls_test_v3/reference_00.wav",
+      "timing": {
+        "seconds": 1.76381995799602,
+        "audio_seconds": 5.096326530612245,
+        "rtf": 0.3460963396676477,
+        "realtime_factor": 2.8893688993078874,
+        "stages": {
+          "duration_predictor": 0.0018689580028876662,
+          "text_encoder": 0.006460417003836483,
+          "vector_estimator": 1.61781683305162,
+          "vocoder": 0.04067979200044647
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_00.wav",
+      "text": "어두워지기 전에 정원에 놓아둔 의자를 안으로 옮겨 주세요.",
+      "transcript": "어두워지기 전에 정원에 놓아둔 의자를 안으로 옮겨주세요.",
+      "errors": 0,
+      "reference_units": 24
+    },
+    {
+      "variant": "reference",
+      "case": 1,
+      "language": "ko",
+      "reference": "저 멀리 보이는 등대까지 걸어가려면 얼마나 걸리나요?",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/distill_cfg_controls_test_v3/reference_01.wav",
+      "timing": {
+        "seconds": 1.324020041996846,
+        "audio_seconds": 4.456530612244898,
+        "rtf": 0.2970965886241034,
+        "realtime_factor": 3.365908725613924,
+        "stages": {
+          "duration_predictor": 0.0008023339905776083,
+          "text_encoder": 0.0041885840182658285,
+          "vector_estimator": 1.2860097500379197,
+          "vocoder": 0.03259254200384021
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_01.wav",
+      "text": "저 멀리 보이는 등대까지 걸어가려면 얼마나 걸리나요?",
+      "transcript": "저 멀리 보이는 등대까지 걸어가려면 얼마나 걸리나요?",
+      "errors": 0,
+      "reference_units": 22
+    },
+    {
+      "variant": "reference",
+      "case": 2,
+      "language": "ko",
+      "reference": "아이는 작은 손으로 눈을 비비며 아침 인사를 건넸습니다.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/distill_cfg_controls_test_v3/reference_02.wav",
+      "timing": {
+        "seconds": 1.2790973749943078,
+        "audio_seconds": 3.8504308390022675,
+        "rtf": 0.33219590962079204,
+        "realtime_factor": 3.0102718637972363,
+        "stages": {
+          "duration_predictor": 0.0009477080020587891,
+          "text_encoder": 0.0050117080099880695,
+          "vector_estimator": 1.2405612920119893,
+          "vocoder": 0.03214070902322419
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_02.wav",
+      "text": "아이는 작은 손으로 눈을 비비며 아침 인사를 건넸습니다.",
+      "transcript": "아이는 작은 손으로 눈을 비비며 아침 인사를 건냈습니다.",
+      "errors": 1,
+      "reference_units": 23
+    },
+    {
+      "variant": "reference",
+      "case": 3,
+      "language": "ko",
+      "reference": "바람에 흔들리는 나뭇가지 사이로 새소리가 들려옵니다.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/distill_cfg_controls_test_v3/reference_03.wav",
+      "timing": {
+        "seconds": 1.6077140000124928,
+        "audio_seconds": 4.647278911564626,
+        "rtf": 0.345947387838449,
+        "realtime_factor": 2.8906129520104407,
+        "stages": {
+          "duration_predictor": 0.0008812090090941638,
+          "text_encoder": 0.004524250020040199,
+          "vector_estimator": 1.567574248998426,
+          "vocoder": 0.03425333299674094
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_03.wav",
+      "text": "바람에 흔들리는 나뭇가지 사이로 새소리가 들려옵니다.",
+      "transcript": "바람에 흔들리는 나무까지 사이로 새 소리가 들려옵니다.",
+      "errors": 2,
+      "reference_units": 23
+    },
+    {
+      "variant": "reference",
+      "case": 4,
+      "language": "ko",
+      "reference": "내일 오전에 다시 연락드릴 테니 편하실 때 확인해 주세요.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/distill_cfg_controls_test_v3/reference_04.wav",
+      "timing": {
+        "seconds": 1.5811194589769002,
+        "audio_seconds": 4.81249433106576,
+        "rtf": 0.3285446901766533,
+        "realtime_factor": 3.043725952357702,
+        "stages": {
+          "duration_predictor": 0.0010427910019643605,
+          "text_encoder": 0.004572292004013434,
+          "vector_estimator": 1.539334333006991,
+          "vocoder": 0.03572645800886676
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_04.wav",
+      "text": "내일 오전에 다시 연락드릴 테니 편하실 때 확인해 주세요.",
+      "transcript": "내일 오전에 다시 연락 들을 테니 편하실 때 확인해 주세요.",
+      "errors": 2,
+      "reference_units": 23
+    },
+    {
+      "variant": "reference",
+      "case": 5,
+      "language": "ko",
+      "reference": "우리는 약속한 장소에서 만나 함께 전시장으로 향했습니다.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/distill_cfg_controls_test_v3/reference_05.wav",
+      "timing": {
+        "seconds": 1.6092616660171188,
+        "audio_seconds": 4.903922902494331,
+        "rtf": 0.3281580273618462,
+        "realtime_factor": 3.0473123209548727,
+        "stages": {
+          "duration_predictor": 0.0008927089802455157,
+          "text_encoder": 0.004542999988188967,
+          "vector_estimator": 1.567364665970672,
+          "vocoder": 0.036020041996380314
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_05.wav",
+      "text": "우리는 약속한 장소에서 만나 함께 전시장으로 향했습니다.",
+      "transcript": "우리는 약속한 장소에서 만나 함께 전시장으로 향했습니다.",
+      "errors": 0,
+      "reference_units": 24
+    },
+    {
+      "variant": "reference",
+      "case": 6,
+      "language": "en",
+      "reference": "A narrow wooden staircase led from the courtyard to the upper floor.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/distill_cfg_controls_test_v3/reference_06.wav",
+      "timing": {
+        "seconds": 1.6222496250120457,
+        "audio_seconds": 4.773106575963719,
+        "rtf": 0.33987291069118936,
+        "realtime_factor": 2.9422762701691343,
+        "stages": {
+          "duration_predictor": 0.0009767499868758023,
+          "text_encoder": 0.004746125021483749,
+          "vector_estimator": 1.5809325820591766,
+          "vocoder": 0.035134917008690536
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_06.wav",
+      "text": "A narrow wooden staircase led from the courtyard to the upper floor.",
+      "transcript": "A narrow wooden staircase led from the courtyard to the upper floor.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "reference",
+      "case": 7,
+      "language": "en",
+      "reference": "Would you mind setting aside two seats near the front of the room?",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/distill_cfg_controls_test_v3/reference_07.wav",
+      "timing": {
+        "seconds": 1.3369313330040313,
+        "audio_seconds": 4.236734693877551,
+        "rtf": 0.3155570101984467,
+        "realtime_factor": 3.1689994761045637,
+        "stages": {
+          "duration_predictor": 0.0008981660066638142,
+          "text_encoder": 0.004675292002502829,
+          "vector_estimator": 1.2993442899605725,
+          "vocoder": 0.03158300000359304
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_07.wav",
+      "text": "Would you mind setting aside two seats near the front of the room?",
+      "transcript": "Would you mind setting aside two seats near the front of the room?",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "reference",
+      "case": 8,
+      "language": "en",
+      "reference": "The musician carefully placed the violin back inside its velvet case.",
+      "voice": "M3",
+      "seed": 408,
+      "audio": "samples/distill_cfg_controls_test_v3/reference_08.wav",
+      "timing": {
+        "seconds": 1.3426806250063237,
+        "audio_seconds": 3.96140589569161,
+        "rtf": 0.33894043184683786,
+        "realtime_factor": 2.9503709384895256,
+        "stages": {
+          "duration_predictor": 0.0008883330156095326,
+          "text_encoder": 0.004711958987172693,
+          "vector_estimator": 1.3030101669719443,
+          "vocoder": 0.03362579099484719
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_08.wav",
+      "text": "The musician carefully placed the violin back inside its velvet case.",
+      "transcript": "The musician carefully placed the violin back inside its velvet case.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "reference",
+      "case": 9,
+      "language": "en",
+      "reference": "Soft afternoon light fell across the cushions on the empty sofa.",
+      "voice": "F3",
+      "seed": 409,
+      "audio": "samples/distill_cfg_controls_test_v3/reference_09.wav",
+      "timing": {
+        "seconds": 1.5857405419810675,
+        "audio_seconds": 4.521609977324263,
+        "rtf": 0.3507026368779059,
+        "realtime_factor": 2.851418537660272,
+        "stages": {
+          "duration_predictor": 0.0008979160047601908,
+          "text_encoder": 0.00459916700492613,
+          "vector_estimator": 1.5470915420446545,
+          "vocoder": 0.03272774998913519
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_09.wav",
+      "text": "Soft afternoon light fell across the cushions on the empty sofa.",
+      "transcript": "Soft afternoon light fell across the cushions on the empty sofa.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "reference",
+      "case": 10,
+      "language": "en",
+      "reference": "We should check the forecast before deciding which trail to follow.",
+      "voice": "M5",
+      "seed": 410,
+      "audio": "samples/distill_cfg_controls_test_v3/reference_10.wav",
+      "timing": {
+        "seconds": 1.3825205409957562,
+        "audio_seconds": 4.365102040816327,
+        "rtf": 0.3167212422684186,
+        "realtime_factor": 3.157350586395176,
+        "stages": {
+          "duration_predictor": 0.0009816660021897405,
+          "text_encoder": 0.004567666997900233,
+          "vector_estimator": 1.3444612500315998,
+          "vocoder": 0.03201987498323433
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_10.wav",
+      "text": "We should check the forecast before deciding which trail to follow.",
+      "transcript": "We should check the forecast before deciding which trail to follow.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "reference",
+      "case": 11,
+      "language": "en",
+      "reference": "As the boat approached the shore, the passengers gathered their bags.",
+      "voice": "F5",
+      "seed": 411,
+      "audio": "samples/distill_cfg_controls_test_v3/reference_11.wav",
+      "timing": {
+        "seconds": 1.3604047500120942,
+        "audio_seconds": 4.42437641723356,
+        "rtf": 0.30747943251689186,
+        "realtime_factor": 3.252250050725144,
+        "stages": {
+          "duration_predictor": 0.0009450000070501119,
+          "text_encoder": 0.004851583013078198,
+          "vector_estimator": 1.3224192489869893,
+          "vocoder": 0.03174245799891651
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_11.wav",
+      "text": "As the boat approached the shore, the passengers gathered their bags.",
+      "transcript": "As the boat approached the shore, the passengers gathered their bags.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 0,
+      "language": "ko",
+      "reference": "어두워지기 전에 정원에 놓아둔 의자를 안으로 옮겨 주세요.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/distill_cfg_controls_test_v3/mixed-v1-selected_00.wav",
+      "timing": {
+        "seconds": 0.3114334589918144,
+        "audio_seconds": 5.096326530612245,
+        "rtf": 0.06110940049094548,
+        "realtime_factor": 16.364094426816852,
+        "stages": {
+          "duration_predictor": 0.0010702500003390014,
+          "text_encoder": 0.0045371250016614795,
+          "vector_estimator": 0.2606866240676027,
+          "vocoder": 0.044682417006697506
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_00.wav",
+      "text": "어두워지기 전에 정원에 놓아둔 의자를 안으로 옮겨 주세요.",
+      "transcript": "어두워지기 전에 정원에 놓아둔 의자를 안으로 옮겨주세요",
+      "errors": 0,
+      "reference_units": 24
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 1,
+      "language": "ko",
+      "reference": "저 멀리 보이는 등대까지 걸어가려면 얼마나 걸리나요?",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/distill_cfg_controls_test_v3/mixed-v1-selected_01.wav",
+      "timing": {
+        "seconds": 0.26121458297711797,
+        "audio_seconds": 4.456530612244898,
+        "rtf": 0.058613887282496585,
+        "realtime_factor": 17.060803273128453,
+        "stages": {
+          "duration_predictor": 0.0009371250052936375,
+          "text_encoder": 0.004393166018417105,
+          "vector_estimator": 0.21903537603793666,
+          "vocoder": 0.036398875003214926
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_01.wav",
+      "text": "저 멀리 보이는 등대까지 걸어가려면 얼마나 걸리나요?",
+      "transcript": "저 멀리 보이는 등대까지 걸어가려면 얼마나 걸리나요?",
+      "errors": 0,
+      "reference_units": 22
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 2,
+      "language": "ko",
+      "reference": "아이는 작은 손으로 눈을 비비며 아침 인사를 건넸습니다.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/distill_cfg_controls_test_v3/mixed-v1-selected_02.wav",
+      "timing": {
+        "seconds": 0.23805512499529868,
+        "audio_seconds": 3.8504308390022675,
+        "rtf": 0.06182558133078533,
+        "realtime_factor": 16.174534528833643,
+        "stages": {
+          "duration_predictor": 0.0010654999932739884,
+          "text_encoder": 0.004337791004218161,
+          "vector_estimator": 0.1984595009998884,
+          "vocoder": 0.03377987499698065
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_02.wav",
+      "text": "아이는 작은 손으로 눈을 비비며 아침 인사를 건넸습니다.",
+      "transcript": "아이는 작은 손으로 눈을 비비며 아침 인사를 건냈습니다.",
+      "errors": 1,
+      "reference_units": 23
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 3,
+      "language": "ko",
+      "reference": "바람에 흔들리는 나뭇가지 사이로 새소리가 들려옵니다.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/distill_cfg_controls_test_v3/mixed-v1-selected_03.wav",
+      "timing": {
+        "seconds": 0.2863740409957245,
+        "audio_seconds": 4.647278911564626,
+        "rtf": 0.06162187517583474,
+        "realtime_factor": 16.22800340214499,
+        "stages": {
+          "duration_predictor": 0.0008622920140624046,
+          "text_encoder": 0.0040788750047795475,
+          "vector_estimator": 0.24146716500399634,
+          "vocoder": 0.039503791980678216
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_03.wav",
+      "text": "바람에 흔들리는 나뭇가지 사이로 새소리가 들려옵니다.",
+      "transcript": "바람에 흔들리는 나무까지 사이로 새 소리가 들려옵니다.",
+      "errors": 2,
+      "reference_units": 23
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 4,
+      "language": "ko",
+      "reference": "내일 오전에 다시 연락드릴 테니 편하실 때 확인해 주세요.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/distill_cfg_controls_test_v3/mixed-v1-selected_04.wav",
+      "timing": {
+        "seconds": 0.28694683298817836,
+        "audio_seconds": 4.81249433106576,
+        "rtf": 0.05962538618193697,
+        "realtime_factor": 16.771379843958847,
+        "stages": {
+          "duration_predictor": 0.0009634580055717379,
+          "text_encoder": 0.00438795899390243,
+          "vector_estimator": 0.2400713329843711,
+          "vocoder": 0.041092208004556596
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_04.wav",
+      "text": "내일 오전에 다시 연락드릴 테니 편하실 때 확인해 주세요.",
+      "transcript": "내일 오전에 다시 연락 들을 테니 편하실 때 확인해 주세요.",
+      "errors": 2,
+      "reference_units": 23
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 5,
+      "language": "ko",
+      "reference": "우리는 약속한 장소에서 만나 함께 전시장으로 향했습니다.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/distill_cfg_controls_test_v3/mixed-v1-selected_05.wav",
+      "timing": {
+        "seconds": 0.2903501669934485,
+        "audio_seconds": 4.903922902494331,
+        "rtf": 0.05920773486177052,
+        "realtime_factor": 16.889685145608972,
+        "stages": {
+          "duration_predictor": 0.0009770419856067747,
+          "text_encoder": 0.00466158302151598,
+          "vector_estimator": 0.24262016799184494,
+          "vocoder": 0.041642374999355525
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_05.wav",
+      "text": "우리는 약속한 장소에서 만나 함께 전시장으로 향했습니다.",
+      "transcript": "우리는 약속한 장소에서 만나 함께 전시장으로 향했습니다.",
+      "errors": 0,
+      "reference_units": 24
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 6,
+      "language": "en",
+      "reference": "A narrow wooden staircase led from the courtyard to the upper floor.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/distill_cfg_controls_test_v3/mixed-v1-selected_06.wav",
+      "timing": {
+        "seconds": 0.2852907910128124,
+        "audio_seconds": 4.773106575963719,
+        "rtf": 0.059770463213512155,
+        "realtime_factor": 16.730671743797572,
+        "stages": {
+          "duration_predictor": 0.0009717920038383454,
+          "text_encoder": 0.004501499992329627,
+          "vector_estimator": 0.23959358199499547,
+          "vocoder": 0.039759541978128254
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_06.wav",
+      "text": "A narrow wooden staircase led from the courtyard to the upper floor.",
+      "transcript": "A narrow wooden staircase led from the courtyard to the upper floor.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 7,
+      "language": "en",
+      "reference": "Would you mind setting aside two seats near the front of the room?",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/distill_cfg_controls_test_v3/mixed-v1-selected_07.wav",
+      "timing": {
+        "seconds": 0.2551304170046933,
+        "audio_seconds": 4.236734693877551,
+        "rtf": 0.06021864370534668,
+        "realtime_factor": 16.606152820263738,
+        "stages": {
+          "duration_predictor": 0.0010394580021966249,
+          "text_encoder": 0.004334249999374151,
+          "vector_estimator": 0.2136305399471894,
+          "vocoder": 0.035691041994141415
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_07.wav",
+      "text": "Would you mind setting aside two seats near the front of the room?",
+      "transcript": "Would you mind setting aside two seats near the front of the room?",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 8,
+      "language": "en",
+      "reference": "The musician carefully placed the violin back inside its velvet case.",
+      "voice": "M3",
+      "seed": 408,
+      "audio": "samples/distill_cfg_controls_test_v3/mixed-v1-selected_08.wav",
+      "timing": {
+        "seconds": 0.24288591698859818,
+        "audio_seconds": 3.96140589569161,
+        "rtf": 0.0613130599045048,
+        "realtime_factor": 16.30973892931623,
+        "stages": {
+          "duration_predictor": 0.0009959169838111848,
+          "text_encoder": 0.004448207997484133,
+          "vector_estimator": 0.20278862703708,
+          "vocoder": 0.03423079100321047
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_08.wav",
+      "text": "The musician carefully placed the violin back inside its velvet case.",
+      "transcript": "The musician carefully placed the violin back inside its velvet case.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 9,
+      "language": "en",
+      "reference": "Soft afternoon light fell across the cushions on the empty sofa.",
+      "voice": "F3",
+      "seed": 409,
+      "audio": "samples/distill_cfg_controls_test_v3/mixed-v1-selected_09.wav",
+      "timing": {
+        "seconds": 0.27311920799547806,
+        "audio_seconds": 4.521609977324263,
+        "rtf": 0.06040308858242144,
+        "realtime_factor": 16.55544482026737,
+        "stages": {
+          "duration_predictor": 0.0008916249789763242,
+          "text_encoder": 0.004450167005416006,
+          "vector_estimator": 0.22908179307705723,
+          "vocoder": 0.038240417023189366
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_09.wav",
+      "text": "Soft afternoon light fell across the cushions on the empty sofa.",
+      "transcript": "Soft afternoon light fell across the cushions on the empty sofa.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 10,
+      "language": "en",
+      "reference": "We should check the forecast before deciding which trail to follow.",
+      "voice": "M5",
+      "seed": 410,
+      "audio": "samples/distill_cfg_controls_test_v3/mixed-v1-selected_10.wav",
+      "timing": {
+        "seconds": 0.27191279098042287,
+        "audio_seconds": 4.365102040816327,
+        "rtf": 0.06229242488213905,
+        "realtime_factor": 16.053316304383063,
+        "stages": {
+          "duration_predictor": 0.001015958987409249,
+          "text_encoder": 0.0047155829961411655,
+          "vector_estimator": 0.22903316700831056,
+          "vocoder": 0.03629499999806285
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_10.wav",
+      "text": "We should check the forecast before deciding which trail to follow.",
+      "transcript": "We should check the forecast before deciding which trail to follow.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "mixed-v1-selected",
+      "case": 11,
+      "language": "en",
+      "reference": "As the boat approached the shore, the passengers gathered their bags.",
+      "voice": "F5",
+      "seed": 411,
+      "audio": "samples/distill_cfg_controls_test_v3/mixed-v1-selected_11.wav",
+      "timing": {
+        "seconds": 0.2752109590219334,
+        "audio_seconds": 4.42437641723356,
+        "rtf": 0.0622033328696782,
+        "realtime_factor": 16.07630899931188,
+        "stages": {
+          "duration_predictor": 0.0009951249812729657,
+          "text_encoder": 0.004492333013331518,
+          "vector_estimator": 0.23010645899921656,
+          "vocoder": 0.039158833998953924
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_11.wav",
+      "text": "As the boat approached the shore, the passengers gathered their bags.",
+      "transcript": "As the boat approached the shore, the passengers gathered their bags.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 0,
+      "language": "ko",
+      "reference": "어두워지기 전에 정원에 놓아둔 의자를 안으로 옮겨 주세요.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/distill_cfg_controls_test_v3/cfg1024-v1-final_00.wav",
+      "timing": {
+        "seconds": 0.16623791700112633,
+        "audio_seconds": 5.096326530612245,
+        "rtf": 0.03261916519724167,
+        "realtime_factor": 30.656823801381698,
+        "stages": {
+          "duration_predictor": 0.00102766600321047,
+          "text_encoder": 0.004706417006673291,
+          "vector_estimator": 0.11783975103753619,
+          "vocoder": 0.04219908302184194
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_00.wav",
+      "text": "어두워지기 전에 정원에 놓아둔 의자를 안으로 옮겨 주세요.",
+      "transcript": "어두워지기 전에 정원의 노화둔 의자를 안으로 옮겨주세요.",
+      "errors": 3,
+      "reference_units": 24
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 1,
+      "language": "ko",
+      "reference": "저 멀리 보이는 등대까지 걸어가려면 얼마나 걸리나요?",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/distill_cfg_controls_test_v3/cfg1024-v1-final_01.wav",
+      "timing": {
+        "seconds": 0.14420208299998194,
+        "audio_seconds": 4.456530612244898,
+        "rtf": 0.03235747615056608,
+        "realtime_factor": 30.904758929491027,
+        "stages": {
+          "duration_predictor": 0.0008623340108897537,
+          "text_encoder": 0.004328374983742833,
+          "vector_estimator": 0.10081012500450015,
+          "vocoder": 0.037781332997838035
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_01.wav",
+      "text": "저 멀리 보이는 등대까지 걸어가려면 얼마나 걸리나요?",
+      "transcript": "저 멀리 보이는 등대까지 걸어가려면 얼마나 걸리나요?",
+      "errors": 0,
+      "reference_units": 22
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 2,
+      "language": "ko",
+      "reference": "아이는 작은 손으로 눈을 비비며 아침 인사를 건넸습니다.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/distill_cfg_controls_test_v3/cfg1024-v1-final_02.wav",
+      "timing": {
+        "seconds": 0.1381314170139376,
+        "audio_seconds": 3.8504308390022675,
+        "rtf": 0.03587427557840009,
+        "realtime_factor": 27.87512734060894,
+        "stages": {
+          "duration_predictor": 0.000904124986846,
+          "text_encoder": 0.0043402499868534505,
+          "vector_estimator": 0.09880391499609686,
+          "vocoder": 0.03367762500420213
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_02.wav",
+      "text": "아이는 작은 손으로 눈을 비비며 아침 인사를 건넸습니다.",
+      "transcript": "아이는 작은 손으로 눈을 비비며 아침 인사를 건냈습니다.",
+      "errors": 1,
+      "reference_units": 23
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 3,
+      "language": "ko",
+      "reference": "바람에 흔들리는 나뭇가지 사이로 새소리가 들려옵니다.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/distill_cfg_controls_test_v3/cfg1024-v1-final_03.wav",
+      "timing": {
+        "seconds": 0.15089416698901914,
+        "audio_seconds": 4.647278911564626,
+        "rtf": 0.03246935892173873,
+        "realtime_factor": 30.798267449946007,
+        "stages": {
+          "duration_predictor": 0.00084804100333713,
+          "text_encoder": 0.0040958749887067825,
+          "vector_estimator": 0.10566466694581322,
+          "vocoder": 0.03980316600063816
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_03.wav",
+      "text": "바람에 흔들리는 나뭇가지 사이로 새소리가 들려옵니다.",
+      "transcript": "바람에 흔들리는 나무까지 사이로 새 소리가 들려옵니다.",
+      "errors": 2,
+      "reference_units": 23
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 4,
+      "language": "ko",
+      "reference": "내일 오전에 다시 연락드릴 테니 편하실 때 확인해 주세요.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/distill_cfg_controls_test_v3/cfg1024-v1-final_04.wav",
+      "timing": {
+        "seconds": 0.16002754200599156,
+        "audio_seconds": 4.81249433106576,
+        "rtf": 0.033252515431130364,
+        "realtime_factor": 30.072912891991905,
+        "stages": {
+          "duration_predictor": 0.0009043749887496233,
+          "text_encoder": 0.004662208026275039,
+          "vector_estimator": 0.11160095798550174,
+          "vocoder": 0.042366541019873694
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_04.wav",
+      "text": "내일 오전에 다시 연락드릴 테니 편하실 때 확인해 주세요.",
+      "transcript": "내일 오전에 다시 연락될 테니 편하실 때 확인해 주세요.",
+      "errors": 2,
+      "reference_units": 23
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 5,
+      "language": "ko",
+      "reference": "우리는 약속한 장소에서 만나 함께 전시장으로 향했습니다.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/distill_cfg_controls_test_v3/cfg1024-v1-final_05.wav",
+      "timing": {
+        "seconds": 0.16551608298323117,
+        "audio_seconds": 4.903922902494331,
+        "rtf": 0.03375177103600937,
+        "realtime_factor": 29.62807489222156,
+        "stages": {
+          "duration_predictor": 0.000940708996495232,
+          "text_encoder": 0.004534667008556426,
+          "vector_estimator": 0.11575341600109823,
+          "vocoder": 0.04386233299737796
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_05.wav",
+      "text": "우리는 약속한 장소에서 만나 함께 전시장으로 향했습니다.",
+      "transcript": "우리는 약속한 장소에서 만나 함께 전시장으로 향했습니다.",
+      "errors": 0,
+      "reference_units": 24
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 6,
+      "language": "en",
+      "reference": "A narrow wooden staircase led from the courtyard to the upper floor.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/distill_cfg_controls_test_v3/cfg1024-v1-final_06.wav",
+      "timing": {
+        "seconds": 0.16350041702389717,
+        "audio_seconds": 4.773106575963719,
+        "rtf": 0.034254507923047045,
+        "realtime_factor": 29.193237930800404,
+        "stages": {
+          "duration_predictor": 0.0009399169939570129,
+          "text_encoder": 0.004647791996831074,
+          "vector_estimator": 0.11609000200405717,
+          "vocoder": 0.04131674999371171
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_06.wav",
+      "text": "A narrow wooden staircase led from the courtyard to the upper floor.",
+      "transcript": "A narrow wooden staircase led from the courtyard to the upper floor.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 7,
+      "language": "en",
+      "reference": "Would you mind setting aside two seats near the front of the room?",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/distill_cfg_controls_test_v3/cfg1024-v1-final_07.wav",
+      "timing": {
+        "seconds": 0.14139454200631008,
+        "audio_seconds": 4.236734693877551,
+        "rtf": 0.03337347089744313,
+        "realtime_factor": 29.96391963763691,
+        "stages": {
+          "duration_predictor": 0.0009764160204213113,
+          "text_encoder": 0.004691249981988221,
+          "vector_estimator": 0.09850737592205405,
+          "vocoder": 0.036757417023181915
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_07.wav",
+      "text": "Would you mind setting aside two seats near the front of the room?",
+      "transcript": "Would you mind setting aside two seats near the front of the room?",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 8,
+      "language": "en",
+      "reference": "The musician carefully placed the violin back inside its velvet case.",
+      "voice": "M3",
+      "seed": 408,
+      "audio": "samples/distill_cfg_controls_test_v3/cfg1024-v1-final_08.wav",
+      "timing": {
+        "seconds": 0.1397147079987917,
+        "audio_seconds": 3.96140589569161,
+        "rtf": 0.03526897058207143,
+        "realtime_factor": 28.353535232137972,
+        "stages": {
+          "duration_predictor": 0.0009613749862182885,
+          "text_encoder": 0.005025874997954816,
+          "vector_estimator": 0.09686675001285039,
+          "vocoder": 0.036386791995028034
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_08.wav",
+      "text": "The musician carefully placed the violin back inside its velvet case.",
+      "transcript": "The musician carefully placed the violin back inside its velvet case.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 9,
+      "language": "en",
+      "reference": "Soft afternoon light fell across the cushions on the empty sofa.",
+      "voice": "F3",
+      "seed": 409,
+      "audio": "samples/distill_cfg_controls_test_v3/cfg1024-v1-final_09.wav",
+      "timing": {
+        "seconds": 0.15469187501003034,
+        "audio_seconds": 4.521609977324263,
+        "rtf": 0.03421168030542338,
+        "realtime_factor": 29.229783251583694,
+        "stages": {
+          "duration_predictor": 0.0009675840265117586,
+          "text_encoder": 0.004742790973978117,
+          "vector_estimator": 0.1087010839546565,
+          "vocoder": 0.03981070901500061
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_09.wav",
+      "text": "Soft afternoon light fell across the cushions on the empty sofa.",
+      "transcript": "Soft afternoon light fell across the cushions on the empty sofa.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 10,
+      "language": "en",
+      "reference": "We should check the forecast before deciding which trail to follow.",
+      "voice": "M5",
+      "seed": 410,
+      "audio": "samples/distill_cfg_controls_test_v3/cfg1024-v1-final_10.wav",
+      "timing": {
+        "seconds": 0.14477541600354016,
+        "audio_seconds": 4.365102040816327,
+        "rtf": 0.03316655937245064,
+        "realtime_factor": 30.15085130689307,
+        "stages": {
+          "duration_predictor": 0.0009784580033738166,
+          "text_encoder": 0.00488120800582692,
+          "vector_estimator": 0.10141103997011669,
+          "vocoder": 0.037075750005897135
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_10.wav",
+      "text": "We should check the forecast before deciding which trail to follow.",
+      "transcript": "We should check the forecast before deciding which trail to follow.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 11,
+      "language": "en",
+      "reference": "As the boat approached the shore, the passengers gathered their bags.",
+      "voice": "F5",
+      "seed": 411,
+      "audio": "samples/distill_cfg_controls_test_v3/cfg1024-v1-final_11.wav",
+      "timing": {
+        "seconds": 0.1465148339921143,
+        "audio_seconds": 4.42437641723356,
+        "rtf": 0.03311536365247285,
+        "realtime_factor": 30.197463947382207,
+        "stages": {
+          "duration_predictor": 0.0009459579887334257,
+          "text_encoder": 0.0044252910010982305,
+          "vector_estimator": 0.10183129203505814,
+          "vocoder": 0.03890966600738466
+        }
+      },
+      "reference_audio": "samples/distill_cfg_controls_test_v3/reference_11.wav",
+      "text": "As the boat approached the shore, the passengers gathered their bags.",
+      "transcript": "As the boat approached the shore, the passengers gathered their bags.",
+      "errors": 0,
+      "reference_units": 11
+    }
+  ],
+  "models": {
+    "reference": {
+      "mode": "original FP32",
+      "guidance_scale": 4
+    },
+    "mixed-v1-selected": {
+      "mode": "joint-FFN-distillation",
+      "status": "experimental selected tradeoff; listening equivalence unconfirmed; tested on M4 CPU and EPYC CPU1",
+      "step": 400,
+      "validation_relative_update_mse": 0.019176095132327948,
+      "base": "models/fast-fp32-cached (condition cache removed)",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "guidance_scale": 4,
+      "training": {
+        "checkpoints": "distill/mixed-v1/initial.pt",
+        "data": "distill/trajectories-v2",
+        "output": "distill/joint-mixed-v1",
+        "iterations": 1200,
+        "learning_rate": 3e-05,
+        "validate_every": 100
+      },
+      "source_export": "models/mixed-v1-preview-int8",
+      "source_step": 400,
+      "checkpoint_note": "The best.pt path in the historical export has since advanced to step1200. The preserved step400 artifact is this ONNX export; original step400 FP32 checkpoint was not archived.",
+      "record": "records/2026-10-28/ROUND2.md",
+      "vector_sha256": "ca5ec5538b736233014c8c086683a51f2b7c735a98f34098ebbe550366e18644",
+      "historical_checkpoint_path": "distill/joint-mixed-v1/best.pt",
+      "checkpoint": null,
+      "validation": {
+        "source": "results/distill_mixed_selected_validation_v1.json",
+        "ko_cer": 0.011363636363636364,
+        "en_wer": 0,
+        "original_ko_cer": 0.022727272727272728,
+        "original_en_wer": 0
+      },
+      "held_out_test": {
+        "source": "results/distill_mixed_selected_test_v1.json",
+        "unique_texts": 12,
+        "ko_cer": 0.028169014084507043,
+        "en_wer": 0.013888888888888888,
+        "original_ko_cer": 0.028169014084507043,
+        "original_en_wer": 0,
+        "note": "Frozen selected model evaluated once. Do not reuse test set for tuning."
+      },
+      "epyc_benchmark": {
+        "source": "results/epyc_mixed_selected_v1_8.json",
+        "ko_seconds": 9.994838939979672,
+        "en_seconds": 9.095747344195843,
+        "sampled_peak_rss_mb": 356.917248,
+        "threads": 1,
+        "steps": 8,
+        "guidance_scale": 4
+      }
+    },
+    "cfg1024-v1-final": {
+      "mode": "experimental-CFG-distillation",
+      "status": "experimental; acoustic/ASR/listening validation required",
+      "checkpoint": "distill/joint-cfg-1024-v1/best.pt",
+      "step": 2400,
+      "validation_relative_update_mse": 0.07546113629359752,
+      "base": "models/fast-fp32-cached",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "training": {
+        "checkpoints": "distill/student1024",
+        "data": "distill/trajectories-v2",
+        "output": "distill/joint-cfg-1024-v1",
+        "iterations": 2400,
+        "learning_rate": 3e-05,
+        "validate_every": 200,
+        "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+        "train_all": true
+      },
+      "teacher_guidance_scale": 4,
+      "student_internal_guidance_scale": 1,
+      "guidance_mode": "learned one-branch approximation; not exact CFG4",
+      "supported_steps": [
+        8
+      ]
+    }
+  }
+}

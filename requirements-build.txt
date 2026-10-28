@@ -1,0 +1,2 @@
+-r requirements-backends.txt
+ziglang==0.17.0

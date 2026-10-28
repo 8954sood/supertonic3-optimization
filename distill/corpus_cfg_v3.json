@@ -1,0 +1,16 @@
+{
+  "test": [
+    ["ko", "어두워지기 전에 정원에 놓아둔 의자를 안으로 옮겨 주세요."],
+    ["ko", "저 멀리 보이는 등대까지 걸어가려면 얼마나 걸리나요?"],
+    ["ko", "아이는 작은 손으로 눈을 비비며 아침 인사를 건넸습니다."],
+    ["ko", "바람에 흔들리는 나뭇가지 사이로 새소리가 들려옵니다."],
+    ["ko", "내일 오전에 다시 연락드릴 테니 편하실 때 확인해 주세요."],
+    ["ko", "우리는 약속한 장소에서 만나 함께 전시장으로 향했습니다."],
+    ["en", "A narrow wooden staircase led from the courtyard to the upper floor."],
+    ["en", "Would you mind setting aside two seats near the front of the room?"],
+    ["en", "The musician carefully placed the violin back inside its velvet case."],
+    ["en", "Soft afternoon light fell across the cushions on the empty sofa."],
+    ["en", "We should check the forecast before deciding which trail to follow."],
+    ["en", "As the boat approached the shore, the passengers gathered their bags."]
+  ]
+}

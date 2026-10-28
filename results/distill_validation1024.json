@@ -1,0 +1,584 @@
+{
+  "split": "validation",
+  "steps": 8,
+  "guidance_scale": 4,
+  "note": "ASR proxy only; does not assess timbre, prosody or listening quality. Test split must not be reused for tuning.",
+  "rows": [
+    {
+      "variant": "reference",
+      "case": 0,
+      "language": "ko",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/distill_validation1024/reference_00.wav",
+      "timing": {
+        "seconds": 1.7106685829930939,
+        "audio_seconds": 5.305736961451247,
+        "rtf": 0.32241865652630936,
+        "realtime_factor": 3.1015574929002288,
+        "stages": {
+          "duration_predictor": 0.0012256250192876905,
+          "text_encoder": 0.006235125008970499,
+          "vector_estimator": 1.6365252910472918,
+          "vocoder": 0.042427417007274926
+        }
+      },
+      "transcript": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "reference",
+      "case": 1,
+      "language": "ko",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/distill_validation1024/reference_01.wav",
+      "timing": {
+        "seconds": 1.3235824999865144,
+        "audio_seconds": 4.054557823129252,
+        "rtf": 0.32644311851618674,
+        "realtime_factor": 3.063320815416162,
+        "stages": {
+          "duration_predictor": 0.0007947080011945218,
+          "text_encoder": 0.003877041977830231,
+          "vector_estimator": 1.286366293032188,
+          "vocoder": 0.03209591601626016
+        }
+      },
+      "transcript": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "errors": 0,
+      "reference_units": 19
+    },
+    {
+      "variant": "reference",
+      "case": 2,
+      "language": "ko",
+      "reference": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/distill_validation1024/reference_02.wav",
+      "timing": {
+        "seconds": 1.3073920829920098,
+        "audio_seconds": 3.7854421768707485,
+        "rtf": 0.34537367681383285,
+        "realtime_factor": 2.8954146396600775,
+        "stages": {
+          "duration_predictor": 0.0008420420053880662,
+          "text_encoder": 0.004716458002803847,
+          "vector_estimator": 1.2690021249873098,
+          "vocoder": 0.03238191700074822
+        }
+      },
+      "transcript": "햇볘치 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "errors": 2,
+      "reference_units": 23
+    },
+    {
+      "variant": "reference",
+      "case": 3,
+      "language": "ko",
+      "reference": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/distill_validation1024/reference_03.wav",
+      "timing": {
+        "seconds": 1.342655290995026,
+        "audio_seconds": 4.44249433106576,
+        "rtf": 0.302230051618979,
+        "realtime_factor": 3.3087378129448846,
+        "stages": {
+          "duration_predictor": 0.0008887090079952031,
+          "text_encoder": 0.004426208004588261,
+          "vector_estimator": 1.3054109999793582,
+          "vocoder": 0.03143495798576623
+        }
+      },
+      "transcript": "다음 안내를 들으신 뒤 필요한 항목을 선택해주세요.",
+      "errors": 0,
+      "reference_units": 21
+    },
+    {
+      "variant": "reference",
+      "case": 4,
+      "language": "en",
+      "reference": "The silver kettle began to whistle as the water reached a boil.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/distill_validation1024/reference_04.wav",
+      "timing": {
+        "seconds": 1.330150166992098,
+        "audio_seconds": 4.141269841269842,
+        "rtf": 0.32119379271944104,
+        "realtime_factor": 3.113385198179991,
+        "stages": {
+          "duration_predictor": 0.0008712080016266555,
+          "text_encoder": 0.004567458992823958,
+          "vector_estimator": 1.2939247910107952,
+          "vocoder": 0.030361457989783958
+        }
+      },
+      "transcript": "The silver kettle began to whistle as the water reached a boil.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "reference",
+      "case": 5,
+      "language": "en",
+      "reference": "We waited beneath the shelter until the heavy rain had passed.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/distill_validation1024/reference_05.wav",
+      "timing": {
+        "seconds": 1.349712459021248,
+        "audio_seconds": 3.9746938775510205,
+        "rtf": 0.339576455596843,
+        "realtime_factor": 2.9448449193640056,
+        "stages": {
+          "duration_predictor": 0.0008592919912189245,
+          "text_encoder": 0.004830416000913829,
+          "vector_estimator": 1.298345044022426,
+          "vocoder": 0.0452164169983007
+        }
+      },
+      "transcript": "We waited beneath the shelter until the heavy rain had passed.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "reference",
+      "case": 6,
+      "language": "en",
+      "reference": "Someone had left a small wooden box beside the fireplace.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/distill_validation1024/reference_06.wav",
+      "timing": {
+        "seconds": 1.3516088750038762,
+        "audio_seconds": 4.071859410430839,
+        "rtf": 0.3319389838316799,
+        "realtime_factor": 3.0126018597052804,
+        "stages": {
+          "duration_predictor": 0.0008705839863978326,
+          "text_encoder": 0.0047127080033533275,
+          "vector_estimator": 1.3111989590688609,
+          "vocoder": 0.03439766698284075
+        }
+      },
+      "transcript": "Someone had left a small wooden box beside the fireplace.",
+      "errors": 0,
+      "reference_units": 10
+    },
+    {
+      "variant": "reference",
+      "case": 7,
+      "language": "en",
+      "reference": "Follow the signs to the reception desk at the end of the hall.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/distill_validation1024/reference_07.wav",
+      "timing": {
+        "seconds": 1.3734777090139687,
+        "audio_seconds": 3.989546485260771,
+        "rtf": 0.3442691328671643,
+        "realtime_factor": 2.904704211126149,
+        "stages": {
+          "duration_predictor": 0.000916457996936515,
+          "text_encoder": 0.004761792020872235,
+          "vector_estimator": 1.3375871660246048,
+          "vocoder": 0.029749249981250614
+        }
+      },
+      "transcript": "Follow the signs to the reception desk at the end of the hall.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "student1024-int8",
+      "case": 0,
+      "language": "ko",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/distill_validation1024/student1024-int8_00.wav",
+      "timing": {
+        "seconds": 0.26745633300743066,
+        "audio_seconds": 5.328956916099774,
+        "rtf": 0.05018924664213275,
+        "realtime_factor": 19.92458677713091,
+        "stages": {
+          "duration_predictor": 0.0011085000005550683,
+          "text_encoder": 0.004756999987876043,
+          "vector_estimator": 0.2259377920127008,
+          "vocoder": 0.03517049999209121
+        }
+      },
+      "transcript": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "student1024-int8",
+      "case": 1,
+      "language": "ko",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/distill_validation1024/student1024-int8_01.wav",
+      "timing": {
+        "seconds": 0.20922741599497385,
+        "audio_seconds": 4.062131519274376,
+        "rtf": 0.05150680498704001,
+        "realtime_factor": 19.414910325958232,
+        "stages": {
+          "duration_predictor": 0.0008912500052247196,
+          "text_encoder": 0.003740915999514982,
+          "vector_estimator": 0.17731195699889213,
+          "vocoder": 0.026834792020963505
+        }
+      },
+      "transcript": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "errors": 0,
+      "reference_units": 19
+    },
+    {
+      "variant": "student1024-int8",
+      "case": 2,
+      "language": "ko",
+      "reference": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/distill_validation1024/student1024-int8_02.wav",
+      "timing": {
+        "seconds": 0.20269058298435993,
+        "audio_seconds": 3.7748072562358277,
+        "rtf": 0.05369561125260723,
+        "realtime_factor": 18.623495974290527,
+        "stages": {
+          "duration_predictor": 0.0009771669865585864,
+          "text_encoder": 0.004244959010975435,
+          "vector_estimator": 0.17209029203513637,
+          "vocoder": 0.024869957996997982
+        }
+      },
+      "transcript": "햇보치 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "errors": 2,
+      "reference_units": 23
+    },
+    {
+      "variant": "student1024-int8",
+      "case": 3,
+      "language": "ko",
+      "reference": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/distill_validation1024/student1024-int8_03.wav",
+      "timing": {
+        "seconds": 0.22748866700567305,
+        "audio_seconds": 4.455918367346939,
+        "rtf": 0.05105314959823202,
+        "realtime_factor": 19.587430116841023,
+        "stages": {
+          "duration_predictor": 0.0009061660093721002,
+          "text_encoder": 0.003908749989932403,
+          "vector_estimator": 0.19369112499407493,
+          "vocoder": 0.02857816600590013
+        }
+      },
+      "transcript": "다음 안내를 들으신 뒤 필요한 항목을 선택해주세요",
+      "errors": 0,
+      "reference_units": 21
+    },
+    {
+      "variant": "student1024-int8",
+      "case": 4,
+      "language": "en",
+      "reference": "The silver kettle began to whistle as the water reached a boil.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/distill_validation1024/student1024-int8_04.wav",
+      "timing": {
+        "seconds": 0.21295225000358187,
+        "audio_seconds": 4.155986394557823,
+        "rtf": 0.05123988141117073,
+        "realtime_factor": 19.516048290111605,
+        "stages": {
+          "duration_predictor": 0.0009779159736353904,
+          "text_encoder": 0.004283874994143844,
+          "vector_estimator": 0.18055133399320766,
+          "vocoder": 0.026726208976469934
+        }
+      },
+      "transcript": "The silver kettle began to whistle as the water reached a boil.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "student1024-int8",
+      "case": 5,
+      "language": "en",
+      "reference": "We waited beneath the shelter until the heavy rain had passed.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/distill_validation1024/student1024-int8_05.wav",
+      "timing": {
+        "seconds": 0.20613783301087096,
+        "audio_seconds": 4.001473922902495,
+        "rtf": 0.051515475792816755,
+        "realtime_factor": 19.41164251344134,
+        "stages": {
+          "duration_predictor": 0.0009070840023923665,
+          "text_encoder": 0.003930583974579349,
+          "vector_estimator": 0.17435891897184774,
+          "vocoder": 0.026553250005235896
+        }
+      },
+      "transcript": "We waited beneath the shelter until the heavy rain had passed.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "student1024-int8",
+      "case": 6,
+      "language": "en",
+      "reference": "Someone had left a small wooden box beside the fireplace.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/distill_validation1024/student1024-int8_06.wav",
+      "timing": {
+        "seconds": 0.21873350001988,
+        "audio_seconds": 4.103151927437642,
+        "rtf": 0.05330865244282482,
+        "realtime_factor": 18.758680892797486,
+        "stages": {
+          "duration_predictor": 0.0008821669907774776,
+          "text_encoder": 0.0038185000012163073,
+          "vector_estimator": 0.1857220829988364,
+          "vocoder": 0.02789891601423733
+        }
+      },
+      "transcript": "Someone had left a small wooden box beside the fireplace.",
+      "errors": 0,
+      "reference_units": 10
+    },
+    {
+      "variant": "student1024-int8",
+      "case": 7,
+      "language": "en",
+      "reference": "Follow the signs to the reception desk at the end of the hall.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/distill_validation1024/student1024-int8_07.wav",
+      "timing": {
+        "seconds": 0.20455245798802935,
+        "audio_seconds": 4.020136054421768,
+        "rtf": 0.05088197394788195,
+        "realtime_factor": 19.65332557703624,
+        "stages": {
+          "duration_predictor": 0.0009427920158486813,
+          "text_encoder": 0.004028833005577326,
+          "vector_estimator": 0.17270733500481583,
+          "vocoder": 0.026422499999171123
+        }
+      },
+      "transcript": "Follow the signs to the reception desk at the end of the hall.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "student1024-qat",
+      "case": 0,
+      "language": "ko",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/distill_validation1024/student1024-qat_00.wav",
+      "timing": {
+        "seconds": 0.2618664589826949,
+        "audio_seconds": 5.328956916099774,
+        "rtf": 0.04914028450700125,
+        "realtime_factor": 20.34990252971623,
+        "stages": {
+          "duration_predictor": 0.0010852909763343632,
+          "text_encoder": 0.00459075000253506,
+          "vector_estimator": 0.2224980439641513,
+          "vocoder": 0.033172458002809435
+        }
+      },
+      "transcript": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "student1024-qat",
+      "case": 1,
+      "language": "ko",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/distill_validation1024/student1024-qat_01.wav",
+      "timing": {
+        "seconds": 0.21290679200319573,
+        "audio_seconds": 4.062131519274376,
+        "rtf": 0.0524125796993465,
+        "realtime_factor": 19.079389065302358,
+        "stages": {
+          "duration_predictor": 0.0008430000161752105,
+          "text_encoder": 0.0036361669772304595,
+          "vector_estimator": 0.17961858306080103,
+          "vocoder": 0.028320624987827614
+        }
+      },
+      "transcript": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "errors": 0,
+      "reference_units": 19
+    },
+    {
+      "variant": "student1024-qat",
+      "case": 2,
+      "language": "ko",
+      "reference": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/distill_validation1024/student1024-qat_02.wav",
+      "timing": {
+        "seconds": 0.2005357910238672,
+        "audio_seconds": 3.7748072562358277,
+        "rtf": 0.05312477628959472,
+        "realtime_factor": 18.823608678345906,
+        "stages": {
+          "duration_predictor": 0.0009458749846089631,
+          "text_encoder": 0.003986084018833935,
+          "vector_estimator": 0.16965758299920708,
+          "vocoder": 0.025506541976938024
+        }
+      },
+      "transcript": "햇보치 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "errors": 2,
+      "reference_units": 23
+    },
+    {
+      "variant": "student1024-qat",
+      "case": 3,
+      "language": "ko",
+      "reference": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/distill_validation1024/student1024-qat_03.wav",
+      "timing": {
+        "seconds": 0.22879104199819267,
+        "audio_seconds": 4.455918367346939,
+        "rtf": 0.05134542941243675,
+        "realtime_factor": 19.475930213133687,
+        "stages": {
+          "duration_predictor": 0.0009798749815672636,
+          "text_encoder": 0.004268832999514416,
+          "vector_estimator": 0.19475945804151706,
+          "vocoder": 0.028331333014648408
+        }
+      },
+      "transcript": "다음 안내를 들으신 뒤 필요한 항목을 선택해주세요.",
+      "errors": 0,
+      "reference_units": 21
+    },
+    {
+      "variant": "student1024-qat",
+      "case": 4,
+      "language": "en",
+      "reference": "The silver kettle began to whistle as the water reached a boil.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/distill_validation1024/student1024-qat_04.wav",
+      "timing": {
+        "seconds": 0.23143524999613874,
+        "audio_seconds": 4.155986394557823,
+        "rtf": 0.05568720106956999,
+        "realtime_factor": 17.957447686241235,
+        "stages": {
+          "duration_predictor": 0.0014292080013547093,
+          "text_encoder": 0.0069448750000447035,
+          "vector_estimator": 0.19512866702280007,
+          "vocoder": 0.02729774999897927
+        }
+      },
+      "transcript": "The silver kettle began to whistle as the water reached a boil.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "student1024-qat",
+      "case": 5,
+      "language": "en",
+      "reference": "We waited beneath the shelter until the heavy rain had passed.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/distill_validation1024/student1024-qat_05.wav",
+      "timing": {
+        "seconds": 0.21396204200573266,
+        "audio_seconds": 4.001473922902495,
+        "rtf": 0.05347080753947134,
+        "realtime_factor": 18.701793483515566,
+        "stages": {
+          "duration_predictor": 0.0010496670147404075,
+          "text_encoder": 0.004172958986600861,
+          "vector_estimator": 0.18083908499102108,
+          "vocoder": 0.027468666987260804
+        }
+      },
+      "transcript": "We waited beneath the shelter until the heavy rain had passed.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "student1024-qat",
+      "case": 6,
+      "language": "en",
+      "reference": "Someone had left a small wooden box beside the fireplace.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/distill_validation1024/student1024-qat_06.wav",
+      "timing": {
+        "seconds": 0.22045979200629517,
+        "audio_seconds": 4.103151927437642,
+        "rtf": 0.05372937583229317,
+        "realtime_factor": 18.611792608969154,
+        "stages": {
+          "duration_predictor": 0.000949042005231604,
+          "text_encoder": 0.0039688329852651805,
+          "vector_estimator": 0.189106040954357,
+          "vocoder": 0.02597920800326392
+        }
+      },
+      "transcript": "Someone had left a small wooden box beside the fireplace.",
+      "errors": 0,
+      "reference_units": 10
+    },
+    {
+      "variant": "student1024-qat",
+      "case": 7,
+      "language": "en",
+      "reference": "Follow the signs to the reception desk at the end of the hall.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/distill_validation1024/student1024-qat_07.wav",
+      "timing": {
+        "seconds": 0.21309149998705834,
+        "audio_seconds": 4.020136054421768,
+        "rtf": 0.053006041860866354,
+        "realtime_factor": 18.865773879605346,
+        "stages": {
+          "duration_predictor": 0.001022584008751437,
+          "text_encoder": 0.004255167004885152,
+          "vector_estimator": 0.18014158503501676,
+          "vocoder": 0.027255917026195675
+        }
+      },
+      "transcript": "Follow the signs to the reception desk at the end of the hall.",
+      "errors": 0,
+      "reference_units": 13
+    }
+  ]
+}

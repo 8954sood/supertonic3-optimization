@@ -1,0 +1,6 @@
+supertonic==1.3.1
+onnx==1.23.2
+onnxruntime==1.31.1
+numpy==2.5.4
+soundfile==0.14.0
+psutil==7.2.2

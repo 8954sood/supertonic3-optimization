@@ -1,0 +1,50 @@
+{
+  "machine": "macOS-27.0.1-arm64-arm-64bit",
+  "processor": "arm",
+  "python": "3.12.13",
+  "onnxruntime": "1.31.1",
+  "numpy": "2.5.4",
+  "providers": [
+    "CPUExecutionProvider"
+  ],
+  "threads": 1,
+  "affinity": null,
+  "voice": "M1",
+  "variant": null,
+  "model": "models/trial-fp32-ort",
+  "low_memory": true,
+  "cpu_count": 14,
+  "cpu_affinity": null,
+  "cpu_info": "arm",
+  "load_seconds": 0.28920462500536814,
+  "note": "Measured on this machine only. Apple M4 results do not predict Oracle Ampere A1 performance. Warm synthesis excludes model loading and file I/O. No CPU quota is emulated by this script.",
+  "rows": [
+    {
+      "case": "ko_short",
+      "lang": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 0.38222166601917706,
+          "audio_seconds": 5.320022675736961,
+          "rtf": 0.07184587159043067,
+          "realtime_factor": 13.918684231442919,
+          "stages": {
+            "duration_predictor": 0.000903125008335337,
+            "text_encoder": 0.004599333013175055,
+            "condition": 0.004096458986168727,
+            "vector_estimator": 0.3268681670015212,
+            "vocoder": 0.04523816698929295
+          }
+        }
+      ],
+      "median_seconds": 0.38222166601917706,
+      "median_rtf": 0.07184587159043067,
+      "median_realtime_factor": 13.918684231442919,
+      "cpu_wall_ratio": 0.9966441828571992,
+      "rss_mb": 928.825344,
+      "peak": 0.4024357795715332
+    }
+  ]
+}

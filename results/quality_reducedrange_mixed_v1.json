@@ -1,0 +1,20 @@
+{
+  "rows": [
+    {
+      "variant": "reduced-range-full-int8-server",
+      "case": "ko_short",
+      "voice": "M1",
+      "language": "ko",
+      "audio": "samples/epyc_avx2_int8_profile_8/ko_short_8steps.wav",
+      "reference_audio": "samples/equivalence_fp32_cached/ko_short_reference.wav"
+    },
+    {
+      "variant": "reduced-range-crossplatform",
+      "case": "ko_short",
+      "voice": "M1",
+      "language": "ko",
+      "audio": "samples/epyc_avx2_int8_profile_8/ko_short_8steps.wav",
+      "reference_audio": "samples/mac_avx2_range_crossplatform_v1/ko_short_8steps.wav"
+    }
+  ]
+}

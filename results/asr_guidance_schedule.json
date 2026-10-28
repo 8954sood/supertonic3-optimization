@@ -1,0 +1,207 @@
+{
+  "asr": "models/whisper-base int8 CPU one thread",
+  "steps": 8,
+  "voice": "M1",
+  "seed": 42,
+  "note": "Six held-out sentences, one voice and one seed. ASR errors are not MOS, timbre or prosody measures. Small proxy check only.",
+  "rows": [
+    {
+      "variant": "reference",
+      "case": 0,
+      "language": "ko",
+      "reference": "주말 아침에는 창문을 열고 따뜻한 차 한 잔을 마십니다.",
+      "transcript": "주말 아침에는 창문을 열고 따뜻한 차 한잔을 마십니다.",
+      "metric": "CER",
+      "errors": 0,
+      "reference_units": 22,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "reference",
+      "case": 1,
+      "language": "ko",
+      "reference": "작은 도서관에서 빌린 책을 가방에 넣고 천천히 집으로 돌아왔습니다.",
+      "transcript": "작은 도서관에서 빌린책을 가방에 넣고 천천히 집으로 돌아왔습니다.",
+      "metric": "CER",
+      "errors": 0,
+      "reference_units": 28,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "reference",
+      "case": 2,
+      "language": "ko",
+      "reference": "비가 그친 뒤 맑은 하늘 아래로 아이들의 웃음소리가 들려왔습니다.",
+      "transcript": "비가 그친 뒤 맑은 하늘 아래로 아이들의 웃음 소리가 들려왔습니다.",
+      "metric": "CER",
+      "errors": 0,
+      "reference_units": 27,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "reference",
+      "case": 3,
+      "language": "en",
+      "reference": "Please leave the package beside the blue door and ring the bell.",
+      "transcript": "Please leave the package beside the blue door and ring the bell.",
+      "metric": "WER",
+      "errors": 0,
+      "reference_units": 12,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "reference",
+      "case": 4,
+      "language": "en",
+      "reference": "We walked along the river until the evening lights appeared.",
+      "transcript": "We walked along the river until the evening lights appeared.",
+      "metric": "WER",
+      "errors": 0,
+      "reference_units": 10,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "reference",
+      "case": 5,
+      "language": "en",
+      "reference": "A small bird landed on the garden fence and began to sing.",
+      "transcript": "A small bird landed on the garden fence and began to sing.",
+      "metric": "WER",
+      "errors": 0,
+      "reference_units": 12,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "trial-guidance-four",
+      "case": 0,
+      "language": "ko",
+      "reference": "주말 아침에는 창문을 열고 따뜻한 차 한 잔을 마십니다.",
+      "transcript": "주말 아침에는 창문을 열고 따뜻한 차 한잔을 마십니다.",
+      "metric": "CER",
+      "errors": 0,
+      "reference_units": 22,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "trial-guidance-four",
+      "case": 1,
+      "language": "ko",
+      "reference": "작은 도서관에서 빌린 책을 가방에 넣고 천천히 집으로 돌아왔습니다.",
+      "transcript": "작은 도서관에서 빌린 책을 가방에 넣고 천천히 집으로 돌아왔습니다.",
+      "metric": "CER",
+      "errors": 0,
+      "reference_units": 28,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "trial-guidance-four",
+      "case": 2,
+      "language": "ko",
+      "reference": "비가 그친 뒤 맑은 하늘 아래로 아이들의 웃음소리가 들려왔습니다.",
+      "transcript": "비가 그친 뒤 맑은 하늘 아래로 아이들의 웃음 소리가 들려왔습니다.",
+      "metric": "CER",
+      "errors": 0,
+      "reference_units": 27,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "trial-guidance-four",
+      "case": 3,
+      "language": "en",
+      "reference": "Please leave the package beside the blue door and ring the bell.",
+      "transcript": "Please leave the package beside the blue door and ring the bell.",
+      "metric": "WER",
+      "errors": 0,
+      "reference_units": 12,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "trial-guidance-four",
+      "case": 4,
+      "language": "en",
+      "reference": "We walked along the river until the evening lights appeared.",
+      "transcript": "We walked along the river until the evening lights appeared.",
+      "metric": "WER",
+      "errors": 0,
+      "reference_units": 10,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "trial-guidance-four",
+      "case": 5,
+      "language": "en",
+      "reference": "A small bird landed on the garden fence and began to sing.",
+      "transcript": "A small bird landed on the garden fence and began to sing.",
+      "metric": "WER",
+      "errors": 0,
+      "reference_units": 12,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "trial-guidance-two",
+      "case": 0,
+      "language": "ko",
+      "reference": "주말 아침에는 창문을 열고 따뜻한 차 한 잔을 마십니다.",
+      "transcript": "주말 아침에는 창문을 열고 따뜻한 차 한 잔을 마십니다.",
+      "metric": "CER",
+      "errors": 0,
+      "reference_units": 22,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "trial-guidance-two",
+      "case": 1,
+      "language": "ko",
+      "reference": "작은 도서관에서 빌린 책을 가방에 넣고 천천히 집으로 돌아왔습니다.",
+      "transcript": "작은 도서관에서 빌린 책을 가방에 넣고 천천히 집으로 돌아왔습니다.",
+      "metric": "CER",
+      "errors": 0,
+      "reference_units": 28,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "trial-guidance-two",
+      "case": 2,
+      "language": "ko",
+      "reference": "비가 그친 뒤 맑은 하늘 아래로 아이들의 웃음소리가 들려왔습니다.",
+      "transcript": "비가 그친 뒤 맑은 하늘 아래로 아이들의 웃음 소리가 들려왔습니다.",
+      "metric": "CER",
+      "errors": 0,
+      "reference_units": 27,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "trial-guidance-two",
+      "case": 3,
+      "language": "en",
+      "reference": "Please leave the package beside the blue door and ring the bell.",
+      "transcript": "Please leave the package beside the blue door and ring the bell.",
+      "metric": "WER",
+      "errors": 0,
+      "reference_units": 12,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "trial-guidance-two",
+      "case": 4,
+      "language": "en",
+      "reference": "We walked along the river until the evening lights appeared.",
+      "transcript": "We walked along the river until the evening lights appeared.",
+      "metric": "WER",
+      "errors": 0,
+      "reference_units": 10,
+      "error_rate": 0.0
+    },
+    {
+      "variant": "trial-guidance-two",
+      "case": 5,
+      "language": "en",
+      "reference": "A small bird landed on the garden fence and began to sing.",
+      "transcript": "A small bird landed on the garden fence and began sing.",
+      "metric": "WER",
+      "errors": 1,
+      "reference_units": 12,
+      "error_rate": 0.08333333333333333
+    }
+  ]
+}
