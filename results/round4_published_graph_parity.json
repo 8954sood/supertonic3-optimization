@@ -1,0 +1,65 @@
+{
+  "note": "Published dataset tensors compared with differentiable FP32 teacher implementation; not student quality.",
+  "rows": [
+    {
+      "graph": "vector",
+      "input": "trajectories-v2/train/000_0.npz",
+      "relative_rmse": 3.7839839706066414e-07
+    },
+    {
+      "graph": "vector",
+      "input": "trajectories-v2/train/000_7.npz",
+      "relative_rmse": 1.9247263480792753e-06
+    },
+    {
+      "graph": "decoder",
+      "input": "trajectories-v2/train/000_7.npz",
+      "relative_rmse": 9.689359103504103e-06
+    },
+    {
+      "graph": "vector",
+      "input": "trajectories-v2/train/001_0.npz",
+      "relative_rmse": 3.825186922767898e-07
+    },
+    {
+      "graph": "vector",
+      "input": "trajectories-v2/train/001_7.npz",
+      "relative_rmse": 2.115664074153756e-06
+    },
+    {
+      "graph": "decoder",
+      "input": "trajectories-v2/train/001_7.npz",
+      "relative_rmse": 9.257520105165895e-06
+    },
+    {
+      "graph": "vector",
+      "input": "trajectories-v2/validation/004_0.npz",
+      "relative_rmse": 3.8603218399657635e-07
+    },
+    {
+      "graph": "vector",
+      "input": "trajectories-v2/validation/004_7.npz",
+      "relative_rmse": 1.940623178597889e-06
+    },
+    {
+      "graph": "decoder",
+      "input": "trajectories-v2/validation/004_7.npz",
+      "relative_rmse": 7.017638836259721e-06
+    },
+    {
+      "graph": "vector",
+      "input": "trajectories-v2/validation/005_0.npz",
+      "relative_rmse": 3.789247671193152e-07
+    },
+    {
+      "graph": "vector",
+      "input": "trajectories-v2/validation/005_7.npz",
+      "relative_rmse": 2.034151521002059e-06
+    },
+    {
+      "graph": "decoder",
+      "input": "trajectories-v2/validation/005_7.npz",
+      "relative_rmse": 7.014130005700281e-06
+    }
+  ]
+}

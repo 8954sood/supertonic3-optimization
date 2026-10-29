@@ -1,0 +1,20 @@
+[
+  {
+    "repo": "babihoba/supertonic3-optimization",
+    "repo_type": "model",
+    "revision": "85bc100ca8d7cefad17b63a4c7ba489638dbe2f2",
+    "private": false,
+    "expected_assets": 67,
+    "verified_assets": 67,
+    "errors": []
+  },
+  {
+    "repo": "babihoba/supertonic3-optimization-data",
+    "repo_type": "dataset",
+    "revision": "817056ae3e9b8fa1a2e464a212bb2ba1f4c5196a",
+    "private": false,
+    "expected_assets": 1665,
+    "verified_assets": 1665,
+    "errors": []
+  }
+]

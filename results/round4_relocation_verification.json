@@ -1,0 +1,8 @@
+{
+  "case": "One AdamW update with dataset copied to a new root and obsolete recorded paths",
+  "train_pairs": 1,
+  "validation_pairs": 3,
+  "initial_validation_relative_update_mse": 0.10990703850984573,
+  "final_validation_relative_update_mse": 0.1073635146021843,
+  "complete": true
+}

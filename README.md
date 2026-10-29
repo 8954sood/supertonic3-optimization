@@ -6,7 +6,7 @@
 
 ## 현재 결과
 
-실측 환경은 Oracle x86 **AMD EPYC 7551, 물리 1코어·논리 2CPU, RAM 약 954MB**입니다. 논리 CPU 하나에 고정하고 ORT/BLAS 연산 스레드를 1로 제한했습니다. 워밍업 후 KO/EN 짧은 문장 각각의 전체 파형 생성 시간 중앙값이며, 모델 로딩과 파일 저장은 제외합니다. 서버는 다른 작업과 공유했습니다. **목표 Oracle ARM 2코어·12GB에서는 아직 측정하지 않았습니다.**
+실측 환경은 Oracle x86 **AMD EPYC 7551, 물리 1코어·논리 2CPU, RAM 약 954MB**입니다. 논리 CPU 하나에 고정하고 ORT/BLAS 연산 스레드를 1로 제한했습니다. 워밍업 후 KO/EN 짧은 문장 각각의 전체 파형 생성 시간 중앙값이며, 모델 로딩과 파일 저장은 제외합니다. 서버는 다른 작업과 공유했습니다. **Oracle ARM Neoverse-N1 2코어·12GB 실측은 [ARM 측정 PR #1](https://github.com/8954sood/supertonic3-optimization/pull/1)에 있습니다. 선택 모델의 한 스레드 RTF는 0.276~0.283, 두 스레드는 0.153~0.161이며, 기본 추론 설정은 계속 한 스레드입니다.**
 
 | 후보 | 한국어 | 영어 | 표본 최대 RSS | 조건 |
 | --- | ---: | ---: | ---: | --- |
@@ -61,19 +61,11 @@ python benchmark.py --model models/fast-fp32-cached --steps 8 --repeats 3 \
 
 학습된 모델과 중간 파일은 공개 Hugging Face 저장소에서 내려받습니다: [모델과 체크포인트](https://huggingface.co/babihoba/supertonic3-optimization), [증류 훈련 데이터](https://huggingface.co/datasets/babihoba/supertonic3-optimization-data). Hugging Face 저장소에는 선택 후보와 비교용 두 모델, 재현용 초기/600회 체크포인트, 1,600개 학습·64개 검증 궤적이 있습니다. 저장소 용량은 약 1.2GB입니다.
 
-```python
-from huggingface_hub import snapshot_download
-
-snapshot_download(
-    repo_id="babihoba/supertonic3-optimization",
-    repo_type="model",
-    local_dir=".hf-assets/model",
-)
-snapshot_download(
-    repo_id="babihoba/supertonic3-optimization-data",
-    repo_type="dataset",
-    local_dir=".hf-assets/data",
-)
+```bash
+# 선택한 모델만 다운로드(약 188MB)하고 파일별 SHA-256 확인
+python download_artifacts.py --purpose inference
+# 초기/600회 체크포인트와 훈련 궤적 다운로드(약 646MB)
+python download_artifacts.py --purpose reproduce
 ```
 
 ```bash

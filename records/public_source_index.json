@@ -665,6 +665,36 @@
     "sha256": "d3d5cf70bf52749aaa8b78986f3c30095d09474cdd891b3d13d0f23b167920bb"
   },
   {
+    "path": "results/round4_hf_upload_verification.json",
+    "bytes": 488,
+    "sha256": "60b74bbcb6f78c9ade80bdcaf6ab05fefc6ea33e1e1b5334a5b1c3f2b1b56b6a"
+  },
+  {
+    "path": "results/round4_public_download_verification.json",
+    "bytes": 241,
+    "sha256": "4113a7f8dbcf3f4d75e7fa8ee90ef7cebe9b765f7eac8b219584d6cc66120359"
+  },
+  {
+    "path": "results/round4_public_reproduction_verification.json",
+    "bytes": 652,
+    "sha256": "a90b9ee3b81d8bd70dc07be05977d548e8963da73812d2825f945b712143a6b2"
+  },
+  {
+    "path": "results/round4_published_graph_parity.json",
+    "bytes": 1770,
+    "sha256": "4060e47876134f968357bde61e648ee9ad2825ae4c038da5d2ef5760a25e7805"
+  },
+  {
+    "path": "results/round4_reexport_verification.json",
+    "bytes": 1176,
+    "sha256": "7abb6e4c5f91f859b03b72d6d1c8afcb3c48fc5f895fe860f4f8912cbbf02a09"
+  },
+  {
+    "path": "results/round4_relocation_verification.json",
+    "bytes": 287,
+    "sha256": "cb55698807d6c1f8f752ab6b234341cecce83e3e26552b2176c7d20fe22cdcd9"
+  },
+  {
     "path": "results/split_8.json",
     "bytes": 8253,
     "sha256": "30d0a516b233150e59fd12b413152e1679bf714822b721187febe13397a9ad90"

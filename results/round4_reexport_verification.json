@@ -1,0 +1,30 @@
+{
+  "checkpoint": "reproduction/checkpoints/cfg-mixed-v1-step-00600.pt",
+  "model_repo_revision": "85bc100ca8d7cefad17b63a4c7ba489638dbe2f2",
+  "rows": [
+    {
+      "part": "duration_predictor",
+      "selected_sha256": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+      "reexport_sha256": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+      "identical": true
+    },
+    {
+      "part": "text_encoder",
+      "selected_sha256": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+      "reexport_sha256": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+      "identical": true
+    },
+    {
+      "part": "vector_estimator",
+      "selected_sha256": "d2b63c7a648b93b1d1d94a4443a47bd92ec0aca75299a27dffb6473bc34b93ea",
+      "reexport_sha256": "d2b63c7a648b93b1d1d94a4443a47bd92ec0aca75299a27dffb6473bc34b93ea",
+      "identical": true
+    },
+    {
+      "part": "vocoder",
+      "selected_sha256": "7698d5858bb47c008c959a1ab94b1904cb69bfb518070bb6b1781211b977c9e9",
+      "reexport_sha256": "7698d5858bb47c008c959a1ab94b1904cb69bfb518070bb6b1781211b977c9e9",
+      "identical": true
+    }
+  ]
+}
