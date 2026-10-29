@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Supertonic · 스트리밍</title>
+<style>
+:root{color-scheme:light;--ink:#202a26;--muted:#63716a;--accent:#277656;--line:#dce5df}*{box-sizing:border-box}body{margin:0;background:#f5f7f3;color:var(--ink);font:16px/1.6 system-ui,sans-serif}main{max-width:850px;margin:64px auto;padding:0 24px}header p{color:var(--muted);max-width:620px}small,.eyebrow{font-size:12px;letter-spacing:.08em;color:var(--accent)}h1{font-size:36px;font-weight:650;letter-spacing:-.05em;margin:8px 0}section{background:white;border:1px solid var(--line);border-radius:18px;padding:28px;margin:24px 0}label{display:block;font-size:13px;font-weight:600;margin-bottom:8px}textarea,select,input[type="number"]{font:inherit;color:inherit;background:white;border:1px solid var(--line);border-radius:9px;padding:12px;width:100%}textarea{resize:vertical;min-height:155px}.options{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:22px 0}.actions{display:flex;gap:10px;flex-wrap:wrap}button{font:inherit;font-size:14px;border:1px solid var(--line);border-radius:9px;padding:11px 18px;background:white;color:var(--ink);cursor:pointer}button.primary{background:var(--accent);color:white;border-color:var(--accent)}button:disabled{opacity:.4;cursor:default}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0}.stat{background:#f5f7f3;border-radius:10px;padding:15px}.stat span{display:block;font-size:12px;color:var(--muted)}.stat strong{font-size:24px;font-weight:550}#status{color:var(--muted);font-size:14px;min-height:24px}#chunks{font-size:14px;color:var(--muted);padding-left:20px}.note{font-size:13px;color:var(--muted)}a{color:var(--accent)}@media(max-width:600px){main{margin:30px auto}section{padding:18px}.options{gap:8px}.stats{gap:6px}.stat{padding:10px}.stat strong{font-size:19px}}
+</style>
+<main>
+<header><div class="eyebrow">SUPERTONIC 3 · F1200</div><h1>기다림이 짧은 음성 합성</h1><p>처음 부분이 완성되면 바로 재생하고, 듣는 동안 다음 문장을 만듭니다. 각 문장은 한 스레드에서 8스텝으로 생성합니다.</p></header>
+<section>
+<label for="text">읽을 내용</label><textarea id="text">안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다. 첫 문장을 듣는 동안 다음 문장을 준비합니다. 자연스러운 발음과 끊김 없는 재생을 함께 확인해 보세요.</textarea>
+<div class="options"><div><label for="lang">언어</label><select id="lang"><option value="ko">한국어</option><option value="en">English</option></select></div><div><label for="voice">음색</label><select id="voice"><option>M1</option><option>F1</option></select></div><div><label for="speed">말하기 속도</label><input id="speed" type="number" min="0.70" max="2.00" step="0.01" value="1.00" inputmode="decimal" aria-describedby="speed-help"></div></div>
+<p class="note" id="speed-help">0.70~2.00배 · 소수점 두 자리까지 입력할 수 있습니다. 예: 1.25, 1.30</p>
+<div class="actions"><button class="primary" id="start">생성하며 듣기</button><button id="stop" disabled>중지</button><button id="save" disabled>음성 저장</button></div>
+<div class="stats"><div class="stat"><span>첫 소리까지</span><strong id="ttfa">—</strong></div><div class="stat"><span>생성 RTF</span><strong id="rtf">—</strong></div><div class="stat"><span>받은 문장 묶음</span><strong id="count">0</strong></div></div>
+<div id="status" role="status" aria-live="polite">생성할 준비가 됐습니다.</div><ol id="chunks"></ol>
+</section>
+<p class="note">RTF가 1보다 작으면 음성 길이보다 빠르게 생성한 것입니다. 문장을 나눠 생성하므로 문장 전체를 한 번에 만든 음성과 억양이 달라질 수 있습니다. 1.5배속에서 일부 발음 뭉개짐이 보고됐으며, 2배속도 문장에 따라 발음 오류가 남아 있습니다. <a href="/docs">서버 API 보기</a></p>
+</main>
+<script>
+const $=id=>document.getElementById(id);let controller,context,sources=new Set(),cursor=0,pcmParts=[],rate=44100,completed=false,runId=0;
+fetch('/v1/styles').then(r=>r.json()).then(x=>{$('voice').replaceChildren(...x.styles.map(v=>{let o=document.createElement('option');o.value=o.textContent=v.name;return o}));$('voice').value='M1'}).catch(()=>{$('status').textContent='서버 연결을 확인해 주세요.'});
+function stop(){runId++;if(controller)controller.abort();sources.forEach(s=>{try{s.stop()}catch{}});sources.clear();if(context){context.close();context=null}$('start').disabled=false;$('stop').disabled=true;if(!completed)$('status').textContent='생성을 중지했습니다.'}
+$('stop').onclick=stop;
+$('lang').onchange=()=>{$('text').value=$('lang').value==='en'?'Hello. This voice is generated locally using a single CPU thread. You can hear the first sentence while the next one is being prepared. Listen for clear pronunciation and continuous playback.':'안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다. 첫 문장을 듣는 동안 다음 문장을 준비합니다. 자연스러운 발음과 끊김 없는 재생을 함께 확인해 보세요.'};
+$('start').onclick=async()=>{
+ if(!$('speed').checkValidity()||!/^(?:0|[1-9]\d*)(?:\.\d{1,2})?$/.test($('speed').value.trim())){$('speed').reportValidity();$('status').textContent='배속은 0.70~2.00 사이에서 소수점 두 자리까지 입력해 주세요.';return}
+ stop();const id=runId;completed=false;pcmParts=[];$('save').disabled=true;$('start').disabled=true;$('stop').disabled=false;$('chunks').replaceChildren();$('ttfa').textContent=$('rtf').textContent='—';$('count').textContent='0';$('status').textContent='첫 문장을 만들고 있습니다…';
+ controller=new AbortController();const runController=controller;context=new AudioContext();await context.resume();cursor=0;const began=performance.now();let count=0;const runContext=context;
+ try{
+  const response=await fetch('/v1/tts',{method:'POST',headers:{'Content-Type':'application/json'},signal:runController.signal,body:JSON.stringify({text:$('text').value,lang:$('lang').value,voice:$('voice').value,speed:Number($('speed').value),steps:8,stream:true,stream_format:'sse'})});
+  if(!response.ok){const x=await response.json();throw Error(x.error?.message||'생성 요청에 실패했습니다.')}
+  const reader=response.body.getReader(),decoder=new TextDecoder();let pending='';
+  function message(block){if(id!==runId)return;const lines=block.split('\n'),kind=lines.find(l=>l.startsWith('event: '))?.slice(7),raw=lines.filter(l=>l.startsWith('data: ')).map(l=>l.slice(6)).join('\n');if(!raw)return;const data=JSON.parse(raw);
+   if(kind==='start'){rate=data.sample_rate;return}
+   if(kind==='error')throw Error('생성이 중단됐습니다: '+data.code);
+   if(kind==='end'){completed=true;$('rtf').textContent=data.rtf.toFixed(3);$('save').disabled=false;$('status').textContent=sources.size?'음성 생성 완료 · 재생 중':'재생 완료';return}
+   if(kind!=='audio')return;
+   const binary=atob(data.audio_base64),bytes=Uint8Array.from(binary,c=>c.charCodeAt(0));pcmParts.push(bytes);const view=new DataView(bytes.buffer),audio=runContext.createBuffer(1,bytes.length/2,rate),channel=audio.getChannelData(0);for(let i=0;i<channel.length;i++)channel[i]=view.getInt16(i*2,true)/32768;
+   const source=runContext.createBufferSource();source.buffer=audio;source.connect(runContext.destination);const at=Math.max(runContext.currentTime+0.06,cursor);if(!count)$('ttfa').textContent=((performance.now()-began)/1000+at-runContext.currentTime).toFixed(2)+'초';cursor=at+audio.duration;sources.add(source);source.onended=()=>{sources.delete(source);if(id===runId&&completed&&!sources.size){$('status').textContent='재생 완료';$('stop').disabled=true}};source.start(at);count++;$('count').textContent=count;$('status').textContent='생성한 음성을 재생하고 있습니다.';let li=document.createElement('li');li.textContent=data.text;$('chunks').append(li);
+  }
+  while(true){const {value,done}=await reader.read();pending+=decoder.decode(value||new Uint8Array(),{stream:!done});let end;while((end=pending.indexOf('\n\n'))>=0){message(pending.slice(0,end));pending=pending.slice(end+2)}if(done)break}
+  if(!completed)throw Error('완료 신호를 받기 전에 연결이 끊겼습니다.');
+ }catch(e){if(id===runId&&e.name!=='AbortError'){$('status').textContent=e.message;$('save').disabled=true;runController.abort();sources.forEach(s=>{try{s.stop()}catch{}});sources.clear()}}
+ finally{if(id===runId){$('start').disabled=false;if(!sources.size)$('stop').disabled=true}}
+};
+$('save').onclick=()=>{if(!completed)return;const bytes=pcmParts.reduce((n,p)=>n+p.length,0),buffer=new ArrayBuffer(44+bytes),v=new DataView(buffer);function str(i,s){for(let k=0;k<s.length;k++)v.setUint8(i+k,s.charCodeAt(k))}str(0,'RIFF');v.setUint32(4,36+bytes,true);str(8,'WAVEfmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);v.setUint32(24,rate,true);v.setUint32(28,rate*2,true);v.setUint16(32,2,true);v.setUint16(34,16,true);str(36,'data');v.setUint32(40,bytes,true);const out=new Uint8Array(buffer);let at=44;pcmParts.forEach(p=>{out.set(p,at);at+=p.length});const url=URL.createObjectURL(new Blob([buffer],{type:'audio/wav'})),a=document.createElement('a');a.href=url;a.download='supertonic-stream.wav';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+</script>
+</html>

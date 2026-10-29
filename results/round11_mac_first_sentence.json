@@ -1,0 +1,576 @@
+{
+  "machine": "macOS-27.0.1-arm64-arm-64bit",
+  "cpu": "arm",
+  "transport": "local TCP HTTP",
+  "threads": 1,
+  "steps_per_text_chunk": 8,
+  "scope": "Portable ORT CPU on this Mac; not x86 AVX2 v4 or Oracle ARM timing.",
+  "first_chunk_length": 10,
+  "rows": [
+    {
+      "case": "M1_ko_1",
+      "voice": "M1",
+      "lang": "ko",
+      "speed": 1.0,
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다. 첫 문장을 듣는 동안 다음 문장을 준비합니다. 자연스러운 발음과 끊김 없는 재생을 함께 확인해 보세요.",
+      "runs": [
+        {
+          "first_audio_seconds": 0.07179941597860307,
+          "server_first_audio_seconds": 0.069687,
+          "wall_seconds": 0.5258133329916745,
+          "synthesis_seconds": 0.511287875007838,
+          "audio_seconds": 15.170748299319728,
+          "synthesis_rtf": 0.033702218566948654,
+          "http_wall_rtf": 0.03465968339974717,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.07179941597860307,
+              "audio_seconds": 1.8031292517006803,
+              "generation_seconds": 0.06901670800289139
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.5239014579565264,
+              "audio_seconds": 13.367619047619048,
+              "generation_seconds": 0.4422711670049466
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        },
+        {
+          "first_audio_seconds": 0.0727889999980107,
+          "server_first_audio_seconds": 0.070198,
+          "wall_seconds": 0.525294249993749,
+          "synthesis_seconds": 0.5111405010102317,
+          "audio_seconds": 15.170748299319728,
+          "synthesis_rtf": 0.033692504214386826,
+          "http_wall_rtf": 0.03462546735531191,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.0727889999980107,
+              "audio_seconds": 1.8031292517006803,
+              "generation_seconds": 0.06935079203685746
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.5236431669909507,
+              "audio_seconds": 13.367619047619048,
+              "generation_seconds": 0.4417897089733742
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        }
+      ],
+      "median_first_audio_seconds": 0.07229420798830688,
+      "median_synthesis_rtf": 0.03369736139066774,
+      "median_http_wall_rtf": 0.034642575377529544,
+      "all_pcm16_identical": true,
+      "pcm_sha256": "ff6c5cb30ca2abc32deb21dc6bff8eed61a5f1bce1909460459f982ab4ebc121",
+      "audio_path": "samples/round11_mac_first_sentence/M1_ko_1.wav"
+    },
+    {
+      "case": "M1_ko_2",
+      "voice": "M1",
+      "lang": "ko",
+      "speed": 2.0,
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다. 첫 문장을 듣는 동안 다음 문장을 준비합니다. 자연스러운 발음과 끊김 없는 재생을 함께 확인해 보세요.",
+      "runs": [
+        {
+          "first_audio_seconds": 0.05288554198341444,
+          "server_first_audio_seconds": 0.051531,
+          "wall_seconds": 0.3660191249800846,
+          "synthesis_seconds": 0.3583112490014173,
+          "audio_seconds": 7.735374149659864,
+          "synthesis_rtf": 0.04632112708047519,
+          "http_wall_rtf": 0.04731757222062478,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.05288554198341444,
+              "audio_seconds": 1.0515646258503402,
+              "generation_seconds": 0.0510800409829244
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.3649628749699332,
+              "audio_seconds": 6.683809523809524,
+              "generation_seconds": 0.3072312080184929
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        },
+        {
+          "first_audio_seconds": 0.054450916999485344,
+          "server_first_audio_seconds": 0.052951,
+          "wall_seconds": 0.380623834033031,
+          "synthesis_seconds": 0.3731069999630563,
+          "audio_seconds": 7.735374149659864,
+          "synthesis_rtf": 0.04823386597007236,
+          "http_wall_rtf": 0.04920561393268451,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.054450916999485344,
+              "audio_seconds": 1.0515646258503402,
+              "generation_seconds": 0.052409457974135876
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.3797337500145659,
+              "audio_seconds": 6.683809523809524,
+              "generation_seconds": 0.3206975419889204
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        }
+      ],
+      "median_first_audio_seconds": 0.05366822949144989,
+      "median_synthesis_rtf": 0.04727749652527377,
+      "median_http_wall_rtf": 0.048261593076654646,
+      "all_pcm16_identical": true,
+      "pcm_sha256": "808e758f660cc5a16fc8b16c90ce8ada50354dfe63f25cf50c14c346bb46a410",
+      "audio_path": "samples/round11_mac_first_sentence/M1_ko_2.wav"
+    },
+    {
+      "case": "M1_en_1",
+      "voice": "M1",
+      "lang": "en",
+      "speed": 1.0,
+      "text": "Hello. This voice is generated locally using a single CPU thread. You can hear the first sentence while the next one is being prepared. Listen for clear pronunciation and continuous playback.",
+      "runs": [
+        {
+          "first_audio_seconds": 0.06603820802411065,
+          "server_first_audio_seconds": 0.064615,
+          "wall_seconds": 0.5078962500556372,
+          "synthesis_seconds": 0.4959285840159282,
+          "audio_seconds": 14.797369614512471,
+          "synthesis_rtf": 0.033514644625052,
+          "http_wall_rtf": 0.03432341445046555,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.06603820802411065,
+              "audio_seconds": 1.6518367346938776,
+              "generation_seconds": 0.06396762502845377
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.5061140830512159,
+              "audio_seconds": 13.145532879818594,
+              "generation_seconds": 0.43196095898747444
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        },
+        {
+          "first_audio_seconds": 0.0666205839952454,
+          "server_first_audio_seconds": 0.064836,
+          "wall_seconds": 0.5196872919914313,
+          "synthesis_seconds": 0.5074974169838242,
+          "audio_seconds": 14.797369614512471,
+          "synthesis_rtf": 0.03429646147961985,
+          "http_wall_rtf": 0.03512024809340098,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.0666205839952454,
+              "audio_seconds": 1.6518367346938776,
+              "generation_seconds": 0.06421708402922377
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.5182016249746084,
+              "audio_seconds": 13.145532879818594,
+              "generation_seconds": 0.44328033295460045
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        }
+      ],
+      "median_first_audio_seconds": 0.06632939600967802,
+      "median_synthesis_rtf": 0.033905553052335925,
+      "median_http_wall_rtf": 0.03472183127193326,
+      "all_pcm16_identical": true,
+      "pcm_sha256": "a70690ce349ac73e38b9438ccc9430efc73bcaeaa93db482c1f97212ac395561",
+      "audio_path": "samples/round11_mac_first_sentence/M1_en_1.wav"
+    },
+    {
+      "case": "M1_en_2",
+      "voice": "M1",
+      "lang": "en",
+      "speed": 2.0,
+      "text": "Hello. This voice is generated locally using a single CPU thread. You can hear the first sentence while the next one is being prepared. Listen for clear pronunciation and continuous playback.",
+      "runs": [
+        {
+          "first_audio_seconds": 0.05272958299610764,
+          "server_first_audio_seconds": 0.051308,
+          "wall_seconds": 0.3870495830196887,
+          "synthesis_seconds": 0.3799234579782933,
+          "audio_seconds": 7.548684807256236,
+          "synthesis_rtf": 0.050329755140006475,
+          "http_wall_rtf": 0.05127377720786992,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.05272958299610764,
+              "audio_seconds": 0.9759183673469388,
+              "generation_seconds": 0.050716792000457644
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.38626383303198963,
+              "audio_seconds": 6.572766439909297,
+              "generation_seconds": 0.32920666597783566
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        },
+        {
+          "first_audio_seconds": 0.052036000008229166,
+          "server_first_audio_seconds": 0.05047,
+          "wall_seconds": 0.3775412079994567,
+          "synthesis_seconds": 0.3703054999932647,
+          "audio_seconds": 7.548684807256236,
+          "synthesis_rtf": 0.04905563147070407,
+          "http_wall_rtf": 0.05001417036733896,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.052036000008229166,
+              "audio_seconds": 0.9759183673469388,
+              "generation_seconds": 0.049893542018253356
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.3766894160071388,
+              "audio_seconds": 6.572766439909297,
+              "generation_seconds": 0.3204119579750113
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        }
+      ],
+      "median_first_audio_seconds": 0.0523827915021684,
+      "median_synthesis_rtf": 0.04969269330535527,
+      "median_http_wall_rtf": 0.05064397378760444,
+      "all_pcm16_identical": true,
+      "pcm_sha256": "dea72c081acf08c87bcc1006a2d468a5deec714296920da235c1dc69edfdafeb",
+      "audio_path": "samples/round11_mac_first_sentence/M1_en_2.wav"
+    },
+    {
+      "case": "F1_ko_1",
+      "voice": "F1",
+      "lang": "ko",
+      "speed": 1.0,
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다. 첫 문장을 듣는 동안 다음 문장을 준비합니다. 자연스러운 발음과 끊김 없는 재생을 함께 확인해 보세요.",
+      "runs": [
+        {
+          "first_audio_seconds": 0.06972174998372793,
+          "server_first_audio_seconds": 0.067924,
+          "wall_seconds": 0.5214502919698134,
+          "synthesis_seconds": 0.5072262500179932,
+          "audio_seconds": 15.160521541950114,
+          "synthesis_rtf": 0.033457044905379166,
+          "http_wall_rtf": 0.034395273970419006,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.06972174998372793,
+              "audio_seconds": 1.8065079365079366,
+              "generation_seconds": 0.06730245798826218
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.5198430829914287,
+              "audio_seconds": 13.354013605442177,
+              "generation_seconds": 0.439923792029731
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        },
+        {
+          "first_audio_seconds": 0.07149429200217128,
+          "server_first_audio_seconds": 0.069364,
+          "wall_seconds": 0.5176570829935372,
+          "synthesis_seconds": 0.5036800829693675,
+          "audio_seconds": 15.160521541950114,
+          "synthesis_rtf": 0.03322313692016816,
+          "http_wall_rtf": 0.034145070904133976,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.07149429200217128,
+              "audio_seconds": 1.8065079365079366,
+              "generation_seconds": 0.0686901249573566
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.5161250829696655,
+              "audio_seconds": 13.354013605442177,
+              "generation_seconds": 0.4349899580120109
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        }
+      ],
+      "median_first_audio_seconds": 0.0706080209929496,
+      "median_synthesis_rtf": 0.033340090912773665,
+      "median_http_wall_rtf": 0.034270172437276494,
+      "all_pcm16_identical": true,
+      "pcm_sha256": "e0c08b8386bf3541af50ab3f31b7887fee51780ae679d2be745d9b8a01ebf6c8",
+      "audio_path": "samples/round11_mac_first_sentence/F1_ko_1.wav"
+    },
+    {
+      "case": "F1_ko_2",
+      "voice": "F1",
+      "lang": "ko",
+      "speed": 2.0,
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다. 첫 문장을 듣는 동안 다음 문장을 준비합니다. 자연스러운 발음과 끊김 없는 재생을 함께 확인해 보세요.",
+      "runs": [
+        {
+          "first_audio_seconds": 0.4171321669709869,
+          "server_first_audio_seconds": 0.415744,
+          "wall_seconds": 0.7311047919793054,
+          "synthesis_seconds": 0.3632345419609919,
+          "audio_seconds": 7.730249433106576,
+          "synthesis_rtf": 0.046988722046323136,
+          "http_wall_rtf": 0.0945771282422247,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.4171321669709869,
+              "audio_seconds": 1.0532426303854876,
+              "generation_seconds": 0.05476904194802046
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.730319749971386,
+              "audio_seconds": 6.677006802721088,
+              "generation_seconds": 0.30846550001297146
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        },
+        {
+          "first_audio_seconds": 0.056692833022680134,
+          "server_first_audio_seconds": 0.055155,
+          "wall_seconds": 0.37023000000044703,
+          "synthesis_seconds": 0.3618345409631729,
+          "audio_seconds": 7.730249433106576,
+          "synthesis_rtf": 0.046807615212716557,
+          "http_wall_rtf": 0.04789366801216681,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.056692833022680134,
+              "audio_seconds": 1.0532426303854876,
+              "generation_seconds": 0.05456229095580056
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.3689865830237977,
+              "audio_seconds": 6.677006802721088,
+              "generation_seconds": 0.30727225000737235
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        }
+      ],
+      "median_first_audio_seconds": 0.2369124999968335,
+      "median_synthesis_rtf": 0.04689816862951984,
+      "median_http_wall_rtf": 0.07123539812719576,
+      "all_pcm16_identical": true,
+      "pcm_sha256": "32e9e90309320e87f32ff206c9bb8754c84b4406c1a5af45de0202d8a2082cae",
+      "audio_path": "samples/round11_mac_first_sentence/F1_ko_2.wav"
+    },
+    {
+      "case": "F1_en_1",
+      "voice": "F1",
+      "lang": "en",
+      "speed": 1.0,
+      "text": "Hello. This voice is generated locally using a single CPU thread. You can hear the first sentence while the next one is being prepared. Listen for clear pronunciation and continuous playback.",
+      "runs": [
+        {
+          "first_audio_seconds": 0.0659999999916181,
+          "server_first_audio_seconds": 0.064378,
+          "wall_seconds": 0.5529977499973029,
+          "synthesis_seconds": 0.5404847079771571,
+          "audio_seconds": 14.786961451247166,
+          "synthesis_rtf": 0.03655143822205416,
+          "http_wall_rtf": 0.03739765954084244,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.0659999999916181,
+              "audio_seconds": 1.6547845804988661,
+              "generation_seconds": 0.0637768330052495
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.5514117919956334,
+              "audio_seconds": 13.1321768707483,
+              "generation_seconds": 0.4767078749719076
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        },
+        {
+          "first_audio_seconds": 0.06434650003211573,
+          "server_first_audio_seconds": 0.062707,
+          "wall_seconds": 0.5135912499972619,
+          "synthesis_seconds": 0.5015775000210851,
+          "audio_seconds": 14.786961451247166,
+          "synthesis_rtf": 0.0339202547916821,
+          "http_wall_rtf": 0.03473271041454865,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.06434650003211573,
+              "audio_seconds": 1.6547845804988661,
+              "generation_seconds": 0.0620655000093393
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.5117626250139438,
+              "audio_seconds": 13.1321768707483,
+              "generation_seconds": 0.43951200001174584
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        }
+      ],
+      "median_first_audio_seconds": 0.06517325001186691,
+      "median_synthesis_rtf": 0.03523584650686813,
+      "median_http_wall_rtf": 0.03606518497769555,
+      "all_pcm16_identical": true,
+      "pcm_sha256": "dfb39d1a5ad39b05984c3151080a1fd8bb23c85a084fa68ac372ea736cc54638",
+      "audio_path": "samples/round11_mac_first_sentence/F1_en_1.wav"
+    },
+    {
+      "case": "F1_en_2",
+      "voice": "F1",
+      "lang": "en",
+      "speed": 2.0,
+      "text": "Hello. This voice is generated locally using a single CPU thread. You can hear the first sentence while the next one is being prepared. Listen for clear pronunciation and continuous playback.",
+      "runs": [
+        {
+          "first_audio_seconds": 0.04990133398678154,
+          "server_first_audio_seconds": 0.048596,
+          "wall_seconds": 0.35611266701016575,
+          "synthesis_seconds": 0.3495980429579504,
+          "audio_seconds": 7.543469387755102,
+          "synthesis_rtf": 0.04634446366620558,
+          "http_wall_rtf": 0.04720807478694403,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.04990133398678154,
+              "audio_seconds": 0.9773922902494331,
+              "generation_seconds": 0.04802708397619426
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.35533433401724324,
+              "audio_seconds": 6.566077097505669,
+              "generation_seconds": 0.3015709589817561
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        },
+        {
+          "first_audio_seconds": 0.049910000001545995,
+          "server_first_audio_seconds": 0.048656,
+          "wall_seconds": 0.3639595420099795,
+          "synthesis_seconds": 0.3572871659998782,
+          "audio_seconds": 7.543469387755102,
+          "synthesis_rtf": 0.04736377224249664,
+          "http_wall_rtf": 0.04824829575112679,
+          "parts": [
+            {
+              "index": 0,
+              "arrival_seconds": 0.049910000001545995,
+              "audio_seconds": 0.9773922902494331,
+              "generation_seconds": 0.04810591600835323
+            },
+            {
+              "index": 1,
+              "arrival_seconds": 0.3631042090128176,
+              "audio_seconds": 6.566077097505669,
+              "generation_seconds": 0.30918124999152496
+            }
+          ],
+          "first_audio_precedes_completion": true,
+          "playback_simulation_initial_buffer_seconds": 0.1,
+          "simulated_underrun_seconds": 0,
+          "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+        }
+      ],
+      "median_first_audio_seconds": 0.049905666994163767,
+      "median_synthesis_rtf": 0.04685411795435111,
+      "median_http_wall_rtf": 0.04772818526903541,
+      "all_pcm16_identical": true,
+      "pcm_sha256": "10abbd4be929f3b90ce0ca91925cd761e1ec96c5abc1bc92c3e298c875784d58",
+      "audio_path": "samples/round11_mac_first_sentence/F1_en_2.wav"
+    }
+  ],
+  "complete": true,
+  "health": {
+    "status": "ok",
+    "model": "supertonic-3",
+    "sample_rate": 44100,
+    "version": "1.3.1",
+    "server_version": "0.1.0",
+    "voices_loaded": 10,
+    "steps": 8,
+    "threads": 1,
+    "streaming": "text-chunks",
+    "admitted_requests": 0
+  }
+}

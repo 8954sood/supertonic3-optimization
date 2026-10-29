@@ -22,6 +22,10 @@ from supertonic.loader import load_voice_style_from_json_file
 PARTS = ("duration_predictor", "text_encoder", "vector_estimator", "vocoder")
 
 
+class SynthesisCancelled(RuntimeError):
+    """A caller cancelled synthesis between model operations."""
+
+
 def options(
     profile=False,
     optimize=True,
@@ -145,7 +149,10 @@ class Engine:
         self.sample_rate = self.cfg["ae"]["sample_rate"]
         self.load_seconds = time.perf_counter() - start
 
-    def synthesize(self, text, lang="ko", steps=8, seed=42, speed=1.05):
+    def synthesize(
+        self, text, lang="ko", steps=8, seed=42, speed=1.05,
+        *, voice_style=None, cancel_event=None,
+    ):
         if not isinstance(steps, int) or not 8 <= steps <= 50:
             raise ValueError("steps must be an integer from 8 to 50")
         if self.supported_steps and steps not in self.supported_steps:
@@ -158,8 +165,11 @@ class Engine:
             raise ValueError("speed must be between 0.7 and 2.0")
         times = {}
         start = time.perf_counter()
+        style = self.style if voice_style is None else voice_style
 
         def run(part, feed):
+            if cancel_event is not None and cancel_event.is_set():
+                raise SynthesisCancelled("Synthesis cancelled")
             t = time.perf_counter()
             session = self.condition if part == "condition" else self.sessions[part]
             required = {x.name for x in session.get_inputs()}
@@ -170,7 +180,7 @@ class Engine:
         ids, mask = self.processor([text], lang)
         raw_duration = run(
             "duration_predictor",
-            {"text_ids": ids, "text_mask": mask, "style_dp": self.style.dp},
+            {"text_ids": ids, "text_mask": mask, "style_dp": style.dp},
         )[0]
         generation_speed = (
             self.latent_head_generation_speed
@@ -182,7 +192,7 @@ class Engine:
         output_duration = raw_duration / speed
         emb = run(
             "text_encoder",
-            {"text_ids": ids, "text_mask": mask, "style_ttl": self.style.ttl},
+            {"text_ids": ids, "text_mask": mask, "style_ttl": style.ttl},
         )[0]
         chunk = (
             self.cfg["ae"]["base_chunk_size"] * self.cfg["ttl"]["chunk_compress_factor"]
@@ -207,7 +217,7 @@ class Engine:
         feed = {
             "speed": np.array([speed], np.float32),
             "text_emb": emb,
-            "style_ttl": self.style.ttl,
+            "style_ttl": style.ttl,
             "text_mask": mask,
             "latent_mask": latent_mask,
             "total_step": np.array([steps], np.float32),

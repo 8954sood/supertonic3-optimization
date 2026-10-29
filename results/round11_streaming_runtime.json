@@ -1,0 +1,54 @@
+{
+  "model": "round8-latent-retime-g135",
+  "scope": "Real ONNX on Mac CPU; local TCP, no ARM inference.",
+  "pre_cancelled_vector_calls": 0,
+  "rows": [
+    {
+      "voice": "M1",
+      "speed": 1.0,
+      "chunks": 3,
+      "complete_vector_calls": 24,
+      "stream_vector_calls": 24,
+      "pcm16_bitidentical": true
+    },
+    {
+      "voice": "M1",
+      "speed": 2.0,
+      "chunks": 3,
+      "complete_vector_calls": 24,
+      "stream_vector_calls": 24,
+      "pcm16_bitidentical": true
+    },
+    {
+      "voice": "F1",
+      "speed": 1.0,
+      "chunks": 3,
+      "complete_vector_calls": 24,
+      "stream_vector_calls": 24,
+      "pcm16_bitidentical": true
+    },
+    {
+      "voice": "F1",
+      "speed": 2.0,
+      "chunks": 3,
+      "complete_vector_calls": 24,
+      "stream_vector_calls": 24,
+      "pcm16_bitidentical": true
+    }
+  ],
+  "complete": true,
+  "cancellation": {
+    "aborted_vector_calls": 8,
+    "full_request_vector_calls": 216,
+    "recovery_status": 200,
+    "recovered_seconds": 0.09130958298919722,
+    "admission_released": true
+  },
+  "onnx_calling_threads": [
+    "tts_0"
+  ],
+  "ort_intra_inter_threads": [
+    1,
+    1
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "round": 11,
+  "status": "Implemented and validated locally on Mac CPU; latest model ARM performance unmeasured.",
+  "previous_commit_round10": "dbde5b5",
+  "model": "F1200 with opt-in latent-retime-g135 package",
+  "learned_weights_changed": false,
+  "new_model_upload_needed": false,
+  "inference": {
+    "threads": 1,
+    "steps_per_completed_text_chunk": 8,
+    "backend_measured": "Portable ORT CPU on Mac M4 Max",
+    "native_avx2_engine": "v4 unchanged; not used for this Mac benchmark"
+  },
+  "server": {
+    "entrypoint": "serve.py",
+    "default_host": "127.0.0.1",
+    "default_port": 7788,
+    "default_model_id": "supertonic-3",
+    "streams": [
+      "pcm_s16le",
+      "SSE with base64 PCM"
+    ],
+    "sample_rate": 44100,
+    "channels": 1,
+    "kind": "sentence/text chunk streaming; not causal decoding within a sentence",
+    "max_pending": 4
+  },
+  "speed_input": {
+    "minimum": 0.7,
+    "maximum": 2.0,
+    "decimal_places": 2,
+    "validated_live": {
+      "1.25": 200,
+      "1.30": 200,
+      "1.251": 422
+    }
+  },
+  "versions": {
+    "supertonic": "1.3.1",
+    "onnxruntime": "1.31.1",
+    "numpy": "2.5.4",
+    "fastapi": "0.162.0",
+    "uvicorn": "0.54.0",
+    "httpx": "0.28.1",
+    "python-multipart": "0.0.32"
+  },
+  "benchmarks": {
+    "balanced_default": {
+      "rows": [
+        {
+          "case": "M1_ko_1",
+          "median_first_audio_seconds": 0.426351687987335,
+          "median_synthesis_rtf": 0.04551505326452237,
+          "median_http_wall_rtf": 0.04750484426100514,
+          "chunks": 2
+        },
+        {
+          "case": "M1_ko_2",
+          "median_first_audio_seconds": 0.30664222899940796,
+          "median_synthesis_rtf": 0.06218457078868876,
+          "median_http_wall_rtf": 0.06485153635856354,
+          "chunks": 2
+        },
+        {
+          "case": "M1_en_1",
+          "median_first_audio_seconds": 0.21919791647815146,
+          "median_synthesis_rtf": 0.04239948489023288,
+          "median_http_wall_rtf": 0.04345347511441952,
+          "chunks": 2
+        },
+        {
+          "case": "M1_en_2",
+          "median_first_audio_seconds": 0.1467219164769631,
+          "median_synthesis_rtf": 0.05118663490928085,
+          "median_http_wall_rtf": 0.05219574830015858,
+          "chunks": 2
+        },
+        {
+          "case": "F1_ko_1",
+          "median_first_audio_seconds": 0.3547390415042173,
+          "median_synthesis_rtf": 0.036273621404247613,
+          "median_http_wall_rtf": 0.03712339178521924,
+          "chunks": 2
+        },
+        {
+          "case": "F1_ko_2",
+          "median_first_audio_seconds": 0.24329300000681542,
+          "median_synthesis_rtf": 0.04954729656139403,
+          "median_http_wall_rtf": 0.050489249141693,
+          "chunks": 2
+        },
+        {
+          "case": "F1_en_1",
+          "median_first_audio_seconds": 0.21080172949586995,
+          "median_synthesis_rtf": 0.044653538606148374,
+          "median_http_wall_rtf": 0.04606799464268115,
+          "chunks": 2
+        },
+        {
+          "case": "F1_en_2",
+          "median_first_audio_seconds": 0.16973695901106112,
+          "median_synthesis_rtf": 0.059209513153125795,
+          "median_http_wall_rtf": 0.06114850568107555,
+          "chunks": 2
+        }
+      ],
+      "all_pcm16_identical": true,
+      "simulated_underrun_seconds": 0
+    },
+    "first_target_10": {
+      "rows": [
+        {
+          "case": "M1_ko_1",
+          "median_first_audio_seconds": 0.07229420798830688,
+          "median_synthesis_rtf": 0.03369736139066774,
+          "median_http_wall_rtf": 0.034642575377529544,
+          "chunks": 2
+        },
+        {
+          "case": "M1_ko_2",
+          "median_first_audio_seconds": 0.05366822949144989,
+          "median_synthesis_rtf": 0.04727749652527377,
+          "median_http_wall_rtf": 0.048261593076654646,
+          "chunks": 2
+        },
+        {
+          "case": "M1_en_1",
+          "median_first_audio_seconds": 0.06632939600967802,
+          "median_synthesis_rtf": 0.033905553052335925,
+          "median_http_wall_rtf": 0.03472183127193326,
+          "chunks": 2
+        },
+        {
+          "case": "M1_en_2",
+          "median_first_audio_seconds": 0.0523827915021684,
+          "median_synthesis_rtf": 0.04969269330535527,
+          "median_http_wall_rtf": 0.05064397378760444,
+          "chunks": 2
+        },
+        {
+          "case": "F1_ko_1",
+          "median_first_audio_seconds": 0.0706080209929496,
+          "median_synthesis_rtf": 0.033340090912773665,
+          "median_http_wall_rtf": 0.034270172437276494,
+          "chunks": 2
+        },
+        {
+          "case": "F1_ko_2",
+          "median_first_audio_seconds": 0.2369124999968335,
+          "median_synthesis_rtf": 0.04689816862951984,
+          "median_http_wall_rtf": 0.07123539812719576,
+          "chunks": 2
+        },
+        {
+          "case": "F1_en_1",
+          "median_first_audio_seconds": 0.06517325001186691,
+          "median_synthesis_rtf": 0.03523584650686813,
+          "median_http_wall_rtf": 0.03606518497769555,
+          "chunks": 2
+        },
+        {
+          "case": "F1_en_2",
+          "median_first_audio_seconds": 0.049905666994163767,
+          "median_synthesis_rtf": 0.04685411795435111,
+          "median_http_wall_rtf": 0.04772818526903541,
+          "chunks": 2
+        }
+      ],
+      "all_pcm16_identical": true,
+      "simulated_underrun_seconds": 0
+    }
+  },
+  "validation": {
+    "api_contract_tests_passed": 13,
+    "upstream_float32_parity_tests_passed": 2,
+    "baseline_pcm_wave_pairs": 16,
+    "short_first_pcm_wave_pairs": 16,
+    "live_onnx_calls_and_cancellation": {
+      "model": "round8-latent-retime-g135",
+      "scope": "Real ONNX on Mac CPU; local TCP, no ARM inference.",
+      "pre_cancelled_vector_calls": 0,
+      "rows": [
+        {
+          "voice": "M1",
+          "speed": 1.0,
+          "chunks": 3,
+          "complete_vector_calls": 24,
+          "stream_vector_calls": 24,
+          "pcm16_bitidentical": true
+        },
+        {
+          "voice": "M1",
+          "speed": 2.0,
+          "chunks": 3,
+          "complete_vector_calls": 24,
+          "stream_vector_calls": 24,
+          "pcm16_bitidentical": true
+        },
+        {
+          "voice": "F1",
+          "speed": 1.0,
+          "chunks": 3,
+          "complete_vector_calls": 24,
+          "stream_vector_calls": 24,
+          "pcm16_bitidentical": true
+        },
+        {
+          "voice": "F1",
+          "speed": 2.0,
+          "chunks": 3,
+          "complete_vector_calls": 24,
+          "stream_vector_calls": 24,
+          "pcm16_bitidentical": true
+        }
+      ],
+      "complete": true,
+      "cancellation": {
+        "aborted_vector_calls": 8,
+        "full_request_vector_calls": 216,
+        "recovery_status": 200,
+        "recovered_seconds": 0.09130958298919722,
+        "admission_released": true
+      },
+      "onnx_calling_threads": [
+        "tts_0"
+      ],
+      "ort_intra_inter_threads": [
+        1,
+        1
+      ]
+    }
+  },
+  "human_feedback": {
+    "stream_connection": "User reports no issue with stream playback continuity.",
+    "speed_1_5": "Some pronunciation is blurred. User explicitly corrected earlier omission wording; no confirmed word omission from this feedback.",
+    "speed_1_5_resolved": false,
+    "requested_fractional_inputs": [
+      "1.25",
+      "1.30"
+    ],
+    "precision": 2
+  },
+  "limitations": [
+    "Mac timings are not Oracle ARM or EPYC v4 timings. Latest F1200/retime ARM speed has not been measured.",
+    "Existing high-speed pronunciation limits remain; retime correction currently applies to 2.0 only.",
+    "Chunk segmentation can change prosody. PCM identity comparisons use the same segmentation and seed.",
+    "Playback underrun figures are an SSE-arrival buffer simulation, not an audio-device measurement.",
+    "First-chunk targets trade initial latency against buffering; shorter first chunks are optional.",
+    "No new independent WER/CER/MOS evaluation."
+  ],
+  "resume_priority": "Preserve one-thread eight-step synthesis; investigate the reported 1.5x pronunciation blurring separately. Do not relabel it as confirmed word omission.",
+  "documentation": "docs/SERVER.md",
+  "model_hashes": {
+    "vector_estimator": "7c81ab7f0ddcc4266743701599a8708d2edd1be04285770f996e84a8bb5f4447",
+    "vocoder": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+  }
+}
