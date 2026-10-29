@@ -45,7 +45,7 @@ def main():
     report = dict(note='Prepared actual-weight microprobe only; not a TTS speed or quality score.',
         rows=[], complete=False)
     for m in [60, 200]:
-        for k, n in [(512,1536), (1536,512), (512,2048), (2048,512)]:
+        for k, n in sorted(weights):
             w = weights[k,n]
             x = rng.randint(0,256,(m,k),dtype=np.uint8)
             outputs = {name: np.empty((m,n),np.int32) for name in libraries}

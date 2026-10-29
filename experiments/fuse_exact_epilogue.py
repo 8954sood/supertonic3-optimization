@@ -14,6 +14,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--source', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--preserve-bias-gelu', action='store_true',
+        help='Keep FFN1 bias adds available for ORT BiasGelu fusion')
     a = p.parse_args()
     if a.output.exists():
         p.error('Choose a new output')
@@ -30,6 +32,7 @@ def main():
         return nodes[0] if len(nodes) == 1 and nodes[0].op_type == op else None
 
     removed, replacements, converted = set(), {}, []
+    retained_bias = 0
     for node in m.graph.node:
         if node.domain != 'com.supertonic.exact' or node.op_type != 'ExactMatMulInteger':
             continue
@@ -45,13 +48,22 @@ def main():
         weight, offset = values[node.input[1]], values.get(bias)
         if offset is None or offset.dtype != np.float32 or offset.shape != (weight.shape[1],):
             raise ValueError('Expected immutable per-column FP32 bias')
-        replacements[node.name] = helper.make_node('ExactMatMulScaleBias',
-            list(node.input)+[scale, bias], list(add.output),
-            domain='com.supertonic.exact', name=node.name+'/scale_bias')
-        removed.update([cast.name, mul.name, add.name])
+        if a.preserve_bias_gelu and '/pwconv1/' in node.name:
+            replacements[node.name] = helper.make_node('ExactMatMulScale',
+                list(node.input)+[scale], list(mul.output),
+                domain='com.supertonic.exact', name=node.name+'/scale_only')
+            removed.update([cast.name, mul.name])
+            retained_bias += 1
+        else:
+            replacements[node.name] = helper.make_node('ExactMatMulScaleBias',
+                list(node.input)+[scale, bias], list(add.output),
+                domain='com.supertonic.exact', name=node.name+'/scale_bias')
+            removed.update([cast.name, mul.name, add.name])
         converted.append(node.name)
     if len(converted) != 56:
         raise ValueError(f'Expected56 fixed FFN epilogues, found{len(converted)}')
+    if a.preserve_bias_gelu and retained_bias != 28:
+        raise ValueError('Expected28 retained FFN1 bias adds')
     nodes = [replacements.get(n.name, n) for n in m.graph.node if n.name not in removed]
     del m.graph.node[:]
     m.graph.node.extend(nodes)
@@ -65,6 +77,7 @@ def main():
     metadata = json.loads((a.source/'manifest.json').read_text())
     metadata.update(status='Experimental exact scale/bias epilogue; server timing and bitidentity required',
         exact_epilogue=dict(converted=converted, removed_nodes=len(removed),
+            retained_ffn1_bias_adds=retained_bias,
             initializer_bitidentity=True, source=str(a.source),
             source_vector_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
             note='Existing rounded scale product retained. Same S32 accumulator, FP32 cast, multiply, then add. No FMA contraction, requantization, or model change.'))

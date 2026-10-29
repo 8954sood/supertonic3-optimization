@@ -15,6 +15,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--library', required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--scale-only', action='store_true')
     a = p.parse_args()
     psutil.Process().cpu_affinity([0])
     rng = np.random.RandomState(901)
@@ -37,12 +38,18 @@ def main():
         bias = rng.randn(n).astype(np.float32)
         init = [nh.from_array(v,name) for v,name in [(w,'w'),(np.array(zero,np.uint8),'az'),
             (np.zeros(n,np.int8),'bz'),(scale,'scale'),(bias,'bias')]]
+        if a.scale_only:
+            init = [v for v in init if v.name != 'bias']
         results = []
         for fused in [False, True]:
             nodes = ([h.make_node('ExactMatMulScaleBias',['x','w','az','bz','scale','bias'],['y'],domain='com.supertonic.exact')]
                 if fused else [h.make_node('ExactMatMulInteger',['x','w','az','bz'],['i'],domain='com.supertonic.exact'),
                     h.make_node('Cast',['i'],['f'],to=T.FLOAT), h.make_node('Mul',['f','scale'],['s']),
                     h.make_node('Add',['s','bias'],['y'])])
+            if a.scale_only:
+                nodes = ([h.make_node('ExactMatMulScale',['x','w','az','bz','scale'],['y'],domain='com.supertonic.exact')]
+                    if fused else [h.make_node('ExactMatMulInteger',['x','w','az','bz'],['i'],domain='com.supertonic.exact'),
+                        h.make_node('Cast',['i'],['f'],to=T.FLOAT), h.make_node('Mul',['f','scale'],['y'])])
             graph = h.make_graph(nodes,'epilogue_check',
                 [h.make_tensor_value_info('x',T.UINT8,[*shape,k])],
                 [h.make_tensor_value_info('y',T.FLOAT,[*shape,n])],init)
@@ -55,10 +62,12 @@ def main():
             results.append(first)
             del session
         np.testing.assert_array_equal(*results)
-        oracle = (((x.astype(np.int32)-zero)@w.astype(np.int32)).astype(np.float32)*scale)+bias
+        oracle = ((x.astype(np.int32)-zero)@w.astype(np.int32)).astype(np.float32)*scale
+        if not a.scale_only:
+            oracle = oracle+bias
         np.testing.assert_array_equal(results[1],oracle)
         rows.append(dict(shape=[*shape,k,n],zero=zero,pattern=pattern,fp32_bitidentity=True))
-    a.output.write_text(json.dumps(dict(library=Path(a.library).name,complete=True,rows=rows),indent=2)+'\n')
+    a.output.write_text(json.dumps(dict(library=Path(a.library).name,scale_only=a.scale_only,complete=True,rows=rows),indent=2)+'\n')
     print('Nine fused epilogue cases match separate operators and integer/FP32 oracle exactly.')
 
 

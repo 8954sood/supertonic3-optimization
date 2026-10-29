@@ -1,0 +1,128 @@
+{
+  "note": "Experimental rejected or unselected libraries; active engine remains v4. All sources and commands are relative to repository root.",
+  "target": "x86_64-linux-gnu.2.28",
+  "cpu": "znver1",
+  "rows": [
+    {
+      "name": "panel16",
+      "source": "experiments/exact_int8_panel16.c",
+      "source_sha256": "e8b26009158412e1d66894ed204855bc23741bf49ca57a231e55acd8a6193d76",
+      "library": "libexact_panel16.so",
+      "library_sha256": "eef56edf323fafb5d89b0bdc27259fc73b8cc1b545500b92eacd476a868806c2",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ziglang",
+        "cc",
+        "-target",
+        "x86_64-linux-gnu.2.28",
+        "-mcpu=znver1",
+        "-O3",
+        "-fPIC",
+        "-shared",
+        "experiments/exact_int8_panel16.c",
+        "-I",
+        "native/include",
+        "-o",
+        "native/libexact_panel16.so"
+      ]
+    },
+    {
+      "name": "aligned",
+      "source": "experiments/exact_int8_aligned.c",
+      "source_sha256": "d6928172343f579e48740f7fda8ef514e08fe08b48912abd649d124b28d7e743",
+      "library": "libexact_aligned.so",
+      "library_sha256": "aa64eca809bab4a9a392f28486cb2458973c40e38017c19759c58d8ae25c8bab",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ziglang",
+        "cc",
+        "-target",
+        "x86_64-linux-gnu.2.28",
+        "-mcpu=znver1",
+        "-O3",
+        "-fPIC",
+        "-shared",
+        "experiments/exact_int8_aligned.c",
+        "-I",
+        "native/include",
+        "-o",
+        "native/libexact_aligned.so"
+      ]
+    },
+    {
+      "name": "mixed",
+      "source": "experiments/exact_int8_mixed.c",
+      "source_sha256": "4c6f1931db5bccc08d3e6038362defda8cd96003dea6615816fe496301e0a101",
+      "library": "libexact_mixed.so",
+      "library_sha256": "b21fc1f98c3a4d0f5427c5400bbf78f6ba9c4971f6c1cf1c38b3f9233af54b30",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ziglang",
+        "cc",
+        "-target",
+        "x86_64-linux-gnu.2.28",
+        "-mcpu=znver1",
+        "-O3",
+        "-fPIC",
+        "-shared",
+        "-ffp-contract=off",
+        "experiments/exact_int8_mixed.c",
+        "-I",
+        "native/include",
+        "-o",
+        "native/libexact_mixed.so"
+      ]
+    },
+    {
+      "name": "m3n16",
+      "source": "experiments/exact_int8_m3n16.c",
+      "source_sha256": "792bf98276d0ffd90da8ca7890c965a20dc47b4f6f9da9ab3f1f7c2be3f653db",
+      "library": "libexact_m3n16.so",
+      "library_sha256": "b0ec94a06a8f1acd859e4d8b03b5eaa17c7772cb90abe0bb6baa51a97054f982",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ziglang",
+        "cc",
+        "-target",
+        "x86_64-linux-gnu.2.28",
+        "-mcpu=znver1",
+        "-O3",
+        "-fPIC",
+        "-shared",
+        "experiments/exact_int8_m3n16.c",
+        "-I",
+        "native/include",
+        "-o",
+        "native/libexact_m3n16.so"
+      ]
+    },
+    {
+      "name": "block32",
+      "source": "experiments/exact_int8_block32.c",
+      "source_sha256": "1b5efbbff55bd84b82e2381170aba7d867735871e0ed764bd097d286e0fe57df",
+      "library": "libexact_block32.so",
+      "library_sha256": "133154a02b9750eb85e91ce5f0f177d546b2321880794494e4549afd517649d6",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ziglang",
+        "cc",
+        "-target",
+        "x86_64-linux-gnu.2.28",
+        "-mcpu=znver1",
+        "-O3",
+        "-fPIC",
+        "-shared",
+        "experiments/exact_int8_block32.c",
+        "-I",
+        "native/include",
+        "-o",
+        "native/libexact_block32.so"
+      ]
+    }
+  ]
+}

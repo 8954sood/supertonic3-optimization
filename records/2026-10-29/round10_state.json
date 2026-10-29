@@ -1,0 +1,240 @@
+{
+  "round": 10,
+  "complete": true,
+  "selected_engine": "v4 M4N16 safe-K8 exact AVX2",
+  "new_engine_accepted": false,
+  "constraints": {
+    "learned_model": "F1200 unchanged",
+    "denoising_calls": 8,
+    "threads": 1,
+    "generation_speed_for_2x": 1.35,
+    "waveform_tempo_postprocessing": false
+  },
+  "already_pushed_main_commits": [
+    "7704219",
+    "8219fc0"
+  ],
+  "hf_model_revision": "f1d05bdb691d8769557e19644f3a63089992daf0",
+  "experiments": [
+    {
+      "name": "panel16",
+      "accepted": false,
+      "integer_abi_cases": 10,
+      "prepared_micro_cases": 8,
+      "micro_speedup_range": [
+        0.9832959522090763,
+        1.0229358746671506
+      ],
+      "micro_speedup_median": 1.0023108571546402,
+      "micro_result": "results/round10_panel16_probe.json",
+      "decision": "No consistent improvement over v4; not promoted."
+    },
+    {
+      "name": "aligned",
+      "accepted": false,
+      "integer_abi_cases": 10,
+      "prepared_micro_cases": 8,
+      "micro_speedup_range": [
+        0.9189122074464513,
+        1.011301452191643
+      ],
+      "micro_speedup_median": 0.9954098214982147,
+      "micro_result": "results/round10_aligned_probe.json",
+      "decision": "No consistent improvement over v4; not promoted."
+    },
+    {
+      "name": "m3n16",
+      "accepted": false,
+      "integer_abi_cases": 10,
+      "prepared_micro_cases": 14,
+      "micro_speedup_range": [
+        0.8858412422628476,
+        1.0077258466180568
+      ],
+      "micro_speedup_median": 0.993828745332987,
+      "micro_result": "results/round10_m3n16_probe.json",
+      "decision": "No consistent improvement over v4; not promoted."
+    },
+    {
+      "name": "block32",
+      "accepted": false,
+      "integer_abi_cases": 10,
+      "prepared_micro_cases": 14,
+      "micro_speedup_range": [
+        0.961002762590086,
+        1.0119655366708282
+      ],
+      "micro_speedup_median": 1.0001638486263023,
+      "micro_result": "results/round10_block32_probe.json",
+      "decision": "No consistent improvement over v4; not promoted."
+    },
+    {
+      "name": "mixed_epilogue_preserve_bias_gelu",
+      "accepted": false,
+      "integer_abi_cases": 10,
+      "fp32_scale_only_cases": 9,
+      "fp32_scale_bias_cases": 9,
+      "decision": "Confirmatory paired TTS KO slower in all three pairs; rejected."
+    }
+  ],
+  "quality_note": "Exact engine trials only. No new WER/CER/MOS or independent held-out assessment. Bit-identical output is compared to selected F1200 latent-retime candidate, not original50 teacher.",
+  "paired_tts": [
+    {
+      "candidate": "aligned",
+      "result": "results/round10_paired_aligned_speed2.json",
+      "pairs": 2,
+      "wave_pairs_bitidentical": 4,
+      "summary": [
+        {
+          "case": "ko_short",
+          "reference_seconds": 3.801057550124824,
+          "candidate_seconds": 3.857313505373895,
+          "paired_speedups": [
+            0.9984316772529184,
+            0.9726909278708683
+          ]
+        },
+        {
+          "case": "en_short",
+          "reference_seconds": 3.528039968572557,
+          "candidate_seconds": 3.503172507509589,
+          "paired_speedups": [
+            0.9962828091033903,
+            1.0179440474919375
+          ]
+        }
+      ],
+      "sampled_peak_tree_rss_mb": 369.025024
+    },
+    {
+      "candidate": "mixed",
+      "result": "results/round10_paired_mixed_speed2.json",
+      "pairs": 2,
+      "wave_pairs_bitidentical": 4,
+      "summary": [
+        {
+          "case": "ko_short",
+          "reference_seconds": 3.8620330058038235,
+          "candidate_seconds": 3.7926520351320505,
+          "paired_speedups": [
+            1.0320463411102763,
+            1.004548884494729
+          ]
+        },
+        {
+          "case": "en_short",
+          "reference_seconds": 4.084407523274422,
+          "candidate_seconds": 3.5114676393568516,
+          "paired_speedups": [
+            1.3626333045551298,
+            0.9723309849868994
+          ]
+        }
+      ],
+      "sampled_peak_tree_rss_mb": 368.553984
+    },
+    {
+      "candidate": "mixed_confirm",
+      "result": "results/round10_paired_mixed_confirm_speed2.json",
+      "pairs": 3,
+      "wave_pairs_bitidentical": 6,
+      "summary": [
+        {
+          "case": "ko_short",
+          "reference_seconds": 3.7679258715361357,
+          "candidate_seconds": 4.115414012223482,
+          "paired_speedups": [
+            0.8832070114601946,
+            0.877991047465326,
+            0.9719615003671024
+          ]
+        },
+        {
+          "case": "en_short",
+          "reference_seconds": 3.518599895760417,
+          "candidate_seconds": 3.500344190746546,
+          "paired_speedups": [
+            1.0052154028344218,
+            0.924760870800413,
+            1.00373127369789
+          ]
+        }
+      ],
+      "sampled_peak_tree_rss_mb": 376.737792
+    }
+  ],
+  "total_float32_wave_pairs_bitidentical": 14,
+  "remote_final_state": {
+    "active_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+    "reference_v4_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+    "mixed_epilogue_metadata": {
+      "converted": [
+        "/vector_estimator/vector_field/main_blocks.0/convnext.0/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.0/convnext.0/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.0/convnext.1/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.0/convnext.1/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.0/convnext.2/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.0/convnext.2/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.0/convnext.3/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.0/convnext.3/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.2/convnext.0/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.2/convnext.0/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.4/convnext.0/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.4/convnext.0/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.6/convnext.0/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.6/convnext.0/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.6/convnext.1/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.6/convnext.1/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.6/convnext.2/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.6/convnext.2/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.6/convnext.3/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.6/convnext.3/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.8/convnext.0/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.8/convnext.0/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.10/convnext.0/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.10/convnext.0/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.12/convnext.0/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.12/convnext.0/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.12/convnext.1/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.12/convnext.1/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.12/convnext.2/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.12/convnext.2/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.12/convnext.3/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.12/convnext.3/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.14/convnext.0/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.14/convnext.0/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.16/convnext.0/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.16/convnext.0/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.18/convnext.0/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.18/convnext.0/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.18/convnext.1/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.18/convnext.1/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.18/convnext.2/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.18/convnext.2/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.18/convnext.3/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.18/convnext.3/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.20/convnext.0/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.20/convnext.0/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.22/convnext.0/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/main_blocks.22/convnext.0/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/last_convnext/convnext.0/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/last_convnext/convnext.0/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/last_convnext/convnext.1/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/last_convnext/convnext.1/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/last_convnext/convnext.2/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/last_convnext/convnext.2/pwconv2/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/last_convnext/convnext.3/pwconv1/Conv/linear/MatMul_quant",
+        "/vector_estimator/vector_field/last_convnext/convnext.3/pwconv2/Conv/linear/MatMul_quant"
+      ],
+      "removed_nodes": 140,
+      "retained_ffn1_bias_adds": 28,
+      "initializer_bitidentity": true,
+      "source": "models/round8-F-retime",
+      "source_vector_sha256": "176fad95c50582afe6124dcc07641ee54c5c72d3047167266473fe2da6eb6b04",
+      "note": "Existing rounded scale product retained. Same S32 accumulator, FP32 cast, multiply, then add. No FMA contraction, requantization, or model change."
+    },
+    "mixed_vector_sha256": "c488685447a3ec487623952df6b0951225edc2df5b999956beea202eb1d2fea6"
+  },
+  "disk_free_bytes_at_finish": 44081782784,
+  "publication_note": "User explicitly requested committing round10 trials in follow-up. Rejected sources, validation helpers, raw measurements and handoff are published on main; no new engine selected or model uploaded."
+}

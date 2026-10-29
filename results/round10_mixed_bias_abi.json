@@ -1,0 +1,106 @@
+{
+  "library": "libexact_mixed.so",
+  "scale_only": false,
+  "complete": true,
+  "rows": [
+    {
+      "shape": [
+        1,
+        1,
+        12,
+        8
+      ],
+      "zero": 0,
+      "pattern": "random64",
+      "fp32_bitidentity": true
+    },
+    {
+      "shape": [
+        1,
+        5,
+        144,
+        512
+      ],
+      "zero": 255,
+      "pattern": "random64",
+      "fp32_bitidentity": true
+    },
+    {
+      "shape": [
+        2,
+        4,
+        512,
+        1536
+      ],
+      "zero": 127,
+      "pattern": "random64",
+      "fp32_bitidentity": true
+    },
+    {
+      "shape": [
+        1,
+        15,
+        1536,
+        512
+      ],
+      "zero": 71,
+      "pattern": "random64",
+      "fp32_bitidentity": true
+    },
+    {
+      "shape": [
+        1,
+        8,
+        8,
+        8
+      ],
+      "zero": 0,
+      "pattern": "positive32",
+      "fp32_bitidentity": true
+    },
+    {
+      "shape": [
+        1,
+        8,
+        16,
+        16
+      ],
+      "zero": 0,
+      "pattern": "positive64",
+      "fp32_bitidentity": true
+    },
+    {
+      "shape": [
+        1,
+        8,
+        8,
+        8
+      ],
+      "zero": 255,
+      "pattern": "negative32",
+      "fp32_bitidentity": true
+    },
+    {
+      "shape": [
+        1,
+        17,
+        512,
+        16
+      ],
+      "zero": 128,
+      "pattern": "random32",
+      "fp32_bitidentity": true
+    },
+    {
+      "shape": [
+        1,
+        9,
+        4096,
+        16
+      ],
+      "zero": 0,
+      "pattern": "positive63",
+      "fp32_bitidentity": true
+    }
+  ]
+}

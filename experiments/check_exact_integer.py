@@ -16,6 +16,7 @@ from onnx import TensorProto, helper, numpy_helper
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", default="results/round6_exact_abi_check.json")
+    parser.add_argument("--library", help="Check a versioned candidate without replacing the active library")
     args = parser.parse_args()
     if hasattr(psutil.Process(), "cpu_affinity"):
         psutil.Process().cpu_affinity([0])
@@ -30,6 +31,8 @@ def main():
         ([1, 8], 16, 16, 0, "positive64_requires_fallback"),
         ([1, 8], 8, 8, 255, "negative32_safe_boundary"),
         ([1, 17], 512, 16, 128, "random32_all_safe"),
+        ([1, 3], 8, 16, 0, "positive32_safe_boundary"),
+        ([1, 3], 144, 24, 127, "random64"),
     ]:
         x = rng.randint(0, 256, (*shape, k), dtype=np.uint8)
         limit = 32 if pattern == "random32_all_safe" else 64
@@ -62,8 +65,12 @@ def main():
                 opset_imports=[helper.make_opsetid("", 17), helper.make_opsetid("com.supertonic.exact", 1)],
                 ir_version=10,
             )
+            options = runtime.options(exact_int8_backend=custom and not args.library)
+            if custom and args.library:
+                options.enable_mem_pattern = False
+                options.register_custom_ops_library(args.library)
             session = ort.InferenceSession(
-                model.SerializeToString(), runtime.options(exact_int8_backend=custom),
+                model.SerializeToString(), options,
                 providers=["CPUExecutionProvider"],
             )
             first = session.run(None, {"x": x})[0]
