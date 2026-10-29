@@ -1,33 +1,78 @@
-# 학습·검증 재현
+# F1200 다운로드·재현·엔진 측정
 
-## Hugging Face에서 모델과 학습 자료 받기
+현재 사용자가 선택한 모델은 **F1200** (`round5-original50-student`)입니다. 구조와 가중치를 고정하고 엔진만 최적화합니다. E400은 청취 비교용입니다. 새 teacher target은 pinned 원본 FP32·CFG4·50스텝으로만 만들며 학생은 실제8회 추론합니다.
 
-공개 [모델 저장소](https://huggingface.co/babihoba/supertonic3-optimization)에는 세 개의 완전한 ONNX 모델과 `mixed-v1-initial.pt`, 선택된 `cfg-mixed-v1-step-00600.pt`가 있습니다. [데이터셋 저장소](https://huggingface.co/datasets/babihoba/supertonic3-optimization-data)에는 1,600개 훈련 쌍과 64개 검증 쌍이 있습니다. 파일별 SHA-256은 각 저장소의 `asset_manifest.json`에서 확인합니다. 전체 저장소는 약 1.2GB입니다. 아래 도구는 선택 모델만 약188MB, 재현 필수 자료만 약646MB를 내려받습니다. 모델 revision은 `85bc100ca8d7cefad17b63a4c7ba489638dbe2f2`, 데이터셋 revision은 `817056ae3e9b8fa1a2e464a212bb2ba1f4c5196a`로 고정하고 파일별 크기·SHA-256을 확인합니다.
+[모델·체크포인트](https://huggingface.co/babihoba/supertonic3-optimization/tree/d33f1094c6057d8c613f2c45987ba45e57c4b3af) revision은 `d33f1094c6057d8c613f2c45987ba45e57c4b3af`, [교사 데이터](https://huggingface.co/datasets/babihoba/supertonic3-optimization-data/tree/e56d93c9959647c850b639a614e629e4e4ac1593)는 `e56d93c9959647c850b639a614e629e4e4ac1593`입니다. 파일 크기·SHA256을 확인하고 공개 다운로드에 토큰을 사용하지 않습니다.
+
+## 추론만 실행
 
 ```bash
+python -m pip install -r requirements.txt
 python download_artifacts.py --purpose inference
-python download_artifacts.py --purpose reproduce
-```
-
-추론할 선택 모델:
-
-```bash
-python synthesize.py '안녕하세요.' --model .hf-assets/model/models/cfg-mixed-v1-selected \
+python synthesize.py '안녕하세요. 한 스레드로 읽습니다.' \
+  --model .hf-assets/model/models/round5-original50-student \
   --lang ko --steps 8 --output samples/hello.wav
 ```
 
-체크포인트와 교사 궤적 데이터로 선택 모델의 증류 단계를 재현합니다. 다음 받은 파일을 그대로 지정하면 됩니다:
+약194MB의 완전한 F1200 ONNX 패키지에 설정·10음색·모델 라이선스가 포함됩니다. 모델/체크포인트/음성은 Git에 넣지 않습니다. `--model round5-original50-preview`로 E400만 받을 수도 있습니다. 이전 모델 이름도 명시적으로 지정할 수 있습니다.
 
-```text
-.hf-assets/model/reproduction/checkpoints/mixed-v1-initial.pt
-.hf-assets/data/trajectories-v2
+## 원본50 교사에서 F1200 단계 재현
+
+```bash
+python -m pip install -r requirements-train.txt
+python download_artifacts.py --purpose reproduce
+python download.py
+python prepare.py --mode fp32-cached --output models/fast-fp32-cached
+python experiments/guidance.py conditional --source models/supertonic-3 \
+  --output models/cfg-student-fp32-source
+python distill/train_joint.py \
+  --checkpoints .hf-assets/model/reproduction/round5/original50-initial.pt \
+  --data .hf-assets/data/round5/trajectories-original50-round5 \
+  --graph models/cfg-student-fp32-source/onnx/vector_estimator.onnx --train-all \
+  --iterations 1200 --learning-rate 1e-5 --validate-every 200 \
+  --output distill/original50-reproduced
+python distill/export_joint.py \
+  --checkpoint distill/original50-reproduced/best.pt \
+  --graph models/cfg-student-fp32-source/onnx/vector_estimator.onnx \
+  --base models/fast-fp32-cached --int8 --cfg-distilled \
+  --output models/F1200-reproduced
 ```
 
-첫 번째 파일은 600회 CFG 증류의 초기 혼합 폭 가중치이고 두 번째 경로는 훈련/검증 궤적입니다. 원본 Supertonic 모델은 아래 설치 단계의 `download.py`로 고정 리비전에서 받습니다. 새 학습은 하드웨어와 라이브러리 버전에 따라 가중치가 달라질 수 있습니다.
+재현 다운로드는 초기/최종 체크포인트 약339MB와 데이터 archive 약143MB 및 작은 보고서만 받습니다. archive의769개 멤버(640train+128validation NPZ, manifest)를 안전하게 풀고 개별 SHA256까지 확인합니다. 고유 문장은80train/16validation, validation update loss는 선택한48쌍으로 계산했습니다. 원본50 궤적을8스텝 시점에 보간하고 마지막은 원본 최종latent를 사용했습니다. 새 독립 시험은 평가하지 않았습니다.
 
-프로젝트를 설치한 뒤 원본 Supertonic을 받고 export용 FP32 캐시 패키지를 만듭니다. 모델·체크포인트는 Git에 포함되지 않으며 위 Hugging Face 저장소에서 받습니다. 학습에는 여러 GB의 RAM·디스크와 Mac MPS가 필요합니다. CPU1·1GB 조건은 완성된 모델의 추론 측정 조건입니다.
+초기 checkpoint를 제공하므로 과거 층별 FFN fit과 B 초기화 과정을 다시 돌릴 필요가 없습니다. 기존 학생은 초기값으로만 사용했고, 새로운 학습 목표로 쓰지 않았습니다. 학습에는 여러GB RAM이 필요합니다. 1코어·1GB는 완성된 모델의 서버 추론 조건입니다. 하드웨어/라이브러리가 바뀐 재학습이 바이트 단위로 같다고 보장하지 않습니다. 받은 최종 checkpoint로 export만 하면 배포 ONNX와 대조할 수 있습니다.
 
-## 혼합 폭 CFG 증류 재실행
+```bash
+python distill/export_joint.py \
+  --checkpoint .hf-assets/model/reproduction/round5/original50-step-01200.pt \
+  --graph models/cfg-student-fp32-source/onnx/vector_estimator.onnx \
+  --base models/fast-fp32-cached --int8 --cfg-distilled \
+  --output models/F1200-reexported
+```
+
+교사 데이터를 다시 만들려면 `distill/collect_original_multistep.py`와 `experiments/audit_original_trajectories.py`를 사용합니다. 원본 teacher revision과 네 graph SHA256은 데이터 manifest에 있습니다. 파생 교사 데이터는 `distill/teacher_policy.py`가 거부합니다. 이미 존재하는 출력 경로를 덮어쓰지 말고 새 이름으로 실행하세요.
+
+## EPYC용 엔진 실험
+
+기본 F1200 패키지는 표준 ORT 연산으로 실행됩니다. 추가 native 커널은 **Linux x86_64 AVX2·EPYC7551에서만 검증**합니다. ARM용으로 제공하는 커널이 아니며 ARM에서는 우선 기본 F1200을 측정하세요. 모델 파라미터와 양자화는 바꾸지 않습니다.
+
+```bash
+python -m pip install ziglang==0.17.0
+python native/build_exact.py --cpu znver1
+python experiments/exact_integer_backend.py \
+  --source .hf-assets/model/models/round5-original50-student \
+  --output models/F1200-exact-cached --cache-conditioning
+python experiments/check_exact_integer.py
+python memory_guard.py --max-rss-mb 480 --reserve-mb 80 --seconds 600 \
+  --stats results/F1200-engine-guard.json -- \
+  python benchmark.py --model models/F1200-exact-cached --steps 8 \
+  --repeats 3 --cases ko_short en_short ko_long en_long --affinity 0 \
+  --audio-subtype FLOAT --output results/F1200-engine.json
+```
+
+커널은 상수 가중치를 한 번 packing하고 U8×S8 정수 결과를 정확히 계산합니다. 문장 조건을1회 계산하며 길이가 다른 문장의 memory pattern 누적을 끕니다. CPU arena와 ORT prepacking은 유지합니다. 기본 모델을 먼저 같은 조건으로 측정하고 WAV/JSON을 비교하세요. 감시기는50ms 표본이며 하드 메모리 제한이 아닙니다. [6차 기록](../records/2026-10-29/ROUND6_ENGINE.md)에 실패한 메모리 설정과 재측정도 남깁니다.
+
+## 과거 B 모델 재현
 
 아래는 Hub의 초기 checkpoint와 궤적 데이터에서 선택 후보를 다시 학습·내보내는 최소 경로입니다. 저장된 모델을 단순히 사용하려면 재학습 없이 위의 `synthesize.py` 명령을 실행하세요.
 

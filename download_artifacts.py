@@ -4,15 +4,41 @@ import argparse
 import fnmatch
 import hashlib
 import json
+import tarfile
 from pathlib import Path, PurePosixPath
 
 from huggingface_hub import snapshot_download
 
 MODEL_REPO = "babihoba/supertonic3-optimization"
-MODEL_REVISION = "85bc100ca8d7cefad17b63a4c7ba489638dbe2f2"
+MODEL_REVISION = "d33f1094c6057d8c613f2c45987ba45e57c4b3af"
 DATASET_REPO = "babihoba/supertonic3-optimization-data"
-DATASET_REVISION = "817056ae3e9b8fa1a2e464a212bb2ba1f4c5196a"
-MODELS = ["cfg-mixed-v1-selected", "cfg1024-v1-final", "mixed-v1-selected"]
+DATASET_REVISION = "e56d93c9959647c850b639a614e629e4e4ac1593"
+MODELS = [
+    "round5-original50-student", "round5-original50-preview",
+    "cfg-mixed-v1-selected", "cfg1024-v1-final", "mixed-v1-selected",
+]
+
+
+def extract_original50(directory):
+    """Extract only the pinned, inventoried regular files; verify every tensor."""
+    inventory = json.loads((directory / "extracted_manifest.json").read_text())["files"]
+    expected = {entry["path"]: entry for entry in inventory}
+    with tarfile.open(directory / "trajectories-original50-round5.tar.gz") as archive:
+        members = archive.getmembers()
+        if len(members) != len(expected) or {m.name for m in members} != set(expected):
+            raise ValueError("Archive member inventory mismatch")
+        for member in members:
+            name = PurePosixPath(member.name)
+            if (not member.isfile() or name.is_absolute() or ".." in name.parts
+                    or name.parts[0] != "trajectories-original50-round5"
+                    or member.size != expected[member.name]["bytes"]):
+                raise ValueError("Unsafe or unexpected trajectory archive member")
+        archive.extractall(directory, filter="data")
+    for name, entry in expected.items():
+        digest = hashlib.sha256((directory / name).read_bytes()).hexdigest()
+        if digest != entry["sha256"]:
+            raise ValueError(f"Extracted artifact SHA-256 mismatch: {name}")
+    return {"extracted_verified_files": len(expected)}
 
 
 def download_and_verify(repo, kind, revision, destination, patterns, inventory_key):
@@ -59,12 +85,18 @@ def main():
     parser.add_argument("--model", choices=MODELS, default=MODELS[0])
     parser.add_argument("--root", default=".hf-assets")
     args = parser.parse_args()
+    original50 = args.model.startswith("round5-original50-")
     root = Path(args.root)
     patterns = []
     if args.purpose in {"inference", "all"}:
         patterns.append(f"models/{args.model}/**")
     if args.purpose in {"reproduce", "all"}:
-        patterns += ["reproduction/**", f"models/{args.model}/LICENSE"]
+        patterns += [
+            "reproduction/round5/**" if original50 else "reproduction/checkpoints/**",
+            f"models/{args.model}/LICENSE",
+        ]
+        if not original50:
+            patterns.append("reproduction/training/**")
     receipts = [
         download_and_verify(
             MODEL_REPO, "model", MODEL_REVISION, root / "model", patterns, "artifacts"
@@ -77,15 +109,17 @@ def main():
                 "dataset",
                 DATASET_REVISION,
                 root / "data",
-                ["trajectories-v2/**"],
+                ["round5/**"] if original50 else ["trajectories-v2/**"],
                 "files",
             )
         )
+        if original50:
+            receipts.append(extract_original50(root / "data/round5"))
     root.mkdir(parents=True, exist_ok=True)
     receipt = root / f"verified_{args.purpose}.json"
     receipt.write_text(json.dumps(receipts, indent=2) + "\n")
     print(
-        f"Verified {sum(item['verified_files'] for item in receipts)} published files; receipt: {receipt}"
+        f"Verified {sum(item.get('verified_files', 0) for item in receipts)} published files; receipt: {receipt}"
     )
 
 

@@ -1,0 +1,44 @@
+{
+  "download_receipts": [
+    {
+      "repository": "babihoba/supertonic3-optimization",
+      "revision": "d33f1094c6057d8c613f2c45987ba45e57c4b3af",
+      "verified_files": 27
+    },
+    {
+      "repository": "babihoba/supertonic3-optimization-data",
+      "revision": "e56d93c9959647c850b639a614e629e4e4ac1593",
+      "verified_files": 3
+    },
+    {
+      "extracted_verified_files": 770
+    }
+  ],
+  "float_waveform_bit_identical_to_local": true,
+  "sample_count": 230560,
+  "model_revision": "d33f1094c6057d8c613f2c45987ba45e57c4b3af",
+  "data_revision": "e56d93c9959647c850b639a614e629e4e4ac1593",
+  "note": "Public unauthenticated pinned downloads; 30 artifacts plus 769 extracted archive members verified. Local Mac waveform check, not server timing or independent quality evaluation.",
+  "public_final_checkpoint_reexport": [
+    {
+      "part": "duration_predictor",
+      "sha256": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+      "reexport_bit_identical": true
+    },
+    {
+      "part": "text_encoder",
+      "sha256": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+      "reexport_bit_identical": true
+    },
+    {
+      "part": "vector_estimator",
+      "sha256": "7c81ab7f0ddcc4266743701599a8708d2edd1be04285770f996e84a8bb5f4447",
+      "reexport_bit_identical": true
+    },
+    {
+      "part": "vocoder",
+      "sha256": "7698d5858bb47c008c959a1ab94b1904cb69bfb518070bb6b1781211b977c9e9",
+      "reexport_bit_identical": true
+    }
+  ]
+}

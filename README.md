@@ -6,7 +6,18 @@
 
 **소스와 측정 기록을 공개하는 저장소입니다.** 모델 가중치·체크포인트·수집 데이터·음성·배포 압축 파일은 포함하지 않습니다. 클론만으로 학습된 선택 모델을 실행할 수는 없습니다. 기본 그래프 최적화는 원본 다운로드 후 재현할 수 있고, 학습된 학생 모델은 아래 Hugging Face 링크에서 받을 수 있습니다.
 
-## 현재 결과
+## 현재 선택: F1200
+
+[선택 모델·E400 비교·재현 checkpoint](https://huggingface.co/babihoba/supertonic3-optimization/tree/d33f1094c6057d8c613f2c45987ba45e57c4b3af/models/round5-original50-student)와 [원본50 교사 데이터](https://huggingface.co/datasets/babihoba/supertonic3-optimization-data/tree/e56d93c9959647c850b639a614e629e4e4ac1593/round5)를 업로드하고 다시 다운로드해 검증했습니다. F1200은 약194MB이며 기본 다운로드 대상입니다. [재현 안내](docs/REPRODUCING.md), [공개 검증 기록](records/2026-10-29/PUBLICATION_F1200.md)을 참고하세요.
+
+```bash
+python download_artifacts.py --purpose inference
+python synthesize.py '안녕하세요.' --model .hf-assets/model/models/round5-original50-student --lang ko --steps 8 --output samples/hello.wav
+```
+
+F1200 기준 엔진 비교와 메모리 결과는 [6차 기록](records/2026-10-29/ROUND6_ENGINE.md)에 남깁니다. 아래 표는 이전 B/경량 모델의 역사적 결과입니다.
+
+## 이전 모델 결과
 
 실측 환경은 Oracle x86 **AMD EPYC 7551, 물리 1코어·논리 2CPU, RAM 약 954MB**입니다. 논리 CPU 하나에 고정하고 ORT/BLAS 연산 스레드를 1로 제한했습니다. 워밍업 후 KO/EN 짧은 문장 각각의 전체 파형 생성 시간 중앙값이며, 모델 로딩과 파일 저장은 제외합니다. 서버는 다른 작업과 공유했습니다. **Oracle ARM Neoverse-N1 2코어·12GB 실측은 [ARM 측정 PR #1](https://github.com/8954sood/supertonic3-optimization/pull/1)에 있습니다. 선택 모델의 한 스레드 RTF는 0.276~0.283, 두 스레드는 0.153~0.161이며, 기본 추론 설정은 계속 한 스레드입니다.**
 
