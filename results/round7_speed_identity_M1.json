@@ -1,0 +1,116 @@
+{
+  "note": "Fixed-model engine numerical regression. No original-teacher quality, independent ASR or perceptual similarity claim.",
+  "rows": [
+    {
+      "case": "en_short_speed_0.7",
+      "voice": "M1",
+      "sample_rate": 44100,
+      "samples": 326361,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "5e4bec632d0644e6acb7d1f4c0005c1761cd2f9f4759cea8eddbbe1b34343a54",
+      "candidate_float_sha256": "5e4bec632d0644e6acb7d1f4c0005c1761cd2f9f4759cea8eddbbe1b34343a54"
+    },
+    {
+      "case": "en_short_speed_1.05",
+      "voice": "M1",
+      "sample_rate": 44100,
+      "samples": 217574,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "748dc4156e3a987ee5ca988a9df01ff1adfdc7eae8c101fd3380f5e1181be0a2",
+      "candidate_float_sha256": "748dc4156e3a987ee5ca988a9df01ff1adfdc7eae8c101fd3380f5e1181be0a2"
+    },
+    {
+      "case": "en_short_speed_1.5",
+      "voice": "M1",
+      "sample_rate": 44100,
+      "samples": 152301,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "dc1b2b7c317ca154953ee835819775e42fdda2a5e3729949147a519d3a21b4af",
+      "candidate_float_sha256": "dc1b2b7c317ca154953ee835819775e42fdda2a5e3729949147a519d3a21b4af"
+    },
+    {
+      "case": "en_short_speed_1",
+      "voice": "M1",
+      "sample_rate": 44100,
+      "samples": 228452,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "2b74bc15be429df8b48b8e3c56901160a79eb982a8e4fe1192f16784d1e5d870",
+      "candidate_float_sha256": "2b74bc15be429df8b48b8e3c56901160a79eb982a8e4fe1192f16784d1e5d870"
+    },
+    {
+      "case": "en_short_speed_2",
+      "voice": "M1",
+      "sample_rate": 44100,
+      "samples": 114226,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "d70cf4196f006cc6ee4efa54316b11d366cc9852eca659fbe7e3d60a10bc06e9",
+      "candidate_float_sha256": "d70cf4196f006cc6ee4efa54316b11d366cc9852eca659fbe7e3d60a10bc06e9"
+    },
+    {
+      "case": "ko_short_speed_0.7",
+      "voice": "M1",
+      "sample_rate": 44100,
+      "samples": 351919,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "598ed1d5ca6fdb402da1781c7b83a0dd624b7261b434ab81f2e5ea5bcb6e9a34",
+      "candidate_float_sha256": "598ed1d5ca6fdb402da1781c7b83a0dd624b7261b434ab81f2e5ea5bcb6e9a34"
+    },
+    {
+      "case": "ko_short_speed_1.05",
+      "voice": "M1",
+      "sample_rate": 44100,
+      "samples": 234613,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "bb95f56c95aed16501428d7b07a46a451d4b3dd946c89819120a9da93dafe6ff",
+      "candidate_float_sha256": "bb95f56c95aed16501428d7b07a46a451d4b3dd946c89819120a9da93dafe6ff"
+    },
+    {
+      "case": "ko_short_speed_1.5",
+      "voice": "M1",
+      "sample_rate": 44100,
+      "samples": 164229,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "0f23516976724d330c24cfb62b66b0facfbfb42fe4c8ae64d96c43e06ed0a5b0",
+      "candidate_float_sha256": "0f23516976724d330c24cfb62b66b0facfbfb42fe4c8ae64d96c43e06ed0a5b0"
+    },
+    {
+      "case": "ko_short_speed_1",
+      "voice": "M1",
+      "sample_rate": 44100,
+      "samples": 246343,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "c5c0d0d6096336fe23a837f9ca938fb87f850233950b8a8dbc61cb5cac806a72",
+      "candidate_float_sha256": "c5c0d0d6096336fe23a837f9ca938fb87f850233950b8a8dbc61cb5cac806a72"
+    },
+    {
+      "case": "ko_short_speed_2",
+      "voice": "M1",
+      "sample_rate": 44100,
+      "samples": 123171,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "a800e2ee6e884512511599fa11de3268129d86cfa631a0a069a30e7b1d12fbdf",
+      "candidate_float_sha256": "a800e2ee6e884512511599fa11de3268129d86cfa631a0a069a30e7b1d12fbdf"
+    }
+  ],
+  "all_float32_bit_identical": true
+}

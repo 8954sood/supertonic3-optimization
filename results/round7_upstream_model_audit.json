@@ -1,0 +1,82 @@
+{
+  "rows": [
+    {
+      "requested_revision": "main",
+      "revision": "3cadd1ee6394adea1bd021217a0e650ede09a323",
+      "onnx_files": [
+        {
+          "path": "onnx/duration_predictor.onnx",
+          "bytes": 3700147,
+          "sha256": "c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db"
+        },
+        {
+          "path": "onnx/text_encoder.onnx",
+          "bytes": 36416150,
+          "sha256": "c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff"
+        },
+        {
+          "path": "onnx/vector_estimator.onnx",
+          "bytes": 256534781,
+          "sha256": "883ac868ea0275ef0e991524dc64f16b3c0376efd7c320af6b53f5b780d7c61c"
+        },
+        {
+          "path": "onnx/vocoder.onnx",
+          "bytes": 101424195,
+          "sha256": "085de76dd8e8d5836d6ca66826601f615939218f90e519f70ee8a36ed2a4c4ba"
+        }
+      ]
+    },
+    {
+      "requested_revision": "3cadd1ee6394adea1bd021217a0e650ede09a323",
+      "revision": "3cadd1ee6394adea1bd021217a0e650ede09a323",
+      "onnx_files": [
+        {
+          "path": "onnx/duration_predictor.onnx",
+          "bytes": 3700147,
+          "sha256": "c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db"
+        },
+        {
+          "path": "onnx/text_encoder.onnx",
+          "bytes": 36416150,
+          "sha256": "c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff"
+        },
+        {
+          "path": "onnx/vector_estimator.onnx",
+          "bytes": 256534781,
+          "sha256": "883ac868ea0275ef0e991524dc64f16b3c0376efd7c320af6b53f5b780d7c61c"
+        },
+        {
+          "path": "onnx/vocoder.onnx",
+          "bytes": 101424195,
+          "sha256": "085de76dd8e8d5836d6ca66826601f615939218f90e519f70ee8a36ed2a4c4ba"
+        }
+      ]
+    },
+    {
+      "requested_revision": "724fb5abbf5502583fb520898d45929e62f02c0b",
+      "revision": "724fb5abbf5502583fb520898d45929e62f02c0b",
+      "onnx_files": [
+        {
+          "path": "onnx/duration_predictor.onnx",
+          "bytes": 3700147,
+          "sha256": "c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db"
+        },
+        {
+          "path": "onnx/text_encoder.onnx",
+          "bytes": 36416150,
+          "sha256": "c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff"
+        },
+        {
+          "path": "onnx/vector_estimator.onnx",
+          "bytes": 256534781,
+          "sha256": "883ac868ea0275ef0e991524dc64f16b3c0376efd7c320af6b53f5b780d7c61c"
+        },
+        {
+          "path": "onnx/vocoder.onnx",
+          "bytes": 101424195,
+          "sha256": "085de76dd8e8d5836d6ca66826601f615939218f90e519f70ee8a36ed2a4c4ba"
+        }
+      ]
+    }
+  ]
+}

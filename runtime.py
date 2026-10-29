@@ -218,6 +218,7 @@ class Engine:
         return wav, {
             "seconds": elapsed,
             "audio_seconds": len(wav) / self.sample_rate,
+            "speed": float(speed),
             "rtf": elapsed / (len(wav) / self.sample_rate),
             "realtime_factor": (len(wav) / self.sample_rate) / elapsed,
             "stages": times,

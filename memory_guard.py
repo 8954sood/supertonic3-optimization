@@ -27,18 +27,26 @@ child = subprocess.Popen(command, start_new_session=True)
 proc = psutil.Process(child.pid)
 start = time.monotonic()
 peak = 0.0
+tree_peak = 0.0
 minimum = psutil.virtual_memory().available / 1e6
 reason = None
 while child.poll() is None:
     try:
         rss = proc.memory_info().rss / 1e6
+        tree_rss = rss
+        for descendant in proc.children(recursive=True):
+            try:
+                tree_rss += descendant.memory_info().rss / 1e6
+            except psutil.NoSuchProcess:
+                pass
     except psutil.NoSuchProcess:
         break
     available = psutil.virtual_memory().available / 1e6
     peak = max(peak, rss)
+    tree_peak = max(tree_peak, tree_rss)
     minimum = min(minimum, available)
-    if rss > a.max_rss_mb:
-        reason = "child RSS above sampled budget"
+    if tree_rss > a.max_rss_mb:
+        reason = "child process tree RSS above sampled budget"
     elif available < a.reserve_mb:
         reason = "system available RAM below reserve"
     elif time.monotonic() - start > a.seconds:
@@ -60,11 +68,12 @@ report = {
     "returncode": code,
     "reason": reason,
     "sampled_peak_child_rss_mb": peak,
+    "sampled_peak_process_tree_rss_mb": tree_peak,
     "minimum_system_available_mb": minimum,
     "elapsed_seconds": time.monotonic() - start,
     "max_rss_budget_mb": a.max_rss_mb,
     "reserve_mb": a.reserve_mb,
-    "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit.",
+    "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice.",
 }
 Path(a.stats).parent.mkdir(parents=True, exist_ok=True)
 Path(a.stats).write_text(json.dumps(report, indent=2))

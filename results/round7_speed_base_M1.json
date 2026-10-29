@@ -1,0 +1,341 @@
+{
+  "model": "models/round6-F1200",
+  "voice": "M1",
+  "steps": 8,
+  "threads": 1,
+  "note": "Development speaking-rate functionality. One synthesis per shape, no timing warm-up. Not a new independent ASR test or comparable warm RTF benchmark.",
+  "rows": [
+    {
+      "variant": "round6-F1200-speed-0.7",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 0.7,
+      "audio": "samples/round7_speed_base_M1/ko_short_speed_0.7.wav",
+      "sample_rate": 44100,
+      "samples": 351919,
+      "metrics": {
+        "seconds": 9.312241984531283,
+        "audio_seconds": 7.9800226757369614,
+        "speed": 0.7,
+        "rtf": 1.1669443011540428,
+        "realtime_factor": 0.8569389293139833,
+        "stages": {
+          "duration_predictor": 0.0780852921307087,
+          "text_encoder": 0.08006482385098934,
+          "vector_estimator": 5.659143848344684,
+          "vocoder": 2.8971529714763165
+        }
+      },
+      "finite": true
+    },
+    {
+      "variant": "round6-F1200-speed-1",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 1.0,
+      "audio": "samples/round7_speed_base_M1/ko_short_speed_1.wav",
+      "sample_rate": 44100,
+      "samples": 246343,
+      "metrics": {
+        "seconds": 5.838199678808451,
+        "audio_seconds": 5.586009070294785,
+        "speed": 1.0,
+        "rtf": 1.045146831188435,
+        "realtime_factor": 0.9568033602158094,
+        "stages": {
+          "duration_predictor": 0.0071100760251283646,
+          "text_encoder": 0.04493011720478535,
+          "vector_estimator": 3.99490375444293,
+          "vocoder": 1.783019557595253
+        }
+      },
+      "finite": true
+    },
+    {
+      "variant": "round6-F1200-speed-1.05",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 1.05,
+      "audio": "samples/round7_speed_base_M1/ko_short_speed_1.05.wav",
+      "sample_rate": 44100,
+      "samples": 234613,
+      "metrics": {
+        "seconds": 5.566793899983168,
+        "audio_seconds": 5.320022675736961,
+        "speed": 1.05,
+        "rtf": 1.0463853707563422,
+        "realtime_factor": 0.9556708531553588,
+        "stages": {
+          "duration_predictor": 0.004374245181679726,
+          "text_encoder": 0.08601593412458897,
+          "vector_estimator": 3.8065203111618757,
+          "vocoder": 1.6683650482445955
+        }
+      },
+      "finite": true
+    },
+    {
+      "variant": "round6-F1200-speed-1.5",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 1.5,
+      "audio": "samples/round7_speed_base_M1/ko_short_speed_1.5.wav",
+      "sample_rate": 44100,
+      "samples": 164229,
+      "metrics": {
+        "seconds": 4.00485684722662,
+        "audio_seconds": 3.724013605442177,
+        "speed": 1.5,
+        "rtf": 1.0754141288243484,
+        "realtime_factor": 0.9298743369618997,
+        "stages": {
+          "duration_predictor": 0.004728326573967934,
+          "text_encoder": 0.07611902058124542,
+          "vector_estimator": 2.7268391493707895,
+          "vocoder": 1.195786939933896
+        }
+      },
+      "finite": true
+    },
+    {
+      "variant": "round6-F1200-speed-2",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 2.0,
+      "audio": "samples/round7_speed_base_M1/ko_short_speed_2.wav",
+      "sample_rate": 44100,
+      "samples": 123171,
+      "metrics": {
+        "seconds": 4.8534910678863525,
+        "audio_seconds": 2.7929931972789115,
+        "speed": 2.0,
+        "rtf": 1.7377382345989572,
+        "realtime_factor": 0.5754606649549748,
+        "stages": {
+          "duration_predictor": 0.036021763458848,
+          "text_encoder": 0.0445400383323431,
+          "vector_estimator": 2.8694818411022425,
+          "vocoder": 1.9004199877381325
+        }
+      },
+      "finite": true
+    },
+    {
+      "variant": "round6-F1200-speed-0.7",
+      "case": "en_short",
+      "language": "en",
+      "voice": "M1",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 0.7,
+      "audio": "samples/round7_speed_base_M1/en_short_speed_0.7.wav",
+      "sample_rate": 44100,
+      "samples": 326361,
+      "metrics": {
+        "seconds": 7.802870009094477,
+        "audio_seconds": 7.400476190476191,
+        "speed": 0.7,
+        "rtf": 1.0543740440832894,
+        "realtime_factor": 0.9484300240617511,
+        "stages": {
+          "duration_predictor": 0.004081239923834801,
+          "text_encoder": 0.17166453041136265,
+          "vector_estimator": 5.236506149172783,
+          "vocoder": 2.387011179700494
+        }
+      },
+      "finite": true
+    },
+    {
+      "variant": "round6-F1200-speed-1",
+      "case": "en_short",
+      "language": "en",
+      "voice": "M1",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 1.0,
+      "audio": "samples/round7_speed_base_M1/en_short_speed_1.wav",
+      "sample_rate": 44100,
+      "samples": 228452,
+      "metrics": {
+        "seconds": 5.461666412651539,
+        "audio_seconds": 5.18031746031746,
+        "speed": 1.0,
+        "rtf": 1.0543111410621613,
+        "realtime_factor": 0.9484866099323908,
+        "stages": {
+          "duration_predictor": 0.03397026285529137,
+          "text_encoder": 0.04253666289150715,
+          "vector_estimator": 3.708622485399246,
+          "vocoder": 1.6749935429543257
+        }
+      },
+      "finite": true
+    },
+    {
+      "variant": "round6-F1200-speed-1.05",
+      "case": "en_short",
+      "language": "en",
+      "voice": "M1",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 1.05,
+      "audio": "samples/round7_speed_base_M1/en_short_speed_1.05.wav",
+      "sample_rate": 44100,
+      "samples": 217574,
+      "metrics": {
+        "seconds": 5.171690354123712,
+        "audio_seconds": 4.933650793650794,
+        "speed": 1.05,
+        "rtf": 1.0482481574859848,
+        "realtime_factor": 0.9539725806895779,
+        "stages": {
+          "duration_predictor": 0.004324119538068771,
+          "text_encoder": 0.08177933283150196,
+          "vector_estimator": 3.501979175955057,
+          "vocoder": 1.582150535658002
+        }
+      },
+      "finite": true
+    },
+    {
+      "variant": "round6-F1200-speed-1.5",
+      "case": "en_short",
+      "language": "en",
+      "voice": "M1",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 1.5,
+      "audio": "samples/round7_speed_base_M1/en_short_speed_1.5.wav",
+      "sample_rate": 44100,
+      "samples": 152301,
+      "metrics": {
+        "seconds": 3.755473228171468,
+        "audio_seconds": 3.4535374149659863,
+        "speed": 1.5,
+        "rtf": 1.0874279838107546,
+        "realtime_factor": 0.9196011275115671,
+        "stages": {
+          "duration_predictor": 0.004397358745336533,
+          "text_encoder": 0.07639575190842152,
+          "vector_estimator": 2.5751313231885433,
+          "vocoder": 1.0962425749748945
+        }
+      },
+      "finite": true
+    },
+    {
+      "variant": "round6-F1200-speed-2",
+      "case": "en_short",
+      "language": "en",
+      "voice": "M1",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 2.0,
+      "audio": "samples/round7_speed_base_M1/en_short_speed_2.wav",
+      "sample_rate": 44100,
+      "samples": 114226,
+      "metrics": {
+        "seconds": 5.7886226791888475,
+        "audio_seconds": 2.59015873015873,
+        "speed": 2.0,
+        "rtf": 2.234852486756327,
+        "realtime_factor": 0.4474568258647817,
+        "stages": {
+          "duration_predictor": 0.004794370383024216,
+          "text_encoder": 0.08095184154808521,
+          "vector_estimator": 3.8190396539866924,
+          "vocoder": 1.8825653363019228
+        }
+      },
+      "finite": true
+    }
+  ],
+  "duration_checks": [
+    {
+      "case": "ko_short",
+      "speed": 0.7,
+      "error_samples": 0.4285714285215363,
+      "inverse_duration_within_3_samples": true
+    },
+    {
+      "case": "ko_short",
+      "speed": 1.0,
+      "error_samples": 0.0,
+      "inverse_duration_within_3_samples": true
+    },
+    {
+      "case": "ko_short",
+      "speed": 1.05,
+      "error_samples": 0.6190476190531626,
+      "inverse_duration_within_3_samples": true
+    },
+    {
+      "case": "ko_short",
+      "speed": 1.5,
+      "error_samples": 0.3333333333430346,
+      "inverse_duration_within_3_samples": true
+    },
+    {
+      "case": "ko_short",
+      "speed": 2.0,
+      "error_samples": 0.5,
+      "inverse_duration_within_3_samples": true
+    },
+    {
+      "case": "en_short",
+      "speed": 0.7,
+      "error_samples": 1.0,
+      "inverse_duration_within_3_samples": true
+    },
+    {
+      "case": "en_short",
+      "speed": 1.0,
+      "error_samples": 0.0,
+      "inverse_duration_within_3_samples": true
+    },
+    {
+      "case": "en_short",
+      "speed": 1.05,
+      "error_samples": 0.6666666666860692,
+      "inverse_duration_within_3_samples": true
+    },
+    {
+      "case": "en_short",
+      "speed": 1.5,
+      "error_samples": 0.3333333333430346,
+      "inverse_duration_within_3_samples": true
+    },
+    {
+      "case": "en_short",
+      "speed": 2.0,
+      "error_samples": 0.0,
+      "inverse_duration_within_3_samples": true
+    }
+  ],
+  "invalid_speed_checks": [
+    {
+      "label": "below",
+      "rejected": true
+    },
+    {
+      "label": "above",
+      "rejected": true
+    },
+    {
+      "label": "nan",
+      "rejected": true
+    },
+    {
+      "label": "inf",
+      "rejected": true
+    }
+  ],
+  "complete": true,
+  "passed": true
+}

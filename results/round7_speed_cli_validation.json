@@ -1,0 +1,20 @@
+{
+  "rows": [
+    {
+      "speed_argument": "0.69",
+      "rejected_before_model_loading": true
+    },
+    {
+      "speed_argument": "2.01",
+      "rejected_before_model_loading": true
+    },
+    {
+      "speed_argument": "nan",
+      "rejected_before_model_loading": true
+    },
+    {
+      "speed_argument": "inf",
+      "rejected_before_model_loading": true
+    }
+  ]
+}

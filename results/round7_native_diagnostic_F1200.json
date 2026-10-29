@@ -1,0 +1,124 @@
+{
+  "model": "models/round5-original50-student",
+  "steps": 8,
+  "speed": 2.0,
+  "seed": 42,
+  "note": "Local diagnostic, not CPU1 server timing. Segments synthesized independently with native duration control then concatenated, no inserted silence or tempo filter; punctuation changes and achieved total duration must be considered. No candidate adopted.",
+  "rows": [
+    {
+      "variant": "F1200-cropped",
+      "voice": "M1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round7_native_diagnostic_F1200/M1_cropped.wav",
+      "audio_seconds": 2.7929931972789115,
+      "sha256": "7dcc14e51b15f4d85ff5df48e2feb159103b4a2c323bc49a8c2e85b0fb6c7d6d"
+    },
+    {
+      "variant": "F1200-uncropped",
+      "voice": "M1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round7_native_diagnostic_F1200/M1_uncropped.wav",
+      "audio_seconds": 2.8560544217687074,
+      "sha256": "547f8997298d1314da34e077cfe3b99391d669cc7464728d9a655a69ddc9706f"
+    },
+    {
+      "variant": "F1200-sentences",
+      "voice": "M1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round7_native_diagnostic_F1200/M1_sentences.wav",
+      "audio_seconds": 2.837891156462585,
+      "sha256": "6486be950f9ed27c16cf287bc4a23c1849976834a73556b513fd9ff7bbbd803a",
+      "segments": [
+        "안녕하세요.",
+        "오래된 컴퓨터에서도 빠르게 음성을 생성합니다."
+      ]
+    },
+    {
+      "variant": "F1200-clauses",
+      "voice": "M1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round7_native_diagnostic_F1200/M1_clauses.wav",
+      "audio_seconds": 2.988843537414966,
+      "sha256": "1ad4b9379b42b20c3e880ce4d048ce0545a197d261f6fec5552fcbfd44bc6f63",
+      "segments": [
+        "안녕하세요.",
+        "오래된 컴퓨터에서도",
+        "빠르게 음성을 생성합니다."
+      ]
+    },
+    {
+      "variant": "F1200-cropped",
+      "voice": "F1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round7_native_diagnostic_F1200/F1_cropped.wav",
+      "audio_seconds": 2.7912925170068026,
+      "sha256": "06b32036c832ce77c8f1e865007a990851d82c66e2e5a9e75d871f5aa7be44e7"
+    },
+    {
+      "variant": "F1200-uncropped",
+      "voice": "F1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round7_native_diagnostic_F1200/F1_uncropped.wav",
+      "audio_seconds": 2.8560544217687074,
+      "sha256": "b65da338c5db87862fc1cdda70cf9c4aeb2238b6641fdc3b266bbe6e9fc22ee8"
+    },
+    {
+      "variant": "F1200-sentences",
+      "voice": "F1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round7_native_diagnostic_F1200/F1_sentences.wav",
+      "audio_seconds": 2.838684807256236,
+      "sha256": "3b230bad5d90fd1252ae007639d9a44a840ac8e5a8038c65f662b9a3533e8f28",
+      "segments": [
+        "안녕하세요.",
+        "오래된 컴퓨터에서도 빠르게 음성을 생성합니다."
+      ]
+    },
+    {
+      "variant": "F1200-clauses",
+      "voice": "F1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round7_native_diagnostic_F1200/F1_clauses.wav",
+      "audio_seconds": 2.9940589569160996,
+      "sha256": "c4dd2f27b4a457ccdf1bf620758da0e6bc2559e7b0a90c5d4ae445c15b373c8b",
+      "segments": [
+        "안녕하세요.",
+        "오래된 컴퓨터에서도",
+        "빠르게 음성을 생성합니다."
+      ]
+    }
+  ],
+  "crop_checks": [
+    {
+      "voice": "M1",
+      "prefix_bitidentical": true,
+      "cropped_samples": 123171,
+      "full_samples": 125952,
+      "removed_tail_seconds": 0.06306122448979593
+    },
+    {
+      "voice": "F1",
+      "prefix_bitidentical": true,
+      "cropped_samples": 123096,
+      "full_samples": 125952,
+      "removed_tail_seconds": 0.06476190476190476
+    }
+  ],
+  "complete": true
+}

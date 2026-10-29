@@ -1,0 +1,279 @@
+{
+  "date": "2026-10-29",
+  "selected_model": "F1200",
+  "selected_engine": "v2",
+  "actual_student_steps": 8,
+  "server_threads": 1,
+  "functional_syntheses": 40,
+  "functional_checks_passed": true,
+  "bit_identical_engine_waveforms": 20,
+  "asr_scope": "Two development texts, KO/EN, repeated in M1/F1. Whisper base INT8 CPU1. Not independent testing, perceptual quality, or model agreement. Error rates can exceed 100% with insertions.",
+  "asr": [
+    {
+      "model": "F1200",
+      "speed": 0.7,
+      "language": "en",
+      "metric": "WER",
+      "errors": 0,
+      "reference_units": 22,
+      "rate": 0.0
+    },
+    {
+      "model": "F1200",
+      "speed": 0.7,
+      "language": "ko",
+      "metric": "CER",
+      "errors": 8,
+      "reference_units": 50,
+      "rate": 0.16
+    },
+    {
+      "model": "F1200",
+      "speed": 1.0,
+      "language": "en",
+      "metric": "WER",
+      "errors": 0,
+      "reference_units": 22,
+      "rate": 0.0
+    },
+    {
+      "model": "F1200",
+      "speed": 1.0,
+      "language": "ko",
+      "metric": "CER",
+      "errors": 0,
+      "reference_units": 50,
+      "rate": 0.0
+    },
+    {
+      "model": "F1200",
+      "speed": 1.05,
+      "language": "en",
+      "metric": "WER",
+      "errors": 0,
+      "reference_units": 22,
+      "rate": 0.0
+    },
+    {
+      "model": "F1200",
+      "speed": 1.05,
+      "language": "ko",
+      "metric": "CER",
+      "errors": 0,
+      "reference_units": 50,
+      "rate": 0.0
+    },
+    {
+      "model": "F1200",
+      "speed": 1.5,
+      "language": "en",
+      "metric": "WER",
+      "errors": 4,
+      "reference_units": 22,
+      "rate": 0.18181818181818182
+    },
+    {
+      "model": "F1200",
+      "speed": 1.5,
+      "language": "ko",
+      "metric": "CER",
+      "errors": 2,
+      "reference_units": 50,
+      "rate": 0.04
+    },
+    {
+      "model": "F1200",
+      "speed": 2.0,
+      "language": "en",
+      "metric": "WER",
+      "errors": 10,
+      "reference_units": 22,
+      "rate": 0.45454545454545453
+    },
+    {
+      "model": "F1200",
+      "speed": 2.0,
+      "language": "ko",
+      "metric": "CER",
+      "errors": 23,
+      "reference_units": 50,
+      "rate": 0.46
+    },
+    {
+      "model": "original50",
+      "speed": 0.7,
+      "language": "en",
+      "metric": "WER",
+      "errors": 0,
+      "reference_units": 22,
+      "rate": 0.0
+    },
+    {
+      "model": "original50",
+      "speed": 0.7,
+      "language": "ko",
+      "metric": "CER",
+      "errors": 3,
+      "reference_units": 50,
+      "rate": 0.06
+    },
+    {
+      "model": "original50",
+      "speed": 1.0,
+      "language": "en",
+      "metric": "WER",
+      "errors": 0,
+      "reference_units": 22,
+      "rate": 0.0
+    },
+    {
+      "model": "original50",
+      "speed": 1.0,
+      "language": "ko",
+      "metric": "CER",
+      "errors": 0,
+      "reference_units": 50,
+      "rate": 0.0
+    },
+    {
+      "model": "original50",
+      "speed": 1.5,
+      "language": "en",
+      "metric": "WER",
+      "errors": 1,
+      "reference_units": 22,
+      "rate": 0.045454545454545456
+    },
+    {
+      "model": "original50",
+      "speed": 1.5,
+      "language": "ko",
+      "metric": "CER",
+      "errors": 8,
+      "reference_units": 50,
+      "rate": 0.16
+    },
+    {
+      "model": "original50",
+      "speed": 2.0,
+      "language": "en",
+      "metric": "WER",
+      "errors": 9,
+      "reference_units": 22,
+      "rate": 0.4090909090909091
+    },
+    {
+      "model": "original50",
+      "speed": 2.0,
+      "language": "ko",
+      "metric": "CER",
+      "errors": 22,
+      "reference_units": 50,
+      "rate": 0.44
+    },
+    {
+      "model": "original8-control",
+      "speed": 2.0,
+      "language": "en",
+      "metric": "WER",
+      "errors": 9,
+      "reference_units": 22,
+      "rate": 0.4090909090909091
+    },
+    {
+      "model": "original8-control",
+      "speed": 2.0,
+      "language": "ko",
+      "metric": "CER",
+      "errors": 25,
+      "reference_units": 50,
+      "rate": 0.5
+    },
+    {
+      "model": "original16-control",
+      "speed": 2.0,
+      "language": "en",
+      "metric": "WER",
+      "errors": 9,
+      "reference_units": 22,
+      "rate": 0.4090909090909091
+    },
+    {
+      "model": "original16-control",
+      "speed": 2.0,
+      "language": "ko",
+      "metric": "CER",
+      "errors": 23,
+      "reference_units": 50,
+      "rate": 0.46
+    }
+  ],
+  "crop_checks": [
+    {
+      "model": "original50",
+      "voice": "M1",
+      "prefix_bitidentical": true,
+      "cropped_samples": 123171,
+      "full_samples": 125952,
+      "removed_tail_seconds": 0.06306122448979593
+    },
+    {
+      "model": "original50",
+      "voice": "F1",
+      "prefix_bitidentical": true,
+      "cropped_samples": 123096,
+      "full_samples": 125952,
+      "removed_tail_seconds": 0.06476190476190476
+    },
+    {
+      "model": "F1200",
+      "voice": "M1",
+      "prefix_bitidentical": true,
+      "cropped_samples": 123171,
+      "full_samples": 125952,
+      "removed_tail_seconds": 0.06306122448979593
+    },
+    {
+      "model": "F1200",
+      "voice": "F1",
+      "prefix_bitidentical": true,
+      "cropped_samples": 123096,
+      "full_samples": 125952,
+      "removed_tail_seconds": 0.06476190476190476
+    }
+  ],
+  "human_feedback": {
+    "question": "Same text/voice, native speed2.0, original FP32 CFG4 50 steps then F1200 8 steps",
+    "human_feedback": "원본은 안녕하세요 오래된 컴퓨터에서도 빠르게 에서 끊기고 우리가 만든건 안녕하생 컴퓨터 에서 빠르게 음성을 이라고 말해",
+    "interpretation": "Both have missing content at speed2.0. Original truncates after 빠르게; student also corrupts earlier pronunciation. No clean fast teacher target established.",
+    "default_postprocessing": "not adopted",
+    "teacher_policy": "Do not train the missing words from truncated original2x targets. Original normal-rate FP32 maximum-quality audio remains the quality anchor."
+  },
+  "native2_quality_fixed": false,
+  "postprocessing_default": false,
+  "new_training": false,
+  "model_weights_changed": false,
+  "v3_selected": false,
+  "v3_paired": [
+    {
+      "case": "ko_short",
+      "reference_seconds": 5.581245757639408,
+      "candidate_seconds": 5.401199431158602,
+      "paired_speedups": [
+        1.0296246367792288,
+        1.0370609056729367
+      ]
+    },
+    {
+      "case": "en_short",
+      "reference_seconds": 5.179844378493726,
+      "candidate_seconds": 5.19288401119411,
+      "paired_speedups": [
+        1.0000905695939855,
+        0.9949210897574546
+      ]
+    }
+  ],
+  "v3_scope": "Microkernel S32 identity passed eight weight-shape probes; no full v3 waveform/long-form validation. Whole-TTS English had no consistent improvement, so keep v2.",
+  "timing_caveat": "Later shared-server v2 short-form warm timings were about RTF1.05. Earlier RTF0.943..0.971 is a session result, not a guaranteed service level. Cold-shape speed sweeps are not paired performance benchmarks."
+}

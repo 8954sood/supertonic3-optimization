@@ -1,0 +1,7 @@
+{
+  "question": "Same text/voice, native speed2.0, original FP32 CFG4 50 steps then F1200 8 steps",
+  "human_feedback": "원본은 안녕하세요 오래된 컴퓨터에서도 빠르게 에서 끊기고 우리가 만든건 안녕하생 컴퓨터 에서 빠르게 음성을 이라고 말해",
+  "interpretation": "Both have missing content at speed2.0. Original truncates after 빠르게; student also corrupts earlier pronunciation. No clean fast teacher target established.",
+  "default_postprocessing": "not adopted",
+  "teacher_policy": "Do not train the missing words from truncated original2x targets. Original normal-rate FP32 maximum-quality audio remains the quality anchor."
+}

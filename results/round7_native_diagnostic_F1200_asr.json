@@ -1,0 +1,94 @@
+{
+  "source": "results/round7_native_diagnostic_F1200.json",
+  "note": "Development/validation only. ASR is not naturalness or timbre.",
+  "rows": [
+    {
+      "variant": "F1200-cropped",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round7_native_diagnostic_F1200/M1_cropped.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안녕하세한 컴퓨터에서도 빠르게 음성은",
+      "errors": 10,
+      "reference_units": 25
+    },
+    {
+      "variant": "F1200-uncropped",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round7_native_diagnostic_F1200/M1_uncropped.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안녕하세한 컴퓨터에서도 빠르게 음성은",
+      "errors": 10,
+      "reference_units": 25
+    },
+    {
+      "variant": "F1200-sentences",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round7_native_diagnostic_F1200/M1_sentences.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "오비터에서도 반응을..",
+      "errors": 19,
+      "reference_units": 25
+    },
+    {
+      "variant": "F1200-clauses",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round7_native_diagnostic_F1200/M1_clauses.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자, 자,",
+      "errors": 91,
+      "reference_units": 25
+    },
+    {
+      "variant": "F1200-cropped",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round7_native_diagnostic_F1200/F1_cropped.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안녕하세요 오래된크에서도 음성은",
+      "errors": 12,
+      "reference_units": 25
+    },
+    {
+      "variant": "F1200-uncropped",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round7_native_diagnostic_F1200/F1_uncropped.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안녕하세요 오래된크에서도 음성을",
+      "errors": 11,
+      "reference_units": 25
+    },
+    {
+      "variant": "F1200-sentences",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round7_native_diagnostic_F1200/F1_sentences.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "오비터에서도 음성을",
+      "errors": 17,
+      "reference_units": 25
+    },
+    {
+      "variant": "F1200-clauses",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round7_native_diagnostic_F1200/F1_clauses.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "오래된 빨리",
+      "errors": 22,
+      "reference_units": 25
+    }
+  ]
+}

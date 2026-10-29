@@ -1,6 +1,6 @@
 # supertonic3-optimization
 
-> 최신 작업: [6차 엔진 기록](records/2026-10-29/ROUND6_ENGINE.md), [5차 품질 기록](records/2026-10-29/ROUND5_LOCAL.md). 사용자가 **F1200을 기준 모델로 선택**했습니다. 원본 FP32·CFG4·50스텝 교사로 학습했으며 추론은 CPU1·실제8스텝입니다. 이제 모델 구조·가중치를 고정하고 엔진만 최적화합니다. 검증된 개선의 Git 커밋과 기존 모델/재현 자료 업로드를 다시 허용받았습니다. 아래4차 표는 이전 모델 기록입니다.
+> 최신 작업: [7차 배속·원본 비교](records/2026-10-29/ROUND7_SPEED.md), [6차 엔진 기록](records/2026-10-29/ROUND6_ENGINE.md), [5차 품질 기록](records/2026-10-29/ROUND5_LOCAL.md). 기준 모델은 **F1200**, 엔진은v2입니다. 원본 FP32·CFG4·50스텝 교사로 학습했으며 추론은 CPU1·실제8스텝입니다. 모델 구조·가중치는 유지했습니다. 검증된 변경은main에 직접 커밋·푸시합니다. 아래4차 표는 이전 모델 기록입니다.
 
 [Supertonic 3](https://huggingface.co/Supertone/supertonic-3)의 **CPU 한 스레드·실제 denoising 8회** 최적화 실험입니다. 그래프 변환, 문장 조건 계산 재사용, INT8, 혼합 폭 증류, CFG 교사 출력의 단일 경로 증류를 비교했습니다. 추론은 CPU만 사용하고 증류 훈련은 Mac MPS에서 수행했습니다.
 
@@ -13,9 +13,13 @@
 ```bash
 python download_artifacts.py --purpose inference
 python synthesize.py '안녕하세요.' --model .hf-assets/model/models/round5-original50-student --lang ko --steps 8 --output samples/hello.wav
+# 말하기 배속: 0.7~2.0 입력 가능; 기본1.05, 고배속 품질은 아래 한계 참고
+python synthesize.py '안녕하세요.' --model .hf-assets/model/models/round5-original50-student --lang ko --steps 8 --speed 1.5 --output samples/hello-fast.wav
 ```
 
-실제 EPYC7551·1코어/1GB에서 F1200 가중치를 고정한 native 엔진v2가 짧고 긴KO/EN4문장에서 **RTF0.943~0.971**, 최대 표본RSS427MB를 기록했습니다. 비교한6개 음성의 float32 출력은 기존F와 완전히 같았습니다. 공유 서버의 제한된 표본이며 ARM 성능을 예측하지 않습니다. 이후 검증된 변경은main에 커밋·푸시합니다.
+실제 EPYC7551·1코어/1GB에서 F1200 가중치를 고정한 native 엔진v2가 짧고 긴KO/EN4문장에서 **RTF0.943~0.971**, 최대 표본RSS427MB를 기록했습니다. 비교한6개 음성의 float32 출력은 기존F와 완전히 같았습니다. 이후 공유 서버 재측정에서는 약RTF1.05도 나왔으므로 지속적인 실시간 보장이 아닙니다. ARM 성능으로 환산하지 않습니다.
+
+배속 검사는40회 생성·20개 기존/최적화 파형 완전 일치를 확인했습니다. 다만 **native2배속에서는 원본50과 F1200 모두 단어가 누락**됐으며 사용자 청취로도 확인했습니다. 잘라내기 전 원본도 같은 곳에서 끝납니다. 현재 개발 표본에서는1.0~1.05가 안정적이었고1.5도 음색별 오류가 있었습니다. 입력 허용 범위가 음질 보장 범위는 아닙니다. 후처리 배속은 기본 경로에 넣지 않았습니다. [검사·실패 시도·이어 할 일](records/2026-10-29/ROUND7_SPEED.md)을 참고하세요.
 
 F1200 기준 엔진 비교와 메모리 결과는 [6차 기록](records/2026-10-29/ROUND6_ENGINE.md)에 남깁니다. 아래 표는 이전 B/경량 모델의 역사적 결과입니다.
 
@@ -82,25 +86,25 @@ python benchmark.py --model models/fast-fp32-cached --steps 8 --repeats 3 \
 
 ## 재현과 후속 작업
 
-학습된 모델과 중간 파일은 공개 Hugging Face 저장소에서 내려받습니다: [모델과 체크포인트](https://huggingface.co/babihoba/supertonic3-optimization), [증류 훈련 데이터](https://huggingface.co/datasets/babihoba/supertonic3-optimization-data). Hugging Face 저장소에는 선택 후보와 비교용 두 모델, 재현용 초기/600회 체크포인트, 1,600개 학습·64개 검증 궤적이 있습니다. 저장소 용량은 약 1.2GB입니다.
+학습된 모델과 중간 파일은 공개 Hugging Face 저장소에서 내려받습니다: [모델과 체크포인트](https://huggingface.co/babihoba/supertonic3-optimization), [증류 훈련 데이터](https://huggingface.co/datasets/babihoba/supertonic3-optimization-data). 현재 기본 F1200 패키지는 약194MB이며 원본50 교사의640개 학습·128개 검증 궤적, 초기/1200회 체크포인트와 E400 비교 모델을 제공합니다. 이전 B 모델과 그 재현 자료는 역사적 비교용으로 남아 있습니다. [정확한 파일·고정 리비전·검증 결과](records/2026-10-29/PUBLICATION_F1200.md)를 참고하세요.
 
 ```bash
-# 선택한 모델만 다운로드(약 188MB)하고 파일별 SHA-256 확인
+# 선택한 F1200만 다운로드하고 파일별 SHA-256 확인
 python download_artifacts.py --purpose inference
-# 초기/600회 체크포인트와 훈련 궤적 다운로드(약 646MB)
+# F1200 초기/1200회 체크포인트와 원본50 훈련 궤적 다운로드
 python download_artifacts.py --purpose reproduce
 ```
 
 ```bash
-python synthesize.py '안녕하세요.' --model .hf-assets/model/models/cfg-mixed-v1-selected \
+python synthesize.py '안녕하세요.' --model .hf-assets/model/models/round5-original50-student \
   --lang ko --steps 8 --output samples/hello.wav
 ```
 
 체크포인트·데이터로 학습을 다시 돌리는 방법은 [다운로드 및 학습 재현 안내](docs/REPRODUCING.md)에 있습니다. 두 저장소는 공개이므로 다운로드에는 토큰이 필요하지 않습니다.
 
-- [현재 상태와 인계](records/2026-10-29/HANDOFF_ROUND4.md): 모델 선택, 실패, 시험 사용 이력, 다음 우선순위.
+- [현재 상태와 인계](records/2026-10-29/ROUND7_SPEED.md): 선택 모델·엔진, 배속 한계, 실패 시도와 다음 우선순위.
 - [학습 재현](docs/REPRODUCING.md): 수집 → 층별 학습 → 혼합 폭 → CFG 증류 → ONNX 내보내기.
-- [전체 작업 색인](WORK_LOG.md): 1~4차 기록과 성능·ASR·음향 지표.
+- [전체 작업 색인](WORK_LOG.md): 1~7차 기록과 성능·ASR·음향 지표.
 - [공개 범위](docs/PUBLICATION.md): 제외 파일, 비식별 처리, 기록 해시 검증 범위.
 
 `distill/corpus.json`과 `distill/corpus_cfg_v3.json`의 시험은 모두 결과 확인에 사용했습니다. 후속 모델 선택에 재사용하면 독립 시험이 아닙니다. 훈련은 고유 문장 40개를 5개 음색/seed 조합으로 늘린 200조합이며 대규모 데이터셋 학습이 아닙니다. 증류의 바이트 단위 재현은 보장하지 않습니다.

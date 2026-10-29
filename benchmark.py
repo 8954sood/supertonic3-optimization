@@ -1,5 +1,6 @@
 import argparse
 import json
+import os
 import platform
 import statistics
 import time
@@ -40,6 +41,7 @@ def main():
     p.add_argument("--cases", nargs="+", choices=list(TEXTS), default=list(TEXTS))
     p.add_argument("--output", default="results/baseline.json")
     p.add_argument("--voice", default="M1")
+    p.add_argument("--speed", type=float, default=1.05)
     p.add_argument("--audio-subtype", choices=["PCM_16", "FLOAT"], default="PCM_16")
     p.add_argument(
         "--affinity", type=int, help="Pin to this logical core on Linux/Windows"
@@ -47,6 +49,8 @@ def main():
     a = p.parse_args()
     if a.repeats < 1:
         p.error("repeats must be positive")
+    if not 0.7 <= a.speed <= 2.0:
+        p.error("--speed must be between 0.7 and 2.0")
     proc = psutil.Process()
     if a.affinity is not None:
         if not hasattr(proc, "cpu_affinity"):
@@ -71,6 +75,8 @@ def main():
         "threads": 1,
         "affinity": a.affinity,
         "voice": a.voice,
+        "speed": a.speed,
+        "cpu_time_scope": "process and waited-for child processes",
         "audio_subtype": a.audio_subtype,
         "variant": a.variant,
         "model": a.model,
@@ -102,13 +108,15 @@ def main():
     for name in a.cases:
         lang, text = TEXTS[name]
         for steps in a.steps:
-            engine.synthesize(text, lang, steps)  # warm-up, excluded
+            engine.synthesize(text, lang, steps, speed=a.speed)  # warm-up, excluded
             runs = []
             cpu = []
             for _ in range(a.repeats):
-                c = time.process_time()
-                wav, metrics = engine.synthesize(text, lang, steps)
-                cpu.append(time.process_time() - c)
+                children = os.times()
+                c = time.process_time() + children.children_user + children.children_system
+                wav, metrics = engine.synthesize(text, lang, steps, speed=a.speed)
+                children = os.times()
+                cpu.append(time.process_time() + children.children_user + children.children_system - c)
                 runs.append(metrics)
             row = {
                 "case": name,

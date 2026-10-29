@@ -16,6 +16,18 @@ python synthesize.py '안녕하세요. 한 스레드로 읽습니다.' \
 
 약194MB의 완전한 F1200 ONNX 패키지에 설정·10음색·모델 라이선스가 포함됩니다. 모델/체크포인트/음성은 Git에 넣지 않습니다. `--model round5-original50-preview`로 E400만 받을 수도 있습니다. 이전 모델 이름도 명시적으로 지정할 수 있습니다.
 
+## 말하기 배속
+
+`synthesize.py`와`benchmark.py`의 `--speed`로0.7~2.0을 지정합니다. 기본1.05를 유지하며1.0이 기준 속도입니다. 1.5는 발화 길이를 약2/3,2.0은 약1/2로 줄입니다. 오디오 재생 샘플레이트를 바꾸는 방식이 아니라 원래 모델의duration 조건을 조절합니다. 범위 밖·NaN·무한대는 거부합니다. **현재 native2.0에서는 원본50과 F1200 모두 누락·발음 문제가 확인됐습니다.** 1.5도 음색에 따라 오류가 났습니다. 입력 가능 범위는 품질 보장이 아닙니다.
+
+```bash
+python synthesize.py '안녕하세요. 배속을 확인합니다.' \
+  --model .hf-assets/model/models/round5-original50-student \
+  --lang ko --voice M1 --steps 8 --speed 1.5 --output samples/fast.wav
+```
+
+배속별 길이·float32 출력·개발ASR 검사 범위와 한계는 [7차 기록](../records/2026-10-29/ROUND7_SPEED.md)을 참고하세요. 빠른 발화의 지각 품질은 길이 비례만으로 검증할 수 없습니다.
+
 ## 원본50 교사에서 F1200 단계 재현
 
 ```bash

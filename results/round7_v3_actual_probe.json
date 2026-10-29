@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "shape": [
+        77,
+        512,
+        1536
+      ],
+      "bit_identical": true,
+      "seconds": {
+        "row8": 0.0030238619074225426,
+        "safe_accum": 0.00302333477884531
+      },
+      "safe_accum_speedup": 1.000174353360045
+    },
+    {
+      "shape": [
+        77,
+        1536,
+        512
+      ],
+      "bit_identical": true,
+      "seconds": {
+        "row8": 0.002802734263241291,
+        "safe_accum": 0.0025898199528455734
+      },
+      "safe_accum_speedup": 1.082212012523024
+    },
+    {
+      "shape": [
+        77,
+        512,
+        2048
+      ],
+      "bit_identical": true,
+      "seconds": {
+        "row8": 0.003901849500834942,
+        "safe_accum": 0.003747343085706234
+      },
+      "safe_accum_speedup": 1.0412309232421373
+    },
+    {
+      "shape": [
+        77,
+        2048,
+        512
+      ],
+      "bit_identical": true,
+      "seconds": {
+        "row8": 0.003801446408033371,
+        "safe_accum": 0.0034155435860157013
+      },
+      "safe_accum_speedup": 1.1129843060992328
+    },
+    {
+      "shape": [
+        300,
+        512,
+        1536
+      ],
+      "bit_identical": true,
+      "seconds": {
+        "row8": 0.010946878232061863,
+        "safe_accum": 0.010731092654168606
+      },
+      "safe_accum_speedup": 1.0201084442048343
+    },
+    {
+      "shape": [
+        300,
+        1536,
+        512
+      ],
+      "bit_identical": true,
+      "seconds": {
+        "row8": 0.011266980320215225,
+        "safe_accum": 0.01001300010830164
+      },
+      "safe_accum_speedup": 1.125235214056767
+    },
+    {
+      "shape": [
+        300,
+        512,
+        2048
+      ],
+      "bit_identical": true,
+      "seconds": {
+        "row8": 0.01555550191551447,
+        "safe_accum": 0.014356938190758228
+      },
+      "safe_accum_speedup": 1.0834832405650234
+    },
+    {
+      "shape": [
+        300,
+        2048,
+        512
+      ],
+      "bit_identical": true,
+      "seconds": {
+        "row8": 0.014812656678259373,
+        "safe_accum": 0.01315906923264265
+      },
+      "safe_accum_speedup": 1.125661429116491
+    }
+  ]
+}

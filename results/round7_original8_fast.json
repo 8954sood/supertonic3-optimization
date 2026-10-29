@@ -1,0 +1,72 @@
+{
+  "teacher_origin": {
+    "repo": "Supertone/supertonic-3",
+    "revision": "3cadd1ee6394adea1bd021217a0e650ede09a323"
+  },
+  "precision": "FP32",
+  "cfg": 4,
+  "steps": 8,
+  "teacher_generation_threads": 4,
+  "graph_sha256": {
+    "duration_predictor": "c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db",
+    "text_encoder": "c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff",
+    "vector_estimator": "883ac868ea0275ef0e991524dc64f16b3c0376efd7c320af6b53f5b780d7c61c",
+    "vocoder": "085de76dd8e8d5836d6ca66826601f615939218f90e519f70ee8a36ed2a4c4ba"
+  },
+  "note": "Original unmodified-model listening reference on local Mac; not CPU1 server timing.50 is maximum reference; lower counts are diagnostic controls. Native model duration control only; no waveform tempo processing.",
+  "rows": [
+    {
+      "variant": "original8-speed-2",
+      "case": "ko_short",
+      "voice": "M1",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 2.0,
+      "steps": 8,
+      "seed": 42,
+      "audio": "samples/round7_original8_fast/M1_ko_short_speed_2.wav",
+      "sha256": "99b51c9db8032b6a07b0f430e38f495d6d9e27116aa0e838e1c5e5d8993e18ce",
+      "audio_seconds": 2.7929931972789115
+    },
+    {
+      "variant": "original8-speed-2",
+      "case": "en_short",
+      "voice": "M1",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 2.0,
+      "steps": 8,
+      "seed": 42,
+      "audio": "samples/round7_original8_fast/M1_en_short_speed_2.wav",
+      "sha256": "36987c47ef80516dc04cee22b31b67b395290b2c43453bab530e0b833c1bd08c",
+      "audio_seconds": 2.59015873015873
+    },
+    {
+      "variant": "original8-speed-2",
+      "case": "ko_short",
+      "voice": "F1",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 2.0,
+      "steps": 8,
+      "seed": 42,
+      "audio": "samples/round7_original8_fast/F1_ko_short_speed_2.wav",
+      "sha256": "e37d1f3f2a918caff4f8f9b08662e9195aa95455bf88d0532d96dd5eea7de72c",
+      "audio_seconds": 2.7912925170068026
+    },
+    {
+      "variant": "original8-speed-2",
+      "case": "en_short",
+      "voice": "F1",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 2.0,
+      "steps": 8,
+      "seed": 42,
+      "audio": "samples/round7_original8_fast/F1_en_short_speed_2.wav",
+      "sha256": "0bfba7c3eba4d5941b06b1229143f9da1f679e5794adf2700c0d636322f01b04",
+      "audio_seconds": 2.5887074829931973
+    }
+  ],
+  "complete": true
+}

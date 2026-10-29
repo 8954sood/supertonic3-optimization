@@ -1,0 +1,12 @@
+{
+  "returncode": -15,
+  "reason": "child process tree RSS above sampled budget",
+  "sampled_peak_child_rss_mb": 15.122432,
+  "sampled_peak_process_tree_rss_mb": 96.01024000000001,
+  "minimum_system_available_mb": 8179.253248,
+  "elapsed_seconds": 0.0729421250289306,
+  "max_rss_budget_mb": 60.0,
+  "reserve_mb": 80.0,
+  "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice.",
+  "validation": "Descendant allocation exceeded tree budget while direct child remained below budget; process group was terminated by supervisor."
+}

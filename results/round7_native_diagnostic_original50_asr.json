@@ -1,0 +1,94 @@
+{
+  "source": "results/round7_native_diagnostic_original50.json",
+  "note": "Development/validation only. ASR is not naturalness or timbre.",
+  "rows": [
+    {
+      "variant": "original50-cropped",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round7_native_diagnostic_original50/M1_cropped.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안녕하세요, 오래된 컴퓨터에서도 빠르게",
+      "errors": 8,
+      "reference_units": 25
+    },
+    {
+      "variant": "original50-uncropped",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round7_native_diagnostic_original50/M1_uncropped.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안녕하세요 오래된 컴퓨터에서도 빠르게",
+      "errors": 8,
+      "reference_units": 25
+    },
+    {
+      "variant": "original50-sentences",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round7_native_diagnostic_original50/M1_sentences.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "오래된 컴퓨터에서",
+      "errors": 17,
+      "reference_units": 25
+    },
+    {
+      "variant": "original50-clauses",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round7_native_diagnostic_original50/M1_clauses.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "오로잇 빠르게",
+      "errors": 21,
+      "reference_units": 25
+    },
+    {
+      "variant": "original50-cropped",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round7_native_diagnostic_original50/F1_cropped.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안녕하세요 오래된 컴퓨성은",
+      "errors": 14,
+      "reference_units": 25
+    },
+    {
+      "variant": "original50-uncropped",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round7_native_diagnostic_original50/F1_uncropped.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안녕하세요 오래된 컴퓨성은",
+      "errors": 14,
+      "reference_units": 25
+    },
+    {
+      "variant": "original50-sentences",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round7_native_diagnostic_original50/F1_sentences.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "올해된 컴퓨터물성",
+      "errors": 20,
+      "reference_units": 25
+    },
+    {
+      "variant": "original50-clauses",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round7_native_diagnostic_original50/F1_clauses.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "올해 빠르",
+      "errors": 23,
+      "reference_units": 25
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-29",
+  "branch": "main",
+  "selected_model": "F1200",
+  "selected_engine": "v2",
+  "model_weights_changed": false,
+  "new_training": false,
+  "actual_student_steps": 8,
+  "server_threads": 1,
+  "teacher_policy": "Original pinned FP32 CFG4 maximum50 only. Original native2x drops content, so do not treat those outputs as clean high-speed training targets.",
+  "publication_policy": "User authorized verified commits and pushes directly to main. Existing model/data uploads completed; no new weights generated this round.",
+  "summary": "results/round7_speed_summary.json",
+  "record": "records/2026-10-29/ROUND7_SPEED.md",
+  "native_speed": "CLI exposed, 40 functional syntheses and 20 engine float32 identity comparisons passed. Native2x perceptual quality failed for both original50 and F1200.",
+  "crop_diagnostic": "Uncropped original still drops the same ending. Removed tail only63..65ms. Sentence/clause splitting did not recover content.",
+  "postprocessing_default": false,
+  "v3_selected": false,
+  "v3_reason": "Microkernel speedup did not consistently improve whole-TTS English. No full waveform/long-form validation; original v2 library restored.",
+  "timing_caveat": "Later v2 shared-server short-form RTF about1.05; earlier0.943..0.971 is a session measurement, not a service guarantee.",
+  "next": "Preserve normal-rate F1200 and v2. For a model-native speed-quality change, first validate clean fast references derived only from original normal-rate50, including content/pitch/consonants, before any training. No further pruning, no student-teacher redistillation, no silent DSP default. Request human listening on a validated candidate."
+}
