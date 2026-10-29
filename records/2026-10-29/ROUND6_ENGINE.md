@@ -1,6 +1,6 @@
 # 6차: 모델 고정, 실제 1코어·1GB 서버 엔진 최적화
 
-진행 중인 로컬 기록. Git/Hugging Face 공개 업로드·커밋·푸시는 하지 않는다.
+사용자가 성공한 최적화의 커밋·GitHub 푸시와 기존 모델/재현 자료 업로드를 다시 허용했다. F1200을 고정 기준으로 선택했으며 모델 구조·가중치는 변경하지 않는다.
 
 ## 이번 지침과 고정 조건
 
@@ -35,3 +35,32 @@ F source vector SHA256: `7c81ab7f0ddcc4266743701599a8708d2edd1be04285770f996e84a
 커널은 Linux x86_64 AVX2·EPYC용이다. 다른 CPU에는 기본 ORT 엔진을 사용한다. 모든 기본 Engine 설정은 기존대로 유지하고 manifest가 지정하는 실험 모델에서만 확장 커널을 등록한다.
 
 `results/round6_weight_identity.json`은 원본628개 initializer가 변환된 graph/condition의 복사본과 바이트 단위로 같음을 확인한다. graph 직렬화 해시는 달라져도 파라미터는 고정이다. 정수 standalone8형상 및 ORT custom-op ABI4형상/제로포인트/반복 캐시 검사를 수행했다. 실제 짧은 KO/EN PCM16도 기본 F 엔진과 새 커널, 캐시 결합 모두 완전히 일치했다. 긴 문장/다른 음색 확인과 반복 속도 측정은 아래 최종 집계에 추가한다.
+
+
+## 엔진 v1 검증 완료
+
+핵심 변경은56개 FFN 정수 행렬곱의 정확한 native 커널, 문장 조건 캐시, memory pattern 비활성화다. CPU arena와 prepacking은 유지한다. 패턴을 켠 첫 연속 측정은 긴 영어 실행 중 표본RSS483.10MB로 자체480MB 감시선을 넘었다. 시험 process만 종료됐으며 당시 시스템available191.08MB였다. 이 설정은 채택하지 않았다. benchmark는 이후 case별 부분 JSON과 complete 플래그를 저장하도록 보완했다.
+
+수정 후 짧은 KO/EN→긴 KO/EN 연속 배치가 모두 완료됐다. 각 문장 warm-up 후3회 중앙값이다. baseline배치 다음 engine배치라 공유 부하 차이가 있으며, 아래를 독립 반복 실험 전체의 확정적인 속도비로 해석하지 않는다.
+
+| 문장 | 기존 F1200 시간 / RTF | 엔진 v1 시간 / RTF |
+| --- | ---: | ---: |
+| KO 짧음 | 5.792초 /1.0888 | 5.504초 /1.0345 |
+| EN 짧음 | 5.190초 /1.0519 | 5.036초 /1.0207 |
+| KO 김 | 18.787초 /1.0665 | 18.204초 /1.0334 |
+| EN 김 | 18.100초 /1.0704 | 17.913초 /1.0594 |
+
+최대 표본RSS는 baseline456.62→engine426.93MB, 최소available201.85→229.38MB였다. 별도 short fresh-process 교차3쌍에서는 baseline KO5.628/EN5.175초, engine5.502/5.090초이며 쌍별 속도비 중앙값은1.0162/1.0166배였다. 이 단계 개선은 작고 실행 변동이 있다. 이전 pattern-enabled short3쌍의1.029배와 설정이 다르므로 합쳐 과장하지 않는다.
+
+M1의4문장(짧고 긴 KO/EN) 및 F1의짧은 KO/EN, 총6개 실제 서버 float32 WAV가 기본F와 샘플 단위로 완전히 같았다. 각 RMSE와 최대차이는0이다. `results/round6_engine_wave_identity_M1.json`, `..._F1.json`에 float byte hash까지 남겼다. 새로운 WER 시험은 하지 않았고, 출력 동일성을 원본교사와의 지각 동등성으로 바꾸어 말하지 않는다.
+
+행/열 loop 순서 변경과4×16 tile도 시험했다. 대부분 개선이 없거나 일부 큰 행렬이 느려 채택하지 않았다. 모든 raw probe를 보존하며 한 번의 큰 outlier만으로 커널을 선택하지 않는다.
+
+### v1 재개 지점
+
+- 기준: `models/round5-original50-student`, 서버 baseline 별칭 `models/round6-F1200`.
+- graph 변환: `experiments/exact_integer_backend.py --cache-conditioning`; 실험 패키지 `models/round6-F-exact-cached`.
+- build 및 arithmetic ABI 검사: `native/build_exact.py`, `experiments/check_exact_integer.py`.
+- 파형 비교: `experiments/check_engine_waves.py`; 수치 집계: `experiments/summarize_round6.py`.
+- 표준모델/초기·최종 checkpoint와 original50 data는 [F1200 공개 기록](PUBLICATION_F1200.md)에 고정 revision을 남겼다. 공개 weights를 바꾸지 않고 native 패키지는 내려받은F에서 재생성한다.
+- 다음 실험은 정수16bit 부분합이 수학적으로 안전한 block에서만 widening을 합치고, 나머지는 기존 정확한 경로로 처리하는 방법이다. 아직 후보이며 실제 TTS 검증 전에 선택하지 않는다.

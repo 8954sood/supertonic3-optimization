@@ -1,0 +1,50 @@
+{
+  "note": "Fixed-model engine numerical regression. No original-teacher quality, independent ASR or perceptual similarity claim.",
+  "rows": [
+    {
+      "case": "en_long_8steps",
+      "voice": "M1",
+      "sample_rate": 44100,
+      "samples": 745700,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "9ccdbd251d7c387202a5ebbec1a8554bc9c67cf466e3ae4fa52ab2e205d696fb",
+      "candidate_float_sha256": "9ccdbd251d7c387202a5ebbec1a8554bc9c67cf466e3ae4fa52ab2e205d696fb"
+    },
+    {
+      "case": "en_short_8steps",
+      "voice": "M1",
+      "sample_rate": 44100,
+      "samples": 217574,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "748dc4156e3a987ee5ca988a9df01ff1adfdc7eae8c101fd3380f5e1181be0a2",
+      "candidate_float_sha256": "748dc4156e3a987ee5ca988a9df01ff1adfdc7eae8c101fd3380f5e1181be0a2"
+    },
+    {
+      "case": "ko_long_8steps",
+      "voice": "M1",
+      "sample_rate": 44100,
+      "samples": 776884,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "948d5e4ef2fd95fd4389b7f15f9dc6bb06acd5854324d7c6dff40ce98e9ad3dc",
+      "candidate_float_sha256": "948d5e4ef2fd95fd4389b7f15f9dc6bb06acd5854324d7c6dff40ce98e9ad3dc"
+    },
+    {
+      "case": "ko_short_8steps",
+      "voice": "M1",
+      "sample_rate": 44100,
+      "samples": 234613,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "bb95f56c95aed16501428d7b07a46a451d4b3dd946c89819120a9da93dafe6ff",
+      "candidate_float_sha256": "bb95f56c95aed16501428d7b07a46a451d4b3dd946c89819120a9da93dafe6ff"
+    }
+  ],
+  "all_float32_bit_identical": true
+}

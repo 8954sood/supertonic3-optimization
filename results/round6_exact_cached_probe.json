@@ -1,0 +1,126 @@
+{
+  "note": "Exact integer arithmetic and synthetic throughput; includes repacking each call; no model changes",
+  "out_of_range_rejected": true,
+  "rows": [
+    {
+      "shape": [
+        1,
+        12,
+        8
+      ],
+      "zero_point": 0,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 1.794286072254181e-05,
+        "native_repack": 1.1641532182693481e-05,
+        "native_cached": 8.065253496170044e-06
+      },
+      "speedup": 2.2247113163972285
+    },
+    {
+      "shape": [
+        5,
+        144,
+        512
+      ],
+      "zero_point": 255,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 3.834255039691925e-05,
+        "native_repack": 4.080682992935181e-05,
+        "native_cached": 2.7824193239212036e-05
+      },
+      "speedup": 1.3780291873075379
+    },
+    {
+      "shape": [
+        8,
+        512,
+        1536
+      ],
+      "zero_point": 127,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 0.00036821700632572174,
+        "native_repack": 0.00048694387078285217,
+        "native_cached": 0.00034489110112190247
+      },
+      "speedup": 1.0676326676099848
+    },
+    {
+      "shape": [
+        15,
+        1536,
+        512
+      ],
+      "zero_point": 71,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 0.0007131397724151611,
+        "native_repack": 0.0008259732276201248,
+        "native_cached": 0.0006360150873661041
+      },
+      "speedup": 1.1212623514458586
+    },
+    {
+      "shape": [
+        77,
+        512,
+        1536
+      ],
+      "zero_point": 128,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 0.003629244863986969,
+        "native_repack": 0.0038009900599718094,
+        "native_cached": 0.0034419484436511993
+      },
+      "speedup": 1.0544158122650689
+    },
+    {
+      "shape": [
+        77,
+        1536,
+        512
+      ],
+      "zero_point": 128,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 0.00391552597284317,
+        "native_repack": 0.004175467416644096,
+        "native_cached": 0.003517439588904381
+      },
+      "speedup": 1.1131750450511038
+    },
+    {
+      "shape": [
+        77,
+        512,
+        2048
+      ],
+      "zero_point": 128,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 0.004691775888204575,
+        "native_repack": 0.004976604133844376,
+        "native_cached": 0.004512004554271698
+      },
+      "speedup": 1.0398428972689489
+    },
+    {
+      "shape": [
+        77,
+        2048,
+        512
+      ],
+      "zero_point": 128,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 0.004996143281459808,
+        "native_repack": 0.005366774275898933,
+        "native_cached": 0.004691183567047119
+      },
+      "speedup": 1.0650069881201956
+    }
+  ]
+}

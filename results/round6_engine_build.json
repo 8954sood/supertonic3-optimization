@@ -1,0 +1,17 @@
+{
+  "target": "x86_64-linux-gnu.2.28",
+  "cpu": "znver1",
+  "ort_api_version": 23,
+  "source_sha256": "5c6373764ded5cf6f1781ca525844eff1d97dca51ba71d294b6fdf1ae802a2bc",
+  "kernel": "Exact U8 x S8[-64,64] -> S32; persistent packing per constant weight",
+  "compiler_package": "ziglang",
+  "compiler_version": "0.17.0",
+  "library_sha256": "6fbe258550ceba0ac8704b5f96ac8ecbbd8e19e7e219bd5fac8e7497f1045f98",
+  "runtime_sha256": "593d4d71c95abbf3d29b675538922c6876e16e0794d9caf5b465356fe7ce2be7",
+  "weights_modified": false,
+  "steps": 8,
+  "threads": 1,
+  "memory_pattern_enabled": false,
+  "cpu_arena_enabled": true,
+  "prepacking_enabled": true
+}

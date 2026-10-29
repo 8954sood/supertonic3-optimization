@@ -1,0 +1,57 @@
+{
+  "note": "Isolated FP32 matrix multiplication, not TTS performance",
+  "rows": [
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "seconds": {
+        "ort_mlas": 0.076081283390522,
+        "numpy_blas": 0.08378035575151443
+      },
+      "blas_speedup": 0.9081040860720712,
+      "relative_rmse": 6.144801290020041e-08
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "seconds": {
+        "ort_mlas": 0.06816592812538147,
+        "numpy_blas": 0.07147705554962158
+      },
+      "blas_speedup": 0.9536756599893594,
+      "relative_rmse": 3.382019713171758e-07
+    },
+    {
+      "shape": [
+        77,
+        512,
+        1536
+      ],
+      "seconds": {
+        "ort_mlas": 0.0039487071335315704,
+        "numpy_blas": 0.004875153303146362
+      },
+      "blas_speedup": 0.8099657360483669,
+      "relative_rmse": 8.774888726748031e-08
+    },
+    {
+      "shape": [
+        77,
+        1536,
+        512
+      ],
+      "seconds": {
+        "ort_mlas": 0.003836207091808319,
+        "numpy_blas": 0.004892976954579353
+      },
+      "blas_speedup": 0.7840231269060035,
+      "relative_rmse": 3.4951517591252923e-07
+    }
+  ]
+}

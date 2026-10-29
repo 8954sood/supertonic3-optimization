@@ -1,14 +1,16 @@
 import argparse
-from runtime import Engine
 import json
 import platform
 import statistics
 import time
 from pathlib import Path
+
 import numpy as np
 import onnxruntime as ort
 import psutil
 import soundfile as sf
+
+from runtime import Engine
 
 TEXTS = {
     "ko_short": ("ko", "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다."),
@@ -38,6 +40,7 @@ def main():
     p.add_argument("--cases", nargs="+", choices=list(TEXTS), default=list(TEXTS))
     p.add_argument("--output", default="results/baseline.json")
     p.add_argument("--voice", default="M1")
+    p.add_argument("--audio-subtype", choices=["PCM_16", "FLOAT"], default="PCM_16")
     p.add_argument(
         "--affinity", type=int, help="Pin to this logical core on Linux/Windows"
     )
@@ -68,10 +71,13 @@ def main():
         "threads": 1,
         "affinity": a.affinity,
         "voice": a.voice,
+        "audio_subtype": a.audio_subtype,
         "variant": a.variant,
         "model": a.model,
         "low_memory": a.low_memory,
-        "backend": "native packed-int8 storage with FP32 BLAS"
+        "backend": "ORT CPU with exact AVX2 integer FFNs"
+        if engine.exact_int8_backend
+        else "native packed-int8 storage with FP32 BLAS"
         if engine.native_backend
         else (
             "numpy BLAS with packed int8 storage"
@@ -86,7 +92,11 @@ def main():
         "load_seconds": engine.load_seconds,
         "note": "Measured on this machine only. Apple M4 results do not predict Oracle Ampere A1 performance. Warm synthesis excludes model loading and file I/O. No CPU quota is emulated by this script.",
         "rows": [],
+        "complete": False,
     }
+    out = Path(a.output)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(report, ensure_ascii=False, indent=2))
     sample_dir = Path("samples") / Path(a.output).stem
     sample_dir.mkdir(parents=True, exist_ok=True)
     for name in a.cases:
@@ -117,16 +127,19 @@ def main():
             }
             report["rows"].append(row)
             sf.write(
-                str(sample_dir / f"{name}_{steps}steps.wav"), wav, engine.sample_rate
+                str(sample_dir / f"{name}_{steps}steps.wav"),
+                wav,
+                engine.sample_rate,
+                subtype=a.audio_subtype,
             )
+            out.write_text(json.dumps(report, ensure_ascii=False, indent=2))
             print(
                 f"{name} steps={steps}: {row['median_seconds']:.3f}s, {row['median_realtime_factor']:.1f}x realtime, CPU/wall={row['cpu_wall_ratio']:.2f}",
                 flush=True,
             )
     if a.profile:
         report["profiles"] = engine.finish_profiles()
-    out = Path(a.output)
-    out.parent.mkdir(parents=True, exist_ok=True)
+    report["complete"] = True
     out.write_text(json.dumps(report, ensure_ascii=False, indent=2))
 
 

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "publication_policy": "User reauthorized Git commits for successful optimizations and upload of existing models/reproduction assets; 2026-10-29",
+  "publication_policy": "User explicitly reauthorized commits AND GitHub pushes for verified optimizations, plus existing model/reproduction upload. F1200 selected; 2026-10-29.",
   "teacher_policy": {
     "repository": "Supertone/supertonic-3",
     "revision": "3cadd1ee6394adea1bd021217a0e650ede09a323",

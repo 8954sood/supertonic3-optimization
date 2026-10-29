@@ -1,0 +1,118 @@
+{
+  "note": "Exact integer arithmetic and synthetic throughput; includes repacking each call; no model changes",
+  "out_of_range_rejected": true,
+  "rows": [
+    {
+      "shape": [
+        1,
+        12,
+        8
+      ],
+      "zero_point": 0,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 3.194063901901245e-05,
+        "native": 1.4858320355415344e-05
+      },
+      "speedup": 2.1496803309514854
+    },
+    {
+      "shape": [
+        5,
+        144,
+        512
+      ],
+      "zero_point": 255,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 3.975629806518555e-05,
+        "native": 4.162825644016266e-05
+      },
+      "speedup": 0.9550315450355721
+    },
+    {
+      "shape": [
+        8,
+        512,
+        1536
+      ],
+      "zero_point": 127,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 0.00041101686656475067,
+        "native": 0.0005244724452495575
+      },
+      "speedup": 0.7836767599281184
+    },
+    {
+      "shape": [
+        15,
+        1536,
+        512
+      ],
+      "zero_point": 71,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 0.0006704274564981461,
+        "native": 0.0008804984390735626
+      },
+      "speedup": 0.7614181090469079
+    },
+    {
+      "shape": [
+        77,
+        512,
+        1536
+      ],
+      "zero_point": 128,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 0.0034634508192539215,
+        "native": 0.003437589854001999
+      },
+      "speedup": 1.0075229932453447
+    },
+    {
+      "shape": [
+        77,
+        1536,
+        512
+      ],
+      "zero_point": 128,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 0.003531787544488907,
+        "native": 0.003656383603811264
+      },
+      "speedup": 0.9659236905032385
+    },
+    {
+      "shape": [
+        77,
+        512,
+        2048
+      ],
+      "zero_point": 128,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 0.004536472260951996,
+        "native": 0.004667298868298531
+      },
+      "speedup": 0.9719695243355547
+    },
+    {
+      "shape": [
+        77,
+        2048,
+        512
+      ],
+      "zero_point": 128,
+      "bit_identical": true,
+      "seconds": {
+        "ort": 0.0047211311757564545,
+        "native": 0.004812132567167282
+      },
+      "speedup": 0.9810891761312394
+    }
+  ]
+}

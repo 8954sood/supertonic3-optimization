@@ -13,6 +13,7 @@ for _name in (
 import json
 import time
 from pathlib import Path
+
 import numpy as np
 import onnxruntime as ort
 from supertonic.core import UnicodeProcessor, get_latent_mask
@@ -27,6 +28,7 @@ def options(
     low_memory=False,
     numpy_backend=False,
     native_backend=False,
+    exact_int8_backend=False,
 ):
     opt = ort.SessionOptions()
     if numpy_backend:
@@ -37,6 +39,13 @@ def options(
         from native_ops import library_path
 
         opt.register_custom_ops_library(library_path())
+    if exact_int8_backend:
+        from exact_ops import library_path
+
+        opt.register_custom_ops_library(library_path())
+        # Variable utterance lengths should reuse arena blocks rather than keep
+        # separate large traced allocation patterns. Prepacking stays enabled.
+        opt.enable_mem_pattern = False
     opt.intra_op_num_threads = 1
     opt.inter_op_num_threads = 1
     opt.execution_mode = ort.ExecutionMode.ORT_SEQUENTIAL
@@ -79,6 +88,7 @@ class Engine:
         self.supported_steps = metadata.get("supported_steps")
         self.numpy_backend = metadata.get("backend") == "numpy"
         self.native_backend = metadata.get("backend") == "native-blas"
+        self.exact_int8_backend = metadata.get("backend") == "native-exact-int8"
         self.cfg = json.loads((self.root / "onnx/tts.json").read_text())
         self.processor = UnicodeProcessor(str(self.root / "onnx/unicode_indexer.json"))
         self.style = load_voice_style_from_json_file(
@@ -109,6 +119,7 @@ class Engine:
                     low_memory=low_memory,
                     numpy_backend=self.numpy_backend,
                     native_backend=self.native_backend,
+                    exact_int8_backend=self.exact_int8_backend,
                 ),
                 providers=["CPUExecutionProvider"],
             )
@@ -124,6 +135,7 @@ class Engine:
                     low_memory=low_memory,
                     numpy_backend=self.numpy_backend,
                     native_backend=self.native_backend,
+                    exact_int8_backend=self.exact_int8_backend,
                 ),
                 providers=["CPUExecutionProvider"],
             )
@@ -134,7 +146,9 @@ class Engine:
         if not isinstance(steps, int) or not 8 <= steps <= 50:
             raise ValueError("steps must be an integer from 8 to 50")
         if self.supported_steps and steps not in self.supported_steps:
-            raise ValueError(f"This model supports trained step counts: {self.supported_steps}")
+            raise ValueError(
+                f"This model supports trained step counts: {self.supported_steps}"
+            )
         if not text.strip():
             raise ValueError("text must not be empty")
         if not 0.7 <= speed <= 2.0:

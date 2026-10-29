@@ -1,0 +1,754 @@
+{
+  "note": "Profile overhead present; diagnostic only. Native EPYC1 core, fixed F1200 8 steps. Profiling allowed 460MB sampled RSS; regular timings use420MB.",
+  "parts": [
+    {
+      "part": "duration_predictor",
+      "total_microseconds": 27525,
+      "operators": [
+        {
+          "op": "ConstantOfShape",
+          "microseconds": 12433,
+          "fraction": 0.45169845594913716
+        },
+        {
+          "op": "MatMul",
+          "microseconds": 3607,
+          "fraction": 0.13104450499545867
+        },
+        {
+          "op": "LayerNormalization",
+          "microseconds": 2593,
+          "fraction": 0.09420526793823797
+        },
+        {
+          "op": "BiasGelu",
+          "microseconds": 961,
+          "fraction": 0.03491371480472298
+        },
+        {
+          "op": "FusedMatMul",
+          "microseconds": 961,
+          "fraction": 0.03491371480472298
+        },
+        {
+          "op": "Mul",
+          "microseconds": 927,
+          "fraction": 0.033678474114441415
+        },
+        {
+          "op": "Add",
+          "microseconds": 794,
+          "fraction": 0.028846503178928246
+        },
+        {
+          "op": "Transpose",
+          "microseconds": 611,
+          "fraction": 0.02219800181653043
+        },
+        {
+          "op": "Concat",
+          "microseconds": 602,
+          "fraction": 0.02187102633969119
+        },
+        {
+          "op": "Unsqueeze",
+          "microseconds": 600,
+          "fraction": 0.021798365122615803
+        },
+        {
+          "op": "Conv",
+          "microseconds": 574,
+          "fraction": 0.020853769300635785
+        },
+        {
+          "op": "Pad",
+          "microseconds": 556,
+          "fraction": 0.02019981834695731
+        },
+        {
+          "op": "Slice",
+          "microseconds": 529,
+          "fraction": 0.0192188919164396
+        },
+        {
+          "op": "Reshape",
+          "microseconds": 509,
+          "fraction": 0.01849227974568574
+        },
+        {
+          "op": "Gather",
+          "microseconds": 297,
+          "fraction": 0.010790190735694823
+        },
+        {
+          "op": "Sub",
+          "microseconds": 151,
+          "fraction": 0.005485921889191644
+        },
+        {
+          "op": "Where",
+          "microseconds": 138,
+          "fraction": 0.005013623978201635
+        },
+        {
+          "op": "Softmax",
+          "microseconds": 129,
+          "fraction": 0.004686648501362398
+        },
+        {
+          "op": "Shape",
+          "microseconds": 123,
+          "fraction": 0.00446866485013624
+        },
+        {
+          "op": "Squeeze",
+          "microseconds": 103,
+          "fraction": 0.00374205267938238
+        },
+        {
+          "op": "Clip",
+          "microseconds": 56,
+          "fraction": 0.0020345140781108085
+        },
+        {
+          "op": "Gemm",
+          "microseconds": 46,
+          "fraction": 0.0016712079927338782
+        },
+        {
+          "op": "Split",
+          "microseconds": 43,
+          "fraction": 0.0015622161671207994
+        },
+        {
+          "op": "Relu",
+          "microseconds": 42,
+          "fraction": 0.0015258855585831062
+        },
+        {
+          "op": "Equal",
+          "microseconds": 41,
+          "fraction": 0.0014895549500454134
+        },
+        {
+          "op": "PRelu",
+          "microseconds": 38,
+          "fraction": 0.0013805631244323342
+        },
+        {
+          "op": "Pow",
+          "microseconds": 28,
+          "fraction": 0.0010172570390554042
+        },
+        {
+          "op": "Expand",
+          "microseconds": 20,
+          "fraction": 0.0007266121707538601
+        },
+        {
+          "op": "Exp",
+          "microseconds": 13,
+          "fraction": 0.00047229791099000906
+        }
+      ],
+      "top_nodes": [
+        [
+          "/sentence_encoder/ConstantOfShape_1_kernel_time",
+          12433
+        ],
+        [
+          "/sentence_encoder/convnext/convnext.0/norm/norm/LayerNormalization_kernel_time",
+          2240
+        ],
+        [
+          "/sentence_encoder/convnext/convnext.0/pwconv2/Conv/linear/MatMul_kernel_time",
+          430
+        ],
+        [
+          "/sentence_encoder/convnext/convnext.1/pwconv1/Conv/linear/MatMul_kernel_time",
+          293
+        ],
+        [
+          "BiasGelu_token_79_kernel_time",
+          242
+        ],
+        [
+          "/sentence_encoder/attn_encoder/ffn_layers.0/conv_1/Conv/linear/MatMul_kernel_time",
+          198
+        ],
+        [
+          "/sentence_encoder/convnext/convnext.3/pwconv1/Conv/linear/MatMul_kernel_time",
+          194
+        ],
+        [
+          "/sentence_encoder/convnext/convnext.1/pwconv2/Conv/linear/MatMul_kernel_time",
+          191
+        ],
+        [
+          "/sentence_encoder/convnext/convnext.0/pwconv1/Conv/linear/MatMul_kernel_time",
+          189
+        ],
+        [
+          "/sentence_encoder/convnext/convnext.2/pwconv1/Conv/linear/MatMul_kernel_time",
+          176
+        ],
+        [
+          "/sentence_encoder/convnext/convnext.4/pwconv1/Conv/linear/MatMul_kernel_time",
+          175
+        ],
+        [
+          "/sentence_encoder/convnext/convnext.5/pwconv1/Conv/linear/MatMul_kernel_time",
+          175
+        ]
+      ]
+    },
+    {
+      "part": "text_encoder",
+      "total_microseconds": 200400,
+      "operators": [
+        {
+          "op": "MatMul",
+          "microseconds": 173833,
+          "fraction": 0.8674301397205589
+        },
+        {
+          "op": "FusedMatMul",
+          "microseconds": 6937,
+          "fraction": 0.034615768463073855
+        },
+        {
+          "op": "BiasGelu",
+          "microseconds": 2957,
+          "fraction": 0.014755489021956088
+        },
+        {
+          "op": "Add",
+          "microseconds": 2263,
+          "fraction": 0.011292415169660678
+        },
+        {
+          "op": "Mul",
+          "microseconds": 1805,
+          "fraction": 0.009006986027944112
+        },
+        {
+          "op": "Conv",
+          "microseconds": 1510,
+          "fraction": 0.0075349301397205585
+        },
+        {
+          "op": "Pad",
+          "microseconds": 1335,
+          "fraction": 0.006661676646706587
+        },
+        {
+          "op": "Unsqueeze",
+          "microseconds": 1288,
+          "fraction": 0.006427145708582834
+        },
+        {
+          "op": "LayerNormalization",
+          "microseconds": 1226,
+          "fraction": 0.006117764471057884
+        },
+        {
+          "op": "Concat",
+          "microseconds": 1193,
+          "fraction": 0.005953093812375249
+        },
+        {
+          "op": "Slice",
+          "microseconds": 1103,
+          "fraction": 0.005503992015968064
+        },
+        {
+          "op": "Transpose",
+          "microseconds": 1087,
+          "fraction": 0.0054241516966067865
+        },
+        {
+          "op": "Reshape",
+          "microseconds": 854,
+          "fraction": 0.004261477045908184
+        },
+        {
+          "op": "Gather",
+          "microseconds": 574,
+          "fraction": 0.0028642714570858282
+        },
+        {
+          "op": "Softmax",
+          "microseconds": 571,
+          "fraction": 0.002849301397205589
+        },
+        {
+          "op": "Where",
+          "microseconds": 373,
+          "fraction": 0.0018612774451097804
+        },
+        {
+          "op": "Sub",
+          "microseconds": 334,
+          "fraction": 0.0016666666666666668
+        },
+        {
+          "op": "Split",
+          "microseconds": 287,
+          "fraction": 0.0014321357285429141
+        },
+        {
+          "op": "Squeeze",
+          "microseconds": 251,
+          "fraction": 0.00125249500998004
+        },
+        {
+          "op": "Shape",
+          "microseconds": 212,
+          "fraction": 0.0010578842315369262
+        },
+        {
+          "op": "Relu",
+          "microseconds": 190,
+          "fraction": 0.0009481037924151697
+        },
+        {
+          "op": "Clip",
+          "microseconds": 107,
+          "fraction": 0.0005339321357285429
+        },
+        {
+          "op": "Pow",
+          "microseconds": 63,
+          "fraction": 0.00031437125748502996
+        },
+        {
+          "op": "Equal",
+          "microseconds": 47,
+          "fraction": 0.0002345309381237525
+        }
+      ],
+      "top_nodes": [
+        [
+          "/text_encoder/convnext/convnext.3/pwconv1/Conv/linear/MatMul_kernel_time",
+          44624
+        ],
+        [
+          "/text_encoder/convnext/convnext.4/pwconv1/Conv/linear/MatMul_kernel_time",
+          38603
+        ],
+        [
+          "/text_encoder/convnext/convnext.0/pwconv2/Conv/linear/MatMul_kernel_time",
+          21706
+        ],
+        [
+          "/text_encoder/attn_encoder/attn_layers.3/conv_q/Conv/linear/MatMul_kernel_time",
+          13037
+        ],
+        [
+          "/text_encoder/convnext/convnext.4/pwconv2/Conv/linear/MatMul_kernel_time",
+          2719
+        ],
+        [
+          "/text_encoder/convnext/convnext.5/pwconv2/Conv/linear/MatMul_kernel_time",
+          2613
+        ],
+        [
+          "/text_encoder/convnext/convnext.1/pwconv2/Conv/linear/MatMul_kernel_time",
+          2611
+        ],
+        [
+          "/text_encoder/attn_encoder/ffn_layers.1/conv_1/Conv/linear/MatMul_kernel_time",
+          2608
+        ],
+        [
+          "/text_encoder/attn_encoder/ffn_layers.2/conv_2/Conv/linear/MatMul_kernel_time",
+          2606
+        ],
+        [
+          "/text_encoder/convnext/convnext.3/pwconv2/Conv/linear/MatMul_kernel_time",
+          2599
+        ],
+        [
+          "/text_encoder/attn_encoder/ffn_layers.0/conv_2/Conv/linear/MatMul_kernel_time",
+          2598
+        ],
+        [
+          "/text_encoder/attn_encoder/ffn_layers.1/conv_2/Conv/linear/MatMul_kernel_time",
+          2590
+        ]
+      ]
+    },
+    {
+      "part": "vector_estimator",
+      "total_microseconds": 8446492,
+      "operators": [
+        {
+          "op": "DynamicQuantizeMatMul",
+          "microseconds": 7195080,
+          "fraction": 0.8518423980038103
+        },
+        {
+          "op": "Gelu",
+          "microseconds": 263000,
+          "fraction": 0.0311371868936832
+        },
+        {
+          "op": "Mul",
+          "microseconds": 259234,
+          "fraction": 0.030691321320140953
+        },
+        {
+          "op": "MatMulIntegerToFloat",
+          "microseconds": 215865,
+          "fraction": 0.025556763683668913
+        },
+        {
+          "op": "Conv",
+          "microseconds": 140386,
+          "fraction": 0.01662062782987304
+        },
+        {
+          "op": "MatMul",
+          "microseconds": 70167,
+          "fraction": 0.008307235713950834
+        },
+        {
+          "op": "Slice",
+          "microseconds": 69981,
+          "fraction": 0.00828521473766861
+        },
+        {
+          "op": "Pad",
+          "microseconds": 69845,
+          "fraction": 0.008269113378666551
+        },
+        {
+          "op": "Transpose",
+          "microseconds": 36164,
+          "fraction": 0.004281540786399845
+        },
+        {
+          "op": "LayerNormalization",
+          "microseconds": 32292,
+          "fraction": 0.003823125624223642
+        },
+        {
+          "op": "FusedMatMul",
+          "microseconds": 22711,
+          "fraction": 0.0026888085609978675
+        },
+        {
+          "op": "Add",
+          "microseconds": 18209,
+          "fraction": 0.002155806221091549
+        },
+        {
+          "op": "Where",
+          "microseconds": 11800,
+          "fraction": 0.0013970296781196264
+        },
+        {
+          "op": "Concat",
+          "microseconds": 9467,
+          "fraction": 0.0011208203358269919
+        },
+        {
+          "op": "Softmax",
+          "microseconds": 9133,
+          "fraction": 0.0010812772923954703
+        },
+        {
+          "op": "Split",
+          "microseconds": 4910,
+          "fraction": 0.0005813064169124887
+        },
+        {
+          "op": "Unsqueeze",
+          "microseconds": 3939,
+          "fraction": 0.0004663474493316278
+        },
+        {
+          "op": "Reshape",
+          "microseconds": 2767,
+          "fraction": 0.0003275916202844921
+        },
+        {
+          "op": "Shape",
+          "microseconds": 2374,
+          "fraction": 0.0002810634284623723
+        },
+        {
+          "op": "Sub",
+          "microseconds": 1759,
+          "fraction": 0.00020825213591630704
+        },
+        {
+          "op": "Tanh",
+          "microseconds": 1630,
+          "fraction": 0.00019297952333347383
+        },
+        {
+          "op": "DynamicQuantizeLinear",
+          "microseconds": 1181,
+          "fraction": 0.000139821360157566
+        },
+        {
+          "op": "Gather",
+          "microseconds": 705,
+          "fraction": 8.346660365036752e-05
+        },
+        {
+          "op": "Cos",
+          "microseconds": 684,
+          "fraction": 8.098036439269699e-05
+        },
+        {
+          "op": "Sin",
+          "microseconds": 623,
+          "fraction": 7.375843131089215e-05
+        },
+        {
+          "op": "Squeeze",
+          "microseconds": 572,
+          "fraction": 6.772042168512087e-05
+        },
+        {
+          "op": "Div",
+          "microseconds": 568,
+          "fraction": 6.724685230270744e-05
+        },
+        {
+          "op": "ReduceSum",
+          "microseconds": 341,
+          "fraction": 4.0371789850745135e-05
+        },
+        {
+          "op": "Equal",
+          "microseconds": 315,
+          "fraction": 3.729358886505783e-05
+        },
+        {
+          "op": "Cast",
+          "microseconds": 238,
+          "fraction": 2.8177378253599244e-05
+        },
+        {
+          "op": "Softplus",
+          "microseconds": 226,
+          "fraction": 2.6756670106358948e-05
+        },
+        {
+          "op": "Tile",
+          "microseconds": 204,
+          "fraction": 2.4152038503085067e-05
+        },
+        {
+          "op": "Reciprocal",
+          "microseconds": 122,
+          "fraction": 1.4443866163609697e-05
+        }
+      ],
+      "top_nodes": [
+        [
+          "/vector_estimator/vector_field/main_blocks.18/convnext.2/pwconv2/Conv/linear/MatMul_quant_kernel_time",
+          321284
+        ],
+        [
+          "/vector_estimator/vector_field/main_blocks.12/convnext.1/pwconv2/Conv/linear/MatMul_quant_kernel_time",
+          250262
+        ],
+        [
+          "/vector_estimator/vector_field/main_blocks.10/convnext.0/pwconv2/Conv/linear/MatMul_quant_kernel_time",
+          238854
+        ],
+        [
+          "/vector_estimator/vector_field/last_convnext/convnext.1/pwconv2/Conv/linear/MatMul_quant_kernel_time",
+          227170
+        ],
+        [
+          "/vector_estimator/vector_field/main_blocks.14/convnext.0/pwconv1/Conv/linear/MatMul_quant_kernel_time",
+          223850
+        ],
+        [
+          "/vector_estimator/vector_field/main_blocks.4/convnext.0/pwconv2/Conv/linear/MatMul_quant_kernel_time",
+          218954
+        ],
+        [
+          "/vector_estimator/vector_field/main_blocks.18/convnext.3/pwconv1/Conv/linear/MatMul_quant_kernel_time",
+          206289
+        ],
+        [
+          "/vector_estimator/vector_field/main_blocks.4/convnext.0/pwconv1/Conv/linear/MatMul_quant_kernel_time",
+          191336
+        ],
+        [
+          "/vector_estimator/vector_field/main_blocks.12/convnext.0/pwconv1/Conv/linear/MatMul_quant_kernel_time",
+          177521
+        ],
+        [
+          "/vector_estimator/vector_field/main_blocks.6/convnext.0/pwconv1/Conv/linear/MatMul_quant_kernel_time",
+          174751
+        ],
+        [
+          "/vector_estimator/vector_field/last_convnext/convnext.0/pwconv2/Conv/linear/MatMul_quant_kernel_time",
+          174575
+        ],
+        [
+          "/vector_estimator/vector_field/main_blocks.12/convnext.2/pwconv2/Conv/linear/MatMul_quant_kernel_time",
+          171456
+        ]
+      ]
+    },
+    {
+      "part": "vocoder",
+      "total_microseconds": 3421501,
+      "operators": [
+        {
+          "op": "MatMul",
+          "microseconds": 2588837,
+          "fraction": 0.7566378031162346
+        },
+        {
+          "op": "Conv",
+          "microseconds": 435677,
+          "fraction": 0.12733504973402024
+        },
+        {
+          "op": "BiasGelu",
+          "microseconds": 202245,
+          "fraction": 0.05911002218032378
+        },
+        {
+          "op": "FusedMatMul",
+          "microseconds": 166225,
+          "fraction": 0.048582478859424565
+        },
+        {
+          "op": "Transpose",
+          "microseconds": 8153,
+          "fraction": 0.002382872312473385
+        },
+        {
+          "op": "LayerNormalization",
+          "microseconds": 5309,
+          "fraction": 0.0015516581757538577
+        },
+        {
+          "op": "PRelu",
+          "microseconds": 5192,
+          "fraction": 0.0015174626574710923
+        },
+        {
+          "op": "Add",
+          "microseconds": 4610,
+          "fraction": 0.001347361874218362
+        },
+        {
+          "op": "Pad",
+          "microseconds": 2771,
+          "fraction": 0.0008098784714661782
+        },
+        {
+          "op": "Mul",
+          "microseconds": 1739,
+          "fraction": 0.0005082564640489656
+        },
+        {
+          "op": "BatchNormalization",
+          "microseconds": 261,
+          "fraction": 7.628231001539968e-05
+        },
+        {
+          "op": "Reshape",
+          "microseconds": 247,
+          "fraction": 7.219053859694912e-05
+        },
+        {
+          "op": "Div",
+          "microseconds": 91,
+          "fraction": 2.6596514219928622e-05
+        },
+        {
+          "op": "Slice",
+          "microseconds": 33,
+          "fraction": 9.644889772062029e-06
+        },
+        {
+          "op": "Unsqueeze",
+          "microseconds": 29,
+          "fraction": 8.475812223933298e-06
+        },
+        {
+          "op": "Concat",
+          "microseconds": 27,
+          "fraction": 7.891273449868932e-06
+        },
+        {
+          "op": "Gather",
+          "microseconds": 22,
+          "fraction": 6.429926514708018e-06
+        },
+        {
+          "op": "Shape",
+          "microseconds": 17,
+          "fraction": 4.968579579547105e-06
+        },
+        {
+          "op": "Squeeze",
+          "microseconds": 16,
+          "fraction": 4.6763101925149225e-06
+        }
+      ],
+      "top_nodes": [
+        [
+          "/decoder/head/layer1/net/Conv_kernel_time",
+          409827
+        ],
+        [
+          "/decoder/convnext.9/pwconv2/Conv/linear/MatMul_kernel_time",
+          186372
+        ],
+        [
+          "/decoder/convnext.6/pwconv1/Conv/linear/MatMul_kernel_time",
+          173695
+        ],
+        [
+          "/decoder/convnext.4/pwconv2/Conv/linear/MatMul_kernel_time",
+          168955
+        ],
+        [
+          "/decoder/convnext.1/pwconv1/Conv/linear/MatMul_kernel_time",
+          166915
+        ],
+        [
+          "/decoder/head/layer2/Conv/linear/MatMul/MatmulTransposeFusion/_kernel_time",
+          166225
+        ],
+        [
+          "/decoder/convnext.5/pwconv1/Conv/linear/MatMul_kernel_time",
+          163676
+        ],
+        [
+          "/decoder/convnext.3/pwconv2/Conv/linear/MatMul_kernel_time",
+          162890
+        ],
+        [
+          "/decoder/convnext.1/pwconv2/Conv/linear/MatMul_kernel_time",
+          162328
+        ],
+        [
+          "/decoder/convnext.6/pwconv2/Conv/linear/MatMul_kernel_time",
+          155566
+        ],
+        [
+          "/decoder/convnext.8/pwconv1/Conv/linear/MatMul_kernel_time",
+          151082
+        ],
+        [
+          "/decoder/convnext.3/pwconv1/Conv/linear/MatMul_kernel_time",
+          150513
+        ]
+      ]
+    }
+  ]
+}

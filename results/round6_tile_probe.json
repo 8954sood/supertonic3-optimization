@@ -1,0 +1,467 @@
+{
+  "note": "Synthetic GEMM row tiling, not TTS",
+  "rows": [
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "backend": "ort",
+      "tile": 462,
+      "seconds": 0.08271371014416218,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "backend": "ort",
+      "tile": 32,
+      "seconds": 0.08519390225410461,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "backend": "ort",
+      "tile": 64,
+      "seconds": 0.07747812382876873,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "backend": "ort",
+      "tile": 96,
+      "seconds": 0.07853455282747746,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "backend": "ort",
+      "tile": 128,
+      "seconds": 0.08150142431259155,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "backend": "ort",
+      "tile": 192,
+      "seconds": 0.08086133003234863,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "backend": "ort",
+      "tile": 256,
+      "seconds": 0.07915734127163887,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "backend": "numpy",
+      "tile": 462,
+      "seconds": 0.08414171449840069,
+      "relative_rmse": 6.092637505616949e-08
+    },
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "backend": "numpy",
+      "tile": 32,
+      "seconds": 0.08169916458427906,
+      "relative_rmse": 7.831927462120802e-08
+    },
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "backend": "numpy",
+      "tile": 64,
+      "seconds": 0.05600583180785179,
+      "relative_rmse": 9.387782995418092e-08
+    },
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "backend": "numpy",
+      "tile": 96,
+      "seconds": 0.08406634256243706,
+      "relative_rmse": 6.092637505616949e-08
+    },
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "backend": "numpy",
+      "tile": 128,
+      "seconds": 0.08331829681992531,
+      "relative_rmse": 6.670953922593981e-08
+    },
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "backend": "numpy",
+      "tile": 192,
+      "seconds": 0.0803521890193224,
+      "relative_rmse": 6.092637505616949e-08
+    },
+    {
+      "shape": [
+        462,
+        512,
+        2048
+      ],
+      "backend": "numpy",
+      "tile": 256,
+      "seconds": 0.08279109746217728,
+      "relative_rmse": 6.053424783658556e-08
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "backend": "ort",
+      "tile": 462,
+      "seconds": 0.08090925961732864,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "backend": "ort",
+      "tile": 32,
+      "seconds": 0.07675543613731861,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "backend": "ort",
+      "tile": 64,
+      "seconds": 0.08424648083746433,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "backend": "ort",
+      "tile": 96,
+      "seconds": 0.08353308960795403,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "backend": "ort",
+      "tile": 128,
+      "seconds": 0.07430055551230907,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "backend": "ort",
+      "tile": 192,
+      "seconds": 0.08166066370904446,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "backend": "ort",
+      "tile": 256,
+      "seconds": 0.07976616360247135,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "backend": "numpy",
+      "tile": 462,
+      "seconds": 0.07854202017188072,
+      "relative_rmse": 3.382772604254569e-07
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "backend": "numpy",
+      "tile": 32,
+      "seconds": 0.08814123272895813,
+      "relative_rmse": 3.4022036743408535e-07
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "backend": "numpy",
+      "tile": 64,
+      "seconds": 0.08348632045090199,
+      "relative_rmse": 3.3899681284310645e-07
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "backend": "numpy",
+      "tile": 96,
+      "seconds": 0.08563511073589325,
+      "relative_rmse": 3.382772604254569e-07
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "backend": "numpy",
+      "tile": 128,
+      "seconds": 0.08290635980665684,
+      "relative_rmse": 3.386701621366228e-07
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "backend": "numpy",
+      "tile": 192,
+      "seconds": 0.0704730786383152,
+      "relative_rmse": 3.382772604254569e-07
+    },
+    {
+      "shape": [
+        462,
+        2048,
+        512
+      ],
+      "backend": "numpy",
+      "tile": 256,
+      "seconds": 0.08083200454711914,
+      "relative_rmse": 3.383061084605288e-07
+    },
+    {
+      "shape": [
+        1536,
+        512,
+        2048
+      ],
+      "backend": "ort",
+      "tile": 1536,
+      "seconds": 0.22118056379258633,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        1536,
+        512,
+        2048
+      ],
+      "backend": "ort",
+      "tile": 32,
+      "seconds": 0.2197001464664936,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        1536,
+        512,
+        2048
+      ],
+      "backend": "ort",
+      "tile": 64,
+      "seconds": 0.20892922207713127,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        1536,
+        512,
+        2048
+      ],
+      "backend": "ort",
+      "tile": 96,
+      "seconds": 0.20760290324687958,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        1536,
+        512,
+        2048
+      ],
+      "backend": "ort",
+      "tile": 128,
+      "seconds": 0.2047586515545845,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        1536,
+        512,
+        2048
+      ],
+      "backend": "ort",
+      "tile": 192,
+      "seconds": 0.20378336682915688,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        1536,
+        512,
+        2048
+      ],
+      "backend": "ort",
+      "tile": 256,
+      "seconds": 0.21058331988751888,
+      "relative_rmse": 0.0
+    },
+    {
+      "shape": [
+        1536,
+        512,
+        2048
+      ],
+      "backend": "numpy",
+      "tile": 1536,
+      "seconds": 0.21721450798213482,
+      "relative_rmse": 5.363090949117577e-08
+    },
+    {
+      "shape": [
+        1536,
+        512,
+        2048
+      ],
+      "backend": "numpy",
+      "tile": 32,
+      "seconds": 0.2759769335389137,
+      "relative_rmse": 7.853892469711354e-08
+    },
+    {
+      "shape": [
+        1536,
+        512,
+        2048
+      ],
+      "backend": "numpy",
+      "tile": 64,
+      "seconds": 0.26787309162318707,
+      "relative_rmse": 9.604196549162225e-08
+    },
+    {
+      "shape": [
+        1536,
+        512,
+        2048
+      ],
+      "backend": "numpy",
+      "tile": 96,
+      "seconds": 0.21882195584475994,
+      "relative_rmse": 5.363090949117577e-08
+    },
+    {
+      "shape": [
+        1536,
+        512,
+        2048
+      ],
+      "backend": "numpy",
+      "tile": 128,
+      "seconds": 0.21522278897464275,
+      "relative_rmse": 6.054338541616744e-08
+    },
+    {
+      "shape": [
+        1536,
+        512,
+        2048
+      ],
+      "backend": "numpy",
+      "tile": 192,
+      "seconds": 0.21583469584584236,
+      "relative_rmse": 5.363090949117577e-08
+    },
+    {
+      "shape": [
+        1536,
+        512,
+        2048
+      ],
+      "backend": "numpy",
+      "tile": 256,
+      "seconds": 0.21508218348026276,
+      "relative_rmse": 6.660167883865142e-08
+    }
+  ]
+}

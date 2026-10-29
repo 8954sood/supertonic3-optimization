@@ -1,0 +1,227 @@
+{
+  "machine": "Linux-6.17.0-1011-oracle-x86_64-with-glibc2.39",
+  "processor": "x86_64",
+  "python": "3.12.3",
+  "onnxruntime": "1.31.1",
+  "numpy": "2.5.4",
+  "providers": [
+    "CPUExecutionProvider"
+  ],
+  "threads": 1,
+  "affinity": 0,
+  "voice": "M1",
+  "audio_subtype": "FLOAT",
+  "variant": null,
+  "model": "models/round6-F1200",
+  "low_memory": false,
+  "backend": "ONNX Runtime kernels",
+  "cpu_count": 2,
+  "cpu_affinity": [
+    0
+  ],
+  "cpu_info": "processor\t: 0\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 1\nmodel name\t: AMD EPYC 7551 32-Core Processor\nstepping\t: 2\nmicrocode\t: 0x8001279\ncpu MHz\t\t: 1996.244\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 1\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat npt nrip_save vgif overflow_recov succor arch_capabilities\nbugs\t\t: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso div0 ibpb_no_ret spectre_v2_user\nbogomips\t: 3992.48\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 1\nmodel name\t: AMD EPYC 7551 32-Core Processor\nstepping\t: 2\nmicrocode\t: 0x8001279\ncpu MHz\t\t: 1996.244\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 1\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat npt nrip_save vgif overflow_recov succor arch_capabilities\nbugs\t\t: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso div0 ibpb_no_ret spectre_v2_user\nbogomips\t: 3992.48\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\n",
+  "load_seconds": 5.263105673715472,
+  "note": "Measured on this machine only. Apple M4 results do not predict Oracle Ampere A1 performance. Warm synthesis excludes model loading and file I/O. No CPU quota is emulated by this script.",
+  "rows": [
+    {
+      "case": "ko_short",
+      "lang": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 5.792450247332454,
+          "audio_seconds": 5.320022675736961,
+          "rtf": 1.0888017966070134,
+          "realtime_factor": 0.9184408063214604,
+          "stages": {
+            "duration_predictor": 0.003831125795841217,
+            "text_encoder": 0.09516985714435577,
+            "vector_estimator": 3.728468431159854,
+            "vocoder": 1.9634525515139103
+          }
+        },
+        {
+          "seconds": 5.804195625707507,
+          "audio_seconds": 5.320022675736961,
+          "rtf": 1.0910095650867644,
+          "realtime_factor": 0.916582248222978,
+          "stages": {
+            "duration_predictor": 0.0038345418870449066,
+            "text_encoder": 0.09402812644839287,
+            "vector_estimator": 4.012640215456486,
+            "vocoder": 1.6920999381691217
+          }
+        },
+        {
+          "seconds": 5.520648121833801,
+          "audio_seconds": 5.320022675736961,
+          "rtf": 1.037711389278815,
+          "realtime_factor": 0.963659077400101,
+          "stages": {
+            "duration_predictor": 0.004097873345017433,
+            "text_encoder": 0.09223005920648575,
+            "vector_estimator": 3.731157921254635,
+            "vocoder": 1.6915774550288916
+          }
+        }
+      ],
+      "median_seconds": 5.792450247332454,
+      "median_rtf": 1.0888017966070134,
+      "median_realtime_factor": 0.9184408063214604,
+      "cpu_wall_ratio": 0.9995030301006508,
+      "rss_mb": 398.082048,
+      "peak": 0.4683491587638855
+    },
+    {
+      "case": "en_short",
+      "lang": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 5.203180780634284,
+          "audio_seconds": 4.933650793650794,
+          "rtf": 1.0546309413163886,
+          "realtime_factor": 0.9481989962780741,
+          "stages": {
+            "duration_predictor": 0.004597436636686325,
+            "text_encoder": 0.09024198539555073,
+            "vector_estimator": 3.525859924033284,
+            "vocoder": 1.5810698177665472
+          }
+        },
+        {
+          "seconds": 5.189749324694276,
+          "audio_seconds": 4.933650793650794,
+          "rtf": 1.0519085240838406,
+          "realtime_factor": 0.9506530055652411,
+          "stages": {
+            "duration_predictor": 0.00433778390288353,
+            "text_encoder": 0.09519917331635952,
+            "vector_estimator": 3.5224144738167524,
+            "vocoder": 1.5663808174431324
+          }
+        },
+        {
+          "seconds": 5.1220365315675735,
+          "audio_seconds": 4.933650793650794,
+          "rtf": 1.0381838410937427,
+          "realtime_factor": 0.9632205399637934,
+          "stages": {
+            "duration_predictor": 0.003904363140463829,
+            "text_encoder": 0.08922377973794937,
+            "vector_estimator": 3.510220153257251,
+            "vocoder": 1.5173295922577381
+          }
+        }
+      ],
+      "median_seconds": 5.189749324694276,
+      "median_rtf": 1.0519085240838406,
+      "median_realtime_factor": 0.9506530055652411,
+      "cpu_wall_ratio": 0.9998577477510726,
+      "rss_mb": 398.303232,
+      "peak": 0.4468926191329956
+    },
+    {
+      "case": "ko_long",
+      "lang": "ko",
+      "text": "오늘은 인공지능 음성 합성의 속도를 측정합니다. 하나의 CPU 스레드만 사용하면서도 자연스럽고 정확한 한국어를 읽는 것이 목표입니다. 다양한 문장 길이와 추론 단계를 비교하여 실제 사용에 적합한 설정을 찾겠습니다.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 19.15442202426493,
+          "audio_seconds": 17.616417233560092,
+          "rtf": 1.0873051977773818,
+          "realtime_factor": 0.9197049752398435,
+          "stages": {
+            "duration_predictor": 0.17974304966628551,
+            "text_encoder": 0.3202765416353941,
+            "vector_estimator": 12.411776777356863,
+            "vocoder": 6.099774418398738
+          }
+        },
+        {
+          "seconds": 18.78703667037189,
+          "audio_seconds": 17.616417233560092,
+          "rtf": 1.066450483165312,
+          "realtime_factor": 0.9376900435469994,
+          "stages": {
+            "duration_predictor": 0.06326061300933361,
+            "text_encoder": 0.3302137479186058,
+            "vector_estimator": 12.702289005741477,
+            "vocoder": 5.688435409218073
+          }
+        },
+        {
+          "seconds": 18.52253048121929,
+          "audio_seconds": 17.616417233560092,
+          "rtf": 1.0514357281418727,
+          "realtime_factor": 0.9510804828434245,
+          "stages": {
+            "duration_predictor": 0.017014434561133385,
+            "text_encoder": 0.3681332264095545,
+            "vector_estimator": 12.430965358391404,
+            "vocoder": 5.703535219654441
+          }
+        }
+      ],
+      "median_seconds": 18.78703667037189,
+      "median_rtf": 1.066450483165312,
+      "median_realtime_factor": 0.9376900435469994,
+      "cpu_wall_ratio": 0.9940609194151749,
+      "rss_mb": 449.466368,
+      "peak": 0.396421879529953
+    },
+    {
+      "case": "en_long",
+      "lang": "en",
+      "text": "The morning sunlight came through the window as she opened her book. On an old computer, every unnecessary calculation matters. We measure the time spent preparing the text, generating the speech, and converting it into audio so that the results can be reproduced.",
+      "steps": 8,
+      "runs": [
+        {
+          "seconds": 18.099535821005702,
+          "audio_seconds": 16.909297052154194,
+          "rtf": 1.0703896066868064,
+          "realtime_factor": 0.9342392655467906,
+          "stages": {
+            "duration_predictor": 0.016792884096503258,
+            "text_encoder": 0.3669989611953497,
+            "vector_estimator": 11.992502382025123,
+            "vocoder": 5.718298755586147
+          }
+        },
+        {
+          "seconds": 19.00978633761406,
+          "audio_seconds": 16.909297052154194,
+          "rtf": 1.1242209702142685,
+          "realtime_factor": 0.8895048451279174,
+          "stages": {
+            "duration_predictor": 0.0662273783236742,
+            "text_encoder": 0.3284286167472601,
+            "vector_estimator": 12.571829423308372,
+            "vocoder": 6.038957254961133
+          }
+        },
+        {
+          "seconds": 18.0569519829005,
+          "audio_seconds": 16.909297052154194,
+          "rtf": 1.0678712383611535,
+          "realtime_factor": 0.9364424886418756,
+          "stages": {
+            "duration_predictor": 0.06429490447044373,
+            "text_encoder": 0.3284259606152773,
+            "vector_estimator": 12.15905012562871,
+            "vocoder": 5.5022809356451035
+          }
+        }
+      ],
+      "median_seconds": 18.099535821005702,
+      "median_rtf": 1.0703896066868064,
+      "median_realtime_factor": 0.9342392655467906,
+      "cpu_wall_ratio": 0.9967656110858144,
+      "rss_mb": 448.704512,
+      "peak": 0.49951499700546265
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-29",
+  "selected_model": "F1200",
+  "weights_frozen": true,
+  "actual_steps": 8,
+  "threads": 1,
+  "teacher": "Original pinned FP32 CFG4 50 steps; no new training",
+  "publication_policy": "User authorized verified commits and GitHub pushes; F1200/E400 and required original50 reproduction assets published",
+  "engine_v1_status": "Verified: six float32 waveform cases bit-identical, full4-case guard passed, short three-pair measurements retained",
+  "summary": "results/round6_summary.json",
+  "engine_v2_status": "Safe bounded integer partial-accumulation probe only; not selected yet",
+  "next": "Inspect any existing guard/results before rerunning; benchmark only one process at a time. Keep F1200 weights, original quantization and eight actual steps. ARM remains unmeasured."
+}

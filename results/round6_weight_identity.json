@@ -1,0 +1,18 @@
+{
+  "source_vector_sha256": "7c81ab7f0ddcc4266743701599a8708d2edd1be04285770f996e84a8bb5f4447",
+  "rows": [
+    {
+      "engine": "round6-F-exact",
+      "initializer_copies_verified": 628,
+      "unique_initializers_verified": 628,
+      "weights_bit_identical_to_F1200": true
+    },
+    {
+      "engine": "round6-F-exact-cached",
+      "initializer_copies_verified": 636,
+      "unique_initializers_verified": 628,
+      "weights_bit_identical_to_F1200": true
+    }
+  ],
+  "note": "ONNX graph serialization changes, all copied tensor initializers are byte-identical. Eight iterations unchanged."
+}
