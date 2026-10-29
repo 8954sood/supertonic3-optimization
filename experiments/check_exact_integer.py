@@ -21,14 +21,23 @@ def main():
         psutil.Process().cpu_affinity([0])
     rng = np.random.RandomState(619)
     rows = []
-    for shape, k, n, zero in [
-        ([1, 1], 12, 8, 0),
-        ([1, 5], 144, 512, 255),
-        ([2, 4], 512, 1536, 127),
-        ([1, 15], 1536, 512, 71),
+    for shape, k, n, zero, pattern in [
+        ([1, 1], 12, 8, 0, "random64"),
+        ([1, 5], 144, 512, 255, "random64"),
+        ([2, 4], 512, 1536, 127, "random64"),
+        ([1, 15], 1536, 512, 71, "random64"),
+        ([1, 8], 8, 8, 0, "positive32_safe_boundary"),
+        ([1, 8], 16, 16, 0, "positive64_requires_fallback"),
+        ([1, 8], 8, 8, 255, "negative32_safe_boundary"),
+        ([1, 17], 512, 16, 128, "random32_all_safe"),
     ]:
         x = rng.randint(0, 256, (*shape, k), dtype=np.uint8)
-        weights = rng.randint(-64, 65, (k, n)).astype(np.int8)
+        limit = 32 if pattern == "random32_all_safe" else 64
+        weights = rng.randint(-limit, limit + 1, (k, n)).astype(np.int8)
+        if pattern.startswith(("positive", "negative")):
+            value = -32 if pattern.startswith("negative") else 64 if "64" in pattern else 32
+            weights.fill(value)
+            x.fill(255)
         initializers = [
             numpy_helper.from_array(weights, "w"),
             numpy_helper.from_array(np.array(zero, np.uint8), "az"),
@@ -64,7 +73,7 @@ def main():
             del session
         np.testing.assert_array_equal(*outputs)
         rows.append({
-            "shape": [*shape, k, n], "zero_point": zero,
+            "shape": [*shape, k, n], "zero_point": zero, "weight_pattern": pattern,
             "s32_bit_identical": True, "persistent_cache_repeat_identical": True,
         })
     destination = Path(args.output)

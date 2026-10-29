@@ -64,3 +64,29 @@ M1의4문장(짧고 긴 KO/EN) 및 F1의짧은 KO/EN, 총6개 실제 서버 floa
 - 파형 비교: `experiments/check_engine_waves.py`; 수치 집계: `experiments/summarize_round6.py`.
 - 표준모델/초기·최종 checkpoint와 original50 data는 [F1200 공개 기록](PUBLICATION_F1200.md)에 고정 revision을 남겼다. 공개 weights를 바꾸지 않고 native 패키지는 내려받은F에서 재생성한다.
 - 다음 실험은 정수16bit 부분합이 수학적으로 안전한 block에서만 widening을 합치고, 나머지는 기존 정확한 경로로 처리하는 방법이다. 아직 후보이며 실제 TTS 검증 전에 선택하지 않는다.
+
+
+## 엔진 v2 확정 — 정확한 부분합 결합
+
+v1 소스는 `63447b1`에 보존했다. v2는 S8 가중치의 각8×8 block에서 두16bit 부분합을 합쳐도 모든 U8 입력에 안전한지 packing 시 계산한다. 각 lane의 양수 가중치 합<=128, 음수 합>=-128이면 부분합은[-32640,32640] 안에 있어 signed16 overflow가 없다. 이때만 widening을 공유하고, 조건을 넘는 block은 기존S32 경로를 그대로 쓴다. 원래 가중치를 수정하거나 활성값 범위를 가정한 근사가 아니다.56개 실제 FFN 행렬의 unsafe block 비율 평균은0.6094%, 최대1.5055%였다.
+
+실제 가중치 행렬 probe의 짧은 M77에서는v1대비1.18~1.20배였다. 큰 M300은 한 outlier를 포함해 혼재하여 probe만으로 선택하지 않았다. 기존 library와 정수 결과는 모두 같았다. 별도로 표준ORT와8개 ABI case를 대조했고, ±32 안전경계, +64 fallback, U8 zero0/255, 임의 batch·row tail·K12 fallback을 포함해 S32와 반복 캐시가 전부 같았다. 경고를 오류로 처리한 cross compile도 통과했다.
+
+### 실제 전체 TTS 결과
+
+같은 EPYC1코어·RAM1GB,CPU1·실제8회·F1200 가중치 고정이다. 각 문장 warm-up 후3회 중앙값, 기본F 배치 다음 v2배치라 공유 부하 영향을 남긴다.
+
+| 문장 | 기본F RTF | v2 RTF | v2 생성 시간 / 음성 길이 |
+| --- | ---: | ---: | ---: |
+| KO 짧음 | 1.0888 | **0.9434** | 5.019초 /5.320초 |
+| EN 짧음 | 1.0519 | **0.9520** | 4.697초 /4.934초 |
+| KO 김 | 1.0665 | **0.9544** | 16.814초 /17.616초 |
+| EN 김 | 1.0704 | **0.9707** | 16.414초 /16.909초 |
+
+4문장 모두 이 배치에서는 RTF1 미만이었다. 별도 fresh-process 교차2쌍도 수행했다. 기본F 중앙값KO5.744/EN5.236초, v2는5.042/4.721초이며 쌍별 속도비 중앙값1.1397/1.1091배였다. KO 첫/둘째 speedup은1.097/1.182로 변동한다. EN은1.1096/1.1086이었다. 공유 서버에서 보편적인 실시간 보장으로 해석하지 않는다.
+
+전체 배치 표본 최대RSS는427.32MB로 baseline456.62MB보다 작았다. 당시 최소system available204.59MB였고480/80MB 감시를 통과했다. M1의짧고 긴 KO/EN4개 및 F1짧은 KO/EN2개, **총6개 float32 파형은 기본F와 바이트 단위로 같았다**. RMSE/최대차이0이며 실제 byte hash를 저장했다. 새로운 독립 WER 검사를 했다는 뜻은 아니다. ARM용 native 커널이나 새 ARM 실측은 없다.
+
+현재 엔진 선택은v2다. `native/exact_int8.c`와 `native/build_exact.py`가 이 버전을 재현한다. source/binary/runtime hash는 `results/round6_engine_build_v2.json`, 전체 요약은 `results/round6_summary_v2.json`이다. 공개F 모델/데이터 revision은 그대로 유지한다. 모델 weights가 같으므로 native graph는 내려받은F에서 재생성한다.
+
+사용자가 앞으로 별도 branch 대신 **main에서 계속 커밋·푸시**하도록 지정했다. origin/main과 기존 local main이 모두 검증 branch의 조상임을 확인한 뒤 main을 해당 검증 상태로 fast-forward하고 전환했다. 이후 commit은main에서만 생성한다. 다음 확인은 배속이다. 현재 Engine에는0.7~2.0 speed가 있지만 `synthesize.py` CLI에 노출되지 않았음을 발견했으며, 기능 노출과 길이·출력·발음 검사를 이어간다.

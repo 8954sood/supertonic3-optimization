@@ -1,0 +1,48 @@
+{
+  "rows": [
+    {
+      "shape": [
+        1,
+        1,
+        12,
+        8
+      ],
+      "zero_point": 0,
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    },
+    {
+      "shape": [
+        1,
+        5,
+        144,
+        512
+      ],
+      "zero_point": 255,
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    },
+    {
+      "shape": [
+        2,
+        4,
+        512,
+        1536
+      ],
+      "zero_point": 127,
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    },
+    {
+      "shape": [
+        1,
+        15,
+        1536,
+        512
+      ],
+      "zero_point": 71,
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    }
+  ]
+}

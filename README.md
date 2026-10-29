@@ -15,6 +15,8 @@ python download_artifacts.py --purpose inference
 python synthesize.py '안녕하세요.' --model .hf-assets/model/models/round5-original50-student --lang ko --steps 8 --output samples/hello.wav
 ```
 
+실제 EPYC7551·1코어/1GB에서 F1200 가중치를 고정한 native 엔진v2가 짧고 긴KO/EN4문장에서 **RTF0.943~0.971**, 최대 표본RSS427MB를 기록했습니다. 비교한6개 음성의 float32 출력은 기존F와 완전히 같았습니다. 공유 서버의 제한된 표본이며 ARM 성능을 예측하지 않습니다. 이후 검증된 변경은main에 커밋·푸시합니다.
+
 F1200 기준 엔진 비교와 메모리 결과는 [6차 기록](records/2026-10-29/ROUND6_ENGINE.md)에 남깁니다. 아래 표는 이전 B/경량 모델의 역사적 결과입니다.
 
 ## 이전 모델 결과

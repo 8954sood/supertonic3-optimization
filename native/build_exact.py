@@ -40,7 +40,7 @@ Path(a.output + ".json").write_text(
             "source_sha256": hashlib.sha256(
                 (root / "exact_int8.c").read_bytes()
             ).hexdigest(),
-            "kernel": "Exact U8 x S8[-64,64] -> S32; persistent packing per constant weight",
+            "kernel": "Exact U8 x S8[-64,64] -> S32; persistent packing, proven-safe int16 partial accumulation with int32 fallback",
             "command": command,
         },
         indent=2,

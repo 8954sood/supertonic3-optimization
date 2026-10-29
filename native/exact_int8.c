@@ -37,9 +37,23 @@ static int pack_weights(const int8_t* b,int64_t k,int64_t n,int8_t* packed,int32
         }
         _mm256_storeu_si256((__m256i*)(sums+col),sum);
     }
+    if(k%8==0) {
+        uint8_t* flags=(uint8_t*)(sums+n);
+        for(int64_t col=0;col<n;col+=8)for(int64_t q=0;q<k;q+=8) {
+            int bad=0;
+            for(int c=0;c<8;++c)for(int lane=0;lane<2;++lane) {
+                int pos=0,neg=0;
+                for(int j=0;j<2;++j)for(int z=0;z<2;++z) {
+                    int v=b[(q+4*j+2*lane+z)*n+col+c];if(v>0)pos+=v;else neg+=v;
+                }
+                if(pos>128||neg < -128)bad=1;
+            }
+            flags[(col/8)*(k/8)+q/8]=(uint8_t)bad;
+        }
+    }
     return 0;
 }
-static int gemm_packed(const uint8_t* a,const int8_t* packed,const int32_t* sums,int32_t* y,int64_t m,int64_t k,int64_t n,uint8_t zero) {
+static int gemm_row8(const uint8_t* a,const int8_t* packed,const int32_t* sums,int32_t* y,int64_t m,int64_t k,int64_t n,uint8_t zero) {
     int64_t row=0;
     for(;row+8<=m;row+=8) {
         for(int64_t col=0;col<n;col+=8) {
@@ -70,6 +84,36 @@ static int gemm_packed(const uint8_t* a,const int8_t* packed,const int32_t* sums
     }
     return 0;
 }
+/* Two four-coefficient dots can share the widening operation when their
+ * signed bounds fit int16 for every possible U8 activation. Otherwise use
+ * the exact original widening path. No data-dependent approximation. */
+static int gemm_packed(const uint8_t* a,const int8_t* packed,const int32_t* sums,int32_t* y,int64_t m,int64_t k,int64_t n,uint8_t zero) {
+    if(k%8||m<8)return gemm_row8(a,packed,sums,y,m,k,n,zero);
+    const uint8_t* unsafe=(const uint8_t*)(sums+n);int64_t row=0;
+    for(;row+8<=m;row+=8)for(int64_t col=0;col<n;col+=8) {
+        __m256i c0=_mm256_setzero_si256(),c1=c0,c2=c0,c3=c0,c4=c0,c5=c0,c6=c0,c7=c0;
+        const int8_t* p=packed+(col/8)*k*8;const uint8_t* flags=unsafe+(col/8)*(k/8);
+        for(int64_t q=0;q<k;q+=8,p+=64) {
+            __m256i b0=_mm256_loadu_si256((const __m256i*)p),b1=_mm256_loadu_si256((const __m256i*)(p+32));
+            if(!flags[q/8]) {
+#define FAST(r) do { __m256i a0=_mm256_set1_epi32((int32_t)word(a+(row+(r))*k+q)),a1=_mm256_set1_epi32((int32_t)word(a+(row+(r))*k+q+4)); __m256i partial=_mm256_add_epi16(_mm256_maddubs_epi16(a0,b0),_mm256_maddubs_epi16(a1,b1)); c##r=_mm256_add_epi32(c##r,_mm256_madd_epi16(partial,_mm256_set1_epi16(1))); } while(0)
+                FAST(0);FAST(1);FAST(2);FAST(3);FAST(4);FAST(5);FAST(6);FAST(7);
+#undef FAST
+            } else {
+#define SLOW(r) c##r=_mm256_add_epi32(c##r,_mm256_add_epi32(dot4(b0,a+(row+(r))*k+q),dot4(b1,a+(row+(r))*k+q+4)))
+                SLOW(0);SLOW(1);SLOW(2);SLOW(3);SLOW(4);SLOW(5);SLOW(6);SLOW(7);
+#undef SLOW
+            }
+        }
+        __m256i z=_mm256_mullo_epi32(_mm256_loadu_si256((const __m256i*)(sums+col)),_mm256_set1_epi32(zero));
+#define SAVE(r) _mm256_storeu_si256((__m256i*)(y+(row+(r))*n+col),_mm256_sub_epi32(c##r,z))
+        SAVE(0);SAVE(1);SAVE(2);SAVE(3);SAVE(4);SAVE(5);SAVE(6);SAVE(7);
+#undef SAVE
+    }
+    if(row<m)return gemm_row8(a+row*k,packed,sums,y+row*n,m-row,k,n,zero);
+    return 0;
+}
+
 /* Standalone benchmark API separates one-time packing from warm execution. */
 __attribute__((visibility("default")))
 int prepare_exact_u8s8(const int8_t* b,int64_t k,int64_t n) {
@@ -77,14 +121,15 @@ int prepare_exact_u8s8(const int8_t* b,int64_t k,int64_t n) {
     if(k<1||n<1||k%4||n%8||k>65536||(uint64_t)k>SIZE_MAX/(uint64_t)n)return -1;
     size_t bytes=(size_t)k*(size_t)n;
     if(bytes>packed_capacity){void* p=realloc(packed,bytes);if(!p)return -2;packed=p;packed_capacity=bytes;}
-    if((size_t)n>sums_capacity){void* p=realloc(sums,(size_t)n*sizeof(int32_t));if(!p)return -2;sums=p;sums_capacity=(size_t)n;}
+    size_t needed=(size_t)n+(k%8?0:((size_t)k*(size_t)n/64+3)/4);
+    if(needed>sums_capacity){void* p=realloc(sums,needed*sizeof(int32_t));if(!p)return -2;sums=p;sums_capacity=needed;}
     int status=pack_weights(b,k,n,packed,sums);
     if(!status){prepared_k=k;prepared_n=n;}
     return status;
 }
 __attribute__((visibility("default")))
 int run_prepared_u8s8(const uint8_t* a,int32_t* y,int64_t m,int64_t k,int64_t n,uint8_t zero) {
-    if(m<1||k!=prepared_k||n!=prepared_n)return -1;
+    if(m<1||k<1||n<1||k!=prepared_k||n!=prepared_n)return -1;
     return gemm_packed(a,packed,sums,y,m,k,n,zero);
 }
 __attribute__((visibility("default")))
@@ -122,7 +167,7 @@ static OrtStatus* compute(void* state,OrtKernelContext* context){
     if(bd[0]<=0||bd[1]<=0||bd[0]%4||bd[1]%8||bd[0]>65536)return api->CreateStatus(ORT_INVALID_ARGUMENT,"unsupported kernel dimensions");
     if(kernel->weight!=bp||kernel->k!=bd[0]||kernel->n!=bd[1]) {
         free(kernel->packed);free(kernel->sums);kernel->packed=NULL;kernel->sums=NULL;kernel->weight=NULL;
-        kernel->packed=malloc((size_t)bd[0]*(size_t)bd[1]);kernel->sums=malloc((size_t)bd[1]*sizeof(int32_t));
+        kernel->packed=malloc((size_t)bd[0]*(size_t)bd[1]);kernel->sums=malloc((size_t)bd[1]*sizeof(int32_t)+(bd[0]%8?0:(size_t)bd[0]*bd[1]/64));
         if(!kernel->packed||!kernel->sums)return api->CreateStatus(ORT_FAIL,"weight packing allocation failed");
         int status=pack_weights(bp,bd[0],bd[1],kernel->packed,kernel->sums);
         if(status)return api->CreateStatus(ORT_INVALID_ARGUMENT,"weights exceed reduced range [-64,64]");

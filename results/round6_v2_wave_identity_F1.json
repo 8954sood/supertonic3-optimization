@@ -1,0 +1,28 @@
+{
+  "note": "Fixed-model engine numerical regression. No original-teacher quality, independent ASR or perceptual similarity claim.",
+  "rows": [
+    {
+      "case": "en_short_8steps",
+      "voice": "F1",
+      "sample_rate": 44100,
+      "samples": 217451,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "d663ea45be1946b7b0e1bba6a1223d1ca27355ec8333d3099a40c6c7d310fa75",
+      "candidate_float_sha256": "d663ea45be1946b7b0e1bba6a1223d1ca27355ec8333d3099a40c6c7d310fa75"
+    },
+    {
+      "case": "ko_short_8steps",
+      "voice": "F1",
+      "sample_rate": 44100,
+      "samples": 234469,
+      "float32_bit_identical": true,
+      "rmse": 0.0,
+      "max_absolute_difference": 0.0,
+      "reference_float_sha256": "cbaed249a66e0e91d5b6f1b192fccb44d65ce5d024803eb0b3c6c3383eac131d",
+      "candidate_float_sha256": "cbaed249a66e0e91d5b6f1b192fccb44d65ce5d024803eb0b3c6c3383eac131d"
+    }
+  ],
+  "all_float32_bit_identical": true
+}

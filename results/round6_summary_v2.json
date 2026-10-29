@@ -1,0 +1,111 @@
+{
+  "selected_model": "models/round5-original50-student",
+  "engine_version": "v2",
+  "source_vector_sha256": "7c81ab7f0ddcc4266743701599a8708d2edd1be04285770f996e84a8bb5f4447",
+  "threads": 1,
+  "actual_steps": 8,
+  "weights_changed": false,
+  "table": [
+    {
+      "case": "ko_short",
+      "audio_seconds": 5.320022675736961,
+      "baseline_seconds": 5.792450247332454,
+      "engine_seconds": 5.019097834825516,
+      "baseline_rtf": 1.0888017966070134,
+      "engine_rtf": 0.9434354213782069,
+      "observed_speedup": 1.154081956151752
+    },
+    {
+      "case": "en_short",
+      "audio_seconds": 4.933650793650794,
+      "baseline_seconds": 5.189749324694276,
+      "engine_seconds": 4.696646738797426,
+      "baseline_rtf": 1.0519085240838406,
+      "engine_rtf": 0.9519617287955661,
+      "observed_speedup": 1.1049903502052847
+    },
+    {
+      "case": "ko_long",
+      "audio_seconds": 17.616417233560092,
+      "baseline_seconds": 18.78703667037189,
+      "engine_seconds": 16.813511826097965,
+      "baseline_rtf": 1.066450483165312,
+      "engine_rtf": 0.9544228887850956,
+      "observed_speedup": 1.1173773132398561
+    },
+    {
+      "case": "en_long",
+      "audio_seconds": 16.909297052154194,
+      "baseline_seconds": 18.099535821005702,
+      "engine_seconds": 16.414056945592165,
+      "baseline_rtf": 1.0703896066868064,
+      "engine_rtf": 0.9707119636591317,
+      "observed_speedup": 1.1026850876051186
+    }
+  ],
+  "short_alternating_paired_summary": [
+    {
+      "case": "ko_short",
+      "reference_seconds": 5.744053867645562,
+      "candidate_seconds": 5.041635098867118,
+      "paired_speedup_median": 1.1397372336042066,
+      "paired_speedups": [
+        1.0970988218594924,
+        1.182375645348921
+      ]
+    },
+    {
+      "case": "en_short",
+      "reference_seconds": 5.235674305818975,
+      "candidate_seconds": 4.720784293487668,
+      "paired_speedup_median": 1.1090661785516542,
+      "paired_speedups": [
+        1.1095794786455007,
+        1.1085528784578078
+      ]
+    }
+  ],
+  "memory_guards": {
+    "baseline_full": {
+      "returncode": 0,
+      "reason": null,
+      "sampled_peak_child_rss_mb": 456.62208,
+      "minimum_system_available_mb": 201.846784,
+      "elapsed_seconds": 202.08435578644276,
+      "max_rss_budget_mb": 480.0,
+      "reserve_mb": 80.0,
+      "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit."
+    },
+    "engine_full": {
+      "returncode": 0,
+      "reason": null,
+      "sampled_peak_child_rss_mb": 427.3152,
+      "minimum_system_available_mb": 204.591104,
+      "elapsed_seconds": 181.9216121248901,
+      "max_rss_budget_mb": 480.0,
+      "reserve_mb": 80.0,
+      "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit."
+    },
+    "rejected_pattern_enabled": {
+      "returncode": -15,
+      "reason": "child RSS above sampled budget",
+      "sampled_peak_child_rss_mb": 483.10272,
+      "minimum_system_available_mb": 191.082496,
+      "elapsed_seconds": 155.96276139095426,
+      "max_rss_budget_mb": 480.0,
+      "reserve_mb": 80.0,
+      "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit."
+    }
+  },
+  "waveform_cases": 6,
+  "all_float32_bit_identical": true,
+  "new_asr_test": false,
+  "limitations": [
+    "Shared EPYC7551 1GB host, not ARM; timings fluctuate.",
+    "Full four-case comparison: three timed repeats per case, one baseline batch followed by one engine batch.",
+    "Short sentences additionally alternate 2 fresh-process pairs; retain all outliers.",
+    "Waveform checks are six numerical regressions, not a broad perceptual score.",
+    "The pattern-enabled engine exceeded its 480MB sampled RSS budget and is not selected.",
+    "Successful memory-pattern-disabled engine keeps CPU arena and prepacking enabled."
+  ]
+}

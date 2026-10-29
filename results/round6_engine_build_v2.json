@@ -1,0 +1,19 @@
+{
+  "target": "x86_64-linux-gnu.2.28",
+  "cpu": "znver1",
+  "ort_api_version": 23,
+  "source_sha256": "9365017be861fb0de26ffa5ec670b60414f69a67769efba31b33f41a8d535f93",
+  "kernel": "Exact U8 x S8[-64,64] -> S32; persistent packing, proven-safe int16 partial accumulation with int32 fallback",
+  "compiler_package": "ziglang",
+  "compiler_version": "0.17.0",
+  "library_sha256": "7beea5a751d8572338417934201b9e21d775fa124601e5bd2c11926c494c3dc1",
+  "runtime_sha256": "593d4d71c95abbf3d29b675538922c6876e16e0794d9caf5b465356fe7ce2be7",
+  "weights_modified": false,
+  "steps": 8,
+  "threads": 1,
+  "memory_pattern_enabled": false,
+  "cpu_arena_enabled": true,
+  "prepacking_enabled": true,
+  "integer_method": "Paired int16 partial sums only when per-weight signed bounds prove no saturation/wrap for every U8 input; exact int32 fallback otherwise",
+  "observed_unsafe_blocks_mean_fraction": 0.006093706403459821
+}
