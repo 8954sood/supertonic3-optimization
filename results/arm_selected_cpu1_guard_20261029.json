@@ -1,0 +1,10 @@
+{
+  "returncode": 0,
+  "reason": null,
+  "sampled_peak_child_rss_mb": 448.520192,
+  "minimum_system_available_mb": 9265.287168,
+  "elapsed_seconds": 77.45448150113225,
+  "max_rss_budget_mb": 4000.0,
+  "reserve_mb": 2000.0,
+  "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit."
+}

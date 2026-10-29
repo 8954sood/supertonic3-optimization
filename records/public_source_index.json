@@ -100,6 +100,41 @@
     "sha256": "49fa2449f3da7effa5fd50422c9fa7e8673cae91a66736411d49df673315b6b0"
   },
   {
+    "path": "results/arm_audio_checks_20261029.json",
+    "bytes": 1132,
+    "sha256": "232bdcb063148db808c51c1b1a90c20c51d007cdb8af3d65ba2d53a72b152999"
+  },
+  {
+    "path": "results/arm_model_revision_20261029.json",
+    "bytes": 170,
+    "sha256": "ef2ed211840dc4f3e2423d41abc4df3a5757114f6a3f7f8e13225220293c2d62"
+  },
+  {
+    "path": "results/arm_selected_cpu1_20261029.json",
+    "bytes": 11894,
+    "sha256": "07136b2286bbc559bbb462fdd0ca8c30b8080d933c0121eacfc6ccbd120981fb"
+  },
+  {
+    "path": "results/arm_selected_cpu1_guard_20261029.json",
+    "bytes": 299,
+    "sha256": "43afd072c4f85d093565948cab2335a8a7abc6ec0d66aa3c02970b503271ff56"
+  },
+  {
+    "path": "results/arm_selected_cpu2_20261029.json",
+    "bytes": 12009,
+    "sha256": "b44effbdad1987c7f81988edff4d0f3d3f5ae9f33ad4631df8d112785dff8a80"
+  },
+  {
+    "path": "results/arm_selected_cpu2_guard_20261029.json",
+    "bytes": 299,
+    "sha256": "f6293e62a9b2a36e025035072e457f8d21641750bf1898a003fc02126cc2705c"
+  },
+  {
+    "path": "results/arm_verified_assets_20261029.json",
+    "bytes": 3671,
+    "sha256": "ea8d8f99cf16e6b9d82e52afbfd2d1ae3e40961101c2ec3f9bc945b0c7d04b1a"
+  },
+  {
     "path": "results/asr_ablation_v2.json",
     "bytes": 13367,
     "sha256": "8076a9380a6a23bc36bf46ca35719ee729c61981046ce8187215ffc9266e9a50"

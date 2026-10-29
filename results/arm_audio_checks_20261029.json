@@ -1,0 +1,46 @@
+[
+  {
+    "case": "en_long_8steps",
+    "sample_rate": 44100,
+    "samples": 745700,
+    "audio_seconds": 16.909297052154194,
+    "pcm16_rmse": 0.0,
+    "cpu1_peak": 0.44580078125,
+    "cpu2_peak": 0.44580078125,
+    "cpu1_clipped_samples": 0,
+    "cpu2_clipped_samples": 0
+  },
+  {
+    "case": "en_short_8steps",
+    "sample_rate": 44100,
+    "samples": 217574,
+    "audio_seconds": 4.933650793650794,
+    "pcm16_rmse": 0.0,
+    "cpu1_peak": 0.34979248046875,
+    "cpu2_peak": 0.34979248046875,
+    "cpu1_clipped_samples": 0,
+    "cpu2_clipped_samples": 0
+  },
+  {
+    "case": "ko_long_8steps",
+    "sample_rate": 44100,
+    "samples": 776883,
+    "audio_seconds": 17.616394557823128,
+    "pcm16_rmse": 0.0,
+    "cpu1_peak": 0.389312744140625,
+    "cpu2_peak": 0.389312744140625,
+    "cpu1_clipped_samples": 0,
+    "cpu2_clipped_samples": 0
+  },
+  {
+    "case": "ko_short_8steps",
+    "sample_rate": 44100,
+    "samples": 234613,
+    "audio_seconds": 5.320022675736961,
+    "pcm16_rmse": 0.0,
+    "cpu1_peak": 0.368438720703125,
+    "cpu2_peak": 0.368438720703125,
+    "cpu1_clipped_samples": 0,
+    "cpu2_clipped_samples": 0
+  }
+]
