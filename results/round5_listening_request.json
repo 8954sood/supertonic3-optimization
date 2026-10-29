@@ -1,0 +1,61 @@
+{
+  "purpose": "Human development listening feedback; no blind or MOS claim",
+  "steps": 8,
+  "sentences": [
+    "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+    "자전거를 세우고 강변 벤치에 앉아 쉬었습니다."
+  ],
+  "voices": [
+    "M1",
+    "F1"
+  ],
+  "processing": "Concatenate original float WAV files with 0.7-second silence; no gain normalization",
+  "rows": [
+    {
+      "label": "A-original",
+      "output": "samples/listening_round5/A-original.wav",
+      "source_audio": [
+        "samples/round4_expanded_preview_validation/reference_00.wav",
+        "samples/round4_expanded_preview_validation/reference_01.wav"
+      ],
+      "sha256": "f3c75843d45f08a6e09f3daeb42162b6ace7e3f58cce50f846c537b849ef3df2"
+    },
+    {
+      "label": "B-balanced",
+      "output": "samples/listening_round5/B-balanced.wav",
+      "source_audio": [
+        "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_00.wav",
+        "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_01.wav"
+      ],
+      "sha256": "f773777c04217e06914e5a943e93abb1df63a8af9826dc569caafc4fa23ef08b"
+    },
+    {
+      "label": "C-fast-v2",
+      "output": "samples/listening_round5/C-fast-v2.wav",
+      "source_audio": [
+        "samples/round4_expanded_final_validation/round4-cfg1024-expanded_00.wav",
+        "samples/round4_expanded_final_validation/round4-cfg1024-expanded_01.wav"
+      ],
+      "sha256": "a6baa439924c6bfc857d757699cc27c7e8c0dc466c7f0bd6b19b3f67d7306c73"
+    },
+    {
+      "label": "D-fast-fp32-diagnostic",
+      "output": "samples/listening_round5/D-fast-fp32-diagnostic.wav",
+      "source_audio": [
+        "samples/round5_quantization_diagnostic/fp32_00.wav",
+        "samples/round5_quantization_diagnostic/fp32_01.wav"
+      ],
+      "sha256": "9dbd26810edda10242f48247b7ef54a34ea5cbf99efe660afcfa2f120c461ccb",
+      "changes": "Same C student weights and eight steps; vector uses FP32 instead of reduced-range INT8. Diagnostic only, not the low-memory speed candidate."
+    }
+  ],
+  "feedback": {
+    "user_verbatim": "C가 나쁘거든? 좀 살짝 뭉개지고 기계음이 살짝 쫌더 들어간 그런 느낌이랄까",
+    "interpretation": "C is worse than the reference; slight smearing and increased mechanical artifacts. Keep B as quality reference.",
+    "applies_to": "C-fast-v2 only; not a judgment on later candidates"
+  },
+  "diagnostic_feedback": {
+    "user_verbatim": "D도 비슷하게 나쁨",
+    "conclusion": "Removing vector INT8 alone did not fix the reported smearing/mechanical artifacts. Prioritize reducing compression/distillation damage; this does not establish zero quantization contribution."
+  }
+}

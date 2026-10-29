@@ -12,6 +12,7 @@ import os
 import numpy as np
 import torch
 from distill.torch_graph import VectorGraph
+from distill.teacher_policy import assert_original_data
 from distill.trajectory_data import trajectory_path
 
 p = argparse.ArgumentParser()
@@ -33,6 +34,7 @@ dest.mkdir(parents=True, exist_ok=True)
 if (dest / "best.pt").exists():
     p.error("Choose new output to preserve checkpoints")
 metadata = json.loads((root / "manifest.json").read_text())
+assert_original_data(metadata)
 train = [r for r in metadata["rows"] if r["split"] == "train"]
 val = [
     r for r in metadata["rows"] if r["split"] == "validation" and r["step"] in [0, 3, 7]
@@ -78,7 +80,10 @@ best = initial
 history = []
 report = {
     "config": vars(a),
-    "method": "Selected FFNs or all learned vector tensors jointly optimized through the configured graph; original CFG4 teacher trajectories; no decoder or waveform loss",
+    "method": "Selected FFNs or all learned vector tensors jointly optimized through the configured graph; teacher identity and input trajectory origin are specified by dataset metadata; no decoder or waveform loss",
+    "teacher": metadata.get("teacher", "unspecified; inspect dataset provenance"),
+    "teacher_package": metadata.get("teacher_package"),
+    "input_state_source": metadata.get("input_state_source"),
     "train_pairs": len(train),
     "validation_pairs": len(val),
     "initial_validation_relative_update_mse": initial,

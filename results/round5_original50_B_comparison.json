@@ -1,0 +1,26 @@
+{
+  "rows": [
+    {
+      "variant": "B-balanced",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "seed": 400,
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_00.wav",
+      "reference_audio": "samples/listening_original50/original50_00.wav"
+    },
+    {
+      "variant": "B-balanced",
+      "case": 1,
+      "language": "ko",
+      "voice": "F1",
+      "seed": 401,
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_01.wav",
+      "reference_audio": "samples/listening_original50/original50_01.wav"
+    }
+  ],
+  "reference_steps": 50,
+  "note": "Same two human-development clips; no independent test claim"
+}

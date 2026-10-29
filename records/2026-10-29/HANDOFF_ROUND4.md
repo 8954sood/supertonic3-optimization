@@ -1,3 +1,5 @@
+> 최신 지침: [ROUND5_LOCAL.md](ROUND5_LOCAL.md). 추가 업로드·커밋·푸시는 요청 전까지 중지했다. 새1024-v2와 확대 데이터는 아직 공개되지 않았다. 아래 공개 자산 링크는 기존3개 모델을 가리킨다.
+
 # 이어서 작업할 때
 
 최신 결론은 [ROUND4.md](ROUND4.md), 수치는 [round4_metrics.json](round4_metrics.json)에 있다. **기본 모델은 cfg-mixed-v1-selected를 유지한다.** 새 `cfg1024-v2`는 공개 실험 후보다. 서버는 CPU1·실제8스텝을 유지하고, ARM 접속 정보를 다시 요청하지 않는다. 사용자가 새 후보의 ARM 검사를 나중에 직접 진행한다.

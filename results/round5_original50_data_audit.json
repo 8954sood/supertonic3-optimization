@@ -1,0 +1,34 @@
+{
+  "dataset": "distill/trajectories-original50-round5",
+  "teacher_origin": {
+    "repo": "Supertone/supertonic-3",
+    "revision": "3cadd1ee6394adea1bd021217a0e650ede09a323",
+    "distilled": false,
+    "precision": "FP32",
+    "guidance_scale": 4,
+    "steps": 50,
+    "threads": 4,
+    "graph_sha256": {
+      "duration_predictor": "c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db",
+      "text_encoder": "c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff",
+      "vector_estimator": "883ac868ea0275ef0e991524dc64f16b3c0376efd7c320af6b53f5b780d7c61c",
+      "vocoder": "085de76dd8e8d5836d6ca66826601f615939218f90e519f70ee8a36ed2a4c4ba"
+    }
+  },
+  "student_steps": 8,
+  "pairs": {
+    "train": 640,
+    "validation": 128
+  },
+  "cases": {
+    "train": 80,
+    "validation": 16
+  },
+  "adjacent_targets_equal_next_input": 672,
+  "all_arrays_finite": true,
+  "student_step_metadata_valid": true,
+  "npz_total_bytes": 143577204,
+  "inventory_sha256": "2b482b1297c3a73ef4213a6f68d6ee7a536d58f129caecad3ef6644167277072",
+  "manifest_sha256": "4a9fc28d121c23de5e7cc7bf3b2d3d47c2ec4ef7aaa54bc99e0711887fe8edee",
+  "note": "Every student target is interpolated from original 50-step states; last target is original final state. No derived teacher, no test data."
+}

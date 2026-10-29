@@ -1,0 +1,245 @@
+{
+  "method": "Approved INT8 student own-trajectory activation collection, train-only neuron ranking, anchored ridge output refit; choose a bounded number of FFNs using held-out validation; no tests",
+  "config": {
+    "data": "distill/balanced-activation-round5",
+    "output": "distill/balanced-pruned-light-round5",
+    "keep_fraction": 0.875,
+    "max_layers": 6,
+    "max_relative_rmse": 0.06,
+    "ridge": 0.01
+  },
+  "source_checkpoint": "distill/joint-cfg-mixed-v1/best_step_00600.pt",
+  "source_checkpoint_sha256": "54b3c1308d449834864fd9ae010aa46d7af8a90d8b8e77e6b9817b11edb1adc8",
+  "source_vector_sha256": "d2b63c7a648b93b1d1d94a4443a47bd92ec0aca75299a27dffb6473bc34b93ea",
+  "teacher_guidance": "Approved learned conditional CFG4 approximation; not original teacher equivalence",
+  "parameters_before": 45480256,
+  "parameters_after": 44955456,
+  "selected_layers": [
+    17,
+    8
+  ],
+  "rows": [
+    {
+      "layer": 6,
+      "width_before": 1536,
+      "width_after": 1280,
+      "gated_relative_validation_rmse": 0.09188000857830048,
+      "unpruned_fp32_vs_int8_target_rmse": 0.03977411985397339,
+      "weight_norm_ratio": 0.9008811116218567,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 7,
+      "width_before": 1536,
+      "width_after": 1280,
+      "gated_relative_validation_rmse": 0.10303285717964172,
+      "unpruned_fp32_vs_int8_target_rmse": 0.04089304432272911,
+      "weight_norm_ratio": 0.9343093037605286,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 8,
+      "width_before": 2048,
+      "width_after": 1792,
+      "gated_relative_validation_rmse": 0.05879925191402435,
+      "unpruned_fp32_vs_int8_target_rmse": 0.037458762526512146,
+      "weight_norm_ratio": 0.9263525605201721,
+      "parameter_reduction": 262400,
+      "selected": true
+    },
+    {
+      "layer": 9,
+      "width_before": 1536,
+      "width_after": 1280,
+      "gated_relative_validation_rmse": 0.08871422708034515,
+      "unpruned_fp32_vs_int8_target_rmse": 0.038420420140028,
+      "weight_norm_ratio": 0.881793737411499,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 10,
+      "width_before": 1536,
+      "width_after": 1280,
+      "gated_relative_validation_rmse": 0.08120868355035782,
+      "unpruned_fp32_vs_int8_target_rmse": 0.053643301129341125,
+      "weight_norm_ratio": 0.9555729627609253,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 11,
+      "width_before": 1536,
+      "width_after": 1280,
+      "gated_relative_validation_rmse": 0.06160947307944298,
+      "unpruned_fp32_vs_int8_target_rmse": 0.04278278723359108,
+      "weight_norm_ratio": 0.9609084725379944,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 12,
+      "width_before": 2048,
+      "width_after": 1792,
+      "gated_relative_validation_rmse": 0.06733720004558563,
+      "unpruned_fp32_vs_int8_target_rmse": 0.040286142379045486,
+      "weight_norm_ratio": 0.9066518545150757,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 13,
+      "width_before": 2048,
+      "width_after": 1792,
+      "gated_relative_validation_rmse": 0.06275247037410736,
+      "unpruned_fp32_vs_int8_target_rmse": 0.038245461881160736,
+      "weight_norm_ratio": 0.878286600112915,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 14,
+      "width_before": 2048,
+      "width_after": 1792,
+      "gated_relative_validation_rmse": 0.07446517050266266,
+      "unpruned_fp32_vs_int8_target_rmse": 0.040349699556827545,
+      "weight_norm_ratio": 0.9036624431610107,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 15,
+      "width_before": 1536,
+      "width_after": 1280,
+      "gated_relative_validation_rmse": 0.0725611001253128,
+      "unpruned_fp32_vs_int8_target_rmse": 0.04109490290284157,
+      "weight_norm_ratio": 0.829304575920105,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 16,
+      "width_before": 1536,
+      "width_after": 1280,
+      "gated_relative_validation_rmse": 0.08095698803663254,
+      "unpruned_fp32_vs_int8_target_rmse": 0.03902771323919296,
+      "weight_norm_ratio": 0.9053547978401184,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 17,
+      "width_before": 2048,
+      "width_after": 1792,
+      "gated_relative_validation_rmse": 0.05196258798241615,
+      "unpruned_fp32_vs_int8_target_rmse": 0.037530165165662766,
+      "weight_norm_ratio": 0.9270545840263367,
+      "parameter_reduction": 262400,
+      "selected": true
+    },
+    {
+      "layer": 18,
+      "width_before": 2048,
+      "width_after": 1792,
+      "gated_relative_validation_rmse": 0.07225378602743149,
+      "unpruned_fp32_vs_int8_target_rmse": 0.035598024725914,
+      "weight_norm_ratio": 0.9334086179733276,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 19,
+      "width_before": 2048,
+      "width_after": 1792,
+      "gated_relative_validation_rmse": 0.08774994313716888,
+      "unpruned_fp32_vs_int8_target_rmse": 0.04364797845482826,
+      "weight_norm_ratio": 0.9014065861701965,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 20,
+      "width_before": 2048,
+      "width_after": 1792,
+      "gated_relative_validation_rmse": 0.09200846403837204,
+      "unpruned_fp32_vs_int8_target_rmse": 0.04537366330623627,
+      "weight_norm_ratio": 0.9115679264068604,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 21,
+      "width_before": 2048,
+      "width_after": 1792,
+      "gated_relative_validation_rmse": 0.06883135437965393,
+      "unpruned_fp32_vs_int8_target_rmse": 0.039729442447423935,
+      "weight_norm_ratio": 0.9279769659042358,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 22,
+      "width_before": 1536,
+      "width_after": 1280,
+      "gated_relative_validation_rmse": 0.07684271037578583,
+      "unpruned_fp32_vs_int8_target_rmse": 0.05368709936738014,
+      "weight_norm_ratio": 0.9752267003059387,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 23,
+      "width_before": 1536,
+      "width_after": 1280,
+      "gated_relative_validation_rmse": 0.09428296983242035,
+      "unpruned_fp32_vs_int8_target_rmse": 0.03764602541923523,
+      "weight_norm_ratio": 0.8810209035873413,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 24,
+      "width_before": 1536,
+      "width_after": 1280,
+      "gated_relative_validation_rmse": 0.08608968555927277,
+      "unpruned_fp32_vs_int8_target_rmse": 0.033884573727846146,
+      "weight_norm_ratio": 0.9259852170944214,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 25,
+      "width_before": 1536,
+      "width_after": 1280,
+      "gated_relative_validation_rmse": 0.10455378144979477,
+      "unpruned_fp32_vs_int8_target_rmse": 0.03827939182519913,
+      "weight_norm_ratio": 0.9171488881111145,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 26,
+      "width_before": 2048,
+      "width_after": 1792,
+      "gated_relative_validation_rmse": 0.0776563286781311,
+      "unpruned_fp32_vs_int8_target_rmse": 0.04169442504644394,
+      "weight_norm_ratio": 0.9720380306243896,
+      "parameter_reduction": 262400,
+      "selected": false
+    },
+    {
+      "layer": 27,
+      "width_before": 1536,
+      "width_after": 1280,
+      "gated_relative_validation_rmse": 0.06825000047683716,
+      "unpruned_fp32_vs_int8_target_rmse": 0.024201467633247375,
+      "weight_norm_ratio": 0.9787169098854065,
+      "parameter_reduction": 262400,
+      "selected": false
+    }
+  ],
+  "no_test_evaluated": true,
+  "default_replacement": false
+}

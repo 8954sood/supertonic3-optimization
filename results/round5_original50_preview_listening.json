@@ -1,0 +1,35 @@
+{
+  "teacher": "Original FP32 CFG4 50-step; never a distilled teacher",
+  "student_steps": 8,
+  "checkpoint_step": 400,
+  "checkpoint_sha256": "07d9444f375e98acf8c8b60989b225c4aa67dfa7ac5e9fb2f6e0dbceac7ab052",
+  "rows": [
+    {
+      "variant": "original50-preview",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "seed": 400,
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "audio": "samples/listening_original50_preview/preview_00.wav",
+      "reference_audio": "samples/listening_original50/original50_00.wav"
+    },
+    {
+      "variant": "original50-preview",
+      "case": 1,
+      "language": "ko",
+      "voice": "F1",
+      "seed": 401,
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "audio": "samples/listening_original50_preview/preview_01.wav",
+      "reference_audio": "samples/listening_original50/original50_01.wav"
+    }
+  ],
+  "concatenated": "samples/listening_original50_preview/E-original50-preview_M1_F1.wav",
+  "feedback": {
+    "user_verbatim": "기존 B 수준에 가까움",
+    "applies_to": "E, 400-update snapshot; Korean M1/F1 two development clips only",
+    "decision": "Freeze as listening-accepted development candidate; no automatic default replacement or broad perceptual equivalence claim"
+  },
+  "followup_feedback": "E400 and F1200 have no large audible difference; user requested 1c1g benchmarking and engine-only optimization"
+}

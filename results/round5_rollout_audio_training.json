@@ -1,0 +1,118 @@
+{
+  "config": {
+    "initial": "distill/joint-cfg1024-round4/best_step_02000.pt",
+    "layers": "distill/joint-cfg1024-round4/best_step_02000.pt",
+    "data": "distill/trajectories-round4",
+    "output": "distill/rollout-cfg1024-round5-audio",
+    "iterations": 300,
+    "learning_rate": 3e-06,
+    "validate_every": 50,
+    "validation_all": true,
+    "teacher_update_weight": 0.1,
+    "spectral_weight": 1.0,
+    "latent_weight": 0.25,
+    "high_frequency_weight": 0.25,
+    "onset_weight": 0.1,
+    "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx"
+  },
+  "steps": 8,
+  "teacher_guidance_scale": 4,
+  "student_graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+  "train_utterance_voice_seed_cases": 240,
+  "validation_cases": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "method": "Audio-first 8-step rollout through frozen FP32 decoder; MRSTFT + active-frame 2..10kHz log magnitude + upper-band temporal log-envelope difference; smaller latent anchor and teacher-forced update regularizer",
+  "selection_metric": "audio_loss on all validation cases, not test",
+  "sample_rate": 44100,
+  "test_evaluated": false,
+  "initial": {
+    "loss": 1.6391887441277504,
+    "latent_relative_mse": 0.27000683918595314,
+    "mrstft": 1.2982124388217926,
+    "audio_loss": 1.5716870576143265,
+    "high_frequency_log_l1": 1.0267143957316875,
+    "onset_l1": 0.16796009009703994
+  },
+  "history": [
+    {
+      "step": 50,
+      "loss": 1.6405717879533768,
+      "latent_relative_mse": 0.27059879759326577,
+      "mrstft": 1.2978818155825138,
+      "audio_loss": 1.5729220807552338,
+      "high_frequency_log_l1": 1.033454317599535,
+      "onset_l1": 0.16676699509844184,
+      "elapsed_seconds": 35.405789332988206
+    },
+    {
+      "step": 100,
+      "loss": 1.6894518807530403,
+      "latent_relative_mse": 0.2729294579476118,
+      "mrstft": 1.3357367888092995,
+      "audio_loss": 1.6212195307016373,
+      "high_frequency_log_l1": 1.0736454725265503,
+      "onset_l1": 0.17071378743276,
+      "elapsed_seconds": 65.66685429197969
+    },
+    {
+      "step": 150,
+      "loss": 1.6260634288191795,
+      "latent_relative_mse": 0.26750242663547397,
+      "mrstft": 1.2863749526441097,
+      "audio_loss": 1.5591878145933151,
+      "high_frequency_log_l1": 1.0246046371757984,
+      "onset_l1": 0.1666171457618475,
+      "elapsed_seconds": 95.45674624998355
+    },
+    {
+      "step": 200,
+      "loss": 1.6382632702589035,
+      "latent_relative_mse": 0.2692975145764649,
+      "mrstft": 1.295999899506569,
+      "audio_loss": 1.5709389001131058,
+      "high_frequency_log_l1": 1.033329602330923,
+      "onset_l1": 0.16606574598699808,
+      "elapsed_seconds": 125.68844020797405
+    },
+    {
+      "step": 250,
+      "loss": 1.629448525607586,
+      "latent_relative_mse": 0.2668438535183668,
+      "mrstft": 1.2893840931355953,
+      "audio_loss": 1.5627375692129135,
+      "high_frequency_log_l1": 1.0272679403424263,
+      "onset_l1": 0.16536470502614975,
+      "elapsed_seconds": 154.56571712496225
+    },
+    {
+      "step": 300,
+      "loss": 1.6328682377934456,
+      "latent_relative_mse": 0.26729118870571256,
+      "mrstft": 1.2916396297514439,
+      "audio_loss": 1.5660454258322716,
+      "high_frequency_log_l1": 1.031161978840828,
+      "onset_l1": 0.16615301370620728,
+      "elapsed_seconds": 182.79469904198777
+    }
+  ],
+  "best_validation_audio_loss": 1.5591878145933151,
+  "complete": true,
+  "elapsed_seconds": 182.99206508300267,
+  "training_source_sha256": "565ac48c95f2575de2164a164aa725f97caab032375ecdca69458cd58712a890"
+}

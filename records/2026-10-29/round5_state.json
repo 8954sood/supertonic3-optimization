@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-29",
+  "publication_policy": "User reauthorized Git commits for successful optimizations and upload of existing models/reproduction assets; 2026-10-29",
+  "teacher_policy": {
+    "repository": "Supertone/supertonic-3",
+    "revision": "3cadd1ee6394adea1bd021217a0e650ede09a323",
+    "precision": "FP32",
+    "cfg": 4,
+    "steps": 50,
+    "distilled_teacher_allowed": false,
+    "human_reference_feedback": "원본은 괜찮음"
+  },
+  "student_inference": {
+    "steps": 8,
+    "threads": 1,
+    "default_model": "models/round5-original50-student",
+    "new_candidate_default_approved": true
+  },
+  "human_feedback": {
+    "C-fast-v2": "살짝 뭉개지고 기계음이 더 들어감",
+    "D-same-student-FP32": "D도 비슷하게 나쁨",
+    "original50": "원본은 괜찮음",
+    "E-original50-400": "기존 B 수준에 가까움",
+    "E400_vs_F1200": "둘다 큰 차이를 못 느끼겠어",
+    "F1200_selection": "모델 어차피 F1200으로 이제 쓰면 될거같으니까"
+  },
+  "rejected_workflows": [
+    {
+      "path": "distill/trajectories-balanced-round5",
+      "reason": "Derived B teacher prohibited; training guard rejects this dataset"
+    },
+    {
+      "path": "models/round5-balanced-recovered",
+      "reason": "Derived-teacher training rejected by user; not a candidate"
+    },
+    {
+      "path": ".private/rejected-round5",
+      "reason": "Archived B-teacher calibration/refit scripts; do not reuse as teacher"
+    }
+  ],
+  "current_experiment": {
+    "initialization": "distill/partial-original-round5/initial.pt",
+    "initialization_note": "Existing student weights are initialization only. Six replacement FFNs were learned from original FP32 teacher. No B outputs used as targets.",
+    "data": "distill/trajectories-original50-round5",
+    "unique_train_sentences": 80,
+    "train_pairs": 640,
+    "validation_pairs": 128,
+    "state_mapping": "Original50 latent trajectory interpolated onto eight-step grid; final target exactly original50 final state",
+    "teacher_generation_threads_on_Mac": 4,
+    "training_output": "distill/joint-original50-round5",
+    "training_iterations": 1200,
+    "learning_rate": 1e-05,
+    "student_output": "models/round5-original50-student",
+    "pipeline_log": "results/round5_original50_pipeline.log",
+    "pilot_corpus": "distill/corpus_round5_pilot.json",
+    "new_test_evaluated": false,
+    "collection_complete": true,
+    "data_audit": "results/round5_original50_data_audit.json",
+    "preview": {
+      "model": "models/round5-original50-preview",
+      "training_step": 400,
+      "human_label": "E",
+      "feedback": "기존 B 수준에 가까움",
+      "listening_record": "results/round5_original50_preview_listening.json",
+      "decision": "Frozen listening-accepted E400 candidate; existing B remains default"
+    },
+    "training_complete": true,
+    "final_checkpoint_step": 1200,
+    "validation_relative_update_mse_initial": 0.06975272759639968,
+    "validation_relative_update_mse_best": 0.042197953657402344,
+    "pilot_complete": true,
+    "pilot_summary": "results/round5_summary.json",
+    "server_new_model_measured": true,
+    "final_listening": {
+      "model": "models/round5-original50-student",
+      "human_label": "F1200",
+      "feedback": "E400과 큰 차이 없음",
+      "record": "results/round5_original50_final_listening.json"
+    }
+  },
+  "continuation": "Check the current pipeline log and model/manifest before starting another run. All existing test sets are consumed. Use original-only targets and human development listening; publish only on user request.",
+  "next_constraint": "Fixed F1200 weights and architecture, CPU1, actual 8 iterations. Engine optimization only. User reauthorized successful-change commits and existing model/reproduction uploads."
+}

@@ -1,0 +1,47 @@
+{
+  "rows": [
+    {
+      "variant": "original50-preview400",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "seed": 400,
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "audio": "samples/listening_original50_preview/preview_00.wav",
+      "reference_audio": "samples/round5_original50_pilot/reference_00.wav"
+    },
+    {
+      "variant": "original50-preview400",
+      "case": 1,
+      "language": "ko",
+      "voice": "F1",
+      "seed": 401,
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "audio": "samples/listening_original50_preview/preview_01.wav",
+      "reference_audio": "samples/round5_original50_pilot/reference_01.wav"
+    },
+    {
+      "variant": "original50-preview400",
+      "case": 2,
+      "language": "en",
+      "voice": "M3",
+      "seed": 402,
+      "text": "Please close the window before you leave the room.",
+      "audio": "samples/round5_original50_preview_pilot/preview_02.wav",
+      "reference_audio": "samples/round5_original50_pilot/reference_02.wav"
+    },
+    {
+      "variant": "original50-preview400",
+      "case": 3,
+      "language": "en",
+      "voice": "F3",
+      "seed": 403,
+      "text": "The little girl carried a basket of flowers to her grandmother.",
+      "audio": "samples/round5_original50_preview_pilot/preview_03.wav",
+      "reference_audio": "samples/round5_original50_pilot/reference_03.wav"
+    }
+  ],
+  "reference_steps": 50,
+  "student_steps": 8,
+  "note": "Four development sentences only; checkpoint400 frozen after user listening feedback"
+}

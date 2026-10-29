@@ -1,0 +1,78 @@
+{
+  "config": {
+    "initial": "distill/joint-cfg1024-round4/best_step_02000.pt",
+    "layers": "distill/joint-cfg1024-round4/best_step_02000.pt",
+    "data": "distill/trajectories-round4",
+    "output": "distill/rollout-cfg1024-round5",
+    "iterations": 100,
+    "learning_rate": 2e-06,
+    "validate_every": 25,
+    "validation_all": true,
+    "teacher_update_weight": 0.1,
+    "spectral_weight": 0.15,
+    "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx"
+  },
+  "steps": 8,
+  "teacher_guidance_scale": 4,
+  "student_graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+  "train_utterance_voice_seed_cases": 240,
+  "validation_cases": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "method": "All learned vector-field tensors; 8-step student trajectory with frozen original FP32 decoder; normalized latent MSE + configured MRSTFT weight; optional teacher-forced update regularizer on training pairs only",
+  "test_evaluated": false,
+  "initial": {
+    "loss": 0.4647387135773897,
+    "latent_relative_mse": 0.27000683918595314,
+    "mrstft": 1.2982124388217926
+  },
+  "history": [
+    {
+      "step": 25,
+      "loss": 0.46143525652587414,
+      "latent_relative_mse": 0.26669070217758417,
+      "mrstft": 1.2982969470322132,
+      "elapsed_seconds": 21.739029333984945
+    },
+    {
+      "step": 50,
+      "loss": 0.4621363487094641,
+      "latent_relative_mse": 0.26724565075710416,
+      "mrstft": 1.2992712669074535,
+      "elapsed_seconds": 38.56005670898594
+    },
+    {
+      "step": 75,
+      "loss": 0.4591224305331707,
+      "latent_relative_mse": 0.26507523423060775,
+      "mrstft": 1.293647889047861,
+      "elapsed_seconds": 54.454095708962996
+    },
+    {
+      "step": 100,
+      "loss": 0.4540481250733137,
+      "latent_relative_mse": 0.2588219502940774,
+      "mrstft": 1.3015077710151672,
+      "elapsed_seconds": 70.38752191700041
+    }
+  ],
+  "best_loss": 0.4540481250733137,
+  "complete": true,
+  "elapsed_seconds": 70.75677670899313,
+  "training_source_sha256": "06da665c06cbf828a1ae04a0f56e2628a674749b7e1c214099778dc94c62d954"
+}

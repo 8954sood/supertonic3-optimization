@@ -14,6 +14,7 @@ import os
 import numpy as np
 import torch
 from distill.torch_graph import VectorGraph
+from distill.teacher_policy import assert_original_data
 
 p = argparse.ArgumentParser()
 p.add_argument("--initial", default="distill/joint1024-v1/best.pt")
@@ -24,8 +25,14 @@ p.add_argument("--iterations", type=int, default=200)
 p.add_argument("--learning-rate", type=float, default=1e-5)
 p.add_argument("--validate-every", type=int, default=25)
 p.add_argument("--validation-all", action="store_true")
+p.add_argument("--teacher-update-weight", type=float, default=0.0)
+p.add_argument("--spectral-weight", type=float, default=0.15)
 p.add_argument("--graph", default="models/supertonic-3/onnx/vector_estimator.onnx")
 a = p.parse_args()
+if a.iterations < 1 or a.validate_every < 1:
+    p.error("iterations and validate-every must be positive")
+if a.teacher_update_weight < 0 or a.spectral_weight < 0:
+    p.error("loss weights must be non-negative")
 torch.set_num_threads(1)
 torch.set_num_interop_threads(1)
 torch.manual_seed(20261029)
@@ -35,10 +42,15 @@ if (dest / "best.pt").exists():
     p.error("Choose new output")
 root = Path(a.data)
 metadata = json.loads((root / "manifest.json").read_text())
+assert_original_data(metadata)
 train_cases = sorted(
     {row["case"] for row in metadata["rows"] if row["split"] == "train"}
 )
-validation_cases = list(range(8)) if a.validation_all else [0, 1, 4, 5]
+validation_cases = (
+    sorted({row["case"] for row in metadata["rows"] if row["split"] == "validation"})
+    if a.validation_all
+    else [0, 1, 4, 5]
+)
 model = VectorGraph(a.graph, checkpoints=a.layers)
 model.load_weights(
     torch.load(a.initial, map_location="cpu", weights_only=True)["weights"]
@@ -104,7 +116,7 @@ def loss_for(split, case):
             + (torch.log(actual + 1e-4) - torch.log(teacher + 1e-4)).abs().mean()
         )
     spectral = spectral / len(spectra)
-    return latent + 0.15 * spectral.to("mps"), latent, spectral
+    return latent + a.spectral_weight * spectral.to("mps"), latent, spectral
 
 
 @torch.no_grad()
@@ -129,7 +141,8 @@ report = {
     "student_graph": a.graph,
     "train_utterance_voice_seed_cases": len(train_cases),
     "validation_cases": validation_cases,
-    "method": "All learned vector-field tensors; 8-step student trajectory with frozen original FP32 decoder; normalized latent MSE + 0.15*(3-resolution spectral convergence + log magnitude L1)",
+    "method": "All learned vector-field tensors; 8-step student trajectory with frozen original FP32 decoder; normalized latent MSE + configured MRSTFT weight; optional teacher-forced update regularizer on training pairs only",
+    "test_evaluated": False,
     "initial": initial,
     "history": history,
 }
@@ -158,7 +171,21 @@ rng = np.random.default_rng(20261029)
 for step in range(a.iterations):
     t = time.perf_counter()
     optimizer.zero_grad(set_to_none=True)
-    loss, latent, spectral = loss_for("train", int(rng.choice(train_cases)))
+    training_case = int(rng.choice(train_cases))
+    loss, latent, spectral = loss_for("train", training_case)
+    if a.teacher_update_weight:
+        update_step = int(rng.integers(0, 8))
+        with np.load(
+            root / "train" / f"{training_case:03d}_{update_step}.npz"
+        ) as stored:
+            update_feed = {key: stored[key] for key in stored.files if key != "target"}
+            update_target = torch.from_numpy(stored["target"]).to("mps")
+        actual_update = model(update_feed)[0]
+        delta = update_target - torch.from_numpy(update_feed["noisy_latent"]).to("mps")
+        update_loss = (
+            actual_update - update_target
+        ).square().mean() / delta.square().mean().clamp_min(1e-5)
+        loss = loss + a.teacher_update_weight * update_loss
     if not bool(torch.isfinite(loss)):
         raise RuntimeError("nonfinite loss")
     loss.backward()

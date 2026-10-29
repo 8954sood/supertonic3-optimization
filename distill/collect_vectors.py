@@ -5,6 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from runtime import Engine
+from distill.teacher_policy import assert_original_data, assert_original_model
 import argparse
 import json
 import shutil
@@ -28,6 +29,7 @@ if (root / "manifest.json").exists():
     p.error("Choose a new collection directory")
 if a.source:
     previous = json.loads((Path(a.source) / "manifest.json").read_text())
+    assert_original_data(previous)
     if previous.get("corpus", "distill/corpus.json") != a.corpus:
         p.error("Source trajectories use a different corpus")
     shutil.copytree(a.source, root)
@@ -35,6 +37,7 @@ root.mkdir(parents=True, exist_ok=True)
 corpus_path = Path(a.corpus)
 corpus = json.loads(corpus_path.read_text())
 corpus_sha256 = hashlib.sha256(corpus_path.read_bytes()).hexdigest()
+assert_original_model("models/supertonic-3")
 teacher = Engine()
 original = teacher.sessions["vector_estimator"]
 

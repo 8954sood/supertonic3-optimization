@@ -1,0 +1,399 @@
+{
+  "split": "validation",
+  "steps": 8,
+  "reference_guidance_scale": 4,
+  "reference_steps": 50,
+  "corpus": "distill/corpus_round5_pilot.json",
+  "note": "ASR proxy only; does not assess timbre, prosody or listening quality. Test split must not be reused for tuning.",
+  "rows": [
+    {
+      "variant": "reference",
+      "case": 0,
+      "language": "ko",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/round5_original50_pilot/reference_00.wav",
+      "timing": {
+        "seconds": 10.08914666599594,
+        "audio_seconds": 5.305736961451247,
+        "rtf": 1.9015542495412956,
+        "realtime_factor": 0.5258856013396547,
+        "stages": {
+          "duration_predictor": 0.0010273749940097332,
+          "text_encoder": 0.005143833986949176,
+          "vector_estimator": 10.01880183472531,
+          "vocoder": 0.03872058301931247
+        }
+      },
+      "reference_audio": "samples/round5_original50_pilot/reference_00.wav",
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "transcript": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "reference",
+      "case": 1,
+      "language": "ko",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/round5_original50_pilot/reference_01.wav",
+      "timing": {
+        "seconds": 8.064868583984207,
+        "audio_seconds": 4.054557823129252,
+        "rtf": 1.989087080711517,
+        "realtime_factor": 0.5027431979711464,
+        "stages": {
+          "duration_predictor": 0.0007565420237369835,
+          "text_encoder": 0.003831584006547928,
+          "vector_estimator": 8.03083495714236,
+          "vocoder": 0.02847795799607411
+        }
+      },
+      "reference_audio": "samples/round5_original50_pilot/reference_01.wav",
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "transcript": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "errors": 0,
+      "reference_units": 19
+    },
+    {
+      "variant": "reference",
+      "case": 2,
+      "language": "en",
+      "reference": "Please close the window before you leave the room.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/round5_original50_pilot/reference_02.wav",
+      "timing": {
+        "seconds": 6.069152083015069,
+        "audio_seconds": 2.7317233560090703,
+        "rtf": 2.2217301285888036,
+        "realtime_factor": 0.4500996710321335,
+        "stages": {
+          "duration_predictor": 0.00079699995694682,
+          "text_encoder": 0.0037594579625874758,
+          "vector_estimator": 6.040354615659453,
+          "vocoder": 0.023289332981221378
+        }
+      },
+      "reference_audio": "samples/round5_original50_pilot/reference_02.wav",
+      "text": "Please close the window before you leave the room.",
+      "transcript": "Please close the window before you leave the room.",
+      "errors": 0,
+      "reference_units": 9
+    },
+    {
+      "variant": "reference",
+      "case": 3,
+      "language": "en",
+      "reference": "The little girl carried a basket of flowers to her grandmother.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/round5_original50_pilot/reference_03.wav",
+      "timing": {
+        "seconds": 8.457375916012097,
+        "audio_seconds": 4.371700680272109,
+        "rtf": 1.9345734153706249,
+        "realtime_factor": 0.516909822111052,
+        "stages": {
+          "duration_predictor": 0.0008660000166855752,
+          "text_encoder": 0.004626624984666705,
+          "vector_estimator": 8.412149459880311,
+          "vocoder": 0.03875154198613018
+        }
+      },
+      "reference_audio": "samples/round5_original50_pilot/reference_03.wav",
+      "text": "The little girl carried a basket of flowers to her grandmother.",
+      "transcript": "The little girl carried a basket of flowers to her grandmother.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 0,
+      "language": "ko",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/round5_original50_pilot/cfg-mixed-v1-selected_00.wav",
+      "timing": {
+        "seconds": 0.19873395800823346,
+        "audio_seconds": 5.305736961451247,
+        "rtf": 0.0374564286643179,
+        "realtime_factor": 26.69768676992501,
+        "stages": {
+          "duration_predictor": 0.0010389169910922647,
+          "text_encoder": 0.005175958038307726,
+          "vector_estimator": 0.1456474990118295,
+          "vocoder": 0.04637833300512284
+        }
+      },
+      "reference_audio": "samples/round5_original50_pilot/reference_00.wav",
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "transcript": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 1,
+      "language": "ko",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/round5_original50_pilot/cfg-mixed-v1-selected_01.wav",
+      "timing": {
+        "seconds": 0.15273395902477205,
+        "audio_seconds": 4.054557823129252,
+        "rtf": 0.03766969560860624,
+        "realtime_factor": 26.546537842783476,
+        "stages": {
+          "duration_predictor": 0.0007921660435386002,
+          "text_encoder": 0.003645749995484948,
+          "vector_estimator": 0.11219283303944394,
+          "vocoder": 0.03563337499508634
+        }
+      },
+      "reference_audio": "samples/round5_original50_pilot/reference_01.wav",
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "transcript": "자전거를 세우고 강변벤치에 앉아 쉬었습니다.",
+      "errors": 0,
+      "reference_units": 19
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 2,
+      "language": "en",
+      "reference": "Please close the window before you leave the room.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/round5_original50_pilot/cfg-mixed-v1-selected_02.wav",
+      "timing": {
+        "seconds": 0.11542229197220877,
+        "audio_seconds": 2.7317233560090703,
+        "rtf": 0.042252555229763726,
+        "realtime_factor": 23.66720768867431,
+        "stages": {
+          "duration_predictor": 0.0008494590292684734,
+          "text_encoder": 0.004205374978482723,
+          "vector_estimator": 0.08538350014714524,
+          "vocoder": 0.024571374990046024
+        }
+      },
+      "reference_audio": "samples/round5_original50_pilot/reference_02.wav",
+      "text": "Please close the window before you leave the room.",
+      "transcript": "Please close the window before you leave the room.",
+      "errors": 0,
+      "reference_units": 9
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 3,
+      "language": "en",
+      "reference": "The little girl carried a basket of flowers to her grandmother.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/round5_original50_pilot/cfg-mixed-v1-selected_03.wav",
+      "timing": {
+        "seconds": 0.1640693750232458,
+        "audio_seconds": 4.371700680272109,
+        "rtf": 0.03752987384603687,
+        "realtime_factor": 26.645439952780425,
+        "stages": {
+          "duration_predictor": 0.0009393329964950681,
+          "text_encoder": 0.004555666004307568,
+          "vector_estimator": 0.12139612605096772,
+          "vocoder": 0.036764124990440905
+        }
+      },
+      "reference_audio": "samples/round5_original50_pilot/reference_03.wav",
+      "text": "The little girl carried a basket of flowers to her grandmother.",
+      "transcript": "The little girl carried a basket of flowers to her grandmother.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "round5-original50-student",
+      "case": 0,
+      "language": "ko",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/round5_original50_pilot/round5-original50-student_00.wav",
+      "timing": {
+        "seconds": 0.19304845796432346,
+        "audio_seconds": 5.305736961451247,
+        "rtf": 0.03638485272958576,
+        "realtime_factor": 27.483964479176414,
+        "stages": {
+          "duration_predictor": 0.000977999996393919,
+          "text_encoder": 0.004619500017724931,
+          "vector_estimator": 0.14013924996834248,
+          "vocoder": 0.04686762497294694
+        }
+      },
+      "reference_audio": "samples/round5_original50_pilot/reference_00.wav",
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "transcript": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "round5-original50-student",
+      "case": 1,
+      "language": "ko",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/round5_original50_pilot/round5-original50-student_01.wav",
+      "timing": {
+        "seconds": 0.14976137498160824,
+        "audio_seconds": 4.054557823129252,
+        "rtf": 0.036936549314278734,
+        "realtime_factor": 27.07345484526421,
+        "stages": {
+          "duration_predictor": 0.0007881249766796827,
+          "text_encoder": 0.0037537080352194607,
+          "vector_estimator": 0.10797358205309138,
+          "vocoder": 0.03680870798416436
+        }
+      },
+      "reference_audio": "samples/round5_original50_pilot/reference_01.wav",
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "transcript": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "errors": 0,
+      "reference_units": 19
+    },
+    {
+      "variant": "round5-original50-student",
+      "case": 2,
+      "language": "en",
+      "reference": "Please close the window before you leave the room.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/round5_original50_pilot/round5-original50-student_02.wav",
+      "timing": {
+        "seconds": 0.11309795803390443,
+        "audio_seconds": 2.7317233560090703,
+        "rtf": 0.04140168798027032,
+        "realtime_factor": 24.153604569855773,
+        "stages": {
+          "duration_predictor": 0.0007838750025257468,
+          "text_encoder": 0.003803167026489973,
+          "vector_estimator": 0.08102049998706207,
+          "vocoder": 0.027110750030260533
+        }
+      },
+      "reference_audio": "samples/round5_original50_pilot/reference_02.wav",
+      "text": "Please close the window before you leave the room.",
+      "transcript": "Please close the window before you leave the room.",
+      "errors": 0,
+      "reference_units": 9
+    },
+    {
+      "variant": "round5-original50-student",
+      "case": 3,
+      "language": "en",
+      "reference": "The little girl carried a basket of flowers to her grandmother.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/round5_original50_pilot/round5-original50-student_03.wav",
+      "timing": {
+        "seconds": 0.15684745798353106,
+        "audio_seconds": 4.371700680272109,
+        "rtf": 0.035877904150969545,
+        "realtime_factor": 27.87230814241909,
+        "stages": {
+          "duration_predictor": 0.0008917499799281359,
+          "text_encoder": 0.004418166994582862,
+          "vector_estimator": 0.11250575189478695,
+          "vocoder": 0.03860854101367295
+        }
+      },
+      "reference_audio": "samples/round5_original50_pilot/reference_03.wav",
+      "text": "The little girl carried a basket of flowers to her grandmother.",
+      "transcript": "The little girl carried a basket of flowers to her grandmother.",
+      "errors": 0,
+      "reference_units": 11
+    }
+  ],
+  "models": {
+    "reference": {
+      "mode": "original FP32",
+      "guidance_scale": 4,
+      "steps": 50
+    },
+    "cfg-mixed-v1-selected": {
+      "mode": "experimental-CFG-distillation",
+      "status": "selected on validation; one Korean sample listening feedback positive; independent EN ASR regression remains",
+      "checkpoint": "distill/joint-cfg-mixed-v1/best_step_00600.pt",
+      "step": 600,
+      "validation_relative_update_mse": 0.0558609840227291,
+      "base": "models/fast-fp32-cached",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "training": {
+        "checkpoints": "distill/mixed-v1/initial.pt",
+        "data": "distill/trajectories-v2",
+        "output": "distill/joint-cfg-mixed-v1",
+        "iterations": 2400,
+        "learning_rate": 3e-05,
+        "validate_every": 200,
+        "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+        "train_all": true
+      },
+      "teacher_guidance_scale": 4,
+      "student_internal_guidance_scale": 1,
+      "guidance_mode": "learned one-branch approximation; not exact CFG4",
+      "source_step": 600,
+      "supported_steps": [
+        8
+      ],
+      "source_export": "models/cfg-mixed-v1-preview",
+      "record": "records/2026-10-28/ROUND3.md",
+      "vector_sha256": "d2b63c7a648b93b1d1d94a4443a47bd92ec0aca75299a27dffb6473bc34b93ea",
+      "listening_feedback": {
+        "user_quote": "이제 거의 차이 없는듯",
+        "sample": "samples/epyc_cfg_mixed_preview_v1_8/ko_short_8steps.wav",
+        "reference": "samples/equivalence_fp32_cached/ko_short_reference.wav",
+        "scope": "One Korean M1 sentence, seed42, 8 steps; not a universal quality approval"
+      }
+    },
+    "round5-original50-student": {
+      "mode": "experimental-CFG-distillation",
+      "status": "Local experimental candidate; original FP32 teacher only; listening pending",
+      "checkpoint": "distill/joint-original50-round5/best.pt",
+      "step": 1200,
+      "validation_relative_update_mse": 0.042197953657402344,
+      "base": "models/fast-fp32-cached",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "training": {
+        "checkpoints": "distill/partial-original-round5/initial.pt",
+        "data": "distill/trajectories-original50-round5",
+        "output": "distill/joint-original50-round5",
+        "iterations": 1200,
+        "learning_rate": 1e-05,
+        "validate_every": 200,
+        "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+        "train_all": true
+      },
+      "teacher_guidance_scale": 4,
+      "student_internal_guidance_scale": 1,
+      "guidance_mode": "Original FP32 CFG4 50-step trajectory approximated by one-branch 8-step student; not mathematically equivalent",
+      "supported_steps": [
+        8
+      ],
+      "teacher_steps": 50,
+      "student_steps": 8,
+      "teacher_repository": "Supertone/supertonic-3",
+      "teacher_revision": "3cadd1ee6394adea1bd021217a0e650ede09a323",
+      "teacher_distilled": false,
+      "initialization": "distill/partial-original-round5/initial.pt",
+      "vector_sha256": "7c81ab7f0ddcc4266743701599a8708d2edd1be04285770f996e84a8bb5f4447",
+      "test_evaluated": false
+    }
+  }
+}

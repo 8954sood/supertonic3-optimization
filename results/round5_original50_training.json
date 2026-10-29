@@ -1,0 +1,60 @@
+{
+  "config": {
+    "checkpoints": "distill/partial-original-round5/initial.pt",
+    "data": "distill/trajectories-original50-round5",
+    "output": "distill/joint-original50-round5",
+    "iterations": 1200,
+    "learning_rate": 1e-05,
+    "validate_every": 200,
+    "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+    "train_all": true
+  },
+  "method": "Selected FFNs or all learned vector tensors jointly optimized through the configured graph; teacher identity and input trajectory origin are specified by dataset metadata; no decoder or waveform loss",
+  "teacher": "original FP32 CFG4 50 steps, mapped to 8-step student targets",
+  "teacher_package": null,
+  "input_state_source": null,
+  "train_pairs": 640,
+  "validation_pairs": 48,
+  "initial_validation_relative_update_mse": 0.06975272759639968,
+  "history": [
+    {
+      "step": 200,
+      "validation_relative_update_mse": 0.050811436881000795,
+      "train_loss": 0.0415780134499073,
+      "elapsed_seconds": 40.24865416705143
+    },
+    {
+      "step": 400,
+      "validation_relative_update_mse": 0.047630744656392686,
+      "train_loss": 0.028973737731575966,
+      "elapsed_seconds": 75.01217504200758
+    },
+    {
+      "step": 600,
+      "validation_relative_update_mse": 0.04590255739943435,
+      "train_loss": 0.0424877293407917,
+      "elapsed_seconds": 110.52363112504827
+    },
+    {
+      "step": 800,
+      "validation_relative_update_mse": 0.043414317653514445,
+      "train_loss": 0.033224184066057205,
+      "elapsed_seconds": 145.84854775003623
+    },
+    {
+      "step": 1000,
+      "validation_relative_update_mse": 0.04297854419564828,
+      "train_loss": 0.01047313679009676,
+      "elapsed_seconds": 181.52193766704295
+    },
+    {
+      "step": 1200,
+      "validation_relative_update_mse": 0.042197953657402344,
+      "train_loss": 0.027987277135252953,
+      "elapsed_seconds": 216.33682170900283
+    }
+  ],
+  "best_validation_relative_update_mse": 0.042197953657402344,
+  "elapsed_seconds": 216.92368212505244,
+  "complete": true
+}

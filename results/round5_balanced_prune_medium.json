@@ -1,0 +1,256 @@
+{
+  "method": "Approved INT8 student own-trajectory activation collection, train-only neuron ranking, anchored ridge output refit; choose a bounded number of FFNs using held-out validation; no tests",
+  "config": {
+    "data": "distill/balanced-activation-round5",
+    "output": "distill/balanced-pruned-medium-round5",
+    "keep_fraction": 0.75,
+    "max_layers": 12,
+    "max_relative_rmse": 0.125,
+    "ridge": 0.01
+  },
+  "source_checkpoint": "distill/joint-cfg-mixed-v1/best_step_00600.pt",
+  "source_checkpoint_sha256": "54b3c1308d449834864fd9ae010aa46d7af8a90d8b8e77e6b9817b11edb1adc8",
+  "source_vector_sha256": "d2b63c7a648b93b1d1d94a4443a47bd92ec0aca75299a27dffb6473bc34b93ea",
+  "teacher_guidance": "Approved learned conditional CFG4 approximation; not original teacher equivalence",
+  "parameters_before": 45480256,
+  "parameters_after": 40101056,
+  "selected_layers": [
+    11,
+    27,
+    22,
+    15,
+    8,
+    10,
+    13,
+    21,
+    17,
+    12,
+    16,
+    24
+  ],
+  "rows": [
+    {
+      "layer": 6,
+      "width_before": 1536,
+      "width_after": 1152,
+      "gated_relative_validation_rmse": 0.12390708178281784,
+      "unpruned_fp32_vs_int8_target_rmse": 0.03977411985397339,
+      "weight_norm_ratio": 0.8672034740447998,
+      "parameter_reduction": 393600,
+      "selected": false
+    },
+    {
+      "layer": 7,
+      "width_before": 1536,
+      "width_after": 1152,
+      "gated_relative_validation_rmse": 0.13373403251171112,
+      "unpruned_fp32_vs_int8_target_rmse": 0.04089304432272911,
+      "weight_norm_ratio": 0.9094183444976807,
+      "parameter_reduction": 393600,
+      "selected": false
+    },
+    {
+      "layer": 8,
+      "width_before": 2048,
+      "width_after": 1536,
+      "gated_relative_validation_rmse": 0.10018753260374069,
+      "unpruned_fp32_vs_int8_target_rmse": 0.037458762526512146,
+      "weight_norm_ratio": 0.8842921257019043,
+      "parameter_reduction": 524800,
+      "selected": true
+    },
+    {
+      "layer": 9,
+      "width_before": 1536,
+      "width_after": 1152,
+      "gated_relative_validation_rmse": 0.12052074074745178,
+      "unpruned_fp32_vs_int8_target_rmse": 0.038420420140028,
+      "weight_norm_ratio": 0.8570593595504761,
+      "parameter_reduction": 393600,
+      "selected": false
+    },
+    {
+      "layer": 10,
+      "width_before": 1536,
+      "width_after": 1152,
+      "gated_relative_validation_rmse": 0.10063779354095459,
+      "unpruned_fp32_vs_int8_target_rmse": 0.053643301129341125,
+      "weight_norm_ratio": 0.9456825256347656,
+      "parameter_reduction": 393600,
+      "selected": true
+    },
+    {
+      "layer": 11,
+      "width_before": 1536,
+      "width_after": 1152,
+      "gated_relative_validation_rmse": 0.07404766976833344,
+      "unpruned_fp32_vs_int8_target_rmse": 0.04278278723359108,
+      "weight_norm_ratio": 0.9436659812927246,
+      "parameter_reduction": 393600,
+      "selected": true
+    },
+    {
+      "layer": 12,
+      "width_before": 2048,
+      "width_after": 1536,
+      "gated_relative_validation_rmse": 0.1126965880393982,
+      "unpruned_fp32_vs_int8_target_rmse": 0.040286142379045486,
+      "weight_norm_ratio": 0.8576849102973938,
+      "parameter_reduction": 524800,
+      "selected": true
+    },
+    {
+      "layer": 13,
+      "width_before": 2048,
+      "width_after": 1536,
+      "gated_relative_validation_rmse": 0.10920503735542297,
+      "unpruned_fp32_vs_int8_target_rmse": 0.038245461881160736,
+      "weight_norm_ratio": 0.8219282627105713,
+      "parameter_reduction": 524800,
+      "selected": true
+    },
+    {
+      "layer": 14,
+      "width_before": 2048,
+      "width_after": 1536,
+      "gated_relative_validation_rmse": 0.12346774339675903,
+      "unpruned_fp32_vs_int8_target_rmse": 0.040349699556827545,
+      "weight_norm_ratio": 0.8611112236976624,
+      "parameter_reduction": 524800,
+      "selected": false
+    },
+    {
+      "layer": 15,
+      "width_before": 1536,
+      "width_after": 1152,
+      "gated_relative_validation_rmse": 0.09992054849863052,
+      "unpruned_fp32_vs_int8_target_rmse": 0.04109490290284157,
+      "weight_norm_ratio": 0.8033462762832642,
+      "parameter_reduction": 393600,
+      "selected": true
+    },
+    {
+      "layer": 16,
+      "width_before": 1536,
+      "width_after": 1152,
+      "gated_relative_validation_rmse": 0.11430312693119049,
+      "unpruned_fp32_vs_int8_target_rmse": 0.03902771323919296,
+      "weight_norm_ratio": 0.885705292224884,
+      "parameter_reduction": 393600,
+      "selected": true
+    },
+    {
+      "layer": 17,
+      "width_before": 2048,
+      "width_after": 1536,
+      "gated_relative_validation_rmse": 0.11010413616895676,
+      "unpruned_fp32_vs_int8_target_rmse": 0.037530165165662766,
+      "weight_norm_ratio": 0.8959280252456665,
+      "parameter_reduction": 524800,
+      "selected": true
+    },
+    {
+      "layer": 18,
+      "width_before": 2048,
+      "width_after": 1536,
+      "gated_relative_validation_rmse": 0.12188170105218887,
+      "unpruned_fp32_vs_int8_target_rmse": 0.035598024725914,
+      "weight_norm_ratio": 0.888003945350647,
+      "parameter_reduction": 524800,
+      "selected": false
+    },
+    {
+      "layer": 19,
+      "width_before": 2048,
+      "width_after": 1536,
+      "gated_relative_validation_rmse": 0.1426989734172821,
+      "unpruned_fp32_vs_int8_target_rmse": 0.04364797845482826,
+      "weight_norm_ratio": 0.8585014939308167,
+      "parameter_reduction": 524800,
+      "selected": false
+    },
+    {
+      "layer": 20,
+      "width_before": 2048,
+      "width_after": 1536,
+      "gated_relative_validation_rmse": 0.14925912022590637,
+      "unpruned_fp32_vs_int8_target_rmse": 0.04537366330623627,
+      "weight_norm_ratio": 0.8794247508049011,
+      "parameter_reduction": 524800,
+      "selected": false
+    },
+    {
+      "layer": 21,
+      "width_before": 2048,
+      "width_after": 1536,
+      "gated_relative_validation_rmse": 0.10941481590270996,
+      "unpruned_fp32_vs_int8_target_rmse": 0.039729442447423935,
+      "weight_norm_ratio": 0.885354220867157,
+      "parameter_reduction": 524800,
+      "selected": true
+    },
+    {
+      "layer": 22,
+      "width_before": 1536,
+      "width_after": 1152,
+      "gated_relative_validation_rmse": 0.09886116534471512,
+      "unpruned_fp32_vs_int8_target_rmse": 0.05368709936738014,
+      "weight_norm_ratio": 0.9682597517967224,
+      "parameter_reduction": 393600,
+      "selected": true
+    },
+    {
+      "layer": 23,
+      "width_before": 1536,
+      "width_after": 1152,
+      "gated_relative_validation_rmse": 0.12912309169769287,
+      "unpruned_fp32_vs_int8_target_rmse": 0.03764602541923523,
+      "weight_norm_ratio": 0.862105667591095,
+      "parameter_reduction": 393600,
+      "selected": false
+    },
+    {
+      "layer": 24,
+      "width_before": 1536,
+      "width_after": 1152,
+      "gated_relative_validation_rmse": 0.11592170596122742,
+      "unpruned_fp32_vs_int8_target_rmse": 0.033884573727846146,
+      "weight_norm_ratio": 0.89283686876297,
+      "parameter_reduction": 393600,
+      "selected": true
+    },
+    {
+      "layer": 25,
+      "width_before": 1536,
+      "width_after": 1152,
+      "gated_relative_validation_rmse": 0.1386343240737915,
+      "unpruned_fp32_vs_int8_target_rmse": 0.03827939182519913,
+      "weight_norm_ratio": 0.883725106716156,
+      "parameter_reduction": 393600,
+      "selected": false
+    },
+    {
+      "layer": 26,
+      "width_before": 2048,
+      "width_after": 1536,
+      "gated_relative_validation_rmse": 0.13170230388641357,
+      "unpruned_fp32_vs_int8_target_rmse": 0.04169442504644394,
+      "weight_norm_ratio": 0.9427300095558167,
+      "parameter_reduction": 524800,
+      "selected": false
+    },
+    {
+      "layer": 27,
+      "width_before": 1536,
+      "width_after": 1152,
+      "gated_relative_validation_rmse": 0.09215284138917923,
+      "unpruned_fp32_vs_int8_target_rmse": 0.024201467633247375,
+      "weight_norm_ratio": 0.9645563364028931,
+      "parameter_reduction": 393600,
+      "selected": true
+    }
+  ],
+  "no_test_evaluated": true,
+  "default_replacement": false,
+  "selection_revision": "Second, explicitly wider error-budget experiment after strict 6% selected none. Train/dev only; no test used. Human C/D feedback motivates preserving approved B and narrowing only a subset."
+}

@@ -1,0 +1,52 @@
+{
+  "source": "results/round5_original50_B_comparison.json",
+  "definitions": {
+    "analysis_sr": 16000,
+    "hop_samples": 160,
+    "dtw": "MFCC1..19 Euclidean, 15% Sakoe-Chiba band; active frame spectral/pitch comparison",
+    "pitch": "pYIN 65..500Hz; cents only on jointly voiced frames; errors can reflect tracker mistakes",
+    "logmel": "64 bands, 60..7600Hz, absolute 1e-9 power floor, no per-file gain normalization",
+    "warning": "No MOS, speaker similarity, perceptual quality, or exact reproduction score is implied.",
+    "harmonic_ratio": "Custom median voiced-frame 2..4kHz mean-power ratio: +/-0.12 F0 around integer versus half-integer harmonics, FFT1024; pYIN voicing and >5% peak RMS. Not directly comparable to Paradee's reported dB."
+  },
+  "rows": [
+    {
+      "variant": "B-balanced",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_00.wav",
+      "reference_audio": "samples/listening_original50/original50_00.wav",
+      "duration_relative_error": 0.0,
+      "dtw_logmel_mae_db": 3.4286532402038574,
+      "dtw_rms_mae_db": 1.5342198610305786,
+      "voiced_unvoiced_agreement": 0.8075117370892019,
+      "voiced_pair_frames": 284,
+      "f0_median_abs_cents": 20.00000000000012,
+      "f0_gross_error_over_200_cents": 0.007042253521126761,
+      "unaligned_wave_rmse": 0.0620696097612381,
+      "unaligned_wave_snr_db": -1.9762585452088655,
+      "reference_harmonic_interharmonic_2_4khz_db": 3.975803852081299,
+      "candidate_harmonic_interharmonic_2_4khz_db": 3.7326695919036865
+    },
+    {
+      "variant": "B-balanced",
+      "case": 1,
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_01.wav",
+      "reference_audio": "samples/listening_original50/original50_01.wav",
+      "duration_relative_error": 0.0,
+      "dtw_logmel_mae_db": 4.057277202606201,
+      "dtw_rms_mae_db": 1.5241868495941162,
+      "voiced_unvoiced_agreement": 0.9568106312292359,
+      "voiced_pair_frames": 248,
+      "f0_median_abs_cents": 30.000000000000007,
+      "f0_gross_error_over_200_cents": 0.04435483870967742,
+      "unaligned_wave_rmse": 0.07816965132951736,
+      "unaligned_wave_snr_db": -2.4191037527309716,
+      "reference_harmonic_interharmonic_2_4khz_db": 7.705264091491699,
+      "candidate_harmonic_interharmonic_2_4khz_db": 5.768420696258545
+    }
+  ]
+}

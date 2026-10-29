@@ -1,0 +1,9 @@
+{
+  "validation": [
+    ["ko", "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다."],
+    ["ko", "자전거를 세우고 강변 벤치에 앉아 쉬었습니다."],
+    ["en", "Please close the window before you leave the room."],
+    ["en", "The little girl carried a basket of flowers to her grandmother."]
+  ],
+  "note": "Development pilot only. The first two texts match the user's M1/F1 listening clips. No independent test claim; authored or existing development text may be used for tuning."
+}

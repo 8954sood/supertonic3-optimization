@@ -1,0 +1,46 @@
+{
+  "rows": [
+    {
+      "variant": "fp32_diagnostic",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round5_quantization_diagnostic/fp32_00.wav",
+      "reference_audio": "samples/round4_expanded_final_validation/round4-cfg1024-expanded_00.wav",
+      "rmse_vs_int8": 0.0270393043756485,
+      "note": "Same student weights, only vector precision changed. Diagnostic; not an eligible 1GB speed replacement."
+    },
+    {
+      "variant": "fp32_diagnostic",
+      "case": 1,
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round5_quantization_diagnostic/fp32_01.wav",
+      "reference_audio": "samples/round4_expanded_final_validation/round4-cfg1024-expanded_01.wav",
+      "rmse_vs_int8": 0.0417792871594429,
+      "note": "Same student weights, only vector precision changed. Diagnostic; not an eligible 1GB speed replacement."
+    },
+    {
+      "variant": "fp32_diagnostic",
+      "case": 2,
+      "language": "ko",
+      "voice": "M3",
+      "audio": "samples/round5_quantization_diagnostic/fp32_02.wav",
+      "reference_audio": "samples/round4_expanded_final_validation/round4-cfg1024-expanded_02.wav",
+      "rmse_vs_int8": 0.05036746338009834,
+      "note": "Same student weights, only vector precision changed. Diagnostic; not an eligible 1GB speed replacement."
+    },
+    {
+      "variant": "fp32_diagnostic",
+      "case": 8,
+      "language": "ko",
+      "voice": "M3",
+      "audio": "samples/round5_quantization_diagnostic/fp32_08.wav",
+      "reference_audio": "samples/round4_expanded_final_validation/round4-cfg1024-expanded_08.wav",
+      "rmse_vs_int8": 0.041062116622924805,
+      "note": "Same student weights, only vector precision changed. Diagnostic; not an eligible 1GB speed replacement."
+    }
+  ],
+  "steps": 8,
+  "precision_comparison": "FP32 student vs reduced-range INT8 student, same weights"
+}

@@ -18,7 +18,10 @@ p.add_argument("--split", choices=["validation", "test"], default="validation")
 p.add_argument("--output", required=True)
 p.add_argument("--generate-only", action="store_true")
 p.add_argument("--corpus", default="distill/corpus.json")
+p.add_argument("--reference-steps", type=int, default=8)
 a = p.parse_args()
+if not 8 <= a.reference_steps <= 50:
+    p.error("reference-steps must be from 8 to 50")
 texts = json.loads(Path(a.corpus).read_text())[a.split]
 out = Path(a.output)
 samples = Path("samples") / out.stem
@@ -31,7 +34,9 @@ for name, variant in variants:
         voice = voices[i % len(voices)]
         path = samples / f"{name}_{i:02d}.wav"
         e = Engine(model=variant, voice=voice) if variant else Engine(voice=voice)
-        wav, timing = e.synthesize(text, lang, 8, seed=400 + i)
+        wav, timing = e.synthesize(
+            text, lang, a.reference_steps if name == "reference" else 8, seed=400 + i
+        )
         sf.write(path, wav, e.sample_rate, subtype="FLOAT")
         cases.append(
             {
@@ -52,13 +57,14 @@ report = {
     "split": a.split,
     "steps": 8,
     "reference_guidance_scale": 4,
+    "reference_steps": a.reference_steps,
     "corpus": a.corpus,
     "note": "ASR proxy only; does not assess timbre, prosody or listening quality. Test split must not be reused for tuning.",
     "rows": cases,
     "models": {
         name: json.loads((Path(variant) / "manifest.json").read_text())
         if variant and (Path(variant) / "manifest.json").exists()
-        else {"mode": "original FP32", "guidance_scale": 4}
+        else {"mode": "original FP32", "guidance_scale": 4, "steps": a.reference_steps}
         for name, variant in variants
     },
 }

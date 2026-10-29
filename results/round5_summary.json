@@ -1,0 +1,218 @@
+{
+  "teacher": "Original Supertone/supertonic-3 FP32 CFG4, 50 steps",
+  "student_steps": 8,
+  "date": "2026-10-29",
+  "development_only": true,
+  "new_test_evaluated": false,
+  "server_performance": "Not measured for the new models; no ARM estimate",
+  "publication": "No additional model/Git upload, commit, push or PR after user restriction",
+  "asr": {
+    "round5_original50_pilot": [
+      {
+        "variant": "reference",
+        "language": "ko",
+        "errors": 0,
+        "reference_units": 44,
+        "metric": "CER"
+      },
+      {
+        "variant": "reference",
+        "language": "en",
+        "errors": 0,
+        "reference_units": 20,
+        "metric": "WER"
+      },
+      {
+        "variant": "cfg-mixed-v1-selected",
+        "language": "ko",
+        "errors": 0,
+        "reference_units": 44,
+        "metric": "CER"
+      },
+      {
+        "variant": "cfg-mixed-v1-selected",
+        "language": "en",
+        "errors": 0,
+        "reference_units": 20,
+        "metric": "WER"
+      },
+      {
+        "variant": "round5-original50-student",
+        "language": "ko",
+        "errors": 0,
+        "reference_units": 44,
+        "metric": "CER"
+      },
+      {
+        "variant": "round5-original50-student",
+        "language": "en",
+        "errors": 0,
+        "reference_units": 20,
+        "metric": "WER"
+      }
+    ],
+    "round5_original50_preview_pilot_asr": [
+      {
+        "variant": "original50-preview400",
+        "language": "ko",
+        "errors": 0,
+        "reference_units": 44,
+        "metric": "CER"
+      },
+      {
+        "variant": "original50-preview400",
+        "language": "en",
+        "errors": 0,
+        "reference_units": 20,
+        "metric": "WER"
+      }
+    ]
+  },
+  "acoustics": {
+    "round5_original50_pilot_acoustics": [
+      {
+        "variant": "cfg-mixed-v1-selected",
+        "sentences": 4,
+        "mean_dtw_logmel_mae_db": 3.9231550097465515,
+        "mean_sentence_median_f0_abs_cents": 22.500000000000043
+      },
+      {
+        "variant": "round5-original50-student",
+        "sentences": 4,
+        "mean_dtw_logmel_mae_db": 3.664558529853821,
+        "mean_sentence_median_f0_abs_cents": 19.999999999999975
+      }
+    ],
+    "round5_original50_preview_pilot_acoustics": [
+      {
+        "variant": "original50-preview400",
+        "sentences": 4,
+        "mean_dtw_logmel_mae_db": 3.834273040294647,
+        "mean_sentence_median_f0_abs_cents": 20.000000000000142
+      }
+    ]
+  },
+  "vector_bytes": {
+    "cfg-mixed-v1-selected": {
+      "bytes": 52077304,
+      "sha256": "d2b63c7a648b93b1d1d94a4443a47bd92ec0aca75299a27dffb6473bc34b93ea"
+    },
+    "round5-original50-preview": {
+      "bytes": 48903928,
+      "sha256": "9dea7ce25ac42c64c8dce9140e6c6f0f888cf544fc5bb92be420f06ddb121a1f"
+    },
+    "round5-original50-student": {
+      "bytes": 48903928,
+      "sha256": "7c81ab7f0ddcc4266743701599a8708d2edd1be04285770f996e84a8bb5f4447"
+    }
+  },
+  "feedback": {
+    "original50": "원본은 괜찮음",
+    "C": "살짝 뭉개지고 기계음이 더 들어감",
+    "D": "D도 비슷하게 나쁨",
+    "E400": "기존 B 수준에 가까움",
+    "F1200": "pending"
+  },
+  "default_model": "cfg-mixed-v1-selected",
+  "sources": [
+    {
+      "path": "results/round5_audio_acoustics.json",
+      "sha256": "5c75e08466c14708dc27a16081d9ddd0605e62d314466c060f8b0f1f9e5dd939"
+    },
+    {
+      "path": "results/round5_audio_validation.json",
+      "sha256": "80df2f15997921e065b132c08078ddbb512863f53fa5c5faa96669bfff0a23ac"
+    },
+    {
+      "path": "results/round5_balanced_prune_light.json",
+      "sha256": "8c9379fa29b8366e4af6cd997c6706bd6a8ce9809a85ab62e588a42f7b954342"
+    },
+    {
+      "path": "results/round5_balanced_prune_medium.json",
+      "sha256": "4ac9d7718fa78a030e2c272c7a1b4ae2f72d9aa18b3dc118d99fc0b75b7c5fb2"
+    },
+    {
+      "path": "results/round5_balanced_prune_strict.json",
+      "sha256": "bfdb45bc32a086031ea4cd66a8cc82df3d7ba80d47f335364b3f76bfdafafcd6"
+    },
+    {
+      "path": "results/round5_listening_request.json",
+      "sha256": "fee74394637b5af9bd371b81406f154d8f17a028a968d1f98de1ea13470bc8e5"
+    },
+    {
+      "path": "results/round5_original50_B_acoustics.json",
+      "sha256": "98bbb640caba93e2da17598582f38100f811c9a4cd8309787f5cf7df425060fe"
+    },
+    {
+      "path": "results/round5_original50_B_comparison.json",
+      "sha256": "9577cc2d9a02b7040ada9c337262a9612ba2ab3d4b908c44d3125237ebfdaec3"
+    },
+    {
+      "path": "results/round5_original50_data_audit.json",
+      "sha256": "02d1969cee87b35ddbfb2e1a9c5756cb46bb7d3aadb0136f233bca93ff52eafd"
+    },
+    {
+      "path": "results/round5_original50_final_listening.json",
+      "sha256": "cab790df93eb2553673630ca7fa4cd7069de606a54ea3c6fe26a8b632aa885ad"
+    },
+    {
+      "path": "results/round5_original50_listening.json",
+      "sha256": "24ead2879a2076c3f1f1e65102751725a3f048ffbf8083a02ad3c87ebf19f906"
+    },
+    {
+      "path": "results/round5_original50_pilot.json",
+      "sha256": "b55dcf6ab25a926ee9e7254d93fe8e85bb7bf99e6b9b0847891b2c52b60a57c2"
+    },
+    {
+      "path": "results/round5_original50_pilot_acoustics.json",
+      "sha256": "ad0c00a12d817af4155e9e7334a00a703fb32daab5a428716175a126f1facaaf"
+    },
+    {
+      "path": "results/round5_original50_preview_acoustics.json",
+      "sha256": "8a91ac9853d9ac2de80a6839332a05dc126e974e09ccd9dd5d25bab3f0c77893"
+    },
+    {
+      "path": "results/round5_original50_preview_asr.json",
+      "sha256": "01704cf53248d2454404cc6ce596aa11dd1c36fe07be9d9e43207ccb0f93fc62"
+    },
+    {
+      "path": "results/round5_original50_preview_listening.json",
+      "sha256": "adcfb42982d539b7458835e3eef0b5cfb2304fc4d5b2cd25a4c00cb16bb95a75"
+    },
+    {
+      "path": "results/round5_original50_preview_pilot.json",
+      "sha256": "a18480c4c905d30de6a00e9d83670dad7586492c08e7365b261cea8849082238"
+    },
+    {
+      "path": "results/round5_original50_preview_pilot_acoustics.json",
+      "sha256": "541af513b84d516443b54628adb4425b26087cb812431e4efb6adf3ed8d7c11b"
+    },
+    {
+      "path": "results/round5_original50_preview_pilot_asr.json",
+      "sha256": "66c7b4456cdaf02f0218b92a39d9f69b047a49024313becb8ac346e4a0e63eaf"
+    },
+    {
+      "path": "results/round5_original50_training.json",
+      "sha256": "e6b7fdd189e0a7f9a79652890a9fab2d8bb1a0f2fcaa4163e00b2c6047175db9"
+    },
+    {
+      "path": "results/round5_quantization_acoustics.json",
+      "sha256": "b05cf6cf33db65b0f28a1b7b41eea3ef5fbc4532a46e868d77287796709cf4ed"
+    },
+    {
+      "path": "results/round5_quantization_diagnostic.json",
+      "sha256": "83d35d53cbbd00a833a8515055e202f0b15101e14a70229e685bc52d0e822f4d"
+    },
+    {
+      "path": "results/round5_rollout_audio_training.json",
+      "sha256": "cf85b180c793f165c09d2864c0196a9c1a13fe04b5912c76354ed4078867a3c6"
+    },
+    {
+      "path": "results/round5_rollout_latent_first.json",
+      "sha256": "f45aa2ae81ff790df21b8f9994dffcc52caa6ccde47c618fda147bed5dd24b10"
+    }
+  ],
+  "excluded_experiments": [
+    "Derived B-teacher collection/refit and recovery were rejected by user policy; their raw records are historical only."
+  ]
+}
