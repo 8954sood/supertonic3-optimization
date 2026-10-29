@@ -10,11 +10,12 @@ from pathlib import Path, PurePosixPath
 from huggingface_hub import snapshot_download
 
 MODEL_REPO = "babihoba/supertonic3-optimization"
-MODEL_REVISION = "d33f1094c6057d8c613f2c45987ba45e57c4b3af"
+MODEL_REVISION = "f1d05bdb691d8769557e19644f3a63089992daf0"
 DATASET_REPO = "babihoba/supertonic3-optimization-data"
 DATASET_REVISION = "e56d93c9959647c850b639a614e629e4e4ac1593"
 MODELS = [
     "round5-original50-student", "round5-original50-preview",
+    "round8-latent-retime-g135",
     "cfg-mixed-v1-selected", "cfg1024-v1-final", "mixed-v1-selected",
 ]
 
@@ -85,7 +86,7 @@ def main():
     parser.add_argument("--model", choices=MODELS, default=MODELS[0])
     parser.add_argument("--root", default=".hf-assets")
     args = parser.parse_args()
-    original50 = args.model.startswith("round5-original50-")
+    original50 = args.model.startswith("round5-original50-") or args.model == "round8-latent-retime-g135"
     root = Path(args.root)
     patterns = []
     if args.purpose in {"inference", "all"}:

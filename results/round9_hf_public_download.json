@@ -1,0 +1,28 @@
+{
+  "receipts": [
+    {
+      "repository": "babihoba/supertonic3-optimization",
+      "revision": "f1d05bdb691d8769557e19644f3a63089992daf0",
+      "verified_files": 21
+    }
+  ],
+  "downloaded_wave_checks": [
+    {
+      "language": "ko",
+      "steps": 8,
+      "speed": 2,
+      "bitidentical": true,
+      "float_sha256": "5191c7138e4cfb74d9195942ba2da588cc0aa7ba64e4b638fe68db638c7c8c77"
+    },
+    {
+      "language": "en",
+      "steps": 8,
+      "speed": 2,
+      "bitidentical": true,
+      "float_sha256": "dab56a63e08539a0b5b98b38bc192dc56aceb189f57e5f5c636dcaed9fe4427d"
+    }
+  ],
+  "token": false,
+  "complete": true,
+  "verification_copy_removed_after_checks": true
+}

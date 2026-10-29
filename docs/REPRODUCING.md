@@ -6,6 +6,8 @@
 
 ## 추론만 실행
 
+2배속 완성 패키지를 추가한 현재 모델 다운로드 revision은 **`f1d05bdb691d8769557e19644f3a63089992daf0`**입니다. 이전 revision의 기존118개 파일은 변경하지 않았으며 교사 데이터 revision도 그대로입니다. 기본 선택은 F1200을 유지합니다. [선택2배속 패키지](https://huggingface.co/babihoba/supertonic3-optimization/tree/f1d05bdb691d8769557e19644f3a63089992daf0/models/round8-latent-retime-g135), [공개 검증](../records/2026-10-29/PUBLICATION_RETIME.md).
+
 ```bash
 python -m pip install -r requirements.txt
 python download_artifacts.py --purpose inference
@@ -29,6 +31,17 @@ python synthesize.py '안녕하세요. 배속을 확인합니다.' \
 배속별 길이·float32 출력·개발ASR 검사 범위와 한계는 [7차 기록](../records/2026-10-29/ROUND7_SPEED.md)을 참고하세요. 빠른 발화의 지각 품질은 길이 비례만으로 검증할 수 없습니다.
 
 ### 모델 내부2배속 후보 재현
+
+완성된 패키지는 다음처럼 받을 수 있습니다. 새 훈련 checkpoint나 데이터셋은 필요하지 않습니다.
+
+```bash
+python download_artifacts.py --purpose inference --model round8-latent-retime-g135
+python synthesize.py '안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.' \
+  --model .hf-assets/model/models/round8-latent-retime-g135 \
+  --lang ko --steps 8 --speed 2 --output samples/retime.wav
+```
+
+아래는 기존 F1200에서 동일 그래프를 직접 준비하는 방법입니다.
 
 ```bash
 python -m pip install -r requirements-train.txt

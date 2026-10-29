@@ -1,0 +1,135 @@
+{
+  "repository": "babihoba/supertonic3-optimization",
+  "repo_type": "model",
+  "revision": "f1d05bdb691d8769557e19644f3a63089992daf0",
+  "parent_revision": "d33f1094c6057d8c613f2c45987ba45e57c4b3af",
+  "source_code_commit": "7704219e4348a45daee5637717664f6a07093737",
+  "package": "models/round8-latent-retime-g135",
+  "files": [
+    {
+      "path": "models/round8-latent-retime-g135/LICENSE",
+      "bytes": 15007,
+      "sha256": "0d944a9110fed9a9602d60e0423a272903e7bd21ab060490774efc77c2275e9f"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/config.json",
+      "bytes": 174,
+      "sha256": "4099082b107a9d4029849ac76b89eca65e03732660969c2babe5bf308c7357f2"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/manifest.json",
+      "bytes": 3345,
+      "sha256": "0293b8e3c9a0137092be6df2c740fe76d4c194ca2d1fd7c5f281abcf390f7375"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "sha256": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "sha256": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/onnx/transformation.json",
+      "bytes": 1484,
+      "sha256": "63ef5eb62449a713683d4bd99ec9410fc8ecfbdb1874b5ef7a66b51a5e1deb7e"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/onnx/tts.json",
+      "bytes": 8253,
+      "sha256": "42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/onnx/unicode_indexer.json",
+      "bytes": 277676,
+      "sha256": "9bf7346e43883a81f8645c81224f786d43c5b57f3641f6e7671a7d6c493cb24f"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/onnx/vector_estimator.onnx",
+      "bytes": 48903928,
+      "sha256": "7c81ab7f0ddcc4266743701599a8708d2edd1be04285770f996e84a8bb5f4447"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/onnx/vocoder.onnx",
+      "bytes": 101463491,
+      "sha256": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/revision.json",
+      "bytes": 96,
+      "sha256": "b67b203744e202140c254cba2c5511fcb8131ee0b3acccc7b2128e241965b1b5"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/voice_styles/F1.json",
+      "bytes": 292046,
+      "sha256": "bbdec6ee00231c2c742ad05483df5334cab3b52fda3ba38e6a07059c4563dbc2"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/voice_styles/F2.json",
+      "bytes": 292423,
+      "sha256": "7c722c6a72707b1a77f035d67f0d1351ba187738e06f7683e8c72b1df3477fc6"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/voice_styles/F3.json",
+      "bytes": 290794,
+      "sha256": "12f6ef2573baa2defa1128069cb59f203e3ab67c92af77b42df8a0e3a2f7c6ab"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/voice_styles/F4.json",
+      "bytes": 291808,
+      "sha256": "c2fa764c1225a76dfc3e2c73e8aa4f70d9ee48793860eb34c295fff01c2e032b"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/voice_styles/F5.json",
+      "bytes": 291479,
+      "sha256": "45966e73316415626cf41a7d1c6f3b4c70dbc1ba2bee5c1978ef0ce33244fc8d"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/voice_styles/M1.json",
+      "bytes": 291748,
+      "sha256": "e35604687f5d23694b8e91593a93eec0e4eca6c0b02bb8ed69139ab2ea6b0a5b"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/voice_styles/M2.json",
+      "bytes": 292055,
+      "sha256": "b76cbf62bac707c710cf0ae5aba5e31eea1a6339a9734bfae33ab98499534a50"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/voice_styles/M3.json",
+      "bytes": 290198,
+      "sha256": "ea1ac35ccb91b0d7ecad533a2fbd0eec10c91513d8951e3b25fbba99954e159b"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/voice_styles/M4.json",
+      "bytes": 291522,
+      "sha256": "ca8eefad4fcd989c9379032ff3e50738adc547eeb5e221b82593a6d7b3bac303"
+    },
+    {
+      "path": "models/round8-latent-retime-g135/voice_styles/M5.json",
+      "bytes": 291469,
+      "sha256": "dd22b92740314321f8ae11c5e87f8dd60d060f15dd3a632b5adf77f471f77af2"
+    }
+  ],
+  "verified_package_files": 21,
+  "existing_files_unchanged": 118,
+  "server_side_weight_copies": 3,
+  "learned_weights_changed": false,
+  "new_training_dataset": false,
+  "public_download_checks": [
+    {
+      "path": "models/round8-latent-retime-g135/manifest.json",
+      "sha256": "0293b8e3c9a0137092be6df2c740fe76d4c194ca2d1fd7c5f281abcf390f7375",
+      "token": false,
+      "passed": true
+    },
+    {
+      "path": "models/round8-latent-retime-g135/onnx/vocoder.onnx",
+      "sha256": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6",
+      "token": false,
+      "passed": true
+    }
+  ],
+  "complete": true
+}

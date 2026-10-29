@@ -25,6 +25,15 @@ F1200 기준 엔진 비교와 메모리 결과는 [6차 기록](records/2026-10-
 
 ### 선택 실행: 보코더 내부2배속
 
+[완성된 선택 패키지](https://huggingface.co/babihoba/supertonic3-optimization/tree/f1d05bdb691d8769557e19644f3a63089992daf0/models/round8-latent-retime-g135)를 바로 받을 수 있습니다.21개 파일·약194MB이며 추가 학습은 필요하지 않습니다. [공개 검증 기록](records/2026-10-29/PUBLICATION_RETIME.md)에 기존 파일 보존과 다운로드 검사를 남겼습니다.
+
+```bash
+python download_artifacts.py --purpose inference --model round8-latent-retime-g135
+python synthesize.py '안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.' \
+  --model .hf-assets/model/models/round8-latent-retime-g135 \
+  --lang ko --voice M1 --steps 8 --speed 2 --output samples/retime-fast.wav
+```
+
 8차 후보는 F1200의 학습 가중치를 유지하고, 내부1.35 속도로 **8회 전부 생성**한 세부 latent 프레임을 보코더 그래프 안에서2.0 길이로 압축합니다. 파형 생성 후 오디오 필터를 쓰지 않습니다. 추가 학습·추가 파라미터 없이 기존 공개 F1200에서 준비할 수 있습니다. 준비는 충분한 RAM이 있는 개발 환경에서 실행하세요.
 
 ```bash

@@ -2,6 +2,7 @@
 
 - [최신: 엔진v4·내부 배속 후보의 RTF·예전 가중치 정리](records/2026-10-29/ROUND9_ENGINE.md)
 - [9차 상태·측정 집계](records/2026-10-29/round9_state.json)
+- [선택2배속 패키지 Hugging Face 공개·기존 파일 보존·다운로드 검증](records/2026-10-29/PUBLICATION_RETIME.md)
 - [최신: 모델 내부2배속·기계음 개선 청취·남은 발음 오류·실제 서버 검사](records/2026-10-29/ROUND8_NATIVE_SPEED.md)
 - [8차 기계 판독 상태](records/2026-10-29/round8_state.json)
 - [최신: 배속·원본50 비교·2배속 실패 원인·v3 미채택](records/2026-10-29/ROUND7_SPEED.md)
