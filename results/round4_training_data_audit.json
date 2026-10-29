@@ -1,0 +1,38 @@
+{
+  "corpus": "distill/corpus_round4_train.json",
+  "corpus_sha256": "406211c7f44c0fc7e87e9ac57dee50aea9d3e2f950dd130d9450a6669b052cf0",
+  "sentences": {
+    "train": 80,
+    "validation": 16,
+    "test": 16
+  },
+  "languages": {
+    "train": {
+      "ko": 40,
+      "en": 40
+    },
+    "validation": {
+      "ko": 8,
+      "en": 8
+    },
+    "test": {
+      "ko": 8,
+      "en": 8
+    }
+  },
+  "overlaps_after_alphanumeric_normalization": {
+    "train/validation": 0,
+    "train/test": 0,
+    "validation/test": 0,
+    "new_test/past_test:corpus.json": 0,
+    "new_test/past_test:corpus_cfg_v3.json": 0,
+    "new_test/past_test:corpus_round4.json": 0
+  },
+  "trajectory_pairs": {
+    "train": 1920,
+    "validation": 128
+  },
+  "train_voice_seed_cases": 240,
+  "validation_update_pairs": 48,
+  "test_status": "Frozen before fitting; evaluated once after checkpoint 2000 was fixed. Consumed; do not tune on it."
+}

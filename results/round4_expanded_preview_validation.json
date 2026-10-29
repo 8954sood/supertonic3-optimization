@@ -1,0 +1,1767 @@
+{
+  "split": "validation",
+  "steps": 8,
+  "reference_guidance_scale": 4,
+  "corpus": "distill/corpus_round4_train.json",
+  "note": "ASR proxy only; does not assess timbre, prosody or listening quality. Test split must not be reused for tuning.",
+  "rows": [
+    {
+      "variant": "reference",
+      "case": 0,
+      "language": "ko",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/round4_expanded_preview_validation/reference_00.wav",
+      "timing": {
+        "seconds": 1.7792744170001242,
+        "audio_seconds": 5.305736961451247,
+        "rtf": 0.3353491569460409,
+        "realtime_factor": 2.981966643682078,
+        "stages": {
+          "duration_predictor": 0.0012037500273436308,
+          "text_encoder": 0.0049642500234767795,
+          "vector_estimator": 1.7035057510947809,
+          "vocoder": 0.04403670801548287
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_00.wav",
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "transcript": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "reference",
+      "case": 1,
+      "language": "ko",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/round4_expanded_preview_validation/reference_01.wav",
+      "timing": {
+        "seconds": 1.3554617499758024,
+        "audio_seconds": 4.054557823129252,
+        "rtf": 0.33430568981987674,
+        "realtime_factor": 2.9912742452537917,
+        "stages": {
+          "duration_predictor": 0.0007722919981461018,
+          "text_encoder": 0.003947334014810622,
+          "vector_estimator": 1.3192490410292521,
+          "vocoder": 0.031014042004244402
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_01.wav",
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "transcript": "자전거를 세우고, 강변 벤치에 앉아 쉬었습니다.",
+      "errors": 0,
+      "reference_units": 19
+    },
+    {
+      "variant": "reference",
+      "case": 2,
+      "language": "ko",
+      "reference": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/round4_expanded_preview_validation/reference_02.wav",
+      "timing": {
+        "seconds": 1.3182500830153003,
+        "audio_seconds": 3.7854421768707485,
+        "rtf": 0.3482420339346029,
+        "realtime_factor": 2.8715660447463156,
+        "stages": {
+          "duration_predictor": 0.0008896670187823474,
+          "text_encoder": 0.0046275409986265,
+          "vector_estimator": 1.2820217920234427,
+          "vocoder": 0.030277374986326322
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_02.wav",
+      "text": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "transcript": "햇볘치 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "errors": 2,
+      "reference_units": 23
+    },
+    {
+      "variant": "reference",
+      "case": 3,
+      "language": "ko",
+      "reference": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/round4_expanded_preview_validation/reference_03.wav",
+      "timing": {
+        "seconds": 1.3670486249902751,
+        "audio_seconds": 4.44249433106576,
+        "rtf": 0.3077209610444947,
+        "realtime_factor": 3.249697377148792,
+        "stages": {
+          "duration_predictor": 0.0008623749890830368,
+          "text_encoder": 0.004752084001665935,
+          "vector_estimator": 1.3272741269902326,
+          "vocoder": 0.033702666987665
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_03.wav",
+      "text": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "transcript": "다음 안내를 들으신 뒤 필요한 항목을 선택해주세요.",
+      "errors": 0,
+      "reference_units": 21
+    },
+    {
+      "variant": "reference",
+      "case": 4,
+      "language": "en",
+      "reference": "The silver kettle began to whistle as the water reached a boil.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/round4_expanded_preview_validation/reference_04.wav",
+      "timing": {
+        "seconds": 1.358546458010096,
+        "audio_seconds": 4.141269841269842,
+        "rtf": 0.32805069702811823,
+        "realtime_factor": 3.048309328586145,
+        "stages": {
+          "duration_predictor": 0.0009113750129472464,
+          "text_encoder": 0.004643041000235826,
+          "vector_estimator": 1.3225350430293474,
+          "vocoder": 0.03003466597874649
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_04.wav",
+      "text": "The silver kettle began to whistle as the water reached a boil.",
+      "transcript": "The silver kettle began to whistle as the water reached a boil.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "reference",
+      "case": 5,
+      "language": "en",
+      "reference": "We waited beneath the shelter until the heavy rain had passed.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/round4_expanded_preview_validation/reference_05.wav",
+      "timing": {
+        "seconds": 1.326368582987925,
+        "audio_seconds": 3.9746938775510205,
+        "rtf": 0.3337033300801413,
+        "realtime_factor": 2.996673721415494,
+        "stages": {
+          "duration_predictor": 0.000889666989678517,
+          "text_encoder": 0.004922833002638072,
+          "vector_estimator": 1.2898193349828944,
+          "vocoder": 0.03028924998943694
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_05.wav",
+      "text": "We waited beneath the shelter until the heavy rain had passed.",
+      "transcript": "We waited beneath the shelter until the heavy rain had passed.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "reference",
+      "case": 6,
+      "language": "en",
+      "reference": "Someone had left a small wooden box beside the fireplace.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/round4_expanded_preview_validation/reference_06.wav",
+      "timing": {
+        "seconds": 1.348719915986294,
+        "audio_seconds": 4.071859410430839,
+        "rtf": 0.3312294900288778,
+        "realtime_factor": 3.0190548550276013,
+        "stages": {
+          "duration_predictor": 0.0008509169856552035,
+          "text_encoder": 0.004343707987572998,
+          "vector_estimator": 1.3126412510464434,
+          "vocoder": 0.030463167000561953
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_06.wav",
+      "text": "Someone had left a small wooden box beside the fireplace.",
+      "transcript": "Someone had left a small wooden box beside the fireplace.",
+      "errors": 0,
+      "reference_units": 10
+    },
+    {
+      "variant": "reference",
+      "case": 7,
+      "language": "en",
+      "reference": "Follow the signs to the reception desk at the end of the hall.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/round4_expanded_preview_validation/reference_07.wav",
+      "timing": {
+        "seconds": 1.3331077080219984,
+        "audio_seconds": 3.989546485260771,
+        "rtf": 0.3341501879843021,
+        "realtime_factor": 2.9926662798914196,
+        "stages": {
+          "duration_predictor": 0.0008914160134736449,
+          "text_encoder": 0.004565958981402218,
+          "vector_estimator": 1.2927919560170267,
+          "vocoder": 0.034460750001017004
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_07.wav",
+      "text": "Follow the signs to the reception desk at the end of the hall.",
+      "transcript": "Follow the signs to the reception desk at the end of the hall.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "reference",
+      "case": 8,
+      "language": "ko",
+      "reference": "창고에 있던 낡은 상자를 열어 보니 작은 장난감들이 들어 있었습니다.",
+      "voice": "M3",
+      "seed": 408,
+      "audio": "samples/round4_expanded_preview_validation/reference_08.wav",
+      "timing": {
+        "seconds": 1.6190996670047753,
+        "audio_seconds": 4.772471655328798,
+        "rtf": 0.3392581001915302,
+        "realtime_factor": 2.9476083236787685,
+        "stages": {
+          "duration_predictor": 0.001045624987455085,
+          "text_encoder": 0.005369417020119727,
+          "vector_estimator": 1.5783920429530554,
+          "vocoder": 0.03383233299246058
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_08.wav",
+      "text": "창고에 있던 낡은 상자를 열어 보니 작은 장난감들이 들어 있었습니다.",
+      "transcript": "창고에 있던 낡은 상자를 열어보니 작은 장난감들이 들어있었습니다.",
+      "errors": 0,
+      "reference_units": 28
+    },
+    {
+      "variant": "reference",
+      "case": 9,
+      "language": "ko",
+      "reference": "도착하는 시간이 정해지면 문자로 간단히 알려 주시면 됩니다.",
+      "voice": "F3",
+      "seed": 409,
+      "audio": "samples/round4_expanded_preview_validation/reference_09.wav",
+      "timing": {
+        "seconds": 1.6612599590152968,
+        "audio_seconds": 5.109410430839002,
+        "rtf": 0.3251373091870613,
+        "realtime_factor": 3.0756236572797304,
+        "stages": {
+          "duration_predictor": 0.000996499991742894,
+          "text_encoder": 0.004869625001447275,
+          "vector_estimator": 1.6168310009816196,
+          "vocoder": 0.03812245899462141
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_09.wav",
+      "text": "도착하는 시간이 정해지면 문자로 간단히 알려 주시면 됩니다.",
+      "transcript": "도착하는 시간이 정해지면 문자로 간단히 알려주시면 됩니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "reference",
+      "case": 10,
+      "language": "ko",
+      "reference": "흩어진 종이를 모아서 순서대로 정리한 다음 봉투에 넣었습니다.",
+      "voice": "M5",
+      "seed": 410,
+      "audio": "samples/round4_expanded_preview_validation/reference_10.wav",
+      "timing": {
+        "seconds": 1.7222347499919124,
+        "audio_seconds": 5.027755102040817,
+        "rtf": 0.34254547308655503,
+        "realtime_factor": 2.919320436464557,
+        "stages": {
+          "duration_predictor": 0.0009634580055717379,
+          "text_encoder": 0.0050442089850548655,
+          "vector_estimator": 1.6748784149822313,
+          "vocoder": 0.04091549999429844
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_10.wav",
+      "text": "흩어진 종이를 모아서 순서대로 정리한 다음 봉투에 넣었습니다.",
+      "transcript": "흩어진 종이를 모아서 순서대로 정리한 다음 봉투에 넣었습니다.",
+      "errors": 0,
+      "reference_units": 26
+    },
+    {
+      "variant": "reference",
+      "case": 11,
+      "language": "ko",
+      "reference": "길을 건너기 전에 양쪽을 살피고 신호가 바뀔 때까지 기다리세요.",
+      "voice": "F5",
+      "seed": 411,
+      "audio": "samples/round4_expanded_preview_validation/reference_11.wav",
+      "timing": {
+        "seconds": 1.6877175409754273,
+        "audio_seconds": 5.199024943310658,
+        "rtf": 0.32462193572410813,
+        "realtime_factor": 3.080506552243243,
+        "stages": {
+          "duration_predictor": 0.0009432499937247485,
+          "text_encoder": 0.0047267920162994415,
+          "vector_estimator": 1.6436686249799095,
+          "vocoder": 0.037931625003693625
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_11.wav",
+      "text": "길을 건너기 전에 양쪽을 살피고 신호가 바뀔 때까지 기다리세요.",
+      "transcript": "길을 건너기 전에 양쪽을 살피고 신호가 바뀔 때까지 기다리세요.",
+      "errors": 0,
+      "reference_units": 26
+    },
+    {
+      "variant": "reference",
+      "case": 12,
+      "language": "en",
+      "reference": "Inside the dusty box, we found several toys from our childhood.",
+      "voice": "M1",
+      "seed": 412,
+      "audio": "samples/round4_expanded_preview_validation/reference_12.wav",
+      "timing": {
+        "seconds": 1.3752325419918634,
+        "audio_seconds": 4.443015873015873,
+        "rtf": 0.3095268127093973,
+        "realtime_factor": 3.230737884213156,
+        "stages": {
+          "duration_predictor": 0.0008511250198353082,
+          "text_encoder": 0.00448591701569967,
+          "vector_estimator": 1.3326067490270361,
+          "vocoder": 0.036850459000561386
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_12.wav",
+      "text": "Inside the dusty box, we found several toys from our childhood.",
+      "transcript": "Inside the dusty box, we found several toys from our childhood.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "reference",
+      "case": 13,
+      "language": "en",
+      "reference": "Send a short message when you know what time you will arrive.",
+      "voice": "F1",
+      "seed": 413,
+      "audio": "samples/round4_expanded_preview_validation/reference_13.wav",
+      "timing": {
+        "seconds": 1.3499334579973947,
+        "audio_seconds": 3.9936507936507937,
+        "rtf": 0.33801990402955434,
+        "realtime_factor": 2.95840566806553,
+        "stages": {
+          "duration_predictor": 0.0009036670089699328,
+          "text_encoder": 0.004704292019596323,
+          "vector_estimator": 1.3145297519513406,
+          "vocoder": 0.029350167023949325
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_13.wav",
+      "text": "Send a short message when you know what time you will arrive.",
+      "transcript": "Send a short message when you know what time you will arrive.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "reference",
+      "case": 14,
+      "language": "en",
+      "reference": "Gather the loose pages and put them in the correct order before sealing the envelope.",
+      "voice": "M3",
+      "seed": 414,
+      "audio": "samples/round4_expanded_preview_validation/reference_14.wav",
+      "timing": {
+        "seconds": 1.5911062500090338,
+        "audio_seconds": 4.490907029478458,
+        "rtf": 0.35429507659921733,
+        "realtime_factor": 2.8225060579411085,
+        "stages": {
+          "duration_predictor": 0.0011056250077672303,
+          "text_encoder": 0.005526124994503334,
+          "vector_estimator": 1.5500143739627674,
+          "vocoder": 0.034020334016531706
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_14.wav",
+      "text": "Gather the loose pages and put them in the correct order before sealing the envelope.",
+      "transcript": "Gather the loose pages and put them in the correct order before sealing the envelope.",
+      "errors": 0,
+      "reference_units": 15
+    },
+    {
+      "variant": "reference",
+      "case": 15,
+      "language": "en",
+      "reference": "Look both ways and wait for the signal before crossing the street.",
+      "voice": "F3",
+      "seed": 415,
+      "audio": "samples/round4_expanded_preview_validation/reference_15.wav",
+      "timing": {
+        "seconds": 1.6104905839893036,
+        "audio_seconds": 4.510861678004535,
+        "rtf": 0.3570250428742329,
+        "realtime_factor": 2.800923968664753,
+        "stages": {
+          "duration_predictor": 0.0009150829864665866,
+          "text_encoder": 0.005036874994402751,
+          "vector_estimator": 1.5658337519562338,
+          "vocoder": 0.03823687499971129
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_15.wav",
+      "text": "Look both ways and wait for the signal before crossing the street.",
+      "transcript": "Look both ways and wait for the signal before crossing the street.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 0,
+      "language": "ko",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_00.wav",
+      "timing": {
+        "seconds": 0.19403358301497065,
+        "audio_seconds": 5.305736961451247,
+        "rtf": 0.03657052440117532,
+        "realtime_factor": 27.344426047329566,
+        "stages": {
+          "duration_predictor": 0.0010443330102134496,
+          "text_encoder": 0.004974333016434684,
+          "vector_estimator": 0.1406295400520321,
+          "vocoder": 0.04692462499951944
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_00.wav",
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "transcript": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 1,
+      "language": "ko",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_01.wav",
+      "timing": {
+        "seconds": 0.1535497909935657,
+        "audio_seconds": 4.054557823129252,
+        "rtf": 0.037870909157501687,
+        "realtime_factor": 26.40549229597553,
+        "stages": {
+          "duration_predictor": 0.0009037499839905649,
+          "text_encoder": 0.004079540987731889,
+          "vector_estimator": 0.11124370797188021,
+          "vocoder": 0.036881125008221716
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_01.wav",
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "transcript": "자전거를 세우고 강변벤치에 앉아 쉬었습니다.",
+      "errors": 0,
+      "reference_units": 19
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 2,
+      "language": "ko",
+      "reference": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_02.wav",
+      "timing": {
+        "seconds": 0.14308799998252653,
+        "audio_seconds": 3.7854421768707485,
+        "rtf": 0.03779954713264457,
+        "realtime_factor": 26.455343406386387,
+        "stages": {
+          "duration_predictor": 0.0009355000220239162,
+          "text_encoder": 0.004508957994403318,
+          "vector_estimator": 0.10387699905550107,
+          "vocoder": 0.03338199999416247
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_02.wav",
+      "text": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "transcript": "햇배치 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "errors": 2,
+      "reference_units": 23
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 3,
+      "language": "ko",
+      "reference": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_03.wav",
+      "timing": {
+        "seconds": 0.15656466598738916,
+        "audio_seconds": 4.44249433106576,
+        "rtf": 0.03524251339896006,
+        "realtime_factor": 28.374820736522953,
+        "stages": {
+          "duration_predictor": 0.0008778749906923622,
+          "text_encoder": 0.004161916003795341,
+          "vector_estimator": 0.11451621001469903,
+          "vocoder": 0.03661116599687375
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_03.wav",
+      "text": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "transcript": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "errors": 0,
+      "reference_units": 21
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 4,
+      "language": "en",
+      "reference": "The silver kettle began to whistle as the water reached a boil.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_04.wav",
+      "timing": {
+        "seconds": 0.15342191699892282,
+        "audio_seconds": 4.141269841269842,
+        "rtf": 0.03704707079698021,
+        "realtime_factor": 26.992687370077103,
+        "stages": {
+          "duration_predictor": 0.0008973749936558306,
+          "text_encoder": 0.004362540988950059,
+          "vector_estimator": 0.11036720802076161,
+          "vocoder": 0.03741208298015408
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_04.wav",
+      "text": "The silver kettle began to whistle as the water reached a boil.",
+      "transcript": "The silver kettle began to whistle as the water reached a boil.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 5,
+      "language": "en",
+      "reference": "We waited beneath the shelter until the heavy rain had passed.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_05.wav",
+      "timing": {
+        "seconds": 0.15516858297633007,
+        "audio_seconds": 3.9746938775510205,
+        "rtf": 0.03903912798233813,
+        "realtime_factor": 25.615326255556084,
+        "stages": {
+          "duration_predictor": 0.0009209999989252537,
+          "text_encoder": 0.004514374973950908,
+          "vector_estimator": 0.11286841693799943,
+          "vocoder": 0.03644137500668876
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_05.wav",
+      "text": "We waited beneath the shelter until the heavy rain had passed.",
+      "transcript": "We waited beneath the shelter until the heavy rain had passed.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 6,
+      "language": "en",
+      "reference": "Someone had left a small wooden box beside the fireplace.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_06.wav",
+      "timing": {
+        "seconds": 0.15054324999800883,
+        "audio_seconds": 4.071859410430839,
+        "rtf": 0.03697162274619889,
+        "realtime_factor": 27.047771391176262,
+        "stages": {
+          "duration_predictor": 0.0009818329999689013,
+          "text_encoder": 0.0044672499934677035,
+          "vector_estimator": 0.10903137500281446,
+          "vocoder": 0.035620749986264855
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_06.wav",
+      "text": "Someone had left a small wooden box beside the fireplace.",
+      "transcript": "Someone had left a small wooden box beside the fireplace.",
+      "errors": 0,
+      "reference_units": 10
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 7,
+      "language": "en",
+      "reference": "Follow the signs to the reception desk at the end of the hall.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_07.wav",
+      "timing": {
+        "seconds": 0.1447200830152724,
+        "audio_seconds": 3.989546485260771,
+        "rtf": 0.03627482059676088,
+        "realtime_factor": 27.567331376114204,
+        "stages": {
+          "duration_predictor": 0.0009332500048913062,
+          "text_encoder": 0.004312292003305629,
+          "vector_estimator": 0.10616433201357722,
+          "vocoder": 0.03288262500427663
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_07.wav",
+      "text": "Follow the signs to the reception desk at the end of the hall.",
+      "transcript": "Follow the signs to the reception desk at the end of the hall.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 8,
+      "language": "ko",
+      "reference": "창고에 있던 낡은 상자를 열어 보니 작은 장난감들이 들어 있었습니다.",
+      "voice": "M3",
+      "seed": 408,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_08.wav",
+      "timing": {
+        "seconds": 0.18113212499883957,
+        "audio_seconds": 4.772471655328798,
+        "rtf": 0.0379535255692075,
+        "realtime_factor": 26.348013392761626,
+        "stages": {
+          "duration_predictor": 0.0011385419929865748,
+          "text_encoder": 0.005937375011853874,
+          "vector_estimator": 0.13209078999352641,
+          "vocoder": 0.04153783299261704
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_08.wav",
+      "text": "창고에 있던 낡은 상자를 열어 보니 작은 장난감들이 들어 있었습니다.",
+      "transcript": "창고에 있던 낡은 상자를 열어보니 작은 장난감들이 들어있었습니다.",
+      "errors": 0,
+      "reference_units": 28
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 9,
+      "language": "ko",
+      "reference": "도착하는 시간이 정해지면 문자로 간단히 알려 주시면 됩니다.",
+      "voice": "F3",
+      "seed": 409,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_09.wav",
+      "timing": {
+        "seconds": 0.18367512500844896,
+        "audio_seconds": 5.109410430839002,
+        "rtf": 0.03594839903638122,
+        "realtime_factor": 27.817650488077643,
+        "stages": {
+          "duration_predictor": 0.0009767080191522837,
+          "text_encoder": 0.0047148749872576445,
+          "vector_estimator": 0.13557762702112086,
+          "vocoder": 0.04194208301487379
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_09.wav",
+      "text": "도착하는 시간이 정해지면 문자로 간단히 알려 주시면 됩니다.",
+      "transcript": "도착하는 시간이 정해지면 문자로 간단히 알려주시면 됩니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 10,
+      "language": "ko",
+      "reference": "흩어진 종이를 모아서 순서대로 정리한 다음 봉투에 넣었습니다.",
+      "voice": "M5",
+      "seed": 410,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_10.wav",
+      "timing": {
+        "seconds": 0.18495295799220912,
+        "audio_seconds": 5.027755102040817,
+        "rtf": 0.036786389599034935,
+        "realtime_factor": 27.18396697528138,
+        "stages": {
+          "duration_predictor": 0.0010284169984515756,
+          "text_encoder": 0.005032834014855325,
+          "vector_estimator": 0.1343954150506761,
+          "vocoder": 0.0440365000104066
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_10.wav",
+      "text": "흩어진 종이를 모아서 순서대로 정리한 다음 봉투에 넣었습니다.",
+      "transcript": "흩어진 종이를 모아서 순서대로 정리한 다음 봉투에 넣었습니다.",
+      "errors": 0,
+      "reference_units": 26
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 11,
+      "language": "ko",
+      "reference": "길을 건너기 전에 양쪽을 살피고 신호가 바뀔 때까지 기다리세요.",
+      "voice": "F5",
+      "seed": 411,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_11.wav",
+      "timing": {
+        "seconds": 0.18811683301464655,
+        "audio_seconds": 5.199024943310658,
+        "rtf": 0.03618309876675773,
+        "realtime_factor": 27.63721278948954,
+        "stages": {
+          "duration_predictor": 0.0009949170053005219,
+          "text_encoder": 0.0049472079845145345,
+          "vector_estimator": 0.1364915000158362,
+          "vocoder": 0.045257791003677994
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_11.wav",
+      "text": "길을 건너기 전에 양쪽을 살피고 신호가 바뀔 때까지 기다리세요.",
+      "transcript": "길을 건너기 전에 양쪽을 살피고 신호가 바뀔 때까지 기다리세요.",
+      "errors": 0,
+      "reference_units": 26
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 12,
+      "language": "en",
+      "reference": "Inside the dusty box, we found several toys from our childhood.",
+      "voice": "M1",
+      "seed": 412,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_12.wav",
+      "timing": {
+        "seconds": 0.15848874999210238,
+        "audio_seconds": 4.443015873015873,
+        "rtf": 0.03567143456647655,
+        "realtime_factor": 28.03363565702469,
+        "stages": {
+          "duration_predictor": 0.0009275419870391488,
+          "text_encoder": 0.004545375006273389,
+          "vector_estimator": 0.11551658302778378,
+          "vocoder": 0.0370566250057891
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_12.wav",
+      "text": "Inside the dusty box, we found several toys from our childhood.",
+      "transcript": "Inside the dusty box, we found several toys from our childhood.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 13,
+      "language": "en",
+      "reference": "Send a short message when you know what time you will arrive.",
+      "voice": "F1",
+      "seed": 413,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_13.wav",
+      "timing": {
+        "seconds": 0.14790549999452196,
+        "audio_seconds": 3.9936507936507937,
+        "rtf": 0.03703516096842163,
+        "realtime_factor": 27.001367723301083,
+        "stages": {
+          "duration_predictor": 0.0009250000002793968,
+          "text_encoder": 0.004261375026544556,
+          "vector_estimator": 0.10817016696091741,
+          "vocoder": 0.034118083014618605
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_13.wav",
+      "text": "Send a short message when you know what time you will arrive.",
+      "transcript": "Send a short message when you know what time you will arrive.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 14,
+      "language": "en",
+      "reference": "Gather the loose pages and put them in the correct order before sealing the envelope.",
+      "voice": "M3",
+      "seed": 414,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_14.wav",
+      "timing": {
+        "seconds": 0.17354416599846445,
+        "audio_seconds": 4.490907029478458,
+        "rtf": 0.0386434555111729,
+        "realtime_factor": 25.877602993108937,
+        "stages": {
+          "duration_predictor": 0.0010631670011207461,
+          "text_encoder": 0.005383624986279756,
+          "vector_estimator": 0.1263518339546863,
+          "vocoder": 0.040290915989317
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_14.wav",
+      "text": "Gather the loose pages and put them in the correct order before sealing the envelope.",
+      "transcript": "Gather the loose pages and put them in the correct order before sealing the envelope.",
+      "errors": 0,
+      "reference_units": 15
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 15,
+      "language": "en",
+      "reference": "Look both ways and wait for the signal before crossing the street.",
+      "voice": "F3",
+      "seed": 415,
+      "audio": "samples/round4_expanded_preview_validation/cfg-mixed-v1-selected_15.wav",
+      "timing": {
+        "seconds": 0.169423542014556,
+        "audio_seconds": 4.510861678004535,
+        "rtf": 0.03755901956397468,
+        "realtime_factor": 26.624763149013763,
+        "stages": {
+          "duration_predictor": 0.0009891249937936664,
+          "text_encoder": 0.004847667005378753,
+          "vector_estimator": 0.12547395905130543,
+          "vocoder": 0.03764795800088905
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_15.wav",
+      "text": "Look both ways and wait for the signal before crossing the street.",
+      "transcript": "Look both ways and wait for the signal before crossing the street.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 0,
+      "language": "ko",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_00.wav",
+      "timing": {
+        "seconds": 0.1725548750255257,
+        "audio_seconds": 5.305736961451247,
+        "rtf": 0.03252231994899494,
+        "realtime_factor": 30.748113958915273,
+        "stages": {
+          "duration_predictor": 0.0010035420127678663,
+          "text_encoder": 0.004891499993391335,
+          "vector_estimator": 0.11999233398819342,
+          "vocoder": 0.04622608298086561
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_00.wav",
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "transcript": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 1,
+      "language": "ko",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_01.wav",
+      "timing": {
+        "seconds": 0.1375165420176927,
+        "audio_seconds": 4.054557823129252,
+        "rtf": 0.03391653245965039,
+        "realtime_factor": 29.484146151723316,
+        "stages": {
+          "duration_predictor": 0.0008695409924257547,
+          "text_encoder": 0.00376083399169147,
+          "vector_estimator": 0.09549537603743374,
+          "vocoder": 0.03700445799040608
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_01.wav",
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "transcript": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "errors": 0,
+      "reference_units": 19
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 2,
+      "language": "ko",
+      "reference": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_02.wav",
+      "timing": {
+        "seconds": 0.1291381659975741,
+        "audio_seconds": 3.7854421768707485,
+        "rtf": 0.03411442044647125,
+        "realtime_factor": 29.313117060543192,
+        "stages": {
+          "duration_predictor": 0.0009289170266129076,
+          "text_encoder": 0.004244082985678688,
+          "vector_estimator": 0.09122449901769869,
+          "vocoder": 0.032364374987082556
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_02.wav",
+      "text": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "transcript": "햇볗이 따가운 오후에는 끈을 해서 물을 충분히 마시세요.",
+      "errors": 4,
+      "reference_units": 23
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 3,
+      "language": "ko",
+      "reference": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_03.wav",
+      "timing": {
+        "seconds": 0.14370829201652668,
+        "audio_seconds": 4.44249433106576,
+        "rtf": 0.03234855945939967,
+        "realtime_factor": 30.913277645488026,
+        "stages": {
+          "duration_predictor": 0.0009870000067166984,
+          "text_encoder": 0.004427375009981915,
+          "vector_estimator": 0.09934066596906632,
+          "vocoder": 0.03851866599870846
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_03.wav",
+      "text": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "transcript": "다음 안내를 들으신 뒤 필요한 항목을 선택해주세요",
+      "errors": 0,
+      "reference_units": 21
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 4,
+      "language": "en",
+      "reference": "The silver kettle began to whistle as the water reached a boil.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_04.wav",
+      "timing": {
+        "seconds": 0.13619016599841416,
+        "audio_seconds": 4.141269841269842,
+        "rtf": 0.032886088378306214,
+        "realtime_factor": 30.4079946662086,
+        "stages": {
+          "duration_predictor": 0.0009204589878208935,
+          "text_encoder": 0.004254208994098008,
+          "vector_estimator": 0.09478741599014029,
+          "vocoder": 0.03581054200185463
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_04.wav",
+      "text": "The silver kettle began to whistle as the water reached a boil.",
+      "transcript": "The silver kettle began to whistle as the water reached a boil.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 5,
+      "language": "en",
+      "reference": "We waited beneath the shelter until the heavy rain had passed.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_05.wav",
+      "timing": {
+        "seconds": 0.13358212501043454,
+        "audio_seconds": 3.9746938775510205,
+        "rtf": 0.03360815426941514,
+        "realtime_factor": 29.754683699189126,
+        "stages": {
+          "duration_predictor": 0.0009575409931130707,
+          "text_encoder": 0.004446542006917298,
+          "vector_estimator": 0.09423291697748937,
+          "vocoder": 0.03355620798538439
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_05.wav",
+      "text": "We waited beneath the shelter until the heavy rain had passed.",
+      "transcript": "We waited beneath the shelter until the heavy rain had passed.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 6,
+      "language": "en",
+      "reference": "Someone had left a small wooden box beside the fireplace.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_06.wav",
+      "timing": {
+        "seconds": 0.13107687499723397,
+        "audio_seconds": 4.071859410430839,
+        "rtf": 0.032190913728861986,
+        "realtime_factor": 31.064666521205705,
+        "stages": {
+          "duration_predictor": 0.0008524169970769435,
+          "text_encoder": 0.003914708009688184,
+          "vector_estimator": 0.09248216706328094,
+          "vocoder": 0.03345575000275858
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_06.wav",
+      "text": "Someone had left a small wooden box beside the fireplace.",
+      "transcript": "Someone had left a small wooden box beside the fireplace.",
+      "errors": 0,
+      "reference_units": 10
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 7,
+      "language": "en",
+      "reference": "Follow the signs to the reception desk at the end of the hall.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_07.wav",
+      "timing": {
+        "seconds": 0.1341515420062933,
+        "audio_seconds": 3.989546485260771,
+        "rtf": 0.03362576235216487,
+        "realtime_factor": 29.739102701283997,
+        "stages": {
+          "duration_predictor": 0.0009944579796865582,
+          "text_encoder": 0.004469667008379474,
+          "vector_estimator": 0.09400358403217979,
+          "vocoder": 0.03424270800314844
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_07.wav",
+      "text": "Follow the signs to the reception desk at the end of the hall.",
+      "transcript": "Follow the signs to the reception desk at the end of the hall.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 8,
+      "language": "ko",
+      "reference": "창고에 있던 낡은 상자를 열어 보니 작은 장난감들이 들어 있었습니다.",
+      "voice": "M3",
+      "seed": 408,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_08.wav",
+      "timing": {
+        "seconds": 0.16246595900156535,
+        "audio_seconds": 4.772471655328798,
+        "rtf": 0.03404230988363457,
+        "realtime_factor": 29.375209949567438,
+        "stages": {
+          "duration_predictor": 0.0011342499929014593,
+          "text_encoder": 0.005521875020349398,
+          "vector_estimator": 0.1138333750423044,
+          "vocoder": 0.04156245800550096
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_08.wav",
+      "text": "창고에 있던 낡은 상자를 열어 보니 작은 장난감들이 들어 있었습니다.",
+      "transcript": "창고에 있던 날근 상자를 열어보니 작은 장난감들이 들어있었습니다.",
+      "errors": 2,
+      "reference_units": 28
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 9,
+      "language": "ko",
+      "reference": "도착하는 시간이 정해지면 문자로 간단히 알려 주시면 됩니다.",
+      "voice": "F3",
+      "seed": 409,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_09.wav",
+      "timing": {
+        "seconds": 0.16243354199104942,
+        "audio_seconds": 5.109410430839002,
+        "rtf": 0.03179105381917355,
+        "realtime_factor": 31.455390113456655,
+        "stages": {
+          "duration_predictor": 0.0009325409773737192,
+          "text_encoder": 0.0044889579876326025,
+          "vector_estimator": 0.11372074999962933,
+          "vocoder": 0.04286266700364649
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_09.wav",
+      "text": "도착하는 시간이 정해지면 문자로 간단히 알려 주시면 됩니다.",
+      "transcript": "도착하는 시간이 정해지면 문자로 간단히 알려주시면 됩니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 10,
+      "language": "ko",
+      "reference": "흩어진 종이를 모아서 순서대로 정리한 다음 봉투에 넣었습니다.",
+      "voice": "M5",
+      "seed": 410,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_10.wav",
+      "timing": {
+        "seconds": 0.1599700000078883,
+        "audio_seconds": 5.027755102040817,
+        "rtf": 0.031817381069924204,
+        "realtime_factor": 31.429362391654013,
+        "stages": {
+          "duration_predictor": 0.0010299580171704292,
+          "text_encoder": 0.004923583008348942,
+          "vector_estimator": 0.11088562494842336,
+          "vocoder": 0.04271537499153055
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_10.wav",
+      "text": "흩어진 종이를 모아서 순서대로 정리한 다음 봉투에 넣었습니다.",
+      "transcript": "흩어진 종이를 모아서 순서대로 정리한 다음 봉투에 넣었습니다.",
+      "errors": 0,
+      "reference_units": 26
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 11,
+      "language": "ko",
+      "reference": "길을 건너기 전에 양쪽을 살피고 신호가 바뀔 때까지 기다리세요.",
+      "voice": "F5",
+      "seed": 411,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_11.wav",
+      "timing": {
+        "seconds": 0.16773300000932068,
+        "audio_seconds": 5.199024943310658,
+        "rtf": 0.03226239570655164,
+        "realtime_factor": 30.995838284784483,
+        "stages": {
+          "duration_predictor": 0.0009752500045578927,
+          "text_encoder": 0.004929374990751967,
+          "vector_estimator": 0.11743874900275841,
+          "vocoder": 0.04395141699933447
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_11.wav",
+      "text": "길을 건너기 전에 양쪽을 살피고 신호가 바뀔 때까지 기다리세요.",
+      "transcript": "길을 건너기 전에 양쪽을 살피고 신호가 바뀔 때까지 기다리세요.",
+      "errors": 0,
+      "reference_units": 26
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 12,
+      "language": "en",
+      "reference": "Inside the dusty box, we found several toys from our childhood.",
+      "voice": "M1",
+      "seed": 412,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_12.wav",
+      "timing": {
+        "seconds": 0.14142562498454936,
+        "audio_seconds": 4.443015873015873,
+        "rtf": 0.03183099701342078,
+        "realtime_factor": 31.415918250326055,
+        "stages": {
+          "duration_predictor": 0.0009352079941891134,
+          "text_encoder": 0.004180707997875288,
+          "vector_estimator": 0.09932025099988095,
+          "vocoder": 0.036573999997926876
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_12.wav",
+      "text": "Inside the dusty box, we found several toys from our childhood.",
+      "transcript": "Inside the dusty box, we found several toys from our childhood.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 13,
+      "language": "en",
+      "reference": "Send a short message when you know what time you will arrive.",
+      "voice": "F1",
+      "seed": 413,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_13.wav",
+      "timing": {
+        "seconds": 0.13178358401637524,
+        "audio_seconds": 3.9936507936507937,
+        "rtf": 0.032998274217136886,
+        "realtime_factor": 30.304615126832097,
+        "stages": {
+          "duration_predictor": 0.0008962090068962425,
+          "text_encoder": 0.0042545000032987446,
+          "vector_estimator": 0.09232275097747333,
+          "vocoder": 0.03394154098350555
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_13.wav",
+      "text": "Send a short message when you know what time you will arrive.",
+      "transcript": "Send a short message when you know what time you will arrive.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 14,
+      "language": "en",
+      "reference": "Gather the loose pages and put them in the correct order before sealing the envelope.",
+      "voice": "M3",
+      "seed": 414,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_14.wav",
+      "timing": {
+        "seconds": 0.14876099998946302,
+        "audio_seconds": 4.490907029478458,
+        "rtf": 0.03312493423110099,
+        "realtime_factor": 30.188739184306076,
+        "stages": {
+          "duration_predictor": 0.0010999999940395355,
+          "text_encoder": 0.0053913749870844185,
+          "vector_estimator": 0.10298883297946304,
+          "vocoder": 0.03886758300359361
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_14.wav",
+      "text": "Gather the loose pages and put them in the correct order before sealing the envelope.",
+      "transcript": "Gather the loose pages and put them in the correct order before sealing the envelope.",
+      "errors": 0,
+      "reference_units": 15
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 15,
+      "language": "en",
+      "reference": "Look both ways and wait for the signal before crossing the street.",
+      "voice": "F3",
+      "seed": 415,
+      "audio": "samples/round4_expanded_preview_validation/cfg1024-v1-final_15.wav",
+      "timing": {
+        "seconds": 0.14726024999981746,
+        "audio_seconds": 4.510861678004535,
+        "rtf": 0.032645702863795374,
+        "realtime_factor": 30.631902893076216,
+        "stages": {
+          "duration_predictor": 0.0009285000269301236,
+          "text_encoder": 0.004337209014920518,
+          "vector_estimator": 0.10275479199481197,
+          "vocoder": 0.038834083010442555
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_15.wav",
+      "text": "Look both ways and wait for the signal before crossing the street.",
+      "transcript": "Look both ways and wait for the signal before crossing the street.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 0,
+      "language": "ko",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_00.wav",
+      "timing": {
+        "seconds": 0.1805047090165317,
+        "audio_seconds": 5.305736961451247,
+        "rtf": 0.03402066674770837,
+        "realtime_factor": 29.39389775679102,
+        "stages": {
+          "duration_predictor": 0.0010922919900622219,
+          "text_encoder": 0.00539004200254567,
+          "vector_estimator": 0.12377237703185529,
+          "vocoder": 0.04972012498183176
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_00.wav",
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "transcript": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 1,
+      "language": "ko",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_01.wav",
+      "timing": {
+        "seconds": 0.14048416700097732,
+        "audio_seconds": 4.054557823129252,
+        "rtf": 0.03464845567119168,
+        "realtime_factor": 28.86131519077908,
+        "stages": {
+          "duration_predictor": 0.0008529580081813037,
+          "text_encoder": 0.003999125008704141,
+          "vector_estimator": 0.09984991600504145,
+          "vocoder": 0.03533966699615121
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_01.wav",
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "transcript": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "errors": 0,
+      "reference_units": 19
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 2,
+      "language": "ko",
+      "reference": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_02.wav",
+      "timing": {
+        "seconds": 0.12908566699479707,
+        "audio_seconds": 3.7854421768707485,
+        "rtf": 0.0341005517885116,
+        "realtime_factor": 29.325038673916637,
+        "stages": {
+          "duration_predictor": 0.0008999170095194131,
+          "text_encoder": 0.004379749996587634,
+          "vector_estimator": 0.0909773760358803,
+          "vocoder": 0.032454166997922584
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_02.wav",
+      "text": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "transcript": "햇볗이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "errors": 1,
+      "reference_units": 23
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 3,
+      "language": "ko",
+      "reference": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_03.wav",
+      "timing": {
+        "seconds": 0.13978724999469705,
+        "audio_seconds": 4.44249433106576,
+        "rtf": 0.031465937731689105,
+        "realtime_factor": 31.780397219591126,
+        "stages": {
+          "duration_predictor": 0.0009812920179683715,
+          "text_encoder": 0.004486707999603823,
+          "vector_estimator": 0.09874062397284433,
+          "vocoder": 0.03514204197563231
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_03.wav",
+      "text": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "transcript": "다음 안내를 들으신 뒤 필요한 항목을 선택해주세요.",
+      "errors": 0,
+      "reference_units": 21
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 4,
+      "language": "en",
+      "reference": "The silver kettle began to whistle as the water reached a boil.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_04.wav",
+      "timing": {
+        "seconds": 0.13597654100158252,
+        "audio_seconds": 4.141269841269842,
+        "rtf": 0.032834503959753535,
+        "realtime_factor": 30.455766934251145,
+        "stages": {
+          "duration_predictor": 0.0009712499740999192,
+          "text_encoder": 0.004399375000502914,
+          "vector_estimator": 0.09434171003522351,
+          "vocoder": 0.03585916600422934
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_04.wav",
+      "text": "The silver kettle began to whistle as the water reached a boil.",
+      "transcript": "The silver kettle began to whistle as the water reached a boil.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 5,
+      "language": "en",
+      "reference": "We waited beneath the shelter until the heavy rain had passed.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_05.wav",
+      "timing": {
+        "seconds": 0.1317295839835424,
+        "audio_seconds": 3.9746938775510205,
+        "rtf": 0.03314207031830754,
+        "realtime_factor": 30.173130115157715,
+        "stages": {
+          "duration_predictor": 0.000935292016947642,
+          "text_encoder": 0.004456666996702552,
+          "vector_estimator": 0.09138666701619513,
+          "vocoder": 0.034581457992317155
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_05.wav",
+      "text": "We waited beneath the shelter until the heavy rain had passed.",
+      "transcript": "We waited beneath the shelter until the heavy rain had passed.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 6,
+      "language": "en",
+      "reference": "Someone had left a small wooden box beside the fireplace.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_06.wav",
+      "timing": {
+        "seconds": 0.1340117499930784,
+        "audio_seconds": 4.071859410430839,
+        "rtf": 0.03291168394708863,
+        "realtime_factor": 30.384346228156467,
+        "stages": {
+          "duration_predictor": 0.000869082985445857,
+          "text_encoder": 0.004061624989844859,
+          "vector_estimator": 0.09305733203655109,
+          "vocoder": 0.03560879098949954
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_06.wav",
+      "text": "Someone had left a small wooden box beside the fireplace.",
+      "transcript": "Someone had left a small wooden box beside the fireplace.",
+      "errors": 0,
+      "reference_units": 10
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 7,
+      "language": "en",
+      "reference": "Follow the signs to the reception desk at the end of the hall.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_07.wav",
+      "timing": {
+        "seconds": 0.1313946250011213,
+        "audio_seconds": 3.989546485260771,
+        "rtf": 0.0329347271642413,
+        "realtime_factor": 30.363087418733638,
+        "stages": {
+          "duration_predictor": 0.0008660000166855752,
+          "text_encoder": 0.004177916998742148,
+          "vector_estimator": 0.09327408295939676,
+          "vocoder": 0.0327147500065621
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_07.wav",
+      "text": "Follow the signs to the reception desk at the end of the hall.",
+      "transcript": "Follow the signs to the reception desk at the end of the hall.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 8,
+      "language": "ko",
+      "reference": "창고에 있던 낡은 상자를 열어 보니 작은 장난감들이 들어 있었습니다.",
+      "voice": "M3",
+      "seed": 408,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_08.wav",
+      "timing": {
+        "seconds": 0.15497483301442116,
+        "audio_seconds": 4.772471655328798,
+        "rtf": 0.03247265656180083,
+        "realtime_factor": 30.795139846252948,
+        "stages": {
+          "duration_predictor": 0.0010728750203270465,
+          "text_encoder": 0.005325209000147879,
+          "vector_estimator": 0.10838020802475512,
+          "vocoder": 0.03980366699397564
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_08.wav",
+      "text": "창고에 있던 낡은 상자를 열어 보니 작은 장난감들이 들어 있었습니다.",
+      "transcript": "창고에 있던 날근 상자를 열어보니 작은 장난감들이 들어있었습니다.",
+      "errors": 2,
+      "reference_units": 28
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 9,
+      "language": "ko",
+      "reference": "도착하는 시간이 정해지면 문자로 간단히 알려 주시면 됩니다.",
+      "voice": "F3",
+      "seed": 409,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_09.wav",
+      "timing": {
+        "seconds": 0.1617312500020489,
+        "audio_seconds": 5.109410430839002,
+        "rtf": 0.03165360312921494,
+        "realtime_factor": 31.5919800952152,
+        "stages": {
+          "duration_predictor": 0.0009959999879356474,
+          "text_encoder": 0.004599832987878472,
+          "vector_estimator": 0.11330445602652617,
+          "vocoder": 0.04242833302123472
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_09.wav",
+      "text": "도착하는 시간이 정해지면 문자로 간단히 알려 주시면 됩니다.",
+      "transcript": "도착하는 시간이 정해지면 문자로 간단히 알려주시면 됩니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 10,
+      "language": "ko",
+      "reference": "흩어진 종이를 모아서 순서대로 정리한 다음 봉투에 넣었습니다.",
+      "voice": "M5",
+      "seed": 410,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_10.wav",
+      "timing": {
+        "seconds": 0.16191520899883471,
+        "audio_seconds": 5.027755102040817,
+        "rtf": 0.03220427521084145,
+        "realtime_factor": 31.051777860330592,
+        "stages": {
+          "duration_predictor": 0.0009912080131471157,
+          "text_encoder": 0.004927250003674999,
+          "vector_estimator": 0.11172570896451361,
+          "vocoder": 0.04384383402066305
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_10.wav",
+      "text": "흩어진 종이를 모아서 순서대로 정리한 다음 봉투에 넣었습니다.",
+      "transcript": "흩어진 종이를 모아서 순서대로 정리한 다음 봉투에 넣었습니다.",
+      "errors": 0,
+      "reference_units": 26
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 11,
+      "language": "ko",
+      "reference": "길을 건너기 전에 양쪽을 살피고 신호가 바뀔 때까지 기다리세요.",
+      "voice": "F5",
+      "seed": 411,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_11.wav",
+      "timing": {
+        "seconds": 0.1756138750060927,
+        "audio_seconds": 5.199024943310658,
+        "rtf": 0.03377823282653161,
+        "realtime_factor": 29.604864325955358,
+        "stages": {
+          "duration_predictor": 0.0009793339995667338,
+          "text_encoder": 0.004729125008452684,
+          "vector_estimator": 0.12110683400533162,
+          "vocoder": 0.04838879100861959
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_11.wav",
+      "text": "길을 건너기 전에 양쪽을 살피고 신호가 바뀔 때까지 기다리세요.",
+      "transcript": "길을 건너기 전에 양쪽을 살피고 신호가 바뀔 때까지 기다리세요.",
+      "errors": 0,
+      "reference_units": 26
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 12,
+      "language": "en",
+      "reference": "Inside the dusty box, we found several toys from our childhood.",
+      "voice": "M1",
+      "seed": 412,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_12.wav",
+      "timing": {
+        "seconds": 0.15053079201607034,
+        "audio_seconds": 4.443015873015873,
+        "rtf": 0.03388031830592845,
+        "realtime_factor": 29.515661304310058,
+        "stages": {
+          "duration_predictor": 0.001031916995998472,
+          "text_encoder": 0.004455125017557293,
+          "vector_estimator": 0.10533054106053896,
+          "vocoder": 0.03927537499112077
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_12.wav",
+      "text": "Inside the dusty box, we found several toys from our childhood.",
+      "transcript": "Inside the dusty box, we found several toys from our childhood.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 13,
+      "language": "en",
+      "reference": "Send a short message when you know what time you will arrive.",
+      "voice": "F1",
+      "seed": 413,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_13.wav",
+      "timing": {
+        "seconds": 0.13910662499256432,
+        "audio_seconds": 3.9936507936507937,
+        "rtf": 0.03483194504980744,
+        "realtime_factor": 28.709278180419275,
+        "stages": {
+          "duration_predictor": 0.0009322499972768128,
+          "text_encoder": 0.0046159999910742044,
+          "vector_estimator": 0.09706350005581044,
+          "vocoder": 0.03612608398543671
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_13.wav",
+      "text": "Send a short message when you know what time you will arrive.",
+      "transcript": "Send a short message when you know what time you will arrive.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 14,
+      "language": "en",
+      "reference": "Gather the loose pages and put them in the correct order before sealing the envelope.",
+      "voice": "M3",
+      "seed": 414,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_14.wav",
+      "timing": {
+        "seconds": 0.15966795801068656,
+        "audio_seconds": 4.490907029478458,
+        "rtf": 0.035553610208944646,
+        "realtime_factor": 28.126538883762024,
+        "stages": {
+          "duration_predictor": 0.0012225410027895123,
+          "text_encoder": 0.005842084006872028,
+          "vector_estimator": 0.11156212602509186,
+          "vocoder": 0.04060554099851288
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_14.wav",
+      "text": "Gather the loose pages and put them in the correct order before sealing the envelope.",
+      "transcript": "Gather the loose pages and put them in the correct order before sealing the envelope.",
+      "errors": 0,
+      "reference_units": 15
+    },
+    {
+      "variant": "round4-cfg1024-preview",
+      "case": 15,
+      "language": "en",
+      "reference": "Look both ways and wait for the signal before crossing the street.",
+      "voice": "F3",
+      "seed": 415,
+      "audio": "samples/round4_expanded_preview_validation/round4-cfg1024-preview_15.wav",
+      "timing": {
+        "seconds": 0.15416795801138505,
+        "audio_seconds": 4.510861678004535,
+        "rtf": 0.03417705285957342,
+        "realtime_factor": 29.259398231579453,
+        "stages": {
+          "duration_predictor": 0.0009445000032428652,
+          "text_encoder": 0.004868500021984801,
+          "vector_estimator": 0.107770457980223,
+          "vocoder": 0.04015887499554083
+        }
+      },
+      "reference_audio": "samples/round4_expanded_preview_validation/reference_15.wav",
+      "text": "Look both ways and wait for the signal before crossing the street.",
+      "transcript": "Look both ways and wait for the signal before crossing the street.",
+      "errors": 0,
+      "reference_units": 12
+    }
+  ],
+  "models": {
+    "reference": {
+      "mode": "original FP32",
+      "guidance_scale": 4
+    },
+    "cfg-mixed-v1-selected": {
+      "mode": "experimental-CFG-distillation",
+      "status": "selected on validation; one Korean sample listening feedback positive; independent EN ASR regression remains",
+      "checkpoint": "distill/joint-cfg-mixed-v1/best_step_00600.pt",
+      "step": 600,
+      "validation_relative_update_mse": 0.0558609840227291,
+      "base": "models/fast-fp32-cached",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "training": {
+        "checkpoints": "distill/mixed-v1/initial.pt",
+        "data": "distill/trajectories-v2",
+        "output": "distill/joint-cfg-mixed-v1",
+        "iterations": 2400,
+        "learning_rate": 3e-05,
+        "validate_every": 200,
+        "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+        "train_all": true
+      },
+      "teacher_guidance_scale": 4,
+      "student_internal_guidance_scale": 1,
+      "guidance_mode": "learned one-branch approximation; not exact CFG4",
+      "source_step": 600,
+      "supported_steps": [
+        8
+      ],
+      "source_export": "models/cfg-mixed-v1-preview",
+      "record": "records/2026-10-28/ROUND3.md",
+      "vector_sha256": "d2b63c7a648b93b1d1d94a4443a47bd92ec0aca75299a27dffb6473bc34b93ea",
+      "listening_feedback": {
+        "user_quote": "이제 거의 차이 없는듯",
+        "sample": "samples/epyc_cfg_mixed_preview_v1_8/ko_short_8steps.wav",
+        "reference": "samples/equivalence_fp32_cached/ko_short_reference.wav",
+        "scope": "One Korean M1 sentence, seed42, 8 steps; not a universal quality approval"
+      }
+    },
+    "cfg1024-v1-final": {
+      "mode": "experimental-CFG-distillation",
+      "status": "experimental; acoustic/ASR/listening validation required",
+      "checkpoint": "distill/joint-cfg-1024-v1/best.pt",
+      "step": 2400,
+      "validation_relative_update_mse": 0.07546113629359752,
+      "base": "models/fast-fp32-cached",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "training": {
+        "checkpoints": "distill/student1024",
+        "data": "distill/trajectories-v2",
+        "output": "distill/joint-cfg-1024-v1",
+        "iterations": 2400,
+        "learning_rate": 3e-05,
+        "validate_every": 200,
+        "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+        "train_all": true
+      },
+      "teacher_guidance_scale": 4,
+      "student_internal_guidance_scale": 1,
+      "guidance_mode": "learned one-branch approximation; not exact CFG4",
+      "supported_steps": [
+        8
+      ]
+    },
+    "round4-cfg1024-preview": {
+      "mode": "experimental-CFG-distillation",
+      "status": "experimental; acoustic/ASR/listening validation required",
+      "checkpoint": "distill/joint-cfg1024-round4/best_step_00400.pt",
+      "step": 400,
+      "validation_relative_update_mse": 0.07285622095999618,
+      "base": "models/fast-fp32-cached",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "training": {
+        "checkpoints": "distill/joint-cfg-1024-v1/best.pt",
+        "data": "distill/trajectories-round4",
+        "output": "distill/joint-cfg1024-round4",
+        "iterations": 2000,
+        "learning_rate": 1e-05,
+        "validate_every": 200,
+        "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+        "train_all": true
+      },
+      "teacher_guidance_scale": 4,
+      "student_internal_guidance_scale": 1,
+      "guidance_mode": "learned one-branch approximation; not exact CFG4",
+      "supported_steps": [
+        8
+      ]
+    }
+  }
+}

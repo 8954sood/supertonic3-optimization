@@ -1,0 +1,544 @@
+{
+  "split": "test",
+  "steps": 8,
+  "reference_guidance_scale": 4,
+  "corpus": "distill/corpus_round4.json",
+  "note": "ASR proxy only; does not assess timbre, prosody or listening quality. Test split must not be reused for tuning.",
+  "rows": [
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 0,
+      "language": "ko",
+      "reference": "서랍 속에 넣어 둔 파란색 수첩을 찾아서 책상 위에 올려 주세요.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_00.wav",
+      "timing": {
+        "seconds": 0.1872868750069756,
+        "audio_seconds": 5.555918367346939,
+        "rtf": 0.03370943606869602,
+        "realtime_factor": 29.665284164413578,
+        "stages": {
+          "duration_predictor": 0.0015240419888868928,
+          "text_encoder": 0.004791042010765523,
+          "vector_estimator": 0.13660566697944887,
+          "vocoder": 0.04394316699472256
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_00.wav",
+      "text": "서랍 속에 넣어 둔 파란색 수첩을 찾아서 책상 위에 올려 주세요.",
+      "transcript": "서랍 속에 넣어둔 파란색 수첩을 찾아서 책상 위에 올려주세요.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 1,
+      "language": "ko",
+      "reference": "좁은 골목 끝 빵집에서는 아침마다 따뜻한 식빵 냄새가 납니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_01.wav",
+      "timing": {
+        "seconds": 0.19296037501771934,
+        "audio_seconds": 5.636439909297052,
+        "rtf": 0.03423444197452366,
+        "realtime_factor": 29.210349061456082,
+        "stages": {
+          "duration_predictor": 0.0010161249956581742,
+          "text_encoder": 0.0049081670003943145,
+          "vector_estimator": 0.1405479599488899,
+          "vocoder": 0.04608175001339987
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_01.wav",
+      "text": "좁은 골목 끝 빵집에서는 아침마다 따뜻한 식빵 냄새가 납니다.",
+      "transcript": "좁은 골목 끝방집에서는 아침마다 따뜻한 식빵 냄새가 납니다.",
+      "errors": 1,
+      "reference_units": 25
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 2,
+      "language": "ko",
+      "reference": "회의가 끝난 뒤에 자세한 일정과 준비물을 다시 알려 드리겠습니다.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_02.wav",
+      "timing": {
+        "seconds": 0.16919454201706685,
+        "audio_seconds": 4.51156462585034,
+        "rtf": 0.037502409041780496,
+        "realtime_factor": 26.664953680333575,
+        "stages": {
+          "duration_predictor": 0.0010270419879816473,
+          "text_encoder": 0.005038541974499822,
+          "vector_estimator": 0.12451554092695005,
+          "vocoder": 0.03814720897935331
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_02.wav",
+      "text": "회의가 끝난 뒤에 자세한 일정과 준비물을 다시 알려 드리겠습니다.",
+      "transcript": "회의가 끝난 뒤에 자세한 일정과 준비물을 다시 알려드리겠습니다.",
+      "errors": 0,
+      "reference_units": 27
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 3,
+      "language": "ko",
+      "reference": "잠깐만요, 오른쪽 창문이 열려 있는지 먼저 확인해 주시겠어요?",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_03.wav",
+      "timing": {
+        "seconds": 0.1950160840060562,
+        "audio_seconds": 5.5501587301587305,
+        "rtf": 0.03513702823423194,
+        "realtime_factor": 28.46000502187487,
+        "stages": {
+          "duration_predictor": 0.0009953750122804195,
+          "text_encoder": 0.005027916980907321,
+          "vector_estimator": 0.14224429201567546,
+          "vocoder": 0.046277042012661695
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_03.wav",
+      "text": "잠깐만요, 오른쪽 창문이 열려 있는지 먼저 확인해 주시겠어요?",
+      "transcript": "잠깐만요. 오른쪽 창문이 열려 있는지 먼저 확인해 주시겠어요?",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 4,
+      "language": "ko",
+      "reference": "숲길을 천천히 걷다가 작은 개울 앞에서 잠시 쉬었습니다.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_04.wav",
+      "timing": {
+        "seconds": 0.18199216699576937,
+        "audio_seconds": 4.950385487528345,
+        "rtf": 0.036763231359308826,
+        "realtime_factor": 27.201090954883913,
+        "stages": {
+          "duration_predictor": 0.0010529170103836805,
+          "text_encoder": 0.0048200830060523,
+          "vector_estimator": 0.13409812506870367,
+          "vocoder": 0.04157995799323544
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_04.wav",
+      "text": "숲길을 천천히 걷다가 작은 개울 앞에서 잠시 쉬었습니다.",
+      "transcript": "숲기를 천천히 걷다가 작은 계울 앞에서 잠시 쉬었습니다.",
+      "errors": 3,
+      "reference_units": 23
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 5,
+      "language": "ko",
+      "reference": "처음에는 낯설었지만 차분히 설명을 듣고 나니 훨씬 이해하기 쉬웠습니다.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_05.wav",
+      "timing": {
+        "seconds": 0.20027520798612386,
+        "audio_seconds": 5.881972789115646,
+        "rtf": 0.03404898580230175,
+        "realtime_factor": 29.369450409075,
+        "stages": {
+          "duration_predictor": 0.0010740830039139837,
+          "text_encoder": 0.005298417003359646,
+          "vector_estimator": 0.14608425003825687,
+          "vocoder": 0.047392250009579584
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_05.wav",
+      "text": "처음에는 낯설었지만 차분히 설명을 듣고 나니 훨씬 이해하기 쉬웠습니다.",
+      "transcript": "처음에는 낯설었지만 차분히 설명을 듣고나니 훨씬 이해하기 쉬웠습니다.",
+      "errors": 0,
+      "reference_units": 30
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 6,
+      "language": "ko",
+      "reference": "주방에서 그릇을 씻는 소리와 라디오의 잔잔한 음악이 함께 들렸습니다.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_06.wav",
+      "timing": {
+        "seconds": 0.20895283299614675,
+        "audio_seconds": 6.0560997732426305,
+        "rtf": 0.0345028716203377,
+        "realtime_factor": 28.983094827694007,
+        "stages": {
+          "duration_predictor": 0.0011395409819670022,
+          "text_encoder": 0.005263250001007691,
+          "vector_estimator": 0.15098891500383615,
+          "vocoder": 0.05107175000011921
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_06.wav",
+      "text": "주방에서 그릇을 씻는 소리와 라디오의 잔잔한 음악이 함께 들렸습니다.",
+      "transcript": "주방에서 그릇을 씻는 소리와 라디오의 잔잔한 음악이 함께 들렸습니다.",
+      "errors": 0,
+      "reference_units": 29
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 7,
+      "language": "ko",
+      "reference": "흐린 하늘 사이로 햇빛이 비치자 젖은 나뭇잎이 반짝였습니다.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_07.wav",
+      "timing": {
+        "seconds": 0.19079170800978318,
+        "audio_seconds": 5.055895691609978,
+        "rtf": 0.03773648026924153,
+        "realtime_factor": 26.499556738339635,
+        "stages": {
+          "duration_predictor": 0.0010144590050913393,
+          "text_encoder": 0.004952833987772465,
+          "vector_estimator": 0.13937637498020194,
+          "vocoder": 0.044980208011111245
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_07.wav",
+      "text": "흐린 하늘 사이로 햇빛이 비치자 젖은 나뭇잎이 반짝였습니다.",
+      "transcript": "그린 하늘 사이로 햇빛이 비치자 젖은 나무니피 반짝였습니다.",
+      "errors": 4,
+      "reference_units": 25
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 8,
+      "language": "en",
+      "reference": "Please place the small wooden box beside the chair near the kitchen door.",
+      "voice": "M3",
+      "seed": 408,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_08.wav",
+      "timing": {
+        "seconds": 0.1491293750004843,
+        "audio_seconds": 4.051020408163265,
+        "rtf": 0.03681279282127824,
+        "realtime_factor": 27.164469831313312,
+        "stages": {
+          "duration_predictor": 0.0009951670072041452,
+          "text_encoder": 0.004742499993881211,
+          "vector_estimator": 0.1080860000802204,
+          "vocoder": 0.03491624997695908
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_08.wav",
+      "text": "Please place the small wooden box beside the chair near the kitchen door.",
+      "transcript": "Please place the small wooden box beside the chair near the kitchen door.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 9,
+      "language": "en",
+      "reference": "She carefully checked the address before sending the letter to her friend.",
+      "voice": "F3",
+      "seed": 409,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_09.wav",
+      "timing": {
+        "seconds": 0.17538000000058673,
+        "audio_seconds": 4.975963718820862,
+        "rtf": 0.03524543383168919,
+        "realtime_factor": 28.372469602031103,
+        "stages": {
+          "duration_predictor": 0.0010316669940948486,
+          "text_encoder": 0.004985874984413385,
+          "vector_estimator": 0.12771370803238824,
+          "vocoder": 0.041220083978259936
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_09.wav",
+      "text": "She carefully checked the address before sending the letter to her friend.",
+      "transcript": "She carefully checked the address before sending the letter to her friend.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 10,
+      "language": "en",
+      "reference": "The silver bicycle was leaning against the fence at the edge of the garden.",
+      "voice": "M5",
+      "seed": 410,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_10.wav",
+      "timing": {
+        "seconds": 0.17161662501166575,
+        "audio_seconds": 4.721768707482993,
+        "rtf": 0.036345834716488785,
+        "realtime_factor": 27.513469089384714,
+        "stages": {
+          "duration_predictor": 0.0010874590079765767,
+          "text_encoder": 0.00528591699548997,
+          "vector_estimator": 0.12348558296798728,
+          "vocoder": 0.041313333000289276
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_10.wav",
+      "text": "The silver bicycle was leaning against the fence at the edge of the garden.",
+      "transcript": "The silver bicycle was leaning against the fence at the edge of the garden.",
+      "errors": 0,
+      "reference_units": 14
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 11,
+      "language": "en",
+      "reference": "Could you close the window before we begin the discussion this afternoon?",
+      "voice": "F5",
+      "seed": 411,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_11.wav",
+      "timing": {
+        "seconds": 0.16406620800262317,
+        "audio_seconds": 4.528072562358276,
+        "rtf": 0.03623312253573416,
+        "realtime_factor": 27.59905660942611,
+        "stages": {
+          "duration_predictor": 0.0010301669826731086,
+          "text_encoder": 0.0049892500101123005,
+          "vector_estimator": 0.11934020803892054,
+          "vocoder": 0.038273499987553805
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_11.wav",
+      "text": "Could you close the window before we begin the discussion this afternoon?",
+      "transcript": "Could you close the window before we begin the discussion this afternoon?",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 12,
+      "language": "en",
+      "reference": "Fresh bread and a cup of warm tea made the quiet morning feel special.",
+      "voice": "M1",
+      "seed": 412,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_12.wav",
+      "timing": {
+        "seconds": 0.16817854199325666,
+        "audio_seconds": 4.6099092970521545,
+        "rtf": 0.0364819633437907,
+        "realtime_factor": 27.410805459575187,
+        "stages": {
+          "duration_predictor": 0.0009574999858159572,
+          "text_encoder": 0.004782875010278076,
+          "vector_estimator": 0.12257050001062453,
+          "vocoder": 0.03948454197961837
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_12.wav",
+      "text": "Fresh bread and a cup of warm tea made the quiet morning feel special.",
+      "transcript": "Fresh bread and a cup of warm tea made the quiet morning feel special.",
+      "errors": 0,
+      "reference_units": 14
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 13,
+      "language": "en",
+      "reference": "After a brief pause, the speaker answered the question in a calm and steady voice.",
+      "voice": "F1",
+      "seed": 413,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_13.wav",
+      "timing": {
+        "seconds": 0.19162458402570337,
+        "audio_seconds": 5.4137641723356005,
+        "rtf": 0.03539581295485815,
+        "realtime_factor": 28.251929155444014,
+        "stages": {
+          "duration_predictor": 0.0010999999940395355,
+          "text_encoder": 0.005441707995487377,
+          "vector_estimator": 0.1372709989955183,
+          "vocoder": 0.0473897919873707
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_13.wav",
+      "text": "After a brief pause, the speaker answered the question in a calm and steady voice.",
+      "transcript": "After a brief pause, the speaker answered the question in a calm and steady voice.",
+      "errors": 0,
+      "reference_units": 15
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 14,
+      "language": "en",
+      "reference": "We heard footsteps on the stairs while the rain continued to fall outside.",
+      "voice": "M3",
+      "seed": 414,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_14.wav",
+      "timing": {
+        "seconds": 0.14976883298368193,
+        "audio_seconds": 4.177256235827665,
+        "rtf": 0.03585339862542747,
+        "realtime_factor": 27.891358653257303,
+        "stages": {
+          "duration_predictor": 0.001002291974145919,
+          "text_encoder": 0.004920958017464727,
+          "vector_estimator": 0.10825029195984825,
+          "vocoder": 0.03521308401832357
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_14.wav",
+      "text": "We heard footsteps on the stairs while the rain continued to fall outside.",
+      "transcript": "We heard footsteps on the stairs while the rain continued to fall outside.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 15,
+      "language": "en",
+      "reference": "The children stopped talking when the teacher opened the brightly colored book.",
+      "voice": "F3",
+      "seed": 415,
+      "audio": "samples/round4_baseline_holdout/cfg-mixed-v1-selected_15.wav",
+      "timing": {
+        "seconds": 0.1756394579715561,
+        "audio_seconds": 5.1544897959183675,
+        "rtf": 0.034075042327300346,
+        "realtime_factor": 29.346992159091666,
+        "stages": {
+          "duration_predictor": 0.0011896670039277524,
+          "text_encoder": 0.005119332985486835,
+          "vector_estimator": 0.12779429004876874,
+          "vocoder": 0.04112045798683539
+        }
+      },
+      "reference_audio": "samples/round4_baseline_holdout/reference_15.wav",
+      "text": "The children stopped talking when the teacher opened the brightly colored book.",
+      "transcript": "The children stopped talking when the teacher opened the brightly colored book.",
+      "errors": 0,
+      "reference_units": 12
+    }
+  ],
+  "models": {
+    "reference": {
+      "mode": "original FP32",
+      "guidance_scale": 4
+    },
+    "cfg-mixed-v1-selected": {
+      "mode": "experimental-CFG-distillation",
+      "status": "selected on validation; one Korean sample listening feedback positive; independent EN ASR regression remains",
+      "checkpoint": "distill/joint-cfg-mixed-v1/best_step_00600.pt",
+      "step": 600,
+      "validation_relative_update_mse": 0.0558609840227291,
+      "base": "models/fast-fp32-cached",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "training": {
+        "checkpoints": "distill/mixed-v1/initial.pt",
+        "data": "distill/trajectories-v2",
+        "output": "distill/joint-cfg-mixed-v1",
+        "iterations": 2400,
+        "learning_rate": 3e-05,
+        "validate_every": 200,
+        "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+        "train_all": true
+      },
+      "teacher_guidance_scale": 4,
+      "student_internal_guidance_scale": 1,
+      "guidance_mode": "learned one-branch approximation; not exact CFG4",
+      "source_step": 600,
+      "supported_steps": [
+        8
+      ],
+      "source_export": "models/cfg-mixed-v1-preview",
+      "record": "records/2026-10-28/ROUND3.md",
+      "vector_sha256": "d2b63c7a648b93b1d1d94a4443a47bd92ec0aca75299a27dffb6473bc34b93ea",
+      "listening_feedback": {
+        "user_quote": "이제 거의 차이 없는듯",
+        "sample": "samples/epyc_cfg_mixed_preview_v1_8/ko_short_8steps.wav",
+        "reference": "samples/equivalence_fp32_cached/ko_short_reference.wav",
+        "scope": "One Korean M1 sentence, seed42, 8 steps; not a universal quality approval"
+      }
+    },
+    "cfg1024-v1-final": {
+      "mode": "experimental-CFG-distillation",
+      "status": "experimental; acoustic/ASR/listening validation required",
+      "checkpoint": "distill/joint-cfg-1024-v1/best.pt",
+      "step": 2400,
+      "validation_relative_update_mse": 0.07546113629359752,
+      "base": "models/fast-fp32-cached",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "training": {
+        "checkpoints": "distill/student1024",
+        "data": "distill/trajectories-v2",
+        "output": "distill/joint-cfg-1024-v1",
+        "iterations": 2400,
+        "learning_rate": 3e-05,
+        "validate_every": 200,
+        "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+        "train_all": true
+      },
+      "teacher_guidance_scale": 4,
+      "student_internal_guidance_scale": 1,
+      "guidance_mode": "learned one-branch approximation; not exact CFG4",
+      "supported_steps": [
+        8
+      ]
+    },
+    "mixed-v1-selected": {
+      "mode": "joint-FFN-distillation",
+      "status": "experimental selected tradeoff; listening equivalence unconfirmed; tested on M4 CPU and EPYC CPU1",
+      "step": 400,
+      "validation_relative_update_mse": 0.019176095132327948,
+      "base": "models/fast-fp32-cached (condition cache removed)",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "guidance_scale": 4,
+      "training": {
+        "checkpoints": "distill/mixed-v1/initial.pt",
+        "data": "distill/trajectories-v2",
+        "output": "distill/joint-mixed-v1",
+        "iterations": 1200,
+        "learning_rate": 3e-05,
+        "validate_every": 100
+      },
+      "source_export": "models/mixed-v1-preview-int8",
+      "source_step": 400,
+      "checkpoint_note": "The best.pt path in the historical export has since advanced to step1200. The preserved step400 artifact is this ONNX export; original step400 FP32 checkpoint was not archived.",
+      "record": "records/2026-10-28/ROUND2.md",
+      "vector_sha256": "ca5ec5538b736233014c8c086683a51f2b7c735a98f34098ebbe550366e18644",
+      "historical_checkpoint_path": "distill/joint-mixed-v1/best.pt",
+      "checkpoint": null,
+      "validation": {
+        "source": "results/distill_mixed_selected_validation_v1.json",
+        "ko_cer": 0.011363636363636364,
+        "en_wer": 0,
+        "original_ko_cer": 0.022727272727272728,
+        "original_en_wer": 0
+      },
+      "held_out_test": {
+        "source": "results/distill_mixed_selected_test_v1.json",
+        "unique_texts": 12,
+        "ko_cer": 0.028169014084507043,
+        "en_wer": 0.013888888888888888,
+        "original_ko_cer": 0.028169014084507043,
+        "original_en_wer": 0,
+        "note": "Frozen selected model evaluated once. Do not reuse test set for tuning."
+      },
+      "epyc_benchmark": {
+        "source": "results/epyc_mixed_selected_v1_8.json",
+        "ko_seconds": 9.994838939979672,
+        "en_seconds": 9.095747344195843,
+        "sampled_peak_rss_mb": 356.917248,
+        "threads": 1,
+        "steps": 8,
+        "guidance_scale": 4
+      }
+    }
+  },
+  "source": "results/round4_baseline_holdout.json"
+}

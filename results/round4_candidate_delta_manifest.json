@@ -1,0 +1,559 @@
+{
+  "split": "validation",
+  "steps": 8,
+  "reference_guidance_scale": 4,
+  "corpus": "distill/corpus.json",
+  "note": "Marginal acoustic difference from frozen listening-selected student, not original teacher. Development validation only.",
+  "rows": [
+    {
+      "variant": "round4-head-int8",
+      "case": 0,
+      "language": "ko",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/round4_candidates_validation/round4-head-int8_00.wav",
+      "timing": {
+        "seconds": 0.17897570901550353,
+        "audio_seconds": 5.305736961451247,
+        "rtf": 0.0337324881191527,
+        "realtime_factor": 29.645011552889812,
+        "stages": {
+          "duration_predictor": 0.0009713749750517309,
+          "text_encoder": 0.004665375017793849,
+          "vector_estimator": 0.13721095901564695,
+          "vocoder": 0.035650875011924654
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_00.wav",
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "transcript": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "round4-head-int8",
+      "case": 1,
+      "language": "ko",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/round4_candidates_validation/round4-head-int8_01.wav",
+      "timing": {
+        "seconds": 0.1370777080010157,
+        "audio_seconds": 4.054557823129252,
+        "rtf": 0.03380830018480807,
+        "realtime_factor": 29.57853528670912,
+        "stages": {
+          "duration_predictor": 0.0008120839775074273,
+          "text_encoder": 0.0036242500063963234,
+          "vector_estimator": 0.10443483604467474,
+          "vocoder": 0.027827167010400444
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_01.wav",
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "transcript": "자전거를 세우고 강변벤치에 앉아 쉬었습니다.",
+      "errors": 0,
+      "reference_units": 19
+    },
+    {
+      "variant": "round4-head-int8",
+      "case": 2,
+      "language": "ko",
+      "reference": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/round4_candidates_validation/round4-head-int8_02.wav",
+      "timing": {
+        "seconds": 0.12946887500584126,
+        "audio_seconds": 3.7854421768707485,
+        "rtf": 0.034201783822482595,
+        "realtime_factor": 29.23824105755117,
+        "stages": {
+          "duration_predictor": 0.0008812909945845604,
+          "text_encoder": 0.00434699998004362,
+          "vector_estimator": 0.09876375104067847,
+          "vocoder": 0.02511383398086764
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_02.wav",
+      "text": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "transcript": "햇배치 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "errors": 2,
+      "reference_units": 23
+    },
+    {
+      "variant": "round4-head-int8",
+      "case": 3,
+      "language": "ko",
+      "reference": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/round4_candidates_validation/round4-head-int8_03.wav",
+      "timing": {
+        "seconds": 0.14222533302381635,
+        "audio_seconds": 4.44249433106576,
+        "rtf": 0.03201474721740305,
+        "realtime_factor": 31.23560505442333,
+        "stages": {
+          "duration_predictor": 0.0008753330039326102,
+          "text_encoder": 0.004257249995134771,
+          "vector_estimator": 0.1082500840711873,
+          "vocoder": 0.02847895899321884
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_03.wav",
+      "text": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "transcript": "다음 안내를 들으신 뒤 필요한 항목을 선택해주세요",
+      "errors": 0,
+      "reference_units": 21
+    },
+    {
+      "variant": "round4-head-int8",
+      "case": 4,
+      "language": "en",
+      "reference": "The silver kettle began to whistle as the water reached a boil.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/round4_candidates_validation/round4-head-int8_04.wav",
+      "timing": {
+        "seconds": 0.15763425000477582,
+        "audio_seconds": 4.141269841269842,
+        "rtf": 0.038064230549255944,
+        "realtime_factor": 26.271383542246525,
+        "stages": {
+          "duration_predictor": 0.0009532500116620213,
+          "text_encoder": 0.004940458020428196,
+          "vector_estimator": 0.11890916593256406,
+          "vocoder": 0.0323602499847766
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_04.wav",
+      "text": "The silver kettle began to whistle as the water reached a boil.",
+      "transcript": "The silver kettle began to whistle as the water reached a boil.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "round4-head-int8",
+      "case": 5,
+      "language": "en",
+      "reference": "We waited beneath the shelter until the heavy rain had passed.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/round4_candidates_validation/round4-head-int8_05.wav",
+      "timing": {
+        "seconds": 0.14223412499995902,
+        "audio_seconds": 3.9746938775510205,
+        "rtf": 0.03578492567774693,
+        "realtime_factor": 27.944727592989135,
+        "stages": {
+          "duration_predictor": 0.0009415830136276782,
+          "text_encoder": 0.004516249988228083,
+          "vector_estimator": 0.10817162593593821,
+          "vocoder": 0.02820862500811927
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_05.wav",
+      "text": "We waited beneath the shelter until the heavy rain had passed.",
+      "transcript": "We waited beneath the shelter until the heavy rain had passed.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "round4-head-int8",
+      "case": 6,
+      "language": "en",
+      "reference": "Someone had left a small wooden box beside the fireplace.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/round4_candidates_validation/round4-head-int8_06.wav",
+      "timing": {
+        "seconds": 0.14434308401541784,
+        "audio_seconds": 4.071859410430839,
+        "rtf": 0.035448936091863996,
+        "realtime_factor": 28.209591323377214,
+        "stages": {
+          "duration_predictor": 0.0009180830093100667,
+          "text_encoder": 0.004083875013748184,
+          "vector_estimator": 0.11006716804695316,
+          "vocoder": 0.02889000001596287
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_06.wav",
+      "text": "Someone had left a small wooden box beside the fireplace.",
+      "transcript": "Someone had left a small wooden box beside the fireplace.",
+      "errors": 0,
+      "reference_units": 10
+    },
+    {
+      "variant": "round4-head-int8",
+      "case": 7,
+      "language": "en",
+      "reference": "Follow the signs to the reception desk at the end of the hall.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/round4_candidates_validation/round4-head-int8_07.wav",
+      "timing": {
+        "seconds": 0.14429600001312792,
+        "audio_seconds": 3.989546485260771,
+        "rtf": 0.03616852204786285,
+        "realtime_factor": 27.648351200988284,
+        "stages": {
+          "duration_predictor": 0.0009422500152140856,
+          "text_encoder": 0.004524708987446502,
+          "vector_estimator": 0.11000562601839192,
+          "vocoder": 0.02843641600338742
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_07.wav",
+      "text": "Follow the signs to the reception desk at the end of the hall.",
+      "transcript": "Follow the signs to the reception desk at the end of the hall.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "round4-fast-gelu",
+      "case": 0,
+      "language": "ko",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/round4_candidates_validation/round4-fast-gelu_00.wav",
+      "timing": {
+        "seconds": 0.17328141699545085,
+        "audio_seconds": 5.305736961451247,
+        "rtf": 0.03265925511468518,
+        "realtime_factor": 30.619191910177754,
+        "stages": {
+          "duration_predictor": 0.000960250006755814,
+          "text_encoder": 0.004854416998568922,
+          "vector_estimator": 0.12645962601527572,
+          "vocoder": 0.04057124999235384
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_00.wav",
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "transcript": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "round4-fast-gelu",
+      "case": 1,
+      "language": "ko",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/round4_candidates_validation/round4-fast-gelu_01.wav",
+      "timing": {
+        "seconds": 0.14225395800895058,
+        "audio_seconds": 4.054557823129252,
+        "rtf": 0.03508494987972842,
+        "realtime_factor": 28.50224963775096,
+        "stages": {
+          "duration_predictor": 0.0008233750122599304,
+          "text_encoder": 0.0038870830030646175,
+          "vector_estimator": 0.10467229306232184,
+          "vocoder": 0.03242062500794418
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_01.wav",
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "transcript": "자전거를 세우고 강변벤치에 앉아 쉬었습니다.",
+      "errors": 0,
+      "reference_units": 19
+    },
+    {
+      "variant": "round4-fast-gelu",
+      "case": 2,
+      "language": "ko",
+      "reference": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/round4_candidates_validation/round4-fast-gelu_02.wav",
+      "timing": {
+        "seconds": 0.13176637500873767,
+        "audio_seconds": 3.7854421768707485,
+        "rtf": 0.03480871424052841,
+        "realtime_factor": 28.72843831834737,
+        "stages": {
+          "duration_predictor": 0.0008934579964261502,
+          "text_encoder": 0.004502583004068583,
+          "vector_estimator": 0.09597599998232909,
+          "vocoder": 0.02998291701078415
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_02.wav",
+      "text": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "transcript": "햇배치 따가운 오후에는 그늘에서 물을 충분히 마시세요",
+      "errors": 2,
+      "reference_units": 23
+    },
+    {
+      "variant": "round4-fast-gelu",
+      "case": 3,
+      "language": "ko",
+      "reference": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/round4_candidates_validation/round4-fast-gelu_03.wav",
+      "timing": {
+        "seconds": 0.13599216600414366,
+        "audio_seconds": 4.44249433106576,
+        "rtf": 0.030611669001616704,
+        "realtime_factor": 32.667281223614,
+        "stages": {
+          "duration_predictor": 0.0009132089908234775,
+          "text_encoder": 0.0043825419852510095,
+          "vector_estimator": 0.09941662699566223,
+          "vocoder": 0.030882916995324194
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_03.wav",
+      "text": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "transcript": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요",
+      "errors": 0,
+      "reference_units": 21
+    },
+    {
+      "variant": "round4-fast-gelu",
+      "case": 4,
+      "language": "en",
+      "reference": "The silver kettle began to whistle as the water reached a boil.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/round4_candidates_validation/round4-fast-gelu_04.wav",
+      "timing": {
+        "seconds": 0.12709658301901072,
+        "audio_seconds": 4.141269841269842,
+        "rtf": 0.030690244270592852,
+        "realtime_factor": 32.583644208990286,
+        "stages": {
+          "duration_predictor": 0.0009205410024151206,
+          "text_encoder": 0.004160916985711083,
+          "vector_estimator": 0.09199395804898813,
+          "vocoder": 0.029661790991667658
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_04.wav",
+      "text": "The silver kettle began to whistle as the water reached a boil.",
+      "transcript": "The silver kettle began to whistle as the water reached a boil.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "round4-fast-gelu",
+      "case": 5,
+      "language": "en",
+      "reference": "We waited beneath the shelter until the heavy rain had passed.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/round4_candidates_validation/round4-fast-gelu_05.wav",
+      "timing": {
+        "seconds": 0.12513137501082383,
+        "audio_seconds": 3.9746938775510205,
+        "rtf": 0.031482015688695665,
+        "realtime_factor": 31.764166878268625,
+        "stages": {
+          "duration_predictor": 0.0008762499783188105,
+          "text_encoder": 0.004182166012469679,
+          "vector_estimator": 0.09160487403278239,
+          "vocoder": 0.02808695801650174
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_05.wav",
+      "text": "We waited beneath the shelter until the heavy rain had passed.",
+      "transcript": "We waited beneath the shelter until the heavy rain had passed.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "round4-fast-gelu",
+      "case": 6,
+      "language": "en",
+      "reference": "Someone had left a small wooden box beside the fireplace.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/round4_candidates_validation/round4-fast-gelu_06.wav",
+      "timing": {
+        "seconds": 0.1462684579892084,
+        "audio_seconds": 4.071859410430839,
+        "rtf": 0.03592178492570594,
+        "realtime_factor": 27.838260322203293,
+        "stages": {
+          "duration_predictor": 0.000890750001417473,
+          "text_encoder": 0.004199999995762482,
+          "vector_estimator": 0.10550112600321881,
+          "vocoder": 0.03527550000580959
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_06.wav",
+      "text": "Someone had left a small wooden box beside the fireplace.",
+      "transcript": "Someone had left a small wooden box beside the fireplace.",
+      "errors": 0,
+      "reference_units": 10
+    },
+    {
+      "variant": "round4-fast-gelu",
+      "case": 7,
+      "language": "en",
+      "reference": "Follow the signs to the reception desk at the end of the hall.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/round4_candidates_validation/round4-fast-gelu_07.wav",
+      "timing": {
+        "seconds": 0.1364629580057226,
+        "audio_seconds": 3.989546485260771,
+        "rtf": 0.034205130460286615,
+        "realtime_factor": 29.23538038134472,
+        "stages": {
+          "duration_predictor": 0.0009250000002793968,
+          "text_encoder": 0.004460416006622836,
+          "vector_estimator": 0.09948220697697252,
+          "vocoder": 0.03121216600993648
+        }
+      },
+      "reference_audio": "samples/round4_candidates_validation/cfg-mixed-v1-selected_07.wav",
+      "text": "Follow the signs to the reception desk at the end of the hall.",
+      "transcript": "Follow the signs to the reception desk at the end of the hall.",
+      "errors": 0,
+      "reference_units": 13
+    }
+  ],
+  "models": {
+    "reference": {
+      "mode": "original FP32",
+      "guidance_scale": 4
+    },
+    "cfg-mixed-v1-selected": {
+      "mode": "experimental-CFG-distillation",
+      "status": "selected on validation; one Korean sample listening feedback positive; independent EN ASR regression remains",
+      "checkpoint": "distill/joint-cfg-mixed-v1/best_step_00600.pt",
+      "step": 600,
+      "validation_relative_update_mse": 0.0558609840227291,
+      "base": "models/fast-fp32-cached",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "training": {
+        "checkpoints": "distill/mixed-v1/initial.pt",
+        "data": "distill/trajectories-v2",
+        "output": "distill/joint-cfg-mixed-v1",
+        "iterations": 2400,
+        "learning_rate": 3e-05,
+        "validate_every": 200,
+        "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+        "train_all": true
+      },
+      "teacher_guidance_scale": 4,
+      "student_internal_guidance_scale": 1,
+      "guidance_mode": "learned one-branch approximation; not exact CFG4",
+      "source_step": 600,
+      "supported_steps": [
+        8
+      ],
+      "source_export": "models/cfg-mixed-v1-preview",
+      "record": "records/2026-10-28/ROUND3.md",
+      "vector_sha256": "d2b63c7a648b93b1d1d94a4443a47bd92ec0aca75299a27dffb6473bc34b93ea",
+      "listening_feedback": {
+        "user_quote": "이제 거의 차이 없는듯",
+        "sample": "samples/epyc_cfg_mixed_preview_v1_8/ko_short_8steps.wav",
+        "reference": "samples/equivalence_fp32_cached/ko_short_reference.wav",
+        "scope": "One Korean M1 sentence, seed42, 8 steps; not a universal quality approval"
+      }
+    },
+    "round4-head-int8": {
+      "mode": "experimental-CFG-distillation",
+      "status": "experimental; not selected; quality/performance evaluation pending",
+      "checkpoint": "distill/joint-cfg-mixed-v1/best_step_00600.pt",
+      "step": 600,
+      "validation_relative_update_mse": 0.0558609840227291,
+      "base": "models/fast-fp32-cached",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "training": {
+        "checkpoints": "distill/mixed-v1/initial.pt",
+        "data": "distill/trajectories-v2",
+        "output": "distill/joint-cfg-mixed-v1",
+        "iterations": 2400,
+        "learning_rate": 3e-05,
+        "validate_every": 200,
+        "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+        "train_all": true
+      },
+      "teacher_guidance_scale": 4,
+      "student_internal_guidance_scale": 1,
+      "guidance_mode": "learned one-branch approximation; not exact CFG4",
+      "source_step": 600,
+      "supported_steps": [
+        8
+      ],
+      "source_export": "models/cfg-mixed-v1-preview",
+      "record": "records/2026-10-28/ROUND3.md",
+      "vector_sha256": "d2b63c7a648b93b1d1d94a4443a47bd92ec0aca75299a27dffb6473bc34b93ea",
+      "listening_feedback": {
+        "user_quote": "이제 거의 차이 없는듯",
+        "sample": "samples/epyc_cfg_mixed_preview_v1_8/ko_short_8steps.wav",
+        "reference": "samples/equivalence_fp32_cached/ko_short_reference.wav",
+        "scope": "One Korean M1 sentence, seed42, 8 steps; not a universal quality approval"
+      },
+      "round4_mode": "head-int8",
+      "source_package": "models/cfg-mixed-v1-selected",
+      "changes": {
+        "quantized_nodes": [
+          "/decoder/head/layer2/Conv/linear/MatMul"
+        ],
+        "reduce_range": true
+      },
+      "numerical_change": true
+    },
+    "round4-fast-gelu": {
+      "mode": "experimental-CFG-distillation",
+      "status": "experimental; not selected; quality/performance evaluation pending",
+      "checkpoint": "distill/joint-cfg-mixed-v1/best_step_00600.pt",
+      "step": 600,
+      "validation_relative_update_mse": 0.0558609840227291,
+      "base": "models/fast-fp32-cached",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "training": {
+        "checkpoints": "distill/mixed-v1/initial.pt",
+        "data": "distill/trajectories-v2",
+        "output": "distill/joint-cfg-mixed-v1",
+        "iterations": 2400,
+        "learning_rate": 3e-05,
+        "validate_every": 200,
+        "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+        "train_all": true
+      },
+      "teacher_guidance_scale": 4,
+      "student_internal_guidance_scale": 1,
+      "guidance_mode": "learned one-branch approximation; not exact CFG4",
+      "source_step": 600,
+      "supported_steps": [
+        8
+      ],
+      "source_export": "models/cfg-mixed-v1-preview",
+      "record": "records/2026-10-28/ROUND3.md",
+      "vector_sha256": "d2b63c7a648b93b1d1d94a4443a47bd92ec0aca75299a27dffb6473bc34b93ea",
+      "listening_feedback": {
+        "user_quote": "이제 거의 차이 없는듯",
+        "sample": "samples/epyc_cfg_mixed_preview_v1_8/ko_short_8steps.wav",
+        "reference": "samples/equivalence_fp32_cached/ko_short_reference.wav",
+        "scope": "One Korean M1 sentence, seed42, 8 steps; not a universal quality approval"
+      },
+      "round4_mode": "fast-gelu",
+      "source_package": "models/cfg-mixed-v1-selected",
+      "changes": {
+        "vector_estimator": {
+          "fast_gelu_nodes": 28
+        },
+        "vocoder": {
+          "fast_gelu_nodes": 10
+        }
+      },
+      "numerical_change": true
+    }
+  }
+}

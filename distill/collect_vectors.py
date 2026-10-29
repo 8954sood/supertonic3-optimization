@@ -9,23 +9,32 @@ import argparse
 import json
 import shutil
 import numpy as np
+import hashlib
 from supertonic.loader import load_voice_style_from_name
 
 p = argparse.ArgumentParser()
 p.add_argument("--output", default="distill/trajectories-v1")
 p.add_argument("--limit", type=int)
 p.add_argument("--repeats", type=int, default=1)
+p.add_argument("--corpus", default="distill/corpus.json")
 p.add_argument(
     "--source", help="Copy an existing one-repeat collection and add more voices/seeds"
 )
 a = p.parse_args()
+if a.repeats < 1:
+    p.error("repeats must be positive")
 root = Path(a.output)
 if (root / "manifest.json").exists():
     p.error("Choose a new collection directory")
 if a.source:
+    previous = json.loads((Path(a.source) / "manifest.json").read_text())
+    if previous.get("corpus", "distill/corpus.json") != a.corpus:
+        p.error("Source trajectories use a different corpus")
     shutil.copytree(a.source, root)
 root.mkdir(parents=True, exist_ok=True)
-corpus = json.loads(Path("distill/corpus.json").read_text())
+corpus_path = Path(a.corpus)
+corpus = json.loads(corpus_path.read_text())
+corpus_sha256 = hashlib.sha256(corpus_path.read_bytes()).hexdigest()
 teacher = Engine()
 original = teacher.sessions["vector_estimator"]
 
@@ -80,6 +89,12 @@ for split in ["train", "validation"]:
         print(split, case, flush=True)
         (root / "manifest.json").write_text(
             json.dumps(
-                {"teacher": "original FP32 CFG4 8 steps", "rows": rows}, indent=2
+                {
+                    "teacher": "original FP32 CFG4 8 steps",
+                    "corpus": a.corpus,
+                    "corpus_sha256": corpus_sha256,
+                    "rows": rows,
+                },
+                indent=2,
             )
         )

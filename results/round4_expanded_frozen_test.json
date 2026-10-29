@@ -1,0 +1,1781 @@
+{
+  "split": "test",
+  "steps": 8,
+  "reference_guidance_scale": 4,
+  "corpus": "distill/corpus_round4_train.json",
+  "note": "ASR proxy only; does not assess timbre, prosody or listening quality. Test split must not be reused for tuning.",
+  "rows": [
+    {
+      "variant": "reference",
+      "case": 0,
+      "language": "ko",
+      "reference": "언덕 아래 작은 우체국 옆에서 택배를 기다리는 사람을 만났습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/round4_expanded_frozen_test/reference_00.wav",
+      "timing": {
+        "seconds": 1.949746457976289,
+        "audio_seconds": 5.587414965986395,
+        "rtf": 0.348953222526955,
+        "realtime_factor": 2.8657136127257132,
+        "stages": {
+          "duration_predictor": 0.0012214169837534428,
+          "text_encoder": 0.00502679098281078,
+          "vector_estimator": 1.832184792991029,
+          "vocoder": 0.04078995902091265
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_00.wav",
+      "text": "언덕 아래 작은 우체국 옆에서 택배를 기다리는 사람을 만났습니다.",
+      "transcript": "언더가의 작은 우체국 옆에서 택배를 기다리는 사람을 만났습니다.",
+      "errors": 3,
+      "reference_units": 27
+    },
+    {
+      "variant": "reference",
+      "case": 1,
+      "language": "ko",
+      "reference": "냉장고 문을 오래 열어 두면 안에 있는 음식의 온도가 올라갑니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/round4_expanded_frozen_test/reference_01.wav",
+      "timing": {
+        "seconds": 1.6172989170008805,
+        "audio_seconds": 5.449478458049887,
+        "rtf": 0.29678049550078156,
+        "realtime_factor": 3.3694936667337916,
+        "stages": {
+          "duration_predictor": 0.0009384170116391033,
+          "text_encoder": 0.004787292011315003,
+          "vector_estimator": 1.5723388330661692,
+          "vocoder": 0.038716499984730035
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_01.wav",
+      "text": "냉장고 문을 오래 열어 두면 안에 있는 음식의 온도가 올라갑니다.",
+      "transcript": "냉장고 문을 오래 열어두면 안에 있는 음식의 온도가 올라갑니다.",
+      "errors": 0,
+      "reference_units": 26
+    },
+    {
+      "variant": "reference",
+      "case": 2,
+      "language": "ko",
+      "reference": "새벽에 들리는 종소리를 듣고 나서야 시간이 많이 지났음을 알았습니다.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/round4_expanded_frozen_test/reference_02.wav",
+      "timing": {
+        "seconds": 1.5598999579960946,
+        "audio_seconds": 4.576825396825397,
+        "rtf": 0.3408257520765553,
+        "realtime_factor": 2.934050593029669,
+        "stages": {
+          "duration_predictor": 0.0009666249970905483,
+          "text_encoder": 0.0052766659937333316,
+          "vector_estimator": 1.5214851230266504,
+          "vocoder": 0.03173312501166947
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_02.wav",
+      "text": "새벽에 들리는 종소리를 듣고 나서야 시간이 많이 지났음을 알았습니다.",
+      "transcript": "새벽에 들리는 종소리를 듣고 나서야 시간이 많이 지났음을 알았습니다.",
+      "errors": 0,
+      "reference_units": 29
+    },
+    {
+      "variant": "reference",
+      "case": 3,
+      "language": "ko",
+      "reference": "완성된 작품을 벽에 걸고 조금 떨어진 곳에서 천천히 바라보았습니다.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/round4_expanded_frozen_test/reference_03.wav",
+      "timing": {
+        "seconds": 1.8436530419858173,
+        "audio_seconds": 6.10780045351474,
+        "rtf": 0.30185220621032,
+        "realtime_factor": 3.3128795464335123,
+        "stages": {
+          "duration_predictor": 0.0009825830056797713,
+          "text_encoder": 0.005056458001490682,
+          "vector_estimator": 1.795216497965157,
+          "vocoder": 0.04195995902409777
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_03.wav",
+      "text": "완성된 작품을 벽에 걸고 조금 떨어진 곳에서 천천히 바라보았습니다.",
+      "transcript": "완성된 작품을 벽에 걸고 조금 떨어진 곳에서 천천히 바라보았습니다.",
+      "errors": 0,
+      "reference_units": 28
+    },
+    {
+      "variant": "reference",
+      "case": 4,
+      "language": "ko",
+      "reference": "필요한 도구를 모두 챙겼는지 확인한 뒤 천막을 접었습니다.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/round4_expanded_frozen_test/reference_04.wav",
+      "timing": {
+        "seconds": 1.5590522910060827,
+        "audio_seconds": 4.753038548752834,
+        "rtf": 0.3280117076717519,
+        "realtime_factor": 3.048671668148872,
+        "stages": {
+          "duration_predictor": 0.0008909999742172658,
+          "text_encoder": 0.0047633750073146075,
+          "vector_estimator": 1.5191102910321206,
+          "vocoder": 0.033857665985124186
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_04.wav",
+      "text": "필요한 도구를 모두 챙겼는지 확인한 뒤 천막을 접었습니다.",
+      "transcript": "필요한 도구를 모두 챙겼는지 확인한 뒤 천막을 접었습니다.",
+      "errors": 0,
+      "reference_units": 24
+    },
+    {
+      "variant": "reference",
+      "case": 5,
+      "language": "ko",
+      "reference": "긴 이야기가 끝나자 아이들은 눈을 반짝이며 다음 내용을 물었습니다.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/round4_expanded_frozen_test/reference_05.wav",
+      "timing": {
+        "seconds": 1.6060620000062045,
+        "audio_seconds": 5.4439002267573695,
+        "rtf": 0.2950204693525118,
+        "realtime_factor": 3.3895953124700906,
+        "stages": {
+          "duration_predictor": 0.0009876669791992754,
+          "text_encoder": 0.004906833986751735,
+          "vector_estimator": 1.5611748739902396,
+          "vocoder": 0.03857004101155326
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_05.wav",
+      "text": "긴 이야기가 끝나자 아이들은 눈을 반짝이며 다음 내용을 물었습니다.",
+      "transcript": "기인 이야기가 끝나자 아이들은 눈을 반짝이며 다음 내용을 물었습니다.",
+      "errors": 2,
+      "reference_units": 28
+    },
+    {
+      "variant": "reference",
+      "case": 6,
+      "language": "ko",
+      "reference": "비가 그친 거리에는 물웅덩이에 비친 가로등 불빛이 남아 있었습니다.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/round4_expanded_frozen_test/reference_06.wav",
+      "timing": {
+        "seconds": 1.612171082990244,
+        "audio_seconds": 5.516734693877551,
+        "rtf": 0.2922328465023748,
+        "realtime_factor": 3.4219288213786525,
+        "stages": {
+          "duration_predictor": 0.0009811250201892108,
+          "text_encoder": 0.0054264169884845614,
+          "vector_estimator": 1.5638558759819716,
+          "vocoder": 0.04140883398940787
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_06.wav",
+      "text": "비가 그친 거리에는 물웅덩이에 비친 가로등 불빛이 남아 있었습니다.",
+      "transcript": "비가 그친 거리에는 무릉덩이에 비친 가로등 불빛이 남아 있었습니다.",
+      "errors": 2,
+      "reference_units": 28
+    },
+    {
+      "variant": "reference",
+      "case": 7,
+      "language": "ko",
+      "reference": "낮은 목소리로 이름을 부르자 창가에 있던 사람이 고개를 돌렸습니다.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/round4_expanded_frozen_test/reference_07.wav",
+      "timing": {
+        "seconds": 1.8721132499922533,
+        "audio_seconds": 5.5908616780045355,
+        "rtf": 0.33485236405641844,
+        "realtime_factor": 2.9863907421346814,
+        "stages": {
+          "duration_predictor": 0.0010372909891884774,
+          "text_encoder": 0.005362249998142943,
+          "vector_estimator": 1.8261416669702157,
+          "vocoder": 0.039086791977752
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_07.wav",
+      "text": "낮은 목소리로 이름을 부르자 창가에 있던 사람이 고개를 돌렸습니다.",
+      "transcript": "낮은 목소리로 이름을 부르자 창가에 있던 사람이 고개를 돌렸습니다.",
+      "errors": 0,
+      "reference_units": 28
+    },
+    {
+      "variant": "reference",
+      "case": 8,
+      "language": "en",
+      "reference": "We met a traveler waiting beside the small post office at the bottom of the hill.",
+      "voice": "M3",
+      "seed": 408,
+      "audio": "samples/round4_expanded_frozen_test/reference_08.wav",
+      "timing": {
+        "seconds": 1.5339854170160834,
+        "audio_seconds": 4.484285714285714,
+        "rtf": 0.3420802140526468,
+        "realtime_factor": 2.9232909677906656,
+        "stages": {
+          "duration_predictor": 0.00098637500195764,
+          "text_encoder": 0.005144541006302461,
+          "vector_estimator": 1.4971087519952562,
+          "vocoder": 0.030301624996354803
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_08.wav",
+      "text": "We met a traveler waiting beside the small post office at the bottom of the hill.",
+      "transcript": "We met a traveler waiting beside the small post office at the bottom of the hill.",
+      "errors": 0,
+      "reference_units": 16
+    },
+    {
+      "variant": "reference",
+      "case": 9,
+      "language": "en",
+      "reference": "Leaving the refrigerator door open will raise the temperature of the food inside.",
+      "voice": "F3",
+      "seed": 409,
+      "audio": "samples/round4_expanded_frozen_test/reference_09.wav",
+      "timing": {
+        "seconds": 1.8938967499998398,
+        "audio_seconds": 5.636303854875283,
+        "rtf": 0.33601750344982895,
+        "realtime_factor": 2.9760354437884535,
+        "stages": {
+          "duration_predictor": 0.0010682920110411942,
+          "text_encoder": 0.00536666699917987,
+          "vector_estimator": 1.8477834579825867,
+          "vocoder": 0.03919812498497777
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_09.wav",
+      "text": "Leaving the refrigerator door open will raise the temperature of the food inside.",
+      "transcript": "Leaving the refrigerator door open will raise the temperature of the food inside.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "reference",
+      "case": 10,
+      "language": "en",
+      "reference": "Only after hearing the distant bell did she realize how late it had become.",
+      "voice": "M5",
+      "seed": 410,
+      "audio": "samples/round4_expanded_frozen_test/reference_10.wav",
+      "timing": {
+        "seconds": 1.544154208007967,
+        "audio_seconds": 4.946258503401361,
+        "rtf": 0.3121863135430768,
+        "realtime_factor": 3.2032153769034966,
+        "stages": {
+          "duration_predictor": 0.0009435829997528344,
+          "text_encoder": 0.004826499993214384,
+          "vector_estimator": 1.5032340409234166,
+          "vocoder": 0.03472770898952149
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_10.wav",
+      "text": "Only after hearing the distant bell did she realize how late it had become.",
+      "transcript": "Only after hearing the distant bell did she realize how late it had become.",
+      "errors": 0,
+      "reference_units": 14
+    },
+    {
+      "variant": "reference",
+      "case": 11,
+      "language": "en",
+      "reference": "He hung the finished picture on the wall and stepped back to look at it carefully.",
+      "voice": "F5",
+      "seed": 411,
+      "audio": "samples/round4_expanded_frozen_test/reference_11.wav",
+      "timing": {
+        "seconds": 1.679843499994604,
+        "audio_seconds": 5.1991836734693875,
+        "rtf": 0.32309754867222323,
+        "realtime_factor": 3.0950405043601315,
+        "stages": {
+          "duration_predictor": 0.001063875010004267,
+          "text_encoder": 0.0056668339821044356,
+          "vector_estimator": 1.6375839579559397,
+          "vocoder": 0.03506845800438896
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_11.wav",
+      "text": "He hung the finished picture on the wall and stepped back to look at it carefully.",
+      "transcript": "He hung the finished picture on the wall and stepped back to look at it carefully.",
+      "errors": 0,
+      "reference_units": 16
+    },
+    {
+      "variant": "reference",
+      "case": 12,
+      "language": "en",
+      "reference": "Before folding the tent, check that every tool has been packed away.",
+      "voice": "M1",
+      "seed": 412,
+      "audio": "samples/round4_expanded_frozen_test/reference_12.wav",
+      "timing": {
+        "seconds": 1.5211425830202643,
+        "audio_seconds": 4.504829931972789,
+        "rtf": 0.33766925854937085,
+        "realtime_factor": 2.961477761689074,
+        "stages": {
+          "duration_predictor": 0.0008757500036153942,
+          "text_encoder": 0.004624666005838662,
+          "vector_estimator": 1.4835806249757297,
+          "vocoder": 0.03164099997957237
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_12.wav",
+      "text": "Before folding the tent, check that every tool has been packed away.",
+      "transcript": "Before folding the tent, check that every tool has been packed away.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "reference",
+      "case": 13,
+      "language": "en",
+      "reference": "When the story ended, the children eagerly asked what would happen next.",
+      "voice": "F1",
+      "seed": 413,
+      "audio": "samples/round4_expanded_frozen_test/reference_13.wav",
+      "timing": {
+        "seconds": 1.547081624972634,
+        "audio_seconds": 4.795034013605442,
+        "rtf": 0.3226424714783963,
+        "realtime_factor": 3.0994059629466935,
+        "stages": {
+          "duration_predictor": 0.0009187920077238232,
+          "text_encoder": 0.004822457995032892,
+          "vector_estimator": 1.5049006250337698,
+          "vocoder": 0.03601820798940025
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_13.wav",
+      "text": "When the story ended, the children eagerly asked what would happen next.",
+      "transcript": "When the story ended, the children eagerly asked what would happen next.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "reference",
+      "case": 14,
+      "language": "en",
+      "reference": "After the rain, streetlights were reflected in the puddles along the quiet road.",
+      "voice": "M3",
+      "seed": 414,
+      "audio": "samples/round4_expanded_frozen_test/reference_14.wav",
+      "timing": {
+        "seconds": 1.2946709169773385,
+        "audio_seconds": 4.099705215419501,
+        "rtf": 0.315796099706857,
+        "realtime_factor": 3.1666002237781488,
+        "stages": {
+          "duration_predictor": 0.000991083012195304,
+          "text_encoder": 0.005351791012799367,
+          "vector_estimator": 1.259752958023455,
+          "vocoder": 0.028145582997240126
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_14.wav",
+      "text": "After the rain, streetlights were reflected in the puddles along the quiet road.",
+      "transcript": "After the rain, street lights were reflected in the puddles along the quiet road.",
+      "errors": 2,
+      "reference_units": 13
+    },
+    {
+      "variant": "reference",
+      "case": 15,
+      "language": "en",
+      "reference": "When I called her name softly, the person beside the window turned around.",
+      "voice": "F3",
+      "seed": 415,
+      "audio": "samples/round4_expanded_frozen_test/reference_15.wav",
+      "timing": {
+        "seconds": 1.6146746249869466,
+        "audio_seconds": 5.067052154195012,
+        "rtf": 0.3186615365010912,
+        "realtime_factor": 3.1381258340118987,
+        "stages": {
+          "duration_predictor": 0.0009245830005966127,
+          "text_encoder": 0.00486029198509641,
+          "vector_estimator": 1.5727214989892673,
+          "vocoder": 0.035751459014136344
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_15.wav",
+      "text": "When I called her name softly, the person beside the window turned around.",
+      "transcript": "When I called her name softly the person beside the window turned around.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 0,
+      "language": "ko",
+      "reference": "언덕 아래 작은 우체국 옆에서 택배를 기다리는 사람을 만났습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_00.wav",
+      "timing": {
+        "seconds": 0.1942727499990724,
+        "audio_seconds": 5.587414965986395,
+        "rtf": 0.034769701406055446,
+        "realtime_factor": 28.760672642010128,
+        "stages": {
+          "duration_predictor": 0.001027166988933459,
+          "text_encoder": 0.0051397919887676835,
+          "vector_estimator": 0.1418222910433542,
+          "vocoder": 0.04586554199340753
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_00.wav",
+      "text": "언덕 아래 작은 우체국 옆에서 택배를 기다리는 사람을 만났습니다.",
+      "transcript": "언더가의 작은 우체공 옆에서 택배를 기다리는 사람을 만났습니다.",
+      "errors": 4,
+      "reference_units": 27
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 1,
+      "language": "ko",
+      "reference": "냉장고 문을 오래 열어 두면 안에 있는 음식의 온도가 올라갑니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_01.wav",
+      "timing": {
+        "seconds": 0.21640237502288073,
+        "audio_seconds": 5.449478458049887,
+        "rtf": 0.03971065794437896,
+        "realtime_factor": 25.182156422607196,
+        "stages": {
+          "duration_predictor": 0.0010689579939935356,
+          "text_encoder": 0.005568791995756328,
+          "vector_estimator": 0.1635863749543205,
+          "vocoder": 0.045695917011471465
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_01.wav",
+      "text": "냉장고 문을 오래 열어 두면 안에 있는 음식의 온도가 올라갑니다.",
+      "transcript": "냉장고 문을 오래 열어두면 안에 있는 음식의 온도가 올라갑니다.",
+      "errors": 0,
+      "reference_units": 26
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 2,
+      "language": "ko",
+      "reference": "새벽에 들리는 종소리를 듣고 나서야 시간이 많이 지났음을 알았습니다.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_02.wav",
+      "timing": {
+        "seconds": 0.17421050000120886,
+        "audio_seconds": 4.576825396825397,
+        "rtf": 0.038063610668225556,
+        "realtime_factor": 26.27181138217064,
+        "stages": {
+          "duration_predictor": 0.0010630420001689345,
+          "text_encoder": 0.005386208009440452,
+          "vector_estimator": 0.12719437401392497,
+          "vocoder": 0.04014295799424872
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_02.wav",
+      "text": "새벽에 들리는 종소리를 듣고 나서야 시간이 많이 지났음을 알았습니다.",
+      "transcript": "새벽에 들리는 총소리를 듣고 나서야 시간이 많이 지났음을 알았습니다.",
+      "errors": 1,
+      "reference_units": 29
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 3,
+      "language": "ko",
+      "reference": "완성된 작품을 벽에 걸고 조금 떨어진 곳에서 천천히 바라보았습니다.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_03.wav",
+      "timing": {
+        "seconds": 0.22255158302141353,
+        "audio_seconds": 6.10780045351474,
+        "rtf": 0.03643727143923735,
+        "realtime_factor": 27.44442600943916,
+        "stages": {
+          "duration_predictor": 0.0010907080140896142,
+          "text_encoder": 0.0052006250189151615,
+          "vector_estimator": 0.15868120698723942,
+          "vocoder": 0.05707866698503494
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_03.wav",
+      "text": "완성된 작품을 벽에 걸고 조금 떨어진 곳에서 천천히 바라보았습니다.",
+      "transcript": "완성된 작품을 벽에 걸고 조금 떨어진 곳에서 천천히 바라보았습니다.",
+      "errors": 0,
+      "reference_units": 28
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 4,
+      "language": "ko",
+      "reference": "필요한 도구를 모두 챙겼는지 확인한 뒤 천막을 접었습니다.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_04.wav",
+      "timing": {
+        "seconds": 0.17270175000885502,
+        "audio_seconds": 4.753038548752834,
+        "rtf": 0.03633501984833908,
+        "realtime_factor": 27.521658283770314,
+        "stages": {
+          "duration_predictor": 0.0009557500015944242,
+          "text_encoder": 0.004731499997433275,
+          "vector_estimator": 0.1286398330121301,
+          "vocoder": 0.03794537502108142
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_04.wav",
+      "text": "필요한 도구를 모두 챙겼는지 확인한 뒤 천막을 접었습니다.",
+      "transcript": "필요한 도구를 모두 챙겼는지 확인한 뒤 천막을 접었습니다.",
+      "errors": 0,
+      "reference_units": 24
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 5,
+      "language": "ko",
+      "reference": "긴 이야기가 끝나자 아이들은 눈을 반짝이며 다음 내용을 물었습니다.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_05.wav",
+      "timing": {
+        "seconds": 0.18203487497521564,
+        "audio_seconds": 5.4439002267573695,
+        "rtf": 0.033438319475528624,
+        "realtime_factor": 29.905809134093484,
+        "stages": {
+          "duration_predictor": 0.0010182500118389726,
+          "text_encoder": 0.004952209012117237,
+          "vector_estimator": 0.13220500099123456,
+          "vocoder": 0.04344608398969285
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_05.wav",
+      "text": "긴 이야기가 끝나자 아이들은 눈을 반짝이며 다음 내용을 물었습니다.",
+      "transcript": "기인 이야기가 끝나자 아이들은 눈을 반짝이며 다음 내용을 물었습니다.",
+      "errors": 2,
+      "reference_units": 28
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 6,
+      "language": "ko",
+      "reference": "비가 그친 거리에는 물웅덩이에 비친 가로등 불빛이 남아 있었습니다.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_06.wav",
+      "timing": {
+        "seconds": 0.191810209013056,
+        "audio_seconds": 5.516734693877551,
+        "rtf": 0.034768793436074814,
+        "realtime_factor": 28.76142371286422,
+        "stages": {
+          "duration_predictor": 0.0010509169951546937,
+          "text_encoder": 0.004858166998019442,
+          "vector_estimator": 0.13838170794770122,
+          "vocoder": 0.04708170800586231
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_06.wav",
+      "text": "비가 그친 거리에는 물웅덩이에 비친 가로등 불빛이 남아 있었습니다.",
+      "transcript": "비가 그친 거리에는 무릉덩이에 비친 가로등 불빛이 남아 있었습니다.",
+      "errors": 2,
+      "reference_units": 28
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 7,
+      "language": "ko",
+      "reference": "낮은 목소리로 이름을 부르자 창가에 있던 사람이 고개를 돌렸습니다.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_07.wav",
+      "timing": {
+        "seconds": 0.19477770800585859,
+        "audio_seconds": 5.5908616780045355,
+        "rtf": 0.034838584680452644,
+        "realtime_factor": 28.703806689399855,
+        "stages": {
+          "duration_predictor": 0.0010005410003941506,
+          "text_encoder": 0.005058041017036885,
+          "vector_estimator": 0.14320862499880604,
+          "vocoder": 0.04509433399653062
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_07.wav",
+      "text": "낮은 목소리로 이름을 부르자 창가에 있던 사람이 고개를 돌렸습니다.",
+      "transcript": "낮은 목소리로 이름을 부르자 창가에 있던 사람이 고개를 돌렸습니다.",
+      "errors": 0,
+      "reference_units": 28
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 8,
+      "language": "en",
+      "reference": "We met a traveler waiting beside the small post office at the bottom of the hill.",
+      "voice": "M3",
+      "seed": 408,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_08.wav",
+      "timing": {
+        "seconds": 0.16146341699641198,
+        "audio_seconds": 4.484285714285714,
+        "rtf": 0.036006496303755464,
+        "realtime_factor": 27.772766102090873,
+        "stages": {
+          "duration_predictor": 0.0010559590009506792,
+          "text_encoder": 0.005308666994096711,
+          "vector_estimator": 0.11858933404437266,
+          "vocoder": 0.03609758400125429
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_08.wav",
+      "text": "We met a traveler waiting beside the small post office at the bottom of the hill.",
+      "transcript": "We met a traveler waiting beside the small post office at the bottom of the hill.",
+      "errors": 0,
+      "reference_units": 16
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 9,
+      "language": "en",
+      "reference": "Leaving the refrigerator door open will raise the temperature of the food inside.",
+      "voice": "F3",
+      "seed": 409,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_09.wav",
+      "timing": {
+        "seconds": 0.21263550000730902,
+        "audio_seconds": 5.636303854875283,
+        "rtf": 0.037726053364455114,
+        "realtime_factor": 26.506880810972504,
+        "stages": {
+          "duration_predictor": 0.0011065410217270255,
+          "text_encoder": 0.005515832977835089,
+          "vector_estimator": 0.15581220699823461,
+          "vocoder": 0.04971279200981371
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_09.wav",
+      "text": "Leaving the refrigerator door open will raise the temperature of the food inside.",
+      "transcript": "Leaving the refrigerator door open will raise the temperature of the food inside.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 10,
+      "language": "en",
+      "reference": "Only after hearing the distant bell did she realize how late it had become.",
+      "voice": "M5",
+      "seed": 410,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_10.wav",
+      "timing": {
+        "seconds": 0.18093475000932813,
+        "audio_seconds": 4.946258503401361,
+        "rtf": 0.03658012412511516,
+        "realtime_factor": 27.337250048132574,
+        "stages": {
+          "duration_predictor": 0.001046125020366162,
+          "text_encoder": 0.0049280419771093875,
+          "vector_estimator": 0.13360066601308063,
+          "vocoder": 0.04094174999045208
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_10.wav",
+      "text": "Only after hearing the distant bell did she realize how late it had become.",
+      "transcript": "Only after hearing the distant bell did she realize how late it had become.",
+      "errors": 0,
+      "reference_units": 14
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 11,
+      "language": "en",
+      "reference": "He hung the finished picture on the wall and stepped back to look at it carefully.",
+      "voice": "F5",
+      "seed": 411,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_11.wav",
+      "timing": {
+        "seconds": 0.18812837498262525,
+        "audio_seconds": 5.1991836734693875,
+        "rtf": 0.036184214060875484,
+        "realtime_factor": 27.63636093677821,
+        "stages": {
+          "duration_predictor": 0.0011094999790657312,
+          "text_encoder": 0.005727542011300102,
+          "vector_estimator": 0.13697299800696783,
+          "vocoder": 0.04381124998326413
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_11.wav",
+      "text": "He hung the finished picture on the wall and stepped back to look at it carefully.",
+      "transcript": "He hung the finished picture on the wall and stepped back to look at it carefully.",
+      "errors": 0,
+      "reference_units": 16
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 12,
+      "language": "en",
+      "reference": "Before folding the tent, check that every tool has been packed away.",
+      "voice": "M1",
+      "seed": 412,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_12.wav",
+      "timing": {
+        "seconds": 0.1654211670102086,
+        "audio_seconds": 4.504829931972789,
+        "rtf": 0.036720846182480886,
+        "realtime_factor": 27.2324879179143,
+        "stages": {
+          "duration_predictor": 0.0011011669994331896,
+          "text_encoder": 0.004606166010489687,
+          "vector_estimator": 0.12005870701977983,
+          "vocoder": 0.03924129100050777
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_12.wav",
+      "text": "Before folding the tent, check that every tool has been packed away.",
+      "transcript": "Before folding the tent, check that every tool has been packed away.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 13,
+      "language": "en",
+      "reference": "When the story ended, the children eagerly asked what would happen next.",
+      "voice": "F1",
+      "seed": 413,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_13.wav",
+      "timing": {
+        "seconds": 0.17470429101376794,
+        "audio_seconds": 4.795034013605442,
+        "rtf": 0.03643442163664773,
+        "realtime_factor": 27.4465726387199,
+        "stages": {
+          "duration_predictor": 0.0010814169945660979,
+          "text_encoder": 0.005527375004021451,
+          "vector_estimator": 0.12834141601342708,
+          "vocoder": 0.03930387500440702
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_13.wav",
+      "text": "When the story ended, the children eagerly asked what would happen next.",
+      "transcript": "When the story ended, the children eagerly asked what would happen next.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 14,
+      "language": "en",
+      "reference": "After the rain, streetlights were reflected in the puddles along the quiet road.",
+      "voice": "M3",
+      "seed": 414,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_14.wav",
+      "timing": {
+        "seconds": 0.1465503330109641,
+        "audio_seconds": 4.099705215419501,
+        "rtf": 0.03574655379117749,
+        "realtime_factor": 27.974724664138318,
+        "stages": {
+          "duration_predictor": 0.0011432910105213523,
+          "text_encoder": 0.005198124999878928,
+          "vector_estimator": 0.10657808504765853,
+          "vocoder": 0.03324212500592694
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_14.wav",
+      "text": "After the rain, streetlights were reflected in the puddles along the quiet road.",
+      "transcript": "After the rain, street lights were reflected in the puddles along the quiet road.",
+      "errors": 2,
+      "reference_units": 13
+    },
+    {
+      "variant": "cfg-mixed-v1-selected",
+      "case": 15,
+      "language": "en",
+      "reference": "When I called her name softly, the person beside the window turned around.",
+      "voice": "F3",
+      "seed": 415,
+      "audio": "samples/round4_expanded_frozen_test/cfg-mixed-v1-selected_15.wav",
+      "timing": {
+        "seconds": 0.1824778750014957,
+        "audio_seconds": 5.067052154195012,
+        "rtf": 0.03601263011481386,
+        "realtime_factor": 27.76803573668029,
+        "stages": {
+          "duration_predictor": 0.0010635409853421152,
+          "text_encoder": 0.004691540991188958,
+          "vector_estimator": 0.12966658498044126,
+          "vocoder": 0.04663366699242033
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_15.wav",
+      "text": "When I called her name softly, the person beside the window turned around.",
+      "transcript": "When I called her name softly, the person beside the window turned around.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 0,
+      "language": "ko",
+      "reference": "언덕 아래 작은 우체국 옆에서 택배를 기다리는 사람을 만났습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_00.wav",
+      "timing": {
+        "seconds": 0.18177579197799787,
+        "audio_seconds": 5.587414965986395,
+        "rtf": 0.03253307532813744,
+        "realtime_factor": 30.73794868495303,
+        "stages": {
+          "duration_predictor": 0.00112825000542216,
+          "text_encoder": 0.005181292013730854,
+          "vector_estimator": 0.12613850194611587,
+          "vocoder": 0.04888466699048877
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_00.wav",
+      "text": "언덕 아래 작은 우체국 옆에서 택배를 기다리는 사람을 만났습니다.",
+      "transcript": "언더가의 작은 우체공 옆에서 택배를 기다리는 사람을 만났습니다.",
+      "errors": 4,
+      "reference_units": 27
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 1,
+      "language": "ko",
+      "reference": "냉장고 문을 오래 열어 두면 안에 있는 음식의 온도가 올라갑니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_01.wav",
+      "timing": {
+        "seconds": 0.16371495797648095,
+        "audio_seconds": 5.449478458049887,
+        "rtf": 0.03004231675320116,
+        "realtime_factor": 33.286380947749144,
+        "stages": {
+          "duration_predictor": 0.0010015000007115304,
+          "text_encoder": 0.005035500013036653,
+          "vector_estimator": 0.11411070701433346,
+          "vocoder": 0.04314933400019072
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_01.wav",
+      "text": "냉장고 문을 오래 열어 두면 안에 있는 음식의 온도가 올라갑니다.",
+      "transcript": "냉장고문을 오래 열어두면 안에 있는 음식의 온도가 올라갑니다.",
+      "errors": 0,
+      "reference_units": 26
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 2,
+      "language": "ko",
+      "reference": "새벽에 들리는 종소리를 듣고 나서야 시간이 많이 지났음을 알았습니다.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_02.wav",
+      "timing": {
+        "seconds": 0.1616620410059113,
+        "audio_seconds": 4.576825396825397,
+        "rtf": 0.03532187203777628,
+        "realtime_factor": 28.311070232362347,
+        "stages": {
+          "duration_predictor": 0.0010678749822545797,
+          "text_encoder": 0.005258499993942678,
+          "vector_estimator": 0.11614191796979867,
+          "vocoder": 0.038756374997319654
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_02.wav",
+      "text": "새벽에 들리는 종소리를 듣고 나서야 시간이 많이 지났음을 알았습니다.",
+      "transcript": "새벽에 들리는 종소리를 듣고 나서야 시간이 많이 지났음을 알았습니다.",
+      "errors": 0,
+      "reference_units": 29
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 3,
+      "language": "ko",
+      "reference": "완성된 작품을 벽에 걸고 조금 떨어진 곳에서 천천히 바라보았습니다.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_03.wav",
+      "timing": {
+        "seconds": 0.19129470799816772,
+        "audio_seconds": 6.10780045351474,
+        "rtf": 0.03131973767873949,
+        "realtime_factor": 31.928747624180183,
+        "stages": {
+          "duration_predictor": 0.001079332985682413,
+          "text_encoder": 0.005262207996565849,
+          "vector_estimator": 0.13213345801341347,
+          "vocoder": 0.05238712500431575
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_03.wav",
+      "text": "완성된 작품을 벽에 걸고 조금 떨어진 곳에서 천천히 바라보았습니다.",
+      "transcript": "완성된 작품을 벽에 걸고 조금 떨어진 곳에서 천천히 바라보았습니다.",
+      "errors": 0,
+      "reference_units": 28
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 4,
+      "language": "ko",
+      "reference": "필요한 도구를 모두 챙겼는지 확인한 뒤 천막을 접었습니다.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_04.wav",
+      "timing": {
+        "seconds": 0.14675500002340414,
+        "audio_seconds": 4.753038548752834,
+        "rtf": 0.030876038247556747,
+        "realtime_factor": 32.38757485601738,
+        "stages": {
+          "duration_predictor": 0.0009505830239504576,
+          "text_encoder": 0.0045233339769765735,
+          "vector_estimator": 0.10314929301966913,
+          "vocoder": 0.037765499990200624
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_04.wav",
+      "text": "필요한 도구를 모두 챙겼는지 확인한 뒤 천막을 접었습니다.",
+      "transcript": "필요한 도구를 모두 챙겼는지 확인한 뒤 천막을 접었습니다.",
+      "errors": 0,
+      "reference_units": 24
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 5,
+      "language": "ko",
+      "reference": "긴 이야기가 끝나자 아이들은 눈을 반짝이며 다음 내용을 물었습니다.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_05.wav",
+      "timing": {
+        "seconds": 0.16476283301017247,
+        "audio_seconds": 5.4439002267573695,
+        "rtf": 0.030265586463239166,
+        "realtime_factor": 33.04082678902021,
+        "stages": {
+          "duration_predictor": 0.00098958401940763,
+          "text_encoder": 0.004820999980438501,
+          "vector_estimator": 0.1140509169199504,
+          "vocoder": 0.04453262500464916
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_05.wav",
+      "text": "긴 이야기가 끝나자 아이들은 눈을 반짝이며 다음 내용을 물었습니다.",
+      "transcript": "긴 이야기가 끝나자 아이들은 눈을 반짝이며 다음 내용을 물었습니다.",
+      "errors": 0,
+      "reference_units": 28
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 6,
+      "language": "ko",
+      "reference": "비가 그친 거리에는 물웅덩이에 비친 가로등 불빛이 남아 있었습니다.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_06.wav",
+      "timing": {
+        "seconds": 0.16460691698011942,
+        "audio_seconds": 5.516734693877551,
+        "rtf": 0.029837743903617382,
+        "realtime_factor": 33.51459826286547,
+        "stages": {
+          "duration_predictor": 0.0010137500066775829,
+          "text_encoder": 0.004842875001486391,
+          "vector_estimator": 0.11488437402294949,
+          "vocoder": 0.04346849999274127
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_06.wav",
+      "text": "비가 그친 거리에는 물웅덩이에 비친 가로등 불빛이 남아 있었습니다.",
+      "transcript": "비가 그친 거리에는 무릉덩이에 비친 가로등불 빛이 남아 있었습니다.",
+      "errors": 2,
+      "reference_units": 28
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 7,
+      "language": "ko",
+      "reference": "낮은 목소리로 이름을 부르자 창가에 있던 사람이 고개를 돌렸습니다.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_07.wav",
+      "timing": {
+        "seconds": 0.18147258399403654,
+        "audio_seconds": 5.5908616780045355,
+        "rtf": 0.03245878622037505,
+        "realtime_factor": 30.808299275598895,
+        "stages": {
+          "duration_predictor": 0.0010862080089282244,
+          "text_encoder": 0.005367041012505069,
+          "vector_estimator": 0.12737104293773882,
+          "vocoder": 0.04719504198874347
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_07.wav",
+      "text": "낮은 목소리로 이름을 부르자 창가에 있던 사람이 고개를 돌렸습니다.",
+      "transcript": "낮은 목소리로 이름을 부르자 창가에 있던 사람이 고개를 돌렸습니다.",
+      "errors": 0,
+      "reference_units": 28
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 8,
+      "language": "en",
+      "reference": "We met a traveler waiting beside the small post office at the bottom of the hill.",
+      "voice": "M3",
+      "seed": 408,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_08.wav",
+      "timing": {
+        "seconds": 0.15652200000477023,
+        "audio_seconds": 4.484285714285714,
+        "rtf": 0.0349045555920163,
+        "realtime_factor": 28.649555424470993,
+        "stages": {
+          "duration_predictor": 0.001018915994791314,
+          "text_encoder": 0.005656332999933511,
+          "vector_estimator": 0.11009837398887612,
+          "vocoder": 0.039287041989155114
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_08.wav",
+      "text": "We met a traveler waiting beside the small post office at the bottom of the hill.",
+      "transcript": "We met a traveler waiting beside the small post office at the bottom of the hill.",
+      "errors": 0,
+      "reference_units": 16
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 9,
+      "language": "en",
+      "reference": "Leaving the refrigerator door open will raise the temperature of the food inside.",
+      "voice": "F3",
+      "seed": 409,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_09.wav",
+      "timing": {
+        "seconds": 0.17838008399121463,
+        "audio_seconds": 5.636303854875283,
+        "rtf": 0.031648415093327456,
+        "realtime_factor": 31.59715887987179,
+        "stages": {
+          "duration_predictor": 0.0010307079937774688,
+          "text_encoder": 0.005346750025637448,
+          "vector_estimator": 0.12472458495176397,
+          "vocoder": 0.046785457991063595
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_09.wav",
+      "text": "Leaving the refrigerator door open will raise the temperature of the food inside.",
+      "transcript": "Leaving the refrigerator door open will raise the temperature of the food inside.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 10,
+      "language": "en",
+      "reference": "Only after hearing the distant bell did she realize how late it had become.",
+      "voice": "M5",
+      "seed": 410,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_10.wav",
+      "timing": {
+        "seconds": 0.15361829198081978,
+        "audio_seconds": 4.946258503401361,
+        "rtf": 0.03105747341655963,
+        "realtime_factor": 32.19836934535721,
+        "stages": {
+          "duration_predictor": 0.0011204170004930347,
+          "text_encoder": 0.004795166023541242,
+          "vector_estimator": 0.10820129202329554,
+          "vocoder": 0.03908149999915622
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_10.wav",
+      "text": "Only after hearing the distant bell did she realize how late it had become.",
+      "transcript": "Only after hearing the distant bell did she realize how late it had become.",
+      "errors": 0,
+      "reference_units": 14
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 11,
+      "language": "en",
+      "reference": "He hung the finished picture on the wall and stepped back to look at it carefully.",
+      "voice": "F5",
+      "seed": 411,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_11.wav",
+      "timing": {
+        "seconds": 0.18354987501516007,
+        "audio_seconds": 5.1991836734693875,
+        "rtf": 0.03530359505315923,
+        "realtime_factor": 28.32572712479356,
+        "stages": {
+          "duration_predictor": 0.0011277500016149133,
+          "text_encoder": 0.005904125020606443,
+          "vector_estimator": 0.12836083298316225,
+          "vocoder": 0.047705666976980865
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_11.wav",
+      "text": "He hung the finished picture on the wall and stepped back to look at it carefully.",
+      "transcript": "He hung the finished picture on the wall and stepped back to look at it carefully.",
+      "errors": 0,
+      "reference_units": 16
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 12,
+      "language": "en",
+      "reference": "Before folding the tent, check that every tool has been packed away.",
+      "voice": "M1",
+      "seed": 412,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_12.wav",
+      "timing": {
+        "seconds": 0.1452354580105748,
+        "audio_seconds": 4.504829931972789,
+        "rtf": 0.032239942506990985,
+        "realtime_factor": 31.017425039860345,
+        "stages": {
+          "duration_predictor": 0.0009512499964330345,
+          "text_encoder": 0.004458666982827708,
+          "vector_estimator": 0.10122070796205662,
+          "vocoder": 0.03824116598116234
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_12.wav",
+      "text": "Before folding the tent, check that every tool has been packed away.",
+      "transcript": "Before folding the tent, check that every tool has been packed away.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 13,
+      "language": "en",
+      "reference": "When the story ended, the children eagerly asked what would happen next.",
+      "voice": "F1",
+      "seed": 413,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_13.wav",
+      "timing": {
+        "seconds": 0.15272337500937283,
+        "audio_seconds": 4.795034013605442,
+        "rtf": 0.03185032151514152,
+        "realtime_factor": 31.396857313500078,
+        "stages": {
+          "duration_predictor": 0.001062750001437962,
+          "text_encoder": 0.004914584016660228,
+          "vector_estimator": 0.1078684990061447,
+          "vocoder": 0.03841491701314226
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_13.wav",
+      "text": "When the story ended, the children eagerly asked what would happen next.",
+      "transcript": "When the story ended the children eagerly asked what would happen next.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 14,
+      "language": "en",
+      "reference": "After the rain, streetlights were reflected in the puddles along the quiet road.",
+      "voice": "M3",
+      "seed": 414,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_14.wav",
+      "timing": {
+        "seconds": 0.13046558300266042,
+        "audio_seconds": 4.099705215419501,
+        "rtf": 0.03182316194636706,
+        "realtime_factor": 31.42365305136375,
+        "stages": {
+          "duration_predictor": 0.001021499978378415,
+          "text_encoder": 0.0049200419744011015,
+          "vector_estimator": 0.09028733300510794,
+          "vocoder": 0.03386275001685135
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_14.wav",
+      "text": "After the rain, streetlights were reflected in the puddles along the quiet road.",
+      "transcript": "After the rain, street lights were reflected in the puddles along the quiet road.",
+      "errors": 2,
+      "reference_units": 13
+    },
+    {
+      "variant": "cfg1024-v1-final",
+      "case": 15,
+      "language": "en",
+      "reference": "When I called her name softly, the person beside the window turned around.",
+      "voice": "F3",
+      "seed": 415,
+      "audio": "samples/round4_expanded_frozen_test/cfg1024-v1-final_15.wav",
+      "timing": {
+        "seconds": 0.15576699998928234,
+        "audio_seconds": 5.067052154195012,
+        "rtf": 0.030741147959237575,
+        "realtime_factor": 32.529689565464146,
+        "stages": {
+          "duration_predictor": 0.0009829170012380928,
+          "text_encoder": 0.00574687501648441,
+          "vector_estimator": 0.10865266798646189,
+          "vocoder": 0.03990775000420399
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_15.wav",
+      "text": "When I called her name softly, the person beside the window turned around.",
+      "transcript": "When I called her name softly the person beside the window turned around.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 0,
+      "language": "ko",
+      "reference": "언덕 아래 작은 우체국 옆에서 택배를 기다리는 사람을 만났습니다.",
+      "voice": "M1",
+      "seed": 400,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_00.wav",
+      "timing": {
+        "seconds": 0.18534029202419333,
+        "audio_seconds": 5.587414965986395,
+        "rtf": 0.0331710268795963,
+        "realtime_factor": 30.146790560020502,
+        "stages": {
+          "duration_predictor": 0.0010353329998906702,
+          "text_encoder": 0.004998290998628363,
+          "vector_estimator": 0.1322775400185492,
+          "vocoder": 0.04658125000423752
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_00.wav",
+      "text": "언덕 아래 작은 우체국 옆에서 택배를 기다리는 사람을 만났습니다.",
+      "transcript": "언더간에 작은 우체공격회에서 택배를 기다리는 사람을 만났습니다.",
+      "errors": 6,
+      "reference_units": 27
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 1,
+      "language": "ko",
+      "reference": "냉장고 문을 오래 열어 두면 안에 있는 음식의 온도가 올라갑니다.",
+      "voice": "F1",
+      "seed": 401,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_01.wav",
+      "timing": {
+        "seconds": 0.16454754199367017,
+        "audio_seconds": 5.449478458049887,
+        "rtf": 0.030195099083399995,
+        "realtime_factor": 33.117957230011484,
+        "stages": {
+          "duration_predictor": 0.0010105410183314234,
+          "text_encoder": 0.004734292015200481,
+          "vector_estimator": 0.11457091502961703,
+          "vocoder": 0.04383391700685024
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_01.wav",
+      "text": "냉장고 문을 오래 열어 두면 안에 있는 음식의 온도가 올라갑니다.",
+      "transcript": "냉장고문을 오래 열어두면 안에 있는 음식의 온도가 올라갑니다.",
+      "errors": 0,
+      "reference_units": 26
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 2,
+      "language": "ko",
+      "reference": "새벽에 들리는 종소리를 듣고 나서야 시간이 많이 지났음을 알았습니다.",
+      "voice": "M3",
+      "seed": 402,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_02.wav",
+      "timing": {
+        "seconds": 0.15211679198546335,
+        "audio_seconds": 4.576825396825397,
+        "rtf": 0.03323631093529927,
+        "realtime_factor": 30.087575060501994,
+        "stages": {
+          "duration_predictor": 0.0010770839871838689,
+          "text_encoder": 0.005423541006166488,
+          "vector_estimator": 0.10642254198319279,
+          "vocoder": 0.03875825001159683
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_02.wav",
+      "text": "새벽에 들리는 종소리를 듣고 나서야 시간이 많이 지났음을 알았습니다.",
+      "transcript": "새벽에 들리는 종소리를 듣고 나서야 시간이 많이 지났음을 알았습니다.",
+      "errors": 0,
+      "reference_units": 29
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 3,
+      "language": "ko",
+      "reference": "완성된 작품을 벽에 걸고 조금 떨어진 곳에서 천천히 바라보았습니다.",
+      "voice": "F3",
+      "seed": 403,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_03.wav",
+      "timing": {
+        "seconds": 0.19062049998319708,
+        "audio_seconds": 6.10780045351474,
+        "rtf": 0.031209352930563462,
+        "realtime_factor": 32.041676808386995,
+        "stages": {
+          "duration_predictor": 0.0010415829892735928,
+          "text_encoder": 0.005233125004451722,
+          "vector_estimator": 0.1321524590603076,
+          "vocoder": 0.05177620900212787
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_03.wav",
+      "text": "완성된 작품을 벽에 걸고 조금 떨어진 곳에서 천천히 바라보았습니다.",
+      "transcript": "완성된 작품을 벽에 걸고 조금 떨어진 곳에서 천천히 바라보았습니다.",
+      "errors": 0,
+      "reference_units": 28
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 4,
+      "language": "ko",
+      "reference": "필요한 도구를 모두 챙겼는지 확인한 뒤 천막을 접었습니다.",
+      "voice": "M5",
+      "seed": 404,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_04.wav",
+      "timing": {
+        "seconds": 0.16784208398894407,
+        "audio_seconds": 4.753038548752834,
+        "rtf": 0.03531258631028455,
+        "realtime_factor": 28.31851485510584,
+        "stages": {
+          "duration_predictor": 0.0009832920040935278,
+          "text_encoder": 0.004684999992605299,
+          "vector_estimator": 0.11654712504241616,
+          "vocoder": 0.04522162501234561
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_04.wav",
+      "text": "필요한 도구를 모두 챙겼는지 확인한 뒤 천막을 접었습니다.",
+      "transcript": "필요한 도구를 모두 챙겼는지 확인한 뒤 천막을 접었습니다.",
+      "errors": 0,
+      "reference_units": 24
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 5,
+      "language": "ko",
+      "reference": "긴 이야기가 끝나자 아이들은 눈을 반짝이며 다음 내용을 물었습니다.",
+      "voice": "F5",
+      "seed": 405,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_05.wav",
+      "timing": {
+        "seconds": 0.17324695800198242,
+        "audio_seconds": 5.4439002267573695,
+        "rtf": 0.031824050916740634,
+        "realtime_factor": 31.42277526567062,
+        "stages": {
+          "duration_predictor": 0.001037417008774355,
+          "text_encoder": 0.0050959999789483845,
+          "vector_estimator": 0.12132583404309116,
+          "vocoder": 0.045375000016065314
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_05.wav",
+      "text": "긴 이야기가 끝나자 아이들은 눈을 반짝이며 다음 내용을 물었습니다.",
+      "transcript": "기인 이야기가 끝나자 아이들은 눈을 반짝이며 다음 내용을 물었습니다.",
+      "errors": 2,
+      "reference_units": 28
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 6,
+      "language": "ko",
+      "reference": "비가 그친 거리에는 물웅덩이에 비친 가로등 불빛이 남아 있었습니다.",
+      "voice": "M1",
+      "seed": 406,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_06.wav",
+      "timing": {
+        "seconds": 0.16393620800226927,
+        "audio_seconds": 5.516734693877551,
+        "rtf": 0.029716166736131967,
+        "realtime_factor": 33.6517158784177,
+        "stages": {
+          "duration_predictor": 0.0010097500053234398,
+          "text_encoder": 0.004856290994212031,
+          "vector_estimator": 0.11431679097586311,
+          "vocoder": 0.043367500009480864
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_06.wav",
+      "text": "비가 그친 거리에는 물웅덩이에 비친 가로등 불빛이 남아 있었습니다.",
+      "transcript": "비가 그친 거리에는 무릉덩이에 비친 가로등 불빛이 남아 있었습니다.",
+      "errors": 2,
+      "reference_units": 28
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 7,
+      "language": "ko",
+      "reference": "낮은 목소리로 이름을 부르자 창가에 있던 사람이 고개를 돌렸습니다.",
+      "voice": "F1",
+      "seed": 407,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_07.wav",
+      "timing": {
+        "seconds": 0.17955820899805985,
+        "audio_seconds": 5.5908616780045355,
+        "rtf": 0.03211637478073808,
+        "realtime_factor": 31.136764557865163,
+        "stages": {
+          "duration_predictor": 0.0009954579873010516,
+          "text_encoder": 0.004809875012142584,
+          "vector_estimator": 0.12547695700777695,
+          "vocoder": 0.047856499993940815
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_07.wav",
+      "text": "낮은 목소리로 이름을 부르자 창가에 있던 사람이 고개를 돌렸습니다.",
+      "transcript": "낮은 목소리로 이름을 부르자 창가에 있던 사람이 고개를 돌렸습니다.",
+      "errors": 0,
+      "reference_units": 28
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 8,
+      "language": "en",
+      "reference": "We met a traveler waiting beside the small post office at the bottom of the hill.",
+      "voice": "M3",
+      "seed": 408,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_08.wav",
+      "timing": {
+        "seconds": 0.14340749999973923,
+        "audio_seconds": 4.484285714285714,
+        "rtf": 0.03198000955712567,
+        "realtime_factor": 31.269534119860314,
+        "stages": {
+          "duration_predictor": 0.0010906250099651515,
+          "text_encoder": 0.004965625004842877,
+          "vector_estimator": 0.10046404300373979,
+          "vocoder": 0.03649754199432209
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_08.wav",
+      "text": "We met a traveler waiting beside the small post office at the bottom of the hill.",
+      "transcript": "We met a traveler waiting beside the small post office at the bottom of the hill.",
+      "errors": 0,
+      "reference_units": 16
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 9,
+      "language": "en",
+      "reference": "Leaving the refrigerator door open will raise the temperature of the food inside.",
+      "voice": "F3",
+      "seed": 409,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_09.wav",
+      "timing": {
+        "seconds": 0.18739050001022406,
+        "audio_seconds": 5.636303854875283,
+        "rtf": 0.03324705424604375,
+        "realtime_factor": 30.07785269033257,
+        "stages": {
+          "duration_predictor": 0.0010526660189498216,
+          "text_encoder": 0.0051995409885421395,
+          "vector_estimator": 0.13404274900676683,
+          "vocoder": 0.04666687501594424
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_09.wav",
+      "text": "Leaving the refrigerator door open will raise the temperature of the food inside.",
+      "transcript": "Leaving the refrigerator door open will raise the temperature of the food inside.",
+      "errors": 0,
+      "reference_units": 13
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 10,
+      "language": "en",
+      "reference": "Only after hearing the distant bell did she realize how late it had become.",
+      "voice": "M5",
+      "seed": 410,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_10.wav",
+      "timing": {
+        "seconds": 0.16476229098043405,
+        "audio_seconds": 4.946258503401361,
+        "rtf": 0.03331048930563032,
+        "realtime_factor": 30.02057372453471,
+        "stages": {
+          "duration_predictor": 0.0010716669785324484,
+          "text_encoder": 0.004959625017363578,
+          "vector_estimator": 0.11446929196245037,
+          "vocoder": 0.04383054198115133
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_10.wav",
+      "text": "Only after hearing the distant bell did she realize how late it had become.",
+      "transcript": "Only after hearing the distant bell did she realize how late it had become.",
+      "errors": 0,
+      "reference_units": 14
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 11,
+      "language": "en",
+      "reference": "He hung the finished picture on the wall and stepped back to look at it carefully.",
+      "voice": "F5",
+      "seed": 411,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_11.wav",
+      "timing": {
+        "seconds": 0.15755587501917034,
+        "audio_seconds": 5.1991836734693875,
+        "rtf": 0.030303964028651858,
+        "realtime_factor": 32.9989832041286,
+        "stages": {
+          "duration_predictor": 0.0010259999835398048,
+          "text_encoder": 0.0051094160007778555,
+          "vector_estimator": 0.1096948740305379,
+          "vocoder": 0.041352583008119836
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_11.wav",
+      "text": "He hung the finished picture on the wall and stepped back to look at it carefully.",
+      "transcript": "He hung the finished picture on the wall and stepped back to look at it carefully.",
+      "errors": 0,
+      "reference_units": 16
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 12,
+      "language": "en",
+      "reference": "Before folding the tent, check that every tool has been packed away.",
+      "voice": "M1",
+      "seed": 412,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_12.wav",
+      "timing": {
+        "seconds": 0.1459147919958923,
+        "audio_seconds": 4.504829931972789,
+        "rtf": 0.03239074375711054,
+        "realtime_factor": 30.87301753546416,
+        "stages": {
+          "duration_predictor": 0.0009301659883931279,
+          "text_encoder": 0.004351625015260652,
+          "vector_estimator": 0.10212404100457206,
+          "vocoder": 0.038136916991788894
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_12.wav",
+      "text": "Before folding the tent, check that every tool has been packed away.",
+      "transcript": "Before folding the tent, check that every tool has been packed away.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 13,
+      "language": "en",
+      "reference": "When the story ended, the children eagerly asked what would happen next.",
+      "voice": "F1",
+      "seed": 413,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_13.wav",
+      "timing": {
+        "seconds": 0.155900208017556,
+        "audio_seconds": 4.795034013605442,
+        "rtf": 0.03251284716129319,
+        "realtime_factor": 30.757072582388545,
+        "stages": {
+          "duration_predictor": 0.0009956670110113919,
+          "text_encoder": 0.004850750003242865,
+          "vector_estimator": 0.10832354196463712,
+          "vocoder": 0.04131087497808039
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_13.wav",
+      "text": "When the story ended, the children eagerly asked what would happen next.",
+      "transcript": "When the story ended, the children eagerly asked what would happen next.",
+      "errors": 0,
+      "reference_units": 12
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 14,
+      "language": "en",
+      "reference": "After the rain, streetlights were reflected in the puddles along the quiet road.",
+      "voice": "M3",
+      "seed": 414,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_14.wav",
+      "timing": {
+        "seconds": 0.13223212500452064,
+        "audio_seconds": 4.099705215419501,
+        "rtf": 0.03225405683003236,
+        "realtime_factor": 31.00385186488793,
+        "stages": {
+          "duration_predictor": 0.0010329160140827298,
+          "text_encoder": 0.005009665997931734,
+          "vector_estimator": 0.09200954096741043,
+          "vocoder": 0.03381404100218788
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_14.wav",
+      "text": "After the rain, streetlights were reflected in the puddles along the quiet road.",
+      "transcript": "After the rain, street lights were reflected in the puddles along the quiet road.",
+      "errors": 2,
+      "reference_units": 13
+    },
+    {
+      "variant": "round4-cfg1024-selected",
+      "case": 15,
+      "language": "en",
+      "reference": "When I called her name softly, the person beside the window turned around.",
+      "voice": "F3",
+      "seed": 415,
+      "audio": "samples/round4_expanded_frozen_test/round4-cfg1024-selected_15.wav",
+      "timing": {
+        "seconds": 0.15315866700257175,
+        "audio_seconds": 5.067052154195012,
+        "rtf": 0.03022638456084801,
+        "realtime_factor": 33.083678862978935,
+        "stages": {
+          "duration_predictor": 0.000985209015198052,
+          "text_encoder": 0.004730292013846338,
+          "vector_estimator": 0.10724387597292662,
+          "vocoder": 0.03984116701758467
+        }
+      },
+      "reference_audio": "samples/round4_expanded_frozen_test/reference_15.wav",
+      "text": "When I called her name softly, the person beside the window turned around.",
+      "transcript": "When I called her name softly the person beside the window turned around.",
+      "errors": 0,
+      "reference_units": 13
+    }
+  ],
+  "models": {
+    "reference": {
+      "mode": "original FP32",
+      "guidance_scale": 4
+    },
+    "cfg-mixed-v1-selected": {
+      "mode": "experimental-CFG-distillation",
+      "status": "selected on validation; one Korean sample listening feedback positive; independent EN ASR regression remains",
+      "checkpoint": "distill/joint-cfg-mixed-v1/best_step_00600.pt",
+      "step": 600,
+      "validation_relative_update_mse": 0.0558609840227291,
+      "base": "models/fast-fp32-cached",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "training": {
+        "checkpoints": "distill/mixed-v1/initial.pt",
+        "data": "distill/trajectories-v2",
+        "output": "distill/joint-cfg-mixed-v1",
+        "iterations": 2400,
+        "learning_rate": 3e-05,
+        "validate_every": 200,
+        "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+        "train_all": true
+      },
+      "teacher_guidance_scale": 4,
+      "student_internal_guidance_scale": 1,
+      "guidance_mode": "learned one-branch approximation; not exact CFG4",
+      "source_step": 600,
+      "supported_steps": [
+        8
+      ],
+      "source_export": "models/cfg-mixed-v1-preview",
+      "record": "records/2026-10-28/ROUND3.md",
+      "vector_sha256": "d2b63c7a648b93b1d1d94a4443a47bd92ec0aca75299a27dffb6473bc34b93ea",
+      "listening_feedback": {
+        "user_quote": "이제 거의 차이 없는듯",
+        "sample": "samples/epyc_cfg_mixed_preview_v1_8/ko_short_8steps.wav",
+        "reference": "samples/equivalence_fp32_cached/ko_short_reference.wav",
+        "scope": "One Korean M1 sentence, seed42, 8 steps; not a universal quality approval"
+      }
+    },
+    "cfg1024-v1-final": {
+      "mode": "experimental-CFG-distillation",
+      "status": "experimental; acoustic/ASR/listening validation required",
+      "checkpoint": "distill/joint-cfg-1024-v1/best.pt",
+      "step": 2400,
+      "validation_relative_update_mse": 0.07546113629359752,
+      "base": "models/fast-fp32-cached",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "training": {
+        "checkpoints": "distill/student1024",
+        "data": "distill/trajectories-v2",
+        "output": "distill/joint-cfg-1024-v1",
+        "iterations": 2400,
+        "learning_rate": 3e-05,
+        "validate_every": 200,
+        "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+        "train_all": true
+      },
+      "teacher_guidance_scale": 4,
+      "student_internal_guidance_scale": 1,
+      "guidance_mode": "learned one-branch approximation; not exact CFG4",
+      "supported_steps": [
+        8
+      ]
+    },
+    "round4-cfg1024-selected": {
+      "mode": "experimental-CFG-distillation",
+      "status": "Frozen experimental fast candidate; not a default replacement; listening evaluation pending",
+      "checkpoint": "distill/joint-cfg1024-round4/best.pt",
+      "step": 2000,
+      "validation_relative_update_mse": 0.06992352768429555,
+      "base": "models/fast-fp32-cached",
+      "vector_int8": true,
+      "minimum_steps": 8,
+      "training": {
+        "checkpoints": "distill/joint-cfg-1024-v1/best.pt",
+        "data": "distill/trajectories-round4",
+        "output": "distill/joint-cfg1024-round4",
+        "iterations": 2000,
+        "learning_rate": 1e-05,
+        "validate_every": 200,
+        "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+        "train_all": true
+      },
+      "teacher_guidance_scale": 4,
+      "student_internal_guidance_scale": 1,
+      "guidance_mode": "learned one-branch approximation; not exact CFG4",
+      "supported_steps": [
+        8
+      ],
+      "deployment_name": "cfg1024-v2",
+      "source_export": "models/round4-cfg1024-expanded",
+      "selected_checkpoint": "distill/joint-cfg1024-round4/best_step_02000.pt",
+      "initial_checkpoint": "distill/joint-cfg-1024-v1/best.pt",
+      "initial_checkpoint_step": 2400,
+      "initial_checkpoint_sha256": "f3151c0c254212d093119f0238626df575e03b93f7b0c7697426bbdb2a578893",
+      "vector_sha256": "9fd169498fcedd9c52f8c6b3092c56703c6115687b868f1ee8c89d1bdb2be133",
+      "training_unique_texts": 80,
+      "train_voice_seed_cases": 240,
+      "teacher_training_pairs": 1920,
+      "teacher_validation_pairs": 128,
+      "update_validation_pairs": 48,
+      "corpus_sha256": "406211c7f44c0fc7e87e9ac57dee50aea9d3e2f950dd130d9450a6669b052cf0",
+      "selected_before_test": true
+    }
+  }
+}

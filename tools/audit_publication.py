@@ -48,6 +48,7 @@ def main():
         "GitHub token": re.compile(
             r"\b(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{30,})\b"
         ),
+        "Hugging Face token": re.compile(r"\bhf_[A-Za-z0-9]{20,}\b"),
         "AWS access key": re.compile(r"\b(?:AKIA|ASIA)[A-Z0-9]{16}\b"),
         "personal home": re.compile(r"/" + r"(?:Users|home)/[A-Za-z0-9_.-]+/"),
         "credential URL": re.compile(r"https?://[^\s/@:]+:[^\s/@]+@"),

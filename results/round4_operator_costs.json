@@ -1,0 +1,556 @@
+{
+  "machine": "macOS-27.0.1-arm64-arm-64bit",
+  "model": "models/cfg-mixed-v1-selected",
+  "note": "Profile overhead present; M4 local diagnostic only, not ARM timing prediction",
+  "rows": [
+    {
+      "part": "duration_predictor",
+      "total_profiled_microseconds": 7094,
+      "operators": [
+        {
+          "op": "FusedMatMul",
+          "microseconds": 1438,
+          "fraction": 0.20270651254581337
+        },
+        {
+          "op": "BiasGelu",
+          "microseconds": 980,
+          "fraction": 0.1381449111925571
+        },
+        {
+          "op": "LayerNormalization",
+          "microseconds": 957,
+          "fraction": 0.13490273470538483
+        },
+        {
+          "op": "MatMul",
+          "microseconds": 678,
+          "fraction": 0.09557372427403439
+        },
+        {
+          "op": "Pad",
+          "microseconds": 500,
+          "fraction": 0.07048209754722301
+        },
+        {
+          "op": "Add",
+          "microseconds": 384,
+          "fraction": 0.05413025091626727
+        },
+        {
+          "op": "Mul",
+          "microseconds": 347,
+          "fraction": 0.048914575697772765
+        },
+        {
+          "op": "Conv",
+          "microseconds": 338,
+          "fraction": 0.047645897941922755
+        },
+        {
+          "op": "Slice",
+          "microseconds": 284,
+          "fraction": 0.040033831406822665
+        },
+        {
+          "op": "Softmax",
+          "microseconds": 221,
+          "fraction": 0.031153087115872568
+        },
+        {
+          "op": "Gemm",
+          "microseconds": 173,
+          "fraction": 0.02438680575133916
+        },
+        {
+          "op": "Where",
+          "microseconds": 155,
+          "fraction": 0.02184945023963913
+        },
+        {
+          "op": "Transpose",
+          "microseconds": 148,
+          "fraction": 0.02086270087397801
+        },
+        {
+          "op": "Concat",
+          "microseconds": 113,
+          "fraction": 0.0159289540456724
+        },
+        {
+          "op": "Reshape",
+          "microseconds": 85,
+          "fraction": 0.011981956583027911
+        },
+        {
+          "op": "Unsqueeze",
+          "microseconds": 78,
+          "fraction": 0.01099520721736679
+        },
+        {
+          "op": "Gather",
+          "microseconds": 59,
+          "fraction": 0.008316887510572314
+        },
+        {
+          "op": "Relu",
+          "microseconds": 29,
+          "fraction": 0.004087961657738935
+        },
+        {
+          "op": "Equal",
+          "microseconds": 24,
+          "fraction": 0.0033831406822667043
+        },
+        {
+          "op": "Sub",
+          "microseconds": 22,
+          "fraction": 0.0031012122920778123
+        },
+        {
+          "op": "Shape",
+          "microseconds": 21,
+          "fraction": 0.002960248096983366
+        },
+        {
+          "op": "Squeeze",
+          "microseconds": 20,
+          "fraction": 0.00281928390188892
+        },
+        {
+          "op": "Clip",
+          "microseconds": 10,
+          "fraction": 0.00140964195094446
+        },
+        {
+          "op": "Split",
+          "microseconds": 9,
+          "fraction": 0.001268677755850014
+        },
+        {
+          "op": "PRelu",
+          "microseconds": 7,
+          "fraction": 0.0009867493656611221
+        },
+        {
+          "op": "Expand",
+          "microseconds": 5,
+          "fraction": 0.00070482097547223
+        },
+        {
+          "op": "Pow",
+          "microseconds": 4,
+          "fraction": 0.000563856780377784
+        },
+        {
+          "op": "Exp",
+          "microseconds": 3,
+          "fraction": 0.00042289258528333803
+        },
+        {
+          "op": "ConstantOfShape",
+          "microseconds": 2,
+          "fraction": 0.000281928390188892
+        }
+      ]
+    },
+    {
+      "part": "text_encoder",
+      "total_profiled_microseconds": 36900,
+      "operators": [
+        {
+          "op": "FusedMatMul",
+          "microseconds": 11165,
+          "fraction": 0.30257452574525745
+        },
+        {
+          "op": "LayerNormalization",
+          "microseconds": 6858,
+          "fraction": 0.18585365853658536
+        },
+        {
+          "op": "MatMul",
+          "microseconds": 6140,
+          "fraction": 0.16639566395663957
+        },
+        {
+          "op": "BiasGelu",
+          "microseconds": 3466,
+          "fraction": 0.09392953929539295
+        },
+        {
+          "op": "Pad",
+          "microseconds": 1858,
+          "fraction": 0.05035230352303523
+        },
+        {
+          "op": "Add",
+          "microseconds": 1519,
+          "fraction": 0.04116531165311653
+        },
+        {
+          "op": "Slice",
+          "microseconds": 1011,
+          "fraction": 0.027398373983739836
+        },
+        {
+          "op": "Mul",
+          "microseconds": 1010,
+          "fraction": 0.027371273712737128
+        },
+        {
+          "op": "Softmax",
+          "microseconds": 913,
+          "fraction": 0.024742547425474253
+        },
+        {
+          "op": "Transpose",
+          "microseconds": 720,
+          "fraction": 0.01951219512195122
+        },
+        {
+          "op": "Conv",
+          "microseconds": 572,
+          "fraction": 0.015501355013550136
+        },
+        {
+          "op": "Where",
+          "microseconds": 547,
+          "fraction": 0.014823848238482385
+        },
+        {
+          "op": "Concat",
+          "microseconds": 240,
+          "fraction": 0.0065040650406504065
+        },
+        {
+          "op": "Unsqueeze",
+          "microseconds": 198,
+          "fraction": 0.005365853658536586
+        },
+        {
+          "op": "Relu",
+          "microseconds": 153,
+          "fraction": 0.004146341463414634
+        },
+        {
+          "op": "Reshape",
+          "microseconds": 146,
+          "fraction": 0.003956639566395664
+        },
+        {
+          "op": "Gather",
+          "microseconds": 134,
+          "fraction": 0.0036314363143631436
+        },
+        {
+          "op": "Split",
+          "microseconds": 92,
+          "fraction": 0.0024932249322493225
+        },
+        {
+          "op": "Sub",
+          "microseconds": 48,
+          "fraction": 0.0013008130081300813
+        },
+        {
+          "op": "Squeeze",
+          "microseconds": 33,
+          "fraction": 0.0008943089430894309
+        },
+        {
+          "op": "Shape",
+          "microseconds": 32,
+          "fraction": 0.0008672086720867209
+        },
+        {
+          "op": "Clip",
+          "microseconds": 20,
+          "fraction": 0.0005420054200542005
+        },
+        {
+          "op": "Equal",
+          "microseconds": 17,
+          "fraction": 0.00046070460704607046
+        },
+        {
+          "op": "Pow",
+          "microseconds": 8,
+          "fraction": 0.00021680216802168022
+        }
+      ]
+    },
+    {
+      "part": "vector_estimator",
+      "total_profiled_microseconds": 859149,
+      "operators": [
+        {
+          "op": "DynamicQuantizeMatMul",
+          "microseconds": 252075,
+          "fraction": 0.29340079543827674
+        },
+        {
+          "op": "LayerNormalization",
+          "microseconds": 245518,
+          "fraction": 0.2857688247323805
+        },
+        {
+          "op": "Gelu",
+          "microseconds": 156337,
+          "fraction": 0.18196727226592826
+        },
+        {
+          "op": "Conv",
+          "microseconds": 44700,
+          "fraction": 0.05202822793252393
+        },
+        {
+          "op": "Mul",
+          "microseconds": 38033,
+          "fraction": 0.04426822355610028
+        },
+        {
+          "op": "MatMulIntegerToFloat",
+          "microseconds": 23724,
+          "fraction": 0.02761337090539592
+        },
+        {
+          "op": "Transpose",
+          "microseconds": 22456,
+          "fraction": 0.026137491866952065
+        },
+        {
+          "op": "Where",
+          "microseconds": 16715,
+          "fraction": 0.019455298207877794
+        },
+        {
+          "op": "Softmax",
+          "microseconds": 13608,
+          "fraction": 0.015838928986706614
+        },
+        {
+          "op": "FusedMatMul",
+          "microseconds": 10628,
+          "fraction": 0.012370380457871685
+        },
+        {
+          "op": "Add",
+          "microseconds": 10353,
+          "fraction": 0.012050296281553026
+        },
+        {
+          "op": "Pad",
+          "microseconds": 6120,
+          "fraction": 0.0071233278511643496
+        },
+        {
+          "op": "MatMul",
+          "microseconds": 5894,
+          "fraction": 0.006860276855353379
+        },
+        {
+          "op": "Slice",
+          "microseconds": 3793,
+          "fraction": 0.00441483374827882
+        },
+        {
+          "op": "Concat",
+          "microseconds": 3211,
+          "fraction": 0.0037374192369426023
+        },
+        {
+          "op": "Split",
+          "microseconds": 1166,
+          "fraction": 0.0013571569075911164
+        },
+        {
+          "op": "Sub",
+          "microseconds": 1006,
+          "fraction": 0.0011709261140966235
+        },
+        {
+          "op": "Cast",
+          "microseconds": 615,
+          "fraction": 0.0007158246124944567
+        },
+        {
+          "op": "Unsqueeze",
+          "microseconds": 569,
+          "fraction": 0.00066228325936479
+        },
+        {
+          "op": "DynamicQuantizeLinear",
+          "microseconds": 531,
+          "fraction": 0.000618053445909848
+        },
+        {
+          "op": "Reshape",
+          "microseconds": 388,
+          "fraction": 0.00045160967422414505
+        },
+        {
+          "op": "Shape",
+          "microseconds": 314,
+          "fraction": 0.0003654779322329421
+        },
+        {
+          "op": "Tanh",
+          "microseconds": 305,
+          "fraction": 0.00035500245009887694
+        },
+        {
+          "op": "Sin",
+          "microseconds": 249,
+          "fraction": 0.00028982167237580445
+        },
+        {
+          "op": "Cos",
+          "microseconds": 230,
+          "fraction": 0.0002677067656483334
+        },
+        {
+          "op": "Gather",
+          "microseconds": 113,
+          "fraction": 0.00013152549790548554
+        },
+        {
+          "op": "Squeeze",
+          "microseconds": 112,
+          "fraction": 0.00013036155544614495
+        },
+        {
+          "op": "Div",
+          "microseconds": 105,
+          "fraction": 0.0001222139582307609
+        },
+        {
+          "op": "ReduceSum",
+          "microseconds": 92,
+          "fraction": 0.00010708270625933337
+        },
+        {
+          "op": "Equal",
+          "microseconds": 69,
+          "fraction": 8.031202969450002e-05
+        },
+        {
+          "op": "Softplus",
+          "microseconds": 57,
+          "fraction": 6.634472018241307e-05
+        },
+        {
+          "op": "Tile",
+          "microseconds": 40,
+          "fraction": 4.65576983736232e-05
+        },
+        {
+          "op": "Reciprocal",
+          "microseconds": 23,
+          "fraction": 2.6770676564833342e-05
+        }
+      ]
+    },
+    {
+      "part": "vocoder",
+      "total_profiled_microseconds": 292214,
+      "operators": [
+        {
+          "op": "MatMul",
+          "microseconds": 79810,
+          "fraction": 0.27312175323564236
+        },
+        {
+          "op": "BiasGelu",
+          "microseconds": 62049,
+          "fraction": 0.2123409556010321
+        },
+        {
+          "op": "FusedMatMul",
+          "microseconds": 59410,
+          "fraction": 0.2033099030162826
+        },
+        {
+          "op": "LayerNormalization",
+          "microseconds": 49279,
+          "fraction": 0.16864010622352113
+        },
+        {
+          "op": "Conv",
+          "microseconds": 29669,
+          "fraction": 0.10153175412540125
+        },
+        {
+          "op": "Transpose",
+          "microseconds": 4485,
+          "fraction": 0.015348340599697481
+        },
+        {
+          "op": "Add",
+          "microseconds": 3398,
+          "fraction": 0.011628464070852183
+        },
+        {
+          "op": "Pad",
+          "microseconds": 1966,
+          "fraction": 0.0067279459574147715
+        },
+        {
+          "op": "Mul",
+          "microseconds": 1387,
+          "fraction": 0.004746521385012354
+        },
+        {
+          "op": "PRelu",
+          "microseconds": 429,
+          "fraction": 0.0014681021443188895
+        },
+        {
+          "op": "BatchNormalization",
+          "microseconds": 143,
+          "fraction": 0.0004893673814396299
+        },
+        {
+          "op": "Reshape",
+          "microseconds": 123,
+          "fraction": 0.0004209243910284928
+        },
+        {
+          "op": "Div",
+          "microseconds": 42,
+          "fraction": 0.0001437302798633878
+        },
+        {
+          "op": "Slice",
+          "microseconds": 6,
+          "fraction": 2.0532897123341112e-05
+        },
+        {
+          "op": "Unsqueeze",
+          "microseconds": 4,
+          "fraction": 1.3688598082227408e-05
+        },
+        {
+          "op": "Gather",
+          "microseconds": 4,
+          "fraction": 1.3688598082227408e-05
+        },
+        {
+          "op": "Concat",
+          "microseconds": 4,
+          "fraction": 1.3688598082227408e-05
+        },
+        {
+          "op": "Shape",
+          "microseconds": 3,
+          "fraction": 1.0266448561670556e-05
+        },
+        {
+          "op": "Squeeze",
+          "microseconds": 3,
+          "fraction": 1.0266448561670556e-05
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "mode": "experimental-CFG-distillation",
+  "status": "Frozen experimental fast candidate; not a default replacement; listening evaluation pending",
+  "checkpoint": "distill/joint-cfg1024-round4/best.pt",
+  "step": 2000,
+  "validation_relative_update_mse": 0.06992352768429555,
+  "base": "models/fast-fp32-cached",
+  "vector_int8": true,
+  "minimum_steps": 8,
+  "training": {
+    "checkpoints": "distill/joint-cfg-1024-v1/best.pt",
+    "data": "distill/trajectories-round4",
+    "output": "distill/joint-cfg1024-round4",
+    "iterations": 2000,
+    "learning_rate": 1e-05,
+    "validate_every": 200,
+    "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+    "train_all": true
+  },
+  "teacher_guidance_scale": 4,
+  "student_internal_guidance_scale": 1,
+  "guidance_mode": "learned one-branch approximation; not exact CFG4",
+  "supported_steps": [
+    8
+  ],
+  "deployment_name": "cfg1024-v2",
+  "source_export": "models/round4-cfg1024-expanded",
+  "selected_checkpoint": "distill/joint-cfg1024-round4/best_step_02000.pt",
+  "initial_checkpoint": "distill/joint-cfg-1024-v1/best.pt",
+  "initial_checkpoint_step": 2400,
+  "initial_checkpoint_sha256": "f3151c0c254212d093119f0238626df575e03b93f7b0c7697426bbdb2a578893",
+  "vector_sha256": "9fd169498fcedd9c52f8c6b3092c56703c6115687b868f1ee8c89d1bdb2be133",
+  "training_unique_texts": 80,
+  "train_voice_seed_cases": 240,
+  "teacher_training_pairs": 1920,
+  "teacher_validation_pairs": 128,
+  "update_validation_pairs": 48,
+  "corpus_sha256": "406211c7f44c0fc7e87e9ac57dee50aea9d3e2f950dd130d9450a6669b052cf0",
+  "selected_before_test": true
+}

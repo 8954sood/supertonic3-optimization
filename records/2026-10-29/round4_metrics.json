@@ -1,0 +1,613 @@
+{
+  "date_kst": "2026-10-29",
+  "default_model": "cfg-mixed-v1-selected",
+  "experimental_candidate": "cfg1024-v2",
+  "conclusion": "Faster than the balanced model on the 1GB x86 host, but independent Korean CER regressed versus the previous 1024 student. Development and acoustic gains do not justify replacing the default.",
+  "steps": 8,
+  "inference_threads": 1,
+  "asr": {
+    "round4_baseline_holdout": [
+      {
+        "variant": "reference",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 9,
+        "reference_units": 209,
+        "sentences": 8,
+        "error_rate": 0.0430622009569378
+      },
+      {
+        "variant": "reference",
+        "language": "en",
+        "metric": "WER",
+        "errors": 0,
+        "reference_units": 105,
+        "sentences": 8,
+        "error_rate": 0.0
+      },
+      {
+        "variant": "cfg-mixed-v1-selected",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 8,
+        "reference_units": 209,
+        "sentences": 8,
+        "error_rate": 0.03827751196172249
+      },
+      {
+        "variant": "cfg-mixed-v1-selected",
+        "language": "en",
+        "metric": "WER",
+        "errors": 0,
+        "reference_units": 105,
+        "sentences": 8,
+        "error_rate": 0.0
+      },
+      {
+        "variant": "cfg1024-v1-final",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 9,
+        "reference_units": 209,
+        "sentences": 8,
+        "error_rate": 0.0430622009569378
+      },
+      {
+        "variant": "cfg1024-v1-final",
+        "language": "en",
+        "metric": "WER",
+        "errors": 1,
+        "reference_units": 105,
+        "sentences": 8,
+        "error_rate": 0.009523809523809525
+      },
+      {
+        "variant": "mixed-v1-selected",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 10,
+        "reference_units": 209,
+        "sentences": 8,
+        "error_rate": 0.04784688995215311
+      },
+      {
+        "variant": "mixed-v1-selected",
+        "language": "en",
+        "metric": "WER",
+        "errors": 2,
+        "reference_units": 105,
+        "sentences": 8,
+        "error_rate": 0.01904761904761905
+      }
+    ],
+    "round4_expanded_preview_validation": [
+      {
+        "variant": "reference",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 2,
+        "reference_units": 193,
+        "sentences": 8,
+        "error_rate": 0.010362694300518135
+      },
+      {
+        "variant": "reference",
+        "language": "en",
+        "metric": "WER",
+        "errors": 0,
+        "reference_units": 96,
+        "sentences": 8,
+        "error_rate": 0.0
+      },
+      {
+        "variant": "cfg-mixed-v1-selected",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 2,
+        "reference_units": 193,
+        "sentences": 8,
+        "error_rate": 0.010362694300518135
+      },
+      {
+        "variant": "cfg-mixed-v1-selected",
+        "language": "en",
+        "metric": "WER",
+        "errors": 0,
+        "reference_units": 96,
+        "sentences": 8,
+        "error_rate": 0.0
+      },
+      {
+        "variant": "cfg1024-v1-final",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 6,
+        "reference_units": 193,
+        "sentences": 8,
+        "error_rate": 0.031088082901554404
+      },
+      {
+        "variant": "cfg1024-v1-final",
+        "language": "en",
+        "metric": "WER",
+        "errors": 0,
+        "reference_units": 96,
+        "sentences": 8,
+        "error_rate": 0.0
+      },
+      {
+        "variant": "round4-cfg1024-preview",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 3,
+        "reference_units": 193,
+        "sentences": 8,
+        "error_rate": 0.015544041450777202
+      },
+      {
+        "variant": "round4-cfg1024-preview",
+        "language": "en",
+        "metric": "WER",
+        "errors": 0,
+        "reference_units": 96,
+        "sentences": 8,
+        "error_rate": 0.0
+      }
+    ],
+    "round4_expanded_final_validation": [
+      {
+        "variant": "reference",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 2,
+        "reference_units": 193,
+        "sentences": 8,
+        "error_rate": 0.010362694300518135
+      },
+      {
+        "variant": "reference",
+        "language": "en",
+        "metric": "WER",
+        "errors": 0,
+        "reference_units": 96,
+        "sentences": 8,
+        "error_rate": 0.0
+      },
+      {
+        "variant": "round4-cfg1024-expanded",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 3,
+        "reference_units": 193,
+        "sentences": 8,
+        "error_rate": 0.015544041450777202
+      },
+      {
+        "variant": "round4-cfg1024-expanded",
+        "language": "en",
+        "metric": "WER",
+        "errors": 0,
+        "reference_units": 96,
+        "sentences": 8,
+        "error_rate": 0.0
+      }
+    ],
+    "round4_expanded_frozen_test": [
+      {
+        "variant": "reference",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 7,
+        "reference_units": 218,
+        "sentences": 8,
+        "error_rate": 0.03211009174311927
+      },
+      {
+        "variant": "reference",
+        "language": "en",
+        "metric": "WER",
+        "errors": 2,
+        "reference_units": 109,
+        "sentences": 8,
+        "error_rate": 0.01834862385321101
+      },
+      {
+        "variant": "cfg-mixed-v1-selected",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 9,
+        "reference_units": 218,
+        "sentences": 8,
+        "error_rate": 0.04128440366972477
+      },
+      {
+        "variant": "cfg-mixed-v1-selected",
+        "language": "en",
+        "metric": "WER",
+        "errors": 2,
+        "reference_units": 109,
+        "sentences": 8,
+        "error_rate": 0.01834862385321101
+      },
+      {
+        "variant": "cfg1024-v1-final",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 6,
+        "reference_units": 218,
+        "sentences": 8,
+        "error_rate": 0.027522935779816515
+      },
+      {
+        "variant": "cfg1024-v1-final",
+        "language": "en",
+        "metric": "WER",
+        "errors": 2,
+        "reference_units": 109,
+        "sentences": 8,
+        "error_rate": 0.01834862385321101
+      },
+      {
+        "variant": "round4-cfg1024-selected",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 10,
+        "reference_units": 218,
+        "sentences": 8,
+        "error_rate": 0.045871559633027525
+      },
+      {
+        "variant": "round4-cfg1024-selected",
+        "language": "en",
+        "metric": "WER",
+        "errors": 2,
+        "reference_units": 109,
+        "sentences": 8,
+        "error_rate": 0.01834862385321101
+      }
+    ],
+    "round4_epyc_candidate_asr": [
+      {
+        "variant": "remote",
+        "language": "en",
+        "metric": "WER",
+        "errors": 0,
+        "reference_units": 11,
+        "sentences": 1,
+        "error_rate": 0.0
+      },
+      {
+        "variant": "remote",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 0,
+        "reference_units": 25,
+        "sentences": 1,
+        "error_rate": 0.0
+      }
+    ],
+    "round4_epyc_reference_asr": [
+      {
+        "variant": "remote",
+        "language": "en",
+        "metric": "WER",
+        "errors": 0,
+        "reference_units": 11,
+        "sentences": 1,
+        "error_rate": 0.0
+      },
+      {
+        "variant": "remote",
+        "language": "ko",
+        "metric": "CER",
+        "errors": 0,
+        "reference_units": 25,
+        "sentences": 1,
+        "error_rate": 0.0
+      }
+    ]
+  },
+  "acoustics": {
+    "round4_expanded_preview_acoustics": [
+      {
+        "variant": "cfg-mixed-v1-selected",
+        "sentences": 16,
+        "mean_dtw_logmel_mae_db": 3.8754279762506485,
+        "mean_sentence_median_f0_abs_cents": 29.062500000000078
+      },
+      {
+        "variant": "cfg1024-v1-final",
+        "sentences": 16,
+        "mean_dtw_logmel_mae_db": 4.436425670981407,
+        "mean_sentence_median_f0_abs_cents": 37.49999999999998
+      },
+      {
+        "variant": "round4-cfg1024-preview",
+        "sentences": 16,
+        "mean_dtw_logmel_mae_db": 4.4790328592062,
+        "mean_sentence_median_f0_abs_cents": 33.75000000000005
+      }
+    ],
+    "round4_expanded_final_acoustics": [
+      {
+        "variant": "round4-cfg1024-expanded",
+        "sentences": 16,
+        "mean_dtw_logmel_mae_db": 4.312360018491745,
+        "mean_sentence_median_f0_abs_cents": 35.31250000000001
+      }
+    ],
+    "round4_expanded_frozen_acoustics": [
+      {
+        "variant": "cfg-mixed-v1-selected",
+        "sentences": 16,
+        "mean_dtw_logmel_mae_db": 4.092552423477173,
+        "mean_sentence_median_f0_abs_cents": 45.937500000000014
+      },
+      {
+        "variant": "cfg1024-v1-final",
+        "sentences": 16,
+        "mean_dtw_logmel_mae_db": 4.813041150569916,
+        "mean_sentence_median_f0_abs_cents": 64.68750000000006
+      },
+      {
+        "variant": "round4-cfg1024-selected",
+        "sentences": 16,
+        "mean_dtw_logmel_mae_db": 4.459698423743248,
+        "mean_sentence_median_f0_abs_cents": 46.25000000000003
+      }
+    ]
+  },
+  "server_paired": [
+    {
+      "case": "ko_short",
+      "reference_seconds": 5.9107239451259375,
+      "candidate_seconds": 4.808534996584058,
+      "paired_speedup_median": 1.2469306019728894,
+      "paired_speedups": [
+        1.367322158127196,
+        1.2292151246325265,
+        1.2469306019728894
+      ]
+    },
+    {
+      "case": "en_short",
+      "reference_seconds": 5.611155059188604,
+      "candidate_seconds": 4.372820248827338,
+      "paired_speedup_median": 1.292462651500519,
+      "paired_speedups": [
+        1.5616150154815118,
+        1.292462651500519,
+        1.283189049605538
+      ]
+    }
+  ],
+  "sampled_peak_rss_mb": {
+    "reference": 416.68608,
+    "candidate": 395.579392
+  },
+  "sources": [
+    {
+      "path": "results/round4_baseline_holdout.json",
+      "bytes": 72503,
+      "sha256": "69b5414db2ddddd24ef362b7a493c25298182fc4e2685daa3f85ae4f8b1a65e5"
+    },
+    {
+      "path": "results/round4_cache_equivalence.json",
+      "bytes": 608,
+      "sha256": "7602e02c72ee3dfbb8bd87e07c8db2b6033ff4c34cf5b692eb00755182b9997f"
+    },
+    {
+      "path": "results/round4_candidate_delta_acoustics.json",
+      "bytes": 13898,
+      "sha256": "2d7d2394aa409c1949cffb2ee1dd88539f55e45347cdab490ff8decb2d322b49"
+    },
+    {
+      "path": "results/round4_candidate_delta_manifest.json",
+      "bytes": 22155,
+      "sha256": "05ce58b6f0be173356697a4556fb7c74f3080a272b2abb82414f189d4bd58416"
+    },
+    {
+      "path": "results/round4_candidates_validation.json",
+      "bytes": 38288,
+      "sha256": "dc23b247585f2b5d30a02f7a759c163392a953360b6bd7ce04ab04977f83ae33"
+    },
+    {
+      "path": "results/round4_epyc_candidate_asr.json",
+      "bytes": 926,
+      "sha256": "2c49979e23c233e872c814794e49a386f02c516be06692ac8232497ec1a3181a"
+    },
+    {
+      "path": "results/round4_epyc_cfg-mixed-v1-selected.json",
+      "bytes": 6728,
+      "sha256": "4be84b80ab5bb0a2116b53bfd1d0edee1edc9df5ef1efdd7fe2e7d4d045fb2cc"
+    },
+    {
+      "path": "results/round4_epyc_reference_asr.json",
+      "bytes": 926,
+      "sha256": "5ea1847eb0651016361de029906870b64a9b75eed368c0ffc19e50896409cc61"
+    },
+    {
+      "path": "results/round4_epyc_round4-cfg-cached.json",
+      "bytes": 7002,
+      "sha256": "ae87031d6ae3ba49de90e24f74e44cfd3d225653a4fbe83b3c9f72389dc9ef7c"
+    },
+    {
+      "path": "results/round4_epyc_round4-fast-gelu.json",
+      "bytes": 6721,
+      "sha256": "1f32e75fd8ed37a38038644ce433939ccd48e48ebff47fc26a4d52c7c94b7d7f"
+    },
+    {
+      "path": "results/round4_epyc_round4-head-fast-vocoder.json",
+      "bytes": 6736,
+      "sha256": "5fd49e32e977c7047ab998d485fba357770caebf62aa4a043dab3d2875254f1e"
+    },
+    {
+      "path": "results/round4_epyc_round4-head-int8.json",
+      "bytes": 6721,
+      "sha256": "09742d4b24b8bd3c3a15357657ca74b10f0adb27876ddc0c99d24bc85ae44a19"
+    },
+    {
+      "path": "results/round4_epyc_round4-vocoder-fast-gelu.json",
+      "bytes": 6729,
+      "sha256": "f29ef5800d66cac6240c18aac3708553ccd6d751862c8b33f2891d51a608f3ac"
+    },
+    {
+      "path": "results/round4_expanded_final_acoustics.json",
+      "bytes": 14570,
+      "sha256": "f2ce92ea5957f1b75c20f46d6896ad27e3bb0eb5cd7b2f0dc9991aa094933374"
+    },
+    {
+      "path": "results/round4_expanded_final_validation.json",
+      "bytes": 34859,
+      "sha256": "9a180e2d10c1300fcb28f2277233f111c4b719633027e5e6c7cf9dca0ac0940e"
+    },
+    {
+      "path": "results/round4_expanded_frozen_acoustics.json",
+      "bytes": 41346,
+      "sha256": "12e77b749d1959c68fc849112a791f4a6a488d29ffc6c424439e4e04498ceef1"
+    },
+    {
+      "path": "results/round4_expanded_frozen_test.json",
+      "bytes": 73416,
+      "sha256": "67a7a741082b99893e6bdd58411891010be15d37c7ebda9b3c347a64031c1671"
+    },
+    {
+      "path": "results/round4_expanded_preview_acoustics.json",
+      "bytes": 41975,
+      "sha256": "08132890e09653695fec7b75d94febb0863bd885d746813eb561bdf941b4266d"
+    },
+    {
+      "path": "results/round4_expanded_preview_validation.json",
+      "bytes": 71340,
+      "sha256": "d0d7183ab744fcc4ff9e005e6a77a6053e7f86723aea54397e1935efc7cad063"
+    },
+    {
+      "path": "results/round4_expanded_training.json",
+      "bytes": 2544,
+      "sha256": "bd63590465433c51bd43ffa514fc1c86af4fb0489139b59b02344428fcba9888"
+    },
+    {
+      "path": "results/round4_guard_cfg-mixed-v1-selected.json",
+      "bytes": 294,
+      "sha256": "c594c91dac083bddc73e9def5a8aa4e3a9ca9d6be38de63a8624ceaf9e5023a9"
+    },
+    {
+      "path": "results/round4_guard_round4-cfg-cached.json",
+      "bytes": 294,
+      "sha256": "13d7fcf34473f046f0c6b72e1c0954686af9996bf39ff1d9ae36d9dd31eff646"
+    },
+    {
+      "path": "results/round4_guard_round4-fast-gelu.json",
+      "bytes": 294,
+      "sha256": "1033c73076250a3a67346e080ad08b899162e92c9e91b4652c9e5305511c8500"
+    },
+    {
+      "path": "results/round4_guard_round4-head-fast-vocoder.json",
+      "bytes": 293,
+      "sha256": "cea7db759c9facefceeca738f7640eee150c9bd2cd5d1313b73ad1ff93f89ad3"
+    },
+    {
+      "path": "results/round4_guard_round4-head-int8.json",
+      "bytes": 295,
+      "sha256": "f16b7939921e76fbdc9871a5de4f6e6adac4a5af68917f6e6952ea9b4bc079c8"
+    },
+    {
+      "path": "results/round4_guard_round4-vocoder-fast-gelu.json",
+      "bytes": 295,
+      "sha256": "ec672f86fad9927cb81b0883265cfe1f79091e589438de56cc4086837e6bd2c9"
+    },
+    {
+      "path": "results/round4_hf_upload_verification.json",
+      "bytes": 488,
+      "sha256": "60b74bbcb6f78c9ade80bdcaf6ab05fefc6ea33e1e1b5334a5b1c3f2b1b56b6a"
+    },
+    {
+      "path": "results/round4_operator_costs.json",
+      "bytes": 13467,
+      "sha256": "30e458bc2dc185f119c4efe6ff4a5cf937772768c05c16f7c5e019ee0b523d01"
+    },
+    {
+      "path": "results/round4_paired_expanded.json",
+      "bytes": 39754,
+      "sha256": "23b81e3722ca4ab0de81c92b652e3293f034cb2cce31a0124ee05569552b6055"
+    },
+    {
+      "path": "results/round4_paired_vocoder_gelu.json",
+      "bytes": 36733,
+      "sha256": "e591a2bb5d6444fb07f71b9df15054da0d179d17023bcc15e65607bcd2ca7fd0"
+    },
+    {
+      "path": "results/round4_public_download_verification.json",
+      "bytes": 241,
+      "sha256": "4113a7f8dbcf3f4d75e7fa8ee90ef7cebe9b765f7eac8b219584d6cc66120359"
+    },
+    {
+      "path": "results/round4_public_reproduction_verification.json",
+      "bytes": 652,
+      "sha256": "a90b9ee3b81d8bd70dc07be05977d548e8963da73812d2825f945b712143a6b2"
+    },
+    {
+      "path": "results/round4_published_graph_parity.json",
+      "bytes": 1770,
+      "sha256": "4060e47876134f968357bde61e648ee9ad2825ae4c038da5d2ef5760a25e7805"
+    },
+    {
+      "path": "results/round4_reexport_verification.json",
+      "bytes": 1176,
+      "sha256": "7abb6e4c5f91f859b03b72d6d1c8afcb3c48fc5f895fe860f4f8912cbbf02a09"
+    },
+    {
+      "path": "results/round4_relocation_verification.json",
+      "bytes": 287,
+      "sha256": "cb55698807d6c1f8f752ab6b234341cecce83e3e26552b2176c7d20fe22cdcd9"
+    },
+    {
+      "path": "results/round4_selected_holdout_acoustics.json",
+      "bytes": 14211,
+      "sha256": "ce8eda8269d6c85190cdcf48df8de70cc4783a7b279aed372c7872c40bf0bbb8"
+    },
+    {
+      "path": "results/round4_selected_holdout_manifest.json",
+      "bytes": 22106,
+      "sha256": "be992fec9fb602f6bdc6baec132f86fdbd8a9c7453109321a581b7091b886739"
+    },
+    {
+      "path": "results/round4_selected_profile.json",
+      "bytes": 2011,
+      "sha256": "ead00a54442be569ac9eed38ebb8fe0f2ec482110a4a8c73e5aa4eb9f4873d7d"
+    },
+    {
+      "path": "results/round4_training_data_audit.json",
+      "bytes": 914,
+      "sha256": "2f74fef5a80e75ffb598ee36e50d8acf66c8d843ed922b876a01d5120b69910a"
+    },
+    {
+      "path": "results/round4_vocoder_candidates_validation.json",
+      "bytes": 29228,
+      "sha256": "e6f27d75e5670b8efcb7ea814a49243771974b8e73cc7e9f7e1aa0b7c9dc6bac"
+    },
+    {
+      "path": "results/round4_vocoder_delta_acoustics.json",
+      "bytes": 14219,
+      "sha256": "4232c5f1add14ef29a2888b55e175c6dfdfd03481c007a372c16359598849523"
+    },
+    {
+      "path": "results/round4_vocoder_delta_manifest.json",
+      "bytes": 21061,
+      "sha256": "d90bd2b6baac19635996afcbcc483770edb46e63b282be97c4ba8537a63fce8a"
+    },
+    {
+      "path": "results/round4_vocoder_head_svd.json",
+      "bytes": 480,
+      "sha256": "e93d79c47102e568267e364783a49d33f3313befaa6edc0aeaba2e48ea3e46c4"
+    }
+  ],
+  "limitations": [
+    "Whisper base INT8 CPU1 is an intelligibility proxy, not a listening or speaker similarity score.",
+    "English streetlights/street lights accounts for both test WER errors in every model; raw scoring is retained.",
+    "The server is shared. Alternating model processes reduce but cannot eliminate host interference. Three pairs are a small sample.",
+    "Memory supervision samples every 50ms and is not an OS-enforced cap.",
+    "No new candidate was measured on ARM. User-provided PR #1 covers the prior balanced model only.",
+    "All round-four test sets are consumed. Do not tune on them."
+  ]
+}

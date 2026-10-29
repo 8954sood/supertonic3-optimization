@@ -1,0 +1,81 @@
+{
+  "config": {
+    "checkpoints": "distill/joint-cfg-1024-v1/best.pt",
+    "data": "distill/trajectories-round4",
+    "output": "distill/joint-cfg1024-round4",
+    "iterations": 2000,
+    "learning_rate": 1e-05,
+    "validate_every": 200,
+    "graph": "models/cfg-student-fp32-source/onnx/vector_estimator.onnx",
+    "train_all": true
+  },
+  "method": "Selected FFNs or all learned vector tensors jointly optimized through the configured graph; original CFG4 teacher trajectories; no decoder or waveform loss",
+  "train_pairs": 1920,
+  "validation_pairs": 48,
+  "initial_validation_relative_update_mse": 0.07571663474664092,
+  "history": [
+    {
+      "step": 200,
+      "validation_relative_update_mse": 0.07335524158164237,
+      "train_loss": 0.03410213068127632,
+      "elapsed_seconds": 33.93222875002539
+    },
+    {
+      "step": 400,
+      "validation_relative_update_mse": 0.07285622095999618,
+      "train_loss": 0.11316602677106857,
+      "elapsed_seconds": 63.3850551659998
+    },
+    {
+      "step": 600,
+      "validation_relative_update_mse": 0.07240341661963612,
+      "train_loss": 0.06095093488693237,
+      "elapsed_seconds": 91.84372470801463
+    },
+    {
+      "step": 800,
+      "validation_relative_update_mse": 0.07232417579507455,
+      "train_loss": 0.059878043830394745,
+      "elapsed_seconds": 121.11194862500997
+    },
+    {
+      "step": 1000,
+      "validation_relative_update_mse": 0.07214962449506857,
+      "train_loss": 0.06046409532427788,
+      "elapsed_seconds": 150.24597270801314
+    },
+    {
+      "step": 1200,
+      "validation_relative_update_mse": 0.07117278702207841,
+      "train_loss": 0.0704248920083046,
+      "elapsed_seconds": 179.749389833014
+    },
+    {
+      "step": 1400,
+      "validation_relative_update_mse": 0.07140866978443228,
+      "train_loss": 0.06186119094491005,
+      "elapsed_seconds": 209.0291329580068
+    },
+    {
+      "step": 1600,
+      "validation_relative_update_mse": 0.0706071375849812,
+      "train_loss": 0.06546732783317566,
+      "elapsed_seconds": 236.99361187501927
+    },
+    {
+      "step": 1800,
+      "validation_relative_update_mse": 0.07040815073802757,
+      "train_loss": 0.07028038799762726,
+      "elapsed_seconds": 266.19755712500773
+    },
+    {
+      "step": 2000,
+      "validation_relative_update_mse": 0.06992352768429555,
+      "train_loss": 0.12469155341386795,
+      "elapsed_seconds": 294.5209770000074
+    }
+  ],
+  "best_validation_relative_update_mse": 0.06992352768429555,
+  "elapsed_seconds": 294.8381878750224,
+  "complete": true
+}
