@@ -1,0 +1,712 @@
+{
+  "note": "Sequential fresh-process benchmark, frozen learned tensors; candidate graph may fuse an exact epilogue. Atomic library swaps only while no benchmark child is running; original active library restored in finally. Speed claims require bit-identical outputs.",
+  "model": "models/round8-F-retime",
+  "steps": 8,
+  "threads": 1,
+  "speed": 2.0,
+  "candidate_model": "models/round8-F-retime",
+  "libraries": {
+    "reference": {
+      "name": "libexact_reference_round9.so",
+      "sha256": "7beea5a751d8572338417934201b9e21d775fa124601e5bd2c11926c494c3dc1"
+    },
+    "candidate": {
+      "name": "libexact_tilev2.so",
+      "sha256": "ce71e97efbb84db675820f7ba44385fcdfa1c2865e02c40ad97cd1e489812080"
+    }
+  },
+  "runs": [
+    {
+      "pair": 0,
+      "label": "reference",
+      "returncode": 0,
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 364.404736,
+        "sampled_peak_process_tree_rss_mb": 364.404736,
+        "minimum_system_available_mb": 256.892928,
+        "elapsed_seconds": 23.812009828165174,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS, including optional tempo subprocess; shared pages may be counted twice."
+      },
+      "benchmark": {
+        "machine": "Linux-6.17.0-1011-oracle-x86_64-with-glibc2.39",
+        "processor": "x86_64",
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "threads": 1,
+        "affinity": 0,
+        "voice": "M1",
+        "speed": 2.0,
+        "cpu_time_scope": "process and waited-for child processes",
+        "audio_subtype": "FLOAT",
+        "variant": null,
+        "model": "models/round8-F-retime",
+        "low_memory": false,
+        "backend": "ORT CPU with exact AVX2 integer FFNs",
+        "cpu_count": 2,
+        "cpu_affinity": [
+          0
+        ],
+        "cpu_info": "processor\t: 0\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 1\nmodel name\t: AMD EPYC 7551 32-Core Processor\nstepping\t: 2\nmicrocode\t: 0x8001279\ncpu MHz\t\t: 1996.244\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 1\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat npt nrip_save vgif overflow_recov succor arch_capabilities\nbugs\t\t: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso div0 ibpb_no_ret spectre_v2_user\nbogomips\t: 3992.48\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 1\nmodel name\t: AMD EPYC 7551 32-Core Processor\nstepping\t: 2\nmicrocode\t: 0x8001279\ncpu MHz\t\t: 1996.244\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 1\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat npt nrip_save vgif overflow_recov succor arch_capabilities\nbugs\t\t: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso div0 ibpb_no_ret spectre_v2_user\nbogomips\t: 3992.48\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\n",
+        "load_seconds": 6.272501222789288,
+        "note": "Measured on this machine only. Apple M4 results do not predict Oracle Ampere A1 performance. Warm synthesis excludes model loading and file I/O. No CPU quota is emulated by this script.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "lang": "ko",
+            "text": "\uc548\ub155\ud558\uc138\uc694. \uc624\ub798\ub41c \ucef4\ud4e8\ud130\uc5d0\uc11c\ub3c4 \ube60\ub974\uac8c \uc74c\uc131\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4.",
+            "steps": 8,
+            "runs": [
+              {
+                "seconds": 4.826828144490719,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.7281918728600134,
+                "realtime_factor": 0.5786394530053445,
+                "stages": {
+                  "duration_predictor": 0.004335673525929451,
+                  "text_encoder": 0.09906255453824997,
+                  "condition": 0.0069457851350307465,
+                  "vector_estimator": 2.8006335645914078,
+                  "vocoder": 1.9143044389784336
+                }
+              }
+            ],
+            "median_seconds": 4.826828144490719,
+            "median_rtf": 1.7281918728600134,
+            "median_realtime_factor": 0.5786394530053445,
+            "cpu_wall_ratio": 0.9831797907320597,
+            "rss_mb": 364.101632,
+            "peak": 0.38566070795059204
+          },
+          {
+            "case": "en_short",
+            "lang": "en",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "steps": 8,
+            "runs": [
+              {
+                "seconds": 3.6491075102239847,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.4088354770444358,
+                "realtime_factor": 0.7098060889961952,
+                "stages": {
+                  "duration_predictor": 0.003999343141913414,
+                  "text_encoder": 0.09667392633855343,
+                  "condition": 0.006385302171111107,
+                  "vector_estimator": 2.622100720182061,
+                  "vocoder": 0.9184069521725178
+                }
+              }
+            ],
+            "median_seconds": 3.6491075102239847,
+            "median_rtf": 1.4088354770444358,
+            "median_realtime_factor": 0.7098060889961952,
+            "cpu_wall_ratio": 1.0092338098238012,
+            "rss_mb": 364.404736,
+            "peak": 0.42320749163627625
+          }
+        ],
+        "complete": true
+      }
+    },
+    {
+      "pair": 0,
+      "label": "candidate",
+      "returncode": 0,
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 353.939456,
+        "sampled_peak_process_tree_rss_mb": 353.939456,
+        "minimum_system_available_mb": 294.866944,
+        "elapsed_seconds": 22.0447705835104,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS, including optional tempo subprocess; shared pages may be counted twice."
+      },
+      "benchmark": {
+        "machine": "Linux-6.17.0-1011-oracle-x86_64-with-glibc2.39",
+        "processor": "x86_64",
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "threads": 1,
+        "affinity": 0,
+        "voice": "M1",
+        "speed": 2.0,
+        "cpu_time_scope": "process and waited-for child processes",
+        "audio_subtype": "FLOAT",
+        "variant": null,
+        "model": "models/round8-F-retime",
+        "low_memory": false,
+        "backend": "ORT CPU with exact AVX2 integer FFNs",
+        "cpu_count": 2,
+        "cpu_affinity": [
+          0
+        ],
+        "cpu_info": "processor\t: 0\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 1\nmodel name\t: AMD EPYC 7551 32-Core Processor\nstepping\t: 2\nmicrocode\t: 0x8001279\ncpu MHz\t\t: 1996.244\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 1\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat npt nrip_save vgif overflow_recov succor arch_capabilities\nbugs\t\t: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso div0 ibpb_no_ret spectre_v2_user\nbogomips\t: 3992.48\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 1\nmodel name\t: AMD EPYC 7551 32-Core Processor\nstepping\t: 2\nmicrocode\t: 0x8001279\ncpu MHz\t\t: 1996.244\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 1\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat npt nrip_save vgif overflow_recov succor arch_capabilities\nbugs\t\t: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso div0 ibpb_no_ret spectre_v2_user\nbogomips\t: 3992.48\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\n",
+        "load_seconds": 6.01594921387732,
+        "note": "Measured on this machine only. Apple M4 results do not predict Oracle Ampere A1 performance. Warm synthesis excludes model loading and file I/O. No CPU quota is emulated by this script.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "lang": "ko",
+            "text": "\uc548\ub155\ud558\uc138\uc694. \uc624\ub798\ub41c \ucef4\ud4e8\ud130\uc5d0\uc11c\ub3c4 \ube60\ub974\uac8c \uc74c\uc131\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4.",
+            "steps": 8,
+            "runs": [
+              {
+                "seconds": 3.745359966531396,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3409842781501697,
+                "realtime_factor": 0.7457208979209339,
+                "stages": {
+                  "duration_predictor": 0.004484502598643303,
+                  "text_encoder": 0.10015520639717579,
+                  "condition": 0.007406599819660187,
+                  "vector_estimator": 2.6700838413089514,
+                  "vocoder": 0.9615040570497513
+                }
+              }
+            ],
+            "median_seconds": 3.745359966531396,
+            "median_rtf": 1.3409842781501697,
+            "median_realtime_factor": 0.7457208979209339,
+            "cpu_wall_ratio": 0.9997705359327069,
+            "rss_mb": 353.636352,
+            "peak": 0.38566070795059204
+          },
+          {
+            "case": "en_short",
+            "lang": "en",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "steps": 8,
+            "runs": [
+              {
+                "seconds": 3.507502503693104,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3541650798668068,
+                "realtime_factor": 0.7384624037848901,
+                "stages": {
+                  "duration_predictor": 0.004316214472055435,
+                  "text_encoder": 0.09533419460058212,
+                  "condition": 0.006376398727297783,
+                  "vector_estimator": 2.489287994801998,
+                  "vocoder": 0.9107854515314102
+                }
+              }
+            ],
+            "median_seconds": 3.507502503693104,
+            "median_rtf": 1.3541650798668068,
+            "median_realtime_factor": 0.7384624037848901,
+            "cpu_wall_ratio": 0.9993635398147966,
+            "rss_mb": 353.939456,
+            "peak": 0.42320749163627625
+          }
+        ],
+        "complete": true
+      }
+    },
+    {
+      "pair": 1,
+      "label": "candidate",
+      "returncode": 0,
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 363.012096,
+        "sampled_peak_process_tree_rss_mb": 363.012096,
+        "minimum_system_available_mb": 288.866304,
+        "elapsed_seconds": 20.93647527694702,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS, including optional tempo subprocess; shared pages may be counted twice."
+      },
+      "benchmark": {
+        "machine": "Linux-6.17.0-1011-oracle-x86_64-with-glibc2.39",
+        "processor": "x86_64",
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "threads": 1,
+        "affinity": 0,
+        "voice": "M1",
+        "speed": 2.0,
+        "cpu_time_scope": "process and waited-for child processes",
+        "audio_subtype": "FLOAT",
+        "variant": null,
+        "model": "models/round8-F-retime",
+        "low_memory": false,
+        "backend": "ORT CPU with exact AVX2 integer FFNs",
+        "cpu_count": 2,
+        "cpu_affinity": [
+          0
+        ],
+        "cpu_info": "processor\t: 0\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 1\nmodel name\t: AMD EPYC 7551 32-Core Processor\nstepping\t: 2\nmicrocode\t: 0x8001279\ncpu MHz\t\t: 1996.244\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 1\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat npt nrip_save vgif overflow_recov succor arch_capabilities\nbugs\t\t: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso div0 ibpb_no_ret spectre_v2_user\nbogomips\t: 3992.48\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 1\nmodel name\t: AMD EPYC 7551 32-Core Processor\nstepping\t: 2\nmicrocode\t: 0x8001279\ncpu MHz\t\t: 1996.244\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 1\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat npt nrip_save vgif overflow_recov succor arch_capabilities\nbugs\t\t: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso div0 ibpb_no_ret spectre_v2_user\nbogomips\t: 3992.48\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\n",
+        "load_seconds": 5.064150858670473,
+        "note": "Measured on this machine only. Apple M4 results do not predict Oracle Ampere A1 performance. Warm synthesis excludes model loading and file I/O. No CPU quota is emulated by this script.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "lang": "ko",
+            "text": "\uc548\ub155\ud558\uc138\uc694. \uc624\ub798\ub41c \ucef4\ud4e8\ud130\uc5d0\uc11c\ub3c4 \ube60\ub974\uac8c \uc74c\uc131\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4.",
+            "steps": 8,
+            "runs": [
+              {
+                "seconds": 3.818979099392891,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.367342785909236,
+                "realtime_factor": 0.7313455048033434,
+                "stages": {
+                  "duration_predictor": 0.004240080714225769,
+                  "text_encoder": 0.11294488795101643,
+                  "condition": 0.06255353800952435,
+                  "vector_estimator": 2.635771080851555,
+                  "vocoder": 1.001888258382678
+                }
+              }
+            ],
+            "median_seconds": 3.818979099392891,
+            "median_rtf": 1.367342785909236,
+            "median_realtime_factor": 0.7313455048033434,
+            "cpu_wall_ratio": 1.0003783688178178,
+            "rss_mb": 362.708992,
+            "peak": 0.38566070795059204
+          },
+          {
+            "case": "en_short",
+            "lang": "en",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "steps": 8,
+            "runs": [
+              {
+                "seconds": 3.4818449690937996,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3442593029348533,
+                "realtime_factor": 0.743904094854877,
+                "stages": {
+                  "duration_predictor": 0.004019159823656082,
+                  "text_encoder": 0.09574335813522339,
+                  "condition": 0.04853764362633228,
+                  "vector_estimator": 2.4301928486675024,
+                  "vocoder": 0.9019562024623156
+                }
+              }
+            ],
+            "median_seconds": 3.4818449690937996,
+            "median_rtf": 1.3442593029348533,
+            "median_realtime_factor": 0.743904094854877,
+            "cpu_wall_ratio": 0.999429691697526,
+            "rss_mb": 363.012096,
+            "peak": 0.42320749163627625
+          }
+        ],
+        "complete": true
+      }
+    },
+    {
+      "pair": 1,
+      "label": "reference",
+      "returncode": 0,
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 369.025024,
+        "sampled_peak_process_tree_rss_mb": 369.025024,
+        "minimum_system_available_mb": 285.98272,
+        "elapsed_seconds": 22.12902539409697,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS, including optional tempo subprocess; shared pages may be counted twice."
+      },
+      "benchmark": {
+        "machine": "Linux-6.17.0-1011-oracle-x86_64-with-glibc2.39",
+        "processor": "x86_64",
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "threads": 1,
+        "affinity": 0,
+        "voice": "M1",
+        "speed": 2.0,
+        "cpu_time_scope": "process and waited-for child processes",
+        "audio_subtype": "FLOAT",
+        "variant": null,
+        "model": "models/round8-F-retime",
+        "low_memory": false,
+        "backend": "ORT CPU with exact AVX2 integer FFNs",
+        "cpu_count": 2,
+        "cpu_affinity": [
+          0
+        ],
+        "cpu_info": "processor\t: 0\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 1\nmodel name\t: AMD EPYC 7551 32-Core Processor\nstepping\t: 2\nmicrocode\t: 0x8001279\ncpu MHz\t\t: 1996.244\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 1\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat npt nrip_save vgif overflow_recov succor arch_capabilities\nbugs\t\t: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso div0 ibpb_no_ret spectre_v2_user\nbogomips\t: 3992.48\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 1\nmodel name\t: AMD EPYC 7551 32-Core Processor\nstepping\t: 2\nmicrocode\t: 0x8001279\ncpu MHz\t\t: 1996.244\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 1\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat npt nrip_save vgif overflow_recov succor arch_capabilities\nbugs\t\t: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso div0 ibpb_no_ret spectre_v2_user\nbogomips\t: 3992.48\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\n",
+        "load_seconds": 5.383125342428684,
+        "note": "Measured on this machine only. Apple M4 results do not predict Oracle Ampere A1 performance. Warm synthesis excludes model loading and file I/O. No CPU quota is emulated by this script.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "lang": "ko",
+            "text": "\uc548\ub155\ud558\uc138\uc694. \uc624\ub798\ub41c \ucef4\ud4e8\ud130\uc5d0\uc11c\ub3c4 \ube60\ub974\uac8c \uc74c\uc131\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4.",
+            "steps": 8,
+            "runs": [
+              {
+                "seconds": 3.9785820338875055,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.4244868328944231,
+                "realtime_factor": 0.702007190875955,
+                "stages": {
+                  "duration_predictor": 0.00415010005235672,
+                  "text_encoder": 0.09840524010360241,
+                  "condition": 0.006958017125725746,
+                  "vector_estimator": 2.8011971451342106,
+                  "vocoder": 1.0663262512534857
+                }
+              }
+            ],
+            "median_seconds": 3.9785820338875055,
+            "median_rtf": 1.4244868328944231,
+            "median_realtime_factor": 0.702007190875955,
+            "cpu_wall_ratio": 0.9993979063728982,
+            "rss_mb": 368.72192,
+            "peak": 0.38566070795059204
+          },
+          {
+            "case": "en_short",
+            "lang": "en",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "steps": 8,
+            "runs": [
+              {
+                "seconds": 3.7003796882927418,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.4286304716413945,
+                "realtime_factor": 0.6999710700913941,
+                "stages": {
+                  "duration_predictor": 0.004217911511659622,
+                  "text_encoder": 0.09532898105680943,
+                  "condition": 0.05990387499332428,
+                  "vector_estimator": 2.6136083099991083,
+                  "vocoder": 0.9259140752255917
+                }
+              }
+            ],
+            "median_seconds": 3.7003796882927418,
+            "median_rtf": 1.4286304716413945,
+            "median_realtime_factor": 0.6999710700913941,
+            "cpu_wall_ratio": 0.9997919369476655,
+            "rss_mb": 369.025024,
+            "peak": 0.42320749163627625
+          }
+        ],
+        "complete": true
+      }
+    },
+    {
+      "pair": 2,
+      "label": "reference",
+      "returncode": 0,
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 366.16192,
+        "sampled_peak_process_tree_rss_mb": 366.16192,
+        "minimum_system_available_mb": 271.806464,
+        "elapsed_seconds": 21.741838928312063,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS, including optional tempo subprocess; shared pages may be counted twice."
+      },
+      "benchmark": {
+        "machine": "Linux-6.17.0-1011-oracle-x86_64-with-glibc2.39",
+        "processor": "x86_64",
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "threads": 1,
+        "affinity": 0,
+        "voice": "M1",
+        "speed": 2.0,
+        "cpu_time_scope": "process and waited-for child processes",
+        "audio_subtype": "FLOAT",
+        "variant": null,
+        "model": "models/round8-F-retime",
+        "low_memory": false,
+        "backend": "ORT CPU with exact AVX2 integer FFNs",
+        "cpu_count": 2,
+        "cpu_affinity": [
+          0
+        ],
+        "cpu_info": "processor\t: 0\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 1\nmodel name\t: AMD EPYC 7551 32-Core Processor\nstepping\t: 2\nmicrocode\t: 0x8001279\ncpu MHz\t\t: 1996.244\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 1\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat npt nrip_save vgif overflow_recov succor arch_capabilities\nbugs\t\t: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso div0 ibpb_no_ret spectre_v2_user\nbogomips\t: 3992.48\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 1\nmodel name\t: AMD EPYC 7551 32-Core Processor\nstepping\t: 2\nmicrocode\t: 0x8001279\ncpu MHz\t\t: 1996.244\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 1\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat npt nrip_save vgif overflow_recov succor arch_capabilities\nbugs\t\t: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso div0 ibpb_no_ret spectre_v2_user\nbogomips\t: 3992.48\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\n",
+        "load_seconds": 5.023700417950749,
+        "note": "Measured on this machine only. Apple M4 results do not predict Oracle Ampere A1 performance. Warm synthesis excludes model loading and file I/O. No CPU quota is emulated by this script.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "lang": "ko",
+            "text": "\uc548\ub155\ud558\uc138\uc694. \uc624\ub798\ub41c \ucef4\ud4e8\ud130\uc5d0\uc11c\ub3c4 \ube60\ub974\uac8c \uc74c\uc131\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4.",
+            "steps": 8,
+            "runs": [
+              {
+                "seconds": 3.903131678700447,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3974726764472947,
+                "realtime_factor": 0.7155774970443329,
+                "stages": {
+                  "duration_predictor": 0.004328107461333275,
+                  "text_encoder": 0.09712083823978901,
+                  "condition": 0.006476426497101784,
+                  "vector_estimator": 2.8104890398681164,
+                  "vocoder": 0.9832352083176374
+                }
+              }
+            ],
+            "median_seconds": 3.903131678700447,
+            "median_rtf": 1.3974726764472947,
+            "median_realtime_factor": 0.7155774970443329,
+            "cpu_wall_ratio": 1.000462687515619,
+            "rss_mb": 365.858816,
+            "peak": 0.38566070795059204
+          },
+          {
+            "case": "en_short",
+            "lang": "en",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "steps": 8,
+            "runs": [
+              {
+                "seconds": 3.678720612078905,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.4202684064283064,
+                "realtime_factor": 0.7040922655702818,
+                "stages": {
+                  "duration_predictor": 0.004013519734144211,
+                  "text_encoder": 0.09634381718933582,
+                  "condition": 0.006177060306072235,
+                  "vector_estimator": 2.665278986096382,
+                  "vocoder": 0.9053101781755686
+                }
+              }
+            ],
+            "median_seconds": 3.678720612078905,
+            "median_rtf": 1.4202684064283064,
+            "median_realtime_factor": 0.7040922655702818,
+            "cpu_wall_ratio": 0.9993848257811492,
+            "rss_mb": 366.16192,
+            "peak": 0.42320749163627625
+          }
+        ],
+        "complete": true
+      }
+    },
+    {
+      "pair": 2,
+      "label": "candidate",
+      "returncode": 0,
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 377.233408,
+        "sampled_peak_process_tree_rss_mb": 377.233408,
+        "minimum_system_available_mb": 280.375296,
+        "elapsed_seconds": 21.148759327828884,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS, including optional tempo subprocess; shared pages may be counted twice."
+      },
+      "benchmark": {
+        "machine": "Linux-6.17.0-1011-oracle-x86_64-with-glibc2.39",
+        "processor": "x86_64",
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "threads": 1,
+        "affinity": 0,
+        "voice": "M1",
+        "speed": 2.0,
+        "cpu_time_scope": "process and waited-for child processes",
+        "audio_subtype": "FLOAT",
+        "variant": null,
+        "model": "models/round8-F-retime",
+        "low_memory": false,
+        "backend": "ORT CPU with exact AVX2 integer FFNs",
+        "cpu_count": 2,
+        "cpu_affinity": [
+          0
+        ],
+        "cpu_info": "processor\t: 0\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 1\nmodel name\t: AMD EPYC 7551 32-Core Processor\nstepping\t: 2\nmicrocode\t: 0x8001279\ncpu MHz\t\t: 1996.244\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 1\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat npt nrip_save vgif overflow_recov succor arch_capabilities\nbugs\t\t: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso div0 ibpb_no_ret spectre_v2_user\nbogomips\t: 3992.48\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: AuthenticAMD\ncpu family\t: 23\nmodel\t\t: 1\nmodel name\t: AMD EPYC 7551 32-Core Processor\nstepping\t: 2\nmicrocode\t: 0x8001279\ncpu MHz\t\t: 1996.244\ncache size\t: 512 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 1\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibpb vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr virt_ssbd arat npt nrip_save vgif overflow_recov succor arch_capabilities\nbugs\t\t: sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso div0 ibpb_no_ret spectre_v2_user\nbogomips\t: 3992.48\nTLB size\t: 1024 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\n",
+        "load_seconds": 5.2980275843292475,
+        "note": "Measured on this machine only. Apple M4 results do not predict Oracle Ampere A1 performance. Warm synthesis excludes model loading and file I/O. No CPU quota is emulated by this script.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "lang": "ko",
+            "text": "\uc548\ub155\ud558\uc138\uc694. \uc624\ub798\ub41c \ucef4\ud4e8\ud130\uc5d0\uc11c\ub3c4 \ube60\ub974\uac8c \uc74c\uc131\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4.",
+            "steps": 8,
+            "runs": [
+              {
+                "seconds": 3.7721039950847626,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3505596786844147,
+                "realtime_factor": 0.7404337740736521,
+                "stages": {
+                  "duration_predictor": 0.05269040912389755,
+                  "text_encoder": 0.047973690554499626,
+                  "condition": 0.0611826591193676,
+                  "vector_estimator": 2.607545856386423,
+                  "vocoder": 1.0011453870683908
+                }
+              }
+            ],
+            "median_seconds": 3.7721039950847626,
+            "median_rtf": 1.3505596786844147,
+            "median_realtime_factor": 0.7404337740736521,
+            "cpu_wall_ratio": 1.0003902013086479,
+            "rss_mb": 376.930304,
+            "peak": 0.38566070795059204
+          },
+          {
+            "case": "en_short",
+            "lang": "en",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "steps": 8,
+            "runs": [
+              {
+                "seconds": 3.514356603845954,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3568112884072503,
+                "realtime_factor": 0.7370221699540043,
+                "stages": {
+                  "duration_predictor": 0.0043017566204071045,
+                  "text_encoder": 0.10033158585429192,
+                  "condition": 0.006314000114798546,
+                  "vector_estimator": 2.495336577296257,
+                  "vocoder": 0.906499233096838
+                }
+              }
+            ],
+            "median_seconds": 3.514356603845954,
+            "median_rtf": 1.3568112884072503,
+            "median_realtime_factor": 0.7370221699540043,
+            "cpu_wall_ratio": 0.9998428500837534,
+            "rss_mb": 377.233408,
+            "peak": 0.42320749163627625
+          }
+        ],
+        "complete": true
+      }
+    }
+  ],
+  "summary": [
+    {
+      "case": "ko_short",
+      "reference_seconds": 3.9785820338875055,
+      "candidate_seconds": 3.7721039950847626,
+      "paired_speedups": [
+        1.2887487952088297,
+        1.0417920418888877,
+        1.034735967986678
+      ]
+    },
+    {
+      "case": "en_short",
+      "reference_seconds": 3.678720612078905,
+      "candidate_seconds": 3.507502503693104,
+      "paired_speedups": [
+        1.0403720329156665,
+        1.0627640578884876,
+        1.0467693028229061
+      ]
+    }
+  ],
+  "complete": true,
+  "wave_checks": [
+    {
+      "pair": 0,
+      "case": "ko_short",
+      "bitidentical": true
+    },
+    {
+      "pair": 0,
+      "case": "en_short",
+      "bitidentical": true
+    },
+    {
+      "pair": 1,
+      "case": "ko_short",
+      "bitidentical": true
+    },
+    {
+      "pair": 1,
+      "case": "en_short",
+      "bitidentical": true
+    },
+    {
+      "pair": 2,
+      "case": "ko_short",
+      "bitidentical": true
+    },
+    {
+      "pair": 2,
+      "case": "en_short",
+      "bitidentical": true
+    }
+  ],
+  "original_library_restored": true
+}

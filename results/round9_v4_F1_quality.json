@@ -1,0 +1,167 @@
+{
+  "model": "models/round8-F-retime",
+  "voice": "F1",
+  "steps": 8,
+  "threads": 1,
+  "note": "Development speaking-rate functionality. One synthesis per shape, no timing warm-up. Not a new independent ASR test or comparable warm RTF benchmark.",
+  "rows": [
+    {
+      "variant": "round8-F-retime-speed-1",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "F1",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 1.0,
+      "audio": "samples/round9_v4_F1_quality/ko_short_speed_1.wav",
+      "sample_rate": 44100,
+      "samples": 246192,
+      "metrics": {
+        "seconds": 5.971176207065582,
+        "audio_seconds": 5.582585034013605,
+        "speed": 1.0,
+        "generation_speed": 1.0,
+        "speed_strategy": "latent-retime",
+        "rtf": 1.0696077481461306,
+        "realtime_factor": 0.934922172855632,
+        "stages": {
+          "duration_predictor": 0.06103363260626793,
+          "text_encoder": 0.04563054069876671,
+          "condition": 0.00742095522582531,
+          "vector_estimator": 3.7995308190584183,
+          "vocoder": 1.9874546211212873
+        }
+      },
+      "finite": true
+    },
+    {
+      "variant": "round8-F-retime-speed-2",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "F1",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 2.0,
+      "audio": "samples/round9_v4_F1_quality/ko_short_speed_2.wav",
+      "sample_rate": 44100,
+      "samples": 123096,
+      "metrics": {
+        "seconds": 3.767905144020915,
+        "audio_seconds": 2.7912925170068026,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 1.3498782807834728,
+        "realtime_factor": 0.7408075337130378,
+        "stages": {
+          "duration_predictor": 0.004777148365974426,
+          "text_encoder": 0.08457135409116745,
+          "condition": 0.007005149498581886,
+          "vector_estimator": 2.673332156613469,
+          "vocoder": 0.9966906681656837
+        }
+      },
+      "finite": true
+    },
+    {
+      "variant": "round8-F-retime-speed-1",
+      "case": "en_short",
+      "language": "en",
+      "voice": "F1",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 1.0,
+      "audio": "samples/round9_v4_F1_quality/en_short_speed_1.wav",
+      "sample_rate": 44100,
+      "samples": 228324,
+      "metrics": {
+        "seconds": 5.217265285551548,
+        "audio_seconds": 5.177414965986395,
+        "speed": 1.0,
+        "generation_speed": 1.0,
+        "speed_strategy": "latent-retime",
+        "rtf": 1.0076969529827056,
+        "realtime_factor": 0.9923618375942062,
+        "stages": {
+          "duration_predictor": 0.00813119113445282,
+          "text_encoder": 0.08523682504892349,
+          "condition": 0.007304063066840172,
+          "vector_estimator": 3.3071352280676365,
+          "vocoder": 1.8078304789960384
+        }
+      },
+      "finite": true
+    },
+    {
+      "variant": "round8-F-retime-speed-2",
+      "case": "en_short",
+      "language": "en",
+      "voice": "F1",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 2.0,
+      "audio": "samples/round9_v4_F1_quality/en_short_speed_2.wav",
+      "sample_rate": 44100,
+      "samples": 114162,
+      "metrics": {
+        "seconds": 3.4329501278698444,
+        "audio_seconds": 2.5887074829931973,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 1.3261251610786438,
+        "realtime_factor": 0.7540766357125898,
+        "stages": {
+          "duration_predictor": 0.004418417811393738,
+          "text_encoder": 0.09588401205837727,
+          "condition": 0.006502015516161919,
+          "vector_estimator": 2.422868888825178,
+          "vocoder": 0.9018653016537428
+        }
+      },
+      "finite": true
+    }
+  ],
+  "duration_checks": [
+    {
+      "case": "ko_short",
+      "speed": 1.0,
+      "error_samples": 0.0,
+      "inverse_duration_within_3_samples": true
+    },
+    {
+      "case": "ko_short",
+      "speed": 2.0,
+      "error_samples": 0.0,
+      "inverse_duration_within_3_samples": true
+    },
+    {
+      "case": "en_short",
+      "speed": 1.0,
+      "error_samples": 0.0,
+      "inverse_duration_within_3_samples": true
+    },
+    {
+      "case": "en_short",
+      "speed": 2.0,
+      "error_samples": 0.0,
+      "inverse_duration_within_3_samples": true
+    }
+  ],
+  "invalid_speed_checks": [
+    {
+      "label": "below",
+      "rejected": true
+    },
+    {
+      "label": "above",
+      "rejected": true
+    },
+    {
+      "label": "nan",
+      "rejected": true
+    },
+    {
+      "label": "inf",
+      "rejected": true
+    }
+  ],
+  "complete": true,
+  "passed": true
+}

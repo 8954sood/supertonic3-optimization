@@ -41,6 +41,8 @@ Path(a.output + ".json").write_text(
                 (root / "exact_int8.c").read_bytes()
             ).hexdigest(),
             "kernel": "Exact U8 x S8[-64,64] -> S32; persistent packing, proven-safe int16 partial accumulation with int32 fallback",
+            "engine_version": 4,
+            "tile": "4 rows x16 columns, safe-K8; original8x8 fallback for other shapes/tails",
             "command": command,
         },
         indent=2,

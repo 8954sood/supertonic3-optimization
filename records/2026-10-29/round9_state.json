@@ -1,0 +1,100 @@
+{
+  "round": 9,
+  "date": "2026-10-29",
+  "status": "selected enginev4; cleanup complete",
+  "selected_engine": 4,
+  "baseline_engine": 2,
+  "model": "F1200, unchanged learned tensors and quantization",
+  "actual_steps": 8,
+  "threads": 1,
+  "fast_generation_speed": 1.35,
+  "fast_output_speed": 2.0,
+  "waveform_processing": false,
+  "engine_change": "M4N16 tiles with v2 safe-K8 widening; M8N8 exact fallback for other shapes",
+  "target": "Linux x86_64 AVX2, tested EPYC7551 one logical core /1GB; no ARM timing inference",
+  "fast_paired_measurements": [
+    {
+      "case": "ko_short",
+      "reference_seconds": 3.9785820338875055,
+      "candidate_seconds": 3.7721039950847626,
+      "median_paired_speedup": 1.0417920418888877,
+      "paired_speedups": [
+        1.2887487952088297,
+        1.0417920418888877,
+        1.034735967986678
+      ],
+      "candidate_rtf": 1.3505596786844147
+    },
+    {
+      "case": "en_short",
+      "reference_seconds": 3.678720612078905,
+      "candidate_seconds": 3.507502503693104,
+      "median_paired_speedup": 1.0467693028229061,
+      "paired_speedups": [
+        1.0403720329156665,
+        1.0627640578884876,
+        1.0467693028229061
+      ],
+      "candidate_rtf": 1.3541650798668068
+    }
+  ],
+  "waveform_identity_checks": 14,
+  "exact_abi_cases": 8,
+  "normal_warm_measurements": [
+    {
+      "case": "ko_short",
+      "median_seconds": 5.600363331846893,
+      "median_rtf": 1.002569681031927
+    },
+    {
+      "case": "en_short",
+      "median_seconds": 5.198824713937938,
+      "median_rtf": 1.0035726099340914
+    }
+  ],
+  "long_fast_warm_measurements": [
+    {
+      "case": "ko_long",
+      "median_seconds": 12.313378697261214,
+      "median_rtf": 1.3313751656170183
+    },
+    {
+      "case": "en_long",
+      "median_seconds": 11.719827951863408,
+      "median_rtf": 1.320191505004384
+    }
+  ],
+  "final_peak_sampled_process_tree_rss_mb": 394.579968,
+  "active_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+  "cleanup": {
+    "deleted_files": 640,
+    "logical_bytes_deleted": 37722414274,
+    "available_bytes_before": 152715264,
+    "available_bytes_after": 34155810816,
+    "kept_model_directories": [
+      "cfg-student-fp32-source",
+      "fast-fp32-cached",
+      "round5-original50-student",
+      "round6-F-exact-cached",
+      "round8-latent-retime-g135",
+      "supertonic-3",
+      "whisper-base"
+    ],
+    "kept_checkpoints": [
+      "distill/joint-original50-round5/best.pt",
+      "distill/partial-original-round5/initial.pt"
+    ]
+  },
+  "rejected": [
+    "K32/K64 safety grouping: mostly slower",
+    "Exact epilogue fusion: no consistent gain over tile alone"
+  ],
+  "limitations": [
+    "Shared-server timings vary; one normal/long batch is not a paired speed proof",
+    "RTF about1.00 at1x and about1.32..1.35 at2x does not establish realtime",
+    "Round8 expanded Korean pronunciation errors remain; no new ASR quality improvement is claimed",
+    "Legacy deleted model folders can retain manifests without runnable weights"
+  ],
+  "records": "records/2026-10-29/ROUND9_ENGINE.md",
+  "resume_priority": "Keep eight steps and original50 teacher policy; optimize runtime without changing accepted waveform. See round8 for separate remaining pronunciation work."
+}

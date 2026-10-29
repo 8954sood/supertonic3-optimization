@@ -1,0 +1,26 @@
+{
+  "note": "Selected v4 validation; model weights, generation1.35/output2, one thread and eight iterations fixed. No audio quality inference beyond bitidentity to prior selected candidate.",
+  "engine": 4,
+  "runs": [
+    {
+      "name": "round9_v2_F1_quality",
+      "returncode": 1,
+      "guard": {
+        "returncode": 1,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 360.996864,
+        "sampled_peak_process_tree_rss_mb": 360.996864,
+        "minimum_system_available_mb": 287.748096,
+        "elapsed_seconds": 6.958928257226944,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS, including optional tempo subprocess; shared pages may be counted twice."
+      },
+      "report": null
+    }
+  ],
+  "wave_checks": [],
+  "complete": false,
+  "selected_active_library": "restored-v2",
+  "active_library_sha256": "7beea5a751d8572338417934201b9e21d775fa124601e5bd2c11926c494c3dc1"
+}

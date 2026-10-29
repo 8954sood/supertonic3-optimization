@@ -1,0 +1,3223 @@
+{
+  "scope": "Local workspace obsolete model binaries and intermediate checkpoints only; manifests, source, results, audio and datasets retained.",
+  "kept_model_directories": [
+    "cfg-student-fp32-source",
+    "fast-fp32-cached",
+    "round5-original50-student",
+    "round6-F-exact-cached",
+    "round8-latent-retime-g135",
+    "supertonic-3",
+    "whisper-base"
+  ],
+  "kept_checkpoints": [
+    "distill/joint-original50-round5/best.pt",
+    "distill/partial-original-round5/initial.pt"
+  ],
+  "available_bytes_before": 152715264,
+  "files": [
+    {
+      "path": ".private/hf-staging/model/models/cfg-mixed-v1-selected/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": ".private/hf-staging/model/models/cfg-mixed-v1-selected/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": ".private/hf-staging/model/models/cfg-mixed-v1-selected/onnx/vector_estimator.onnx",
+      "bytes": 52077304,
+      "allocated_bytes": 52080640
+    },
+    {
+      "path": ".private/hf-staging/model/models/cfg-mixed-v1-selected/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": ".private/hf-staging/model/models/cfg1024-v1-final/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": ".private/hf-staging/model/models/cfg1024-v1-final/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": ".private/hf-staging/model/models/cfg1024-v1-final/onnx/vector_estimator.onnx",
+      "bytes": 36210424,
+      "allocated_bytes": 36212736
+    },
+    {
+      "path": ".private/hf-staging/model/models/cfg1024-v1-final/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": ".private/hf-staging/model/models/cfg1024-v2/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": ".private/hf-staging/model/models/cfg1024-v2/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": ".private/hf-staging/model/models/cfg1024-v2/onnx/vector_estimator.onnx",
+      "bytes": 36210424,
+      "allocated_bytes": 36212736
+    },
+    {
+      "path": ".private/hf-staging/model/models/cfg1024-v2/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": ".private/hf-staging/model/models/mixed-v1-selected/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": ".private/hf-staging/model/models/mixed-v1-selected/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": ".private/hf-staging/model/models/mixed-v1-selected/onnx/vector_estimator.onnx",
+      "bytes": 52188665,
+      "allocated_bytes": 52191232
+    },
+    {
+      "path": ".private/hf-staging/model/models/mixed-v1-selected/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": ".private/hf-staging/model/reproduction/checkpoints/cfg-mixed-v1-step-00600.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": ".private/hf-staging/model/reproduction/checkpoints/mixed-v1-initial.pt",
+      "bytes": 180629471,
+      "allocated_bytes": 180629504
+    },
+    {
+      "path": ".private/hf-staging/model/reproduction/round4/cfg1024-initial.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": ".private/hf-staging/model/reproduction/round4/cfg1024-step-02000.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": ".private/public-download-check/model/models/cfg-mixed-v1-selected/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": ".private/public-download-check/model/models/cfg-mixed-v1-selected/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": ".private/public-download-check/model/models/cfg-mixed-v1-selected/onnx/vector_estimator.onnx",
+      "bytes": 52077304,
+      "allocated_bytes": 52080640
+    },
+    {
+      "path": ".private/public-download-check/model/models/cfg-mixed-v1-selected/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": ".private/round4-server-candidates.tar.gz",
+      "bytes": 263328803,
+      "allocated_bytes": 263331840
+    },
+    {
+      "path": ".private/round6-public-check/model/models/round5-original50-student/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": ".private/round6-public-check/model/models/round5-original50-student/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": ".private/round6-public-check/model/models/round5-original50-student/onnx/vector_estimator.onnx",
+      "bytes": 48903928,
+      "allocated_bytes": 48906240
+    },
+    {
+      "path": ".private/round6-public-check/model/models/round5-original50-student/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": ".private/round6-public-check/model/reproduction/round5/original50-initial.pt",
+      "bytes": 169437011,
+      "allocated_bytes": 169439232
+    },
+    {
+      "path": ".private/round6-public-check/model/reproduction/round5/original50-step-01200.pt",
+      "bytes": 169415391,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": ".private/round6-public-reexport/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": ".private/round6-public-reexport/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": ".private/round6-public-reexport/onnx/vector_estimator.onnx",
+      "bytes": 48903928,
+      "allocated_bytes": 48906240
+    },
+    {
+      "path": ".private/round6-public-reexport/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/initial.pt",
+      "bytes": 179934419,
+      "allocated_bytes": 179937280
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_06.pt",
+      "bytes": 5252967,
+      "allocated_bytes": 5255168
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_07.pt",
+      "bytes": 5252967,
+      "allocated_bytes": 5255168
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_08.pt",
+      "bytes": 7352167,
+      "allocated_bytes": 7352320
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_09.pt",
+      "bytes": 5252967,
+      "allocated_bytes": 5255168
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_10.pt",
+      "bytes": 5252967,
+      "allocated_bytes": 5255168
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_11.pt",
+      "bytes": 5252967,
+      "allocated_bytes": 5255168
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_12.pt",
+      "bytes": 7352167,
+      "allocated_bytes": 7352320
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_13.pt",
+      "bytes": 7352167,
+      "allocated_bytes": 7352320
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_14.pt",
+      "bytes": 7352167,
+      "allocated_bytes": 7352320
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_15.pt",
+      "bytes": 5252967,
+      "allocated_bytes": 5255168
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_16.pt",
+      "bytes": 5252967,
+      "allocated_bytes": 5255168
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_17.pt",
+      "bytes": 7352167,
+      "allocated_bytes": 7352320
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_18.pt",
+      "bytes": 7352167,
+      "allocated_bytes": 7352320
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_19.pt",
+      "bytes": 7352167,
+      "allocated_bytes": 7352320
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_20.pt",
+      "bytes": 7352167,
+      "allocated_bytes": 7352320
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_21.pt",
+      "bytes": 7352167,
+      "allocated_bytes": 7352320
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_22.pt",
+      "bytes": 5252967,
+      "allocated_bytes": 5255168
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_23.pt",
+      "bytes": 5252967,
+      "allocated_bytes": 5255168
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_24.pt",
+      "bytes": 5252967,
+      "allocated_bytes": 5255168
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_25.pt",
+      "bytes": 5252967,
+      "allocated_bytes": 5255168
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_26.pt",
+      "bytes": 7352167,
+      "allocated_bytes": 7352320
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5/layer_27.pt",
+      "bytes": 5252967,
+      "allocated_bytes": 5255168
+    },
+    {
+      "path": "distill/balanced-pruned-medium-round5/initial.pt",
+      "bytes": 160517075,
+      "allocated_bytes": 160518144
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_06.pt",
+      "bytes": 4728167,
+      "allocated_bytes": 4730880
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_07.pt",
+      "bytes": 4728167,
+      "allocated_bytes": 4730880
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_08.pt",
+      "bytes": 6302567,
+      "allocated_bytes": 6303744
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_09.pt",
+      "bytes": 4728167,
+      "allocated_bytes": 4730880
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_10.pt",
+      "bytes": 4728167,
+      "allocated_bytes": 4730880
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_11.pt",
+      "bytes": 4728167,
+      "allocated_bytes": 4730880
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_12.pt",
+      "bytes": 6302567,
+      "allocated_bytes": 6303744
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_13.pt",
+      "bytes": 6302567,
+      "allocated_bytes": 6303744
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_14.pt",
+      "bytes": 6302567,
+      "allocated_bytes": 6303744
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_15.pt",
+      "bytes": 4728167,
+      "allocated_bytes": 4730880
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_16.pt",
+      "bytes": 4728167,
+      "allocated_bytes": 4730880
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_17.pt",
+      "bytes": 6302567,
+      "allocated_bytes": 6303744
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_18.pt",
+      "bytes": 6302567,
+      "allocated_bytes": 6303744
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_19.pt",
+      "bytes": 6302567,
+      "allocated_bytes": 6303744
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_20.pt",
+      "bytes": 6302567,
+      "allocated_bytes": 6303744
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_21.pt",
+      "bytes": 6302567,
+      "allocated_bytes": 6303744
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_22.pt",
+      "bytes": 4728167,
+      "allocated_bytes": 4730880
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_23.pt",
+      "bytes": 4728167,
+      "allocated_bytes": 4730880
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_24.pt",
+      "bytes": 4728167,
+      "allocated_bytes": 4730880
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_25.pt",
+      "bytes": 4728167,
+      "allocated_bytes": 4730880
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_26.pt",
+      "bytes": 6302567,
+      "allocated_bytes": 6303744
+    },
+    {
+      "path": "distill/balanced-pruned-round5/layer_27.pt",
+      "bytes": 4728167,
+      "allocated_bytes": 4730880
+    },
+    {
+      "path": "distill/decoder-joint1024-v1/best.pt",
+      "bytes": 59043735,
+      "allocated_bytes": 59043840
+    },
+    {
+      "path": "distill/decoder-joint1024-v1/best_step_00000.pt",
+      "bytes": 59043735,
+      "allocated_bytes": 59043840
+    },
+    {
+      "path": "distill/decoder-joint1024-v1/best_step_00100.pt",
+      "bytes": 59043735,
+      "allocated_bytes": 59043840
+    },
+    {
+      "path": "distill/decoder-joint1024-v1/best_step_00200.pt",
+      "bytes": 59043735,
+      "allocated_bytes": 59043840
+    },
+    {
+      "path": "distill/decoder-joint1024-v1/best_step_00300.pt",
+      "bytes": 59043735,
+      "allocated_bytes": 59043840
+    },
+    {
+      "path": "distill/decoder-joint1024-v1/best_step_00400.pt",
+      "bytes": 59043735,
+      "allocated_bytes": 59043840
+    },
+    {
+      "path": "distill/decoder-joint1024-v1/best_step_00500.pt",
+      "bytes": 59043735,
+      "allocated_bytes": 59043840
+    },
+    {
+      "path": "distill/decoder-joint1024-v1/best_step_00600.pt",
+      "bytes": 59043735,
+      "allocated_bytes": 59043840
+    },
+    {
+      "path": "distill/decoder-joint1024-v1/best_step_00800.pt",
+      "bytes": 59043735,
+      "allocated_bytes": 59043840
+    },
+    {
+      "path": "distill/decoder-joint1024-v1/last.pt",
+      "bytes": 59043735,
+      "allocated_bytes": 59043840
+    },
+    {
+      "path": "distill/decoder1024-v1/layer_00.pt",
+      "bytes": 16810689,
+      "allocated_bytes": 16814080
+    },
+    {
+      "path": "distill/decoder1024-v1/layer_01.pt",
+      "bytes": 16810689,
+      "allocated_bytes": 16814080
+    },
+    {
+      "path": "distill/decoder1024-v1/layer_02.pt",
+      "bytes": 16810689,
+      "allocated_bytes": 16814080
+    },
+    {
+      "path": "distill/decoder1024-v1/layer_03.pt",
+      "bytes": 16810689,
+      "allocated_bytes": 16814080
+    },
+    {
+      "path": "distill/decoder1024-v1/layer_04.pt",
+      "bytes": 16810689,
+      "allocated_bytes": 16814080
+    },
+    {
+      "path": "distill/decoder1024-v1/layer_05.pt",
+      "bytes": 16810689,
+      "allocated_bytes": 16814080
+    },
+    {
+      "path": "distill/decoder1024-v1/layer_06.pt",
+      "bytes": 16810689,
+      "allocated_bytes": 16814080
+    },
+    {
+      "path": "distill/decoder1024-v1/layer_07.pt",
+      "bytes": 16810689,
+      "allocated_bytes": 16814080
+    },
+    {
+      "path": "distill/decoder1024-v1/layer_08.pt",
+      "bytes": 16810689,
+      "allocated_bytes": 16814080
+    },
+    {
+      "path": "distill/decoder1024-v1/layer_09.pt",
+      "bytes": 16810689,
+      "allocated_bytes": 16814080
+    },
+    {
+      "path": "distill/joint-balanced-round5/best.pt",
+      "bytes": 160493791,
+      "allocated_bytes": 160497664
+    },
+    {
+      "path": "distill/joint-balanced-round5/best_step_00000.pt",
+      "bytes": 160493791,
+      "allocated_bytes": 160497664
+    },
+    {
+      "path": "distill/joint-balanced-round5/best_step_00100.pt",
+      "bytes": 160493791,
+      "allocated_bytes": 160497664
+    },
+    {
+      "path": "distill/joint-balanced-round5/best_step_00200.pt",
+      "bytes": 160493791,
+      "allocated_bytes": 160497664
+    },
+    {
+      "path": "distill/joint-balanced-round5/best_step_00300.pt",
+      "bytes": 160493791,
+      "allocated_bytes": 160497664
+    },
+    {
+      "path": "distill/joint-balanced-round5/best_step_00400.pt",
+      "bytes": 160493791,
+      "allocated_bytes": 160497664
+    },
+    {
+      "path": "distill/joint-balanced-round5/best_step_00500.pt",
+      "bytes": 160493791,
+      "allocated_bytes": 160497664
+    },
+    {
+      "path": "distill/joint-balanced-round5/best_step_00700.pt",
+      "bytes": 160493791,
+      "allocated_bytes": 160497664
+    },
+    {
+      "path": "distill/joint-balanced-round5/best_step_00800.pt",
+      "bytes": 160493791,
+      "allocated_bytes": 160497664
+    },
+    {
+      "path": "distill/joint-balanced-round5/last.pt",
+      "bytes": 160493791,
+      "allocated_bytes": 160497664
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/best.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/best_step_00000.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/best_step_00200.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/best_step_00400.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/best_step_00600.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/best_step_00800.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/best_step_01000.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/best_step_01200.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/best_step_01400.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/best_step_01600.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/best_step_01800.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/best_step_02000.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/best_step_02200.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/best_step_02400.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1/last.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg-mixed-v1/best.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/joint-cfg-mixed-v1/best_step_00000.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/joint-cfg-mixed-v1/best_step_00200.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/joint-cfg-mixed-v1/best_step_00400.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/joint-cfg-mixed-v1/best_step_00600.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/joint-cfg-mixed-v1/best_step_00800.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/joint-cfg-mixed-v1/best_step_01200.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/joint-cfg-mixed-v1/best_step_01600.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/joint-cfg-mixed-v1/best_step_01800.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/joint-cfg-mixed-v1/best_step_02000.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/joint-cfg-mixed-v1/best_step_02400.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/joint-cfg-mixed-v1/last.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/joint-cfg1024-round4/best.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg1024-round4/best_step_00000.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg1024-round4/best_step_00200.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg1024-round4/best_step_00400.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg1024-round4/best_step_00600.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg1024-round4/best_step_00800.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg1024-round4/best_step_01000.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg1024-round4/best_step_01200.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg1024-round4/best_step_01600.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg1024-round4/best_step_01800.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg1024-round4/best_step_02000.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-cfg1024-round4/last.pt",
+      "bytes": 119034527,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/joint-mixed-v1/best.pt",
+      "bytes": 180621693,
+      "allocated_bytes": 180625408
+    },
+    {
+      "path": "distill/joint-mixed-v1/last.pt",
+      "bytes": 180621693,
+      "allocated_bytes": 180625408
+    },
+    {
+      "path": "distill/joint-original50-round5/best_step_00000.pt",
+      "bytes": 169415391,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/joint-original50-round5/best_step_00200.pt",
+      "bytes": 169415391,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/joint-original50-round5/best_step_00400.pt",
+      "bytes": 169415391,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/joint-original50-round5/best_step_00600.pt",
+      "bytes": 169415391,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/joint-original50-round5/best_step_00800.pt",
+      "bytes": 169415391,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/joint-original50-round5/best_step_01000.pt",
+      "bytes": 169415391,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/joint-original50-round5/best_step_01200.pt",
+      "bytes": 169415391,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/joint-original50-round5/last.pt",
+      "bytes": 169415391,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/joint1024-v1/best.pt",
+      "bytes": 117645629,
+      "allocated_bytes": 117649408
+    },
+    {
+      "path": "distill/joint1024-v1/last.pt",
+      "bytes": 117645629,
+      "allocated_bytes": 117649408
+    },
+    {
+      "path": "distill/joint1536-v1/best.pt",
+      "bytes": 176423229,
+      "allocated_bytes": 176427008
+    },
+    {
+      "path": "distill/joint1536-v1/last.pt",
+      "bytes": 176423229,
+      "allocated_bytes": 176427008
+    },
+    {
+      "path": "distill/latent-rate-head-round8-audio-v2/best.pt",
+      "bytes": 1667817,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-audio-v2/last.pt",
+      "bytes": 1667817,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-audio-v2/step_01000.pt",
+      "bytes": 1669685,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-audio-v2/step_02000.pt",
+      "bytes": 1669685,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-audio-v2/step_03000.pt",
+      "bytes": 1669749,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-main/best.pt",
+      "bytes": 1667689,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-main/last.pt",
+      "bytes": 1667689,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-main/step_01000.pt",
+      "bytes": 1669557,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-main/step_02000.pt",
+      "bytes": 1669621,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-main/step_03000.pt",
+      "bytes": 1669685,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-pilot/best.pt",
+      "bytes": 1667689,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-pilot/last.pt",
+      "bytes": 1667689,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-pilot/step_00500.pt",
+      "bytes": 1669557,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-pilot/step_01000.pt",
+      "bytes": 1669621,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-pilot/step_01500.pt",
+      "bytes": 1669685,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/latent-rate-head-round8-zero/control.pt",
+      "bytes": 1669007,
+      "allocated_bytes": 1671168
+    },
+    {
+      "path": "distill/mixed-v1/initial.pt",
+      "bytes": 180629471,
+      "allocated_bytes": 180629504
+    },
+    {
+      "path": "distill/native-speed-round8-attention-v1/best.pt",
+      "bytes": 169415711,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/native-speed-round8-attention-v1/last.pt",
+      "bytes": 169415711,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/native-speed-round8-attention-v1/step_00080.pt",
+      "bytes": 169437447,
+      "allocated_bytes": 169439232
+    },
+    {
+      "path": "distill/native-speed-round8-attention-v1/step_00160.pt",
+      "bytes": 169437447,
+      "allocated_bytes": 169439232
+    },
+    {
+      "path": "distill/native-speed-round8-attention-v1/step_00240.pt",
+      "bytes": 169437447,
+      "allocated_bytes": 169439232
+    },
+    {
+      "path": "distill/native-speed-round8-audio-filtered-v1/best.pt",
+      "bytes": 169415519,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/native-speed-round8-audio-filtered-v1/last.pt",
+      "bytes": 169415519,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/native-speed-round8-audio-filtered-v1/step_00080.pt",
+      "bytes": 169437319,
+      "allocated_bytes": 169439232
+    },
+    {
+      "path": "distill/native-speed-round8-audio-filtered-v1/step_00160.pt",
+      "bytes": 169437319,
+      "allocated_bytes": 169439232
+    },
+    {
+      "path": "distill/native-speed-round8-audio-filtered-v1/step_00240.pt",
+      "bytes": 169437319,
+      "allocated_bytes": 169439232
+    },
+    {
+      "path": "distill/native-speed-round8-audio-filtered-v1/step_00320.pt",
+      "bytes": 169437319,
+      "allocated_bytes": 169439232
+    },
+    {
+      "path": "distill/native-speed-round8-audio-v1/best.pt",
+      "bytes": 169415455,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/original50-round5-listening-preview/checkpoint.pt",
+      "bytes": 169415391,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/pilot1024/layer_00.pt",
+      "bytes": 21011769,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/rate-flow-round8-pilot/best.pt",
+      "bytes": 169416666,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/rate-flow-round8-pilot/last.pt",
+      "bytes": 169416666,
+      "allocated_bytes": 169418752
+    },
+    {
+      "path": "distill/rate-flow-round8-pilot/step_00250.pt",
+      "bytes": 169438472,
+      "allocated_bytes": 169439232
+    },
+    {
+      "path": "distill/rate-flow-round8-pilot/step_00500.pt",
+      "bytes": 169438472,
+      "allocated_bytes": 169439232
+    },
+    {
+      "path": "distill/rollout-cfg-mixed-v1/best.pt",
+      "bytes": 182010719,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/rollout-cfg-mixed-v1/best_step_00000.pt",
+      "bytes": 182010719,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/rollout-cfg-mixed-v1/best_step_00025.pt",
+      "bytes": 182010719,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/rollout-cfg-mixed-v1/best_step_00050.pt",
+      "bytes": 182010719,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/rollout-cfg-mixed-v1/best_step_00075.pt",
+      "bytes": 182010719,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/rollout-cfg-mixed-v1/best_step_00100.pt",
+      "bytes": 182010719,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/rollout-cfg-mixed-v1/best_step_00125.pt",
+      "bytes": 182010719,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/rollout-cfg-mixed-v1/best_step_00200.pt",
+      "bytes": 182010719,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/rollout-cfg-mixed-v1/last.pt",
+      "bytes": 182010719,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/rollout-cfg1024-round5/best.pt",
+      "bytes": 119034847,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/rollout-cfg1024-round5/best_step_00000.pt",
+      "bytes": 119034847,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/rollout-cfg1024-round5/best_step_00025.pt",
+      "bytes": 119034847,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/rollout-cfg1024-round5/best_step_00075.pt",
+      "bytes": 119034847,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/rollout-cfg1024-round5/best_step_00100.pt",
+      "bytes": 119034847,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/rollout-cfg1024-round5/last.pt",
+      "bytes": 119034847,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/rollout-cfg1024-round5-audio/best.pt",
+      "bytes": 119035039,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/rollout-cfg1024-round5-audio/best_step_00000.pt",
+      "bytes": 119035039,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/rollout-cfg1024-round5-audio/best_step_00150.pt",
+      "bytes": 119035039,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/rollout-cfg1024-round5-audio/last.pt",
+      "bytes": 119035039,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/rollout1024-v1/best.pt",
+      "bytes": 119034591,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/rollout1024-v1/last.pt",
+      "bytes": 119034591,
+      "allocated_bytes": 119037952
+    },
+    {
+      "path": "distill/rollout1536-v1/best.pt",
+      "bytes": 177812191,
+      "allocated_bytes": 177815552
+    },
+    {
+      "path": "distill/rollout1536-v1/last.pt",
+      "bytes": 177812191,
+      "allocated_bytes": 177815552
+    },
+    {
+      "path": "distill/rollout1536-v2/best.pt",
+      "bytes": 177812191,
+      "allocated_bytes": 177815552
+    },
+    {
+      "path": "distill/rollout1536-v2/last.pt",
+      "bytes": 177812191,
+      "allocated_bytes": 177815552
+    },
+    {
+      "path": "distill/round4-public-repro-smoke/best.pt",
+      "bytes": 182010591,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/round4-public-repro-smoke/best_step_00000.pt",
+      "bytes": 182010591,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/round4-public-repro-smoke/best_step_00001.pt",
+      "bytes": 182010591,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/round4-public-repro-smoke/last.pt",
+      "bytes": 182010591,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/round4-relocation-smoke/best.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/round4-relocation-smoke/best_step_00000.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/round4-relocation-smoke/best_step_00001.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/round4-relocation-smoke/last.pt",
+      "bytes": 182010527,
+      "allocated_bytes": 182013952
+    },
+    {
+      "path": "distill/student1024/layer_00.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_01.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_02.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_03.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_04.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_05.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_06.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_07.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_08.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_09.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_10.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_11.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_12.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_13.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_14.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_15.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_16.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_17.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_18.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_19.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_20.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_21.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_22.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_23.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_24.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_25.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_26.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1024/layer_27.pt",
+      "bytes": 21012473,
+      "allocated_bytes": 21012480
+    },
+    {
+      "path": "distill/student1536/layer_00.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_01.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_02.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_03.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_04.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_05.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_06.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_07.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_08.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_09.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_10.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_11.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_12.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_13.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_14.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_15.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_16.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_17.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_18.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_19.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_20.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_21.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_22.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_23.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_24.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_25.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_26.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student1536/layer_27.pt",
+      "bytes": 31508473,
+      "allocated_bytes": 31510528
+    },
+    {
+      "path": "distill/student256/layer_00.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_01.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_02.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_03.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_04.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_05.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_06.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_07.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_08.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_09.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_10.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_11.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_12.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_13.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_14.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_15.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_16.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_17.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_18.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_19.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_20.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_21.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_22.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_23.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_24.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_25.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_26.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student256/layer_27.pt",
+      "bytes": 5269433,
+      "allocated_bytes": 5271552
+    },
+    {
+      "path": "distill/student512/layer_00.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_01.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_02.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_03.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_04.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_05.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_06.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_07.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_08.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_09.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_10.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_11.pt",
+      "bytes": 10516985,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_12.pt",
+      "bytes": 10516985,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_13.pt",
+      "bytes": 10516985,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_14.pt",
+      "bytes": 10516985,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_15.pt",
+      "bytes": 10516985,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_16.pt",
+      "bytes": 10516985,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_17.pt",
+      "bytes": 10516985,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_18.pt",
+      "bytes": 10516985,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_19.pt",
+      "bytes": 10516985,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_20.pt",
+      "bytes": 10516985,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_21.pt",
+      "bytes": 10516985,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_22.pt",
+      "bytes": 10516985,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_23.pt",
+      "bytes": 10516985,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_24.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_25.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_26.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "distill/student512/layer_27.pt",
+      "bytes": 10516921,
+      "allocated_bytes": 10518528
+    },
+    {
+      "path": "models/cfg-mixed-rollout-v1/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/cfg-mixed-rollout-v1/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/cfg-mixed-rollout-v1/onnx/vector_estimator.onnx",
+      "bytes": 52077304,
+      "allocated_bytes": 52080640
+    },
+    {
+      "path": "models/cfg-mixed-rollout-v1/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/cfg-mixed-v1-final/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/cfg-mixed-v1-final/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/cfg-mixed-v1-final/onnx/vector_estimator.onnx",
+      "bytes": 52077304,
+      "allocated_bytes": 52080640
+    },
+    {
+      "path": "models/cfg-mixed-v1-final/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/cfg-mixed-v1-preview/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/cfg-mixed-v1-preview/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/cfg-mixed-v1-preview/onnx/vector_estimator.onnx",
+      "bytes": 52077304,
+      "allocated_bytes": 52080640
+    },
+    {
+      "path": "models/cfg-mixed-v1-preview/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/cfg-mixed-v1-selected/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/cfg-mixed-v1-selected/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/cfg-mixed-v1-selected/onnx/vector_estimator.onnx",
+      "bytes": 52077304,
+      "allocated_bytes": 52080640
+    },
+    {
+      "path": "models/cfg-mixed-v1-selected/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/cfg1024-v1-final/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/cfg1024-v1-final/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/cfg1024-v1-final/onnx/vector_estimator.onnx",
+      "bytes": 36210424,
+      "allocated_bytes": 36212736
+    },
+    {
+      "path": "models/cfg1024-v1-final/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/cfg1024-v1-preview/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/cfg1024-v1-preview/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/cfg1024-v1-preview/onnx/vector_estimator.onnx",
+      "bytes": 36210424,
+      "allocated_bytes": 36212736
+    },
+    {
+      "path": "models/cfg1024-v1-preview/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/denoiser-int8/vector_estimator.onnx",
+      "bytes": 65970153,
+      "allocated_bytes": 65970176
+    },
+    {
+      "path": "models/fast-avx2-int8/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/fast-avx2-int8/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/fast-avx2-int8/onnx/vector_estimator.onnx",
+      "bytes": 65970153,
+      "allocated_bytes": 65970176
+    },
+    {
+      "path": "models/fast-avx2-int8/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/fast-denoiser-int8/onnx/duration_predictor.onnx",
+      "bytes": 3700147,
+      "allocated_bytes": 3702784
+    },
+    {
+      "path": "models/fast-denoiser-int8/onnx/text_encoder.onnx",
+      "bytes": 36416150,
+      "allocated_bytes": 36417536
+    },
+    {
+      "path": "models/fast-denoiser-int8/onnx/vector_estimator.onnx",
+      "bytes": 65970153,
+      "allocated_bytes": 65970176
+    },
+    {
+      "path": "models/fast-denoiser-int8/onnx/vocoder.onnx",
+      "bytes": 101424195,
+      "allocated_bytes": 101425152
+    },
+    {
+      "path": "models/fast-full-int8/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/fast-full-int8/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/fast-full-int8/onnx/vector_estimator.onnx",
+      "bytes": 65970153,
+      "allocated_bytes": 65970176
+    },
+    {
+      "path": "models/fast-full-int8/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/fast-hybrid-static/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/fast-hybrid-static/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/fast-hybrid-static/onnx/vector_estimator.onnx",
+      "bytes": 66825138,
+      "allocated_bytes": 66826240
+    },
+    {
+      "path": "models/fast-hybrid-static/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/int8/duration_predictor.onnx",
+      "bytes": 3716519,
+      "allocated_bytes": 3719168
+    },
+    {
+      "path": "models/int8/text_encoder.onnx",
+      "bytes": 35016611,
+      "allocated_bytes": 35016704
+    },
+    {
+      "path": "models/int8/vector_estimator.onnx",
+      "bytes": 242030307,
+      "allocated_bytes": 242032640
+    },
+    {
+      "path": "models/int8/vocoder.onnx",
+      "bytes": 101450209,
+      "allocated_bytes": 101453824
+    },
+    {
+      "path": "models/joint1024-v1-int8/onnx/duration_predictor.onnx",
+      "bytes": 3700147,
+      "allocated_bytes": 3702784
+    },
+    {
+      "path": "models/joint1024-v1-int8/onnx/text_encoder.onnx",
+      "bytes": 36416150,
+      "allocated_bytes": 36417536
+    },
+    {
+      "path": "models/joint1024-v1-int8/onnx/vector_estimator.onnx",
+      "bytes": 36321785,
+      "allocated_bytes": 36323328
+    },
+    {
+      "path": "models/joint1024-v1-int8/onnx/vocoder.onnx",
+      "bytes": 101424195,
+      "allocated_bytes": 101425152
+    },
+    {
+      "path": "models/joint1536-v1-int8/onnx/duration_predictor.onnx",
+      "bytes": 3700147,
+      "allocated_bytes": 3702784
+    },
+    {
+      "path": "models/joint1536-v1-int8/onnx/text_encoder.onnx",
+      "bytes": 36416150,
+      "allocated_bytes": 36417536
+    },
+    {
+      "path": "models/joint1536-v1-int8/onnx/vector_estimator.onnx",
+      "bytes": 51130873,
+      "allocated_bytes": 51134464
+    },
+    {
+      "path": "models/joint1536-v1-int8/onnx/vocoder.onnx",
+      "bytes": 101424195,
+      "allocated_bytes": 101425152
+    },
+    {
+      "path": "models/mixed-v1-cached/onnx/condition.onnx",
+      "bytes": 1488252,
+      "allocated_bytes": 1490944
+    },
+    {
+      "path": "models/mixed-v1-cached/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/mixed-v1-cached/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/mixed-v1-cached/onnx/vector_estimator.onnx",
+      "bytes": 50572289,
+      "allocated_bytes": 50573312
+    },
+    {
+      "path": "models/mixed-v1-cached/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/mixed-v1-fast/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/mixed-v1-fast/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/mixed-v1-fast/onnx/vector_estimator.onnx",
+      "bytes": 52188665,
+      "allocated_bytes": 52191232
+    },
+    {
+      "path": "models/mixed-v1-fast/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/mixed-v1-preview-int8/onnx/duration_predictor.onnx",
+      "bytes": 3700147,
+      "allocated_bytes": 3702784
+    },
+    {
+      "path": "models/mixed-v1-preview-int8/onnx/text_encoder.onnx",
+      "bytes": 36416150,
+      "allocated_bytes": 36417536
+    },
+    {
+      "path": "models/mixed-v1-preview-int8/onnx/vector_estimator.onnx",
+      "bytes": 52188665,
+      "allocated_bytes": 52191232
+    },
+    {
+      "path": "models/mixed-v1-preview-int8/onnx/vocoder.onnx",
+      "bytes": 101424195,
+      "allocated_bytes": 101425152
+    },
+    {
+      "path": "models/mixed-v1-quality/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/mixed-v1-quality/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/mixed-v1-quality/onnx/vector_estimator.onnx",
+      "bytes": 52188665,
+      "allocated_bytes": 52191232
+    },
+    {
+      "path": "models/mixed-v1-quality/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/mixed-v1-selected/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/mixed-v1-selected/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/mixed-v1-selected/onnx/vector_estimator.onnx",
+      "bytes": 52188665,
+      "allocated_bytes": 52191232
+    },
+    {
+      "path": "models/mixed-v1-selected/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/pointwise-fp32/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/pointwise-fp32/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/pointwise-fp32/vector_estimator.onnx",
+      "bytes": 256577357,
+      "allocated_bytes": 256577536
+    },
+    {
+      "path": "models/pointwise-fp32/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/pointwise-int8/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/pointwise-int8/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/pointwise-int8/vector_estimator.onnx",
+      "bytes": 65970153,
+      "allocated_bytes": 65970176
+    },
+    {
+      "path": "models/pointwise-int8/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/rollout1024-v1-int8/onnx/duration_predictor.onnx",
+      "bytes": 3700147,
+      "allocated_bytes": 3702784
+    },
+    {
+      "path": "models/rollout1024-v1-int8/onnx/text_encoder.onnx",
+      "bytes": 36416150,
+      "allocated_bytes": 36417536
+    },
+    {
+      "path": "models/rollout1024-v1-int8/onnx/vector_estimator.onnx",
+      "bytes": 36321785,
+      "allocated_bytes": 36323328
+    },
+    {
+      "path": "models/rollout1024-v1-int8/onnx/vocoder.onnx",
+      "bytes": 101424195,
+      "allocated_bytes": 101425152
+    },
+    {
+      "path": "models/rollout1536-v1-int8/onnx/duration_predictor.onnx",
+      "bytes": 3700147,
+      "allocated_bytes": 3702784
+    },
+    {
+      "path": "models/rollout1536-v1-int8/onnx/text_encoder.onnx",
+      "bytes": 36416150,
+      "allocated_bytes": 36417536
+    },
+    {
+      "path": "models/rollout1536-v1-int8/onnx/vector_estimator.onnx",
+      "bytes": 51130873,
+      "allocated_bytes": 51134464
+    },
+    {
+      "path": "models/rollout1536-v1-int8/onnx/vocoder.onnx",
+      "bytes": 101424195,
+      "allocated_bytes": 101425152
+    },
+    {
+      "path": "models/round4-cfg-cached/onnx/condition.onnx",
+      "bytes": 1432283,
+      "allocated_bytes": 1433600
+    },
+    {
+      "path": "models/round4-cfg-cached/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round4-cfg-cached/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round4-cfg-cached/onnx/vector_estimator.onnx",
+      "bytes": 50518085,
+      "allocated_bytes": 50520064
+    },
+    {
+      "path": "models/round4-cfg-cached/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round4-cfg1024-expanded/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round4-cfg1024-expanded/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round4-cfg1024-expanded/onnx/vector_estimator.onnx",
+      "bytes": 36210424,
+      "allocated_bytes": 36212736
+    },
+    {
+      "path": "models/round4-cfg1024-expanded/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round4-cfg1024-preview/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round4-cfg1024-preview/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round4-cfg1024-preview/onnx/vector_estimator.onnx",
+      "bytes": 36210424,
+      "allocated_bytes": 36212736
+    },
+    {
+      "path": "models/round4-cfg1024-preview/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round4-cfg1024-selected/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round4-cfg1024-selected/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round4-cfg1024-selected/onnx/vector_estimator.onnx",
+      "bytes": 36210424,
+      "allocated_bytes": 36212736
+    },
+    {
+      "path": "models/round4-cfg1024-selected/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round4-fast-gelu/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round4-fast-gelu/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round4-fast-gelu/onnx/vector_estimator.onnx",
+      "bytes": 51834479,
+      "allocated_bytes": 51834880
+    },
+    {
+      "path": "models/round4-fast-gelu/onnx/vocoder.onnx",
+      "bytes": 101385361,
+      "allocated_bytes": 101388288
+    },
+    {
+      "path": "models/round4-head-fast-vocoder/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round4-head-fast-vocoder/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round4-head-fast-vocoder/onnx/vector_estimator.onnx",
+      "bytes": 52077304,
+      "allocated_bytes": 52080640
+    },
+    {
+      "path": "models/round4-head-fast-vocoder/onnx/vocoder.onnx",
+      "bytes": 98273151,
+      "allocated_bytes": 98275328
+    },
+    {
+      "path": "models/round4-head-int8/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round4-head-int8/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round4-head-int8/onnx/vector_estimator.onnx",
+      "bytes": 52077304,
+      "allocated_bytes": 52080640
+    },
+    {
+      "path": "models/round4-head-int8/onnx/vocoder.onnx",
+      "bytes": 98321923,
+      "allocated_bytes": 98324480
+    },
+    {
+      "path": "models/round4-selected-reexport/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round4-selected-reexport/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round4-selected-reexport/onnx/vector_estimator.onnx",
+      "bytes": 52077304,
+      "allocated_bytes": 52080640
+    },
+    {
+      "path": "models/round4-selected-reexport/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round4-vocoder-fast-gelu/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round4-vocoder-fast-gelu/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round4-vocoder-fast-gelu/onnx/vector_estimator.onnx",
+      "bytes": 52077304,
+      "allocated_bytes": 52080640
+    },
+    {
+      "path": "models/round4-vocoder-fast-gelu/onnx/vocoder.onnx",
+      "bytes": 101385361,
+      "allocated_bytes": 101388288
+    },
+    {
+      "path": "models/round5-balanced-fp32-teacher/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round5-balanced-fp32-teacher/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round5-balanced-fp32-teacher/onnx/vector_estimator.onnx",
+      "bytes": 201752000,
+      "allocated_bytes": 201752576
+    },
+    {
+      "path": "models/round5-balanced-fp32-teacher/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round5-balanced-pruned-light/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round5-balanced-pruned-light/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round5-balanced-pruned-light/onnx/vector_estimator.onnx",
+      "bytes": 51548408,
+      "allocated_bytes": 51552256
+    },
+    {
+      "path": "models/round5-balanced-pruned-light/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round5-balanced-recovered/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round5-balanced-recovered/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round5-balanced-recovered/onnx/vector_estimator.onnx",
+      "bytes": 46656120,
+      "allocated_bytes": 46657536
+    },
+    {
+      "path": "models/round5-balanced-recovered/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round5-cfg1024-audio/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round5-cfg1024-audio/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round5-cfg1024-audio/onnx/vector_estimator.onnx",
+      "bytes": 36210424,
+      "allocated_bytes": 36212736
+    },
+    {
+      "path": "models/round5-cfg1024-audio/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round5-cfg1024-fp32-diagnostic/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round5-cfg1024-fp32-diagnostic/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round5-cfg1024-fp32-diagnostic/onnx/vector_estimator.onnx",
+      "bytes": 138776008,
+      "allocated_bytes": 138776576
+    },
+    {
+      "path": "models/round5-cfg1024-fp32-diagnostic/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round5-original50-preview/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round5-original50-preview/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round5-original50-preview/onnx/vector_estimator.onnx",
+      "bytes": 48903928,
+      "allocated_bytes": 48906240
+    },
+    {
+      "path": "models/round5-original50-preview/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round6-F-exact/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round6-F-exact/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round6-F-exact/onnx/vector_estimator.onnx",
+      "bytes": 48969119,
+      "allocated_bytes": 48971776
+    },
+    {
+      "path": "models/round6-F-exact/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round8-head-main-blend010/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round8-head-main-blend010/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round8-head-main-blend010/onnx/vector_estimator.onnx",
+      "bytes": 48903928,
+      "allocated_bytes": 48906240
+    },
+    {
+      "path": "models/round8-head-main-blend010/onnx/vocoder.onnx",
+      "bytes": 103139384,
+      "allocated_bytes": 103141376
+    },
+    {
+      "path": "models/round8-head-pilot/latent_head.onnx",
+      "bytes": 1679391,
+      "allocated_bytes": 1683456
+    },
+    {
+      "path": "models/round8-latent-head-audio-v2/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round8-latent-head-audio-v2/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round8-latent-head-audio-v2/onnx/vector_estimator.onnx",
+      "bytes": 48903928,
+      "allocated_bytes": 48906240
+    },
+    {
+      "path": "models/round8-latent-head-audio-v2/onnx/vocoder.onnx",
+      "bytes": 103139384,
+      "allocated_bytes": 103141376
+    },
+    {
+      "path": "models/round8-latent-head-main/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round8-latent-head-main/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round8-latent-head-main/onnx/vector_estimator.onnx",
+      "bytes": 48903928,
+      "allocated_bytes": 48906240
+    },
+    {
+      "path": "models/round8-latent-head-main/onnx/vocoder.onnx",
+      "bytes": 103139384,
+      "allocated_bytes": 103141376
+    },
+    {
+      "path": "models/round8-latent-head-pilot/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round8-latent-head-pilot/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round8-latent-head-pilot/onnx/vector_estimator.onnx",
+      "bytes": 48903928,
+      "allocated_bytes": 48906240
+    },
+    {
+      "path": "models/round8-latent-head-pilot/onnx/vocoder.onnx",
+      "bytes": 103139384,
+      "allocated_bytes": 103141376
+    },
+    {
+      "path": "models/round8-latent-head-zero/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round8-latent-head-zero/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round8-latent-head-zero/onnx/vector_estimator.onnx",
+      "bytes": 48903928,
+      "allocated_bytes": 48906240
+    },
+    {
+      "path": "models/round8-latent-head-zero/onnx/vocoder.onnx",
+      "bytes": 103139384,
+      "allocated_bytes": 103141376
+    },
+    {
+      "path": "models/round8-latent-retime/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round8-latent-retime/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round8-latent-retime/onnx/vector_estimator.onnx",
+      "bytes": 48903928,
+      "allocated_bytes": 48906240
+    },
+    {
+      "path": "models/round8-latent-retime/onnx/vocoder.onnx",
+      "bytes": 101463491,
+      "allocated_bytes": 101466112
+    },
+    {
+      "path": "models/round8-latent-retime-FAILED-EXPORT/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round8-latent-retime-FAILED-EXPORT/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round8-latent-retime-FAILED-EXPORT/onnx/vector_estimator.onnx",
+      "bytes": 48903928,
+      "allocated_bytes": 48906240
+    },
+    {
+      "path": "models/round8-latent-retime-FAILED-EXPORT/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round8-latent-retime-FAILED-EXPORT/retime_export.onnx",
+      "bytes": 4862,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "models/round8-latent-retime-FAILED-RESIZE-PARITY/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round8-latent-retime-FAILED-RESIZE-PARITY/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round8-latent-retime-FAILED-RESIZE-PARITY/onnx/vector_estimator.onnx",
+      "bytes": 48903928,
+      "allocated_bytes": 48906240
+    },
+    {
+      "path": "models/round8-latent-retime-FAILED-RESIZE-PARITY/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round8-latent-retime-FAILED-RESIZE-PARITY/retime_export.onnx",
+      "bytes": 4862,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "models/round8-rate-flow250-fp32/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round8-rate-flow250-fp32/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round8-rate-flow250-fp32/onnx/vector_estimator.onnx",
+      "bytes": 189158341,
+      "allocated_bytes": 189161472
+    },
+    {
+      "path": "models/round8-rate-flow250-fp32/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round8-rate-flow500-fp32/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round8-rate-flow500-fp32/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round8-rate-flow500-fp32/onnx/vector_estimator.onnx",
+      "bytes": 189158341,
+      "allocated_bytes": 189161472
+    },
+    {
+      "path": "models/round8-rate-flow500-fp32/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round8-rate-source/onnx/vector_estimator.onnx",
+      "bytes": 256290218,
+      "allocated_bytes": 256290816
+    },
+    {
+      "path": "models/round8-rate-source-v2/onnx/vector_estimator.onnx",
+      "bytes": 256290173,
+      "allocated_bytes": 256290816
+    },
+    {
+      "path": "models/round8-speed-attention160-fp32/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round8-speed-attention160-fp32/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round8-speed-attention160-fp32/onnx/vector_estimator.onnx",
+      "bytes": 189156800,
+      "allocated_bytes": 189157376
+    },
+    {
+      "path": "models/round8-speed-attention160-fp32/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round8-speed-audio160-fp32/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round8-speed-audio160-fp32/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round8-speed-audio160-fp32/onnx/vector_estimator.onnx",
+      "bytes": 189156800,
+      "allocated_bytes": 189157376
+    },
+    {
+      "path": "models/round8-speed-audio160-fp32/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round8-speed-audio320-fp32/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round8-speed-audio320-fp32/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round8-speed-audio320-fp32/onnx/vector_estimator.onnx",
+      "bytes": 189156800,
+      "allocated_bytes": 189157376
+    },
+    {
+      "path": "models/round8-speed-audio320-fp32/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/round8-speed-audio80-fp32/onnx/duration_predictor.onnx",
+      "bytes": 3715045,
+      "allocated_bytes": 3715072
+    },
+    {
+      "path": "models/round8-speed-audio80-fp32/onnx/text_encoder.onnx",
+      "bytes": 36436994,
+      "allocated_bytes": 36438016
+    },
+    {
+      "path": "models/round8-speed-audio80-fp32/onnx/vector_estimator.onnx",
+      "bytes": 189156800,
+      "allocated_bytes": 189157376
+    },
+    {
+      "path": "models/round8-speed-audio80-fp32/onnx/vocoder.onnx",
+      "bytes": 101432849,
+      "allocated_bytes": 101433344
+    },
+    {
+      "path": "models/split/condition.onnx",
+      "bytes": 5379132,
+      "allocated_bytes": 5382144
+    },
+    {
+      "path": "models/split/vector_estimator.onnx",
+      "bytes": 251024529,
+      "allocated_bytes": 251027456
+    },
+    {
+      "path": "models/static-int8/vector_estimator.onnx",
+      "bytes": 66825138,
+      "allocated_bytes": 66826240
+    },
+    {
+      "path": "models/student1024-float/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/student1024-float/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/student1024-float/onnx/vector_estimator.onnx",
+      "bytes": 138886031,
+      "allocated_bytes": 138887168
+    },
+    {
+      "path": "models/student1024-float/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/student1024-int8/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/student1024-int8/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/student1024-int8/onnx/vector_estimator.onnx",
+      "bytes": 36321785,
+      "allocated_bytes": 36323328
+    },
+    {
+      "path": "models/student1024-int8/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/student1024-qat/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/student1024-qat/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/student1024-qat/onnx/vector_estimator.onnx",
+      "bytes": 36321785,
+      "allocated_bytes": 36323328
+    },
+    {
+      "path": "models/student1024-qat/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/student1536-int8/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/student1536-int8/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/student1536-int8/onnx/vector_estimator.onnx",
+      "bytes": 51130873,
+      "allocated_bytes": 51134464
+    },
+    {
+      "path": "models/student1536-int8/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/student512-int8/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/student512-int8/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/student512-int8/onnx/vector_estimator.onnx",
+      "bytes": 21512697,
+      "allocated_bytes": 21516288
+    },
+    {
+      "path": "models/student512-int8/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/student512-qat/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/student512-qat/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/student512-qat/onnx/vector_estimator.onnx",
+      "bytes": 21512697,
+      "allocated_bytes": 21516288
+    },
+    {
+      "path": "models/student512-qat/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/trial-blas/onnx/duration_predictor.onnx",
+      "bytes": 2835757,
+      "allocated_bytes": 2838528
+    },
+    {
+      "path": "models/trial-blas/onnx/text_encoder.onnx",
+      "bytes": 16075183,
+      "allocated_bytes": 16076800
+    },
+    {
+      "path": "models/trial-blas/onnx/vector_estimator.onnx",
+      "bytes": 65801764,
+      "allocated_bytes": 65802240
+    },
+    {
+      "path": "models/trial-blas/onnx/vocoder.onnx",
+      "bytes": 35480502,
+      "allocated_bytes": 35483648
+    },
+    {
+      "path": "models/trial-conditional-int8/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/trial-conditional-int8/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/trial-conditional-int8/onnx/vector_estimator.onnx",
+      "bytes": 65749482,
+      "allocated_bytes": 65753088
+    },
+    {
+      "path": "models/trial-conditional-int8/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/trial-conditional-int8-v2/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/trial-conditional-int8-v2/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/trial-conditional-int8-v2/onnx/vector_estimator.onnx",
+      "bytes": 65696858,
+      "allocated_bytes": 65699840
+    },
+    {
+      "path": "models/trial-conditional-int8-v2/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/trial-dedup-int8/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/trial-dedup-int8/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/trial-dedup-int8/onnx/vector_estimator.onnx",
+      "bytes": 65806693,
+      "allocated_bytes": 65810432
+    },
+    {
+      "path": "models/trial-dedup-int8/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/trial-fp32-ort/onnx/condition.ort",
+      "bytes": 5424040,
+      "allocated_bytes": 5427200
+    },
+    {
+      "path": "models/trial-fp32-ort/onnx/duration_predictor.ort",
+      "bytes": 3789992,
+      "allocated_bytes": 3792896
+    },
+    {
+      "path": "models/trial-fp32-ort/onnx/text_encoder.ort",
+      "bytes": 36084528,
+      "allocated_bytes": 36085760
+    },
+    {
+      "path": "models/trial-fp32-ort/onnx/vector_estimator.ort",
+      "bytes": 251291656,
+      "allocated_bytes": 251293696
+    },
+    {
+      "path": "models/trial-fp32-ort/onnx/vocoder.ort",
+      "bytes": 101489472,
+      "allocated_bytes": 101490688
+    },
+    {
+      "path": "models/trial-guidance-four/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/trial-guidance-four/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/trial-guidance-four/onnx/vector_estimator.onnx",
+      "bytes": 65808465,
+      "allocated_bytes": 65810432
+    },
+    {
+      "path": "models/trial-guidance-four/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/trial-guidance-four-dedup/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/trial-guidance-four-dedup/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/trial-guidance-four-dedup/onnx/vector_estimator.onnx",
+      "bytes": 65808222,
+      "allocated_bytes": 65810432
+    },
+    {
+      "path": "models/trial-guidance-four-dedup/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/trial-guidance-two/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/trial-guidance-two/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/trial-guidance-two/onnx/vector_estimator.onnx",
+      "bytes": 65808465,
+      "allocated_bytes": 65810432
+    },
+    {
+      "path": "models/trial-guidance-two/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/trial-int4/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/trial-int4/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/trial-int4/onnx/vector_estimator.onnx",
+      "bytes": 41560078,
+      "allocated_bytes": 41562112
+    },
+    {
+      "path": "models/trial-int4/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/trial-int4-float/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/trial-int4-float/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/trial-int4-float/onnx/vector_estimator.onnx",
+      "bytes": 41560078,
+      "allocated_bytes": 41562112
+    },
+    {
+      "path": "models/trial-int4-float/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/trial-native-blas/onnx/duration_predictor.onnx",
+      "bytes": 2835882,
+      "allocated_bytes": 2838528
+    },
+    {
+      "path": "models/trial-native-blas/onnx/text_encoder.onnx",
+      "bytes": 16075384,
+      "allocated_bytes": 16076800
+    },
+    {
+      "path": "models/trial-native-blas/onnx/vector_estimator.onnx",
+      "bytes": 65802165,
+      "allocated_bytes": 65802240
+    },
+    {
+      "path": "models/trial-native-blas/onnx/vocoder.onnx",
+      "bytes": 35480611,
+      "allocated_bytes": 35483648
+    },
+    {
+      "path": "models/trial-pruned-half/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/trial-pruned-half/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/trial-pruned-half/onnx/vector_estimator.onnx",
+      "bytes": 36321785,
+      "allocated_bytes": 36323328
+    },
+    {
+      "path": "models/trial-pruned-half/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    },
+    {
+      "path": "models/trial-pruned-threequarters/onnx/duration_predictor.onnx",
+      "bytes": 2900659,
+      "allocated_bytes": 2904064
+    },
+    {
+      "path": "models/trial-pruned-threequarters/onnx/text_encoder.onnx",
+      "bytes": 16318815,
+      "allocated_bytes": 16322560
+    },
+    {
+      "path": "models/trial-pruned-threequarters/onnx/vector_estimator.onnx",
+      "bytes": 51130873,
+      "allocated_bytes": 51134464
+    },
+    {
+      "path": "models/trial-pruned-threequarters/onnx/vocoder.onnx",
+      "bytes": 35561763,
+      "allocated_bytes": 35565568
+    }
+  ],
+  "logical_bytes_deleted": 37722414274,
+  "deleted_files": 640,
+  "complete": true,
+  "available_bytes_after": 34155810816
+}

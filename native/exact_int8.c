@@ -1,4 +1,5 @@
-/* Exact U8 x reduced-range S8 -> S32. No activation/weight requantization. */
+/* Engine v4: exact U8 x reduced-range S8 -> S32, M4N16 safe-K8 tiles.
+ * M8N8 handles unsupported tile shapes. No requantization or approximation. */
 #include "onnxruntime_c_api.h"
 #include <immintrin.h>
 #include <stdint.h>
@@ -87,7 +88,7 @@ static int gemm_row8(const uint8_t* a,const int8_t* packed,const int32_t* sums,i
 /* Two four-coefficient dots can share the widening operation when their
  * signed bounds fit int16 for every possible U8 activation. Otherwise use
  * the exact original widening path. No data-dependent approximation. */
-static int gemm_packed(const uint8_t* a,const int8_t* packed,const int32_t* sums,int32_t* y,int64_t m,int64_t k,int64_t n,uint8_t zero) {
+static int gemm_v2(const uint8_t* a,const int8_t* packed,const int32_t* sums,int32_t* y,int64_t m,int64_t k,int64_t n,uint8_t zero) {
     if(k%8||m<8)return gemm_row8(a,packed,sums,y,m,k,n,zero);
     const uint8_t* unsafe=(const uint8_t*)(sums+n);int64_t row=0;
     for(;row+8<=m;row+=8)for(int64_t col=0;col<n;col+=8) {
@@ -111,6 +112,40 @@ static int gemm_packed(const uint8_t* a,const int8_t* packed,const int32_t* sums
 #undef SAVE
     }
     if(row<m)return gemm_row8(a+row*k,packed,sums,y+row*n,m-row,k,n,zero);
+    return 0;
+}
+
+
+/* Four rows and sixteen columns reuse activation broadcasts across two
+ * output tiles, retaining v2's proven-safe K8 widening and exact fallback. */
+static int gemm_packed(const uint8_t* a,const int8_t* packed,const int32_t* sums,int32_t* y,int64_t m,int64_t k,int64_t n,uint8_t zero) {
+    if(k%8||n%16||m<4)return gemm_v2(a,packed,sums,y,m,k,n,zero);
+    const uint8_t* unsafe=(const uint8_t*)(sums+n);int64_t row=0;
+    for(;row+4<=m;row+=4)for(int64_t col=0;col<n;col+=16) {
+        __m256i c00=_mm256_setzero_si256(),c01=c00,c10=c00,c11=c00,c20=c00,c21=c00,c30=c00,c31=c00;
+        const int8_t* p0=packed+(col/8)*k*8;
+        const int8_t* p1=p0+k*8;
+        const uint8_t* f0=unsafe+(col/8)*(k/8);const uint8_t* f1=f0+k/8;
+        for(int64_t q=0;q<k;q+=8,p0+=64,p1+=64) {
+            __m256i b00=_mm256_loadu_si256((const __m256i*)p0),b01=_mm256_loadu_si256((const __m256i*)(p0+32));
+            __m256i b10=_mm256_loadu_si256((const __m256i*)p1),b11=_mm256_loadu_si256((const __m256i*)(p1+32));
+            if(!(f0[q/8]|f1[q/8])) {
+#define FAST(r) do { __m256i a0=_mm256_set1_epi32((int32_t)word(a+(row+(r))*k+q)),a1=_mm256_set1_epi32((int32_t)word(a+(row+(r))*k+q+4)); __m256i v0=_mm256_add_epi16(_mm256_maddubs_epi16(a0,b00),_mm256_maddubs_epi16(a1,b01)); __m256i v1=_mm256_add_epi16(_mm256_maddubs_epi16(a0,b10),_mm256_maddubs_epi16(a1,b11)); c##r##0=_mm256_add_epi32(c##r##0,_mm256_madd_epi16(v0,_mm256_set1_epi16(1)));c##r##1=_mm256_add_epi32(c##r##1,_mm256_madd_epi16(v1,_mm256_set1_epi16(1)));} while(0)
+                FAST(0);FAST(1);FAST(2);FAST(3);
+#undef FAST
+            } else {
+#define SLOW(r) do {c##r##0=_mm256_add_epi32(c##r##0,_mm256_add_epi32(dot4(b00,a+(row+(r))*k+q),dot4(b01,a+(row+(r))*k+q+4)));c##r##1=_mm256_add_epi32(c##r##1,_mm256_add_epi32(dot4(b10,a+(row+(r))*k+q),dot4(b11,a+(row+(r))*k+q+4)));}while(0)
+                SLOW(0);SLOW(1);SLOW(2);SLOW(3);
+#undef SLOW
+            }
+        }
+        __m256i z0=_mm256_mullo_epi32(_mm256_loadu_si256((const __m256i*)(sums+col)),_mm256_set1_epi32(zero));
+        __m256i z1=_mm256_mullo_epi32(_mm256_loadu_si256((const __m256i*)(sums+col+8)),_mm256_set1_epi32(zero));
+#define SAVE(r) do { _mm256_storeu_si256((__m256i*)(y+(row+(r))*n+col),_mm256_sub_epi32(c##r##0,z0));_mm256_storeu_si256((__m256i*)(y+(row+(r))*n+col+8),_mm256_sub_epi32(c##r##1,z1)); } while(0)
+        SAVE(0);SAVE(1);SAVE(2);SAVE(3);
+#undef SAVE
+    }
+    if(row<m)return gemm_v2(a+row*k,packed,sums,y+row*n,m-row,k,n,zero);
     return 0;
 }
 

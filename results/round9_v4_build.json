@@ -1,0 +1,17 @@
+{
+  "target": "x86_64-linux-gnu.2.28",
+  "cpu": "znver1",
+  "ort_api_version": 23,
+  "source_sha256": "f8c863545febca8570bf026c5adb60c90464f919a9bc44d2defd5840ae832162",
+  "kernel": "Exact U8 x S8[-64,64] -> S32; persistent packing, proven-safe int16 partial accumulation with int32 fallback",
+  "engine_version": 4,
+  "tile": "4 rows x16 columns, safe-K8; original8x8 fallback for other shapes/tails",
+  "binary_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+  "reference_tested_tile_binary_sha256": "ce71e97efbb84db675820f7ba44385fcdfa1c2865e02c40ad97cd1e489812080",
+  "runtime_sections_match_tested_tile": {
+    ".rodata": true,
+    ".eh_frame": true,
+    ".text": true,
+    ".data": true
+  }
+}
