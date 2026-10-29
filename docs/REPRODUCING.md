@@ -2,13 +2,11 @@
 
 ## Hugging Face에서 모델과 학습 자료 받기
 
-공개 [모델 저장소](https://huggingface.co/babihoba/supertonic3-optimization)에는 세 개의 완전한 ONNX 모델과 `mixed-v1-initial.pt`, 선택된 `cfg-mixed-v1-step-00600.pt`가 있습니다. [데이터셋 저장소](https://huggingface.co/datasets/babihoba/supertonic3-optimization-data)에는 1,600개 훈련 쌍과 64개 검증 쌍이 있습니다. 파일별 SHA-256은 각 저장소의 `asset_manifest.json`에서 확인합니다. 총 다운로드는 약 1.2GB입니다.
+공개 [모델 저장소](https://huggingface.co/babihoba/supertonic3-optimization)에는 세 개의 완전한 ONNX 모델과 `mixed-v1-initial.pt`, 선택된 `cfg-mixed-v1-step-00600.pt`가 있습니다. [데이터셋 저장소](https://huggingface.co/datasets/babihoba/supertonic3-optimization-data)에는 1,600개 훈련 쌍과 64개 검증 쌍이 있습니다. 파일별 SHA-256은 각 저장소의 `asset_manifest.json`에서 확인합니다. 전체 저장소는 약 1.2GB입니다. 아래 도구는 선택 모델만 약188MB, 재현 필수 자료만 약646MB를 내려받습니다. 모델 revision은 `85bc100ca8d7cefad17b63a4c7ba489638dbe2f2`, 데이터셋 revision은 `817056ae3e9b8fa1a2e464a212bb2ba1f4c5196a`로 고정하고 파일별 크기·SHA-256을 확인합니다.
 
-```python
-from huggingface_hub import snapshot_download
-
-snapshot_download("babihoba/supertonic3-optimization", repo_type="model", local_dir=".hf-assets/model")
-snapshot_download("babihoba/supertonic3-optimization-data", repo_type="dataset", local_dir=".hf-assets/data")
+```bash
+python download_artifacts.py --purpose inference
+python download_artifacts.py --purpose reproduce
 ```
 
 추론할 선택 모델:
@@ -53,6 +51,7 @@ python distill/export_joint.py \
 ```
 
 Hub에는 이 단계 전에 학습한 혼합 폭 초기 가중치도 함께 저장했습니다. 그래서 위 과정에 별도의 2.2GB 층별 activation 수집과 512/1024/1536 폭 사전학습은 필요하지 않습니다. 전체 초기화부터 다시 학습하려면 Git의 `distill/collect.py`, `distill/train.py`, `distill/init_mixed.py` 코드를 사용하고 새 설정·결과를 별도 기록하세요.
+
 600회 체크포인트는 기존 선택 후보의 출발점입니다. 새 훈련에서 해당 시점이 best로 저장되지 않거나 하드웨어·연산 차이가 발생하면 기존 가중치와 같지 않습니다. 현재 스크립트는 **검증 손실 best 갱신 시점**을 별도 파일로 남깁니다. 새 실행의 검증과 청취로 선택하고 기존 결과를 그대로 붙이지 마세요. `docs/models/`의 SHA-256은 과거 선택 ONNX의 식별자이며 새 훈련 출력의 일치를 보장하지 않습니다.
 
 층별 원본 FFN은 2048 폭이고 혼합 폭은 512×2, 1024×4, 1536×12, 2048×10입니다. 반복부 파라미터는 64,014,576→50,369,776입니다. frontend/decoder는 FP32, 반복부는 감소 범위·채널별 동적 INT8입니다. 내보내기에서 기존 `condition.onnx`를 제거하고 완전한 단일 경로 그래프를 저장합니다.
@@ -61,7 +60,7 @@ Hub에는 이 단계 전에 학습한 혼합 폭 초기 가중치도 함께 저�
 
 ```bash
 python -m pip install -r requirements-eval.txt -r requirements-acoustic.txt
-python distill/validate_graphs.py
+python distill/validate_graphs.py --data .hf-assets/data/trajectories-v2 --output results/retrained_graph_parity.json
 python distill/evaluate.py --variants models/cfg-mixed-v1-retrained \
   --split validation --output results/retrained_validation.json
 python experiments/acoustic_metrics.py results/retrained_validation.json \
@@ -92,3 +91,5 @@ python memory_guard.py --max-rss-mb 420 --reserve-mb 80 --seconds 300 \
 python package_runtime.py --model models/cfg-mixed-v1-selected \
   --output dist/cfg-mixed-v1-runtime.tar.gz
 ```
+
+재현 확인: 공개 체크포인트로 내보낸 네 ONNX 파일의 SHA-256이 기존 배포본과 전부 일치했습니다. 데이터 manifest의 이전 작업 경로는 현재 `--data` 경로로 재해석하므로 다운로드 위치를 옮길 수 있습니다.

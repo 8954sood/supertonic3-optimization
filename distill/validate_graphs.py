@@ -9,8 +9,14 @@ import json
 import torch
 import numpy as np
 import onnxruntime as ort
+import argparse
 from distill.torch_graph import VectorGraph
 
+parser = argparse.ArgumentParser()
+parser.add_argument("--data", default="distill/trajectories-v1")
+parser.add_argument("--output", default="results/torch_graph_parity_suite.json")
+args = parser.parse_args()
+data_root = Path(args.data)
 torch.set_num_threads(1)
 torch.set_num_interop_threads(1)
 vector = VectorGraph("models/supertonic-3/onnx/vector_estimator.onnx")
@@ -29,7 +35,7 @@ with torch.no_grad():
         ("validation", 5),
     ]:
         for step in [0, 7]:
-            path = f"distill/trajectories-v1/{split}/{case:03d}_{step}.npz"
+            path = str(data_root / split / f"{case:03d}_{step}.npz")
             feed = dict(np.load(path))
             target = feed.pop("target")
             actual = vector(feed)[0].cpu().numpy()
@@ -41,7 +47,7 @@ with torch.no_grad():
         relative = float(np.linalg.norm(actual - reference) / np.linalg.norm(reference))
         rows.append({"graph": "decoder", "input": path, "relative_rmse": relative})
         assert relative < 1e-4
-Path("results/torch_graph_parity_suite.json").write_text(
+Path(args.output).write_text(
     json.dumps(
         {
             "note": "FP32 graph parity on actual original teacher inputs. Not quality evaluation of students.",

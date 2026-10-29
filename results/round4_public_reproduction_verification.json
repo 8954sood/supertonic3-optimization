@@ -1,0 +1,13 @@
+{
+  "model_repository": "babihoba/supertonic3-optimization",
+  "model_revision": "85bc100ca8d7cefad17b63a4c7ba489638dbe2f2",
+  "dataset_repository": "babihoba/supertonic3-optimization-data",
+  "dataset_revision": "817056ae3e9b8fa1a2e464a212bb2ba1f4c5196a",
+  "public_checkpoint_and_arrays_downloaded": true,
+  "token_used_for_download": false,
+  "trajectory_arrays": 4,
+  "initial_validation_relative_update_mse": 0.10990703850984573,
+  "after_one_update_relative_update_mse": 0.1073635146021843,
+  "complete": true,
+  "scope": "One update from public initialization and four published arrays; not a claim of full cross-device training determinism."
+}

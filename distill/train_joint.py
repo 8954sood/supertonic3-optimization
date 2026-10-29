@@ -12,6 +12,7 @@ import os
 import numpy as np
 import torch
 from distill.torch_graph import VectorGraph
+from distill.trajectory_data import trajectory_path
 
 p = argparse.ArgumentParser()
 p.add_argument("--checkpoints", default="distill/student1024")
@@ -50,7 +51,7 @@ cache = {}
 
 
 def sample(row):
-    path = row["file"]
+    path = trajectory_path(root, row)
     if path not in cache:
         data = dict(np.load(path))
         target = torch.from_numpy(data.pop("target")).to("mps")

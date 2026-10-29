@@ -61,19 +61,11 @@ python benchmark.py --model models/fast-fp32-cached --steps 8 --repeats 3 \
 
 학습된 모델과 중간 파일은 공개 Hugging Face 저장소에서 내려받습니다: [모델과 체크포인트](https://huggingface.co/babihoba/supertonic3-optimization), [증류 훈련 데이터](https://huggingface.co/datasets/babihoba/supertonic3-optimization-data). Hugging Face 저장소에는 선택 후보와 비교용 두 모델, 재현용 초기/600회 체크포인트, 1,600개 학습·64개 검증 궤적이 있습니다. 저장소 용량은 약 1.2GB입니다.
 
-```python
-from huggingface_hub import snapshot_download
-
-snapshot_download(
-    repo_id="babihoba/supertonic3-optimization",
-    repo_type="model",
-    local_dir=".hf-assets/model",
-)
-snapshot_download(
-    repo_id="babihoba/supertonic3-optimization-data",
-    repo_type="dataset",
-    local_dir=".hf-assets/data",
-)
+```bash
+# 선택한 모델만 다운로드(약 188MB)하고 파일별 SHA-256 확인
+python download_artifacts.py --purpose inference
+# 초기/600회 체크포인트와 훈련 궤적 다운로드(약 646MB)
+python download_artifacts.py --purpose reproduce
 ```
 
 ```bash
