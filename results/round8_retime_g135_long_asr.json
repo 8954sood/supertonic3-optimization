@@ -1,0 +1,50 @@
+{
+  "source": "results/round8_retime_g135_long.json",
+  "note": "Development/validation only. ASR is not naturalness or timbre.",
+  "rows": [
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "case": "ko_long",
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round8_retime_g135_long/M1_ko_long_speed_2.wav",
+      "reference": "오늘은 인공지능 음성 합성의 속도를 측정합니다. 하나의 CPU 스레드만 사용하면서도 자연스럽고 정확한 한국어를 읽는 것이 목표입니다. 다양한 문장 길이와 추론 단계를 비교하여 실제 사용에 적합한 설정을 찾겠습니다.",
+      "transcript": "오늘은 인공지능 음성 합성의 속도를 측정합니다. 하나의 CPU 쓰레드만 사용하면서도 자연스럽고 정확한 한국어를 있는 것이 목표입니다. 다양한 문장기리와 출온 단계를 비교하여 실제 사용에 적합한 설정을 찾겠습니다.",
+      "errors": 6,
+      "reference_units": 90
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "case": "en_long",
+      "language": "en",
+      "voice": "M1",
+      "audio": "samples/round8_retime_g135_long/M1_en_long_speed_2.wav",
+      "reference": "The morning sunlight came through the window as she opened her book. On an old computer, every unnecessary calculation matters. We measure the time spent preparing the text, generating the speech, and converting it into audio so that the results can be reproduced.",
+      "transcript": "The morning sunlight came through the window as she opened her book on an old computer every unnecessary calculation matters. We measure the time spent preparing the text generating the speech and converting it into audio so that the results can be reproduced.",
+      "errors": 0,
+      "reference_units": 43
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "case": "ko_long",
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round8_retime_g135_long/F1_ko_long_speed_2.wav",
+      "reference": "오늘은 인공지능 음성 합성의 속도를 측정합니다. 하나의 CPU 스레드만 사용하면서도 자연스럽고 정확한 한국어를 읽는 것이 목표입니다. 다양한 문장 길이와 추론 단계를 비교하여 실제 사용에 적합한 설정을 찾겠습니다.",
+      "transcript": "오늘은 인공지는 음성합성의 속도를 측정합니다. 하나의 CPU 쓰레드만 사용하면서도 자연스럽고 정확한 한국어를 있는 것이 목표입니다. 다양한 문장기리와 추운 단계를 비교하여 실제 사용의 적합한 설정을 찾겠습니다.",
+      "errors": 7,
+      "reference_units": 90
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "case": "en_long",
+      "language": "en",
+      "voice": "F1",
+      "audio": "samples/round8_retime_g135_long/F1_en_long_speed_2.wav",
+      "reference": "The morning sunlight came through the window as she opened her book. On an old computer, every unnecessary calculation matters. We measure the time spent preparing the text, generating the speech, and converting it into audio so that the results can be reproduced.",
+      "transcript": "The morning sunlight came through the window as she opened her book. On an old computer, every unnecessary calculation matters, we measured the time spent preparing the text, generating the speech, and converting it into audio so that the results can be reproduced.",
+      "errors": 1,
+      "reference_units": 43
+    }
+  ]
+}

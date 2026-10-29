@@ -1,0 +1,194 @@
+{
+  "model": "models/round8-speed-audio160-fp32",
+  "steps": 8,
+  "threads": 1,
+  "seed": 42,
+  "note": "Local native eight-step development evaluation, no waveform filtering. Consumed benchmark texts, not independent testing or server timing.",
+  "rows": [
+    {
+      "variant": "round8-speed-audio160-fp32-speed-1.05",
+      "voice": "M1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 1.05,
+      "audio": "samples/round8_audio160_fp32_pilot/M1_ko_short_speed_1.05.wav",
+      "sha256": "d7abcb88c56c220d7c4835386824e646dfca70f9ea95e598e08ba1660c9dc599",
+      "metrics": {
+        "seconds": 0.2709740830468945,
+        "audio_seconds": 5.320022675736961,
+        "speed": 1.05,
+        "rtf": 0.050934760914220646,
+        "realtime_factor": 19.63295757261141,
+        "stages": {
+          "duration_predictor": 0.0013659580145031214,
+          "text_encoder": 0.007017500000074506,
+          "vector_estimator": 0.1901377919712104,
+          "vocoder": 0.056835916999261826
+        }
+      }
+    },
+    {
+      "variant": "round8-speed-audio160-fp32-speed-2",
+      "voice": "M1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_audio160_fp32_pilot/M1_ko_short_speed_2.wav",
+      "sha256": "40228d56d0ef7c8a2cb8e798a6e873ca70ba8826a1352b2de93d3842a8e3a399",
+      "metrics": {
+        "seconds": 0.15580120799131691,
+        "audio_seconds": 2.7929931972789115,
+        "speed": 2.0,
+        "rtf": 0.055782881298496206,
+        "realtime_factor": 17.926646611331602,
+        "stages": {
+          "duration_predictor": 0.0009589159744791687,
+          "text_encoder": 0.004696665972005576,
+          "vector_estimator": 0.12194820994045585,
+          "vocoder": 0.027755292016081512
+        }
+      }
+    },
+    {
+      "variant": "round8-speed-audio160-fp32-speed-1.05",
+      "voice": "M1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 1.05,
+      "audio": "samples/round8_audio160_fp32_pilot/M1_en_short_speed_1.05.wav",
+      "sha256": "6ccb8f0d301a664af83a3db4143990c107fe5defaa2ae6d78caa7fcbc81f4f9e",
+      "metrics": {
+        "seconds": 0.22815029096091166,
+        "audio_seconds": 4.933650793650794,
+        "speed": 1.05,
+        "rtf": 0.04624370481480417,
+        "realtime_factor": 21.62456498684046,
+        "stages": {
+          "duration_predictor": 0.0009993330459110439,
+          "text_encoder": 0.004797292000148445,
+          "vector_estimator": 0.1730319589842111,
+          "vocoder": 0.04882133303908631
+        }
+      }
+    },
+    {
+      "variant": "round8-speed-audio160-fp32-speed-2",
+      "voice": "M1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 2.0,
+      "audio": "samples/round8_audio160_fp32_pilot/M1_en_short_speed_2.wav",
+      "sha256": "41c7fa88f427b7d39b2f5d9fb405a350bfd1cfa91d3f11663553ba9cc56ffb87",
+      "metrics": {
+        "seconds": 0.1465314999804832,
+        "audio_seconds": 2.59015873015873,
+        "speed": 2.0,
+        "rtf": 0.056572401634823154,
+        "realtime_factor": 17.67646363071229,
+        "stages": {
+          "duration_predictor": 0.0011175420368090272,
+          "text_encoder": 0.004964834020938724,
+          "vector_estimator": 0.11574016703525558,
+          "vocoder": 0.02422924997517839
+        }
+      }
+    },
+    {
+      "variant": "round8-speed-audio160-fp32-speed-1.05",
+      "voice": "F1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 1.05,
+      "audio": "samples/round8_audio160_fp32_pilot/F1_ko_short_speed_1.05.wav",
+      "sha256": "4f3e664ac6b7f49dcfb36bda04a86c7fd4ed57665d77ba954e7753de6d5497d3",
+      "metrics": {
+        "seconds": 0.224676166952122,
+        "audio_seconds": 5.316757369614512,
+        "speed": 1.05,
+        "rtf": 0.042258119250683804,
+        "realtime_factor": 23.664091486603926,
+        "stages": {
+          "duration_predictor": 0.0008243329939432442,
+          "text_encoder": 0.004532874969299883,
+          "vector_estimator": 0.17056949902325869,
+          "vocoder": 0.04830725002102554
+        }
+      }
+    },
+    {
+      "variant": "round8-speed-audio160-fp32-speed-2",
+      "voice": "F1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_audio160_fp32_pilot/F1_ko_short_speed_2.wav",
+      "sha256": "48bb4c2e4b6d3b08779ed75a7d7d5ce64fee31881e77b0164d2843aad405a08b",
+      "metrics": {
+        "seconds": 0.14883999997982755,
+        "audio_seconds": 2.7912925170068026,
+        "speed": 2.0,
+        "rtf": 0.053322967432819876,
+        "realtime_factor": 18.753644970338012,
+        "stages": {
+          "duration_predictor": 0.0008699580212123692,
+          "text_encoder": 0.004647082998417318,
+          "vector_estimator": 0.11541570804547518,
+          "vocoder": 0.027421625040005893
+        }
+      }
+    },
+    {
+      "variant": "round8-speed-audio160-fp32-speed-1.05",
+      "voice": "F1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 1.05,
+      "audio": "samples/round8_audio160_fp32_pilot/F1_en_short_speed_1.05.wav",
+      "sha256": "f2db3c32322ec9af77bdac5380a98ad2e12e9a846a9a124f5beeebe12feaee9c",
+      "metrics": {
+        "seconds": 0.23446549999061972,
+        "audio_seconds": 4.930861678004535,
+        "speed": 1.05,
+        "rtf": 0.04755061392951207,
+        "realtime_factor": 21.03022269033954,
+        "stages": {
+          "duration_predictor": 0.0009690829901956022,
+          "text_encoder": 0.004845957970246673,
+          "vector_estimator": 0.17596950009465218,
+          "vocoder": 0.05218404100742191
+        }
+      }
+    },
+    {
+      "variant": "round8-speed-audio160-fp32-speed-2",
+      "voice": "F1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 2.0,
+      "audio": "samples/round8_audio160_fp32_pilot/F1_en_short_speed_2.wav",
+      "sha256": "3870e44773913dff6a54d9411d359912e3d56e53e076b64fe48d1bfc2014443c",
+      "metrics": {
+        "seconds": 0.14333241700660437,
+        "audio_seconds": 2.5887074829931973,
+        "speed": 2.0,
+        "rtf": 0.05536833263249814,
+        "realtime_factor": 18.060865344047862,
+        "stages": {
+          "duration_predictor": 0.0009575409931130707,
+          "text_encoder": 0.0046450000372715294,
+          "vector_estimator": 0.11317933292593807,
+          "vocoder": 0.02411041600862518
+        }
+      }
+    }
+  ],
+  "complete": true
+}

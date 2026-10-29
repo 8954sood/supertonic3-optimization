@@ -1,0 +1,94 @@
+{
+  "source": "results/round8_oracle_attention.json",
+  "note": "Development/validation only. ASR is not naturalness or timbre.",
+  "rows": [
+    {
+      "variant": "control",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round8_oracle_attention/M1_ko_short_control.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안녕하세요 컴퓨터에서도 빠르게 음성은",
+      "errors": 9,
+      "reference_units": 25
+    },
+    {
+      "variant": "oracle",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round8_oracle_attention/M1_ko_short_oracle.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "헤르셔다니 호카운터지그룸은 따뜻해내리므로",
+      "errors": 24,
+      "reference_units": 25
+    },
+    {
+      "variant": "control",
+      "case": "en_short",
+      "language": "en",
+      "voice": "M1",
+      "audio": "samples/round8_oracle_attention/M1_en_short_control.wav",
+      "reference": "Hello. This voice is generated locally using a single CPU thread.",
+      "transcript": "This voice is generated locally using a single seat.",
+      "errors": 3,
+      "reference_units": 11
+    },
+    {
+      "variant": "oracle",
+      "case": "en_short",
+      "language": "en",
+      "voice": "M1",
+      "audio": "samples/round8_oracle_attention/M1_en_short_oracle.wav",
+      "reference": "Hello. This voice is generated locally using a single CPU thread.",
+      "transcript": "So, can you see what the general algorithm is in this video?",
+      "errors": 12,
+      "reference_units": 11
+    },
+    {
+      "variant": "control",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round8_oracle_attention/F1_ko_short_control.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안녕하세요, 오르베터에서도 음성을.",
+      "errors": 12,
+      "reference_units": 25
+    },
+    {
+      "variant": "oracle",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round8_oracle_attention/F1_ko_short_oracle.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "네, 너너너너너너너너너너너너너너너너너너너너�",
+      "errors": 25,
+      "reference_units": 25
+    },
+    {
+      "variant": "control",
+      "case": "en_short",
+      "language": "en",
+      "voice": "F1",
+      "audio": "samples/round8_oracle_attention/F1_en_short_control.wav",
+      "reference": "Hello. This voice is generated locally using a single CPU thread.",
+      "transcript": "Halois is Generator using a SYNP.",
+      "errors": 8,
+      "reference_units": 11
+    },
+    {
+      "variant": "oracle",
+      "case": "en_short",
+      "language": "en",
+      "voice": "F1",
+      "audio": "samples/round8_oracle_attention/F1_en_short_oracle.wav",
+      "reference": "Hello. This voice is generated locally using a single CPU thread.",
+      "transcript": "We'll take you to another easy task.",
+      "errors": 11,
+      "reference_units": 11
+    }
+  ]
+}

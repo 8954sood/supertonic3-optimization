@@ -1,0 +1,94 @@
+{
+  "source": "results/round8_audio320_fp32_pilot.json",
+  "note": "Development/validation only. ASR is not naturalness or timbre.",
+  "rows": [
+    {
+      "variant": "round8-speed-audio320-fp32-speed-1.05",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round8_audio320_fp32_pilot/M1_ko_short_speed_1.05.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "round8-speed-audio320-fp32-speed-2",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round8_audio320_fp32_pilot/M1_ko_short_speed_2.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안뇨화된 컴퓨터에서도 빠르게 영상은",
+      "errors": 14,
+      "reference_units": 25
+    },
+    {
+      "variant": "round8-speed-audio320-fp32-speed-1.05",
+      "case": "en_short",
+      "language": "en",
+      "voice": "M1",
+      "audio": "samples/round8_audio320_fp32_pilot/M1_en_short_speed_1.05.wav",
+      "reference": "Hello. This voice is generated locally using a single CPU thread.",
+      "transcript": "Hello, this voice is generated locally using a single CPU thread.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "round8-speed-audio320-fp32-speed-2",
+      "case": "en_short",
+      "language": "en",
+      "voice": "M1",
+      "audio": "samples/round8_audio320_fp32_pilot/M1_en_short_speed_2.wav",
+      "reference": "Hello. This voice is generated locally using a single CPU thread.",
+      "transcript": "Hello, this voice is generated locally using a single sieve.",
+      "errors": 2,
+      "reference_units": 11
+    },
+    {
+      "variant": "round8-speed-audio320-fp32-speed-1.05",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round8_audio320_fp32_pilot/F1_ko_short_speed_1.05.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "errors": 0,
+      "reference_units": 25
+    },
+    {
+      "variant": "round8-speed-audio320-fp32-speed-2",
+      "case": "ko_short",
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round8_audio320_fp32_pilot/F1_ko_short_speed_2.wav",
+      "reference": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "transcript": "안녕하세요, 곤빌뚜에서 빠르게 음성을...",
+      "errors": 12,
+      "reference_units": 25
+    },
+    {
+      "variant": "round8-speed-audio320-fp32-speed-1.05",
+      "case": "en_short",
+      "language": "en",
+      "voice": "F1",
+      "audio": "samples/round8_audio320_fp32_pilot/F1_en_short_speed_1.05.wav",
+      "reference": "Hello. This voice is generated locally using a single CPU thread.",
+      "transcript": "Hello, this voice is generated locally using a single CPU thread.",
+      "errors": 0,
+      "reference_units": 11
+    },
+    {
+      "variant": "round8-speed-audio320-fp32-speed-2",
+      "case": "en_short",
+      "language": "en",
+      "voice": "F1",
+      "audio": "samples/round8_audio320_fp32_pilot/F1_en_short_speed_2.wav",
+      "reference": "Hello. This voice is generated locally using a single CPU thread.",
+      "transcript": "Hell, this voice is generated locally using a CPU.",
+      "errors": 3,
+      "reference_units": 11
+    }
+  ]
+}

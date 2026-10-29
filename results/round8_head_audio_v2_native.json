@@ -1,0 +1,211 @@
+{
+  "model": "models/round8-latent-head-audio-v2",
+  "steps": 8,
+  "threads": 1,
+  "seed": 42,
+  "note": "Local native eight-step development evaluation, no waveform filtering. Consumed benchmarks or explicitly supplied example contexts, not independent testing or server timing.",
+  "example_source": "benchmark.TEXTS",
+  "rows": [
+    {
+      "variant": "round8-latent-head-audio-v2-speed-1.05",
+      "voice": "M1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 1.05,
+      "audio": "samples/round8_head_audio_v2_native/M1_ko_short_speed_1.05.wav",
+      "sha256": "9be9f33aef2b9f1d472dca7c602e42790ec405c303a81108b3e25d71d953c4a8",
+      "metrics": {
+        "seconds": 0.20668179204221815,
+        "audio_seconds": 5.320022675736961,
+        "speed": 1.05,
+        "generation_speed": 1.05,
+        "speed_strategy": "learned-latent-head",
+        "rtf": 0.038849795318510995,
+        "realtime_factor": 25.74016135224074,
+        "stages": {
+          "duration_predictor": 0.0011365420068614185,
+          "text_encoder": 0.004929332993924618,
+          "vector_estimator": 0.1382776270620525,
+          "vocoder": 0.0509186249691993
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-head-audio-v2-speed-2",
+      "voice": "M1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_head_audio_v2_native/M1_ko_short_speed_2.wav",
+      "sha256": "f5fb1f4661eb2d3aa2a4d92a01154b0c89909891138cb4b8aea9664a9cb9c29b",
+      "metrics": {
+        "seconds": 0.1880332080181688,
+        "audio_seconds": 2.7929931972789115,
+        "speed": 2.0,
+        "generation_speed": 1.05,
+        "speed_strategy": "learned-latent-head",
+        "rtf": 0.06732318868565851,
+        "realtime_factor": 14.853723056243538,
+        "stages": {
+          "duration_predictor": 0.0008312080171890557,
+          "text_encoder": 0.004332333977799863,
+          "vector_estimator": 0.15048992005176842,
+          "vocoder": 0.03195079101715237
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-head-audio-v2-speed-1.05",
+      "voice": "M1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 1.05,
+      "audio": "samples/round8_head_audio_v2_native/M1_en_short_speed_1.05.wav",
+      "sha256": "b6ed9e4d2dcd493266631a66e81f136afa0df23e0da8b2d03d902a3a978ba0ec",
+      "metrics": {
+        "seconds": 0.1942683330271393,
+        "audio_seconds": 4.933650793650794,
+        "speed": 1.05,
+        "generation_speed": 1.05,
+        "speed_strategy": "learned-latent-head",
+        "rtf": 0.039376182294285356,
+        "realtime_factor": 25.396062841397637,
+        "stages": {
+          "duration_predictor": 0.0008998749544844031,
+          "text_encoder": 0.004552832979243249,
+          "vector_estimator": 0.13758791802683845,
+          "vocoder": 0.050786999985575676
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-head-audio-v2-speed-2",
+      "voice": "M1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 2.0,
+      "audio": "samples/round8_head_audio_v2_native/M1_en_short_speed_2.wav",
+      "sha256": "676927602755a958e777344cb3e6a3920084f5cdc1e1123d60a972a5a21f839d",
+      "metrics": {
+        "seconds": 0.16789008298655972,
+        "audio_seconds": 2.59015873015873,
+        "speed": 2.0,
+        "generation_speed": 1.05,
+        "speed_strategy": "learned-latent-head",
+        "rtf": 0.06481845341434773,
+        "realtime_factor": 15.427705341989038,
+        "stages": {
+          "duration_predictor": 0.0009165409719571471,
+          "text_encoder": 0.004682749975472689,
+          "vector_estimator": 0.1337157080997713,
+          "vocoder": 0.02807887498056516
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-head-audio-v2-speed-1.05",
+      "voice": "F1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 1.05,
+      "audio": "samples/round8_head_audio_v2_native/F1_ko_short_speed_1.05.wav",
+      "sha256": "7fbf9d7f747460e49b75f6e9bc064fe7c74b7f8131c9d83dfa59bc1d8797be4f",
+      "metrics": {
+        "seconds": 0.23015829198993742,
+        "audio_seconds": 5.316757369614512,
+        "speed": 1.05,
+        "generation_speed": 1.05,
+        "speed_strategy": "learned-latent-head",
+        "rtf": 0.043289222356713425,
+        "realtime_factor": 23.10043806654145,
+        "stages": {
+          "duration_predictor": 0.0009594169678166509,
+          "text_encoder": 0.004751375003252178,
+          "vector_estimator": 0.1593208749545738,
+          "vocoder": 0.06459162500686944
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-head-audio-v2-speed-2",
+      "voice": "F1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_head_audio_v2_native/F1_ko_short_speed_2.wav",
+      "sha256": "7704554fc7f20433de680e280e2445fbd4234a38f81a95d42cc731e01831fb08",
+      "metrics": {
+        "seconds": 0.16321875003632158,
+        "audio_seconds": 2.7912925170068026,
+        "speed": 2.0,
+        "generation_speed": 1.05,
+        "speed_strategy": "learned-latent-head",
+        "rtf": 0.05847425486288573,
+        "realtime_factor": 17.101543274811547,
+        "stages": {
+          "duration_predictor": 0.0008974579977802932,
+          "text_encoder": 0.0042648749658837914,
+          "vector_estimator": 0.1297193759237416,
+          "vocoder": 0.027916249993722886
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-head-audio-v2-speed-1.05",
+      "voice": "F1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 1.05,
+      "audio": "samples/round8_head_audio_v2_native/F1_en_short_speed_1.05.wav",
+      "sha256": "f5ed70227cda4073535e4fd0f7a5a8a29f40e27dfd21f199377065540a48eeab",
+      "metrics": {
+        "seconds": 0.18871441698865965,
+        "audio_seconds": 4.930861678004535,
+        "speed": 1.05,
+        "generation_speed": 1.05,
+        "speed_strategy": "learned-latent-head",
+        "rtf": 0.03827209711245241,
+        "realtime_factor": 26.12869624211511,
+        "stages": {
+          "duration_predictor": 0.0008971249917522073,
+          "text_encoder": 0.0045407500001601875,
+          "vector_estimator": 0.13321404106682166,
+          "vocoder": 0.049629790999460965
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-head-audio-v2-speed-2",
+      "voice": "F1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 2.0,
+      "audio": "samples/round8_head_audio_v2_native/F1_en_short_speed_2.wav",
+      "sha256": "2bccd4290e0e10740c2805b4698f765b8771c2c2289fdb4e6cd7f170cc5edeb7",
+      "metrics": {
+        "seconds": 0.16509158397093415,
+        "audio_seconds": 2.5887074829931973,
+        "speed": 2.0,
+        "generation_speed": 1.05,
+        "speed_strategy": "learned-latent-head",
+        "rtf": 0.06377375004921249,
+        "realtime_factor": 15.680432767844557,
+        "stages": {
+          "duration_predictor": 0.0008899579988792539,
+          "text_encoder": 0.004532582999672741,
+          "vector_estimator": 0.13184999907389283,
+          "vocoder": 0.027367041970137507
+        }
+      }
+    }
+  ],
+  "complete": true
+}

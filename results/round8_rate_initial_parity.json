@@ -1,0 +1,14 @@
+{
+  "rows": [
+    {
+      "speed": 1.05,
+      "zero_rate_embedding_bitidentical": true,
+      "max_error": 0.0
+    },
+    {
+      "speed": 2.0,
+      "zero_rate_embedding_bitidentical": true,
+      "max_error": 0.0
+    }
+  ]
+}

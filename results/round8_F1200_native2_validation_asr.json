@@ -1,0 +1,182 @@
+{
+  "source": "results/round8_F1200_native2_validation.json",
+  "note": "Development/validation only. ASR is not naturalness or timbre.",
+  "rows": [
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round8_F1200_native2_validation/validation_M1_0_speed_2.wav",
+      "reference": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "transcript": "오래된 편지를 발견하구요",
+      "errors": 16,
+      "reference_units": 25
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 1,
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round8_F1200_native2_validation/validation_F1_1_speed_2.wav",
+      "reference": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "transcript": "자전거은 벤치에 앉아",
+      "errors": 11,
+      "reference_units": 19
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 2,
+      "language": "ko",
+      "voice": "M3",
+      "audio": "samples/round8_F1200_native2_validation/validation_M3_2_speed_2.wav",
+      "reference": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "transcript": "햇빛 다가 놓으래서 묻어 주면",
+      "errors": 20,
+      "reference_units": 23
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 3,
+      "language": "ko",
+      "voice": "F3",
+      "audio": "samples/round8_F1200_native2_validation/validation_F3_3_speed_2.wav",
+      "reference": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "transcript": "다음 안내드르셍목을",
+      "errors": 15,
+      "reference_units": 21
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 4,
+      "language": "en",
+      "voice": "M5",
+      "audio": "samples/round8_F1200_native2_validation/validation_M5_4_speed_2.wav",
+      "reference": "The silver kettle began to whistle as the water reached a boil.",
+      "transcript": "Silver kettle begins the water.",
+      "errors": 8,
+      "reference_units": 12
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 5,
+      "language": "en",
+      "voice": "F5",
+      "audio": "samples/round8_F1200_native2_validation/validation_F5_5_speed_2.wav",
+      "reference": "We waited beneath the shelter until the heavy rain had passed.",
+      "transcript": "We waste the terrain.",
+      "errors": 9,
+      "reference_units": 11
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 6,
+      "language": "en",
+      "voice": "M1",
+      "audio": "samples/round8_F1200_native2_validation/validation_M1_6_speed_2.wav",
+      "reference": "Someone had left a small wooden box beside the fireplace.",
+      "transcript": "Some of the small wooden box I",
+      "errors": 7,
+      "reference_units": 10
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 7,
+      "language": "en",
+      "voice": "F1",
+      "audio": "samples/round8_F1200_native2_validation/validation_F1_7_speed_2.wav",
+      "reference": "Follow the signs to the reception desk at the end of the hall.",
+      "transcript": "Following to the reception desk",
+      "errors": 9,
+      "reference_units": 13
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 8,
+      "language": "ko",
+      "voice": "M3",
+      "audio": "samples/round8_F1200_native2_validation/validation_M3_8_speed_2.wav",
+      "reference": "창고에 있던 낡은 상자를 열어 보니 작은 장난감들이 들어 있었습니다.",
+      "transcript": "창고엔 성절여 작은 장난빠리",
+      "errors": 22,
+      "reference_units": 28
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 9,
+      "language": "ko",
+      "voice": "F3",
+      "audio": "samples/round8_F1200_native2_validation/validation_F3_9_speed_2.wav",
+      "reference": "도착하는 시간이 정해지면 문자로 간단히 알려 주시면 됩니다.",
+      "transcript": "도착하는 시간 중에 문자로 간단히요.",
+      "errors": 13,
+      "reference_units": 25
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 10,
+      "language": "ko",
+      "voice": "M5",
+      "audio": "samples/round8_F1200_native2_validation/validation_M5_10_speed_2.wav",
+      "reference": "흩어진 종이를 모아서 순서대로 정리한 다음 봉투에 넣었습니다.",
+      "transcript": "흩어진 종이로 손사대전담 봉투에",
+      "errors": 17,
+      "reference_units": 26
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 11,
+      "language": "ko",
+      "voice": "F5",
+      "audio": "samples/round8_F1200_native2_validation/validation_F5_11_speed_2.wav",
+      "reference": "길을 건너기 전에 양쪽을 살피고 신호가 바뀔 때까지 기다리세요.",
+      "transcript": "건너기 전에 섬실까지",
+      "errors": 19,
+      "reference_units": 26
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 12,
+      "language": "en",
+      "voice": "M1",
+      "audio": "samples/round8_F1200_native2_validation/validation_M1_12_speed_2.wav",
+      "reference": "Inside the dusty box, we found several toys from our childhood.",
+      "transcript": "Slide the dusty box with several twits.",
+      "errors": 7,
+      "reference_units": 11
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 13,
+      "language": "en",
+      "voice": "F1",
+      "audio": "samples/round8_F1200_native2_validation/validation_F1_13_speed_2.wav",
+      "reference": "Send a short message when you know what time you will arrive.",
+      "transcript": "Sun Massage Uni No.",
+      "errors": 12,
+      "reference_units": 12
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 14,
+      "language": "en",
+      "voice": "M3",
+      "audio": "samples/round8_F1200_native2_validation/validation_M3_14_speed_2.wav",
+      "reference": "Gather the loose pages and put them in the correct order before sealing the envelope.",
+      "transcript": "Yeah, the loose page is in the correct order before.",
+      "errors": 8,
+      "reference_units": 15
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "case": 15,
+      "language": "en",
+      "voice": "F3",
+      "audio": "samples/round8_F1200_native2_validation/validation_F3_15_speed_2.wav",
+      "reference": "Look both ways and wait for the signal before crossing the street.",
+      "transcript": "Look when week for the signal.",
+      "errors": 8,
+      "reference_units": 12
+    }
+  ]
+}

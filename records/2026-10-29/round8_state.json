@@ -1,0 +1,128 @@
+{
+  "round": 8,
+  "status": "human-confirmed short-sample improvement; opt-in experimental route with substantial remaining Korean errors",
+  "baseline": "F1200 original50 student; unchanged learned weights",
+  "engine": "nativev2 unchanged",
+  "candidate": "parameter-free decoder-internal latent retime",
+  "internal_generation_speed": 1.35,
+  "output_speed": 2.0,
+  "actual_denoising_calls": 8,
+  "threads": 1,
+  "extra_learned_parameters": 0,
+  "waveform_processing": false,
+  "new_model_upload": false,
+  "teacher": "Only pinned original FP32 CFG4 50; transformed references for failed learning trials explicitly labelled",
+  "normal_regression": "4 cases float32 bit-identical to F1200; tests_runtime.py 2 checks passed",
+  "validation": {
+    "consumed": true,
+    "independent": false,
+    "ko": {
+      "normal_errors": 5,
+      "native2_errors": 133,
+      "candidate_errors": 51,
+      "units": 193
+    },
+    "en": {
+      "normal_errors": 0,
+      "native2_errors": 68,
+      "candidate_errors": 1,
+      "units": 96
+    }
+  },
+  "short_development": {
+    "ko_errors": 0,
+    "ko_units": 50,
+    "en_errors": 0,
+    "en_units": 22
+  },
+  "human_feedback_file": "results/round8_retime_human_feedback.json",
+  "limitations": [
+    "Many validation Korean pronunciation errors remain; do not claim complete omission fix",
+    "Selected1.35 trades some Korean ASR accuracy against1.05 for male listening and speed",
+    "Not realtime on tested EPYC1c1g; not measured on ARM",
+    "All previous sets consumed; a new independent test is needed after candidate selection"
+  ],
+  "reproduce": "python prepare_latent_retime.py --base .hf-assets/model/models/round5-original50-student --output models/F1200-retime --generation-speed 1.35",
+  "record": "records/2026-10-29/ROUND8_NATIVE_SPEED.md",
+  "resume_priority": "Identify remaining Korean consonant/phoneme loss in expanded validation; keep original teacher and eight actual steps",
+  "server_results": {
+    "round8_retime_g105_server": {
+      "rows": [
+        {
+          "case": "ko_short",
+          "median_seconds": 4.7068119663745165,
+          "median_rtf": 1.6852214215774508
+        },
+        {
+          "case": "en_short",
+          "median_seconds": 4.350722024217248,
+          "median_rtf": 1.6797125108817663
+        }
+      ],
+      "peak_sampled_process_tree_rss_mb": 370.782208,
+      "repeats": 2
+    },
+    "round8_retime_g135_server": {
+      "rows": [
+        {
+          "case": "ko_short",
+          "median_seconds": 3.950484779663384,
+          "median_rtf": 1.4144269250323147
+        },
+        {
+          "case": "en_short",
+          "median_seconds": 3.610124601982534,
+          "median_rtf": 1.393785083496137
+        }
+      ],
+      "peak_sampled_process_tree_rss_mb": 367.12448,
+      "repeats": 2
+    },
+    "round8_retime_g135_long_server": {
+      "rows": [
+        {
+          "case": "ko_long",
+          "median_seconds": 13.015794867649674,
+          "median_rtf": 1.4073234059964856
+        },
+        {
+          "case": "en_long",
+          "median_seconds": 12.916526161134243,
+          "median_rtf": 1.4549947475453398
+        }
+      ],
+      "peak_sampled_process_tree_rss_mb": 397.676544,
+      "repeats": 1
+    }
+  },
+  "server_asr": {
+    "source": "results/round8_retime_g135_server_asr.json",
+    "rows": [
+      {
+        "case": "ko_short",
+        "errors": 0,
+        "reference_units": 25
+      },
+      {
+        "case": "en_short",
+        "errors": 0,
+        "reference_units": 11
+      },
+      {
+        "case": "ko_long",
+        "errors": 5,
+        "reference_units": 90
+      },
+      {
+        "case": "en_long",
+        "errors": 0,
+        "reference_units": 43
+      }
+    ]
+  },
+  "publication": {
+    "git": "main; publish human-confirmed opt-in improvement with documented limitations",
+    "new_hf_upload": false,
+    "assets_in_git": false
+  }
+}

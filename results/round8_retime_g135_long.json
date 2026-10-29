@@ -1,0 +1,112 @@
+{
+  "model": "models/round8-latent-retime",
+  "steps": 8,
+  "threads": 1,
+  "seed": 42,
+  "note": "Local native eight-step development evaluation, no waveform filtering. Consumed benchmarks or explicitly supplied example contexts, not independent testing or server timing.",
+  "example_source": "benchmark.TEXTS",
+  "generation_speed_override": 1.35,
+  "rows": [
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "M1",
+      "case": "ko_long",
+      "language": "ko",
+      "text": "오늘은 인공지능 음성 합성의 속도를 측정합니다. 하나의 CPU 스레드만 사용하면서도 자연스럽고 정확한 한국어를 읽는 것이 목표입니다. 다양한 문장 길이와 추론 단계를 비교하여 실제 사용에 적합한 설정을 찾겠습니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_long/M1_ko_long_speed_2.wav",
+      "sha256": "642a38b9623c37899feccfa7c27af4caa3f0a6ebc97c75db7cac1b9a79162556",
+      "metrics": {
+        "seconds": 0.5185388749814592,
+        "audio_seconds": 9.248616780045351,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.05606664080841249,
+        "realtime_factor": 17.83591785741434,
+        "stages": {
+          "duration_predictor": 0.004243584000505507,
+          "text_encoder": 0.01902037498075515,
+          "vector_estimator": 0.3515840010950342,
+          "vocoder": 0.0857876249938272
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "M1",
+      "case": "en_long",
+      "language": "en",
+      "text": "The morning sunlight came through the window as she opened her book. On an old computer, every unnecessary calculation matters. We measure the time spent preparing the text, generating the speech, and converting it into audio so that the results can be reproduced.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_long/M1_en_long_speed_2.wav",
+      "sha256": "bc643b2cdd0de1b3ba50ca180eae0e6343a709da153f4c77f1745b99a6a83f91",
+      "metrics": {
+        "seconds": 0.43902958295075223,
+        "audio_seconds": 8.877369614512471,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.049454917618056496,
+        "realtime_factor": 20.220436069129953,
+        "stages": {
+          "duration_predictor": 0.002975375042296946,
+          "text_encoder": 0.01865349995205179,
+          "vector_estimator": 0.3378333752043545,
+          "vocoder": 0.07887741597369313
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "F1",
+      "case": "ko_long",
+      "language": "ko",
+      "text": "오늘은 인공지능 음성 합성의 속도를 측정합니다. 하나의 CPU 스레드만 사용하면서도 자연스럽고 정확한 한국어를 읽는 것이 목표입니다. 다양한 문장 길이와 추론 단계를 비교하여 실제 사용에 적합한 설정을 찾겠습니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_long/F1_ko_long_speed_2.wav",
+      "sha256": "d3b0afb160e00da1c33d08251efbf9638d91f19bd3c0e2d8cc13eaad393ae471",
+      "metrics": {
+        "seconds": 0.45399975002510473,
+        "audio_seconds": 9.239229024943311,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.049138272121995626,
+        "realtime_factor": 20.350735929771794,
+        "stages": {
+          "duration_predictor": 0.0031118339975364506,
+          "text_encoder": 0.017940916994120926,
+          "vector_estimator": 0.3441292079514824,
+          "vocoder": 0.0881821250077337
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "F1",
+      "case": "en_long",
+      "language": "en",
+      "text": "The morning sunlight came through the window as she opened her book. On an old computer, every unnecessary calculation matters. We measure the time spent preparing the text, generating the speech, and converting it into audio so that the results can be reproduced.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_long/F1_en_long_speed_2.wav",
+      "sha256": "7f1d4425d87f75d12eb7cd148c0f27e2e6c709a91a93b06966db58d4cc27e8c6",
+      "metrics": {
+        "seconds": 0.4588994579971768,
+        "audio_seconds": 8.868344671201815,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.05174578515056609,
+        "realtime_factor": 19.325245468597554,
+        "stages": {
+          "duration_predictor": 0.003956333035603166,
+          "text_encoder": 0.024471749959047884,
+          "vector_estimator": 0.34889841702533886,
+          "vocoder": 0.08074337494326755
+        }
+      }
+    }
+  ],
+  "complete": true
+}

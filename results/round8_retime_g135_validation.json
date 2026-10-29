@@ -1,0 +1,412 @@
+{
+  "model": "models/round8-latent-retime",
+  "steps": 8,
+  "threads": 1,
+  "seed": 42,
+  "note": "Local native eight-step development evaluation, no waveform filtering. Consumed benchmarks or explicitly supplied example contexts, not independent testing or server timing.",
+  "example_source": "results/round8_retime_validation_examples.json",
+  "generation_speed_override": 1.35,
+  "rows": [
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "M1",
+      "case": 0,
+      "language": "ko",
+      "text": "서랍 안에서 오래된 편지를 발견하고 잠시 생각에 잠겼습니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_M1_0_speed_2.wav",
+      "sha256": "3b6172deea6d163272ad39d304dc782bf6d9853121a87febc3cbd3d80e6e2bb5",
+      "metrics": {
+        "seconds": 0.2192334160208702,
+        "audio_seconds": 2.785510204081633,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.07870494091158795,
+        "realtime_factor": 12.705682621925039,
+        "stages": {
+          "duration_predictor": 0.003286499995738268,
+          "text_encoder": 0.007137290958780795,
+          "vector_estimator": 0.11147133313352242,
+          "vocoder": 0.03415729198604822
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "F1",
+      "case": 1,
+      "language": "ko",
+      "text": "자전거를 세우고 강변 벤치에 앉아 쉬었습니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_F1_1_speed_2.wav",
+      "sha256": "3a5b7e17c0d9000bc76731e992893458827dd1a50357a1e2d842f6e9a55371ac",
+      "metrics": {
+        "seconds": 0.12205100001301616,
+        "audio_seconds": 2.128639455782313,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.05733756352278092,
+        "realtime_factor": 17.440573658186363,
+        "stages": {
+          "duration_predictor": 0.000809708028100431,
+          "text_encoder": 0.004590833967085928,
+          "vector_estimator": 0.09539783099899068,
+          "vocoder": 0.020730582997202873
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "M3",
+      "case": 2,
+      "language": "ko",
+      "text": "햇볕이 따가운 오후에는 그늘에서 물을 충분히 마시세요.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_M3_2_speed_2.wav",
+      "sha256": "e3f9d6a0780ad7db57fadde8c57c13d14b08227524d33532824ee3b5dfb21171",
+      "metrics": {
+        "seconds": 0.11403983295895159,
+        "audio_seconds": 1.9873469387755103,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.057382951478626286,
+        "realtime_factor": 17.426778759758896,
+        "stages": {
+          "duration_predictor": 0.0008892500190995634,
+          "text_encoder": 0.004669666988775134,
+          "vector_estimator": 0.08901870908448473,
+          "vocoder": 0.019016916980035603
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "F3",
+      "case": 3,
+      "language": "ko",
+      "text": "다음 안내를 들으신 뒤 필요한 항목을 선택해 주세요.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_F3_3_speed_2.wav",
+      "sha256": "2463ed8a6cf133889e1a46985fdcd0f43e45e56a131ac75942ff954f3fe8372e",
+      "metrics": {
+        "seconds": 0.1250662500387989,
+        "audio_seconds": 2.332312925170068,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.05362327185563202,
+        "realtime_factor": 18.648619627169776,
+        "stages": {
+          "duration_predictor": 0.0008499170071445405,
+          "text_encoder": 0.004349875031039119,
+          "vector_estimator": 0.09675404301378876,
+          "vocoder": 0.022679666988551617
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "M5",
+      "case": 4,
+      "language": "en",
+      "text": "The silver kettle began to whistle as the water reached a boil.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_M5_4_speed_2.wav",
+      "sha256": "9f2571d10cb96f59736f847fdc10d88f57b6c88b15254a7eb1c591e9bacb4145",
+      "metrics": {
+        "seconds": 0.11702083301497623,
+        "audio_seconds": 2.174172335600907,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.05382316346263026,
+        "realtime_factor": 18.579361294776103,
+        "stages": {
+          "duration_predictor": 0.0009051670203916728,
+          "text_encoder": 0.004624542023520917,
+          "vector_estimator": 0.09159524808637798,
+          "vocoder": 0.019469582999590784
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "F5",
+      "case": 5,
+      "language": "en",
+      "text": "We waited beneath the shelter until the heavy rain had passed.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_F5_5_speed_2.wav",
+      "sha256": "afacf4417d4942d5db6bd72b59188da76e33e58683b9977e2e35b90a7f2a1345",
+      "metrics": {
+        "seconds": 0.11022829101420939,
+        "audio_seconds": 2.0867120181405894,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.052823911520110345,
+        "realtime_factor": 18.930820744300515,
+        "stages": {
+          "duration_predictor": 0.0008119579870253801,
+          "text_encoder": 0.004429124994203448,
+          "vector_estimator": 0.08604050008580089,
+          "vocoder": 0.01859129103831947
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "M1",
+      "case": 6,
+      "language": "en",
+      "text": "Someone had left a small wooden box beside the fireplace.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_M1_6_speed_2.wav",
+      "sha256": "bfd5c625e4fa8028d10a1ebdfacdeff7f8a7c0209668380416bc00c71faf59fe",
+      "metrics": {
+        "seconds": 0.11037216702243313,
+        "audio_seconds": 2.137732426303855,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.05163048736331651,
+        "realtime_factor": 19.368401327749243,
+        "stages": {
+          "duration_predictor": 0.0008474579663015902,
+          "text_encoder": 0.00406158302212134,
+          "vector_estimator": 0.08601412602001801,
+          "vocoder": 0.019061999977566302
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "F1",
+      "case": 7,
+      "language": "en",
+      "text": "Follow the signs to the reception desk at the end of the hall.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_F1_7_speed_2.wav",
+      "sha256": "0ff674ed75965e6c4ac08ac22ed08b5b321b006f9e64eebc24f9c3ade5845ba2",
+      "metrics": {
+        "seconds": 0.10845608299132437,
+        "audio_seconds": 2.094512471655329,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.05178106335438035,
+        "realtime_factor": 19.31207926643334,
+        "stages": {
+          "duration_predictor": 0.0008396250195801258,
+          "text_encoder": 0.004151042026933283,
+          "vector_estimator": 0.08445616788230836,
+          "vocoder": 0.01866879203589633
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "M3",
+      "case": 8,
+      "language": "ko",
+      "text": "창고에 있던 낡은 상자를 열어 보니 작은 장난감들이 들어 있었습니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_M3_8_speed_2.wav",
+      "sha256": "4e932a6e86f334696384c2c74b5f5ecdd3ea8331eea5a6a15db540e0f2e87959",
+      "metrics": {
+        "seconds": 0.13146883295848966,
+        "audio_seconds": 2.5055555555555555,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.05247093111425308,
+        "realtime_factor": 19.058171424908494,
+        "stages": {
+          "duration_predictor": 0.001051875005941838,
+          "text_encoder": 0.005179167026653886,
+          "vector_estimator": 0.10360000201035291,
+          "vocoder": 0.021230583952274173
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "F3",
+      "case": 9,
+      "language": "ko",
+      "text": "도착하는 시간이 정해지면 문자로 간단히 알려 주시면 됩니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_F3_9_speed_2.wav",
+      "sha256": "7a45474fbbe6b0c8904a886eb716c569b70466636e2779e4b0b5e1424786f396",
+      "metrics": {
+        "seconds": 0.14237299998058006,
+        "audio_seconds": 2.682448979591837,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.053075753188134685,
+        "realtime_factor": 18.840994991731073,
+        "stages": {
+          "duration_predictor": 0.0009013329981826246,
+          "text_encoder": 0.004438334028236568,
+          "vector_estimator": 0.10959362500580028,
+          "vocoder": 0.027030166995245963
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "M5",
+      "case": 10,
+      "language": "ko",
+      "text": "흩어진 종이를 모아서 순서대로 정리한 다음 봉투에 넣었습니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_M5_10_speed_2.wav",
+      "sha256": "27be80d3369065f84c2bd4eca50f206df42ddfff41038fe29aa7ea845696626c",
+      "metrics": {
+        "seconds": 0.1424944580066949,
+        "audio_seconds": 2.6395691609977323,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.05398398348949999,
+        "realtime_factor": 18.524012778614278,
+        "stages": {
+          "duration_predictor": 0.0009845420136116445,
+          "text_encoder": 0.005164291011169553,
+          "vector_estimator": 0.11190933390753344,
+          "vocoder": 0.023960791993886232
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "F5",
+      "case": 11,
+      "language": "ko",
+      "text": "길을 건너기 전에 양쪽을 살피고 신호가 바뀔 때까지 기다리세요.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_F5_11_speed_2.wav",
+      "sha256": "a2c9ce5423a072f58918cf1e60e4f26fdaf2beaeda18f70524f7d4bcf5c43701",
+      "metrics": {
+        "seconds": 0.1385802500299178,
+        "audio_seconds": 2.7294784580498868,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.050771695823871185,
+        "realtime_factor": 19.696013374637623,
+        "stages": {
+          "duration_predictor": 0.0009325830033048987,
+          "text_encoder": 0.004788457998074591,
+          "vector_estimator": 0.10883329197531566,
+          "vocoder": 0.023524084012024105
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "M1",
+      "case": 12,
+      "language": "en",
+      "text": "Inside the dusty box, we found several toys from our childhood.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_M1_12_speed_2.wav",
+      "sha256": "dde0643b1ac673b50c4ec97b3fd6df1319ee6da969e23d80a78a61f276ea1abe",
+      "metrics": {
+        "seconds": 0.12259275000542402,
+        "audio_seconds": 2.3325850340136056,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.052556604890190234,
+        "realtime_factor": 19.027104244830156,
+        "stages": {
+          "duration_predictor": 0.0008307910175062716,
+          "text_encoder": 0.004025167028885335,
+          "vector_estimator": 0.09527291706763208,
+          "vocoder": 0.02209637500345707
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "F1",
+      "case": 13,
+      "language": "en",
+      "text": "Send a short message when you know what time you will arrive.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_F1_13_speed_2.wav",
+      "sha256": "b961dff1f72dfa54eeb00b614bdfb4cc3b033dfe37245e4a5838f644d7715b23",
+      "metrics": {
+        "seconds": 0.10923866601660848,
+        "audio_seconds": 2.0966666666666667,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.05210111256753981,
+        "realtime_factor": 19.193448099667318,
+        "stages": {
+          "duration_predictor": 0.0008279170142486691,
+          "text_encoder": 0.003980667039286345,
+          "vector_estimator": 0.0857331239967607,
+          "vocoder": 0.018348458979744464
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "M3",
+      "case": 14,
+      "language": "en",
+      "text": "Gather the loose pages and put them in the correct order before sealing the envelope.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_M3_14_speed_2.wav",
+      "sha256": "372d14014d1dfeb2110a8d944b34b4c6e9de45f647df99aeb74ebedca78465bc",
+      "metrics": {
+        "seconds": 0.13449349999427795,
+        "audio_seconds": 2.3577097505668934,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.057044129355591805,
+        "realtime_factor": 17.530287714032294,
+        "stages": {
+          "duration_predictor": 0.0009750000317580998,
+          "text_encoder": 0.005008166946936399,
+          "vector_estimator": 0.10425058502005413,
+          "vocoder": 0.0239024170441553
+        }
+      }
+    },
+    {
+      "variant": "round8-latent-retime-speed-2",
+      "voice": "F3",
+      "case": 15,
+      "language": "en",
+      "text": "Look both ways and wait for the signal before crossing the street.",
+      "speed": 2.0,
+      "audio": "samples/round8_retime_g135_validation/validation_F3_15_speed_2.wav",
+      "sha256": "386d8288f658c5be2c218cb7dfac422800183a1d5b9c32dec538e1f3c6e91107",
+      "metrics": {
+        "seconds": 0.13500983297126368,
+        "audio_seconds": 2.368185941043084,
+        "speed": 2.0,
+        "generation_speed": 1.35,
+        "speed_strategy": "latent-retime",
+        "rtf": 0.05700981102514174,
+        "realtime_factor": 17.540840462687953,
+        "stages": {
+          "duration_predictor": 0.0008937090169638395,
+          "text_encoder": 0.004748124978505075,
+          "vector_estimator": 0.10537212295457721,
+          "vocoder": 0.023572750040329993
+        }
+      }
+    }
+  ],
+  "complete": true
+}

@@ -1,0 +1,378 @@
+{
+  "model": "models/round5-original50-student",
+  "steps": 8,
+  "threads": 1,
+  "seed": 42,
+  "note": "Local native eight-step development evaluation, no waveform filtering. Consumed benchmark texts, not independent testing or server timing.",
+  "rows": [
+    {
+      "variant": "round5-original50-student-speed-1.05",
+      "voice": "M1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 1.05,
+      "audio": "samples/round8_F1200_control/M1_ko_short_speed_1.05.wav",
+      "sha256": "9fdef99aa25f20b7367f74c0755b36aa61157bf97e0ea50c84b98fe5cdac86a5",
+      "metrics": {
+        "seconds": 0.22007854201365262,
+        "audio_seconds": 5.320022675736961,
+        "speed": 1.05,
+        "rtf": 0.041367970670005846,
+        "realtime_factor": 24.17329116714583,
+        "stages": {
+          "duration_predictor": 0.0026882500387728214,
+          "text_encoder": 0.005137500003911555,
+          "vector_estimator": 0.14237583294743672,
+          "vocoder": 0.05069725000066683
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "voice": "M1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_F1200_control/M1_ko_short_speed_2.wav",
+      "sha256": "a57cfda6ecdb8c6a2ff7251bd2204dcd4e6632259fb3b82440de8133d93abe92",
+      "metrics": {
+        "seconds": 0.11502224998548627,
+        "audio_seconds": 2.7929931972789115,
+        "speed": 2.0,
+        "rtf": 0.04118243112713175,
+        "realtime_factor": 24.282199293017975,
+        "stages": {
+          "duration_predictor": 0.0008876250358298421,
+          "text_encoder": 0.004532582999672741,
+          "vector_estimator": 0.08214741596020758,
+          "vocoder": 0.027041041001211852
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-1.05",
+      "voice": "M1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 1.05,
+      "audio": "samples/round8_F1200_control/M1_en_short_speed_1.05.wav",
+      "sha256": "4582bf3fa457545ce0ca1187bb3ad8f041194e76760ee178d4a74df4428f4a18",
+      "metrics": {
+        "seconds": 0.21078387496527284,
+        "audio_seconds": 4.933650793650794,
+        "speed": 1.05,
+        "rtf": 0.04272371186800138,
+        "realtime_factor": 23.40620597502359,
+        "stages": {
+          "duration_predictor": 0.0009466659976169467,
+          "text_encoder": 0.004481375042814761,
+          "vector_estimator": 0.15728504105936736,
+          "vocoder": 0.04760724998777732
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "voice": "M1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 2.0,
+      "audio": "samples/round8_F1200_control/M1_en_short_speed_2.wav",
+      "sha256": "5e0d05ec53f14aff3e9edf5ae1f285cc299fcd2903893a21dad11bfa13c541ce",
+      "metrics": {
+        "seconds": 0.1090141250169836,
+        "audio_seconds": 2.59015873015873,
+        "speed": 2.0,
+        "rtf": 0.042087816374984474,
+        "realtime_factor": 23.759845155434697,
+        "stages": {
+          "duration_predictor": 0.0011635840055532753,
+          "text_encoder": 0.0047529160510748625,
+          "vector_estimator": 0.07817362697096542,
+          "vocoder": 0.024434458988253027
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-1.05",
+      "voice": "M1",
+      "case": "ko_long",
+      "language": "ko",
+      "text": "오늘은 인공지능 음성 합성의 속도를 측정합니다. 하나의 CPU 스레드만 사용하면서도 자연스럽고 정확한 한국어를 읽는 것이 목표입니다. 다양한 문장 길이와 추론 단계를 비교하여 실제 사용에 적합한 설정을 찾겠습니다.",
+      "speed": 1.05,
+      "audio": "samples/round8_F1200_control/M1_ko_long_speed_1.05.wav",
+      "sha256": "9d01e6a0dd3c8597c01bd2345c0b883b46b5e428116c02f9d577039753c681aa",
+      "metrics": {
+        "seconds": 0.5893459169892594,
+        "audio_seconds": 17.616394557823128,
+        "speed": 1.05,
+        "rtf": 0.033454400391341226,
+        "realtime_factor": 29.891433960921425,
+        "stages": {
+          "duration_predictor": 0.0031108339899219573,
+          "text_encoder": 0.018674375023692846,
+          "vector_estimator": 0.4136052919784561,
+          "vocoder": 0.1531630419776775
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "voice": "M1",
+      "case": "ko_long",
+      "language": "ko",
+      "text": "오늘은 인공지능 음성 합성의 속도를 측정합니다. 하나의 CPU 스레드만 사용하면서도 자연스럽고 정확한 한국어를 읽는 것이 목표입니다. 다양한 문장 길이와 추론 단계를 비교하여 실제 사용에 적합한 설정을 찾겠습니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_F1200_control/M1_ko_long_speed_2.wav",
+      "sha256": "c055f89f2fa0af6742443dbce27cf29369bb0347f07dfd072291d6eb5e4f38ba",
+      "metrics": {
+        "seconds": 0.3439987499732524,
+        "audio_seconds": 9.248616780045351,
+        "speed": 2.0,
+        "rtf": 0.0371946160333357,
+        "realtime_factor": 26.885611592380716,
+        "stages": {
+          "duration_predictor": 0.0030931250075809658,
+          "text_encoder": 0.018700000015087426,
+          "vector_estimator": 0.23776116699445993,
+          "vocoder": 0.08381545799784362
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-1.05",
+      "voice": "M1",
+      "case": "en_long",
+      "language": "en",
+      "text": "The morning sunlight came through the window as she opened her book. On an old computer, every unnecessary calculation matters. We measure the time spent preparing the text, generating the speech, and converting it into audio so that the results can be reproduced.",
+      "speed": 1.05,
+      "audio": "samples/round8_F1200_control/M1_en_long_speed_1.05.wav",
+      "sha256": "c153af03b163f01746fa56aaaacee95a46e4c72bfa1369bcee1328a4623226ef",
+      "metrics": {
+        "seconds": 0.5763617919874378,
+        "audio_seconds": 16.909297052154194,
+        "speed": 1.05,
+        "rtf": 0.03408549688433151,
+        "realtime_factor": 29.33799097585349,
+        "stages": {
+          "duration_predictor": 0.0032563749700784683,
+          "text_encoder": 0.019981082994490862,
+          "vector_estimator": 0.4111229160334915,
+          "vocoder": 0.14126529201166704
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "voice": "M1",
+      "case": "en_long",
+      "language": "en",
+      "text": "The morning sunlight came through the window as she opened her book. On an old computer, every unnecessary calculation matters. We measure the time spent preparing the text, generating the speech, and converting it into audio so that the results can be reproduced.",
+      "speed": 2.0,
+      "audio": "samples/round8_F1200_control/M1_en_long_speed_2.wav",
+      "sha256": "17c542c1e147e142e2fbd1f584934bfce9201d0b31d8ba482d7b3096ce3cfc49",
+      "metrics": {
+        "seconds": 0.32172029197681695,
+        "audio_seconds": 8.877369614512471,
+        "speed": 2.0,
+        "rtf": 0.03624049757383964,
+        "realtime_factor": 27.593440127650297,
+        "stages": {
+          "duration_predictor": 0.0031170420115813613,
+          "text_encoder": 0.018437709019053727,
+          "vector_estimator": 0.2239624570356682,
+          "vocoder": 0.07556908298283815
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-1.05",
+      "voice": "F1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 1.05,
+      "audio": "samples/round8_F1200_control/F1_ko_short_speed_1.05.wav",
+      "sha256": "75a2d387a7a39b91dc48f477eab7ee2a6f832659aaa85b15e14e3564894ead8f",
+      "metrics": {
+        "seconds": 0.19335150002734736,
+        "audio_seconds": 5.316757369614512,
+        "speed": 1.05,
+        "rtf": 0.036366432881131484,
+        "realtime_factor": 27.497885296273978,
+        "stages": {
+          "duration_predictor": 0.0008987499750219285,
+          "text_encoder": 0.004463374963961542,
+          "vector_estimator": 0.1422645840793848,
+          "vocoder": 0.04525112500414252
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "voice": "F1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_F1200_control/F1_ko_short_speed_2.wav",
+      "sha256": "73fb0fb8b492580173e603abe6b612d28eed91dde52c691c8619a1712ae72b9f",
+      "metrics": {
+        "seconds": 0.11752629198599607,
+        "audio_seconds": 2.7912925170068026,
+        "speed": 2.0,
+        "rtf": 0.04210461328217348,
+        "realtime_factor": 23.750366576181957,
+        "stages": {
+          "duration_predictor": 0.0008512079948559403,
+          "text_encoder": 0.004615542013198137,
+          "vector_estimator": 0.08470379107166082,
+          "vocoder": 0.02697237499523908
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-1.05",
+      "voice": "F1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 1.05,
+      "audio": "samples/round8_F1200_control/F1_en_short_speed_1.05.wav",
+      "sha256": "d92f4fcd1faebabc488a77624cdb687322e8d4192f8c754ab327660626312d3e",
+      "metrics": {
+        "seconds": 0.18063645903021097,
+        "audio_seconds": 4.930861678004535,
+        "speed": 1.05,
+        "rtf": 0.03663385242299324,
+        "realtime_factor": 27.297156423885955,
+        "stages": {
+          "duration_predictor": 0.0008940420229919255,
+          "text_encoder": 0.004517124965786934,
+          "vector_estimator": 0.13052441703621298,
+          "vocoder": 0.044241625000722706
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "voice": "F1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 2.0,
+      "audio": "samples/round8_F1200_control/F1_en_short_speed_2.wav",
+      "sha256": "d83b17b2272f16fc17614bd1a0cfb838af5c6bd2a0d5a7cb4bb13bfad5f6fe90",
+      "metrics": {
+        "seconds": 0.1097704169806093,
+        "audio_seconds": 2.5887074829931973,
+        "speed": 2.0,
+        "rtf": 0.04240356150772472,
+        "realtime_factor": 23.582924746022297,
+        "stages": {
+          "duration_predictor": 0.000891875009983778,
+          "text_encoder": 0.0045186670031398535,
+          "vector_estimator": 0.08017491601640359,
+          "vocoder": 0.0237936670309864
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-1.05",
+      "voice": "F1",
+      "case": "ko_long",
+      "language": "ko",
+      "text": "오늘은 인공지능 음성 합성의 속도를 측정합니다. 하나의 CPU 스레드만 사용하면서도 자연스럽고 정확한 한국어를 읽는 것이 목표입니다. 다양한 문장 길이와 추론 단계를 비교하여 실제 사용에 적합한 설정을 찾겠습니다.",
+      "speed": 1.05,
+      "audio": "samples/round8_F1200_control/F1_ko_long_speed_1.05.wav",
+      "sha256": "0a426fad5c1de78aed7425ca532061cb5c35d6e1b42481df934f801328a99ea1",
+      "metrics": {
+        "seconds": 0.5979481249814853,
+        "audio_seconds": 17.598526077097507,
+        "speed": 1.05,
+        "rtf": 0.03397717072224857,
+        "realtime_factor": 29.431526485081665,
+        "stages": {
+          "duration_predictor": 0.002953833027277142,
+          "text_encoder": 0.0189921660348773,
+          "vector_estimator": 0.4228299148962833,
+          "vocoder": 0.15238441695692018
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "voice": "F1",
+      "case": "ko_long",
+      "language": "ko",
+      "text": "오늘은 인공지능 음성 합성의 속도를 측정합니다. 하나의 CPU 스레드만 사용하면서도 자연스럽고 정확한 한국어를 읽는 것이 목표입니다. 다양한 문장 길이와 추론 단계를 비교하여 실제 사용에 적합한 설정을 찾겠습니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_F1200_control/F1_ko_long_speed_2.wav",
+      "sha256": "2e7fc850b0049a9ef0cd40b50af3435631eb787f4e7aee92c6af1d8272bd539b",
+      "metrics": {
+        "seconds": 0.3398732920177281,
+        "audio_seconds": 9.239229024943311,
+        "speed": 2.0,
+        "rtf": 0.03678589318439516,
+        "realtime_factor": 27.184333814795266,
+        "stages": {
+          "duration_predictor": 0.0029967500013299286,
+          "text_encoder": 0.018475999997463077,
+          "vector_estimator": 0.23782550008036196,
+          "vocoder": 0.07983591599622741
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-1.05",
+      "voice": "F1",
+      "case": "en_long",
+      "language": "en",
+      "text": "The morning sunlight came through the window as she opened her book. On an old computer, every unnecessary calculation matters. We measure the time spent preparing the text, generating the speech, and converting it into audio so that the results can be reproduced.",
+      "speed": 1.05,
+      "audio": "samples/round8_F1200_control/F1_en_long_speed_1.05.wav",
+      "sha256": "78049ab238f97064bce79a56309bb53a283f35f15157972a9287de2435582a9d",
+      "metrics": {
+        "seconds": 0.5669081669766456,
+        "audio_seconds": 16.892086167800453,
+        "speed": 1.05,
+        "rtf": 0.03356057750032562,
+        "realtime_factor": 29.796865086433552,
+        "stages": {
+          "duration_predictor": 0.0030421660048887134,
+          "text_encoder": 0.01873137499205768,
+          "vector_estimator": 0.3936581659363583,
+          "vocoder": 0.150732500012964
+        }
+      }
+    },
+    {
+      "variant": "round5-original50-student-speed-2",
+      "voice": "F1",
+      "case": "en_long",
+      "language": "en",
+      "text": "The morning sunlight came through the window as she opened her book. On an old computer, every unnecessary calculation matters. We measure the time spent preparing the text, generating the speech, and converting it into audio so that the results can be reproduced.",
+      "speed": 2.0,
+      "audio": "samples/round8_F1200_control/F1_en_long_speed_2.wav",
+      "sha256": "2ab43084807fbb052636f564501026e43322278e0f12e0035e8c5da6ceb7bf76",
+      "metrics": {
+        "seconds": 0.3432531670550816,
+        "audio_seconds": 8.868344671201815,
+        "speed": 2.0,
+        "rtf": 0.038705438250469446,
+        "realtime_factor": 25.836162699640052,
+        "stages": {
+          "duration_predictor": 0.0031227919971570373,
+          "text_encoder": 0.019673458009492606,
+          "vector_estimator": 0.23802045901538804,
+          "vocoder": 0.08179137500701472
+        }
+      }
+    }
+  ],
+  "complete": true
+}

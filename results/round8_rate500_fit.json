@@ -1,0 +1,103 @@
+{
+  "model": "models/round8-rate-flow500-fp32",
+  "steps": 8,
+  "threads": 1,
+  "seed": 42,
+  "note": "Local native eight-step development evaluation, no waveform filtering. Consumed benchmarks or explicitly supplied example contexts, not independent testing or server timing.",
+  "example_source": "distill/fast-inversion-round8-pilot/manifest.json",
+  "rows": [
+    {
+      "variant": "round8-rate-flow500-fp32-speed-2",
+      "voice": "M1",
+      "case": 0,
+      "language": "ko",
+      "text": "오늘 아침 창밖으로 햇살이 들어와 방 안이 환해졌습니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_rate500_fit/M1_0_speed_2.wav",
+      "sha256": "eb30fa7ebe39d4dac11db34e25a85a8e8b9799e8ca27249fd6469ebff503e910",
+      "metrics": {
+        "seconds": 0.15650587499840185,
+        "audio_seconds": 2.5256009070294785,
+        "speed": 2.0,
+        "rtf": 0.06196777747537257,
+        "realtime_factor": 16.13741916752498,
+        "stages": {
+          "duration_predictor": 0.0010824170312844217,
+          "text_encoder": 0.005362082971259952,
+          "vector_estimator": 0.11148441809928045,
+          "vocoder": 0.02410291600972414
+        }
+      }
+    },
+    {
+      "variant": "round8-rate-flow500-fp32-speed-2",
+      "voice": "F1",
+      "case": 21,
+      "language": "en",
+      "text": "She checked the map before turning into the narrow street.",
+      "speed": 2.0,
+      "audio": "samples/round8_rate500_fit/F1_21_speed_2.wav",
+      "sha256": "5c2d020ebe16b12ad6b2c7a16decf92ef0bec0d05fc869fbf12f5d4d515b343b",
+      "metrics": {
+        "seconds": 0.11433679098263383,
+        "audio_seconds": 1.988843537414966,
+        "speed": 2.0,
+        "rtf": 0.05748908289248588,
+        "realtime_factor": 17.394606935549238,
+        "stages": {
+          "duration_predictor": 0.0009442499722354114,
+          "text_encoder": 0.004445415979716927,
+          "vector_estimator": 0.08886191708734259,
+          "vocoder": 0.019690207962412387
+        }
+      }
+    },
+    {
+      "variant": "round8-rate-flow500-fp32-speed-2",
+      "voice": "M1",
+      "case": 30,
+      "language": "en",
+      "text": "The path through the woods was covered with fallen leaves.",
+      "speed": 2.0,
+      "audio": "samples/round8_rate500_fit/M1_30_speed_2.wav",
+      "sha256": "a4eec52a2eec969d1a0ff64b55cb70ee2fba4914e943c359c560cb1f9b34c7cc",
+      "metrics": {
+        "seconds": 0.11213245801627636,
+        "audio_seconds": 1.942063492063492,
+        "speed": 2.0,
+        "rtf": 0.05773882186371402,
+        "realtime_factor": 17.319369667091358,
+        "stages": {
+          "duration_predictor": 0.0008608750067651272,
+          "text_encoder": 0.0045791249722242355,
+          "vector_estimator": 0.08835449890466407,
+          "vocoder": 0.01793508301489055
+        }
+      }
+    },
+    {
+      "variant": "round8-rate-flow500-fp32-speed-2",
+      "voice": "F1",
+      "case": 41,
+      "language": "ko",
+      "text": "기차가 출발하기 전에 승강장과 좌석 번호를 다시 확인하세요.",
+      "speed": 2.0,
+      "audio": "samples/round8_rate500_fit/F1_41_speed_2.wav",
+      "sha256": "a39952b7fe27c7826fa265f944248dddab8082848ddd5fecf747237569a5c64c",
+      "metrics": {
+        "seconds": 0.1390194579726085,
+        "audio_seconds": 2.732358276643991,
+        "speed": 2.0,
+        "rtf": 0.05087892724791518,
+        "realtime_factor": 19.654502445135105,
+        "stages": {
+          "duration_predictor": 0.0009174580336548388,
+          "text_encoder": 0.004454416979569942,
+          "vector_estimator": 0.10674395697424188,
+          "vocoder": 0.02653008297784254
+        }
+      }
+    }
+  ],
+  "complete": true
+}

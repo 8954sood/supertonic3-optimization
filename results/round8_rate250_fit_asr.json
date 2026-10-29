@@ -1,0 +1,50 @@
+{
+  "source": "results/round8_rate250_fit.json",
+  "note": "Development/validation only. ASR is not naturalness or timbre.",
+  "rows": [
+    {
+      "variant": "round8-rate-flow250-fp32-speed-2",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/round8_rate250_fit/M1_0_speed_2.wav",
+      "reference": "오늘 아침 창밖으로 햇살이 들어와 방 안이 환해졌습니다.",
+      "transcript": "오늘 한 번만 더 세력할이 방하게 옵니다.",
+      "errors": 17,
+      "reference_units": 23
+    },
+    {
+      "variant": "round8-rate-flow250-fp32-speed-2",
+      "case": 21,
+      "language": "en",
+      "voice": "F1",
+      "audio": "samples/round8_rate250_fit/F1_21_speed_2.wav",
+      "reference": "She checked the map before turning into the narrow street.",
+      "transcript": "Hey, champ, we're turning to the Nellestry.",
+      "errors": 8,
+      "reference_units": 10
+    },
+    {
+      "variant": "round8-rate-flow250-fp32-speed-2",
+      "case": 30,
+      "language": "en",
+      "voice": "M1",
+      "audio": "samples/round8_rate250_fit/M1_30_speed_2.wav",
+      "reference": "The path through the woods was covered with fallen leaves.",
+      "transcript": "The path to the wood was falling.",
+      "errors": 6,
+      "reference_units": 10
+    },
+    {
+      "variant": "round8-rate-flow250-fp32-speed-2",
+      "case": 41,
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/round8_rate250_fit/F1_41_speed_2.wav",
+      "reference": "기차가 출발하기 전에 승강장과 좌석 번호를 다시 확인하세요.",
+      "transcript": "감사합니다.",
+      "errors": 24,
+      "reference_units": 25
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # supertonic3-optimization
 
-> 최신 작업: [7차 배속·원본 비교](records/2026-10-29/ROUND7_SPEED.md), [6차 엔진 기록](records/2026-10-29/ROUND6_ENGINE.md), [5차 품질 기록](records/2026-10-29/ROUND5_LOCAL.md). 기준 모델은 **F1200**, 엔진은v2입니다. 원본 FP32·CFG4·50스텝 교사로 학습했으며 추론은 CPU1·실제8스텝입니다. 모델 구조·가중치는 유지했습니다. 검증된 변경은main에 직접 커밋·푸시합니다. 아래4차 표는 이전 모델 기록입니다.
+> 최신 작업: [8차 모델 내부2배속·청취·서버 검사](records/2026-10-29/ROUND8_NATIVE_SPEED.md), [7차 배속·원본 비교](records/2026-10-29/ROUND7_SPEED.md), [6차 엔진 기록](records/2026-10-29/ROUND6_ENGINE.md). 기준 모델은 **F1200**, 엔진은v2입니다. 원본 FP32·CFG4·50스텝 교사로 학습했으며 추론은 CPU1·실제8스텝입니다. 아래4차 표는 이전 모델 기록입니다.
 
 [Supertonic 3](https://huggingface.co/Supertone/supertonic-3)의 **CPU 한 스레드·실제 denoising 8회** 최적화 실험입니다. 그래프 변환, 문장 조건 계산 재사용, INT8, 혼합 폭 증류, CFG 교사 출력의 단일 경로 증류를 비교했습니다. 추론은 CPU만 사용하고 증류 훈련은 Mac MPS에서 수행했습니다.
 
@@ -22,6 +22,24 @@ python synthesize.py '안녕하세요.' --model .hf-assets/model/models/round5-o
 배속 검사는40회 생성·20개 기존/최적화 파형 완전 일치를 확인했습니다. 다만 **native2배속에서는 원본50과 F1200 모두 단어가 누락**됐으며 사용자 청취로도 확인했습니다. 잘라내기 전 원본도 같은 곳에서 끝납니다. 현재 개발 표본에서는1.0~1.05가 안정적이었고1.5도 음색별 오류가 있었습니다. 입력 허용 범위가 음질 보장 범위는 아닙니다. 후처리 배속은 기본 경로에 넣지 않았습니다. [검사·실패 시도·이어 할 일](records/2026-10-29/ROUND7_SPEED.md)을 참고하세요.
 
 F1200 기준 엔진 비교와 메모리 결과는 [6차 기록](records/2026-10-29/ROUND6_ENGINE.md)에 남깁니다. 아래 표는 이전 B/경량 모델의 역사적 결과입니다.
+
+### 선택 실행: 보코더 내부2배속
+
+8차 후보는 F1200의 학습 가중치를 유지하고, 내부1.35 속도로 **8회 전부 생성**한 세부 latent 프레임을 보코더 그래프 안에서2.0 길이로 압축합니다. 파형 생성 후 오디오 필터를 쓰지 않습니다. 추가 학습·추가 파라미터 없이 기존 공개 F1200에서 준비할 수 있습니다. 준비는 충분한 RAM이 있는 개발 환경에서 실행하세요.
+
+```bash
+python -m pip install -r requirements-train.txt
+python prepare_latent_retime.py \
+  --base .hf-assets/model/models/round5-original50-student \
+  --output models/F1200-retime --generation-speed 1.35
+python synthesize.py '안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.' \
+  --model models/F1200-retime --lang ko --voice M1 --steps 8 --speed 2 \
+  --output samples/retime-fast.wav
+```
+
+사용자는 짧은 남성 한국어 비교에서 기계음이 줄고 발음도 괜찮다고 확인했습니다. 같은 짧은 M1/F1·KO/EN4개는 CER0/50·WER0/22였습니다. **확대한16개 개발 검증에서는 KO51/193(26.42%), EN1/96(1.04%) 오류가 남습니다.** 같은 표본의 기존 native2는133/193·68/96이었습니다. 정상1.05의 KO5/193보다 여전히 나쁘므로 모든 문장의 누락 해결로 주장하지 않습니다. ASR은 청취 품질 점수가 아닙니다.
+
+EPYC7551·1코어/1GB·native 엔진v2에서 짧은KO/EN은3.950/3.610초, RTF1.414/1.394, 표본 최대RSS367MB였습니다. 내부1.05 대조군보다 약16~17% 짧지만 실시간에는 못 미칩니다. 기본 F1200 경로는 유지하며 이 패키지를 명시적으로 선택합니다.2.0에만 내부 압축을 적용하고 다른 배속은 기존 duration 경로입니다. ARM 실측은 아직 없습니다. [실패한 학습·음향 진단·재현·후속 과제](records/2026-10-29/ROUND8_NATIVE_SPEED.md)를 함께 확인하세요.
 
 ## 이전 모델 결과
 

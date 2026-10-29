@@ -86,6 +86,9 @@ class Engine:
         manifest_path = next((p for p in manifest_paths if p.exists()), None)
         metadata = json.loads(manifest_path.read_text()) if manifest_path else {}
         self.supported_steps = metadata.get("supported_steps")
+        self.speed_strategy = metadata.get("speed_strategy", "native-duration")
+        self.latent_head_generation_speed = metadata.get("latent_head_generation_speed", 1.05)
+        self.latent_head_supported_speeds = metadata.get("latent_head_supported_speeds", [])
         self.numpy_backend = metadata.get("backend") == "numpy"
         self.native_backend = metadata.get("backend") == "native-blas"
         self.exact_int8_backend = metadata.get("backend") == "native-exact-int8"
@@ -165,13 +168,18 @@ class Engine:
             return out
 
         ids, mask = self.processor([text], lang)
-        duration = (
-            run(
-                "duration_predictor",
-                {"text_ids": ids, "text_mask": mask, "style_dp": self.style.dp},
-            )[0]
-            / speed
+        raw_duration = run(
+            "duration_predictor",
+            {"text_ids": ids, "text_mask": mask, "style_dp": self.style.dp},
+        )[0]
+        generation_speed = (
+            self.latent_head_generation_speed
+            if self.speed_strategy in ("learned-latent-head", "latent-retime")
+            and speed in self.latent_head_supported_speeds
+            else speed
         )
+        duration = raw_duration / generation_speed
+        output_duration = raw_duration / speed
         emb = run(
             "text_encoder",
             {"text_ids": ids, "text_mask": mask, "style_ttl": self.style.ttl},
@@ -197,6 +205,7 @@ class Engine:
             * latent_mask
         )
         feed = {
+            "speed": np.array([speed], np.float32),
             "text_emb": emb,
             "style_ttl": self.style.ttl,
             "text_mask": mask,
@@ -209,9 +218,11 @@ class Engine:
         for step in range(steps):
             feed.update(noisy_latent=xt, current_step=np.array([step], np.float32))
             xt = run("vector_estimator", feed)[0]
-        wav = run("vocoder", {"latent": xt})[0].reshape(-1)[
-            : int(float(duration[0]) * self.sample_rate)
-        ]
+        output_frames = int((output_duration.max() * self.sample_rate + chunk - 1) / chunk)
+        wav = run(
+            "vocoder",
+            {"latent": xt, "target_frames": np.array([output_frames], np.int64)},
+        )[0].reshape(-1)[: int(float(output_duration[0]) * self.sample_rate)]
         elapsed = time.perf_counter() - start
         if not np.isfinite(wav).all() or not len(wav):
             raise RuntimeError("Invalid audio output")
@@ -219,6 +230,8 @@ class Engine:
             "seconds": elapsed,
             "audio_seconds": len(wav) / self.sample_rate,
             "speed": float(speed),
+            "generation_speed": float(generation_speed),
+            "speed_strategy": self.speed_strategy,
             "rtf": elapsed / (len(wav) / self.sample_rate),
             "realtime_factor": (len(wav) / self.sample_rate) / elapsed,
             "stages": times,

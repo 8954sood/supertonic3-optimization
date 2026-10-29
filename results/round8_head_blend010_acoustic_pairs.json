@@ -1,0 +1,116 @@
+{
+  "model": "models/round8-head-main-blend010",
+  "steps": 8,
+  "threads": 1,
+  "seed": 42,
+  "note": "Local native eight-step development evaluation, no waveform filtering. Consumed benchmarks or explicitly supplied example contexts, not independent testing or server timing.",
+  "example_source": "benchmark.TEXTS",
+  "generation_speed_override": null,
+  "rows": [
+    {
+      "variant": "round8-head-main-blend010-speed-2",
+      "voice": "M1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_head_blend010_native/M1_ko_short_speed_2.wav",
+      "sha256": "6830d7c42117b8795241bc8583fd0aecebc4c750cc8fe067b7c4f8117e9f556f",
+      "metrics": {
+        "seconds": 0.19692445901455358,
+        "audio_seconds": 2.7929931972789115,
+        "speed": 2.0,
+        "generation_speed": 1.05,
+        "speed_strategy": "learned-latent-head",
+        "rtf": 0.07050660173694955,
+        "realtime_factor": 14.183069037008233,
+        "stages": {
+          "duration_predictor": 0.0019454580033198,
+          "text_encoder": 0.005085790995508432,
+          "vector_estimator": 0.13490500097395852,
+          "vocoder": 0.03003483300562948
+        }
+      },
+      "reference_audio": "samples/round8_retime_native/M1_ko_short_speed_1.05.wav"
+    },
+    {
+      "variant": "round8-head-main-blend010-speed-2",
+      "voice": "M1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 2.0,
+      "audio": "samples/round8_head_blend010_native/M1_en_short_speed_2.wav",
+      "sha256": "7699907a5cda2abd2f18b4782e20273d0cbd32e1508fc61df371138bb1c6a106",
+      "metrics": {
+        "seconds": 0.16378270799759775,
+        "audio_seconds": 2.59015873015873,
+        "speed": 2.0,
+        "generation_speed": 1.05,
+        "speed_strategy": "learned-latent-head",
+        "rtf": 0.06323269152989741,
+        "realtime_factor": 15.81460437323286,
+        "stages": {
+          "duration_predictor": 0.0008403329993598163,
+          "text_encoder": 0.004383958003018051,
+          "vector_estimator": 0.1279722491162829,
+          "vocoder": 0.030136250017676502
+        }
+      },
+      "reference_audio": "samples/round8_retime_native/M1_en_short_speed_1.05.wav"
+    },
+    {
+      "variant": "round8-head-main-blend010-speed-2",
+      "voice": "F1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "speed": 2.0,
+      "audio": "samples/round8_head_blend010_native/F1_ko_short_speed_2.wav",
+      "sha256": "32b41232ef3ff6f7b1e358e860c098319c8eb2872863635317280a1eaa245895",
+      "metrics": {
+        "seconds": 0.1656146250315942,
+        "audio_seconds": 2.7912925170068026,
+        "speed": 2.0,
+        "generation_speed": 1.05,
+        "speed_strategy": "learned-latent-head",
+        "rtf": 0.05933259377959726,
+        "realtime_factor": 16.85414266085685,
+        "stages": {
+          "duration_predictor": 0.0008559169946238399,
+          "text_encoder": 0.0041925410041585565,
+          "vector_estimator": 0.13356345699867234,
+          "vocoder": 0.02659275004407391
+        }
+      },
+      "reference_audio": "samples/round8_retime_native/F1_ko_short_speed_1.05.wav"
+    },
+    {
+      "variant": "round8-head-main-blend010-speed-2",
+      "voice": "F1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "speed": 2.0,
+      "audio": "samples/round8_head_blend010_native/F1_en_short_speed_2.wav",
+      "sha256": "8ba60619bce73d1f5dc61da794c099d880a82f218e9d1e56d2125db71ecc598c",
+      "metrics": {
+        "seconds": 0.15866924996953458,
+        "audio_seconds": 2.5887074829931973,
+        "speed": 2.0,
+        "generation_speed": 1.05,
+        "speed_strategy": "learned-latent-head",
+        "rtf": 0.06129284633815521,
+        "realtime_factor": 16.315117664514354,
+        "stages": {
+          "duration_predictor": 0.0009501249878667295,
+          "text_encoder": 0.004274583014193922,
+          "vector_estimator": 0.1259934579138644,
+          "vocoder": 0.027048250020015985
+        }
+      },
+      "reference_audio": "samples/round8_retime_native/F1_en_short_speed_1.05.wav"
+    }
+  ],
+  "complete": true
+}

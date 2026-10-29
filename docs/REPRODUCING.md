@@ -28,6 +28,24 @@ python synthesize.py '안녕하세요. 배속을 확인합니다.' \
 
 배속별 길이·float32 출력·개발ASR 검사 범위와 한계는 [7차 기록](../records/2026-10-29/ROUND7_SPEED.md)을 참고하세요. 빠른 발화의 지각 품질은 길이 비례만으로 검증할 수 없습니다.
 
+### 모델 내부2배속 후보 재현
+
+```bash
+python -m pip install -r requirements-train.txt
+python prepare_latent_retime.py \
+  --base .hf-assets/model/models/round5-original50-student \
+  --output models/F1200-retime --generation-speed 1.35
+python experiments/check_latent_retime.py \
+  --base .hf-assets/model/models/round5-original50-student \
+  --candidate models/F1200-retime --output results/retime-regression.json
+python synthesize.py '안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.' \
+  --model models/F1200-retime --lang ko --steps 8 --speed 2 --output samples/retime.wav
+```
+
+이 준비는 공개 F1200만 필요하고 재학습·새 체크포인트 다운로드가 없습니다.144채널을24채널×6프레임으로 풀어 세부 시간축을 압축한 후 기존 보코더로 파형을 만듭니다. 정상1.05 출력4개는 원래 F1200과 완전히 일치했고,2.0에서도 실제 vector 호출8회를 검사했습니다. 실제 생성 길이는 내부1.35이므로 native2의 짧은 길이8회보다 계산량이 많습니다. 서버 RTF와16개 검증에 남은 오류는 [8차 기록](../records/2026-10-29/ROUND8_NATIVE_SPEED.md)을 참고하세요.
+
+EPYC용 조합은 위 패키지를 `experiments/exact_integer_backend.py --source models/F1200-retime --output models/F1200-retime-exact --cache-conditioning`에 넣으면 됩니다. 먼저 아래 엔진 절차대로 native 커널을 빌드해야 합니다. ARM은 표준 ORT 패키지를 사용하고 별도로 측정하세요. 새 패키지는2.0만 내부 압축하며 나머지 배속은 기존 경로입니다. 추론에 FFmpeg/Rubber Band가 필요하지 않습니다.
+
 ## 원본50 교사에서 F1200 단계 재현
 
 ```bash

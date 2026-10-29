@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "voice": "M1",
+      "case": "ko_short",
+      "normal_float_bitidentity": true
+    },
+    {
+      "voice": "M1",
+      "case": "en_short",
+      "normal_float_bitidentity": true
+    },
+    {
+      "voice": "F1",
+      "case": "ko_short",
+      "normal_float_bitidentity": true
+    },
+    {
+      "voice": "F1",
+      "case": "en_short",
+      "normal_float_bitidentity": true
+    }
+  ]
+}

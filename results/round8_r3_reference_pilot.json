@@ -1,0 +1,95 @@
+{
+  "teacher_origin": {
+    "repo": "Supertone/supertonic-3",
+    "revision": "3cadd1ee6394adea1bd021217a0e650ede09a323"
+  },
+  "source": "results/round7_original50_speed.json",
+  "note": "Transformed original50 normal-rate training targets only; not native2 model results. Do not evaluate these as a model speed fix.",
+  "rows": [
+    {
+      "variant": "original50-transformed-fast-reference",
+      "case": "ko_short",
+      "voice": "M1",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round8_r3_reference_pilot/M1_ko_short.wav",
+      "reference_audio": "samples/round7_original50_speed/M1_ko_short_speed_1.wav",
+      "sha256": "1f29903a0bc338e1685d7314728e69124d5f6d4add79cef0c78c30cc39235ca5",
+      "audio_seconds": 2.793015873015873,
+      "transform": {
+        "method": "Training-only Rubber Band4.0.0 R3 offline two-pass; pitch1.0, threading never; automatic offline padding/delay compensation",
+        "upstream_revision": "1d95888bec3ae0a17c0c4af791810d5a63f6bc35",
+        "source_speed": 1.0,
+        "target_speed": 2.0,
+        "tempo_ratio": 2.0,
+        "samples": 123172,
+        "source_float_sha256": "357bbe836ba988fa4370cbbc6a8aec3ed374581d58ec2ad8cc3210ce498393fd",
+        "target_float_sha256": "268f6575d17b14adc9fd90462187ab7f94b26a11a74c8f4d709cf76ecb36c62b"
+      }
+    },
+    {
+      "variant": "original50-transformed-fast-reference",
+      "case": "en_short",
+      "voice": "M1",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "audio": "samples/round8_r3_reference_pilot/M1_en_short.wav",
+      "reference_audio": "samples/round7_original50_speed/M1_en_short_speed_1.wav",
+      "sha256": "a1acfac012557b63f002f16e11ec446259dfa46e445672ee0440bdc6e298594b",
+      "audio_seconds": 2.59015873015873,
+      "transform": {
+        "method": "Training-only Rubber Band4.0.0 R3 offline two-pass; pitch1.0, threading never; automatic offline padding/delay compensation",
+        "upstream_revision": "1d95888bec3ae0a17c0c4af791810d5a63f6bc35",
+        "source_speed": 1.0,
+        "target_speed": 2.0,
+        "tempo_ratio": 2.0,
+        "samples": 114226,
+        "source_float_sha256": "bd9f0c0d18af474f13e3c3f3f08cf4b6042fd18093ebb5b77c9dab748a4112dd",
+        "target_float_sha256": "feb65a274918d502ebde41e54b0135912232d2f34019960a75e807e940f09a74"
+      }
+    },
+    {
+      "variant": "original50-transformed-fast-reference",
+      "case": "ko_short",
+      "voice": "F1",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round8_r3_reference_pilot/F1_ko_short.wav",
+      "reference_audio": "samples/round7_original50_speed/F1_ko_short_speed_1.wav",
+      "sha256": "a3ac726d2bea76452bedb4330b127eca54179905f76be9db2376f18aedd3793d",
+      "audio_seconds": 2.7912925170068026,
+      "transform": {
+        "method": "Training-only Rubber Band4.0.0 R3 offline two-pass; pitch1.0, threading never; automatic offline padding/delay compensation",
+        "upstream_revision": "1d95888bec3ae0a17c0c4af791810d5a63f6bc35",
+        "source_speed": 1.0,
+        "target_speed": 2.0,
+        "tempo_ratio": 2.0,
+        "samples": 123096,
+        "source_float_sha256": "1218e47c956787e11076b874d7e1783ae903baf35c0746fa1dc3fbf6ceacb5bd",
+        "target_float_sha256": "e8186352da050faad41e5f03b12439bd0f4bef11850a8aa45ed951947cc0fb2e"
+      }
+    },
+    {
+      "variant": "original50-transformed-fast-reference",
+      "case": "en_short",
+      "voice": "F1",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "audio": "samples/round8_r3_reference_pilot/F1_en_short.wav",
+      "reference_audio": "samples/round7_original50_speed/F1_en_short_speed_1.wav",
+      "sha256": "2d7902b5e1e9e214b1ccbb89829dea4a09ca59287b9f09bbf0dd2b3ad901ee13",
+      "audio_seconds": 2.5887074829931973,
+      "transform": {
+        "method": "Training-only Rubber Band4.0.0 R3 offline two-pass; pitch1.0, threading never; automatic offline padding/delay compensation",
+        "upstream_revision": "1d95888bec3ae0a17c0c4af791810d5a63f6bc35",
+        "source_speed": 1.0,
+        "target_speed": 2.0,
+        "tempo_ratio": 2.0,
+        "samples": 114162,
+        "source_float_sha256": "8cc58817b6bb13328d200b305afc5d96f04ca2ef19b7155ebe6ee96cfad86ff9",
+        "target_float_sha256": "84c96c9ae5fd088895e2b20f09a5f24ac4750354014e0146178b25f9c4767672"
+      }
+    }
+  ],
+  "complete": true
+}

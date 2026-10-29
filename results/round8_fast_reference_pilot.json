@@ -1,0 +1,99 @@
+{
+  "teacher_origin": {
+    "repo": "Supertone/supertonic-3",
+    "revision": "3cadd1ee6394adea1bd021217a0e650ede09a323"
+  },
+  "source": "results/round7_original50_speed.json",
+  "note": "Transformed original50 normal-rate training targets only; not native2 model results. Do not evaluate these as a model speed fix.",
+  "rows": [
+    {
+      "variant": "original50-transformed-fast-reference",
+      "case": "ko_short",
+      "voice": "M1",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round8_fast_reference_pilot/M1_ko_short.wav",
+      "reference_audio": "samples/round7_original50_speed/M1_ko_short_speed_1.wav",
+      "sha256": "d830f7265cd13315579cd7163fd0385ab37d1832876cc58d93d120bc11b5f421",
+      "audio_seconds": 2.793015873015873,
+      "transform": {
+        "method": "Training-only FFmpeg WSOLA atempo twice, trailing100ms source pad, exact target length",
+        "source_speed": 1.0,
+        "target_speed": 2.0,
+        "tempo_ratio": 2.0,
+        "filters": "atempo=1.41421356237,atempo=1.41421356237,apad,atrim=end_sample=123172",
+        "samples": 123172,
+        "source_float_sha256": "357bbe836ba988fa4370cbbc6a8aec3ed374581d58ec2ad8cc3210ce498393fd",
+        "target_float_sha256": "1fb596e7b1a47d61c4d1b6af2e62e3427fcc7b6039bb6cd4dcf7b378b058d1d2",
+        "ffmpeg_version": "ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers"
+      }
+    },
+    {
+      "variant": "original50-transformed-fast-reference",
+      "case": "en_short",
+      "voice": "M1",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "audio": "samples/round8_fast_reference_pilot/M1_en_short.wav",
+      "reference_audio": "samples/round7_original50_speed/M1_en_short_speed_1.wav",
+      "sha256": "92822a4d6a7f2d3443499535510927355d0a79677a165d51f698d6b6c5db2e1b",
+      "audio_seconds": 2.59015873015873,
+      "transform": {
+        "method": "Training-only FFmpeg WSOLA atempo twice, trailing100ms source pad, exact target length",
+        "source_speed": 1.0,
+        "target_speed": 2.0,
+        "tempo_ratio": 2.0,
+        "filters": "atempo=1.41421356237,atempo=1.41421356237,apad,atrim=end_sample=114226",
+        "samples": 114226,
+        "source_float_sha256": "bd9f0c0d18af474f13e3c3f3f08cf4b6042fd18093ebb5b77c9dab748a4112dd",
+        "target_float_sha256": "358112dc8636c6eebfdac52deea2b1e2f9f07369e6dfd70cd0620e4afebc775d",
+        "ffmpeg_version": "ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers"
+      }
+    },
+    {
+      "variant": "original50-transformed-fast-reference",
+      "case": "ko_short",
+      "voice": "F1",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round8_fast_reference_pilot/F1_ko_short.wav",
+      "reference_audio": "samples/round7_original50_speed/F1_ko_short_speed_1.wav",
+      "sha256": "dbc3b712bd387cd30ecc9764015d83c089faa99abdf63c875f7e780e269e9ae7",
+      "audio_seconds": 2.7912925170068026,
+      "transform": {
+        "method": "Training-only FFmpeg WSOLA atempo twice, trailing100ms source pad, exact target length",
+        "source_speed": 1.0,
+        "target_speed": 2.0,
+        "tempo_ratio": 2.0,
+        "filters": "atempo=1.41421356237,atempo=1.41421356237,apad,atrim=end_sample=123096",
+        "samples": 123096,
+        "source_float_sha256": "1218e47c956787e11076b874d7e1783ae903baf35c0746fa1dc3fbf6ceacb5bd",
+        "target_float_sha256": "73bed0f951d067870c22af9c623693d4d31a715aa2ccbac8ed690ad1eae65fe3",
+        "ffmpeg_version": "ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers"
+      }
+    },
+    {
+      "variant": "original50-transformed-fast-reference",
+      "case": "en_short",
+      "voice": "F1",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "audio": "samples/round8_fast_reference_pilot/F1_en_short.wav",
+      "reference_audio": "samples/round7_original50_speed/F1_en_short_speed_1.wav",
+      "sha256": "07bda659bc06eb96740274fbcd7d468a7ed9f700c9ee483ad4454ff42a5bc6cc",
+      "audio_seconds": 2.5887074829931973,
+      "transform": {
+        "method": "Training-only FFmpeg WSOLA atempo twice, trailing100ms source pad, exact target length",
+        "source_speed": 1.0,
+        "target_speed": 2.0,
+        "tempo_ratio": 2.0,
+        "filters": "atempo=1.41421356237,atempo=1.41421356237,apad,atrim=end_sample=114162",
+        "samples": 114162,
+        "source_float_sha256": "8cc58817b6bb13328d200b305afc5d96f04ca2ef19b7155ebe6ee96cfad86ff9",
+        "target_float_sha256": "678cfec979e328d97c83db2b842ab4ead1785333f5385cbc48e611a92d68cd4d",
+        "ffmpeg_version": "ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers"
+      }
+    }
+  ],
+  "complete": true
+}

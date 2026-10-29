@@ -1,0 +1,176 @@
+{
+  "note": "Diagnostic only: per-text original50 attention injected into eight-step student.\n\nThis is an oracle control, not a deployable candidate: it requires the original\nteacher at generation time. No claim of inference acceleration or fixed quality.\n",
+  "steps": 8,
+  "teacher_steps": 50,
+  "rows": [
+    {
+      "variant": "control",
+      "voice": "M1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round8_oracle_attention/M1_ko_short_control.wav",
+      "metrics": {
+        "seconds": 0.2892032089876011,
+        "audio_seconds": 2.7929931972789115,
+        "speed": 2.0,
+        "rtf": 0.10354597686430417,
+        "realtime_factor": 9.657545665057452,
+        "stages": {
+          "duration_predictor": 0.001000500051304698,
+          "text_encoder": 0.005883083038497716,
+          "vector_estimator": 0.2548117520636879,
+          "vocoder": 0.02698654099367559
+        }
+      }
+    },
+    {
+      "variant": "oracle",
+      "voice": "M1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round8_oracle_attention/M1_ko_short_oracle.wav",
+      "metrics": {
+        "seconds": 0.14978325000265613,
+        "audio_seconds": 2.7929931972789115,
+        "speed": 2.0,
+        "rtf": 0.05362821869691028,
+        "realtime_factor": 18.646899417854687,
+        "stages": {
+          "duration_predictor": 0.0009933749679476023,
+          "text_encoder": 0.004882665991317481,
+          "vector_estimator": 0.11710424907505512,
+          "vocoder": 0.02635362499859184
+        }
+      }
+    },
+    {
+      "variant": "control",
+      "voice": "M1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "audio": "samples/round8_oracle_attention/M1_en_short_control.wav",
+      "metrics": {
+        "seconds": 0.2049179170280695,
+        "audio_seconds": 2.59015873015873,
+        "speed": 2.0,
+        "rtf": 0.0791140383182276,
+        "realtime_factor": 12.639981743538474,
+        "stages": {
+          "duration_predictor": 0.0009120000177063048,
+          "text_encoder": 0.0049689579755067825,
+          "vector_estimator": 0.17432662495411932,
+          "vocoder": 0.02424358401913196
+        }
+      }
+    },
+    {
+      "variant": "oracle",
+      "voice": "M1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "audio": "samples/round8_oracle_attention/M1_en_short_oracle.wav",
+      "metrics": {
+        "seconds": 0.17190691700670868,
+        "audio_seconds": 2.59015873015873,
+        "speed": 2.0,
+        "rtf": 0.06636925953807235,
+        "realtime_factor": 15.067216463765963,
+        "stages": {
+          "duration_predictor": 0.0009014999959617853,
+          "text_encoder": 0.004701457975897938,
+          "vector_estimator": 0.14191995898727328,
+          "vocoder": 0.023974834010004997
+        }
+      }
+    },
+    {
+      "variant": "control",
+      "voice": "F1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round8_oracle_attention/F1_ko_short_control.wav",
+      "metrics": {
+        "seconds": 0.16061954101314768,
+        "audio_seconds": 2.7912925170068026,
+        "speed": 2.0,
+        "rtf": 0.057543070113405904,
+        "realtime_factor": 17.37828722084518,
+        "stages": {
+          "duration_predictor": 0.0008973329677246511,
+          "text_encoder": 0.00483766698744148,
+          "vector_estimator": 0.12845158309210092,
+          "vocoder": 0.02598375000525266
+        }
+      }
+    },
+    {
+      "variant": "oracle",
+      "voice": "F1",
+      "case": "ko_short",
+      "language": "ko",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "audio": "samples/round8_oracle_attention/F1_ko_short_oracle.wav",
+      "metrics": {
+        "seconds": 0.15433454100275412,
+        "audio_seconds": 2.7912925170068026,
+        "speed": 2.0,
+        "rtf": 0.055291425052166256,
+        "realtime_factor": 18.08598709576615,
+        "stages": {
+          "duration_predictor": 0.0009996250155381858,
+          "text_encoder": 0.004726708983071148,
+          "vector_estimator": 0.12240837496938184,
+          "vocoder": 0.025750458997208625
+        }
+      }
+    },
+    {
+      "variant": "control",
+      "voice": "F1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "audio": "samples/round8_oracle_attention/F1_en_short_control.wav",
+      "metrics": {
+        "seconds": 0.17497516697039828,
+        "audio_seconds": 2.5887074829931973,
+        "speed": 2.0,
+        "rtf": 0.06759171058140681,
+        "realtime_factor": 14.794713603166022,
+        "stages": {
+          "duration_predictor": 0.0008801249787211418,
+          "text_encoder": 0.004742457997053862,
+          "vector_estimator": 0.1445426249410957,
+          "vocoder": 0.02432645799126476
+        }
+      }
+    },
+    {
+      "variant": "oracle",
+      "voice": "F1",
+      "case": "en_short",
+      "language": "en",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "audio": "samples/round8_oracle_attention/F1_en_short_oracle.wav",
+      "metrics": {
+        "seconds": 0.14812037500087172,
+        "audio_seconds": 2.5887074829931973,
+        "speed": 2.0,
+        "rtf": 0.05721788806729422,
+        "realtime_factor": 17.47705191117672,
+        "stages": {
+          "duration_predictor": 0.0009512499673292041,
+          "text_encoder": 0.004751084023155272,
+          "vector_estimator": 0.11787304293829948,
+          "vocoder": 0.024124041956383735
+        }
+      }
+    }
+  ],
+  "complete": true
+}

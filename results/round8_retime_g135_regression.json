@@ -1,0 +1,43 @@
+{
+  "base": "models/round5-original50-student",
+  "candidate": "models/round8-latent-retime-g135",
+  "complete": true,
+  "rows": [
+    {
+      "voice": "M1",
+      "case": "ko_short",
+      "normal_bitidentity": true,
+      "actual_fast_calls": 8,
+      "normal_samples": 234613,
+      "fast_samples": 123171,
+      "generation_speed": 1.35
+    },
+    {
+      "voice": "M1",
+      "case": "en_short",
+      "normal_bitidentity": true,
+      "actual_fast_calls": 8,
+      "normal_samples": 217574,
+      "fast_samples": 114226,
+      "generation_speed": 1.35
+    },
+    {
+      "voice": "F1",
+      "case": "ko_short",
+      "normal_bitidentity": true,
+      "actual_fast_calls": 8,
+      "normal_samples": 234469,
+      "fast_samples": 123096,
+      "generation_speed": 1.35
+    },
+    {
+      "voice": "F1",
+      "case": "en_short",
+      "normal_bitidentity": true,
+      "actual_fast_calls": 8,
+      "normal_samples": 217451,
+      "fast_samples": 114162,
+      "generation_speed": 1.35
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "source": "distill/fast-inversion-round8-pilot/manifest.json",
+  "note": "Development/validation only. ASR is not naturalness or timbre.",
+  "rows": [
+    {
+      "variant": "frozen-original-decoder-inversion",
+      "case": 0,
+      "language": "ko",
+      "voice": "M1",
+      "audio": "samples/fast-inversion-round8-pilot/train_000_best.wav",
+      "reference": "오늘 아침 창밖으로 햇살이 들어와 방 안이 환해졌습니다.",
+      "transcript": "오늘 아침 창밖으로 햇살이 들어와 방안이 환해졌습니다.",
+      "errors": 0,
+      "reference_units": 23
+    },
+    {
+      "variant": "frozen-original-decoder-inversion",
+      "case": 21,
+      "language": "en",
+      "voice": "F1",
+      "audio": "samples/fast-inversion-round8-pilot/train_021_best.wav",
+      "reference": "She checked the map before turning into the narrow street.",
+      "transcript": "She checked the map before turning into the narrow street.",
+      "errors": 0,
+      "reference_units": 10
+    },
+    {
+      "variant": "frozen-original-decoder-inversion",
+      "case": 30,
+      "language": "en",
+      "voice": "M1",
+      "audio": "samples/fast-inversion-round8-pilot/train_030_best.wav",
+      "reference": "The path through the woods was covered with fallen leaves.",
+      "transcript": "The path through the woods was covered with fallen leaves.",
+      "errors": 0,
+      "reference_units": 10
+    },
+    {
+      "variant": "frozen-original-decoder-inversion",
+      "case": 41,
+      "language": "ko",
+      "voice": "F1",
+      "audio": "samples/fast-inversion-round8-pilot/train_041_best.wav",
+      "reference": "기차가 출발하기 전에 승강장과 좌석 번호를 다시 확인하세요.",
+      "transcript": "기차가 출발하기 전에 승강장과 좌석 번호를 다시 확인하세요",
+      "errors": 0,
+      "reference_units": 25
+    }
+  ]
+}

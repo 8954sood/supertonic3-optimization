@@ -1,0 +1,11 @@
+{
+  "candidate": "parameter-free decoder-internal latent retime, generation1.05/output2.0, M1/F1 KO short",
+  "feedback": "누락 없는데 남자 쪽에 기계음이 강해진건 그냥 배속땜에 느껴지는 기분탓인가? 뭉개짐은 없어 일단",
+  "interpretation": "Human confirmed no omission or smearing; male mechanical noise is a quality defect to investigate, not approved for commit.",
+  "commit_status": "Human-confirmed limited short-sample milestone; expanded validation and server checks completed, remaining errors explicitly documented.",
+  "followup": {
+    "candidate": "parameter-free latent-retime generation1.35/output2.0 M1 KO short",
+    "feedback": "기계음이 줄었고 발음도 괜찮음",
+    "interpretation": "Improved on the listened short male example; does not establish generalization across voices or texts."
+  }
+}
