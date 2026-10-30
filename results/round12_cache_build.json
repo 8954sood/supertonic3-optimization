@@ -1,0 +1,46 @@
+{
+  "source": "models/round8-latent-retime-g135",
+  "candidate": "models/round12-portable-cached",
+  "final_builder_reproduces_measured_graph_bytes": true,
+  "source_files_unchanged": true,
+  "portable_condition_cache": {
+    "source_vector_sha256": "7c81ab7f0ddcc4266743701599a8708d2edd1be04285770f996e84a8bb5f4447",
+    "condition_sha256": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+    "initializer_count": 628,
+    "initializer_bitidentity": true,
+    "steps_changed": false,
+    "quantization_changed": false,
+    "shared_assets": true
+  },
+  "transformation": {
+    "static_nodes": 194,
+    "loop_nodes_before": 1510,
+    "loop_nodes_after": 1316,
+    "cached_tensors": 19,
+    "boundary": [
+      "/Reshape_1_output_0",
+      "/vector_estimator/Tile_3_output_0",
+      "/vector_estimator/vector_field/main_blocks.11/attention/Concat_2_output_0",
+      "/vector_estimator/vector_field/main_blocks.15/attn/Concat_2_output_0",
+      "/vector_estimator/vector_field/main_blocks.15/attn/Transpose_output_0",
+      "/vector_estimator/vector_field/main_blocks.17/attention/Concat_2_output_0",
+      "/vector_estimator/vector_field/main_blocks.21/attn/Concat_2_output_0",
+      "/vector_estimator/vector_field/main_blocks.21/attn/Transpose_output_0",
+      "/vector_estimator/vector_field/main_blocks.23/attention/Concat_2_output_0",
+      "/vector_estimator/vector_field/main_blocks.3/Transpose_2_output_0",
+      "/vector_estimator/vector_field/main_blocks.3/attn/Cast_2_output_0",
+      "/vector_estimator/vector_field/main_blocks.3/attn/Cast_3_output_0",
+      "/vector_estimator/vector_field/main_blocks.3/attn/Concat_2_output_0",
+      "/vector_estimator/vector_field/main_blocks.3/attn/Cos_output_0",
+      "/vector_estimator/vector_field/main_blocks.3/attn/Sin_output_0",
+      "/vector_estimator/vector_field/main_blocks.3/attn/Transpose_output_0",
+      "/vector_estimator/vector_field/main_blocks.5/attention/Concat_2_output_0",
+      "/vector_estimator/vector_field/main_blocks.9/attn/Concat_2_output_0",
+      "/vector_estimator/vector_field/main_blocks.9/attn/Transpose_output_0"
+    ]
+  },
+  "output_sha256": {
+    "onnx/vector_estimator.onnx": "0a4102968d90c7f2ae307e5ba7771b1ce600d0cde213433d145e9903b37523a2",
+    "onnx/condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251"
+  }
+}

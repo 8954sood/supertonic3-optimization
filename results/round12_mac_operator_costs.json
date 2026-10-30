@@ -1,0 +1,231 @@
+{
+  "note": "Profiler diagnostic, includes warm and measured requests. Not an unprofiled RTF/speed proof.",
+  "threads": 1,
+  "steps": 8,
+  "rows": [
+    {
+      "part": "duration_predictor",
+      "profiled_node_seconds": 0.008635,
+      "operators": [
+        {
+          "name": "BiasGelu",
+          "profiled_seconds": 0.001168,
+          "percent": 13.526346265199768
+        },
+        {
+          "name": "Gemm",
+          "profiled_seconds": 0.001106,
+          "percent": 12.80833815865663
+        },
+        {
+          "name": "LayerNormalization",
+          "profiled_seconds": 0.001054,
+          "percent": 12.206137811233353
+        },
+        {
+          "name": "MatMul",
+          "profiled_seconds": 0.00071,
+          "percent": 8.222350897510132
+        },
+        {
+          "name": "FusedMatMul",
+          "profiled_seconds": 0.000644,
+          "percent": 7.458019687319051
+        },
+        {
+          "name": "Mul",
+          "profiled_seconds": 0.000533,
+          "percent": 6.172553561088593
+        },
+        {
+          "name": "Add",
+          "profiled_seconds": 0.000525,
+          "percent": 6.079907353792704
+        },
+        {
+          "name": "Conv",
+          "profiled_seconds": 0.000404,
+          "percent": 4.678633468442386
+        },
+        {
+          "name": "Slice",
+          "profiled_seconds": 0.000345,
+          "percent": 3.9953676896352057
+        },
+        {
+          "name": "Pad",
+          "profiled_seconds": 0.000326,
+          "percent": 3.7753329473074695
+        }
+      ]
+    },
+    {
+      "part": "text_encoder",
+      "profiled_node_seconds": 0.030463,
+      "operators": [
+        {
+          "name": "MatMul",
+          "profiled_seconds": 0.007404,
+          "percent": 24.304894462134392
+        },
+        {
+          "name": "LayerNormalization",
+          "profiled_seconds": 0.006272,
+          "percent": 20.58891113810196
+        },
+        {
+          "name": "FusedMatMul",
+          "profiled_seconds": 0.004959,
+          "percent": 16.27876440271805
+        },
+        {
+          "name": "BiasGelu",
+          "profiled_seconds": 0.003089,
+          "percent": 10.140170042346453
+        },
+        {
+          "name": "Add",
+          "profiled_seconds": 0.001652,
+          "percent": 5.4229721301250695
+        },
+        {
+          "name": "Mul",
+          "profiled_seconds": 0.001226,
+          "percent": 4.024554377441486
+        },
+        {
+          "name": "Pad",
+          "profiled_seconds": 0.000764,
+          "percent": 2.5079604766437975
+        },
+        {
+          "name": "Conv",
+          "profiled_seconds": 0.000698,
+          "percent": 2.2913042051012704
+        },
+        {
+          "name": "Slice",
+          "profiled_seconds": 0.000642,
+          "percent": 2.107474641368217
+        },
+        {
+          "name": "Transpose",
+          "profiled_seconds": 0.000639,
+          "percent": 2.097626629025375
+        }
+      ]
+    },
+    {
+      "part": "vector_estimator",
+      "profiled_node_seconds": 0.876477,
+      "operators": [
+        {
+          "name": "DynamicQuantizeMatMul",
+          "profiled_seconds": 0.257604,
+          "percent": 29.390845395828983
+        },
+        {
+          "name": "LayerNormalization",
+          "profiled_seconds": 0.247736,
+          "percent": 28.264974437435324
+        },
+        {
+          "name": "Gelu",
+          "profiled_seconds": 0.146011,
+          "percent": 16.65885128759796
+        },
+        {
+          "name": "Conv",
+          "profiled_seconds": 0.052087,
+          "percent": 5.942768606592073
+        },
+        {
+          "name": "Mul",
+          "profiled_seconds": 0.049014,
+          "percent": 5.592160433188777
+        },
+        {
+          "name": "MatMulIntegerToFloat",
+          "profiled_seconds": 0.029819,
+          "percent": 3.402142897075451
+        },
+        {
+          "name": "Transpose",
+          "profiled_seconds": 0.023735,
+          "percent": 2.7080003240244754
+        },
+        {
+          "name": "Add",
+          "profiled_seconds": 0.012814,
+          "percent": 1.461989304910454
+        },
+        {
+          "name": "Pad",
+          "profiled_seconds": 0.009865,
+          "percent": 1.1255286790183885
+        },
+        {
+          "name": "Where",
+          "profiled_seconds": 0.008922,
+          "percent": 1.017938862057989
+        }
+      ]
+    },
+    {
+      "part": "vocoder",
+      "profiled_node_seconds": 0.292554,
+      "operators": [
+        {
+          "name": "MatMul",
+          "profiled_seconds": 0.079496,
+          "percent": 27.17310308524238
+        },
+        {
+          "name": "BiasGelu",
+          "profiled_seconds": 0.061924,
+          "percent": 21.166690593873266
+        },
+        {
+          "name": "FusedMatMul",
+          "profiled_seconds": 0.057935,
+          "percent": 19.803181634843483
+        },
+        {
+          "name": "LayerNormalization",
+          "profiled_seconds": 0.051258,
+          "percent": 17.520867942328596
+        },
+        {
+          "name": "Conv",
+          "profiled_seconds": 0.028606,
+          "percent": 9.778023886188533
+        },
+        {
+          "name": "Transpose",
+          "profiled_seconds": 0.004793,
+          "percent": 1.6383300177061328
+        },
+        {
+          "name": "Add",
+          "profiled_seconds": 0.003593,
+          "percent": 1.2281493331145703
+        },
+        {
+          "name": "Mul",
+          "profiled_seconds": 0.001783,
+          "percent": 0.60946013385563
+        },
+        {
+          "name": "Pad",
+          "profiled_seconds": 0.001755,
+          "percent": 0.5998892512151602
+        },
+        {
+          "name": "PRelu",
+          "profiled_seconds": 0.000418,
+          "percent": 0.14287960513272763
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,488 @@
+{
+  "reference": "models/round8-latent-retime-g135",
+  "candidate": "models/round12-portable-cached",
+  "note": "Exact float32 regression on Mac CPU; no WER/MOS or speed claim.",
+  "rows": [
+    {
+      "voice": "M1",
+      "case": "ko_long",
+      "speed": 0.7,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 1165325,
+      "sha256": "34c01f55efc759c02d9d318ae5b7c258ed51f751a0ad7e97bf415e004eafec58"
+    },
+    {
+      "voice": "M1",
+      "case": "ko_long",
+      "speed": 1.25,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 652582,
+      "sha256": "aa3a087d540c989c927b6598a553faf40bb3b80a5bfc2257de552b22306e0204"
+    },
+    {
+      "voice": "M1",
+      "case": "ko_long",
+      "speed": 1.3,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 627483,
+      "sha256": "447c5b24a7546744ebe5292dccc203c94d8d4ee007d600df4fb43b219b8f7845"
+    },
+    {
+      "voice": "M1",
+      "case": "ko_long",
+      "speed": 1.5,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 543818,
+      "sha256": "68ff9718288d32b18356186097c912a4489d9c5286f1204bc5a74fe3796e3e05"
+    },
+    {
+      "voice": "M1",
+      "case": "ko_long",
+      "speed": 2.0,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 407864,
+      "sha256": "a85027c3c9906fccf79525530738b6a54ba4f8fc91d0ba5325c7effca89174ab"
+    },
+    {
+      "voice": "M1",
+      "case": "en_long",
+      "speed": 0.7,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 1118550,
+      "sha256": "bdb9cc902bca7b0b26352d8239db81d7fe1d5732f009adb264154ce411e55b91"
+    },
+    {
+      "voice": "M1",
+      "case": "en_long",
+      "speed": 1.25,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 626388,
+      "sha256": "ea3702ccca4f9b0b3c7205c4c79971775364298f31c42a2a6d4f9a4bbcb35c01"
+    },
+    {
+      "voice": "M1",
+      "case": "en_long",
+      "speed": 1.3,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 602296,
+      "sha256": "65a3474b975526b1bffcbf429e7d9d736dfa7f698af6f6695cc825f3ed2bec7b"
+    },
+    {
+      "voice": "M1",
+      "case": "en_long",
+      "speed": 1.5,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 521990,
+      "sha256": "8578d55df6f5db5e81ba51b075080c8721cdf2147e1ac887fc22fc54cb0dc15c"
+    },
+    {
+      "voice": "M1",
+      "case": "en_long",
+      "speed": 2.0,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 391492,
+      "sha256": "5251b22882c5476d665287942eec7fc773d32abc5fd426aa1b2234797acf00f3"
+    },
+    {
+      "voice": "F1",
+      "case": "ko_long",
+      "speed": 0.7,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 1164142,
+      "sha256": "102cd430865a91c4360796d9edea489d78f098123cbcb02bc3bbe034679391ad"
+    },
+    {
+      "voice": "F1",
+      "case": "ko_long",
+      "speed": 1.25,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 651920,
+      "sha256": "d822427383a57659eea830969b845ff5ab46e7c7223512ef7ceef62f5a57398b"
+    },
+    {
+      "voice": "F1",
+      "case": "ko_long",
+      "speed": 1.3,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 626846,
+      "sha256": "8461c2d27d816ff546996299f7bcdcbadf120b3bb9ee7764d47a2ed4e6af7251"
+    },
+    {
+      "voice": "F1",
+      "case": "ko_long",
+      "speed": 1.5,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 543266,
+      "sha256": "5ef2d368c1070aea8731b38ac245a63937714d3ebca425e152c5fb8b1b74a9b1"
+    },
+    {
+      "voice": "F1",
+      "case": "ko_long",
+      "speed": 2.0,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 407450,
+      "sha256": "4b2b89c9a54846e174e49302a26e95ede36a46c1630d1785e356ecdfe4f90276"
+    },
+    {
+      "voice": "F1",
+      "case": "en_long",
+      "speed": 0.7,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 1117411,
+      "sha256": "0a2798fc151cdd5ac0138480a31bc6324f3f2e35f960bc6f8f8242c978993257"
+    },
+    {
+      "voice": "F1",
+      "case": "en_long",
+      "speed": 1.25,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 625750,
+      "sha256": "59eaabfa8a0dba948d4428e1274dd7cb72ce916b9b3ef08eba7c77df1d368acb"
+    },
+    {
+      "voice": "F1",
+      "case": "en_long",
+      "speed": 1.3,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 601683,
+      "sha256": "e2ecbddec286b1164e34e692a04665203f1efc33b087c9f7ccd69f02990f7d28"
+    },
+    {
+      "voice": "F1",
+      "case": "en_long",
+      "speed": 1.5,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 521458,
+      "sha256": "180288c10b9aee31af8b81cd56579d4321b0101e5e3b5e7e95c2e022bd34421f"
+    },
+    {
+      "voice": "F1",
+      "case": "en_long",
+      "speed": 2.0,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 391094,
+      "sha256": "0b5d30ad5b27d03dd1122d10c428553e942a88ad4e4dbb2f298ecbeaefbe6f1b"
+    },
+    {
+      "voice": "M5",
+      "case": "ko_long",
+      "speed": 0.7,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 1163203,
+      "sha256": "6b0a7752c6825a3bcc68515c3fd998173be193d663144c2d0d26e34dcaad3e1c"
+    },
+    {
+      "voice": "M5",
+      "case": "ko_long",
+      "speed": 1.25,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 651393,
+      "sha256": "72d3ac683dd7946f492a6855c4c7e88607dd41236cdef1ce54e9369adb2f08ed"
+    },
+    {
+      "voice": "M5",
+      "case": "ko_long",
+      "speed": 1.3,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 626340,
+      "sha256": "4cfd0ae855dd6be7abb7b70820ebff021298fbbef97f8e16ffcab2877c879f29"
+    },
+    {
+      "voice": "M5",
+      "case": "ko_long",
+      "speed": 1.5,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 542828,
+      "sha256": "ff070716a84db83bf6c08b81a903a3a2979ea5012be475971b0bcfcfc528ea32"
+    },
+    {
+      "voice": "M5",
+      "case": "ko_long",
+      "speed": 2.0,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 407121,
+      "sha256": "72fc220144477e09e3228d0e2badf5e471ad4d07fe7f95752beb801ee6a549ca"
+    },
+    {
+      "voice": "M5",
+      "case": "en_long",
+      "speed": 0.7,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 1116509,
+      "sha256": "d84b1dd61468d0e8bcbc1fa4bd02e6792adff127053dde326eb02981f4697fa5"
+    },
+    {
+      "voice": "M5",
+      "case": "en_long",
+      "speed": 1.25,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 625245,
+      "sha256": "5067d8ab1db645325ffa0fc02b041ec7a255e629fd8ee2c925f334c1a886981b"
+    },
+    {
+      "voice": "M5",
+      "case": "en_long",
+      "speed": 1.3,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 601197,
+      "sha256": "4d6a49ed0afe87081e7de78bc003ea73c831a6ec437ea8fcb83627e7bcc26ea9"
+    },
+    {
+      "voice": "M5",
+      "case": "en_long",
+      "speed": 1.5,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 521037,
+      "sha256": "aa3fdd0627cf51ab6c55236ece8fe899448f1f44c2abb0aa72dcf7f82b73b499"
+    },
+    {
+      "voice": "M5",
+      "case": "en_long",
+      "speed": 2.0,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 390778,
+      "sha256": "e76c2ade45e3a5d1be21e98df68283ed575780b6d56fdddcb34d13ba6fe331fa"
+    },
+    {
+      "voice": "F5",
+      "case": "ko_long",
+      "speed": 0.7,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 1129810,
+      "sha256": "90d70fc86824dc13412ac33218e4d571d8d0650ab916413ca8c20301a751728f"
+    },
+    {
+      "voice": "F5",
+      "case": "ko_long",
+      "speed": 1.25,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 632693,
+      "sha256": "dd9b7615d2801888c56fac6d9afbf4129f220c22d9d7af3aea874d667b6a5d9b"
+    },
+    {
+      "voice": "F5",
+      "case": "ko_long",
+      "speed": 1.3,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 608359,
+      "sha256": "f64616cfe052cb1491f34b243c01172555d8ef6b8f4c189c25833c1020ce9b31"
+    },
+    {
+      "voice": "F5",
+      "case": "ko_long",
+      "speed": 1.5,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 527244,
+      "sha256": "163667edf1554ab25b9ab46293a7d103482ea1093a1db5cf4da0254e9b4bae41"
+    },
+    {
+      "voice": "F5",
+      "case": "ko_long",
+      "speed": 2.0,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 395433,
+      "sha256": "37a9a2c582f25bca356ed88d0304e7d4aae215716f033e8a52074b8d5a01c1ab"
+    },
+    {
+      "voice": "F5",
+      "case": "en_long",
+      "speed": 0.7,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 1083371,
+      "sha256": "c56935882e352d7110d6e993c68db7156f65e9f3ea9cb1de3c4e1f67d74ab435"
+    },
+    {
+      "voice": "F5",
+      "case": "en_long",
+      "speed": 1.25,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 606687,
+      "sha256": "88d54a2240c4220edc645eed8c23e20fdf63ba46ed0aa55423a1f5b43d29f991"
+    },
+    {
+      "voice": "F5",
+      "case": "en_long",
+      "speed": 1.3,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 583353,
+      "sha256": "fda937c137f080bc7bfded44c713eb766834276870fe5629e5e1459c0510c1f0"
+    },
+    {
+      "voice": "F5",
+      "case": "en_long",
+      "speed": 1.5,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 505573,
+      "sha256": "fe6a5cb8f50451e8b88b1b96e8137cac9c07a8d159f2d56ddadbcfd089bc3784"
+    },
+    {
+      "voice": "F5",
+      "case": "en_long",
+      "speed": 2.0,
+      "vector_calls": {
+        "reference": 8,
+        "candidate": 8
+      },
+      "float32_bitidentical": true,
+      "samples": 379179,
+      "sha256": "38cf87e6fcc985ebc7d29ec461d02c82e885f5b8a4820730410463b2f9e7a92e"
+    }
+  ],
+  "complete": true
+}

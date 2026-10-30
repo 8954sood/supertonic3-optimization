@@ -1,0 +1,157 @@
+{
+  "round": 12,
+  "date": "2026-10-30",
+  "baseline_commit": "877ea6e",
+  "branch": "main",
+  "pull": "git pull --ff-only origin main: already up to date; no local changes at start",
+  "decision": "Adopt opt-in portable per-utterance conditioning cache for the measured F1200 retime package; preserve Linux v4.",
+  "model": "F1200 step 1200; same original50-trained weights and existing retime-g135 vocoder",
+  "invariants": {
+    "denoising_calls_per_chunk": 8,
+    "inference_threads": 1,
+    "quantization_changed": false,
+    "weights_changed": false,
+    "waveform_postprocessing_added": false
+  },
+  "builder": "prepare_condition_cache.py",
+  "build_receipt": {
+    "source": "models/round8-latent-retime-g135",
+    "candidate": "models/round12-portable-cached",
+    "final_builder_reproduces_measured_graph_bytes": true,
+    "source_files_unchanged": true,
+    "portable_condition_cache": {
+      "source_vector_sha256": "7c81ab7f0ddcc4266743701599a8708d2edd1be04285770f996e84a8bb5f4447",
+      "condition_sha256": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+      "initializer_count": 628,
+      "initializer_bitidentity": true,
+      "steps_changed": false,
+      "quantization_changed": false,
+      "shared_assets": true
+    },
+    "transformation": {
+      "static_nodes": 194,
+      "loop_nodes_before": 1510,
+      "loop_nodes_after": 1316,
+      "cached_tensors": 19,
+      "boundary": [
+        "/Reshape_1_output_0",
+        "/vector_estimator/Tile_3_output_0",
+        "/vector_estimator/vector_field/main_blocks.11/attention/Concat_2_output_0",
+        "/vector_estimator/vector_field/main_blocks.15/attn/Concat_2_output_0",
+        "/vector_estimator/vector_field/main_blocks.15/attn/Transpose_output_0",
+        "/vector_estimator/vector_field/main_blocks.17/attention/Concat_2_output_0",
+        "/vector_estimator/vector_field/main_blocks.21/attn/Concat_2_output_0",
+        "/vector_estimator/vector_field/main_blocks.21/attn/Transpose_output_0",
+        "/vector_estimator/vector_field/main_blocks.23/attention/Concat_2_output_0",
+        "/vector_estimator/vector_field/main_blocks.3/Transpose_2_output_0",
+        "/vector_estimator/vector_field/main_blocks.3/attn/Cast_2_output_0",
+        "/vector_estimator/vector_field/main_blocks.3/attn/Cast_3_output_0",
+        "/vector_estimator/vector_field/main_blocks.3/attn/Concat_2_output_0",
+        "/vector_estimator/vector_field/main_blocks.3/attn/Cos_output_0",
+        "/vector_estimator/vector_field/main_blocks.3/attn/Sin_output_0",
+        "/vector_estimator/vector_field/main_blocks.3/attn/Transpose_output_0",
+        "/vector_estimator/vector_field/main_blocks.5/attention/Concat_2_output_0",
+        "/vector_estimator/vector_field/main_blocks.9/attn/Concat_2_output_0",
+        "/vector_estimator/vector_field/main_blocks.9/attn/Transpose_output_0"
+      ]
+    },
+    "output_sha256": {
+      "onnx/vector_estimator.onnx": "0a4102968d90c7f2ae307e5ba7771b1ce600d0cde213433d145e9903b37523a2",
+      "onnx/condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251"
+    }
+  },
+  "measured_hardware": {
+    "cpu": "Apple M4 Max",
+    "provider": "CPUExecutionProvider",
+    "machine": "macOS-27.0.1-arm64-arm-64bit",
+    "note": "Mac only. No new Oracle ARM or EPYC server measurement."
+  },
+  "paired_synthesis": {
+    "combinations": 12,
+    "pairs_each": 5,
+    "float32_bitidentical": true,
+    "median_of_combination_paired_reductions_percent": 4.011020299426321,
+    "data": "results/round12_paired_portable_cache.json",
+    "rss_scope": "Two resident engines in one process, not single-engine production memory."
+  },
+  "paired_http": {
+    "combinations": 8,
+    "pairs_each": 3,
+    "pcm16_bitidentical": true,
+    "median_of_combination_paired_wall_reductions_percent": 3.4776821101276054,
+    "median_of_combination_paired_synthesis_reductions_percent": 3.6557675799829603,
+    "median_of_combination_paired_first_audio_reductions_percent": 2.8677141647334037,
+    "data": "results/round12_paired_http.json",
+    "exception": "M1 KO speed 1.0: wall reduction -0.13%, no demonstrated improvement."
+  },
+  "regression": {
+    "float32_pairs": 40,
+    "voices": [
+      "M1",
+      "F1",
+      "M5",
+      "F5"
+    ],
+    "cases": [
+      "ko_long",
+      "en_long"
+    ],
+    "speeds": [
+      0.7,
+      1.25,
+      1.3,
+      1.5,
+      2.0
+    ],
+    "actual_vector_calls_each": 8,
+    "data": "results/round12_cache_regression.json"
+  },
+  "streaming_runtime": {
+    "data": "results/round12_streaming_runtime.json",
+    "actual_vector_calls_per_three_chunks": 24,
+    "pcm16_pairs": 4,
+    "onnx_calling_threads": [
+      "tts_0"
+    ],
+    "cancellation": {
+      "aborted_vector_calls": 8,
+      "full_request_vector_calls": 216,
+      "recovery_status": 200,
+      "recovered_seconds": 0.10045191604876891,
+      "admission_released": true
+    }
+  },
+  "preparation_tests": {
+    "passed": 3,
+    "command": "python tests_condition_cache.py",
+    "scope": "Copied/hard-linked source protection, metadata, split failure cleanup and invalid output rejection."
+  },
+  "model_publication": "No new learned model or HF upload. Rebuild from the pinned public F1200/retime package.",
+  "commands": [
+    "python prepare_condition_cache.py --source models/round8-latent-retime-g135 --output models/round12-portable-cached --link-assets",
+    "python serve.py --model models/round12-portable-cached",
+    "python experiments/paired_portable.py --reference models/round8-latent-retime-g135 --candidate models/round12-portable-cached --output results/portable-new.json --pairs 5",
+    "python experiments/paired_http_streaming.py --reference models/round8-latent-retime-g135 --candidate models/round12-portable-cached --output results/http-new.json --pairs 3",
+    "python experiments/check_portable_cache.py --reference models/round8-latent-retime-g135 --candidate models/round12-portable-cached --output results/regression-new.json",
+    "python experiments/check_streaming_runtime.py --model models/round12-portable-cached --output results/streaming-runtime-new.json"
+  ],
+  "remaining": [
+    "1.5x pronunciation blurring reported by user remains unresolved; corrected feedback is not confirmed word omissions.",
+    "No new WER/CER/MOS claim; bit-identical output preserves the reference limitations.",
+    "No ARM hardware extrapolation. Native v4 already caches conditioning and is not changed.",
+    "Further candidates: profile dominant LayerNormalization, dynamic INT8 matmul and exact GELU without using approximate math; avoid repeating rejected round10 kernels without new evidence."
+  ],
+  "local_demo_smoke": {
+    "port": 7788,
+    "model": "models/round12-portable-cached",
+    "health_status": 200,
+    "voices_loaded": 10,
+    "steps": 8,
+    "threads": 1,
+    "speed_statuses": {
+      "1.25": 200,
+      "1.30": 200,
+      "1.251": 422
+    }
+  }
+}

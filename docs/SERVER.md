@@ -16,6 +16,23 @@ python serve.py --model .hf-assets/model/models/round8-latent-retime-g135
 
 정배속만 필요하면 기본 F1200 패키지를 다운로드하고 `python serve.py`로 실행해도 됩니다. 이미 준비한 패키지는 `--model models/round8-latent-retime-g135`처럼 지정합니다. 자동 다운로드나 모델 변환은 서버 시작 시 수행하지 않습니다. Linux AVX2용 exact 패키지도 같은 인자로 지정할 수 있으며, Mac·ARM은 이식 가능한 표준 ORT 패키지를 사용합니다.
 
+### 표준 ORT 조건 캐시 선택
+
+같은 문장 안에서 변하지 않는 조건을 한 번 계산해 8스텝이 재사용하는 패키지를 준비할 수 있습니다. 서버 코드를 바꾸거나 가중치를 재학습하지 않습니다. 위에서 다운로드한 패키지에 한 번만 적용하세요.
+
+```bash
+python prepare_condition_cache.py \
+  --source .hf-assets/model/models/round8-latent-retime-g135 \
+  --output models/F1200-portable-cached
+python serve.py --model models/F1200-portable-cached
+```
+
+기본 F1200에도 같은 도구를 사용할 수 있습니다. `--source`를 다운로드한 `round5-original50-student`로 바꾸세요. 결과 패키지는 원본과 별도 폴더로 만들고, 2배속 보정 등 원본 설정을 유지합니다. 기본은 파일을 복사합니다. 디스크를 아끼려면 준비 명령에 `--link-assets`를 붙여 변경하지 않은 파일을 하드 링크로 공유할 수 있습니다. 이때 두 패키지의 파일을 직접 덮어쓰지 마세요. 서로 다른 파일시스템에서는 복사로 전환합니다.
+
+준비 과정은 ONNX 그래프·가중치 전체를 읽으므로 RAM이 넉넉한 개발 환경에서 수행하세요. Linux v4 등 `condition.onnx`가 이미 있는 패키지는 중복 변환을 거부합니다. 공개된 같은 가중치로 재현하는 엔진 변경이므로 추가 Hugging Face 모델 다운로드는 필요하지 않습니다.
+
+M4 Max·추론 한 스레드에서 원래 retime 패키지와 교대로 비교한 실제 TCP 스트리밍 8조합의 전체 응답 시간 감소율 중앙값은 **3.5%**였습니다. 남성 한국어 1.0×는 차이가 없었고, 다른 7조합은 약 1.1~6.0% 줄었습니다. 같은 입력의 PCM은 전부 일치했습니다. ARM에서의 개선율은 아직 측정하지 않았습니다. [12차 기록](../records/2026-10-30/ROUND12_ENGINE.md) · [원시 HTTP 비교](../results/round12_paired_http.json)
+
 ## 호환 API
 
 | 메서드·경로 | 용도 |
