@@ -8,8 +8,14 @@
 #include <pthread.h>
 #include "onnxruntime_c_api.h"
 
-__attribute__((visibility("default")))
-void row_norm(const float* x, const float* scale, const float* bias,
+#ifndef ROW_TILE
+#define ROW_TILE 4
+#endif
+#if ROW_TILE != 4 && ROW_TILE != 8 && ROW_TILE != 16 && ROW_TILE != 32
+#error "ROW_TILE must be 4, 8, 16 or 32"
+#endif
+
+static void row_norm_four(const float* x, const float* scale, const float* bias,
               float* y, int64_t rows, int64_t width, float epsilon) {
     int64_t row = 0;
     for (; row + 4 <= rows; row += 4) {
@@ -68,6 +74,82 @@ void row_norm(const float* x, const float* scale, const float* bias,
 #endif
         }
     }
+}
+
+#if ROW_TILE > 4
+static __attribute__((always_inline)) inline int64_t row_norm_tile(
+    const float* x,const float* scale,const float* bias,float* y,
+    int64_t rows,int64_t width,float epsilon,int tile) {
+    int64_t row=0;
+    for(;row+tile<=rows;row+=tile) {
+        float32x4_t means[tile/4],m2[tile/4];
+        for(int group=0;group<tile/4;++group) {
+            means[group]=vdupq_n_f32(0);m2[group]=vdupq_n_f32(0);
+        }
+        for(int64_t h=0;h<width;++h) {
+            float32x4_t count=vdupq_n_f32((float)(h+1));
+#pragma clang loop unroll(full)
+            for(int group=0;group<tile/4;++group) {
+                int64_t r=row+4*group;
+                float32x4_t value={x[r*width+h],x[(r+1)*width+h],
+                                   x[(r+2)*width+h],x[(r+3)*width+h]};
+                float32x4_t delta=vsubq_f32(value,means[group]);
+                means[group]=vaddq_f32(means[group],vdivq_f32(delta,count));
+                float32x4_t delta2=vsubq_f32(value,means[group]);
+#ifdef FUSED_M2
+                m2[group]=vfmaq_f32(m2[group],delta,delta2);
+#else
+                m2[group]=vaddq_f32(m2[group],vmulq_f32(delta,delta2));
+#endif
+            }
+        }
+        float mean_values[tile],deviations[tile];
+        for(int group=0;group<tile/4;++group) {
+            vst1q_f32(mean_values+4*group,means[group]);
+            vst1q_f32(deviations+4*group,vsqrtq_f32(vaddq_f32(
+                vdivq_f32(m2[group],vdupq_n_f32((float)width)),vdupq_n_f32(epsilon))));
+        }
+        for(int r=0;r<tile;++r) {
+            const float* input=x+(row+r)*width;float* output=y+(row+r)*width;
+            int64_t h=0;
+            for(;h+4<=width;h+=4) {
+                float32x4_t value=vdivq_f32(vsubq_f32(vld1q_f32(input+h),
+                    vdupq_n_f32(mean_values[r])),vdupq_n_f32(deviations[r]));
+#ifdef FUSED_OUTPUT
+                value=vfmaq_f32(vld1q_f32(bias+h),value,vld1q_f32(scale+h));
+#else
+                value=vaddq_f32(vmulq_f32(value,vld1q_f32(scale+h)),vld1q_f32(bias+h));
+#endif
+                vst1q_f32(output+h,value);
+            }
+            for(;h<width;++h) {
+                float value=(input[h]-mean_values[r])/deviations[r];
+#ifdef FUSED_OUTPUT
+                output[h]=fmaf(value,scale[h],bias[h]);
+#else
+                output[h]=value*scale[h]+bias[h];
+#endif
+            }
+        }
+    }
+    return row;
+}
+#endif
+
+__attribute__((visibility("default")))
+void row_norm(const float* x,const float* scale,const float* bias,
+              float* y,int64_t rows,int64_t width,float epsilon) {
+    int64_t done=0;
+#if ROW_TILE > 4
+    done=row_norm_tile(x,scale,bias,y,rows,width,epsilon,ROW_TILE);
+#if ROW_TILE > 16
+    done+=row_norm_tile(x+done*width,scale,bias,y+done*width,rows-done,width,epsilon,16);
+#endif
+#if ROW_TILE > 8
+    done+=row_norm_tile(x+done*width,scale,bias,y+done*width,rows-done,width,epsilon,8);
+#endif
+#endif
+    row_norm_four(x+done*width,scale,bias,y+done*width,rows-done,width,epsilon);
 }
 
 /* ORT adapter. Only the last-axis FP32, one-dimensional affine case is accepted. */

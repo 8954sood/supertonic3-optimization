@@ -1,0 +1,31 @@
+{
+  "model": "round13-row-norm",
+  "reference": "round12-portable-cached",
+  "archive_bytes": 169069216,
+  "contains_native_sources": true,
+  "contains_native_binaries": false,
+  "native_build": {
+    "machine": "arm64",
+    "system": "Darwin",
+    "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+    "source_sha256": "ecbd921603741c3707be084c3547301abfb8981991859b96a280c598bf3d790c",
+    "output": "librow_norm.dylib",
+    "ort_api_version": 23,
+    "flags": [
+      "-O3",
+      "-ffp-contract=off",
+      "-DFUSED_M2",
+      "-DFUSED_OUTPUT",
+      "-DROW_TILE=16"
+    ],
+    "rows": 16,
+    "note": "Explicit FMA at the same two operations as the measured ORT kernel; no reciprocal approximation."
+  },
+  "extracted_runtime": {
+    "sha256": "ebb11a1a6e7014cdce36858b345bb52b681d2c997993de507f8fadd371c0f80b",
+    "samples": 80661,
+    "row_norm": true
+  },
+  "float32_bitidentical": true,
+  "temporary_archive_and_extraction_removed": true
+}

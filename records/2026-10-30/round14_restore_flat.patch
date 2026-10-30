@@ -1,0 +1,52 @@
+--- a/native/row_norm.c
++++ b/native/row_norm.c
+@@ -79,4 +79,6 @@
+-#if ROW_TILE > 4
+-static __attribute__((always_inline)) inline int64_t row_norm_tile(
+-    const float* x,const float* scale,const float* bias,float* y,
+-    int64_t rows,int64_t width,float epsilon,int tile) {
++__attribute__((visibility("default")))
++void row_norm(const float* x, const float* scale, const float* bias,
++              float* y, int64_t rows, int64_t width, float epsilon) {
++#if ROW_TILE == 4
++    row_norm_four(x,scale,bias,y,rows,width,epsilon);
++#else
+@@ -84,3 +86,3 @@
+-    for(;row+tile<=rows;row+=tile) {
+-        float32x4_t means[tile/4],m2[tile/4];
+-        for(int group=0;group<tile/4;++group) {
++    for(;row+ROW_TILE<=rows;row+=ROW_TILE) {
++        float32x4_t means[ROW_TILE/4],m2[ROW_TILE/4];
++        for(int group=0;group<ROW_TILE/4;++group) {
+@@ -92 +94 @@
+-            for(int group=0;group<tile/4;++group) {
++            for(int group=0;group<ROW_TILE/4;++group) {
+@@ -106,2 +108,2 @@
+-        float mean_values[tile],deviations[tile];
+-        for(int group=0;group<tile/4;++group) {
++        float mean_values[ROW_TILE],deviations[ROW_TILE];
++        for(int group=0;group<ROW_TILE/4;++group) {
+@@ -112 +114 @@
+-        for(int r=0;r<tile;++r) {
++        for(int r=0;r<ROW_TILE;++r) {
+@@ -135,18 +137,2 @@
+-    return row;
+-}
+-#endif
+-
+-__attribute__((visibility("default")))
+-void row_norm(const float* x,const float* scale,const float* bias,
+-              float* y,int64_t rows,int64_t width,float epsilon) {
+-    int64_t done=0;
+-#if ROW_TILE > 4
+-    done=row_norm_tile(x,scale,bias,y,rows,width,epsilon,ROW_TILE);
+-#if ROW_TILE > 16
+-    done+=row_norm_tile(x+done*width,scale,bias,y+done*width,rows-done,width,epsilon,16);
+-#endif
+-#if ROW_TILE > 8
+-    done+=row_norm_tile(x+done*width,scale,bias,y+done*width,rows-done,width,epsilon,8);
+-#endif
+-#endif
+-    row_norm_four(x+done*width,scale,bias,y+done*width,rows-done,width,epsilon);
++    row_norm_four(x+row*width,scale,bias,y+row*width,rows-row,width,epsilon);
++#endif

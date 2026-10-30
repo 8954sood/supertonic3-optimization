@@ -1,0 +1,5 @@
+{
+  "intermediate_flat_source_sha256": "0905b4a1c1a5744c8a8f74a97f2272671024162d6bd8dd7fb94c85f3ac64712b",
+  "matches_measured_flat_source": true,
+  "restore_patch": "records/2026-10-30/round14_restore_flat.patch"
+}

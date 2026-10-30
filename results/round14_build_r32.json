@@ -1,0 +1,16 @@
+{
+  "machine": "arm64",
+  "system": "Darwin",
+  "source_sha256": "0905b4a1c1a5744c8a8f74a97f2272671024162d6bd8dd7fb94c85f3ac64712b",
+  "output": "librow_norm_r32.dylib",
+  "ort_api_version": 23,
+  "flags": [
+    "-O3",
+    "-ffp-contract=off",
+    "-DFUSED_M2",
+    "-DFUSED_OUTPUT",
+    "-DROW_TILE=32"
+  ],
+  "rows": 32,
+  "note": "Explicit FMA at the same two operations as the measured ORT kernel; no reciprocal approximation."
+}

@@ -1,0 +1,17 @@
+{
+  "machine": "arm64",
+  "system": "Darwin",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+  "source_sha256": "ecbd921603741c3707be084c3547301abfb8981991859b96a280c598bf3d790c",
+  "output": "librow_norm.dylib",
+  "ort_api_version": 23,
+  "flags": [
+    "-O3",
+    "-ffp-contract=off",
+    "-DFUSED_M2",
+    "-DFUSED_OUTPUT",
+    "-DROW_TILE=16"
+  ],
+  "rows": 16,
+  "note": "Explicit FMA at the same two operations as the measured ORT kernel; no reciprocal approximation."
+}

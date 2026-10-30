@@ -41,7 +41,7 @@ class RowNormalizationTests(unittest.TestCase):
         rng=np.random.RandomState(101)
         for epsilon in [1e-6,1e-5]:
             reference,candidate=self.session(False,epsilon),self.session(True,epsilon)
-            for rows in [1,2,3,4,5,7,8,13,81,513]:
+            for rows in [1,2,3,4,5,7,8,9,13,15,16,17,31,32,33,47,48,63,64,65,81,129,513]:
                 for magnitude,offset in [(1,0),(1e-6,0),(1e3,0),(0,1024),(1,1e6)]:
                     with self.subTest(epsilon=epsilon,rows=rows,magnitude=magnitude,offset=offset):
                         x=(rng.randn(1,rows,512)*magnitude+offset).astype(np.float32)

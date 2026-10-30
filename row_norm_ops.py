@@ -10,11 +10,11 @@ from onnx import TensorProto, helper
 import onnxruntime as ort
 
 
-@lru_cache(maxsize=1)
-def library_path():
+@lru_cache(maxsize=8)
+def library_path(override=None):
     if platform.machine().lower() not in {'arm64','aarch64'} or platform.system() not in {'Darwin','Linux'}:
         raise RuntimeError('The optional row norm kernel needs ARM64; use the standard ORT package')
-    path=Path(__file__).resolve().parent/'native'/('librow_norm.dylib' if platform.system()=='Darwin' else 'librow_norm.so')
+    path=Path(override).resolve() if override else Path(__file__).resolve().parent/'native'/('librow_norm.dylib' if platform.system()=='Darwin' else 'librow_norm.so')
     if not path.is_file():
         raise FileNotFoundError('Build the optional kernel first: python native/build_row_norm.py')
     library=ctypes.CDLL(str(path))
@@ -34,7 +34,7 @@ def library_path():
     settings=ort.SessionOptions();settings.intra_op_num_threads=1;settings.inter_op_num_threads=1
     session=ort.InferenceSession(model.SerializeToString(),settings,providers=['CPUExecutionProvider'])
     rng=np.random.RandomState(91)
-    for rows in [1,4,5,81]:
+    for rows in [1,4,5,8,9,16,17,32,33,81]:
         x=rng.randn(1,rows,512).astype(np.float32)
         scale=rng.randn(512).astype(np.float32);bias=rng.randn(512).astype(np.float32)
         expected=session.run(None,dict(x=x,scale=scale,bias=bias))[0]

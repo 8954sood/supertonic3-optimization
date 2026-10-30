@@ -12,6 +12,7 @@ import statistics
 import time
 import numpy as np
 import psutil
+from experiments.row_norm_variant import engine_for_library
 
 
 def main():
@@ -22,13 +23,18 @@ def main():
     p.add_argument('--pairs',type=int,default=5)
     p.add_argument('--speeds',type=float,nargs='+',default=[1.0,1.5,2.0])
     p.add_argument('--voices',nargs='+',default=['M1','F1'])
+    p.add_argument('--reference-library')
+    p.add_argument('--candidate-library')
     a=p.parse_args()
     if a.output.exists() or a.pairs<3:p.error('Use a new output and at least three pairs')
     report=dict(machine=platform.platform(),threads=1,steps=8,
         reference=a.reference,candidate=a.candidate,pairs=a.pairs,
         scope='Alternating warm pairs in one process on this Mac, no hardware extrapolation.',
         rows=[],complete=False)
-    engines={name:Engine(model=model) for name,model in [('reference',a.reference),('candidate',a.candidate)]}
+    engines={}
+    for name,model,library in [('reference',a.reference,a.reference_library),('candidate',a.candidate,a.candidate_library)]:
+        engines[name]=engine_for_library(model,library)
+    report['libraries']={'reference':a.reference_library,'candidate':a.candidate_library}
     for voice in a.voices:
         from supertonic.loader import load_voice_style_from_json_file
         styles={name:load_voice_style_from_json_file(e.root/f'voice_styles/{voice}.json') for name,e in engines.items()}

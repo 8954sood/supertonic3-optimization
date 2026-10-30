@@ -1,0 +1,56 @@
+{
+  "scope": "Single-thread C call diagnostic, not full TTS RTF; rotating/reversing order, warm kernels.",
+  "rows": [
+    {
+      "frames": 5,
+      "float32_bytes_identical": true,
+      "median_microseconds": {
+        "r4": 13.020500773563981,
+        "r8": 13.042008504271507,
+        "r16": 12.999982573091984,
+        "r32": 12.91598891839385
+      }
+    },
+    {
+      "frames": 17,
+      "float32_bytes_identical": true,
+      "median_microseconds": {
+        "r4": 22.665975848212838,
+        "r8": 16.0624913405627,
+        "r16": 12.91697844862938,
+        "r32": 22.12502295151353
+      }
+    },
+    {
+      "frames": 33,
+      "float32_bytes_identical": true,
+      "median_microseconds": {
+        "r4": 33.58299727551639,
+        "r8": 21.915999241173267,
+        "r16": 16.33301144465804,
+        "r32": 15.833007637411356
+      }
+    },
+    {
+      "frames": 81,
+      "float32_bytes_identical": true,
+      "median_microseconds": {
+        "r4": 60.666498029604554,
+        "r8": 36.68747376650572,
+        "r16": 25.540997739881277,
+        "r32": 31.29098331555724
+      }
+    },
+    {
+      "frames": 257,
+      "float32_bytes_identical": true,
+      "median_microseconds": {
+        "r4": 148.41646770946681,
+        "r8": 85.5209946166724,
+        "r16": 55.459007853642106,
+        "r32": 53.37450420483947
+      }
+    }
+  ],
+  "complete": true
+}

@@ -1,0 +1,85 @@
+{
+  "round": 14,
+  "baseline_commit": "4b47bbd",
+  "selected": "16-row NEON tile with 8/4/scalar tails",
+  "model": "models/round13-row-norm",
+  "weights_and_graphs_changed": false,
+  "quantization_changed": false,
+  "denoising_steps": 8,
+  "inference_threads": 1,
+  "hardware": "Mac M4 Max CPU; no Oracle ARM or EPYC measurement",
+  "reference": {
+    "reference_commit": "4b47bbd",
+    "source_sha256": "b9df79a1c04bc2b097a10160e27db206f3ba1e5e50ea317dd2ac1f4b9b64c6d6",
+    "library_sha256": "0141245bf6cc3d6ff1a07f8dd4f1097fd8fb38058723a65c65c8303b46c2e054",
+    "rows": 4,
+    "note": "Frozen compiled round13 library on this Mac; no timing comparison across machines."
+  },
+  "selected_build": {
+    "machine": "arm64",
+    "system": "Darwin",
+    "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+    "source_sha256": "ecbd921603741c3707be084c3547301abfb8981991859b96a280c598bf3d790c",
+    "output": "librow_norm.dylib",
+    "ort_api_version": 23,
+    "flags": [
+      "-O3",
+      "-ffp-contract=off",
+      "-DFUSED_M2",
+      "-DFUSED_OUTPUT",
+      "-DROW_TILE=16"
+    ],
+    "rows": 16,
+    "note": "Explicit FMA at the same two operations as the measured ORT kernel; no reciprocal approximation."
+  },
+  "comparison": {
+    "core_median_case_paired_time_reduction_percent": 3.3040643396246603,
+    "core_combinations": 12,
+    "pairs_each": 6,
+    "http_median_case_paired_wall_reduction_percent": 3.8227080243895815,
+    "http_median_case_paired_synthesis_reduction_percent": 3.9432082515938993,
+    "http_median_case_paired_first_audio_reduction_percent": 3.1159851120579285,
+    "http_combinations": 8,
+    "public_to_selected_median_case_paired_time_reduction_percent": 15.27514150975588,
+    "public_combinations": 8
+  },
+  "candidates": {
+    "flat16": "All 12 cases improved against frozen row4, retained only as a trial.",
+    "hierarchical32": "Improved vs row4; head-to-head median reduction vs hierarchical16 -0.061%, no consistent advantage. Not selected.",
+    "hierarchical16": "Selected: same practical gain with smaller maximum group."
+  },
+  "strict_byte_pairs": 96,
+  "speeds": [
+    0.7,
+    1,
+    1.25,
+    1.3,
+    1.5,
+    2
+  ],
+  "voices": [
+    "M1",
+    "F1",
+    "M5",
+    "F5"
+  ],
+  "tests": {
+    "native_tests": 6,
+    "native_numerical_subcases": 230,
+    "streaming_runtime": "results/round14_streaming_runtime.json",
+    "package_check": "results/round14_package_check.json"
+  },
+  "restore_flat": {
+    "intermediate_flat_source_sha256": "0905b4a1c1a5744c8a8f74a97f2272671024162d6bd8dd7fb94c85f3ac64712b",
+    "matches_measured_flat_source": true,
+    "restore_patch": "records/2026-10-30/round14_restore_flat.patch"
+  },
+  "remaining": "Apply the already verified exact row normalization to text-encoder and vocoder norms; preserve bytes before adoption.",
+  "commands": [
+    "python native/build_row_norm.py",
+    "python native/build_row_norm.py --rows 16 --output native/librow_norm_h16.dylib",
+    "python experiments/paired_portable.py --reference models/round13-row-norm --candidate models/round13-row-norm --reference-library native/librow_norm_round13.dylib --candidate-library native/librow_norm_h16.dylib --output results/row14-new.json --pairs 6",
+    "python tests_row_norm.py",
+    "python serve.py --model models/round13-row-norm"
+  ]
+}

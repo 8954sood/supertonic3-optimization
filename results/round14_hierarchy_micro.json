@@ -1,0 +1,64 @@
+{
+  "machine": "macOS-27.0.1-arm64-arm-64bit",
+  "libraries": {
+    "r4": "native/librow_norm_round13.dylib",
+    "r8": "native/librow_norm_r8.dylib",
+    "h16": "native/librow_norm_h16.dylib",
+    "h32": "native/librow_norm_h32.dylib"
+  },
+  "scope": "Single-thread direct C calls, not full TTS RTF. Order rotates through all positions, then reverses.",
+  "repeats": 80,
+  "rows": [
+    {
+      "frames": 5,
+      "float32_bytes_identical": true,
+      "median_microseconds": {
+        "r4": 5.958951078355312,
+        "r8": 5.999987479299307,
+        "h16": 5.917012458667159,
+        "h32": 5.916488589718938
+      }
+    },
+    {
+      "frames": 17,
+      "float32_bytes_identical": true,
+      "median_microseconds": {
+        "r4": 11.999974958598614,
+        "r8": 8.500006515532732,
+        "h16": 6.791960913687944,
+        "h32": 6.791029591113329
+      }
+    },
+    {
+      "frames": 33,
+      "float32_bytes_identical": true,
+      "median_microseconds": {
+        "r4": 20.042003598064184,
+        "r8": 13.042008504271507,
+        "h16": 9.583483915776014,
+        "h32": 9.479495929554105
+      }
+    },
+    {
+      "frames": 81,
+      "float32_bytes_identical": true,
+      "median_microseconds": {
+        "r4": 44.29201362654567,
+        "r8": 26.79100725799799,
+        "h16": 18.16649455577135,
+        "h32": 18.167018424719572
+      }
+    },
+    {
+      "frames": 257,
+      "float32_bytes_identical": true,
+      "median_microseconds": {
+        "r4": 132.35450023785233,
+        "r8": 75.95852366648614,
+        "h16": 48.62499190494418,
+        "h32": 48.83352085016668
+      }
+    }
+  ],
+  "complete": true
+}

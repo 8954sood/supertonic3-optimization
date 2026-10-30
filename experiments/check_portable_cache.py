@@ -11,6 +11,7 @@ import numpy as np
 from supertonic.loader import load_voice_style_from_json_file
 from benchmark import TEXTS
 from experiments.check_streaming_runtime import CountedSession
+from experiments.row_norm_variant import engine_for_library
 
 
 def main():
@@ -20,16 +21,19 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--cases", nargs="+", choices=list(TEXTS), default=["ko_long", "en_long"])
     parser.add_argument("--speeds", nargs="+", type=float, default=[0.70, 1.25, 1.30, 1.50, 2.0])
+    parser.add_argument("--reference-library")
+    parser.add_argument("--candidate-library")
     args = parser.parse_args()
     if args.output.exists():
         parser.error("Choose a new output")
-    engines = {name: Engine(model=path) for name, path in
-               [("reference", args.reference), ("candidate", args.candidate)]}
+    engines = {name: engine_for_library(path,library) for name,path,library in
+               [("reference",args.reference,args.reference_library),("candidate",args.candidate,args.candidate_library)]}
     for engine in engines.values():
         engine.sessions["vector_estimator"] = CountedSession(engine.sessions["vector_estimator"])
     report = dict(reference=args.reference, candidate=args.candidate,
                   note="Exact float32 regression on Mac CPU; no WER/MOS or speed claim.",
                   rows=[], complete=False)
+    report['libraries']={'reference':args.reference_library,'candidate':args.candidate_library}
     # Include new fractional rates, slow speech, long text and additional styles.
     for voice in ["M1", "F1", "M5", "F5"]:
         styles = {name: load_voice_style_from_json_file(engine.root / f"voice_styles/{voice}.json")

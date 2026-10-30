@@ -16,6 +16,7 @@ import httpx
 import uvicorn
 from server import create_app
 from experiments.benchmark_streaming import TEXTS, receive
+from experiments.row_norm_variant import engine_for_library
 
 
 def main():
@@ -24,17 +25,20 @@ def main():
     p.add_argument('--candidate',required=True)
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--pairs',type=int,default=3)
+    p.add_argument('--reference-library')
+    p.add_argument('--candidate-library')
     a=p.parse_args()
     if a.output.exists() or a.pairs<3:p.error('Use a new output and at least three pairs')
     report=dict(reference=a.reference,candidate=a.candidate,machine=platform.platform(),
         threads_per_inference=1,steps_per_chunk=8,transport='Local TCP, alternating complete requests; no concurrent inference.',
-        note='Same text/chunk/seed/voice/speed and PCM required. Mac timings are not ARM timings.',
+        note='Same text/chunk/seed/voice/speed and PCM required. Mac timings are not Oracle ARM server timings.',
         rows=[],complete=False)
+    report['libraries']={'reference':a.reference_library,'candidate':a.candidate_library}
     servers,threads,sockets,urls=[],[],[],{}
     with tempfile.TemporaryDirectory() as tmp:
         try:
-            for name,model in [('candidate',a.candidate),('reference',a.reference)]:
-                app=create_app(model_path=model,custom_styles_dir=Path(tmp)/name)
+            for name,model,library in [('candidate',a.candidate,a.candidate_library),('reference',a.reference,a.reference_library)]:
+                app=create_app(engine=engine_for_library(model,library),custom_styles_dir=Path(tmp)/name)
                 sock=socket.socket();sock.bind(('127.0.0.1',0));sock.listen(16)
                 server=uvicorn.Server(uvicorn.Config(app,host='127.0.0.1',port=0,log_level='error',access_log=False))
                 thread=threading.Thread(target=server.run,kwargs={'sockets':[sock]},daemon=True)

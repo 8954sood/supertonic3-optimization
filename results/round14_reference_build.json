@@ -1,0 +1,7 @@
+{
+  "reference_commit": "4b47bbd",
+  "source_sha256": "b9df79a1c04bc2b097a10160e27db206f3ba1e5e50ea317dd2ac1f4b9b64c6d6",
+  "library_sha256": "0141245bf6cc3d6ff1a07f8dd4f1097fd8fb38058723a65c65c8303b46c2e054",
+  "rows": 4,
+  "note": "Frozen compiled round13 library on this Mac; no timing comparison across machines."
+}
