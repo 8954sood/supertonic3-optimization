@@ -1,0 +1,27 @@
+--- a/native/row_norm.c
++++ b/native/row_norm.c
+@@ -157,0 +158 @@
++static const OrtApi* shape_api = NULL;
+@@ -174,0 +176,18 @@
++static OrtStatus* ORT_API_CALL infer_shape(const OrtCustomOp* op,OrtShapeInferContext* context) {
++    (void)op;
++    OrtTensorTypeAndShapeInfo* input=NULL;
++    TRY(shape_api->ShapeInferContext_GetInputTypeShape(context,0,&input));
++    size_t rank=0;
++    TRY(shape_api->GetDimensionsCount(input,&rank));
++    if(!rank)return NULL;
++    if(rank>8)return NULL;
++    int64_t dims[8];const char* symbols[8];
++    TRY(shape_api->GetDimensions(input,dims,rank));
++    TRY(shape_api->GetSymbolicDimensions(input,symbols,rank));
++    /* Do not turn an unnamed unknown dimension into a literal -1. */
++    for(size_t index=0;index<rank;++index)
++        if(dims[index]<0 && (!symbols[index] || !symbols[index][0]))return NULL;
++    /* Borrowed from the inference context: do not release or modify it.
++     * Passing it through preserves symbolic dimensions as well as known sizes. */
++    return shape_api->ShapeInferContext_SetOutputTypeShape(context,0,input);
++}
+@@ -219,0 +239 @@
++    .InferOutputShapeFn=infer_shape,
+@@ -227,0 +248 @@
++        shape_api=api;

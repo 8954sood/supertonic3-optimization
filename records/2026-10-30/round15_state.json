@@ -1,0 +1,144 @@
+{
+  "round": 15,
+  "baseline_commit": "a71156f",
+  "selected": "Shape-preserving row normalization across all four model parts",
+  "model": "models/round15-all-parts-row-norm",
+  "reference_model": "models/round13-row-norm",
+  "hardware": "Mac M4 Max CPU; not Oracle ARM or EPYC",
+  "onnxruntime": "1.31.1",
+  "inference_threads": 1,
+  "denoising_calls_per_chunk": 8,
+  "learned_weights_changed": false,
+  "quantization_changed": false,
+  "waveform_postprocessing_added": false,
+  "hf_upload_required": false,
+  "reference": {
+    "commit": "a71156f",
+    "rows": 16,
+    "source_sha256": "ecbd921603741c3707be084c3547301abfb8981991859b96a280c598bf3d790c",
+    "library_sha256": "a8089a0aecc21e8eb9a851cf48a7b66ec1064debbdb381095d54b393f920be0f"
+  },
+  "build": {
+    "receipt": {
+      "parts": {
+        "duration_predictor": {
+          "nodes": 10,
+          "source_graph_sha256": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "initializer_bitidentity": true,
+          "width": 64,
+          "preserved_inferred_shapes": true,
+          "output_graph_sha256": "dd200ea7f6786f75ef734c4b7355b80e2f349fdb6da36e3bd40dfbd55a994238"
+        },
+        "text_encoder": {
+          "nodes": 15,
+          "source_graph_sha256": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "initializer_bitidentity": true,
+          "width": 256,
+          "preserved_inferred_shapes": true,
+          "output_graph_sha256": "6de61a0e1ebb4a0cd5a455cf493b30113167c2881340a5a071a06caeb392e9e1"
+        },
+        "vocoder": {
+          "nodes": 10,
+          "source_graph_sha256": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6",
+          "initializer_bitidentity": true,
+          "width": 512,
+          "preserved_inferred_shapes": true,
+          "output_graph_sha256": "804374d03e5a30886fb8d5f357fe3c38464c582456341624af4b883fcb8e2aa3"
+        }
+      },
+      "initializer_bitidentity": true,
+      "total_native_norm_nodes": 71
+    },
+    "identical_to_measured_candidate": {
+      "vector_estimator.onnx": true,
+      "duration_predictor.onnx": true,
+      "text_encoder.onnx": true,
+      "vocoder.onnx": true,
+      "condition.onnx": true
+    }
+  },
+  "comparison": {
+    "core_median_case_paired_time_reduction_percent": 4.72691902516801,
+    "core_combinations": 12,
+    "pairs_each": 6,
+    "http_median_case_paired_wall_reduction_percent": 4.471731183269592,
+    "http_median_case_paired_synthesis_reduction_percent": 4.73054906095072,
+    "http_median_case_paired_first_audio_reduction_percent": 4.772600842108105,
+    "http_combinations": 8,
+    "public_to_selected_median_case_paired_time_reduction_percent": 19.319486671570367,
+    "public_combinations": 8
+  },
+  "failures": [
+    {
+      "candidate": "Naive 35 additional norm replacements without shape inference",
+      "selected": false,
+      "wave_max_absolute_error": 0.450289,
+      "diagnostics": [
+        "results/round15_part_screen.json",
+        "results/round15_layout_failed.json"
+      ],
+      "reason": "Missing ranks change ORT transpose/MatMul/GELU fusion paths; small FP32 differences propagate into the dynamic INT8 estimator."
+    },
+    {
+      "candidate": "Runtime C shape callback",
+      "selected": false,
+      "reason": "Unconditional copy of anonymous unknown dimensions failed shape inference. Corrected callback passed two wave screens, but offline shape inference already restored exact outputs with the unchanged round14 kernel. Extra C API logic was unnecessary.",
+      "source_patch": "records/2026-10-30/round15_unused_shape_callback.patch",
+      "build": "results/round15_shape_build.json"
+    }
+  ],
+  "verification": {
+    "unit_tests": 22,
+    "native_tests": 7,
+    "native_numerical_subcases": 690,
+    "strict_wave_pairs": 96,
+    "speeds": [
+      0.7,
+      1,
+      1.25,
+      1.3,
+      1.5,
+      2
+    ],
+    "voices": [
+      "M1",
+      "F1",
+      "M5",
+      "F5"
+    ],
+    "cases": [
+      "ko_short",
+      "en_short",
+      "ko_long",
+      "en_long"
+    ],
+    "all_wave_bytes_identical": true,
+    "all_actual_vector_calls": 8,
+    "streaming_runtime": "results/round15_streaming_runtime.json",
+    "package": "results/round15_package_check.json",
+    "local_demo": "results/round15_demo_check.json"
+  },
+  "remaining": [
+    "1.5x pronunciation blurring remains unchanged; no ASR/WER/MOS measurement this round.",
+    "No new Oracle ARM performance measurement. Validate on target hardware before claiming its gain.",
+    "Further candidate work: profile the selected graph, then investigate exact GELU and transpose costs in the vector estimator."
+  ],
+  "commands": [
+    "python native/build_row_norm.py",
+    "python prepare_condition_cache.py --source models/round8-latent-retime-g135 --output models/F1200-portable-cached --link-assets",
+    "python prepare_row_norm.py --source models/F1200-portable-cached --output models/F1200-arm64 --all-parts --link-assets",
+    "python prepare_row_norm.py --source models/round13-row-norm --output models/F1200-arm64-extended --all-parts --link-assets",
+    "python experiments/paired_portable.py --reference models/round13-row-norm --candidate models/round15-all-parts-row-norm --output results/round15-new-core.json --pairs 6",
+    "python experiments/paired_http_streaming.py --reference models/round13-row-norm --candidate models/round15-all-parts-row-norm --output results/round15-new-http.json --pairs 6",
+    "python experiments/check_portable_cache.py --reference models/round13-row-norm --candidate models/round15-all-parts-row-norm --cases ko_short en_short ko_long en_long --speeds 0.7 1.0 1.25 1.3 1.5 2.0 --output results/round15-new-bytes.json",
+    "python -m unittest tests_row_norm tests_server tests_runtime",
+    "python serve.py --model models/round15-all-parts-row-norm"
+  ],
+  "cleanup": "results/round15_cleanup.json",
+  "environment": {
+    "python": "3.12.13",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.1",
+    "numpy": "2.5.4"
+  }
+}

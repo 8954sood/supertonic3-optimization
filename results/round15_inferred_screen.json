@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "library": "native/librow_norm_round14.dylib",
+      "lang": "ko",
+      "bitidentical": true,
+      "max_error": 0.0
+    },
+    {
+      "library": "native/librow_norm_round14.dylib",
+      "lang": "en",
+      "bitidentical": true,
+      "max_error": 0.0
+    },
+    {
+      "library": "native/librow_norm_shape.dylib",
+      "lang": "ko",
+      "bitidentical": true,
+      "max_error": 0.0
+    },
+    {
+      "library": "native/librow_norm_shape.dylib",
+      "lang": "en",
+      "bitidentical": true,
+      "max_error": 0.0
+    }
+  ]
+}

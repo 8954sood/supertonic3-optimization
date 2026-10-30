@@ -1,0 +1,1808 @@
+{
+  "machine": "macOS-27.0.1-arm64-arm-64bit",
+  "threads": 1,
+  "steps": 8,
+  "reference": "models/round8-latent-retime-g135",
+  "candidate": "models/round15-all-parts-row-norm",
+  "pairs": 6,
+  "scope": "Alternating warm pairs in one process on this Mac, no hardware extrapolation.",
+  "rows": [
+    {
+      "case": "ko_short",
+      "voice": "M1",
+      "speed": 1.0,
+      "float32_bitidentical": true,
+      "wave_sha256": "a57796e91c06c3d5a38051c7dec6ad6db52efb509af1c00403749c6d4d25ed8b",
+      "runs": {
+        "reference": [
+          {
+            "seconds": 0.1995255840010941,
+            "audio_seconds": 5.586009070294785,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.035718807737375326,
+            "realtime_factor": 27.99645518273062,
+            "stages": {
+              "duration_predictor": 0.0009420419810339808,
+              "text_encoder": 0.004711833025794476,
+              "vector_estimator": 0.1436926669557579,
+              "vocoder": 0.04964462498901412
+            },
+            "process_cpu_seconds": 0.19933500000000004
+          },
+          {
+            "seconds": 0.20375241700094193,
+            "audio_seconds": 5.586009070294785,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.036475489824113284,
+            "realtime_factor": 27.415670216412504,
+            "stages": {
+              "duration_predictor": 0.0008899579988792539,
+              "text_encoder": 0.0047061669756658375,
+              "vector_estimator": 0.1453919589985162,
+              "vocoder": 0.05225612502545118
+            },
+            "process_cpu_seconds": 0.20297600000000005
+          },
+          {
+            "seconds": 0.22062033298425376,
+            "audio_seconds": 5.586009070294785,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03949516196768567,
+            "realtime_factor": 25.319556881883017,
+            "stages": {
+              "duration_predictor": 0.000914999982342124,
+              "text_encoder": 0.004871791985351592,
+              "vector_estimator": 0.15606608492089435,
+              "vocoder": 0.05824212502921
+            },
+            "process_cpu_seconds": 0.21474300000000013
+          },
+          {
+            "seconds": 0.22074995801085606,
+            "audio_seconds": 5.586009070294785,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03951836726953375,
+            "realtime_factor": 25.304689163384012,
+            "stages": {
+              "duration_predictor": 0.000979833013843745,
+              "text_encoder": 0.00547245895722881,
+              "vector_estimator": 0.15461420797510073,
+              "vocoder": 0.05914220801787451
+            },
+            "process_cpu_seconds": 0.21998000000000006
+          },
+          {
+            "seconds": 0.2124611249892041,
+            "audio_seconds": 5.586009070294785,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.038034511279086074,
+            "realtime_factor": 26.291911381805164,
+            "stages": {
+              "duration_predictor": 0.0011000419617630541,
+              "text_encoder": 0.0059451250126585364,
+              "vector_estimator": 0.15249737503472716,
+              "vocoder": 0.05235866701696068
+            },
+            "process_cpu_seconds": 0.2122550000000003
+          },
+          {
+            "seconds": 0.22004504199139774,
+            "audio_seconds": 5.586009070294785,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03939217413046297,
+            "realtime_factor": 25.385752933770533,
+            "stages": {
+              "duration_predictor": 0.0009496249840594828,
+              "text_encoder": 0.004851915990002453,
+              "vector_estimator": 0.15930904098786414,
+              "vocoder": 0.05439195898361504
+            },
+            "process_cpu_seconds": 0.21637400000000007
+          }
+        ],
+        "candidate": [
+          {
+            "seconds": 0.16277866601012647,
+            "audio_seconds": 5.586009070294785,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.029140422788739996,
+            "realtime_factor": 34.31659201548733,
+            "stages": {
+              "duration_predictor": 0.0007960830116644502,
+              "text_encoder": 0.0036697500036098063,
+              "condition": 0.0008139169658534229,
+              "vector_estimator": 0.11439545702887699,
+              "vocoder": 0.042584458948113024
+            },
+            "process_cpu_seconds": 0.16216999999999993
+          },
+          {
+            "seconds": 0.16787816700525582,
+            "audio_seconds": 5.586009070294785,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03005332875272194,
+            "realtime_factor": 33.27418430843304,
+            "stages": {
+              "duration_predictor": 0.0007887500105425715,
+              "text_encoder": 0.0040043750195764005,
+              "condition": 0.0007819160236977041,
+              "vector_estimator": 0.11887862492585555,
+              "vocoder": 0.042909542040433735
+            },
+            "process_cpu_seconds": 0.16656899999999997
+          },
+          {
+            "seconds": 0.1719556250027381,
+            "audio_seconds": 5.586009070294785,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.030783269922915402,
+            "realtime_factor": 32.48517790683403,
+            "stages": {
+              "duration_predictor": 0.0008217080030590296,
+              "text_encoder": 0.003824416024144739,
+              "condition": 0.0008192079840227962,
+              "vector_estimator": 0.12284404097590595,
+              "vocoder": 0.043082958029117435
+            },
+            "process_cpu_seconds": 0.16963600000000012
+          },
+          {
+            "seconds": 0.17775937501573935,
+            "audio_seconds": 5.586009070294785,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03182224962022101,
+            "realtime_factor": 31.424553949968505,
+            "stages": {
+              "duration_predictor": 0.000869042007252574,
+              "text_encoder": 0.003856250026728958,
+              "condition": 0.0007863749633543193,
+              "vector_estimator": 0.12809579295571893,
+              "vocoder": 0.04359529202338308
+            },
+            "process_cpu_seconds": 0.17326200000000025
+          },
+          {
+            "seconds": 0.17995545803569257,
+            "audio_seconds": 5.586009070294785,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03221538951532636,
+            "realtime_factor": 31.04106500168975,
+            "stages": {
+              "duration_predictor": 0.0009173339931294322,
+              "text_encoder": 0.004318583989515901,
+              "condition": 0.0011216249549761415,
+              "vector_estimator": 0.12141729198629037,
+              "vocoder": 0.05149800004437566
+            },
+            "process_cpu_seconds": 0.17971899999999996
+          },
+          {
+            "seconds": 0.17556354199768975,
+            "audio_seconds": 5.586009070294785,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03142915448012778,
+            "realtime_factor": 31.817591549664062,
+            "stages": {
+              "duration_predictor": 0.0008142910082824528,
+              "text_encoder": 0.004056707955896854,
+              "condition": 0.0007863329956308007,
+              "vector_estimator": 0.12485433591064066,
+              "vocoder": 0.044492707995232195
+            },
+            "process_cpu_seconds": 0.17245200000000027
+          }
+        ]
+      },
+      "median_paired_speedup": 1.2337974083396368,
+      "paired_speedups": [
+        1.225747752403141,
+        1.2136921711479194,
+        1.2830073629794942,
+        1.2418470642761328,
+        1.1806317369216126,
+        1.253364106736314
+      ],
+      "median_time_reduction_percent": 18.945966213495545,
+      "reference_rtf": 0.03871334270477452,
+      "candidate_rtf": 0.031106212201521592,
+      "process_rss_mb": 595.738624
+    },
+    {
+      "case": "en_short",
+      "voice": "M1",
+      "speed": 1.0,
+      "float32_bitidentical": true,
+      "wave_sha256": "06de778d943a22d93e1c41d4899b1036ad64463afcdb3a6fb2fc05155891b725",
+      "runs": {
+        "reference": [
+          {
+            "seconds": 0.19533637497806922,
+            "audio_seconds": 5.18031746031746,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03770741397113114,
+            "realtime_factor": 26.51998359700831,
+            "stages": {
+              "duration_predictor": 0.0008748330292291939,
+              "text_encoder": 0.004917917016427964,
+              "vector_estimator": 0.14053587609669194,
+              "vocoder": 0.04854979197261855
+            },
+            "process_cpu_seconds": 0.1952210000000001
+          },
+          {
+            "seconds": 0.2024513750220649,
+            "audio_seconds": 5.18031746031746,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03908088192912761,
+            "realtime_factor": 25.587958885203246,
+            "stages": {
+              "duration_predictor": 0.000924041960388422,
+              "text_encoder": 0.004962791979778558,
+              "vector_estimator": 0.14414437703089789,
+              "vocoder": 0.05187862500315532
+            },
+            "process_cpu_seconds": 0.20168300000000006
+          },
+          {
+            "seconds": 0.1989594170008786,
+            "audio_seconds": 5.18031746031746,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.038406800070643926,
+            "realtime_factor": 26.03705589011946,
+            "stages": {
+              "duration_predictor": 0.0009249579743482172,
+              "text_encoder": 0.004820041998755187,
+              "vector_estimator": 0.1438129169982858,
+              "vocoder": 0.0489100840059109
+            },
+            "process_cpu_seconds": 0.19859700000000036
+          },
+          {
+            "seconds": 0.19917174999136478,
+            "audio_seconds": 5.18031746031746,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03844778848344154,
+            "realtime_factor": 26.00929830933381,
+            "stages": {
+              "duration_predictor": 0.0008957080426625907,
+              "text_encoder": 0.004828000033739954,
+              "vector_estimator": 0.1435584989376366,
+              "vocoder": 0.04941954102832824
+            },
+            "process_cpu_seconds": 0.198677
+          },
+          {
+            "seconds": 0.19970041600754485,
+            "audio_seconds": 5.18031746031746,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.038549841305537826,
+            "realtime_factor": 25.940444010500926,
+            "stages": {
+              "duration_predictor": 0.0009052089881151915,
+              "text_encoder": 0.004933167016133666,
+              "vector_estimator": 0.14449158211937174,
+              "vocoder": 0.04884745803428814
+            },
+            "process_cpu_seconds": 0.19876200000000033
+          },
+          {
+            "seconds": 0.18853204103652388,
+            "audio_seconds": 5.18031746031746,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03639391648884975,
+            "realtime_factor": 27.47711970780547,
+            "stages": {
+              "duration_predictor": 0.0008961250423453748,
+              "text_encoder": 0.004639208025764674,
+              "vector_estimator": 0.1357492500101216,
+              "vocoder": 0.04676595900673419
+            },
+            "process_cpu_seconds": 0.18828699999999987
+          }
+        ],
+        "candidate": [
+          {
+            "seconds": 0.1599914999678731,
+            "audio_seconds": 5.18031746031746,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.030884497174825363,
+            "realtime_factor": 32.37870425214894,
+            "stages": {
+              "duration_predictor": 0.0008192079840227962,
+              "text_encoder": 0.003911375009920448,
+              "condition": 0.0008803749806247652,
+              "vector_estimator": 0.11307945806765929,
+              "vocoder": 0.0407844579895027
+            },
+            "process_cpu_seconds": 0.15987099999999987
+          },
+          {
+            "seconds": 0.16413104202365503,
+            "audio_seconds": 5.18031746031746,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.031683587594957305,
+            "realtime_factor": 31.562082324261723,
+            "stages": {
+              "duration_predictor": 0.0007770420052111149,
+              "text_encoder": 0.0037822499871253967,
+              "condition": 0.0007833329727873206,
+              "vector_estimator": 0.11614420806290582,
+              "vocoder": 0.04216641699895263
+            },
+            "process_cpu_seconds": 0.16397200000000023
+          },
+          {
+            "seconds": 0.1649675829685293,
+            "audio_seconds": 5.18031746031746,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03184507208915721,
+            "realtime_factor": 31.402032854574244,
+            "stages": {
+              "duration_predictor": 0.0008857499924488366,
+              "text_encoder": 0.0038874170277267694,
+              "condition": 0.0008229169761762023,
+              "vector_estimator": 0.11741000093752518,
+              "vocoder": 0.04144374997122213
+            },
+            "process_cpu_seconds": 0.16430100000000003
+          },
+          {
+            "seconds": 0.16322733298875391,
+            "audio_seconds": 5.18031746031746,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03150913708264339,
+            "realtime_factor": 31.73682596819967,
+            "stages": {
+              "duration_predictor": 0.0008132089860737324,
+              "text_encoder": 0.003848458989523351,
+              "condition": 0.0008270420366898179,
+              "vector_estimator": 0.11579029296990484,
+              "vocoder": 0.04146304202731699
+            },
+            "process_cpu_seconds": 0.16306500000000046
+          },
+          {
+            "seconds": 0.15695091697853059,
+            "audio_seconds": 5.18031746031746,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.030297548013382237,
+            "realtime_factor": 33.00597129372668,
+            "stages": {
+              "duration_predictor": 0.0008301250054500997,
+              "text_encoder": 0.003913042019121349,
+              "condition": 0.0008177909767255187,
+              "vector_estimator": 0.11052099894732237,
+              "vocoder": 0.040385833010077477
+            },
+            "process_cpu_seconds": 0.15688000000000013
+          },
+          {
+            "seconds": 0.1588001669733785,
+            "audio_seconds": 5.18031746031746,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.030654524204322974,
+            "realtime_factor": 32.62161217491602,
+            "stages": {
+              "duration_predictor": 0.0007863749633543193,
+              "text_encoder": 0.003756499965675175,
+              "condition": 0.0008293329738080502,
+              "vector_estimator": 0.11299933202099055,
+              "vocoder": 0.039886832993943244
+            },
+            "process_cpu_seconds": 0.15813100000000002
+          }
+        ]
+      },
+      "median_paired_speedup": 1.22056398852287,
+      "paired_speedups": [
+        1.2209172050846044,
+        1.233474012751878,
+        1.206051597657425,
+        1.2202107719611357,
+        1.2723749555083006,
+        1.1872282292255376
+      ],
+      "median_time_reduction_percent": 18.07065478348089,
+      "reference_rtf": 0.03842729427704274,
+      "candidate_rtf": 0.03119681712873438,
+      "process_rss_mb": 600.375296
+    },
+    {
+      "case": "ko_short",
+      "voice": "M1",
+      "speed": 2.0,
+      "float32_bitidentical": true,
+      "wave_sha256": "5191c7138e4cfb74d9195942ba2da588cc0aa7ba64e4b638fe68db638c7c8c77",
+      "runs": {
+        "reference": [
+          {
+            "seconds": 0.13937954202992842,
+            "audio_seconds": 2.7929931972789115,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.049903287328347125,
+            "realtime_factor": 20.038760040402366,
+            "stages": {
+              "duration_predictor": 0.0008715000003576279,
+              "text_encoder": 0.004498624999541789,
+              "vector_estimator": 0.1073592510074377,
+              "vocoder": 0.026210584037471563
+            },
+            "process_cpu_seconds": 0.13915600000000072
+          },
+          {
+            "seconds": 0.14379916701000184,
+            "audio_seconds": 2.7929931972789115,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.05148568465906002,
+            "realtime_factor": 19.422874661608066,
+            "stages": {
+              "duration_predictor": 0.0008982919971458614,
+              "text_encoder": 0.004869666998274624,
+              "vector_estimator": 0.11299408209742978,
+              "vocoder": 0.024575207964517176
+            },
+            "process_cpu_seconds": 0.14341199999999965
+          },
+          {
+            "seconds": 0.1399915000074543,
+            "audio_seconds": 2.7929931972789115,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.0501223920430031,
+            "realtime_factor": 19.951162728667022,
+            "stages": {
+              "duration_predictor": 0.0008780419593676925,
+              "text_encoder": 0.004623165994416922,
+              "vector_estimator": 0.10883112583542243,
+              "vocoder": 0.025227000005543232
+            },
+            "process_cpu_seconds": 0.1397149999999998
+          },
+          {
+            "seconds": 0.14587475004373118,
+            "audio_seconds": 2.7929931972789115,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.0522288239677241,
+            "realtime_factor": 19.14651573655901,
+            "stages": {
+              "duration_predictor": 0.000828541989903897,
+              "text_encoder": 0.004824874980840832,
+              "vector_estimator": 0.11392229102784768,
+              "vocoder": 0.025833249965216964
+            },
+            "process_cpu_seconds": 0.14558400000000038
+          },
+          {
+            "seconds": 0.14226016699103639,
+            "audio_seconds": 2.7929931972789115,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.05093466290201999,
+            "realtime_factor": 19.632995351783148,
+            "stages": {
+              "duration_predictor": 0.0008373339660465717,
+              "text_encoder": 0.004819583031348884,
+              "vector_estimator": 0.11098783201305196,
+              "vocoder": 0.025179624964948744
+            },
+            "process_cpu_seconds": 0.14211499999999955
+          },
+          {
+            "seconds": 0.14286754099885002,
+            "audio_seconds": 2.7929931972789115,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.05115212637755061,
+            "realtime_factor": 19.549529429511164,
+            "stages": {
+              "duration_predictor": 0.0008896249928511679,
+              "text_encoder": 0.004667624947614968,
+              "vector_estimator": 0.11076729197520763,
+              "vocoder": 0.026102291012648493
+            },
+            "process_cpu_seconds": 0.14267800000000008
+          }
+        ],
+        "candidate": [
+          {
+            "seconds": 0.17908879200695083,
+            "audio_seconds": 2.7929931972789115,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.06412074049497472,
+            "realtime_factor": 15.595577847052033,
+            "stages": {
+              "duration_predictor": 0.0007669170154258609,
+              "text_encoder": 0.0036620409809984267,
+              "condition": 0.0007128749857656658,
+              "vector_estimator": 0.15168358298251405,
+              "vocoder": 0.021811332961078733
+            },
+            "process_cpu_seconds": 0.13113200000000003
+          },
+          {
+            "seconds": 0.11589716700837016,
+            "audio_seconds": 2.7929931972789115,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04149568538916729,
+            "realtime_factor": 24.098891020150646,
+            "stages": {
+              "duration_predictor": 0.0007916250033304095,
+              "text_encoder": 0.003952791972551495,
+              "condition": 0.0009082499891519547,
+              "vector_estimator": 0.08779324998613447,
+              "vocoder": 0.02192437503254041
+            },
+            "process_cpu_seconds": 0.11558000000000046
+          },
+          {
+            "seconds": 0.11314066703198478,
+            "audio_seconds": 2.7929931972789115,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04050875137906267,
+            "realtime_factor": 24.686023783909057,
+            "stages": {
+              "duration_predictor": 0.0007284590392373502,
+              "text_encoder": 0.0035776669974438846,
+              "condition": 0.0008027500007301569,
+              "vector_estimator": 0.08528462494723499,
+              "vocoder": 0.022273667040280998
+            },
+            "process_cpu_seconds": 0.11302399999999935
+          },
+          {
+            "seconds": 0.11158320895629004,
+            "audio_seconds": 2.7929931972789115,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03995112092109661,
+            "realtime_factor": 25.030586800680716,
+            "stages": {
+              "duration_predictor": 0.0007902499637566507,
+              "text_encoder": 0.0037209169822745025,
+              "condition": 0.0007557080243714154,
+              "vector_estimator": 0.08502395899267867,
+              "vocoder": 0.020831417001318187
+            },
+            "process_cpu_seconds": 0.11145400000000016
+          },
+          {
+            "seconds": 0.11325791699346155,
+            "audio_seconds": 2.7929931972789115,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04055073141739252,
+            "realtime_factor": 24.660467642541516,
+            "stages": {
+              "duration_predictor": 0.0007873750291764736,
+              "text_encoder": 0.0035346249933354557,
+              "condition": 0.0006742500117979944,
+              "vector_estimator": 0.08611974801169708,
+              "vocoder": 0.021689832967240363
+            },
+            "process_cpu_seconds": 0.11320599999999992
+          },
+          {
+            "seconds": 0.11347095901146531,
+            "audio_seconds": 2.7929931972789115,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04062700873099691,
+            "realtime_factor": 24.614167550982824,
+            "stages": {
+              "duration_predictor": 0.0007511249859817326,
+              "text_encoder": 0.003730833006557077,
+              "condition": 0.0007949999999254942,
+              "vector_estimator": 0.08588049706304446,
+              "vocoder": 0.02187466697068885
+            },
+            "process_cpu_seconds": 0.11335699999999971
+          }
+        ]
+      },
+      "median_paired_speedup": 1.2484102550377767,
+      "paired_speedups": [
+        0.7782706023530428,
+        1.2407479036965294,
+        1.2373225620799886,
+        1.3073181118215915,
+        1.256072606379024,
+        1.2590670092460787
+      ],
+      "median_time_reduction_percent": 19.895109112980425,
+      "reference_rtf": 0.0510433946397853,
+      "candidate_rtf": 0.04058887007419472,
+      "process_rss_mb": 544.145408
+    },
+    {
+      "case": "en_short",
+      "voice": "M1",
+      "speed": 2.0,
+      "float32_bitidentical": true,
+      "wave_sha256": "dab56a63e08539a0b5b98b38bc192dc56aceb189f57e5f5c636dcaed9fe4427d",
+      "runs": {
+        "reference": [
+          {
+            "seconds": 0.13089766696793959,
+            "audio_seconds": 2.59015873015873,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.05053654258475422,
+            "realtime_factor": 19.787661538636367,
+            "stages": {
+              "duration_predictor": 0.0009285000269301236,
+              "text_encoder": 0.00469916604924947,
+              "vector_estimator": 0.1014051228412427,
+              "vocoder": 0.0234345420030877
+            },
+            "process_cpu_seconds": 0.13076899999999902
+          },
+          {
+            "seconds": 0.13129629101604223,
+            "audio_seconds": 2.59015873015873,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.050690442051787354,
+            "realtime_factor": 19.727584915877447,
+            "stages": {
+              "duration_predictor": 0.0008985419990494847,
+              "text_encoder": 0.004501541028730571,
+              "vector_estimator": 0.10164616612019017,
+              "vocoder": 0.023813791980501264
+            },
+            "process_cpu_seconds": 0.13120200000000004
+          },
+          {
+            "seconds": 0.13568483397830278,
+            "audio_seconds": 2.59015873015873,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.05238475634656867,
+            "realtime_factor": 19.08952278758671,
+            "stages": {
+              "duration_predictor": 0.0012457080301828682,
+              "text_encoder": 0.008139124955050647,
+              "vector_estimator": 0.1025872069876641,
+              "vocoder": 0.023275166982784867
+            },
+            "process_cpu_seconds": 0.13373400000000046
+          },
+          {
+            "seconds": 0.13537574996007606,
+            "audio_seconds": 2.59015873015873,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.052265426201034394,
+            "realtime_factor": 19.133107154882605,
+            "stages": {
+              "duration_predictor": 0.000841541972476989,
+              "text_encoder": 0.004332042008172721,
+              "vector_estimator": 0.10521570808487013,
+              "vocoder": 0.024600666016340256
+            },
+            "process_cpu_seconds": 0.1429569999999991
+          },
+          {
+            "seconds": 0.13539612502790987,
+            "audio_seconds": 2.59015873015873,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.05227329254049713,
+            "realtime_factor": 19.130227911801818,
+            "stages": {
+              "duration_predictor": 0.0008691659895703197,
+              "text_encoder": 0.004635582969058305,
+              "vector_estimator": 0.1052803749917075,
+              "vocoder": 0.02414166700327769
+            },
+            "process_cpu_seconds": 0.13516699999999915
+          },
+          {
+            "seconds": 0.13370183401275426,
+            "audio_seconds": 2.59015873015873,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.051619166214018374,
+            "realtime_factor": 19.372649218197306,
+            "stages": {
+              "duration_predictor": 0.0008474999922327697,
+              "text_encoder": 0.00483245903160423,
+              "vector_estimator": 0.10310291708447039,
+              "vocoder": 0.024499958963133395
+            },
+            "process_cpu_seconds": 0.13331599999999888
+          }
+        ],
+        "candidate": [
+          {
+            "seconds": 0.10707154200645164,
+            "audio_seconds": 2.59015873015873,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04133783028806504,
+            "realtime_factor": 24.19091648089517,
+            "stages": {
+              "duration_predictor": 0.0008096250239759684,
+              "text_encoder": 0.003827915992587805,
+              "condition": 0.0007045840029604733,
+              "vector_estimator": 0.0795156669919379,
+              "vocoder": 0.021787667006719857
+            },
+            "process_cpu_seconds": 0.10697500000000026
+          },
+          {
+            "seconds": 0.10492750001139939,
+            "audio_seconds": 2.59015873015873,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04051006557616228,
+            "realtime_factor": 24.685222938479747,
+            "stages": {
+              "duration_predictor": 0.000806041993200779,
+              "text_encoder": 0.0037373750237748027,
+              "condition": 0.0006967079825699329,
+              "vector_estimator": 0.07897670799866319,
+              "vocoder": 0.020302583987358958
+            },
+            "process_cpu_seconds": 0.10485799999999834
+          },
+          {
+            "seconds": 0.10559599997941405,
+            "audio_seconds": 2.59015873015873,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04076815785453539,
+            "realtime_factor": 24.528947409595837,
+            "stages": {
+              "duration_predictor": 0.0007479999912902713,
+              "text_encoder": 0.0037862920435145497,
+              "condition": 0.0007599579985253513,
+              "vector_estimator": 0.07955804199445993,
+              "vocoder": 0.020292332977987826
+            },
+            "process_cpu_seconds": 0.10551000000000066
+          },
+          {
+            "seconds": 0.10479150002356619,
+            "audio_seconds": 2.59015873015873,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04045755914624752,
+            "realtime_factor": 24.717259792790813,
+            "stages": {
+              "duration_predictor": 0.0007688329787924886,
+              "text_encoder": 0.0035434580058790743,
+              "condition": 0.0006961250328458846,
+              "vector_estimator": 0.07841050199931487,
+              "vocoder": 0.020927792007569224
+            },
+            "process_cpu_seconds": 0.1126339999999999
+          },
+          {
+            "seconds": 0.1098611659836024,
+            "audio_seconds": 2.59015873015873,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04241483917739277,
+            "realtime_factor": 23.57665428878964,
+            "stages": {
+              "duration_predictor": 0.0008149169734679163,
+              "text_encoder": 0.004042791959363967,
+              "condition": 0.000789749959949404,
+              "vector_estimator": 0.08254070801194757,
+              "vocoder": 0.021179208008106798
+            },
+            "process_cpu_seconds": 0.10972199999999965
+          },
+          {
+            "seconds": 0.10789391701109707,
+            "audio_seconds": 2.59015873015873,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.041655330136653484,
+            "realtime_factor": 24.0065316183889,
+            "stages": {
+              "duration_predictor": 0.0007675410015508533,
+              "text_encoder": 0.0035383329959586263,
+              "condition": 0.0006926250061951578,
+              "vector_estimator": 0.0813658760744147,
+              "vocoder": 0.021133749978616834
+            },
+            "process_cpu_seconds": 0.1077060000000003
+          }
+        ]
+      },
+      "median_paired_speedup": 1.245251004365082,
+      "paired_speedups": [
+        1.2225252809009914,
+        1.2513048628984595,
+        1.2849429334894746,
+        1.2918581175919028,
+        1.2324293467640672,
+        1.2391971458317044
+      ],
+      "median_time_reduction_percent": 19.69300712964519,
+      "reference_rtf": 0.051942296207526384,
+      "candidate_rtf": 0.04105299407130022,
+      "process_rss_mb": 550.731776
+    },
+    {
+      "case": "ko_short",
+      "voice": "F1",
+      "speed": 1.0,
+      "float32_bitidentical": true,
+      "wave_sha256": "daa50994cf605452d694b7e4fdbfe76d9af5797a1a9e08d67efcf555e9332e9e",
+      "runs": {
+        "reference": [
+          {
+            "seconds": 0.19887374999234453,
+            "audio_seconds": 5.582585034013605,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03562395355926429,
+            "realtime_factor": 28.07099998983527,
+            "stages": {
+              "duration_predictor": 0.00088825001148507,
+              "text_encoder": 0.004716333991382271,
+              "vector_estimator": 0.1439860430546105,
+              "vocoder": 0.04878379200818017
+            },
+            "process_cpu_seconds": 0.19765999999999906
+          },
+          {
+            "seconds": 0.1989643750130199,
+            "audio_seconds": 5.582585034013605,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03564018708192865,
+            "realtime_factor": 28.058214108170322,
+            "stages": {
+              "duration_predictor": 0.0008424579864367843,
+              "text_encoder": 0.004640874976757914,
+              "vector_estimator": 0.1441595010110177,
+              "vocoder": 0.048844332981389016
+            },
+            "process_cpu_seconds": 0.19873400000000174
+          },
+          {
+            "seconds": 0.1979123330092989,
+            "audio_seconds": 5.582585034013605,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.035451736391556514,
+            "realtime_factor": 28.207363073989473,
+            "stages": {
+              "duration_predictor": 0.0008173749665729702,
+              "text_encoder": 0.004364207969047129,
+              "vector_estimator": 0.14284904400119558,
+              "vocoder": 0.04941058298572898
+            },
+            "process_cpu_seconds": 0.19748199999999905
+          },
+          {
+            "seconds": 0.2003378329682164,
+            "audio_seconds": 5.582585034013605,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03588621252477068,
+            "realtime_factor": 27.865855147286545,
+            "stages": {
+              "duration_predictor": 0.0008293330320157111,
+              "text_encoder": 0.004560792003758252,
+              "vector_estimator": 0.14328349888091907,
+              "vocoder": 0.05117670801701024
+            },
+            "process_cpu_seconds": 0.2000900000000012
+          },
+          {
+            "seconds": 0.19771929102716967,
+            "audio_seconds": 5.582585034013605,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03541715707373994,
+            "realtime_factor": 28.23490315493025,
+            "stages": {
+              "duration_predictor": 0.0008462920086458325,
+              "text_encoder": 0.004558917018584907,
+              "vector_estimator": 0.14242554100928828,
+              "vocoder": 0.0494138749781996
+            },
+            "process_cpu_seconds": 0.1970280000000013
+          },
+          {
+            "seconds": 0.19958837499143556,
+            "audio_seconds": 5.582585034013605,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.0357519632527552,
+            "realtime_factor": 27.970491939989774,
+            "stages": {
+              "duration_predictor": 0.0009360000258311629,
+              "text_encoder": 0.00592216697987169,
+              "vector_estimator": 0.14387274999171495,
+              "vocoder": 0.04833662504097447
+            },
+            "process_cpu_seconds": 0.19926400000000122
+          }
+        ],
+        "candidate": [
+          {
+            "seconds": 0.16357408399926499,
+            "audio_seconds": 5.582585034013605,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.0293007778659241,
+            "realtime_factor": 34.1287867706396,
+            "stages": {
+              "duration_predictor": 0.0007545409607701004,
+              "text_encoder": 0.003912541957106441,
+              "condition": 0.0007363749900832772,
+              "vector_estimator": 0.1160121260327287,
+              "vocoder": 0.04164945799857378
+            },
+            "process_cpu_seconds": 0.16258400000000073
+          },
+          {
+            "seconds": 0.1635649999952875,
+            "audio_seconds": 5.582585034013605,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.02929915066205311,
+            "realtime_factor": 34.13068220080363,
+            "stages": {
+              "duration_predictor": 0.0007768750074319541,
+              "text_encoder": 0.003704833041410893,
+              "condition": 0.0007642499986104667,
+              "vector_estimator": 0.11565254291053861,
+              "vocoder": 0.04216812498634681
+            },
+            "process_cpu_seconds": 0.16341300000000025
+          },
+          {
+            "seconds": 0.17296900000656024,
+            "audio_seconds": 5.582585034013605,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.030983674937809947,
+            "realtime_factor": 32.27506104447544,
+            "stages": {
+              "duration_predictor": 0.0007733750389888883,
+              "text_encoder": 0.004167791979853064,
+              "condition": 0.000742000003810972,
+              "vector_estimator": 0.12415879295440391,
+              "vocoder": 0.04254266701173037
+            },
+            "process_cpu_seconds": 0.1682850000000009
+          },
+          {
+            "seconds": 0.16530170803889632,
+            "audio_seconds": 5.582585034013605,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.029610244542939364,
+            "realtime_factor": 33.772095281072325,
+            "stages": {
+              "duration_predictor": 0.0007563330000266433,
+              "text_encoder": 0.0037790840142406523,
+              "condition": 0.000721791002433747,
+              "vector_estimator": 0.11686958197969943,
+              "vocoder": 0.042703333019744605
+            },
+            "process_cpu_seconds": 0.16505100000000006
+          },
+          {
+            "seconds": 0.17398458300158381,
+            "audio_seconds": 5.582585034013605,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03116559478118642,
+            "realtime_factor": 32.08666502343363,
+            "stages": {
+              "duration_predictor": 0.0007619999814778566,
+              "text_encoder": 0.003997625026386231,
+              "condition": 0.0007639999967068434,
+              "vector_estimator": 0.12363658304093406,
+              "vocoder": 0.04429033299675211
+            },
+            "process_cpu_seconds": 0.1720120000000005
+          },
+          {
+            "seconds": 0.16345049999654293,
+            "audio_seconds": 5.582585034013605,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.02927864045073578,
+            "realtime_factor": 34.15459135415114,
+            "stages": {
+              "duration_predictor": 0.0007994999759830534,
+              "text_encoder": 0.003967333002947271,
+              "condition": 0.0007698329864069819,
+              "vector_estimator": 0.1147787069203332,
+              "vocoder": 0.04264645796502009
+            },
+            "process_cpu_seconds": 0.16297799999999896
+          }
+        ]
+      },
+      "median_paired_speedup": 1.2138774518073325,
+      "paired_speedups": [
+        1.2158023149512984,
+        1.2164238988704936,
+        1.1442069561701382,
+        1.2119525886633664,
+        1.1364184551074263,
+        1.221093695006482
+      ],
+      "median_time_reduction_percent": 17.619153975709942,
+      "reference_rtf": 0.03563207032059647,
+      "candidate_rtf": 0.029455511204431732,
+      "process_rss_mb": 541.016064
+    },
+    {
+      "case": "en_short",
+      "voice": "F1",
+      "speed": 1.0,
+      "float32_bitidentical": true,
+      "wave_sha256": "53d00576be092a6b19961b5b203e53a95832a5484cd1d51827cf8c384c2a2ef5",
+      "runs": {
+        "reference": [
+          {
+            "seconds": 0.18532341695390642,
+            "audio_seconds": 5.177414965986395,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.035794584396153156,
+            "realtime_factor": 27.93718705971259,
+            "stages": {
+              "duration_predictor": 0.0008797920309007168,
+              "text_encoder": 0.0046156669850461185,
+              "vector_estimator": 0.13368837494635954,
+              "vocoder": 0.04566762497415766
+            },
+            "process_cpu_seconds": 0.185041
+          },
+          {
+            "seconds": 0.18914945900905877,
+            "audio_seconds": 5.177414965986395,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03653357133853424,
+            "realtime_factor": 27.37208445168451,
+            "stages": {
+              "duration_predictor": 0.0009535420103929937,
+              "text_encoder": 0.004657333018258214,
+              "vector_estimator": 0.13271979097044095,
+              "vocoder": 0.050233041984029114
+            },
+            "process_cpu_seconds": 0.18893100000000018
+          },
+          {
+            "seconds": 0.18275479198200628,
+            "audio_seconds": 5.177414965986395,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03529846326451217,
+            "realtime_factor": 28.329845197690652,
+            "stages": {
+              "duration_predictor": 0.0009612920111976564,
+              "text_encoder": 0.004431708017364144,
+              "vector_estimator": 0.13189337396761402,
+              "vocoder": 0.04499975004000589
+            },
+            "process_cpu_seconds": 0.18243900000000046
+          },
+          {
+            "seconds": 0.1811595830367878,
+            "audio_seconds": 5.177414965986395,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.034990354110484845,
+            "realtime_factor": 28.579304937652815,
+            "stages": {
+              "duration_predictor": 0.0009710409794934094,
+              "text_encoder": 0.004800499998964369,
+              "vector_estimator": 0.13037154101766646,
+              "vocoder": 0.044547082972712815
+            },
+            "process_cpu_seconds": 0.1810130000000001
+          },
+          {
+            "seconds": 0.18197174998931587,
+            "audio_seconds": 5.177414965986395,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03514722138070825,
+            "realtime_factor": 28.451751254194,
+            "stages": {
+              "duration_predictor": 0.0008548750192858279,
+              "text_encoder": 0.004369166039396077,
+              "vector_estimator": 0.1312642911216244,
+              "vocoder": 0.04505208402406424
+            },
+            "process_cpu_seconds": 0.18105300000000035
+          },
+          {
+            "seconds": 0.1879928749985993,
+            "audio_seconds": 5.177414965986395,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.03631018109107334,
+            "realtime_factor": 27.54048506372899,
+            "stages": {
+              "duration_predictor": 0.0008891670149751008,
+              "text_encoder": 0.004340084036812186,
+              "vector_estimator": 0.13564529200084507,
+              "vocoder": 0.046686792047694325
+            },
+            "process_cpu_seconds": 0.18723899999999993
+          }
+        ],
+        "candidate": [
+          {
+            "seconds": 0.1504579579923302,
+            "audio_seconds": 5.177414965986395,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.02906044019665809,
+            "realtime_factor": 34.41104103147752,
+            "stages": {
+              "duration_predictor": 0.0007929579587653279,
+              "text_encoder": 0.00364287500269711,
+              "condition": 0.0006692080060020089,
+              "vector_estimator": 0.10661858296953142,
+              "vocoder": 0.03830324998125434
+            },
+            "process_cpu_seconds": 0.15309099999999987
+          },
+          {
+            "seconds": 0.15821954200509936,
+            "audio_seconds": 5.177414965986395,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.030559563613220167,
+            "realtime_factor": 32.722980362435436,
+            "stages": {
+              "duration_predictor": 0.0007560839876532555,
+              "text_encoder": 0.003743708017282188,
+              "condition": 0.0007522499654442072,
+              "vector_estimator": 0.11208996007917449,
+              "vocoder": 0.040399290970526636
+            },
+            "process_cpu_seconds": 0.15675400000000117
+          },
+          {
+            "seconds": 0.15761587501037866,
+            "audio_seconds": 5.177414965986395,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.030442967397022208,
+            "realtime_factor": 32.84830900215777,
+            "stages": {
+              "duration_predictor": 0.0009200000204145908,
+              "text_encoder": 0.005308374995365739,
+              "condition": 0.0006968329544179142,
+              "vector_estimator": 0.11097412509843707,
+              "vocoder": 0.0392661250079982
+            },
+            "process_cpu_seconds": 0.15730099999999858
+          },
+          {
+            "seconds": 0.14990633400157094,
+            "audio_seconds": 5.177414965986395,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.028953895908749316,
+            "realtime_factor": 34.53766647333353,
+            "stages": {
+              "duration_predictor": 0.0007577089709229767,
+              "text_encoder": 0.003802291990723461,
+              "condition": 0.0008122079889290035,
+              "vector_estimator": 0.10588791797636077,
+              "vocoder": 0.03815025003859773
+            },
+            "process_cpu_seconds": 0.14965600000000023
+          },
+          {
+            "seconds": 0.14987320802174509,
+            "audio_seconds": 5.177414965986395,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.028947497738997907,
+            "realtime_factor": 34.54530021960432,
+            "stages": {
+              "duration_predictor": 0.0008484580321237445,
+              "text_encoder": 0.003606832993682474,
+              "condition": 0.000709082989487797,
+              "vector_estimator": 0.10620645893504843,
+              "vocoder": 0.038042084022890776
+            },
+            "process_cpu_seconds": 0.1497730000000015
+          },
+          {
+            "seconds": 0.15163325000321493,
+            "audio_seconds": 5.177414965986395,
+            "speed": 1.0,
+            "generation_speed": 1.0,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.029287443830441733,
+            "realtime_factor": 34.14432498067952,
+            "stages": {
+              "duration_predictor": 0.0007634590147063136,
+              "text_encoder": 0.003657083958387375,
+              "condition": 0.0007644580327905715,
+              "vector_estimator": 0.10719024913851172,
+              "vocoder": 0.038792625011410564
+            },
+            "process_cpu_seconds": 0.15146000000000015
+          }
+        ]
+      },
+      "median_paired_speedup": 1.2113282472666114,
+      "paired_speedups": [
+        1.231728912360711,
+        1.19548733748049,
+        1.1594948286140103,
+        1.2084851800517604,
+        1.2141713144814623,
+        1.2397866232809325
+      ],
+      "median_time_reduction_percent": 17.44553872947417,
+      "reference_rtf": 0.03554652383033266,
+      "candidate_rtf": 0.029173942013549913,
+      "process_rss_mb": 542.277632
+    },
+    {
+      "case": "ko_short",
+      "voice": "F1",
+      "speed": 2.0,
+      "float32_bitidentical": true,
+      "wave_sha256": "448dd455f8f46d41159243c595665356bc21238ffa86c078c98dfbd5daf70864",
+      "runs": {
+        "reference": [
+          {
+            "seconds": 0.13720716699026525,
+            "audio_seconds": 2.7912925170068026,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04915542393149004,
+            "realtime_factor": 20.34363494441105,
+            "stages": {
+              "duration_predictor": 0.0008925829897634685,
+              "text_encoder": 0.004672457987908274,
+              "vector_estimator": 0.10651958308881149,
+              "vocoder": 0.024697208020370454
+            },
+            "process_cpu_seconds": 0.13700399999999924
+          },
+          {
+            "seconds": 0.1379225830314681,
+            "audio_seconds": 2.7912925170068026,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.049411726714822114,
+            "realtime_factor": 20.238110798504607,
+            "stages": {
+              "duration_predictor": 0.0008409169968217611,
+              "text_encoder": 0.004432790970895439,
+              "vector_estimator": 0.10733350098598748,
+              "vocoder": 0.02490295801544562
+            },
+            "process_cpu_seconds": 0.1375030000000006
+          },
+          {
+            "seconds": 0.14401516597718,
+            "audio_seconds": 2.7912925170068026,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.051594437021459987,
+            "realtime_factor": 19.381934521042723,
+            "stages": {
+              "duration_predictor": 0.0008705840446054935,
+              "text_encoder": 0.004742874996736646,
+              "vector_estimator": 0.1116012490238063,
+              "vocoder": 0.026332249981351197
+            },
+            "process_cpu_seconds": 0.14316300000000126
+          },
+          {
+            "seconds": 0.1640977499773726,
+            "audio_seconds": 2.7912925170068026,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.058789162718545944,
+            "realtime_factor": 17.009937780327235,
+            "stages": {
+              "duration_predictor": 0.0008349579875357449,
+              "text_encoder": 0.004722749989014119,
+              "vector_estimator": 0.13093058188678697,
+              "vocoder": 0.027163541002664715
+            },
+            "process_cpu_seconds": 0.15556300000000078
+          },
+          {
+            "seconds": 0.14334233303088695,
+            "audio_seconds": 2.7912925170068026,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.051353389928690735,
+            "realtime_factor": 19.472911162994283,
+            "stages": {
+              "duration_predictor": 0.00091758300550282,
+              "text_encoder": 0.0047645000158809125,
+              "vector_estimator": 0.11174837581347674,
+              "vocoder": 0.025477832998149097
+            },
+            "process_cpu_seconds": 0.14303899999999992
+          },
+          {
+            "seconds": 0.1402244169730693,
+            "audio_seconds": 2.7912925170068026,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.05023637476857377,
+            "realtime_factor": 19.90589497364701,
+            "stages": {
+              "duration_predictor": 0.0008317920146510005,
+              "text_encoder": 0.004340666986536235,
+              "vector_estimator": 0.10844854195602238,
+              "vocoder": 0.026171417033765465
+            },
+            "process_cpu_seconds": 0.14004299999999859
+          }
+        ],
+        "candidate": [
+          {
+            "seconds": 0.1133319580112584,
+            "audio_seconds": 2.7912925170068026,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04060196390050445,
+            "realtime_factor": 24.629350502613885,
+            "stages": {
+              "duration_predictor": 0.0007237499812617898,
+              "text_encoder": 0.003694916027598083,
+              "condition": 0.0007639590185135603,
+              "vector_estimator": 0.08642545808106661,
+              "vocoder": 0.021277541003655642
+            },
+            "process_cpu_seconds": 0.11190299999999986
+          },
+          {
+            "seconds": 0.1101683329907246,
+            "audio_seconds": 2.7912925170068026,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.039468573185895195,
+            "realtime_factor": 25.336613900128725,
+            "stages": {
+              "duration_predictor": 0.0007851250120438635,
+              "text_encoder": 0.0037569580017589033,
+              "condition": 0.0007890419801697135,
+              "vector_estimator": 0.0835208750795573,
+              "vocoder": 0.020877040980849415
+            },
+            "process_cpu_seconds": 0.10990500000000125
+          },
+          {
+            "seconds": 0.11309670796617866,
+            "audio_seconds": 2.7912925170068026,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04051768393212191,
+            "realtime_factor": 24.68058148820329,
+            "stages": {
+              "duration_predictor": 0.000754999986384064,
+              "text_encoder": 0.0035159170511178672,
+              "condition": 0.0007119589718058705,
+              "vector_estimator": 0.08611804211977869,
+              "vocoder": 0.021574959042482078
+            },
+            "process_cpu_seconds": 0.11291199999999968
+          },
+          {
+            "seconds": 0.1142801659880206,
+            "audio_seconds": 2.7912925170068026,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04094166601734994,
+            "realtime_factor": 24.424995298829014,
+            "stages": {
+              "duration_predictor": 0.0008570419740863144,
+              "text_encoder": 0.003815457981545478,
+              "condition": 0.000719499948900193,
+              "vector_estimator": 0.08636825095163658,
+              "vocoder": 0.022043167031370103
+            },
+            "process_cpu_seconds": 0.11399899999999974
+          },
+          {
+            "seconds": 0.11293474998092279,
+            "audio_seconds": 2.7912925170068026,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04045966135502937,
+            "realtime_factor": 24.715975529926038,
+            "stages": {
+              "duration_predictor": 0.0007435420411638916,
+              "text_encoder": 0.003674958017654717,
+              "condition": 0.0008017499931156635,
+              "vector_estimator": 0.08481529197888449,
+              "vocoder": 0.022444917005486786
+            },
+            "process_cpu_seconds": 0.11283900000000102
+          },
+          {
+            "seconds": 0.11219362501287833,
+            "audio_seconds": 2.7912925170068026,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.0401941481694607,
+            "realtime_factor": 24.879243510372355,
+            "stages": {
+              "duration_predictor": 0.0008530000341124833,
+              "text_encoder": 0.0038509159930981696,
+              "condition": 0.0007205000147223473,
+              "vector_estimator": 0.0844860399956815,
+              "vocoder": 0.021802250004839152
+            },
+            "process_cpu_seconds": 0.1120340000000013
+          }
+        ]
+      },
+      "median_paired_speedup": 1.260587485384197,
+      "paired_speedups": [
+        1.2106661651132427,
+        1.2519258419121237,
+        1.2733807072461159,
+        1.4359250230225786,
+        1.2692491288562704,
+        1.2498430009456725
+      ],
+      "median_time_reduction_percent": 20.668162577682267,
+      "reference_rtf": 0.05079488234863225,
+      "candidate_rtf": 0.04048867264357564,
+      "process_rss_mb": 547.96288
+    },
+    {
+      "case": "en_short",
+      "voice": "F1",
+      "speed": 2.0,
+      "float32_bitidentical": true,
+      "wave_sha256": "17d02ea2e657d98b962acc039c8912e88832e1f3cdfce8e640b57ba409628534",
+      "runs": {
+        "reference": [
+          {
+            "seconds": 0.13399925001431257,
+            "audio_seconds": 2.5887074829931973,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.05176299404032151,
+            "realtime_factor": 19.318820685314996,
+            "stages": {
+              "duration_predictor": 0.0009597080061212182,
+              "text_encoder": 0.0048049999750219285,
+              "vector_estimator": 0.10289904201636091,
+              "vocoder": 0.024875000002793968
+            },
+            "process_cpu_seconds": 0.1338159999999995
+          },
+          {
+            "seconds": 0.13406970800133422,
+            "audio_seconds": 2.5887074829931973,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.05179021147894079,
+            "realtime_factor": 19.308668017442354,
+            "stages": {
+              "duration_predictor": 0.000924833002500236,
+              "text_encoder": 0.004699292010627687,
+              "vector_estimator": 0.10369625099701807,
+              "vocoder": 0.024310208042152226
+            },
+            "process_cpu_seconds": 0.133856999999999
+          },
+          {
+            "seconds": 0.13447712501510978,
+            "audio_seconds": 2.5887074829931973,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.05194759388558663,
+            "realtime_factor": 19.25016974226904,
+            "stages": {
+              "duration_predictor": 0.0009210829739458859,
+              "text_encoder": 0.004866624949499965,
+              "vector_estimator": 0.1042012499528937,
+              "vocoder": 0.02403004199732095
+            },
+            "process_cpu_seconds": 0.13395900000000083
+          },
+          {
+            "seconds": 0.1455373330391012,
+            "audio_seconds": 2.5887074829931973,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.05622007661940368,
+            "realtime_factor": 17.787240077415014,
+            "stages": {
+              "duration_predictor": 0.001098875014577061,
+              "text_encoder": 0.005342999997083098,
+              "vector_estimator": 0.1113722930313088,
+              "vocoder": 0.025913750054314733
+            },
+            "process_cpu_seconds": 0.14242600000000039
+          },
+          {
+            "seconds": 0.1417367499670945,
+            "audio_seconds": 2.5887074829931973,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.05475193736575102,
+            "realtime_factor": 18.264193891804275,
+            "stages": {
+              "duration_predictor": 0.0009411249775439501,
+              "text_encoder": 0.004937999998219311,
+              "vector_estimator": 0.1098655829555355,
+              "vocoder": 0.0255414160201326
+            },
+            "process_cpu_seconds": 0.14127900000000082
+          },
+          {
+            "seconds": 0.14137870800914243,
+            "audio_seconds": 2.5887074829931973,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.05461362820556035,
+            "realtime_factor": 18.310448011915593,
+            "stages": {
+              "duration_predictor": 0.0009306250140070915,
+              "text_encoder": 0.0048712920397520065,
+              "vector_estimator": 0.11041895893868059,
+              "vocoder": 0.024698375025764108
+            },
+            "process_cpu_seconds": 0.1411370000000005
+          }
+        ],
+        "candidate": [
+          {
+            "seconds": 0.10630141600267962,
+            "audio_seconds": 2.5887074829931973,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.041063510149771124,
+            "realtime_factor": 24.35252116423305,
+            "stages": {
+              "duration_predictor": 0.0007643330027349293,
+              "text_encoder": 0.0035094579798169434,
+              "condition": 0.0007782910251989961,
+              "vector_estimator": 0.08060891804052517,
+              "vocoder": 0.020236957992892712
+            },
+            "process_cpu_seconds": 0.1062170000000009
+          },
+          {
+            "seconds": 0.10595783399185166,
+            "audio_seconds": 2.5887074829931973,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04093078676828242,
+            "realtime_factor": 24.43148737064853,
+            "stages": {
+              "duration_predictor": 0.0008108749752864242,
+              "text_encoder": 0.0038265829789452255,
+              "condition": 0.0006793749635107815,
+              "vector_estimator": 0.07982879102928564,
+              "vocoder": 0.020356458029709756
+            },
+            "process_cpu_seconds": 0.10575500000000204
+          },
+          {
+            "seconds": 0.10776799998711795,
+            "audio_seconds": 2.5887074829931973,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04163004151496909,
+            "realtime_factor": 24.02111464722959,
+            "stages": {
+              "duration_predictor": 0.0009087079670280218,
+              "text_encoder": 0.0038354999851435423,
+              "condition": 0.0008041670080274343,
+              "vector_estimator": 0.08104391704546288,
+              "vocoder": 0.02069891698192805
+            },
+            "process_cpu_seconds": 0.10716799999999793
+          },
+          {
+            "seconds": 0.11865987500641495,
+            "audio_seconds": 2.5887074829931973,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04583749836007515,
+            "realtime_factor": 21.81619930792315,
+            "stages": {
+              "duration_predictor": 0.0007649159524589777,
+              "text_encoder": 0.0037090000114403665,
+              "condition": 0.0007634159992448986,
+              "vector_estimator": 0.08864495804300532,
+              "vocoder": 0.02431320899631828
+            },
+            "process_cpu_seconds": 0.11398799999999909
+          },
+          {
+            "seconds": 0.1121005829772912,
+            "audio_seconds": 2.5887074829931973,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.04330368869937932,
+            "realtime_factor": 23.092720967540423,
+            "stages": {
+              "duration_predictor": 0.0008760839700698853,
+              "text_encoder": 0.003994999977294356,
+              "condition": 0.0007848750101402402,
+              "vector_estimator": 0.08352758298860863,
+              "vocoder": 0.022443458961788565
+            },
+            "process_cpu_seconds": 0.11213800000000163
+          },
+          {
+            "seconds": 0.11315695801749825,
+            "audio_seconds": 2.5887074829931973,
+            "speed": 2.0,
+            "generation_speed": 1.35,
+            "speed_strategy": "latent-retime",
+            "rtf": 0.043711759154286656,
+            "realtime_factor": 22.877139226320377,
+            "stages": {
+              "duration_predictor": 0.0008199160220101476,
+              "text_encoder": 0.003966541029512882,
+              "condition": 0.0007909580017440021,
+              "vector_estimator": 0.08508804097073153,
+              "vocoder": 0.02204904198879376
+            },
+            "process_cpu_seconds": 0.11284699999999859
+          }
+        ]
+      },
+      "median_paired_speedup": 1.2549814920020501,
+      "paired_speedups": [
+        1.2605594078909987,
+        1.2653118976709585,
+        1.2478391083733995,
+        1.2265083966356212,
+        1.2643712120195385,
+        1.2494035761131017
+      ],
+      "median_time_reduction_percent": 20.3159758601509,
+      "reference_rtf": 0.053280611045573495,
+      "candidate_rtf": 0.042466865107174206,
+      "process_rss_mb": 547.995648
+    }
+  ],
+  "complete": true,
+  "libraries": {
+    "reference": null,
+    "candidate": null
+  }
+}

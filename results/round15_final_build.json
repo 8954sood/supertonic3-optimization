@@ -1,0 +1,39 @@
+{
+  "receipt": {
+    "parts": {
+      "duration_predictor": {
+        "nodes": 10,
+        "source_graph_sha256": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+        "initializer_bitidentity": true,
+        "width": 64,
+        "preserved_inferred_shapes": true,
+        "output_graph_sha256": "dd200ea7f6786f75ef734c4b7355b80e2f349fdb6da36e3bd40dfbd55a994238"
+      },
+      "text_encoder": {
+        "nodes": 15,
+        "source_graph_sha256": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+        "initializer_bitidentity": true,
+        "width": 256,
+        "preserved_inferred_shapes": true,
+        "output_graph_sha256": "6de61a0e1ebb4a0cd5a455cf493b30113167c2881340a5a071a06caeb392e9e1"
+      },
+      "vocoder": {
+        "nodes": 10,
+        "source_graph_sha256": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6",
+        "initializer_bitidentity": true,
+        "width": 512,
+        "preserved_inferred_shapes": true,
+        "output_graph_sha256": "804374d03e5a30886fb8d5f357fe3c38464c582456341624af4b883fcb8e2aa3"
+      }
+    },
+    "initializer_bitidentity": true,
+    "total_native_norm_nodes": 71
+  },
+  "identical_to_measured_candidate": {
+    "vector_estimator.onnx": true,
+    "duration_predictor.onnx": true,
+    "text_encoder.onnx": true,
+    "vocoder.onnx": true,
+    "condition.onnx": true
+  }
+}

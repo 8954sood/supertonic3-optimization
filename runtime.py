@@ -34,12 +34,13 @@ def options(
     native_backend=False,
     exact_int8_backend=False,
     row_norm_backend=False,
+    row_norm_widths=(512,),
 ):
     opt = ort.SessionOptions()
     if row_norm_backend:
         from row_norm_ops import library_path
 
-        opt.register_custom_ops_library(library_path())
+        opt.register_custom_ops_library(library_path(widths=row_norm_widths))
     if numpy_backend:
         from numpy_ops import library_path
 
@@ -102,6 +103,7 @@ class Engine:
         self.native_backend = metadata.get("backend") == "native-blas"
         self.exact_int8_backend = metadata.get("backend") == "native-exact-int8"
         self.row_norm_backend = bool(metadata.get("row_norm_backend"))
+        self.row_norm_widths = tuple(metadata.get("row_norm_widths", [512]))
         self.cfg = json.loads((self.root / "onnx/tts.json").read_text())
         self.processor = UnicodeProcessor(str(self.root / "onnx/unicode_indexer.json"))
         self.style = load_voice_style_from_json_file(
@@ -134,6 +136,7 @@ class Engine:
                     native_backend=self.native_backend,
                     exact_int8_backend=self.exact_int8_backend,
                     row_norm_backend=self.row_norm_backend,
+                    row_norm_widths=self.row_norm_widths,
                 ),
                 providers=["CPUExecutionProvider"],
             )
@@ -151,6 +154,7 @@ class Engine:
                     native_backend=self.native_backend,
                     exact_int8_backend=self.exact_int8_backend,
                     row_norm_backend=self.row_norm_backend,
+                    row_norm_widths=self.row_norm_widths,
                 ),
                 providers=["CPUExecutionProvider"],
             )
@@ -167,7 +171,8 @@ class Engine:
                 options(profile, low_memory=low_memory,
                         numpy_backend=self.numpy_backend, native_backend=self.native_backend,
                         exact_int8_backend=self.exact_int8_backend,
-                        row_norm_backend=self.row_norm_backend),
+                        row_norm_backend=self.row_norm_backend,
+                        row_norm_widths=self.row_norm_widths),
                 providers=["CPUExecutionProvider"],
             )
             names = [value.name for value in self.step_condition.get_outputs()]

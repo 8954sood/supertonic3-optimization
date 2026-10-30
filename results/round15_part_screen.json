@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "part": "duration_predictor",
+      "shape": [
+        1
+      ],
+      "bitidentical": true,
+      "max_error": 0.0,
+      "different_values": 0
+    },
+    {
+      "part": "text_encoder",
+      "shape": [
+        1,
+        256,
+        76
+      ],
+      "bitidentical": false,
+      "max_error": 1.7881393432617188e-06,
+      "different_values": 18242
+    },
+    {
+      "part": "vocoder",
+      "shape": [
+        1,
+        248832
+      ],
+      "bitidentical": false,
+      "max_error": 2.034008502960205e-06,
+      "different_values": 246256
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "removed": [
+    {
+      "model": "models/round15-all-row-norm",
+      "files": 22,
+      "unshared_bytes_removed": 141621416
+    },
+    {
+      "model": "models/round15-inferred-row-norm",
+      "files": 22,
+      "unshared_bytes_removed": 141914138
+    }
+  ],
+  "preserved": [
+    "models/round12-portable-cached",
+    "models/round13-row-norm",
+    "models/round15-all-parts-row-norm"
+  ],
+  "note": "Only temporary packages created in this round were removed; learned source models were kept."
+}
