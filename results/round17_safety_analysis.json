@@ -1,0 +1,621 @@
+{
+  "note": "Offline exact safe-K8 flag analysis of fixed F1200 weights; not performance.",
+  "rows": [
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.0/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1024
+      ],
+      "unsafe_blocks": 70,
+      "total_blocks": 8192,
+      "all_safe_n16_tiles": 21,
+      "n16_tiles": 64
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.0/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1024,
+        512
+      ],
+      "unsafe_blocks": 30,
+      "total_blocks": 8192,
+      "all_safe_n16_tiles": 16,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.0/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1024
+      ],
+      "unsafe_blocks": 67,
+      "total_blocks": 8192,
+      "all_safe_n16_tiles": 21,
+      "n16_tiles": 64
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.0/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1024,
+        512
+      ],
+      "unsafe_blocks": 23,
+      "total_blocks": 8192,
+      "all_safe_n16_tiles": 17,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.0/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        512
+      ],
+      "unsafe_blocks": 39,
+      "total_blocks": 4096,
+      "all_safe_n16_tiles": 10,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.0/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        512
+      ],
+      "unsafe_blocks": 17,
+      "total_blocks": 4096,
+      "all_safe_n16_tiles": 18,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.0/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1024
+      ],
+      "unsafe_blocks": 65,
+      "total_blocks": 8192,
+      "all_safe_n16_tiles": 23,
+      "n16_tiles": 64
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.0/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1024,
+        512
+      ],
+      "unsafe_blocks": 37,
+      "total_blocks": 8192,
+      "all_safe_n16_tiles": 18,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.2/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        512
+      ],
+      "unsafe_blocks": 28,
+      "total_blocks": 4096,
+      "all_safe_n16_tiles": 12,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.2/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        512
+      ],
+      "unsafe_blocks": 23,
+      "total_blocks": 4096,
+      "all_safe_n16_tiles": 16,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.4/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1024
+      ],
+      "unsafe_blocks": 84,
+      "total_blocks": 8192,
+      "all_safe_n16_tiles": 20,
+      "n16_tiles": 64
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.4/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1024,
+        512
+      ],
+      "unsafe_blocks": 11,
+      "total_blocks": 8192,
+      "all_safe_n16_tiles": 23,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.6/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 155,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 21,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.6/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 3,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 30,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.6/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 132,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 28,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.6/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 3,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 29,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.6/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 149,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 23,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.6/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 4,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 28,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.6/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 131,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 27,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.6/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 2,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 30,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.8/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 148,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 22,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.8/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 19,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 17,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.10/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 82,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 38,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.10/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 20,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 16,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.12/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        2048
+      ],
+      "unsafe_blocks": 145,
+      "total_blocks": 16384,
+      "all_safe_n16_tiles": 45,
+      "n16_tiles": 128
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.12/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        2048,
+        512
+      ],
+      "unsafe_blocks": 2,
+      "total_blocks": 16384,
+      "all_safe_n16_tiles": 30,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.12/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        2048
+      ],
+      "unsafe_blocks": 231,
+      "total_blocks": 16384,
+      "all_safe_n16_tiles": 22,
+      "n16_tiles": 128
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.12/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        2048,
+        512
+      ],
+      "unsafe_blocks": 7,
+      "total_blocks": 16384,
+      "all_safe_n16_tiles": 26,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.12/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 130,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 27,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.12/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 1,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 31,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.12/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 111,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 30,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.12/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 6,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 27,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.14/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 91,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 34,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.14/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 6,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 26,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.16/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 121,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 27,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.16/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 6,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 26,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.18/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 179,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 20,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.18/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 6,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 26,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.18/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        2048
+      ],
+      "unsafe_blocks": 210,
+      "total_blocks": 16384,
+      "all_safe_n16_tiles": 29,
+      "n16_tiles": 128
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.18/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        2048,
+        512
+      ],
+      "unsafe_blocks": 7,
+      "total_blocks": 16384,
+      "all_safe_n16_tiles": 27,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.18/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        2048
+      ],
+      "unsafe_blocks": 214,
+      "total_blocks": 16384,
+      "all_safe_n16_tiles": 29,
+      "n16_tiles": 128
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.18/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        2048,
+        512
+      ],
+      "unsafe_blocks": 1,
+      "total_blocks": 16384,
+      "all_safe_n16_tiles": 31,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.18/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 185,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 14,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.18/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 15,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 18,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.20/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 158,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 19,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.20/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 15,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 22,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.22/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 148,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 26,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.22/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 6,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 26,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/last_convnext/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 167,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 15,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/last_convnext/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 4,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 29,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/last_convnext/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 156,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 23,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/last_convnext/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 26,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 13,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/last_convnext/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 148,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 31,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/last_convnext/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 15,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 19,
+      "n16_tiles": 32
+    },
+    {
+      "name": "/vector_estimator/vector_field/last_convnext/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "shape": [
+        512,
+        1536
+      ],
+      "unsafe_blocks": 108,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 31,
+      "n16_tiles": 96
+    },
+    {
+      "name": "/vector_estimator/vector_field/last_convnext/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "shape": [
+        1536,
+        512
+      ],
+      "unsafe_blocks": 23,
+      "total_blocks": 12288,
+      "all_safe_n16_tiles": 16,
+      "n16_tiles": 32
+    }
+  ]
+}

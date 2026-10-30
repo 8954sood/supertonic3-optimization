@@ -1,0 +1,398 @@
+{
+  "note": "Prepared actual-weight microprobe only; not a TTS speed or quality score.",
+  "rows": [
+    {
+      "shape": [
+        56,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0006140749901533127,
+        "candidate": 0.0006186459213495255
+      },
+      "speedup": 0.9926113936284561,
+      "actual_weight_sha256": "49f34366d28144a17bb2ddcc4d8f10ab49d90e2dbdbc57365bf269fc0bb95c19"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0012259678915143013,
+        "candidate": 0.001231784000992775
+      },
+      "speedup": 0.995278304090826,
+      "actual_weight_sha256": "5653ec37225a259631b696ff100112a93a323a6cb73ad532bca13bcab7d3b804"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018914667889475822,
+        "candidate": 0.0018963981419801712
+      },
+      "speedup": 0.9973996214595319,
+      "actual_weight_sha256": "499736b548952e9c9aea8d28070976c6acb6e53c7bc4c09c4f386a45c399dfba"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0024740146473050117,
+        "candidate": 0.002450467087328434
+      },
+      "speedup": 1.0096094169549732,
+      "actual_weight_sha256": "81808a0b743eca67c4d8dfdd732f7e7310c1cb7a1004429b3f14f6198178b403"
+    },
+    {
+      "shape": [
+        56,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0012487266212701797,
+        "candidate": 0.0012767231091856956
+      },
+      "speedup": 0.9780716055704731,
+      "actual_weight_sha256": "67e852b154a6993c29393b5a47194ec79d8b14a2b03d9d4fb3e2e9fde2d7e707"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0019174069166183472,
+        "candidate": 0.0018356302753090858
+      },
+      "speedup": 1.0445496254933426,
+      "actual_weight_sha256": "d5579ce7ed3948e74556c80e237f259050e837783b17bfcaf6f2973ea6862e90"
+    },
+    {
+      "shape": [
+        56,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002507152035832405,
+        "candidate": 0.002482186071574688
+      },
+      "speedup": 1.0100580550924931,
+      "actual_weight_sha256": "c69e939f4bd92d8789e107eba94e13890e56237d2f40c694b35f8c79d0f7f6eb"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0006573395803570747,
+        "candidate": 0.0006595849990844727
+      },
+      "speedup": 0.9965957098319176,
+      "actual_weight_sha256": "49f34366d28144a17bb2ddcc4d8f10ab49d90e2dbdbc57365bf269fc0bb95c19"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0014169737696647644,
+        "candidate": 0.0013861767947673798
+      },
+      "speedup": 1.0222172056361345,
+      "actual_weight_sha256": "5653ec37225a259631b696ff100112a93a323a6cb73ad532bca13bcab7d3b804"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0022151898592710495,
+        "candidate": 0.0021565547212958336
+      },
+      "speedup": 1.0271892650792478,
+      "actual_weight_sha256": "499736b548952e9c9aea8d28070976c6acb6e53c7bc4c09c4f386a45c399dfba"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0027617905288934708,
+        "candidate": 0.0027157673612236977
+      },
+      "speedup": 1.0169466532100289,
+      "actual_weight_sha256": "81808a0b743eca67c4d8dfdd732f7e7310c1cb7a1004429b3f14f6198178b403"
+    },
+    {
+      "shape": [
+        60,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0013068420812487602,
+        "candidate": 0.0013361135497689247
+      },
+      "speedup": 0.9780920801789437,
+      "actual_weight_sha256": "67e852b154a6993c29393b5a47194ec79d8b14a2b03d9d4fb3e2e9fde2d7e707"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.00201393011957407,
+        "candidate": 0.0019869478419423103
+      },
+      "speedup": 1.0135797614120476,
+      "actual_weight_sha256": "d5579ce7ed3948e74556c80e237f259050e837783b17bfcaf6f2973ea6862e90"
+    },
+    {
+      "shape": [
+        60,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002709336578845978,
+        "candidate": 0.0027204034850001335
+      },
+      "speedup": 0.995931887966187,
+      "actual_weight_sha256": "c69e939f4bd92d8789e107eba94e13890e56237d2f40c694b35f8c79d0f7f6eb"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0008664969354867935,
+        "candidate": 0.0008655097335577011
+      },
+      "speedup": 1.001140601764274,
+      "actual_weight_sha256": "49f34366d28144a17bb2ddcc4d8f10ab49d90e2dbdbc57365bf269fc0bb95c19"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001803206279873848,
+        "candidate": 0.0017537465319037437
+      },
+      "speedup": 1.0282023354403524,
+      "actual_weight_sha256": "5653ec37225a259631b696ff100112a93a323a6cb73ad532bca13bcab7d3b804"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002672647126019001,
+        "candidate": 0.002650138922035694
+      },
+      "speedup": 1.0084932166371177,
+      "actual_weight_sha256": "499736b548952e9c9aea8d28070976c6acb6e53c7bc4c09c4f386a45c399dfba"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0034027351066470146,
+        "candidate": 0.003462899476289749
+      },
+      "speedup": 0.9826260132427533,
+      "actual_weight_sha256": "81808a0b743eca67c4d8dfdd732f7e7310c1cb7a1004429b3f14f6198178b403"
+    },
+    {
+      "shape": [
+        75,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0017168279737234116,
+        "candidate": 0.0016634240746498108
+      },
+      "speedup": 1.0321048011072242,
+      "actual_weight_sha256": "67e852b154a6993c29393b5a47194ec79d8b14a2b03d9d4fb3e2e9fde2d7e707"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0024863630533218384,
+        "candidate": 0.0024556349962949753
+      },
+      "speedup": 1.012513283559334,
+      "actual_weight_sha256": "d5579ce7ed3948e74556c80e237f259050e837783b17bfcaf6f2973ea6862e90"
+    },
+    {
+      "shape": [
+        75,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.003346135839819908,
+        "candidate": 0.00325939804315567
+      },
+      "speedup": 1.0266115999076506,
+      "actual_weight_sha256": "c69e939f4bd92d8789e107eba94e13890e56237d2f40c694b35f8c79d0f7f6eb"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0009483546018600464,
+        "candidate": 0.0009412495419383049
+      },
+      "speedup": 1.0075485401109574,
+      "actual_weight_sha256": "49f34366d28144a17bb2ddcc4d8f10ab49d90e2dbdbc57365bf269fc0bb95c19"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0017920434474945068,
+        "candidate": 0.001754983328282833
+      },
+      "speedup": 1.0211170776465068,
+      "actual_weight_sha256": "5653ec37225a259631b696ff100112a93a323a6cb73ad532bca13bcab7d3b804"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0026649469509720802,
+        "candidate": 0.0026404215022921562
+      },
+      "speedup": 1.0092884596866953,
+      "actual_weight_sha256": "499736b548952e9c9aea8d28070976c6acb6e53c7bc4c09c4f386a45c399dfba"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0037200171500444412,
+        "candidate": 0.0036197956651449203
+      },
+      "speedup": 1.0276870558922857,
+      "actual_weight_sha256": "81808a0b743eca67c4d8dfdd732f7e7310c1cb7a1004429b3f14f6198178b403"
+    },
+    {
+      "shape": [
+        81,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001975671388208866,
+        "candidate": 0.0019023511558771133
+      },
+      "speedup": 1.0385419022693247,
+      "actual_weight_sha256": "67e852b154a6993c29393b5a47194ec79d8b14a2b03d9d4fb3e2e9fde2d7e707"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002698165364563465,
+        "candidate": 0.0026743803173303604
+      },
+      "speedup": 1.0088936667230812,
+      "actual_weight_sha256": "d5579ce7ed3948e74556c80e237f259050e837783b17bfcaf6f2973ea6862e90"
+    },
+    {
+      "shape": [
+        81,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0035638362169265747,
+        "candidate": 0.0035474346950650215
+      },
+      "speedup": 1.0046234880333018,
+      "actual_weight_sha256": "c69e939f4bd92d8789e107eba94e13890e56237d2f40c694b35f8c79d0f7f6eb"
+    }
+  ],
+  "complete": true
+}

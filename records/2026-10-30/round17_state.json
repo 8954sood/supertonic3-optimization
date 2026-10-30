@@ -1,0 +1,108 @@
+{
+  "round": 17,
+  "status": "Selected Linux x86 engine v5; verification complete",
+  "baseline_commit": "7db1daa",
+  "git_branch": "main",
+  "model": "F1200 with existing latent-retime, learned weights and quantization unchanged",
+  "steps": 8,
+  "inference_threads": 1,
+  "target": "Linux x86_64 AVX2 EPYC7551, one logical CPU and about1GB RAM",
+  "selected_engine_version": 5,
+  "reference_engine_version": 4,
+  "sources": {
+    "kernel": "native/exact_int8.c",
+    "fallback": "native/exact_int8_v4.c",
+    "builder": "native/build_exact.py",
+    "preparer": "prepare_native_batch.py"
+  },
+  "final_package": "models/F1200-retime-v5",
+  "summary": "results/round17_summary.json",
+  "handoff": "records/2026-10-30/ROUND17_ENGINE.md",
+  "validation": {
+    "baseline": "results/round16_epyc_summary.json",
+    "main_timing": "results/round17_combined_confirm.json",
+    "uncertainty": "results/round17_confirmation_uncertainty.json",
+    "fresh_f1": "results/round17_f1_fresh.json",
+    "f1_rechecks": [
+      "results/round17_f1_ko1_confirm.json",
+      "results/round17_f1_en2_confirm.json"
+    ],
+    "long": "results/round17_v5_long_checks.json",
+    "fractional": "results/round17_fractional_checks.json",
+    "optimized_graph": "results/round17_target_folding.json",
+    "v5_oracle": "results/round17_v5_abi.json",
+    "v4_oracle": "results/round17_v4_fallback_abi.json",
+    "public_build": "results/round17_v5_public_build.json",
+    "public_reproduction": "results/round17_v5_reproduction.json",
+    "package": "results/round17_v5_package_check.json",
+    "unit_tests": "results/round17_unit_checks.json"
+  },
+  "limits": [
+    "M1 KO normal speed is effectively unchanged",
+    "Fresh F1 timing was mixed; short-interval repeat had only small gains",
+    "Long output parity passed, but long speed gain is not established",
+    "No new WER/CER/MOS or actual Oracle ARM result"
+  ],
+  "unselected": [
+    "safe spans",
+    "branch hints/unroll",
+    "GCC13",
+    "standalone/selected memones",
+    "variable K groups",
+    "exact integer FP32 BLAS",
+    "constant K/N",
+    "joined flags",
+    "128-bit XMM",
+    "all-safe panel loops",
+    "extra 28 custom linears",
+    "M10/M12 N8",
+    "ARM SDOT/packed SDOT: whole default-backend parity failed",
+    "tile-transpose row norm"
+  ],
+  "new_learned_weight_upload_required": false,
+  "huggingface": "Existing pinned F1200/retime models suffice; prepare engine graphs with public source",
+  "commands": [
+    [
+      "python",
+      "native/build_exact.py",
+      "--engine-version",
+      "5",
+      "--cpu",
+      "znver1"
+    ],
+    [
+      "python",
+      "prepare_native_batch.py",
+      "--source",
+      "models/F1200-retime-exact",
+      "--output",
+      "models/F1200-retime-v5"
+    ],
+    [
+      "python",
+      "native/build_exact.py",
+      "--engine-version",
+      "4",
+      "--cpu",
+      "znver1"
+    ]
+  ],
+  "pending": [],
+  "next_experiments": [
+    "Use fresh balanced controls to investigate larger gains; avoid overclaiming one-percent noise",
+    "Oracle ARM/N1 requires separate actual-device validation; x86 library does not run there",
+    "ARM native work must compare the full default fused backend as well as S32"
+  ],
+  "temporary_weight_cleanup": "results/round17_temporary_weight_cleanup.json",
+  "server_runtime": {
+    "scope": "Task-created round16-eval workspace only",
+    "model": "models/v5",
+    "library": "native/libexact_int8.so",
+    "default_path_smoke_passed": true,
+    "evidence": [
+      "results/round17_selected_install.json",
+      "results/round17_default_smoke.json",
+      "results/round17_default_smoke_guard.json"
+    ]
+  }
+}

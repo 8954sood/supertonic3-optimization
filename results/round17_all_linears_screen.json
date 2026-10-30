@@ -1,0 +1,91 @@
+{
+  "model": "all-linears",
+  "voice": "M1",
+  "speed": 1.0,
+  "steps": 8,
+  "threads": 1,
+  "affinity": [
+    0
+  ],
+  "nice": 19,
+  "python": "3.12.3",
+  "onnxruntime": "1.31.1",
+  "numpy": "2.5.4",
+  "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+  "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+  "exact_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+  "graph_sha256": {
+    "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+    "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+    "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+    "vector_estimator.onnx": "75be7131a8ded4345ec61bb3d8d24943cd1dbe4a5065b346f0af421023731b4c",
+    "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+  },
+  "load_seconds": 6.207747247070074,
+  "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+  "rows": [
+    {
+      "case": "ko_short",
+      "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+      "lang": "ko",
+      "float32_sha256": "c5c0d0d6096336fe23a837f9ca938fb87f850233950b8a8dbc61cb5cac806a72",
+      "samples": 246343,
+      "sample_rate": 44100,
+      "runs": [
+        {
+          "seconds": 5.717670099809766,
+          "audio_seconds": 5.586009070294785,
+          "speed": 1.0,
+          "generation_speed": 1.0,
+          "speed_strategy": "latent-retime",
+          "rtf": 1.0235697844128335,
+          "realtime_factor": 0.9769729580027079,
+          "stages": {
+            "duration_predictor": 0.004278343170881271,
+            "text_encoder": 0.0989484041929245,
+            "condition": 0.006866093724966049,
+            "vector_estimator": 3.5709188003093004,
+            "vocoder": 2.0349391773343086
+          },
+          "process_cpu_seconds": 5.706527637000001,
+          "actual_vector_calls": 8
+        }
+      ],
+      "median_seconds": 5.717670099809766,
+      "median_rtf": 1.0235697844128335,
+      "rss_mb": 355.06176
+    },
+    {
+      "case": "en_short",
+      "text": "Hello. This voice is generated locally using a single CPU thread.",
+      "lang": "en",
+      "float32_sha256": "2b74bc15be429df8b48b8e3c56901160a79eb982a8e4fe1192f16784d1e5d870",
+      "samples": 228452,
+      "sample_rate": 44100,
+      "runs": [
+        {
+          "seconds": 5.488807348534465,
+          "audio_seconds": 5.18031746031746,
+          "speed": 1.0,
+          "generation_speed": 1.0,
+          "speed_strategy": "latent-retime",
+          "rtf": 1.0595503828829247,
+          "realtime_factor": 0.9437965538543864,
+          "stages": {
+            "duration_predictor": 0.004167182371020317,
+            "text_encoder": 0.09933367185294628,
+            "condition": 0.006657658144831657,
+            "vector_estimator": 3.4934929739683867,
+            "vocoder": 1.883512083441019
+          },
+          "process_cpu_seconds": 5.4783519269999985,
+          "actual_vector_calls": 8
+        }
+      ],
+      "median_seconds": 5.488807348534465,
+      "median_rtf": 1.0595503828829247,
+      "rss_mb": 355.155968
+    }
+  ],
+  "complete": true
+}

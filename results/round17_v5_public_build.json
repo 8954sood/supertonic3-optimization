@@ -1,0 +1,21 @@
+{
+  "source": "native/exact_int8.c",
+  "source_sha256": "2f4a362467fcb11b0389c199da34e91aac1c74bd3d8dea3881a4529b40d0aff3",
+  "binary_sha256": "32008e0973ce9386e4af0276e252813196e000d3474f9c7fd9a06d5f8ffc6c2b",
+  "prototype_binary_sha256": "1ccaeddc5f15b9e8f2f3729ed7d7881b3faf8ad8d6a376487faf87e2ce85701d",
+  "prototype_elf_sections_identical": true,
+  "sections": {
+    ".rodata": "8c226d28871447d5090f0e6e8d8ce4d0fa398d790e0ad15ef2e3295351500e1e",
+    ".eh_frame": "ce51d39892cd96e09677f730b7c1a94f769478286e908f0e078f19c2e6b14bb0",
+    ".text": "5a7a92f653511327596b247124932fd0c461f7b45ad3ef39ed8b755b93f7f998",
+    ".data": "874ab4ae33bf1a17db7ad066ed0ffab5c3f2b4e42b0123c13d3a814b1735a9ac"
+  },
+  "atomic_failure_preserves_existing_output": true,
+  "failed_build_leaves_no_temporary_files": true,
+  "command": [
+    ".venv/bin/python",
+    "native/build_exact.py",
+    "--output",
+    "native/libexact_v5_candidate.so"
+  ]
+}

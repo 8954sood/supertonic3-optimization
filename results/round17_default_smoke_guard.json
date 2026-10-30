@@ -1,0 +1,11 @@
+{
+  "returncode": 0,
+  "reason": null,
+  "sampled_peak_child_rss_mb": 380.719104,
+  "sampled_peak_process_tree_rss_mb": 380.719104,
+  "minimum_system_available_mb": 264.925184,
+  "elapsed_seconds": 19.323379574343562,
+  "max_rss_budget_mb": 480.0,
+  "reserve_mb": 80.0,
+  "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+}

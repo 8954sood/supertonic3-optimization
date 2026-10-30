@@ -12,7 +12,10 @@ import statistics
 import time
 import numpy as np
 import psutil
+from contextlib import nullcontext
+from unittest.mock import patch
 from experiments.row_norm_variant import engine_for_library
+from experiments.paired_shared_frontend import CountedSession
 
 
 def main():
@@ -25,6 +28,8 @@ def main():
     p.add_argument('--voices',nargs='+',default=['M1','F1'])
     p.add_argument('--reference-library')
     p.add_argument('--candidate-library')
+    p.add_argument('--reference-exact-library',type=Path)
+    p.add_argument('--candidate-exact-library',type=Path)
     a=p.parse_args()
     if a.output.exists() or a.pairs<3:p.error('Use a new output and at least three pairs')
     report=dict(machine=platform.platform(),threads=1,steps=8,
@@ -32,9 +37,21 @@ def main():
         scope='Alternating warm pairs in one process on this Mac, no hardware extrapolation.',
         rows=[],complete=False)
     engines={}
-    for name,model,library in [('reference',a.reference,a.reference_library),('candidate',a.candidate,a.candidate_library)]:
-        engines[name]=engine_for_library(model,library)
+    for name,model,library,exact in [('reference',a.reference,a.reference_library,a.reference_exact_library),('candidate',a.candidate,a.candidate_library,a.candidate_exact_library)]:
+        if exact and not exact.is_file():p.error('Exact library must exist')
+        with patch('exact_ops.library_path',return_value=str(exact.resolve())) if exact else nullcontext():
+            engines[name]=engine_for_library(model,library)
+        engines[name].sessions['vector_estimator']=CountedSession(engines[name].sessions['vector_estimator'])
     report['libraries']={'reference':a.reference_library,'candidate':a.candidate_library}
+    report['exact_library_sha256']={name:hashlib.sha256(path.read_bytes()).hexdigest()
+        for name,path in [('reference',a.reference_exact_library),('candidate',a.candidate_exact_library)] if path}
+
+    def synthesize(engine,*args,**kwargs):
+        session=engine.sessions['vector_estimator'];before=session.calls
+        wave,metrics=engine.synthesize(*args,**kwargs)
+        if session.calls-before!=8:raise AssertionError('Expected eight real vector calls')
+        metrics['actual_vector_calls']=8
+        return wave,metrics
     for voice in a.voices:
         from supertonic.loader import load_voice_style_from_json_file
         styles={name:load_voice_style_from_json_file(e.root/f'voice_styles/{voice}.json') for name,e in engines.items()}
@@ -43,7 +60,7 @@ def main():
                 lang,text=TEXTS[case]
                 expected=None
                 for name,e in engines.items():
-                    wave,_=e.synthesize(text,lang,8,speed=speed,voice_style=styles[name])
+                    wave,_=synthesize(e,text,lang,8,speed=speed,voice_style=styles[name])
                     if expected is None:expected=wave.copy()
                     np.testing.assert_array_equal(expected,wave)
                     if expected.tobytes()!=wave.tobytes():raise AssertionError('Float32 byte mismatch')
@@ -53,7 +70,7 @@ def main():
                     if pair%2:names.reverse()
                     for name in names:
                         began=time.process_time()
-                        wave,metrics=engines[name].synthesize(text,lang,8,speed=speed,voice_style=styles[name])
+                        wave,metrics=synthesize(engines[name],text,lang,8,speed=speed,voice_style=styles[name])
                         metrics['process_cpu_seconds']=time.process_time()-began
                         np.testing.assert_array_equal(expected,wave)
                         if expected.tobytes()!=wave.tobytes():raise AssertionError('Float32 byte mismatch')

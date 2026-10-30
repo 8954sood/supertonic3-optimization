@@ -1,0 +1,23 @@
+{
+  "source": "experiments/exact_int8_adaptive.c",
+  "source_sha256": "fa3a1d0362076efff331392c5542b47c867021854d0f658b139669b2906fca9c",
+  "library": "libexact_adaptive.so",
+  "library_sha256": "98c6dad63019da022db2f5f4e9fb0849d853976ca8c7571b001181601feeae71",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "ziglang",
+    "cc",
+    "-target",
+    "x86_64-linux-gnu.2.28",
+    "-mcpu=znver1",
+    "-O3",
+    "-fPIC",
+    "-shared",
+    "experiments/exact_int8_adaptive.c",
+    "-I",
+    "native/include",
+    "-o",
+    "native/libexact_adaptive.so"
+  ]
+}

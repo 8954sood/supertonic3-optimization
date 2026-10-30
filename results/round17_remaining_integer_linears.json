@@ -1,0 +1,369 @@
+{
+  "note": "Offline remaining integer graph coverage; not measured speed.",
+  "rows": [
+    {
+      "name": "/vector_estimator/vector_field/proj_in/net/Conv/linear/MatMul_quant",
+      "shape": [
+        144,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.5/attention/W_key/linear/MatMul_quant",
+      "shape": [
+        256,
+        256
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.11/attention/W_key/linear/MatMul_quant",
+      "shape": [
+        256,
+        256
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.17/attention/W_key/linear/MatMul_quant",
+      "shape": [
+        256,
+        256
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.23/attention/W_key/linear/MatMul_quant",
+      "shape": [
+        256,
+        256
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/time_encoder/mlp/mlp.0/linear/Gemm_MatMul_quant",
+      "shape": [
+        64,
+        256
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/time_encoder/mlp/mlp.2/linear/Gemm_MatMul_quant",
+      "shape": [
+        256,
+        64
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.1/linear/linear/MatMul_quant",
+      "shape": [
+        64,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.7/linear/linear/MatMul_quant",
+      "shape": [
+        64,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.13/linear/linear/MatMul_quant",
+      "shape": [
+        64,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.19/linear/linear/MatMul_quant",
+      "shape": [
+        64,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.3/attn/W_query/linear/MatMul_quant",
+      "shape": [
+        512,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.3/attn/out_fc/linear/MatMul_quant",
+      "shape": [
+        512,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.5/attention/W_query/linear/MatMul_quant",
+      "shape": [
+        512,
+        256
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.5/attention/out_fc/linear/MatMul_quant",
+      "shape": [
+        256,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.9/attn/W_query/linear/MatMul_quant",
+      "shape": [
+        512,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.9/attn/out_fc/linear/MatMul_quant",
+      "shape": [
+        512,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.11/attention/W_query/linear/MatMul_quant",
+      "shape": [
+        512,
+        256
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.11/attention/out_fc/linear/MatMul_quant",
+      "shape": [
+        256,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.15/attn/W_query/linear/MatMul_quant",
+      "shape": [
+        512,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.15/attn/out_fc/linear/MatMul_quant",
+      "shape": [
+        512,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.17/attention/W_query/linear/MatMul_quant",
+      "shape": [
+        512,
+        256
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.17/attention/out_fc/linear/MatMul_quant",
+      "shape": [
+        256,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.21/attn/W_query/linear/MatMul_quant",
+      "shape": [
+        512,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.21/attn/out_fc/linear/MatMul_quant",
+      "shape": [
+        512,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.23/attention/W_query/linear/MatMul_quant",
+      "shape": [
+        512,
+        256
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/main_blocks.23/attention/out_fc/linear/MatMul_quant",
+      "shape": [
+        256,
+        512
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    },
+    {
+      "name": "/vector_estimator/vector_field/proj_out/net/Conv/linear/MatMul_quant",
+      "shape": [
+        512,
+        144
+      ],
+      "range": [
+        -64,
+        64
+      ],
+      "zero": true,
+      "eligible": true
+    }
+  ]
+}

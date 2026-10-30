@@ -1,0 +1,23 @@
+{
+  "source": "experiments/row_norm_transpose.c",
+  "source_sha256": "8fc0f9f2b648a86cad3d10e49a6b313f152c32f853ed836b4299c05679c62f30",
+  "library": "librow_norm_transpose.dylib",
+  "library_sha256": "7ca7152dd4eb6d0312f6b6e5070c911bd1aff746badca5dc1324432277a0c036",
+  "command": [
+    "clang",
+    "-O3",
+    "-ffp-contract=off",
+    "-DFUSED_M2",
+    "-DFUSED_OUTPUT",
+    "-DROW_TILE=16",
+    "-fPIC",
+    "-dynamiclib",
+    "experiments/row_norm_transpose.c",
+    "-I",
+    "native/include",
+    "-o",
+    "native/librow_norm_transpose.dylib",
+    "-lm",
+    "-lpthread"
+  ]
+}

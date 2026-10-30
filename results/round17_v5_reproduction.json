@@ -1,0 +1,48 @@
+{
+  "public_model": "round8-latent-retime-g135",
+  "source_vector_sha256": "7c81ab7f0ddcc4266743701599a8708d2edd1be04285770f996e84a8bb5f4447",
+  "reproduced_graphs_identical_to_measured_package": {
+    "onnx/vector_estimator.onnx": true,
+    "onnx/condition.onnx": true,
+    "onnx/duration_predictor.onnx": true,
+    "onnx/text_encoder.onnx": true,
+    "onnx/vocoder.onnx": true
+  },
+  "commands": [
+    [
+      "python",
+      "experiments/exact_integer_backend.py",
+      "--source",
+      "models/round8-latent-retime-g135",
+      "--output",
+      "models/round17-public-exact",
+      "--cache-conditioning"
+    ],
+    [
+      "python",
+      "prepare_native_batch.py",
+      "--source",
+      "models/round17-public-exact",
+      "--output",
+      "models/round17-public-v5"
+    ]
+  ],
+  "latest_preparation_tool_sha256": "ec80016322d2c24566badda2bbac635ca0a5fd578d5114f156ce3c736ebfad2b",
+  "final_package": "models/F1200-retime-v5",
+  "latest_tool_graphs_identical": {
+    "vector_estimator": true,
+    "condition": true,
+    "duration_predictor": true,
+    "text_encoder": true,
+    "vocoder": true
+  },
+  "latest_preparation_command": [
+    "python",
+    "prepare_native_batch.py",
+    "--source",
+    "models/round17-public-exact",
+    "--output",
+    "models/F1200-retime-v5",
+    "--link-assets"
+  ]
+}

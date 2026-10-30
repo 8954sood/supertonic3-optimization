@@ -1,0 +1,15 @@
+{
+  "source": "native/exact_int8_v4.c",
+  "source_sha256": "f8c863545febca8570bf026c5adb60c90464f919a9bc44d2defd5840ae832162",
+  "source_equals_commit": "7db1daa",
+  "binary_sha256": "171618642c9a05a62d079d66a9974ef42678b316ab1d72da7514e3fb9fe2b31f",
+  "computational_sections_match_frozen_v4": true,
+  "command": [
+    "python",
+    "native/build_exact.py",
+    "--engine-version",
+    "4",
+    "--output",
+    "native/libexact_v4_public.so"
+  ]
+}

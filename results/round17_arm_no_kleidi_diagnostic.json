@@ -1,0 +1,51 @@
+{
+  "note": "Diagnostic cold run, disable KleidiAI on both whole engines; not a speed claim.",
+  "configuration": {
+    "mlas.disable_kleidiai": "1"
+  },
+  "wave_bitidentical": true,
+  "wave_max_error": 0.0,
+  "wave_relative_rmse": 0.0,
+  "actual_calls": [
+    8,
+    8
+  ],
+  "wave_sha256": [
+    "c2c4f8fce7a79423fcd795f62caae17491638bebd8b81dc8fca0e83d2ae26e18",
+    "c2c4f8fce7a79423fcd795f62caae17491638bebd8b81dc8fca0e83d2ae26e18"
+  ],
+  "metrics": [
+    {
+      "seconds": 0.4648546249954961,
+      "audio_seconds": 5.586009070294785,
+      "speed": 1.0,
+      "generation_speed": 1.0,
+      "speed_strategy": "latent-retime",
+      "rtf": 0.08321766383579553,
+      "realtime_factor": 12.01667955944056,
+      "stages": {
+        "duration_predictor": 0.0012142920168116689,
+        "text_encoder": 0.013454832951538265,
+        "condition": 0.0008851669845171273,
+        "vector_estimator": 0.21522804396227002,
+        "vocoder": 0.23339824995491654
+      }
+    },
+    {
+      "seconds": 0.48760004102950916,
+      "audio_seconds": 5.586009070294785,
+      "speed": 1.0,
+      "generation_speed": 1.0,
+      "speed_strategy": "latent-retime",
+      "rtf": 0.08728951831146553,
+      "realtime_factor": 11.456129204789637,
+      "stages": {
+        "duration_predictor": 0.0009877500124275684,
+        "text_encoder": 0.01257762499153614,
+        "condition": 0.0008351670112460852,
+        "vector_estimator": 0.23769645910942927,
+        "vocoder": 0.23500629200134426
+      }
+    }
+  ]
+}

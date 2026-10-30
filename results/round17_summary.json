@@ -1,0 +1,332 @@
+{
+  "status": "Selected Linux x86 v5; limited short-TTS gains, unchanged learned weights and tested outputs",
+  "baseline_commit": "7db1daa",
+  "baseline_engine": 4,
+  "weights": "F1200 unchanged",
+  "steps": 8,
+  "threads": 1,
+  "micro_note": "Prepared fixed FFN weights only; not full TTS gain.",
+  "micro": [
+    {
+      "candidate": "spans",
+      "result": "results/round17_spans_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 0.949150432874708,
+      "positive_cases": 1,
+      "minimum": 0.8874382707828671,
+      "maximum": 1.0460439380655338,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "likely",
+      "result": "results/round17_likely_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 0.8539920833046624,
+      "positive_cases": 0,
+      "minimum": 0.5570493968113175,
+      "maximum": 0.9078214926288299,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "likely_unroll",
+      "result": "results/round17_likely_unroll_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 0.9084525380343045,
+      "positive_cases": 0,
+      "minimum": 0.834915455284455,
+      "maximum": 0.9355667891992588,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "gcc",
+      "result": "results/round17_gcc_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 0.9736993378736152,
+      "positive_cases": 0,
+      "minimum": 0.934087151445468,
+      "maximum": 0.9959869662648039,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "memones",
+      "result": "results/round17_memones_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 1.007788821829144,
+      "positive_cases": 10,
+      "minimum": 0.981579501333699,
+      "maximum": 1.0245408973377303,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "memones_ordered",
+      "result": "results/round17_memones_ordered_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 0.9986927003661328,
+      "positive_cases": 7,
+      "minimum": 0.9374630157115819,
+      "maximum": 1.03763855715637,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "adaptive",
+      "result": "results/round17_adaptive_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 0.8611846711437698,
+      "positive_cases": 0,
+      "minimum": 0.8252312120935408,
+      "maximum": 0.983765645315927,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "adaptive_m3",
+      "result": "results/round17_adaptive_m3_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 0.889045140538298,
+      "positive_cases": 1,
+      "minimum": 0.8209968689042223,
+      "maximum": 1.040781049479538,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "selective",
+      "result": "results/round17_selective_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 1.0129454989672944,
+      "positive_cases": 11,
+      "minimum": 0.9438154124729947,
+      "maximum": 1.1073181481400387,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "specialized",
+      "result": "results/round17_specialized_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 1.0031233181689527,
+      "positive_cases": 8,
+      "minimum": 0.964796232656932,
+      "maximum": 1.0561109827996575,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "joined_flags",
+      "result": "results/round17_joined_flags_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 0.9936815186888595,
+      "positive_cases": 4,
+      "minimum": 0.8762715821263237,
+      "maximum": 1.0162270329441299,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "xmm",
+      "result": "results/round17_xmm_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 0.9891977789988201,
+      "positive_cases": 3,
+      "minimum": 0.9661780196845338,
+      "maximum": 1.0282013819960325,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "safe_panels",
+      "result": "results/round17_safe_panels_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 0.995791837940583,
+      "positive_cases": 4,
+      "minimum": 0.9665081019073019,
+      "maximum": 1.0475030299577115,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "sparse_correction",
+      "result": "results/round17_sparse_correction_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 1.0100991780542294,
+      "positive_cases": 9,
+      "minimum": 0.9407830231114805,
+      "maximum": 1.0544868101732112,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "tails",
+      "result": "results/round17_tails_probe.json",
+      "cases": 28,
+      "median_micro_speedup": 1.0034508975239098,
+      "positive_cases": 19,
+      "minimum": 0.9423961954749429,
+      "maximum": 1.0557288511311633,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "sparse_tails",
+      "result": "results/round17_sparse_tails_probe.json",
+      "cases": 28,
+      "median_micro_speedup": 1.0094489383208343,
+      "positive_cases": 20,
+      "minimum": 0.9780716055704731,
+      "maximum": 1.0445496254933426,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "m10n8",
+      "result": "results/round17_m10n8_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 0.8599355851587294,
+      "positive_cases": 0,
+      "minimum": 0.82637099688702,
+      "maximum": 0.8813874146856164,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "m12n8",
+      "result": "results/round17_m12n8_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 0.8563160933019774,
+      "positive_cases": 0,
+      "minimum": 0.7941317206386558,
+      "maximum": 0.935068572320802,
+      "all_s32_identical": true
+    },
+    {
+      "candidate": "sparse_tails_memones",
+      "result": "results/round17_sparse_tails_memones_probe.json",
+      "cases": 14,
+      "median_micro_speedup": 1.007956240592931,
+      "positive_cases": 11,
+      "minimum": 0.9797591018472033,
+      "maximum": 1.0353854039848567,
+      "all_s32_identical": true
+    }
+  ],
+  "full_comparisons": [
+    "results/round17_matrix.json",
+    "results/round17_shared.json",
+    "results/round17_memones_shared.json",
+    "results/round17_sparse_shared.json",
+    "results/round17_batch_one_shared.json",
+    "results/round17_combined_confirm.json",
+    "results/round17_f1_fresh.json",
+    "results/round17_f1_ko1_confirm.json",
+    "results/round17_f1_en2_confirm.json"
+  ],
+  "selected_engine_version": 5,
+  "selected_sources": [
+    "native/exact_int8.c",
+    "prepare_native_batch.py"
+  ],
+  "output_validation": {
+    "short_repeated_pairs": 74,
+    "unique_short_settings": 10,
+    "long_settings": 4,
+    "real_vector_calls": 8,
+    "weights_changed": false,
+    "new_wer_cer_mos_measured": false
+  },
+  "all_weight_micro": [
+    {
+      "candidate": "control",
+      "result": "results/round17_control_all_weights.json",
+      "rows": [
+        {
+          "m": 56,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 0.9987939924311826
+        },
+        {
+          "m": 60,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 0.9978763467508324
+        },
+        {
+          "m": 75,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 1.0032341913255862
+        },
+        {
+          "m": 81,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 0.9973151596383816
+        }
+      ]
+    },
+    {
+      "candidate": "selective",
+      "result": "results/round17_selective_all_weights.json",
+      "rows": [
+        {
+          "m": 56,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 1.0012367498993
+        },
+        {
+          "m": 60,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 1.0022311495310485
+        },
+        {
+          "m": 75,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 0.9979230565322622
+        },
+        {
+          "m": 81,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 1.0039997637732492
+        }
+      ]
+    },
+    {
+      "candidate": "sparse_tails",
+      "result": "results/round17_sparse_tails_all_weights.json",
+      "rows": [
+        {
+          "m": 56,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 1.007702458495384
+        },
+        {
+          "m": 60,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 1.0040050082516359
+        },
+        {
+          "m": 75,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 1.0212226400002915
+        },
+        {
+          "m": 81,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 1.007768912130879
+        }
+      ]
+    },
+    {
+      "candidate": "sparse_tails_memones",
+      "result": "results/round17_sparse_tails_memones_all_weights.json",
+      "rows": [
+        {
+          "m": 56,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 1.003662470654137
+        },
+        {
+          "m": 60,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 0.9972845466745953
+        },
+        {
+          "m": 75,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 1.0147939438221036
+        },
+        {
+          "m": 81,
+          "weight_count": 56,
+          "aggregate_kernel_speedup": 1.0064520150495084
+        }
+      ]
+    }
+  ],
+  "arm_status": "Unselected: exact S32 alone did not match current Mac fused-backend waveforms; default Mac engine unchanged"
+}

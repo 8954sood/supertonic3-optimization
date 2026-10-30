@@ -1,0 +1,41 @@
+{
+  "cpu_model": "AMD EPYC 7551 32-Core Processor",
+  "architecture": "x86_64",
+  "physical_core_id": "0",
+  "thread_siblings": "0-1",
+  "allowed_affinity": [
+    0,
+    1
+  ],
+  "benchmark_affinity": [
+    0
+  ],
+  "total_memory_mb": 1000.5504,
+  "available_memory_mb": 500.068352,
+  "swap_used_mb": 924.819456,
+  "load_average": [
+    0.12353515625,
+    0.14990234375,
+    0.0703125
+  ],
+  "python": "3.12.3",
+  "versions": {
+    "supertonic": "1.3.1",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.1",
+    "numpy": "2.5.4",
+    "psutil": "7.2.2"
+  },
+  "runtime_hashes": {
+    "old": "a1bfb56d9da270432e86f69627e0e0ee7515e1145f71f9115462a3742fae21f6",
+    "latest": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98"
+  },
+  "active_v4_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+  "shared_frontend_graph_sha256": {
+    "onnx/duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+    "onnx/text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+    "onnx/vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+  },
+  "arm_backend_refusal": "The optional row norm kernel needs ARM64; use the standard ORT package",
+  "note": "Shared EPYC host, one logical CPU selected from two SMT siblings of the same physical core. No ARM-native norm execution."
+}

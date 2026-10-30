@@ -1,0 +1,23 @@
+{
+  "source": "experiments/exact_int8_xmm.c",
+  "source_sha256": "c948f049978b370703115cc867cbdb84fc708c67fe0a395405c8430b9dc709ce",
+  "library": "libexact_xmm.so",
+  "library_sha256": "608327f5b5c9c6c70fe71ade56172636f5fb78b5d7817af5c8a040251c4d8919",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "ziglang",
+    "cc",
+    "-target",
+    "x86_64-linux-gnu.2.28",
+    "-mcpu=znver1",
+    "-O3",
+    "-fPIC",
+    "-shared",
+    "experiments/exact_int8_xmm.c",
+    "-I",
+    "native/include",
+    "-o",
+    "native/libexact_xmm.so"
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "source": "experiments/exact_int8_arm_packed.c",
+    "source_sha256": "ec093898aac169c411935c8c144897284d8ec79c38ee3a4f981120ecefad8b35",
+    "library": "libexact_arm_packed4.dylib",
+    "library_sha256": "09ff69a7bbb2d19c982e46f4635c55a682f17f55c9f313c12df1c1731da80081",
+    "command": [
+      "clang",
+      "-O3",
+      "-march=armv8.2-a+dotprod",
+      "-DROW_TILE=4",
+      "-fPIC",
+      "-dynamiclib",
+      "experiments/exact_int8_arm_packed.c",
+      "-I",
+      "native/include",
+      "-o",
+      "native/libexact_arm_packed4.dylib"
+    ],
+    "rows": 4
+  },
+  {
+    "source": "experiments/exact_int8_arm_packed.c",
+    "source_sha256": "ec093898aac169c411935c8c144897284d8ec79c38ee3a4f981120ecefad8b35",
+    "library": "libexact_arm_packed8.dylib",
+    "library_sha256": "05e5a8d0b6fd5344db1c75c29ee41534c3028b9cae4bb798074a9204a872f7d5",
+    "command": [
+      "clang",
+      "-O3",
+      "-march=armv8.2-a+dotprod",
+      "-DROW_TILE=8",
+      "-fPIC",
+      "-dynamiclib",
+      "experiments/exact_int8_arm_packed.c",
+      "-I",
+      "native/include",
+      "-o",
+      "native/libexact_arm_packed8.dylib"
+    ],
+    "rows": 8
+  },
+  {
+    "source": "experiments/exact_int8_arm_packed.c",
+    "source_sha256": "ec093898aac169c411935c8c144897284d8ec79c38ee3a4f981120ecefad8b35",
+    "library": "libexact_arm_packed12.dylib",
+    "library_sha256": "a98536607a7405b0f83dde4a122f2ece392d5898095c880e4cd21b175ec03d7a",
+    "command": [
+      "clang",
+      "-O3",
+      "-march=armv8.2-a+dotprod",
+      "-DROW_TILE=12",
+      "-fPIC",
+      "-dynamiclib",
+      "experiments/exact_int8_arm_packed.c",
+      "-I",
+      "native/include",
+      "-o",
+      "native/libexact_arm_packed12.dylib"
+    ],
+    "rows": 12
+  }
+]

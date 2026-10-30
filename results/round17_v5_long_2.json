@@ -1,0 +1,91 @@
+{
+  "model": "v5",
+  "voice": "M1",
+  "speed": 2.0,
+  "steps": 8,
+  "threads": 1,
+  "affinity": [
+    0
+  ],
+  "nice": 19,
+  "python": "3.12.3",
+  "onnxruntime": "1.31.1",
+  "numpy": "2.5.4",
+  "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+  "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+  "exact_library_sha256": "32008e0973ce9386e4af0276e252813196e000d3474f9c7fd9a06d5f8ffc6c2b",
+  "graph_sha256": {
+    "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+    "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+    "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+    "vector_estimator.onnx": "5f2609bbb02216087b4f4b08ef95a5aeaab8392986b8b566e022d396695c17d7",
+    "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+  },
+  "load_seconds": 5.983236322179437,
+  "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+  "rows": [
+    {
+      "case": "ko_long",
+      "text": "오늘은 인공지능 음성 합성의 속도를 측정합니다. 하나의 CPU 스레드만 사용하면서도 자연스럽고 정확한 한국어를 읽는 것이 목표입니다. 다양한 문장 길이와 추론 단계를 비교하여 실제 사용에 적합한 설정을 찾겠습니다.",
+      "lang": "ko",
+      "float32_sha256": "bb15799c442ac02e0bffc18f1a947a5d220c95423f042e5530970b0012ab52c7",
+      "samples": 407864,
+      "sample_rate": 44100,
+      "runs": [
+        {
+          "seconds": 12.32433706521988,
+          "audio_seconds": 9.248616780045351,
+          "speed": 2.0,
+          "generation_speed": 1.35,
+          "speed_strategy": "latent-retime",
+          "rtf": 1.3325600312265773,
+          "realtime_factor": 0.7504352348610765,
+          "stages": {
+            "duration_predictor": 0.01512608677148819,
+            "text_encoder": 0.38777152821421623,
+            "condition": 0.019176200032234192,
+            "vector_estimator": 8.595153246074915,
+            "vocoder": 3.304518662393093
+          },
+          "process_cpu_seconds": 12.319850799000001,
+          "actual_vector_calls": 8
+        }
+      ],
+      "median_seconds": 12.32433706521988,
+      "median_rtf": 1.3325600312265773,
+      "rss_mb": 409.501696
+    },
+    {
+      "case": "en_long",
+      "text": "The morning sunlight came through the window as she opened her book. On an old computer, every unnecessary calculation matters. We measure the time spent preparing the text, generating the speech, and converting it into audio so that the results can be reproduced.",
+      "lang": "en",
+      "float32_sha256": "4782fe3991944a9c4c558074e7a1e16e4bf46c588473a4067f105ed2598b1b81",
+      "samples": 391492,
+      "sample_rate": 44100,
+      "runs": [
+        {
+          "seconds": 18.388127015903592,
+          "audio_seconds": 8.877369614512471,
+          "speed": 2.0,
+          "generation_speed": 1.35,
+          "speed_strategy": "latent-retime",
+          "rtf": 2.071348587969482,
+          "realtime_factor": 0.482777262025359,
+          "stages": {
+            "duration_predictor": 0.09770355001091957,
+            "text_encoder": 1.0947500355541706,
+            "condition": 0.10083615966141224,
+            "vector_estimator": 13.892510700970888,
+            "vocoder": 3.199617050588131
+          },
+          "process_cpu_seconds": 17.509197029,
+          "actual_vector_calls": 8
+        }
+      ],
+      "median_seconds": 18.388127015903592,
+      "median_rtf": 2.071348587969482,
+      "rss_mb": 411.635712
+    }
+  ],
+  "complete": true
+}

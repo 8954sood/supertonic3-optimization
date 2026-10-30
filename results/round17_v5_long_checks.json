@@ -1,0 +1,65 @@
+{
+  "note": "Candidate long waveform hashes matched historical round16 controls. Different batches, not a paired long-speed comparison.",
+  "checks": [
+    {
+      "case": "ko_long",
+      "speed": 1.0,
+      "float32_bitidentical": true,
+      "candidate_rtf": 1.0424376805143136,
+      "actual_vector_calls": [
+        8
+      ]
+    },
+    {
+      "case": "en_long",
+      "speed": 1.0,
+      "float32_bitidentical": true,
+      "candidate_rtf": 1.0130217407371829,
+      "actual_vector_calls": [
+        8
+      ]
+    },
+    {
+      "case": "ko_long",
+      "speed": 2.0,
+      "float32_bitidentical": true,
+      "candidate_rtf": 1.3325600312265773,
+      "actual_vector_calls": [
+        8
+      ]
+    },
+    {
+      "case": "en_long",
+      "speed": 2.0,
+      "float32_bitidentical": true,
+      "candidate_rtf": 2.071348587969482,
+      "actual_vector_calls": [
+        8
+      ]
+    }
+  ],
+  "guards": [
+    {
+      "returncode": 0,
+      "reason": null,
+      "sampled_peak_child_rss_mb": 438.718464,
+      "sampled_peak_process_tree_rss_mb": 438.718464,
+      "minimum_system_available_mb": 204.107776,
+      "elapsed_seconds": 85.80773144029081,
+      "max_rss_budget_mb": 480.0,
+      "reserve_mb": 80.0,
+      "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+    },
+    {
+      "returncode": 0,
+      "reason": null,
+      "sampled_peak_child_rss_mb": 411.635712,
+      "sampled_peak_process_tree_rss_mb": 411.635712,
+      "minimum_system_available_mb": 229.269504,
+      "elapsed_seconds": 67.47079912759364,
+      "max_rss_budget_mb": 480.0,
+      "reserve_mb": 80.0,
+      "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+    }
+  ]
+}

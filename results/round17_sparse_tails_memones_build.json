@@ -1,0 +1,23 @@
+{
+  "source": "experiments/exact_int8_sparse_tails_memones.c",
+  "source_sha256": "2e639de8d54acd743dc4c529760a1a97e46340a1d92e53297ce5f22c11eeecce",
+  "library": "libexact_sparse_tails_memones.so",
+  "library_sha256": "2ba6cc10b71a973456ffa49b742e4f8758f778f36a231a032a92ee37d6586c29",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "ziglang",
+    "cc",
+    "-target",
+    "x86_64-linux-gnu.2.28",
+    "-mcpu=znver1",
+    "-O3",
+    "-fPIC",
+    "-shared",
+    "experiments/exact_int8_sparse_tails_memones.c",
+    "-I",
+    "native/include",
+    "-o",
+    "native/libexact_sparse_tails_memones.so"
+  ]
+}

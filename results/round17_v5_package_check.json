@@ -1,0 +1,44 @@
+{
+  "archive_bytes": 169091673,
+  "archive_sha256": "03a5bf6e37fb39f85a0c86fa632520015ff403e1cb6c6899b42bf2cf486027c9",
+  "inference_executed": false,
+  "note": "Final source-only Linux archive checked on Mac. Extracted C cross-built for Linux; computational sections compared to the server-tested libraries. This is not Mac execution of a Linux engine.",
+  "required_native_sources_present": true,
+  "contains_native_binaries_or_credentials": false,
+  "source_files_match": {
+    "runtime.py": true,
+    "exact_ops.py": true,
+    "native/build_exact.py": true,
+    "native/exact_int8.c": true,
+    "native/exact_int8_v4.c": true,
+    "native/include/onnxruntime_c_api.h": true
+  },
+  "graphs_match_measured_package": {
+    "vector_estimator": true,
+    "condition": true,
+    "duration_predictor": true,
+    "text_encoder": true,
+    "vocoder": true
+  },
+  "extracted_imports_and_cli_help_passed": true,
+  "cross_builds": {
+    "5": {
+      "target": "x86_64-linux-gnu.2.28",
+      "cpu": "znver1",
+      "engine_version": 5,
+      "source_sha256": "2f4a362467fcb11b0389c199da34e91aac1c74bd3d8dea3881a4529b40d0aff3",
+      "binary_sha256": "69127700e136d6fef6a9205b658cf79cf05dfa3d75a196fca197099008b64106",
+      "computational_sections_match": true
+    },
+    "4": {
+      "target": "x86_64-linux-gnu.2.28",
+      "cpu": "znver1",
+      "engine_version": 4,
+      "source_sha256": "f8c863545febca8570bf026c5adb60c90464f919a9bc44d2defd5840ae832162",
+      "binary_sha256": "38c8a4b377f99c7c6bf28933c9583bed50e8310fa05218d0c54d30f0bb8587c2",
+      "computational_sections_match": true
+    }
+  },
+  "atomic_failed_build_preserves_library": true,
+  "temporary_extraction_removed": true
+}

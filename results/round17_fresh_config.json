@@ -1,0 +1,12 @@
+[
+  {
+    "name": "v4",
+    "model": "models/v4",
+    "library": "../native/libexact_v4.so"
+  },
+  {
+    "name": "v5",
+    "model": "models/v5",
+    "library": "native/libexact_v5_candidate.so"
+  }
+]

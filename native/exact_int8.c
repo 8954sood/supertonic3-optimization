@@ -1,5 +1,7 @@
-/* Engine v4: exact U8 x reduced-range S8 -> S32, M4N16 safe-K8 tiles.
- * M8N8 handles unsupported tile shapes. No requantization or approximation. */
+/* Engine v5: lossless U8 x S8[-64,64] -> S32.
+ * Branch-free M4N16 safe-K8 base plus exact sparse K4 corrections.
+ * Original zero-point column sums and M2/M1 safe-K8 tails are preserved.
+ * The learned weights, quantization and number of denoising calls do not change. */
 #include "onnxruntime_c_api.h"
 #include <immintrin.h>
 #include <stdint.h>
@@ -20,6 +22,23 @@ static inline uint32_t word(const uint8_t* a) { uint32_t v; memcpy(&v,a,4); retu
 static inline __m256i dot4(__m256i b, const uint8_t* a) {
     __m256i av=_mm256_set1_epi32((int32_t)word(a));
     return _mm256_madd_epi16(_mm256_maddubs_epi16(av,b),_mm256_set1_epi16(1));
+}
+/* A removed K4 term is evaluated exactly after the branch-free base dot.
+ * Worst-case reserved space is bounded; ordinary model pages are committed
+ * only for records actually emitted. Original column sums remain unchanged. */
+typedef struct { uint32_t block; int8_t weight[64]; } Correction;
+static size_t packed_bytes(int64_t k,int64_t n) {
+    size_t base=(size_t)k*(size_t)n;
+    return base+(k%8||n%16?0:(base/128)*sizeof(Correction));
+}
+static size_t sums_bytes(int64_t k,int64_t n) {
+    size_t bytes=(size_t)n*4+(k%8?0:(size_t)k*n/64);
+    if(k%8==0 && n%16==0)bytes=(bytes+3)/4*4+((size_t)n/16+1)*4;
+    return bytes;
+}
+static uint32_t* correction_offsets(int32_t* sums,int64_t k,int64_t n) {
+    size_t flags_end=(size_t)n*4+(size_t)k*n/64;
+    return (uint32_t*)((uint8_t*)sums+(flags_end+3)/4*4);
 }
 static int pack_weights(const int8_t* b,int64_t k,int64_t n,int8_t* packed,int32_t* sums) {
     for(int64_t col=0;col<n;col+=8) {
@@ -51,6 +70,25 @@ static int pack_weights(const int8_t* b,int64_t k,int64_t n,int8_t* packed,int32
             }
             flags[(col/8)*(k/8)+q/8]=(uint8_t)bad;
         }
+    }
+    if(k%8==0 && n%16==0) {
+        const uint8_t* flags=(const uint8_t*)(sums+n);
+        uint32_t* offsets=correction_offsets(sums,k,n);
+        Correction* corrections=(Correction*)(packed+(size_t)k*n);
+        uint32_t count=0;
+        for(int64_t col=0;col<n;col+=16) {
+            offsets[col/16]=count;
+            for(int64_t q=0;q<k;q+=8) {
+                if(!(flags[(col/8)*(k/8)+q/8]|flags[(col/8+1)*(k/8)+q/8]))continue;
+                Correction* record=corrections+count++;
+                record->block=(uint32_t)(q+4);
+                int8_t* p0=packed+(col/8)*k*8+(q+4)*8;
+                int8_t* p1=p0+k*8;
+                memcpy(record->weight,p0,32);memcpy(record->weight+32,p1,32);
+                memset(p0,0,32);memset(p1,0,32);
+            }
+        }
+        offsets[n/16]=count;
     }
     return 0;
 }
@@ -118,11 +156,10 @@ static int gemm_v2(const uint8_t* a,const int8_t* packed,const int32_t* sums,int
 
 /* Four rows and sixteen columns reuse activation broadcasts across two
  * output tiles, retaining v2's proven-safe K8 widening and exact fallback. */
-static int gemm_packed(const uint8_t* a,const int8_t* packed,const int32_t* sums,int32_t* y,int64_t m,int64_t k,int64_t n,uint8_t zero) {
-    if(k%8||n%16||m<4)return gemm_v2(a,packed,sums,y,m,k,n,zero);
+static __attribute__((noinline)) int gemm_tail1(const uint8_t* a,const int8_t* packed,const int32_t* sums,int32_t* y,int64_t m,int64_t k,int64_t n,uint8_t zero) {
     const uint8_t* unsafe=(const uint8_t*)(sums+n);int64_t row=0;
-    for(;row+4<=m;row+=4)for(int64_t col=0;col<n;col+=16) {
-        __m256i c00=_mm256_setzero_si256(),c01=c00,c10=c00,c11=c00,c20=c00,c21=c00,c30=c00,c31=c00;
+    for(;row+1<=m;row+=1)for(int64_t col=0;col<n;col+=16) {
+        __m256i c00=_mm256_setzero_si256(),c01=c00;
         const int8_t* p0=packed+(col/8)*k*8;
         const int8_t* p1=p0+k*8;
         const uint8_t* f0=unsafe+(col/8)*(k/8);const uint8_t* f1=f0+k/8;
@@ -131,13 +168,77 @@ static int gemm_packed(const uint8_t* a,const int8_t* packed,const int32_t* sums
             __m256i b10=_mm256_loadu_si256((const __m256i*)p1),b11=_mm256_loadu_si256((const __m256i*)(p1+32));
             if(!(f0[q/8]|f1[q/8])) {
 #define FAST(r) do { __m256i a0=_mm256_set1_epi32((int32_t)word(a+(row+(r))*k+q)),a1=_mm256_set1_epi32((int32_t)word(a+(row+(r))*k+q+4)); __m256i v0=_mm256_add_epi16(_mm256_maddubs_epi16(a0,b00),_mm256_maddubs_epi16(a1,b01)); __m256i v1=_mm256_add_epi16(_mm256_maddubs_epi16(a0,b10),_mm256_maddubs_epi16(a1,b11)); c##r##0=_mm256_add_epi32(c##r##0,_mm256_madd_epi16(v0,_mm256_set1_epi16(1)));c##r##1=_mm256_add_epi32(c##r##1,_mm256_madd_epi16(v1,_mm256_set1_epi16(1)));} while(0)
-                FAST(0);FAST(1);FAST(2);FAST(3);
+                FAST(0);
 #undef FAST
             } else {
 #define SLOW(r) do {c##r##0=_mm256_add_epi32(c##r##0,_mm256_add_epi32(dot4(b00,a+(row+(r))*k+q),dot4(b01,a+(row+(r))*k+q+4)));c##r##1=_mm256_add_epi32(c##r##1,_mm256_add_epi32(dot4(b10,a+(row+(r))*k+q),dot4(b11,a+(row+(r))*k+q+4)));}while(0)
-                SLOW(0);SLOW(1);SLOW(2);SLOW(3);
+                SLOW(0);
 #undef SLOW
             }
+        }
+        __m256i z0=_mm256_mullo_epi32(_mm256_loadu_si256((const __m256i*)(sums+col)),_mm256_set1_epi32(zero));
+        __m256i z1=_mm256_mullo_epi32(_mm256_loadu_si256((const __m256i*)(sums+col+8)),_mm256_set1_epi32(zero));
+#define SAVE(r) do { _mm256_storeu_si256((__m256i*)(y+(row+(r))*n+col),_mm256_sub_epi32(c##r##0,z0));_mm256_storeu_si256((__m256i*)(y+(row+(r))*n+col+8),_mm256_sub_epi32(c##r##1,z1)); } while(0)
+        SAVE(0);
+#undef SAVE
+    }
+
+    return 0;
+}
+
+static __attribute__((noinline)) int gemm_tail2(const uint8_t* a,const int8_t* packed,const int32_t* sums,int32_t* y,int64_t m,int64_t k,int64_t n,uint8_t zero) {
+    const uint8_t* unsafe=(const uint8_t*)(sums+n);int64_t row=0;
+    for(;row+2<=m;row+=2)for(int64_t col=0;col<n;col+=16) {
+        __m256i c00=_mm256_setzero_si256(),c01=c00,c10=c00,c11=c00;
+        const int8_t* p0=packed+(col/8)*k*8;
+        const int8_t* p1=p0+k*8;
+        const uint8_t* f0=unsafe+(col/8)*(k/8);const uint8_t* f1=f0+k/8;
+        for(int64_t q=0;q<k;q+=8,p0+=64,p1+=64) {
+            __m256i b00=_mm256_loadu_si256((const __m256i*)p0),b01=_mm256_loadu_si256((const __m256i*)(p0+32));
+            __m256i b10=_mm256_loadu_si256((const __m256i*)p1),b11=_mm256_loadu_si256((const __m256i*)(p1+32));
+            if(!(f0[q/8]|f1[q/8])) {
+#define FAST(r) do { __m256i a0=_mm256_set1_epi32((int32_t)word(a+(row+(r))*k+q)),a1=_mm256_set1_epi32((int32_t)word(a+(row+(r))*k+q+4)); __m256i v0=_mm256_add_epi16(_mm256_maddubs_epi16(a0,b00),_mm256_maddubs_epi16(a1,b01)); __m256i v1=_mm256_add_epi16(_mm256_maddubs_epi16(a0,b10),_mm256_maddubs_epi16(a1,b11)); c##r##0=_mm256_add_epi32(c##r##0,_mm256_madd_epi16(v0,_mm256_set1_epi16(1)));c##r##1=_mm256_add_epi32(c##r##1,_mm256_madd_epi16(v1,_mm256_set1_epi16(1)));} while(0)
+                FAST(0);FAST(1);
+#undef FAST
+            } else {
+#define SLOW(r) do {c##r##0=_mm256_add_epi32(c##r##0,_mm256_add_epi32(dot4(b00,a+(row+(r))*k+q),dot4(b01,a+(row+(r))*k+q+4)));c##r##1=_mm256_add_epi32(c##r##1,_mm256_add_epi32(dot4(b10,a+(row+(r))*k+q),dot4(b11,a+(row+(r))*k+q+4)));}while(0)
+                SLOW(0);SLOW(1);
+#undef SLOW
+            }
+        }
+        __m256i z0=_mm256_mullo_epi32(_mm256_loadu_si256((const __m256i*)(sums+col)),_mm256_set1_epi32(zero));
+        __m256i z1=_mm256_mullo_epi32(_mm256_loadu_si256((const __m256i*)(sums+col+8)),_mm256_set1_epi32(zero));
+#define SAVE(r) do { _mm256_storeu_si256((__m256i*)(y+(row+(r))*n+col),_mm256_sub_epi32(c##r##0,z0));_mm256_storeu_si256((__m256i*)(y+(row+(r))*n+col+8),_mm256_sub_epi32(c##r##1,z1)); } while(0)
+        SAVE(0);SAVE(1);
+#undef SAVE
+    }
+    if(row<m)return gemm_tail1(a+row*k,packed,sums,y+row*n,m-row,k,n,zero);
+    return 0;
+}
+
+static int gemm_packed(const uint8_t* a,const int8_t* packed,const int32_t* sums,int32_t* y,int64_t m,int64_t k,int64_t n,uint8_t zero) {
+    if(k%8||n%16)return gemm_v2(a,packed,sums,y,m,k,n,zero);
+    const uint32_t* offsets=correction_offsets((int32_t*)sums,k,n);
+    const Correction* corrections=(const Correction*)(packed+(size_t)k*n);
+    int64_t row=0;
+    for(;row+4<=m;row+=4)for(int64_t col=0;col<n;col+=16) {
+        __m256i c00=_mm256_setzero_si256(),c01=c00,c10=c00,c11=c00,c20=c00,c21=c00,c30=c00,c31=c00;
+        const int8_t* p0=packed+(col/8)*k*8;
+        const int8_t* p1=p0+k*8;
+        for(int64_t q=0;q<k;q+=8,p0+=64,p1+=64) {
+            __m256i b00=_mm256_loadu_si256((const __m256i*)p0),b01=_mm256_loadu_si256((const __m256i*)(p0+32));
+            __m256i b10=_mm256_loadu_si256((const __m256i*)p1),b11=_mm256_loadu_si256((const __m256i*)(p1+32));
+#define FAST(r) do { __m256i a0=_mm256_set1_epi32((int32_t)word(a+(row+(r))*k+q)),a1=_mm256_set1_epi32((int32_t)word(a+(row+(r))*k+q+4)); __m256i v0=_mm256_add_epi16(_mm256_maddubs_epi16(a0,b00),_mm256_maddubs_epi16(a1,b01)); __m256i v1=_mm256_add_epi16(_mm256_maddubs_epi16(a0,b10),_mm256_maddubs_epi16(a1,b11)); c##r##0=_mm256_add_epi32(c##r##0,_mm256_madd_epi16(v0,_mm256_set1_epi16(1)));c##r##1=_mm256_add_epi32(c##r##1,_mm256_madd_epi16(v1,_mm256_set1_epi16(1)));} while(0)
+                FAST(0);FAST(1);FAST(2);FAST(3);
+#undef FAST
+        }
+        for(uint32_t index=offsets[col/16];index<offsets[col/16+1];++index) {
+            const Correction* record=corrections+index;
+            __m256i b0=_mm256_loadu_si256((const __m256i*)record->weight);
+            __m256i b1=_mm256_loadu_si256((const __m256i*)(record->weight+32));
+#define CORRECT(r) do {c##r##0=_mm256_add_epi32(c##r##0,dot4(b0,a+(row+(r))*k+record->block));c##r##1=_mm256_add_epi32(c##r##1,dot4(b1,a+(row+(r))*k+record->block));}while(0)
+            CORRECT(0);CORRECT(1);CORRECT(2);CORRECT(3);
+#undef CORRECT
         }
         __m256i z0=_mm256_mullo_epi32(_mm256_loadu_si256((const __m256i*)(sums+col)),_mm256_set1_epi32(zero));
         __m256i z1=_mm256_mullo_epi32(_mm256_loadu_si256((const __m256i*)(sums+col+8)),_mm256_set1_epi32(zero));
@@ -145,7 +246,20 @@ static int gemm_packed(const uint8_t* a,const int8_t* packed,const int32_t* sums
         SAVE(0);SAVE(1);SAVE(2);SAVE(3);
 #undef SAVE
     }
-    if(row<m)return gemm_v2(a+row*k,packed,sums,y+row*n,m-row,k,n,zero);
+    if(row<m) {
+        gemm_tail2(a+row*k,packed,sums,y+row*n,m-row,k,n,zero);
+        for(;row<m;++row)for(int64_t col=0;col<n;col+=16) {
+            __m256i c0=_mm256_loadu_si256((const __m256i*)(y+row*n+col));
+            __m256i c1=_mm256_loadu_si256((const __m256i*)(y+row*n+col+8));
+            for(uint32_t index=offsets[col/16];index<offsets[col/16+1];++index) {
+                const Correction* record=corrections+index;
+                c0=_mm256_add_epi32(c0,dot4(_mm256_loadu_si256((const __m256i*)record->weight),a+row*k+record->block));
+                c1=_mm256_add_epi32(c1,dot4(_mm256_loadu_si256((const __m256i*)(record->weight+32)),a+row*k+record->block));
+            }
+            _mm256_storeu_si256((__m256i*)(y+row*n+col),c0);
+            _mm256_storeu_si256((__m256i*)(y+row*n+col+8),c1);
+        }
+    }
     return 0;
 }
 
@@ -153,10 +267,10 @@ static int gemm_packed(const uint8_t* a,const int8_t* packed,const int32_t* sums
 __attribute__((visibility("default")))
 int prepare_exact_u8s8(const int8_t* b,int64_t k,int64_t n) {
     prepared_k=0;prepared_n=0;
-    if(k<1||n<1||k%4||n%8||k>65536||(uint64_t)k>SIZE_MAX/(uint64_t)n)return -1;
-    size_t bytes=(size_t)k*(size_t)n;
+    if(k<1||n<1||k%4||n%8||k>65536||(uint64_t)k>SIZE_MAX/2/(uint64_t)n||(uint64_t)k*(uint64_t)n/128>UINT32_MAX)return -1;
+    size_t bytes=packed_bytes(k,n);
     if(bytes>packed_capacity){void* p=realloc(packed,bytes);if(!p)return -2;packed=p;packed_capacity=bytes;}
-    size_t needed=(size_t)n+(k%8?0:((size_t)k*(size_t)n/64+3)/4);
+    size_t needed=(sums_bytes(k,n)+3)/4;
     if(needed>sums_capacity){void* p=realloc(sums,needed*sizeof(int32_t));if(!p)return -2;sums=p;sums_capacity=needed;}
     int status=pack_weights(b,k,n,packed,sums);
     if(!status){prepared_k=k;prepared_n=n;}
@@ -194,7 +308,7 @@ static OrtStatus* compute(void* state,OrtKernelContext* context){
     const OrtApi* api=((Kernel*)state)->api;const OrtValue *av,*bv,*azv,*bzv;
     TRY(api->KernelContext_GetInput(context,0,&av));TRY(api->KernelContext_GetInput(context,1,&bv));TRY(api->KernelContext_GetInput(context,2,&azv));TRY(api->KernelContext_GetInput(context,3,&bzv));
     int64_t ad[8],bd[8],zd[8];size_t ar,br,zr,ac,bc,azc,bzc;TRY(shape(api,av,ad,&ar,&ac));TRY(shape(api,bv,bd,&br,&bc));TRY(shape(api,azv,zd,&zr,&azc));TRY(shape(api,bzv,zd,&zr,&bzc));
-    if(ar<2||br!=2||bd[0]<=0||bd[1]<=0||bd[0]%4||bd[1]%8||bd[0]>65536||(uint64_t)bd[0]>SIZE_MAX/(uint64_t)bd[1]||ad[ar-1]!=bd[0]||azc!=1||(bzc!=1&&bzc!=(size_t)bd[1]))return api->CreateStatus(ORT_INVALID_ARGUMENT,"unsupported integer matmul shapes");
+    if(ar<2||br!=2||bd[0]<=0||bd[1]<=0||bd[0]%4||bd[1]%8||bd[0]>65536||(uint64_t)bd[0]>SIZE_MAX/2/(uint64_t)bd[1]||(uint64_t)bd[0]*(uint64_t)bd[1]/128>UINT32_MAX||ad[ar-1]!=bd[0]||azc!=1||(bzc!=1&&bzc!=(size_t)bd[1]))return api->CreateStatus(ORT_INVALID_ARGUMENT,"unsupported integer matmul shapes");
     const void *ap,*bp,*azp,*bzp;TRY(api->GetTensorData(av,&ap));TRY(api->GetTensorData(bv,&bp));TRY(api->GetTensorData(azv,&azp));TRY(api->GetTensorData(bzv,&bzp));
     for(size_t i=0;i<bzc;++i)if(((const int8_t*)bzp)[i])return api->CreateStatus(ORT_INVALID_ARGUMENT,"weight zero point must be zero");
     int64_t m=(int64_t)(ac/(size_t)bd[0]);ad[ar-1]=bd[1];OrtValue* yv;void* yp;TRY(api->KernelContext_GetOutput(context,0,ad,ar,&yv));TRY(api->GetTensorMutableData(yv,&yp));
@@ -202,7 +316,7 @@ static OrtStatus* compute(void* state,OrtKernelContext* context){
     if(bd[0]<=0||bd[1]<=0||bd[0]%4||bd[1]%8||bd[0]>65536)return api->CreateStatus(ORT_INVALID_ARGUMENT,"unsupported kernel dimensions");
     if(kernel->weight!=bp||kernel->k!=bd[0]||kernel->n!=bd[1]) {
         free(kernel->packed);free(kernel->sums);kernel->packed=NULL;kernel->sums=NULL;kernel->weight=NULL;
-        kernel->packed=malloc((size_t)bd[0]*(size_t)bd[1]);kernel->sums=malloc((size_t)bd[1]*sizeof(int32_t)+(bd[0]%8?0:(size_t)bd[0]*bd[1]/64));
+        kernel->packed=malloc(packed_bytes(bd[0],bd[1]));kernel->sums=malloc(sums_bytes(bd[0],bd[1]));
         if(!kernel->packed||!kernel->sums)return api->CreateStatus(ORT_FAIL,"weight packing allocation failed");
         int status=pack_weights(bp,bd[0],bd[1],kernel->packed,kernel->sums);
         if(status)return api->CreateStatus(ORT_INVALID_ARGUMENT,"weights exceed reduced range [-64,64]");

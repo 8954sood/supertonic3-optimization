@@ -1,0 +1,8 @@
+{
+  "scope": "Only the task-created isolated evaluation workspace. Original workspace and other services not modified.",
+  "active_library_sha256": "32008e0973ce9386e4af0276e252813196e000d3474f9c7fd9a06d5f8ffc6c2b",
+  "selected_library_sha256": "32008e0973ce9386e4af0276e252813196e000d3474f9c7fd9a06d5f8ffc6c2b",
+  "preserved_original_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+  "preserved_original_runtime_sha256": "a1bfb56d9da270432e86f69627e0e0ee7515e1145f71f9115462a3742fae21f6",
+  "model_vector_sha256": "5f2609bbb02216087b4f4b08ef95a5aeaab8392986b8b566e022d396695c17d7"
+}

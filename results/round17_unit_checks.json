@@ -1,0 +1,22 @@
+{
+  "suite_command": [
+    "python",
+    "-m",
+    "unittest",
+    "tests_runtime",
+    "tests_server",
+    "tests_batch_one",
+    "tests_exact_linears",
+    "-v"
+  ],
+  "suite_tests_passed": 21,
+  "late_preparer_checks_command": [
+    "python",
+    "-m",
+    "unittest",
+    "tests_batch_one",
+    "-v"
+  ],
+  "late_preparer_tests_passed": 3,
+  "note": "Full 21-test suite passed; after adding optional hard-link preparation, the affected three tests were rerun with both copy/link cases. Server/runtime sources did not change."
+}

@@ -1,0 +1,23 @@
+{
+  "source": "experiments/exact_int8_selective_memones.c",
+  "source_sha256": "d013248537c53d13ef3e4823a0b6e04212f4eeae962de5644cf487b2f1d7490b",
+  "library": "libexact_selective_memones.so",
+  "library_sha256": "a0fb192c169308adb8ab2f0be3b8c7096882e1a4ee69ac20a4236525ec99f131",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "ziglang",
+    "cc",
+    "-target",
+    "x86_64-linux-gnu.2.28",
+    "-mcpu=znver1",
+    "-O3",
+    "-fPIC",
+    "-shared",
+    "experiments/exact_int8_selective_memones.c",
+    "-I",
+    "native/include",
+    "-o",
+    "native/libexact_selective_memones.so"
+  ]
+}

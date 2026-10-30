@@ -1,0 +1,148 @@
+{
+  "rows": [
+    {
+      "shape": [
+        1,
+        1,
+        12,
+        8
+      ],
+      "zero_point": 0,
+      "weight_pattern": "random64",
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    },
+    {
+      "shape": [
+        1,
+        5,
+        144,
+        512
+      ],
+      "zero_point": 255,
+      "weight_pattern": "random64",
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    },
+    {
+      "shape": [
+        2,
+        4,
+        512,
+        1536
+      ],
+      "zero_point": 127,
+      "weight_pattern": "random64",
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    },
+    {
+      "shape": [
+        1,
+        15,
+        1536,
+        512
+      ],
+      "zero_point": 71,
+      "weight_pattern": "random64",
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    },
+    {
+      "shape": [
+        1,
+        8,
+        8,
+        8
+      ],
+      "zero_point": 0,
+      "weight_pattern": "positive32_safe_boundary",
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    },
+    {
+      "shape": [
+        1,
+        8,
+        16,
+        16
+      ],
+      "zero_point": 0,
+      "weight_pattern": "positive64_requires_fallback",
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    },
+    {
+      "shape": [
+        1,
+        8,
+        8,
+        8
+      ],
+      "zero_point": 255,
+      "weight_pattern": "negative32_safe_boundary",
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    },
+    {
+      "shape": [
+        1,
+        17,
+        512,
+        16
+      ],
+      "zero_point": 128,
+      "weight_pattern": "random32_all_safe",
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    },
+    {
+      "shape": [
+        1,
+        3,
+        8,
+        16
+      ],
+      "zero_point": 0,
+      "weight_pattern": "positive32_safe_boundary",
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    },
+    {
+      "shape": [
+        1,
+        3,
+        144,
+        24
+      ],
+      "zero_point": 127,
+      "weight_pattern": "random64",
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    },
+    {
+      "shape": [
+        1,
+        9,
+        64,
+        32
+      ],
+      "zero_point": 255,
+      "weight_pattern": "sparse_unsafe_spans",
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    },
+    {
+      "shape": [
+        1,
+        4,
+        65536,
+        16
+      ],
+      "zero_point": 0,
+      "weight_pattern": "random32_all_safe",
+      "s32_bit_identical": true,
+      "persistent_cache_repeat_identical": true
+    }
+  ]
+}

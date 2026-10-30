@@ -1,0 +1,99 @@
+{
+  "note": "Session initialization and graph inspection only. No inference/RTF measurements.",
+  "rows": [
+    {
+      "name": "reference",
+      "source_vector_sha256": "176fad95c50582afe6124dcc07641ee54c5c72d3047167266473fe2da6eb6b04",
+      "library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+      "optimized_ops": {
+        "Transpose": 72,
+        "Div": 1,
+        "Reshape": 10,
+        "Unsqueeze": 19,
+        "Mul": 275,
+        "Cos": 1,
+        "Sin": 1,
+        "Concat": 26,
+        "DynamicQuantizeMatMul": 20,
+        "Softplus": 1,
+        "Tanh": 5,
+        "DynamicQuantizeLinear": 58,
+        "MatMulIntegerToFloat": 8,
+        "Pad": 28,
+        "Conv": 28,
+        "LayerNormalization": 36,
+        "ExactMatMulInteger": 56,
+        "Cast": 56,
+        "BiasGelu": 28,
+        "Add": 73,
+        "Shape": 9,
+        "Slice": 16,
+        "Sub": 4,
+        "FusedMatMul": 8,
+        "Where": 12,
+        "Softmax": 8,
+        "MatMul": 8,
+        "Split": 12,
+        "Gather": 1,
+        "Tile": 1,
+        "Squeeze": 4
+      },
+      "remaining_static_key_projection_nodes": [
+        {
+          "name": "/vector_estimator/vector_field/main_blocks.5/attention/W_key/linear/MatMul_quant",
+          "op_type": "MatMulIntegerToFloat"
+        },
+        {
+          "name": "/vector_estimator/vector_field/main_blocks.11/attention/W_key/linear/MatMul_quant",
+          "op_type": "MatMulIntegerToFloat"
+        },
+        {
+          "name": "/vector_estimator/vector_field/main_blocks.17/attention/W_key/linear/MatMul_quant",
+          "op_type": "MatMulIntegerToFloat"
+        },
+        {
+          "name": "/vector_estimator/vector_field/main_blocks.23/attention/W_key/linear/MatMul_quant",
+          "op_type": "MatMulIntegerToFloat"
+        }
+      ]
+    },
+    {
+      "name": "candidate",
+      "source_vector_sha256": "5f2609bbb02216087b4f4b08ef95a5aeaab8392986b8b566e022d396695c17d7",
+      "library_sha256": "32008e0973ce9386e4af0276e252813196e000d3474f9c7fd9a06d5f8ffc6c2b",
+      "optimized_ops": {
+        "Transpose": 68,
+        "Div": 1,
+        "Reshape": 9,
+        "Mul": 275,
+        "Cos": 1,
+        "Sin": 1,
+        "Concat": 21,
+        "DynamicQuantizeMatMul": 20,
+        "Softplus": 1,
+        "Tanh": 1,
+        "Unsqueeze": 9,
+        "DynamicQuantizeLinear": 57,
+        "MatMulIntegerToFloat": 4,
+        "Pad": 28,
+        "Conv": 28,
+        "LayerNormalization": 36,
+        "ExactMatMulInteger": 56,
+        "Cast": 56,
+        "BiasGelu": 28,
+        "Add": 73,
+        "Shape": 9,
+        "Slice": 16,
+        "Sub": 4,
+        "FusedMatMul": 8,
+        "Where": 12,
+        "Softmax": 8,
+        "MatMul": 8,
+        "Split": 8,
+        "Squeeze": 4
+      },
+      "remaining_static_key_projection_nodes": []
+    }
+  ],
+  "complete": true
+}

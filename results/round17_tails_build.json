@@ -1,0 +1,23 @@
+{
+  "source": "experiments/exact_int8_tails.c",
+  "source_sha256": "f0cb9098b53252f15a870c6340b12bb2874777d85d06c3dc2a6a9ca4fe88a61b",
+  "library": "libexact_tails.so",
+  "library_sha256": "d4612f8220635db7c5320aa563a1d08c3914cc6044bf9bf3e0f0b7f97fe91f8a",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "ziglang",
+    "cc",
+    "-target",
+    "x86_64-linux-gnu.2.28",
+    "-mcpu=znver1",
+    "-O3",
+    "-fPIC",
+    "-shared",
+    "experiments/exact_int8_tails.c",
+    "-I",
+    "native/include",
+    "-o",
+    "native/libexact_tails.so"
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "source": "experiments/exact_int8_arm_dot.c",
+    "source_sha256": "5bb125a9d10f6b097438bc05d6ac084c4d521ac295921fdca7aab5d898dd41f2",
+    "library": "libexact_arm_dot4.dylib",
+    "library_sha256": "1bb07d2b156b5c1404de6af4328d17272a8bcfcf7005d3430b4c37584fad5213",
+    "command": [
+      "clang",
+      "-O3",
+      "-march=armv8.2-a+dotprod",
+      "-DROW_TILE=4",
+      "-fPIC",
+      "-dynamiclib",
+      "experiments/exact_int8_arm_dot.c",
+      "-I",
+      "native/include",
+      "-o",
+      "native/libexact_arm_dot4.dylib"
+    ],
+    "rows": 4
+  },
+  {
+    "source": "experiments/exact_int8_arm_dot.c",
+    "source_sha256": "5bb125a9d10f6b097438bc05d6ac084c4d521ac295921fdca7aab5d898dd41f2",
+    "library": "libexact_arm_dot6.dylib",
+    "library_sha256": "3581a3153550da7ea66c5a3fb155199789f57a91744c11768fa3acb6d078cc47",
+    "command": [
+      "clang",
+      "-O3",
+      "-march=armv8.2-a+dotprod",
+      "-DROW_TILE=6",
+      "-fPIC",
+      "-dynamiclib",
+      "experiments/exact_int8_arm_dot.c",
+      "-I",
+      "native/include",
+      "-o",
+      "native/libexact_arm_dot6.dylib"
+    ],
+    "rows": 6
+  }
+]

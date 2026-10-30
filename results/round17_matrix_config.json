@@ -1,0 +1,17 @@
+[
+  {
+    "name": "v4",
+    "model": "models/v4",
+    "library": "../native/libexact_v4.so"
+  },
+  {
+    "name": "coverage",
+    "model": "models/all-linears",
+    "library": "../native/libexact_v4.so"
+  },
+  {
+    "name": "combined",
+    "model": "models/all-linears",
+    "library": "native/libexact_selective_memones.so"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "source": "experiments/exact_int8_safe_panels.c",
+  "source_sha256": "dd1606743fc5bce77cc83b6563b6142903733eacbe5f894fe3382d9819cb9e7c",
+  "library": "libexact_safe_panels.so",
+  "library_sha256": "ca3b0a4147e91f9812d78df107f25708c91a159fd26b1c2b3b0e6fac972514b0",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "ziglang",
+    "cc",
+    "-target",
+    "x86_64-linux-gnu.2.28",
+    "-mcpu=znver1",
+    "-O3",
+    "-fPIC",
+    "-shared",
+    "experiments/exact_int8_safe_panels.c",
+    "-I",
+    "native/include",
+    "-o",
+    "native/libexact_safe_panels.so"
+  ]
+}

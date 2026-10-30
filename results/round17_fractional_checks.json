@@ -1,0 +1,25 @@
+{
+  "note": "Fractional-speed output check, one process per variant. Not a paired timing claim.",
+  "checks": [
+    {
+      "case": "ko_short",
+      "voice": "F1",
+      "speed": 1.25,
+      "float32_bitidentical": true,
+      "actual_calls": [
+        8,
+        8
+      ]
+    },
+    {
+      "case": "en_short",
+      "voice": "F1",
+      "speed": 1.25,
+      "float32_bitidentical": true,
+      "actual_calls": [
+        8,
+        8
+      ]
+    }
+  ]
+}

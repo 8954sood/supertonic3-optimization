@@ -1,0 +1,56 @@
+{
+  "note": "Compiler extracted only in task directory. No system packages or libraries changed.",
+  "compiler": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "packages": [
+    {
+      "file": "cpp-13-x86-64-linux-gnu_13.3.0-6ubuntu2~24.04.1_amd64.deb",
+      "sha256": "2ca48bf0c2d6465bc39322899715a85d934b4d7442dd5586a7bebbe3ce0f806b",
+      "bytes": 10714542
+    },
+    {
+      "file": "gcc-13-x86-64-linux-gnu_13.3.0-6ubuntu2~24.04.1_amd64.deb",
+      "sha256": "a134b0319a82d14581b3a14820d2832af4ec9778ed8b9b4ddaeecfb0555ec325",
+      "bytes": 21084546
+    },
+    {
+      "file": "libc6-dev_2.39-0ubuntu8.9_amd64.deb",
+      "sha256": "e13d5fcc1b2a86f75bca8e0026a8e39f24fe97ca86e92be79991f8697eb1306f",
+      "bytes": 2125612
+    },
+    {
+      "file": "libgcc-13-dev_13.3.0-6ubuntu2~24.04.1_amd64.deb",
+      "sha256": "cd689db2691edaa10f37329307292796bb599e722e0505c79e14caaa1fe9a93a",
+      "bytes": 2680642
+    },
+    {
+      "file": "libisl23_0.26-3build1.1_amd64.deb",
+      "sha256": "4e040926e50fb961fae9bf95660189d468336a4a17bc321872c434fc8f777e7f",
+      "bytes": 679812
+    },
+    {
+      "file": "libmpc3_1.3.1-1build1.1_amd64.deb",
+      "sha256": "cebe6098bb3d66fdacac9dc6fe406a651216d9c00f27c3f9c159d15d96cdf864",
+      "bytes": 54636
+    },
+    {
+      "file": "libmpfr6_4.2.1-1build1.1_amd64.deb",
+      "sha256": "aebc1c8b69a1f98bb43dfc268daecd181116dbf40b13ee4e822eb4bdd52b493a",
+      "bytes": 353020
+    },
+    {
+      "file": "linux-libc-dev_6.8.0-147.147_amd64.deb",
+      "sha256": "fec8e4a308c03cd98dace67370a8d5a8031c36741796065c9f6e3f9548ab0cd2",
+      "bytes": 1595188
+    }
+  ],
+  "flags": [
+    "-S",
+    "-O3",
+    "-march=znver1",
+    "-mtune=znver1",
+    "-fPIC",
+    "-ffp-contract=off"
+  ],
+  "source_sha256": "f8c863545febca8570bf026c5adb60c90464f919a9bc44d2defd5840ae832162",
+  "assembly_sha256": "990be2d486ee0fad8df84e133145d6eb432a05224816cfe846d507681d8ab259"
+}

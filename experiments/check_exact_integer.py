@@ -33,6 +33,13 @@ def main():
         ([1, 17], 512, 16, 128, "random32_all_safe"),
         ([1, 3], 8, 16, 0, "positive32_safe_boundary"),
         ([1, 3], 144, 24, 127, "random64"),
+        ([1, 9], 64, 32, 255, "sparse_unsafe_spans"),
+        ([1, 4], 65536, 16, 0, "random32_all_safe"),
+        ([1, 6], 16, 32, 127, "random64"),
+        ([1, 2], 8, 16, 255, "negative32_safe_boundary"),
+        ([1, 13], 16, 16, 0, "positive64_requires_fallback"),
+        ([1, 12], 8, 16, 255, "negative32_safe_boundary"),
+        ([1, 12], 8, 8, 0, "positive64_requires_fallback"),
     ]:
         x = rng.randint(0, 256, (*shape, k), dtype=np.uint8)
         limit = 32 if pattern == "random32_all_safe" else 64
@@ -40,6 +47,14 @@ def main():
         if pattern.startswith(("positive", "negative")):
             value = -32 if pattern.startswith("negative") else 64 if "64" in pattern else 32
             weights.fill(value)
+            x.fill(255)
+        elif pattern == "sparse_unsafe_spans":
+            weights.fill(0)
+            # First/last unsafe blocks, adjacent blocks, and flags that come
+            # from either of the two N8 panels merged into an N16 tile.
+            for block, column, value in [(0, 2, 64), (2, 12, 64),
+                                         (3, 2, -64), (7, 12, -64)]:
+                weights[block * 8:block * 8 + 8, column] = value
             x.fill(255)
         initializers = [
             numpy_helper.from_array(weights, "w"),

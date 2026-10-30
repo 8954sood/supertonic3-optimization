@@ -1,0 +1,23 @@
+{
+  "source": "experiments/exact_int8_sparse_correction.c",
+  "source_sha256": "c2cc9cdf48d5483eeb49c70072ab824ff939a51a0035301787a5f8f3f9800fbc",
+  "library": "libexact_sparse_correction.so",
+  "library_sha256": "1405ed62ee24f6b7e8dd15a50bfc341eef99d147afba7ddceeec16bae02aa4bc",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "ziglang",
+    "cc",
+    "-target",
+    "x86_64-linux-gnu.2.28",
+    "-mcpu=znver1",
+    "-O3",
+    "-fPIC",
+    "-shared",
+    "experiments/exact_int8_sparse_correction.c",
+    "-I",
+    "native/include",
+    "-o",
+    "native/libexact_sparse_correction.so"
+  ]
+}

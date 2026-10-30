@@ -24,6 +24,12 @@ native_setup = (
     "실행 시 설치된 ORT와의 연산 일치를 검사합니다. 일치하지 않으면 표준 ORT 패키지를 사용하세요.\n"
     if metadata.get("row_norm_backend") else ""
 )
+if metadata.get("backend") == "native-exact-int8":
+    native_setup += (
+        "Linux x86_64 AVX2용 정수 커널 소스가 포함돼 있습니다. 먼저 빌드하세요.\n\n"
+        "python -m pip install ziglang==0.17.0\n"
+        "python native/build_exact.py\n\n"
+    )
 readme = f"""# Supertonic 3: CPU 한 스레드 · 8스텝 실험 후보
 
 Python 3.12 이상 가상환경에서 requirements.txt를 설치한 뒤 실행합니다.
@@ -41,11 +47,13 @@ python synthesize.py "안녕하세요. 원본과 소리를 비교합니다." --m
 모델의 원본 OpenRAIL-M 라이선스는 model/LICENSE에 유지했습니다.
 """
 with tarfile.open(output, "w:gz") as archive:
-    for name in ["runtime.py", "synthesize.py", "requirements.txt"]:
-        archive.add(name, arcname=name)
+    sources = ["runtime.py", "synthesize.py", "requirements.txt"]
     if metadata.get("row_norm_backend"):
-        for name in ["row_norm_ops.py", "native/build_row_norm.py", "native/row_norm.c", "native/include"]:
-            archive.add(name, arcname=name)
+        sources.extend(["row_norm_ops.py", "native/build_row_norm.py", "native/row_norm.c", "native/include"])
+    if metadata.get("backend") == "native-exact-int8":
+        sources.extend(["exact_ops.py", "native/build_exact.py", "native/exact_int8.c", "native/exact_int8_v4.c", "native/include"])
+    for name in dict.fromkeys(sources):
+        archive.add(name, arcname=name)
     for asset in sorted(model.rglob("*")):
         relative = asset.relative_to(model)
         if asset.is_symlink():
@@ -58,6 +66,8 @@ with tarfile.open(output, "w:gz") as archive:
             archive.add(asset, arcname=str(Path("model") / relative))
     for name in ["ROUND2.md", "HANDOFF_ROUND2.md", "ROUND3.md", "HANDOFF_ROUND3.md"]:
         archive.add(Path("records/2026-10-28") / name, arcname=name)
+    if metadata.get("engine_version") == 5:
+        archive.add("records/2026-10-30/ROUND17_ENGINE.md", arcname="ROUND17_ENGINE.md")
     for name in ["LICENSE", "THIRD_PARTY_NOTICES.md"]:
         archive.add(name, arcname=name)
     archive.add("docs/licenses", arcname="docs/licenses")
@@ -65,7 +75,8 @@ with tarfile.open(output, "w:gz") as archive:
     info = tarfile.TarInfo("README.md")
     info.size = len(raw)
     archive.addfile(info, io.BytesIO(raw))
-digest = hashlib.sha256(output.read_bytes()).hexdigest()
+with output.open("rb") as source:
+    digest = hashlib.file_digest(source, "sha256").hexdigest()
 checksum = output.parent / (output.name.removesuffix(".tar.gz") + ".sha256")
 checksum.write_text(f"{digest}  {output.name}\n")
 print(output, output.stat().st_size, "bytes", digest)

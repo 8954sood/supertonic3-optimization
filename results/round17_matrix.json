@@ -1,0 +1,2247 @@
+{
+  "variants": [
+    {
+      "name": "v4",
+      "model": "models/v4",
+      "library": "../native/libexact_v4.so"
+    },
+    {
+      "name": "coverage",
+      "model": "models/all-linears",
+      "library": "../native/libexact_v4.so"
+    },
+    {
+      "name": "combined",
+      "model": "models/all-linears",
+      "library": "native/libexact_selective_memones.so"
+    }
+  ],
+  "pairs": 3,
+  "steps": 8,
+  "threads": 1,
+  "affinity": [
+    0
+  ],
+  "note": "Fresh single-engine processes, rotated/reversed order, one warm-up and one timed run per text. Sampled RSS guard; no library swaps or concurrent inference.",
+  "runs": [
+    {
+      "name": "v4",
+      "voice": "M1",
+      "pair": 0,
+      "speed": 1.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "v4",
+        "voice": "M1",
+        "speed": 1.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "176fad95c50582afe6124dcc07641ee54c5c72d3047167266473fe2da6eb6b04",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 5.902227472513914,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "c5c0d0d6096336fe23a837f9ca938fb87f850233950b8a8dbc61cb5cac806a72",
+            "samples": 246343,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 6.113155569881201,
+                "audio_seconds": 5.586009070294785,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.0943690733317404,
+                "realtime_factor": 0.9137685122584472,
+                "stages": {
+                  "duration_predictor": 0.00485210120677948,
+                  "text_encoder": 0.2020224891602993,
+                  "condition": 0.00675010122358799,
+                  "vector_estimator": 3.9099210370332003,
+                  "vocoder": 1.9878036491572857
+                },
+                "process_cpu_seconds": 6.077958559000001,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 6.113155569881201,
+            "median_rtf": 1.0943690733317404,
+            "rss_mb": 366.804992
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "2b74bc15be429df8b48b8e3c56901160a79eb982a8e4fe1192f16784d1e5d870",
+            "samples": 228452,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.300895622000098,
+                "audio_seconds": 5.18031746031746,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.023276210889834,
+                "realtime_factor": 0.9772532473225454,
+                "stages": {
+                  "duration_predictor": 0.004193991422653198,
+                  "text_encoder": 0.09381561167538166,
+                  "condition": 0.006858868524432182,
+                  "vector_estimator": 3.317086663097143,
+                  "vocoder": 1.8773673828691244
+                },
+                "process_cpu_seconds": 5.295718648999998,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.300895622000098,
+            "median_rtf": 1.023276210889834,
+            "rss_mb": 366.936064
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 366.936064,
+        "sampled_peak_process_tree_rss_mb": 366.936064,
+        "minimum_system_available_mb": 277.843968,
+        "elapsed_seconds": 34.11760180816054,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "coverage",
+      "voice": "M1",
+      "pair": 0,
+      "speed": 1.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "all-linears",
+        "voice": "M1",
+        "speed": 1.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "75be7131a8ded4345ec61bb3d8d24943cd1dbe4a5065b346f0af421023731b4c",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 6.177879830822349,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "c5c0d0d6096336fe23a837f9ca938fb87f850233950b8a8dbc61cb5cac806a72",
+            "samples": 246343,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.704103419557214,
+                "audio_seconds": 5.586009070294785,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.0211410951497428,
+                "realtime_factor": 0.9792965974534178,
+                "stages": {
+                  "duration_predictor": 0.00908568874001503,
+                  "text_encoder": 0.09350869990885258,
+                  "condition": 0.00711030513048172,
+                  "vector_estimator": 3.668892716988921,
+                  "vocoder": 1.923671342432499
+                },
+                "process_cpu_seconds": 5.701935265000001,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.704103419557214,
+            "median_rtf": 1.0211410951497428,
+            "rss_mb": 368.668672
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "2b74bc15be429df8b48b8e3c56901160a79eb982a8e4fe1192f16784d1e5d870",
+            "samples": 228452,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.511585684493184,
+                "audio_seconds": 5.18031746031746,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.0639474755578828,
+                "realtime_factor": 0.9398960220998205,
+                "stages": {
+                  "duration_predictor": 0.0043155718594789505,
+                  "text_encoder": 0.041018081828951836,
+                  "condition": 0.006593747064471245,
+                  "vector_estimator": 3.337700482457876,
+                  "vocoder": 2.0672494545578957
+                },
+                "process_cpu_seconds": 5.415882754000002,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.511585684493184,
+            "median_rtf": 1.0639474755578828,
+            "rss_mb": 368.672768
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 368.672768,
+        "sampled_peak_process_tree_rss_mb": 368.672768,
+        "minimum_system_available_mb": 280.510464,
+        "elapsed_seconds": 32.84783224388957,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "combined",
+      "voice": "M1",
+      "pair": 0,
+      "speed": 1.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "all-linears",
+        "voice": "M1",
+        "speed": 1.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "a0fb192c169308adb8ab2f0be3b8c7096882e1a4ee69ac20a4236525ec99f131",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "75be7131a8ded4345ec61bb3d8d24943cd1dbe4a5065b346f0af421023731b4c",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 6.390507759526372,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "c5c0d0d6096336fe23a837f9ca938fb87f850233950b8a8dbc61cb5cac806a72",
+            "samples": 246343,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.424834202975035,
+                "audio_seconds": 5.586009070294785,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 0.9711466871443435,
+                "realtime_factor": 1.0297105609663353,
+                "stages": {
+                  "duration_predictor": 0.00407617911696434,
+                  "text_encoder": 0.09464865736663342,
+                  "condition": 0.006339767947793007,
+                  "vector_estimator": 3.408787624910474,
+                  "vocoder": 1.9093401115387678
+                },
+                "process_cpu_seconds": 5.422798257,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.424834202975035,
+            "median_rtf": 0.9711466871443435,
+            "rss_mb": 386.428928
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "2b74bc15be429df8b48b8e3c56901160a79eb982a8e4fe1192f16784d1e5d870",
+            "samples": 228452,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.269702389836311,
+                "audio_seconds": 5.18031746031746,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.0172547204304683,
+                "realtime_factor": 0.9830379549153956,
+                "stages": {
+                  "duration_predictor": 0.004154358059167862,
+                  "text_encoder": 0.0973512101918459,
+                  "condition": 0.006577529013156891,
+                  "vector_estimator": 3.2907090708613396,
+                  "vocoder": 1.8692257106304169
+                },
+                "process_cpu_seconds": 5.256930654999998,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.269702389836311,
+            "median_rtf": 1.0172547204304683,
+            "rss_mb": 386.433024
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 386.433024,
+        "sampled_peak_process_tree_rss_mb": 386.433024,
+        "minimum_system_available_mb": 261.144576,
+        "elapsed_seconds": 32.76283269189298,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "combined",
+      "voice": "M1",
+      "pair": 0,
+      "speed": 2.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "all-linears",
+        "voice": "M1",
+        "speed": 2.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "a0fb192c169308adb8ab2f0be3b8c7096882e1a4ee69ac20a4236525ec99f131",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "75be7131a8ded4345ec61bb3d8d24943cd1dbe4a5065b346f0af421023731b4c",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 6.404902392998338,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "0bc743d48376330c0d0d76f202daaa7203594c43d91820f58e448cea7fcbc4e1",
+            "samples": 123171,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 3.708962434902787,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3279525487266721,
+                "realtime_factor": 0.7530389553142284,
+                "stages": {
+                  "duration_predictor": 0.004344668239355087,
+                  "text_encoder": 0.0962313674390316,
+                  "condition": 0.006951315328478813,
+                  "vector_estimator": 2.604832185432315,
+                  "vocoder": 0.9949280675500631
+                },
+                "process_cpu_seconds": 3.707896751,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 3.708962434902787,
+            "median_rtf": 1.3279525487266721,
+            "rss_mb": 377.061376
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "94c5b5b748c5910707254d2b5517599b80b0d730062502d91a523275531ca79f",
+            "samples": 114226,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.9710564985871315,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 2.305285938295069,
+                "realtime_factor": 0.43378566770748395,
+                "stages": {
+                  "duration_predictor": 0.055120158940553665,
+                  "text_encoder": 0.04463852755725384,
+                  "condition": 0.06640626303851604,
+                  "vector_estimator": 4.294859571382403,
+                  "vocoder": 1.5085003562271595
+                },
+                "process_cpu_seconds": 5.752316998999998,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.9710564985871315,
+            "median_rtf": 2.305285938295069,
+            "rss_mb": 377.069568
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 377.069568,
+        "sampled_peak_process_tree_rss_mb": 377.069568,
+        "minimum_system_available_mb": 268.06272,
+        "elapsed_seconds": 28.10704291984439,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "coverage",
+      "voice": "M1",
+      "pair": 0,
+      "speed": 2.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "all-linears",
+        "voice": "M1",
+        "speed": 2.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "75be7131a8ded4345ec61bb3d8d24943cd1dbe4a5065b346f0af421023731b4c",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 6.696384713053703,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "0bc743d48376330c0d0d76f202daaa7203594c43d91820f58e448cea7fcbc4e1",
+            "samples": 123171,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 4.524220919236541,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.6198467377737573,
+                "realtime_factor": 0.6173423551010474,
+                "stages": {
+                  "duration_predictor": 0.01735227182507515,
+                  "text_encoder": 0.09986982867121696,
+                  "condition": 0.006360244005918503,
+                  "vector_estimator": 3.4670068323612213,
+                  "vocoder": 0.9320487827062607
+                },
+                "process_cpu_seconds": 4.307502818,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 4.524220919236541,
+            "median_rtf": 1.6198467377737573,
+            "rss_mb": 357.322752
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "94c5b5b748c5910707254d2b5517599b80b0d730062502d91a523275531ca79f",
+            "samples": 114226,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 3.488486113026738,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.346823294035326,
+                "realtime_factor": 0.7424879005499075,
+                "stages": {
+                  "duration_predictor": 0.0042396169155836105,
+                  "text_encoder": 0.09607485868036747,
+                  "condition": 0.006425080820918083,
+                  "vector_estimator": 2.465267715975642,
+                  "vocoder": 0.9151118639856577
+                },
+                "process_cpu_seconds": 3.4875052500000017,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 3.488486113026738,
+            "median_rtf": 1.346823294035326,
+            "rss_mb": 357.330944
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 357.330944,
+        "sampled_peak_process_tree_rss_mb": 357.330944,
+        "minimum_system_available_mb": 296.026112,
+        "elapsed_seconds": 26.007938543334603,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "v4",
+      "voice": "M1",
+      "pair": 0,
+      "speed": 2.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "v4",
+        "voice": "M1",
+        "speed": 2.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "176fad95c50582afe6124dcc07641ee54c5c72d3047167266473fe2da6eb6b04",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 5.711159398779273,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "0bc743d48376330c0d0d76f202daaa7203594c43d91820f58e448cea7fcbc4e1",
+            "samples": 123171,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 3.8893419709056616,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3925354256841276,
+                "realtime_factor": 0.7181145854933766,
+                "stages": {
+                  "duration_predictor": 0.004288673400878906,
+                  "text_encoder": 0.10225573740899563,
+                  "condition": 0.007053356617689133,
+                  "vector_estimator": 2.7674207743257284,
+                  "vocoder": 1.0068042185157537
+                },
+                "process_cpu_seconds": 3.8860319160000003,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 3.8893419709056616,
+            "median_rtf": 1.3925354256841276,
+            "rss_mb": 367.378432
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "94c5b5b748c5910707254d2b5517599b80b0d730062502d91a523275531ca79f",
+            "samples": 114226,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 3.6071123834699392,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3926221360375424,
+                "realtime_factor": 0.7180698727404415,
+                "stages": {
+                  "duration_predictor": 0.005024956539273262,
+                  "text_encoder": 0.09495503082871437,
+                  "condition": 0.006640685722231865,
+                  "vector_estimator": 2.5307054724544287,
+                  "vocoder": 0.9681706596165895
+                },
+                "process_cpu_seconds": 3.6014996969999977,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 3.6071123834699392,
+            "median_rtf": 1.3926221360375424,
+            "rss_mb": 367.382528
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 367.382528,
+        "sampled_peak_process_tree_rss_mb": 367.382528,
+        "minimum_system_available_mb": 277.835776,
+        "elapsed_seconds": 23.497963154688478,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "coverage",
+      "voice": "M1",
+      "pair": 1,
+      "speed": 1.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "all-linears",
+        "voice": "M1",
+        "speed": 1.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "75be7131a8ded4345ec61bb3d8d24943cd1dbe4a5065b346f0af421023731b4c",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 5.410287827253342,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "c5c0d0d6096336fe23a837f9ca938fb87f850233950b8a8dbc61cb5cac806a72",
+            "samples": 246343,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.7812420800328255,
+                "audio_seconds": 5.586009070294785,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.0349503567361265,
+                "realtime_factor": 0.9662299196201568,
+                "stages": {
+                  "duration_predictor": 0.006266629323363304,
+                  "text_encoder": 0.09433278627693653,
+                  "condition": 0.006683856248855591,
+                  "vector_estimator": 3.686938626691699,
+                  "vocoder": 1.9851768556982279
+                },
+                "process_cpu_seconds": 5.777510285,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.7812420800328255,
+            "median_rtf": 1.0349503567361265,
+            "rss_mb": 383.09888
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "2b74bc15be429df8b48b8e3c56901160a79eb982a8e4fe1192f16784d1e5d870",
+            "samples": 228452,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.323802487924695,
+                "audio_seconds": 5.18031746031746,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.0276981147789428,
+                "realtime_factor": 0.973048393900284,
+                "stages": {
+                  "duration_predictor": 0.005388593301177025,
+                  "text_encoder": 0.11721771396696568,
+                  "condition": 0.0075265150517225266,
+                  "vector_estimator": 3.3509944416582584,
+                  "vocoder": 1.8409540746361017
+                },
+                "process_cpu_seconds": 5.322007790999997,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.323802487924695,
+            "median_rtf": 1.0276981147789428,
+            "rss_mb": 383.102976
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 383.102976,
+        "sampled_peak_process_tree_rss_mb": 383.102976,
+        "minimum_system_available_mb": 282.021888,
+        "elapsed_seconds": 31.129311572760344,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "combined",
+      "voice": "M1",
+      "pair": 1,
+      "speed": 1.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "all-linears",
+        "voice": "M1",
+        "speed": 1.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "a0fb192c169308adb8ab2f0be3b8c7096882e1a4ee69ac20a4236525ec99f131",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "75be7131a8ded4345ec61bb3d8d24943cd1dbe4a5065b346f0af421023731b4c",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 5.976373175159097,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "c5c0d0d6096336fe23a837f9ca938fb87f850233950b8a8dbc61cb5cac806a72",
+            "samples": 246343,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.602393539622426,
+                "audio_seconds": 5.586009070294785,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.0029331261588474,
+                "realtime_factor": 0.9970754519096591,
+                "stages": {
+                  "duration_predictor": 0.004537561908364296,
+                  "text_encoder": 0.09353106841444969,
+                  "condition": 0.007018573582172394,
+                  "vector_estimator": 3.4878659546375275,
+                  "vocoder": 2.007778625935316
+                },
+                "process_cpu_seconds": 5.599261828000001,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.602393539622426,
+            "median_rtf": 1.0029331261588474,
+            "rss_mb": 376.774656
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "2b74bc15be429df8b48b8e3c56901160a79eb982a8e4fe1192f16784d1e5d870",
+            "samples": 228452,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.179319031536579,
+                "audio_seconds": 5.18031746031746,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 0.9998072649430215,
+                "realtime_factor": 1.0001927722109416,
+                "stages": {
+                  "duration_predictor": 0.017042413353919983,
+                  "text_encoder": 0.08382220938801765,
+                  "condition": 0.0063026659190654755,
+                  "vector_estimator": 3.2568213548511267,
+                  "vocoder": 1.8007842358201742
+                },
+                "process_cpu_seconds": 5.178078608,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.179319031536579,
+            "median_rtf": 0.9998072649430215,
+            "rss_mb": 376.778752
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 376.778752,
+        "sampled_peak_process_tree_rss_mb": 376.778752,
+        "minimum_system_available_mb": 267.9808,
+        "elapsed_seconds": 31.508067002519965,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "v4",
+      "voice": "M1",
+      "pair": 1,
+      "speed": 1.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "v4",
+        "voice": "M1",
+        "speed": 1.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "176fad95c50582afe6124dcc07641ee54c5c72d3047167266473fe2da6eb6b04",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 7.470524299889803,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "c5c0d0d6096336fe23a837f9ca938fb87f850233950b8a8dbc61cb5cac806a72",
+            "samples": 246343,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.7352443635463715,
+                "audio_seconds": 5.586009070294785,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.0267159060025857,
+                "realtime_factor": 0.9739792615986623,
+                "stages": {
+                  "duration_predictor": 0.004221254959702492,
+                  "text_encoder": 0.0979966688901186,
+                  "condition": 0.006316082552075386,
+                  "vector_estimator": 3.5778871327638626,
+                  "vocoder": 1.9922936670482159
+                },
+                "process_cpu_seconds": 5.733062793,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.7352443635463715,
+            "median_rtf": 1.0267159060025857,
+            "rss_mb": 382.267392
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "2b74bc15be429df8b48b8e3c56901160a79eb982a8e4fe1192f16784d1e5d870",
+            "samples": 228452,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.275553112849593,
+                "audio_seconds": 5.18031746031746,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.0183841344206532,
+                "realtime_factor": 0.9819477407401759,
+                "stages": {
+                  "duration_predictor": 0.004124751314520836,
+                  "text_encoder": 0.10333945229649544,
+                  "condition": 0.00676305778324604,
+                  "vector_estimator": 3.2847478799521923,
+                  "vocoder": 1.8748242501169443
+                },
+                "process_cpu_seconds": 5.2743866090000004,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.275553112849593,
+            "median_rtf": 1.0183841344206532,
+            "rss_mb": 382.267392
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 382.267392,
+        "sampled_peak_process_tree_rss_mb": 382.267392,
+        "minimum_system_available_mb": 266.420224,
+        "elapsed_seconds": 33.253765903413296,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "v4",
+      "voice": "M1",
+      "pair": 1,
+      "speed": 2.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "v4",
+        "voice": "M1",
+        "speed": 2.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "176fad95c50582afe6124dcc07641ee54c5c72d3047167266473fe2da6eb6b04",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 5.599019814282656,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "0bc743d48376330c0d0d76f202daaa7203594c43d91820f58e448cea7fcbc4e1",
+            "samples": 123171,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 4.219349393621087,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.5106908952488,
+                "realtime_factor": 0.6619487832653597,
+                "stages": {
+                  "duration_predictor": 0.004754714667797089,
+                  "text_encoder": 0.1791887078434229,
+                  "condition": 0.006975973024964333,
+                  "vector_estimator": 3.0282838866114616,
+                  "vocoder": 0.9984684474766254
+                },
+                "process_cpu_seconds": 4.217867127,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 4.219349393621087,
+            "median_rtf": 1.5106908952488,
+            "rss_mb": 364.99456
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "94c5b5b748c5910707254d2b5517599b80b0d730062502d91a523275531ca79f",
+            "samples": 114226,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 3.505294481292367,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3533126138094076,
+                "realtime_factor": 0.7389275691335824,
+                "stages": {
+                  "duration_predictor": 0.003928128629922867,
+                  "text_encoder": 0.09585560485720634,
+                  "condition": 0.006759332492947578,
+                  "vector_estimator": 2.499723207205534,
+                  "vocoder": 0.8973483592271805
+                },
+                "process_cpu_seconds": 3.504336987000002,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 3.505294481292367,
+            "median_rtf": 1.3533126138094076,
+            "rss_mb": 364.998656
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 364.998656,
+        "sampled_peak_process_tree_rss_mb": 364.998656,
+        "minimum_system_available_mb": 283.774976,
+        "elapsed_seconds": 24.618219843134284,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "combined",
+      "voice": "M1",
+      "pair": 1,
+      "speed": 2.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "all-linears",
+        "voice": "M1",
+        "speed": 2.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "a0fb192c169308adb8ab2f0be3b8c7096882e1a4ee69ac20a4236525ec99f131",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "75be7131a8ded4345ec61bb3d8d24943cd1dbe4a5065b346f0af421023731b4c",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 5.8117789551615715,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "0bc743d48376330c0d0d76f202daaa7203594c43d91820f58e448cea7fcbc4e1",
+            "samples": 123171,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 3.807136870920658,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3631028083526238,
+                "realtime_factor": 0.7336203798219364,
+                "stages": {
+                  "duration_predictor": 0.004312597215175629,
+                  "text_encoder": 0.09541945159435272,
+                  "condition": 0.006576403975486755,
+                  "vector_estimator": 2.7153978254646063,
+                  "vocoder": 0.9838486835360527
+                },
+                "process_cpu_seconds": 3.805269492999999,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 3.807136870920658,
+            "median_rtf": 1.3631028083526238,
+            "rss_mb": 375.17312
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "94c5b5b748c5910707254d2b5517599b80b0d730062502d91a523275531ca79f",
+            "samples": 114226,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.708671836182475,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 2.203985327120333,
+                "realtime_factor": 0.4537235287798275,
+                "stages": {
+                  "duration_predictor": 0.004745488986372948,
+                  "text_encoder": 0.2912219259887934,
+                  "condition": 0.006473168730735779,
+                  "vector_estimator": 4.482898164540529,
+                  "vocoder": 0.9217854030430317
+                },
+                "process_cpu_seconds": 5.506569253999999,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.708671836182475,
+            "median_rtf": 2.203985327120333,
+            "rss_mb": 375.181312
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 375.181312,
+        "sampled_peak_process_tree_rss_mb": 375.181312,
+        "minimum_system_available_mb": 278.093824,
+        "elapsed_seconds": 29.390941681340337,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "coverage",
+      "voice": "M1",
+      "pair": 1,
+      "speed": 2.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "all-linears",
+        "voice": "M1",
+        "speed": 2.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "75be7131a8ded4345ec61bb3d8d24943cd1dbe4a5065b346f0af421023731b4c",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 5.81237269192934,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "0bc743d48376330c0d0d76f202daaa7203594c43d91820f58e448cea7fcbc4e1",
+            "samples": 123171,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.582984546199441,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.9989252217437168,
+                "realtime_factor": 0.5002688390352455,
+                "stages": {
+                  "duration_predictor": 0.004546249285340309,
+                  "text_encoder": 0.09517671167850494,
+                  "condition": 0.006806608289480209,
+                  "vector_estimator": 4.478889014571905,
+                  "vocoder": 0.9960606899112463
+                },
+                "process_cpu_seconds": 5.427306916000001,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.582984546199441,
+            "median_rtf": 1.9989252217437168,
+            "rss_mb": 359.399424
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "94c5b5b748c5910707254d2b5517599b80b0d730062502d91a523275531ca79f",
+            "samples": 114226,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 3.4914446603506804,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.347965520297174,
+                "realtime_factor": 0.7418587381816256,
+                "stages": {
+                  "duration_predictor": 0.004311986267566681,
+                  "text_encoder": 0.0955593753606081,
+                  "condition": 0.006259404122829437,
+                  "vector_estimator": 2.484425578266382,
+                  "vocoder": 0.8994742501527071
+                },
+                "process_cpu_seconds": 3.4902891700000005,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 3.4914446603506804,
+            "median_rtf": 1.347965520297174,
+            "rss_mb": 359.407616
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 359.407616,
+        "sampled_peak_process_tree_rss_mb": 359.407616,
+        "minimum_system_available_mb": 282.19392,
+        "elapsed_seconds": 27.29565847478807,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "combined",
+      "voice": "M1",
+      "pair": 2,
+      "speed": 1.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "all-linears",
+        "voice": "M1",
+        "speed": 1.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "a0fb192c169308adb8ab2f0be3b8c7096882e1a4ee69ac20a4236525ec99f131",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "75be7131a8ded4345ec61bb3d8d24943cd1dbe4a5065b346f0af421023731b4c",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 6.414219371974468,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "c5c0d0d6096336fe23a837f9ca938fb87f850233950b8a8dbc61cb5cac806a72",
+            "samples": 246343,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.591452902182937,
+                "audio_seconds": 5.586009070294785,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.000974547627769,
+                "realtime_factor": 0.9990264011906411,
+                "stages": {
+                  "duration_predictor": 0.00485360249876976,
+                  "text_encoder": 0.09767906367778778,
+                  "condition": 0.006804486736655235,
+                  "vector_estimator": 3.503972427919507,
+                  "vocoder": 1.9762737788259983
+                },
+                "process_cpu_seconds": 5.588317355999999,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.591452902182937,
+            "median_rtf": 1.000974547627769,
+            "rss_mb": 373.592064
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "2b74bc15be429df8b48b8e3c56901160a79eb982a8e4fe1192f16784d1e5d870",
+            "samples": 228452,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 6.107579547911882,
+                "audio_seconds": 5.18031746031746,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.1789971550387566,
+                "realtime_factor": 0.8481784673747813,
+                "stages": {
+                  "duration_predictor": 0.00417713075876236,
+                  "text_encoder": 0.2052204143255949,
+                  "condition": 0.08507378399372101,
+                  "vector_estimator": 3.9899680335074663,
+                  "vocoder": 1.8215276896953583
+                },
+                "process_cpu_seconds": 5.655724539999998,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 6.107579547911882,
+            "median_rtf": 1.1789971550387566,
+            "rss_mb": 373.59616
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 373.59616,
+        "sampled_peak_process_tree_rss_mb": 373.59616,
+        "minimum_system_available_mb": 257.093632,
+        "elapsed_seconds": 33.723184920847416,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "v4",
+      "voice": "M1",
+      "pair": 2,
+      "speed": 1.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "v4",
+        "voice": "M1",
+        "speed": 1.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "176fad95c50582afe6124dcc07641ee54c5c72d3047167266473fe2da6eb6b04",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 6.014454202726483,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "c5c0d0d6096336fe23a837f9ca938fb87f850233950b8a8dbc61cb5cac806a72",
+            "samples": 246343,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.598069621250033,
+                "audio_seconds": 5.586009070294785,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.002159063976352,
+                "realtime_factor": 0.997845587537985,
+                "stages": {
+                  "duration_predictor": 0.004260718822479248,
+                  "text_encoder": 0.0976459700614214,
+                  "condition": 0.006336238235235214,
+                  "vector_estimator": 3.507287001237273,
+                  "vocoder": 1.9806849956512451
+                },
+                "process_cpu_seconds": 5.596561056999999,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.598069621250033,
+            "median_rtf": 1.002159063976352,
+            "rss_mb": 373.374976
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "2b74bc15be429df8b48b8e3c56901160a79eb982a8e4fe1192f16784d1e5d870",
+            "samples": 228452,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.146864868700504,
+                "audio_seconds": 5.18031746031746,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 0.9935423664913954,
+                "realtime_factor": 1.006499605579387,
+                "stages": {
+                  "duration_predictor": 0.003913272172212601,
+                  "text_encoder": 0.0964258722960949,
+                  "condition": 0.00629819743335247,
+                  "vector_estimator": 3.23041401617229,
+                  "vocoder": 1.8081448934972286
+                },
+                "process_cpu_seconds": 5.144114182000003,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.146864868700504,
+            "median_rtf": 0.9935423664913954,
+            "rss_mb": 373.374976
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 373.374976,
+        "sampled_peak_process_tree_rss_mb": 373.374976,
+        "minimum_system_available_mb": 269.635584,
+        "elapsed_seconds": 32.003934286534786,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "coverage",
+      "voice": "M1",
+      "pair": 2,
+      "speed": 1.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "all-linears",
+        "voice": "M1",
+        "speed": 1.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "75be7131a8ded4345ec61bb3d8d24943cd1dbe4a5065b346f0af421023731b4c",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 6.07782637886703,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "c5c0d0d6096336fe23a837f9ca938fb87f850233950b8a8dbc61cb5cac806a72",
+            "samples": 246343,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.479017369449139,
+                "audio_seconds": 5.586009070294785,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 0.9808464863734996,
+                "realtime_factor": 1.0195275345251193,
+                "stages": {
+                  "duration_predictor": 0.004433766007423401,
+                  "text_encoder": 0.09749267995357513,
+                  "condition": 0.006987834349274635,
+                  "vector_estimator": 3.4601821806281805,
+                  "vocoder": 1.9079742319881916
+                },
+                "process_cpu_seconds": 5.475505404,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.479017369449139,
+            "median_rtf": 0.9808464863734996,
+            "rss_mb": 367.08352
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "2b74bc15be429df8b48b8e3c56901160a79eb982a8e4fe1192f16784d1e5d870",
+            "samples": 228452,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 5.211082836613059,
+                "audio_seconds": 5.18031746031746,
+                "speed": 1.0,
+                "generation_speed": 1.0,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.0059388978631656,
+                "realtime_factor": 0.9940961644133842,
+                "stages": {
+                  "duration_predictor": 0.0046125054359436035,
+                  "text_encoder": 0.10014492832124233,
+                  "condition": 0.006638228893280029,
+                  "vector_estimator": 3.290089027956128,
+                  "vocoder": 1.807790445163846
+                },
+                "process_cpu_seconds": 5.210177021,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 5.211082836613059,
+            "median_rtf": 1.0059388978631656,
+            "rss_mb": 367.087616
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 367.087616,
+        "sampled_peak_process_tree_rss_mb": 367.087616,
+        "minimum_system_available_mb": 269.549568,
+        "elapsed_seconds": 32.90684079192579,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "coverage",
+      "voice": "M1",
+      "pair": 2,
+      "speed": 2.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "all-linears",
+        "voice": "M1",
+        "speed": 2.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "75be7131a8ded4345ec61bb3d8d24943cd1dbe4a5065b346f0af421023731b4c",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 6.359227575361729,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "0bc743d48376330c0d0d76f202daaa7203594c43d91820f58e448cea7fcbc4e1",
+            "samples": 123171,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 3.728113228455186,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.334809276330254,
+                "realtime_factor": 0.749170700063807,
+                "stages": {
+                  "duration_predictor": 0.004114003852009773,
+                  "text_encoder": 0.09839888103306293,
+                  "condition": 0.006342172622680664,
+                  "vector_estimator": 2.6251410208642483,
+                  "vocoder": 0.9926154594868422
+                },
+                "process_cpu_seconds": 3.725181269,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 3.728113228455186,
+            "median_rtf": 1.334809276330254,
+            "rss_mb": 355.729408
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "94c5b5b748c5910707254d2b5517599b80b0d730062502d91a523275531ca79f",
+            "samples": 114226,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 3.4997037909924984,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3511541784074483,
+                "realtime_factor": 0.7401079876603426,
+                "stages": {
+                  "duration_predictor": 0.004895931109786034,
+                  "text_encoder": 0.09954319149255753,
+                  "condition": 0.060607513412833214,
+                  "vector_estimator": 2.4182397089898586,
+                  "vocoder": 0.9149180538952351
+                },
+                "process_cpu_seconds": 3.4987897970000006,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 3.4997037909924984,
+            "median_rtf": 1.3511541784074483,
+            "rss_mb": 355.831808
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 355.831808,
+        "sampled_peak_process_tree_rss_mb": 355.831808,
+        "minimum_system_available_mb": 302.194688,
+        "elapsed_seconds": 24.90816081315279,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "v4",
+      "voice": "M1",
+      "pair": 2,
+      "speed": 2.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "v4",
+        "voice": "M1",
+        "speed": 2.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "176fad95c50582afe6124dcc07641ee54c5c72d3047167266473fe2da6eb6b04",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 4.77546151727438,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "0bc743d48376330c0d0d76f202daaa7203594c43d91820f58e448cea7fcbc4e1",
+            "samples": 123171,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 3.795076258480549,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3587846408569566,
+                "realtime_factor": 0.7359517983433498,
+                "stages": {
+                  "duration_predictor": 0.0593259334564209,
+                  "text_encoder": 0.10066135041415691,
+                  "condition": 0.006382690742611885,
+                  "vector_estimator": 2.6266095004975796,
+                  "vocoder": 1.0005820114165545
+                },
+                "process_cpu_seconds": 3.794598378,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 3.795076258480549,
+            "median_rtf": 1.3587846408569566,
+            "rss_mb": 360.452096
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "94c5b5b748c5910707254d2b5517599b80b0d730062502d91a523275531ca79f",
+            "samples": 114226,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 3.5711098294705153,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.37872238789461,
+                "realtime_factor": 0.7253091766552501,
+                "stages": {
+                  "duration_predictor": 0.004636898636817932,
+                  "text_encoder": 0.10316240787506104,
+                  "condition": 0.008278649300336838,
+                  "vector_estimator": 2.4938283674418926,
+                  "vocoder": 0.9082057364284992
+                },
+                "process_cpu_seconds": 3.569768832000001,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 3.5711098294705153,
+            "median_rtf": 1.37872238789461,
+            "rss_mb": 360.456192
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 360.456192,
+        "sampled_peak_process_tree_rss_mb": 360.456192,
+        "minimum_system_available_mb": 279.773184,
+        "elapsed_seconds": 21.43573891930282,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    },
+    {
+      "name": "combined",
+      "voice": "M1",
+      "pair": 2,
+      "speed": 2.0,
+      "returncode": 0,
+      "benchmark": {
+        "model": "all-linears",
+        "voice": "M1",
+        "speed": 2.0,
+        "steps": 8,
+        "threads": 1,
+        "affinity": [
+          0
+        ],
+        "nice": 19,
+        "python": "3.12.3",
+        "onnxruntime": "1.31.1",
+        "numpy": "2.5.4",
+        "runtime_sha256": "880dbafdb379e6e3caa59424d46eb27b4739ef4e0a56aa0531d1a6b9db051b98",
+        "harness_sha256": "448f967ae63c1d03eb4020e6f1cc1dfe47be5df91e2bb6060aa5432bea848fb2",
+        "exact_library_sha256": "a0fb192c169308adb8ab2f0be3b8c7096882e1a4ee69ac20a4236525ec99f131",
+        "graph_sha256": {
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vector_estimator.onnx": "75be7131a8ded4345ec61bb3d8d24943cd1dbe4a5065b346f0af421023731b4c",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6"
+        },
+        "load_seconds": 5.246645940467715,
+        "note": "Fresh single-engine process, warm synthesis excludes load/hash/file I/O. Time and waveform hashes from this server only; not an ARM result.",
+        "rows": [
+          {
+            "case": "ko_short",
+            "text": "안녕하세요. 오래된 컴퓨터에서도 빠르게 음성을 생성합니다.",
+            "lang": "ko",
+            "float32_sha256": "0bc743d48376330c0d0d76f202daaa7203594c43d91820f58e448cea7fcbc4e1",
+            "samples": 123171,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 3.793736008927226,
+                "audio_seconds": 2.7929931972789115,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3583047794829195,
+                "realtime_factor": 0.7362117951029229,
+                "stages": {
+                  "duration_predictor": 0.003986069932579994,
+                  "text_encoder": 0.10037622787058353,
+                  "condition": 0.059872204437851906,
+                  "vector_estimator": 2.6295905858278275,
+                  "vocoder": 0.9983382448554039
+                },
+                "process_cpu_seconds": 3.792926004,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 3.793736008927226,
+            "median_rtf": 1.3583047794829195,
+            "rss_mb": 382.091264
+          },
+          {
+            "case": "en_short",
+            "text": "Hello. This voice is generated locally using a single CPU thread.",
+            "lang": "en",
+            "float32_sha256": "94c5b5b748c5910707254d2b5517599b80b0d730062502d91a523275531ca79f",
+            "samples": 114226,
+            "sample_rate": 44100,
+            "runs": [
+              {
+                "seconds": 3.510551130399108,
+                "audio_seconds": 2.59015873015873,
+                "speed": 2.0,
+                "generation_speed": 1.35,
+                "speed_strategy": "latent-retime",
+                "rtf": 1.3553420836814793,
+                "realtime_factor": 0.7378211095487619,
+                "stages": {
+                  "duration_predictor": 0.004838414490222931,
+                  "text_encoder": 0.09638351760804653,
+                  "condition": 0.006619345396757126,
+                  "vector_estimator": 2.4912447184324265,
+                  "vocoder": 0.9098270554095507
+                },
+                "process_cpu_seconds": 3.509669947999999,
+                "actual_vector_calls": 8
+              }
+            ],
+            "median_seconds": 3.510551130399108,
+            "median_rtf": 1.3553420836814793,
+            "rss_mb": 382.099456
+          }
+        ],
+        "complete": true
+      },
+      "guard": {
+        "returncode": 0,
+        "reason": null,
+        "sampled_peak_child_rss_mb": 382.099456,
+        "sampled_peak_process_tree_rss_mb": 382.099456,
+        "minimum_system_available_mb": 277.721088,
+        "elapsed_seconds": 22.731241354718804,
+        "max_rss_budget_mb": 480.0,
+        "reserve_mb": 80.0,
+        "note": "Sampled 50ms supervisor, not an OS-enforced hard memory limit. Budget applies to summed child process-tree RSS; shared pages may be counted twice."
+      }
+    }
+  ],
+  "summary": [
+    {
+      "name": "v4",
+      "voice": "M1",
+      "speed": 1.0,
+      "case": "ko_short",
+      "median_rtf": 1.0267159060025857,
+      "median_seconds": 5.7352443635463715,
+      "paired_time_reductions_percent": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "median_paired_time_reduction_percent": 0.0
+    },
+    {
+      "name": "coverage",
+      "voice": "M1",
+      "speed": 1.0,
+      "case": "ko_short",
+      "median_rtf": 1.0211410951497428,
+      "median_seconds": 5.704103419557214,
+      "paired_time_reductions_percent": [
+        6.691342067905792,
+        -0.8020184245124629,
+        2.1266661520067065
+      ],
+      "median_paired_time_reduction_percent": 2.1266661520067065
+    },
+    {
+      "name": "combined",
+      "voice": "M1",
+      "speed": 1.0,
+      "case": "ko_short",
+      "median_rtf": 1.000974547627769,
+      "median_seconds": 5.591452902182937,
+      "paired_time_reductions_percent": [
+        11.259673650339352,
+        2.316393435096764,
+        0.11819644118000738
+      ],
+      "median_paired_time_reduction_percent": 2.316393435096764
+    },
+    {
+      "name": "v4",
+      "voice": "M1",
+      "speed": 1.0,
+      "case": "en_short",
+      "median_rtf": 1.0183841344206532,
+      "median_seconds": 5.275553112849593,
+      "paired_time_reductions_percent": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "median_paired_time_reduction_percent": 0.0
+    },
+    {
+      "name": "coverage",
+      "voice": "M1",
+      "speed": 1.0,
+      "case": "en_short",
+      "median_rtf": 1.0276981147789428,
+      "median_seconds": 5.323802487924695,
+      "paired_time_reductions_percent": [
+        -3.9746125469565463,
+        -0.9145841970120916,
+        -1.2477103936239242
+      ],
+      "median_paired_time_reduction_percent": -1.2477103936239242
+    },
+    {
+      "name": "combined",
+      "voice": "M1",
+      "speed": 1.0,
+      "case": "en_short",
+      "median_rtf": 1.0172547204304683,
+      "median_seconds": 5.269702389836311,
+      "paired_time_reductions_percent": [
+        0.588452110513682,
+        1.8241515013585619,
+        -18.666017152572767
+      ],
+      "median_paired_time_reduction_percent": 0.588452110513682
+    },
+    {
+      "name": "v4",
+      "voice": "M1",
+      "speed": 2.0,
+      "case": "ko_short",
+      "median_rtf": 1.3925354256841276,
+      "median_seconds": 3.8893419709056616,
+      "paired_time_reductions_percent": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "median_paired_time_reduction_percent": 0.0
+    },
+    {
+      "name": "coverage",
+      "voice": "M1",
+      "speed": 2.0,
+      "case": "ko_short",
+      "median_rtf": 1.6198467377737573,
+      "median_seconds": 4.524220919236541,
+      "paired_time_reductions_percent": [
+        -16.323556865919997,
+        -32.318611837169264,
+        1.764471263936429
+      ],
+      "median_paired_time_reduction_percent": -16.323556865919997
+    },
+    {
+      "name": "combined",
+      "voice": "M1",
+      "speed": 2.0,
+      "case": "ko_short",
+      "median_rtf": 1.3583047794829195,
+      "median_seconds": 3.793736008927226,
+      "paired_time_reductions_percent": [
+        4.6377905916273,
+        9.769575454538604,
+        0.03531548411781493
+      ],
+      "median_paired_time_reduction_percent": 4.6377905916273
+    },
+    {
+      "name": "v4",
+      "voice": "M1",
+      "speed": 2.0,
+      "case": "en_short",
+      "median_rtf": 1.37872238789461,
+      "median_seconds": 3.5711098294705153,
+      "paired_time_reductions_percent": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "median_paired_time_reduction_percent": 0.0
+    },
+    {
+      "name": "coverage",
+      "voice": "M1",
+      "speed": 2.0,
+      "case": "en_short",
+      "median_rtf": 1.347965520297174,
+      "median_seconds": 3.4914446603506804,
+      "paired_time_reductions_percent": [
+        3.2886768648191067,
+        0.3951114810924583,
+        1.9995475324992795
+      ],
+      "median_paired_time_reduction_percent": 1.9995475324992795
+    },
+    {
+      "name": "combined",
+      "voice": "M1",
+      "speed": 2.0,
+      "case": "en_short",
+      "median_rtf": 2.203985327120333,
+      "median_seconds": 5.708671836182475,
+      "paired_time_reductions_percent": [
+        -65.53563803418695,
+        -62.858552017511094,
+        1.6957949198775024
+      ],
+      "median_paired_time_reduction_percent": -62.858552017511094
+    }
+  ],
+  "wave_checks": [
+    {
+      "voice": "M1",
+      "speed": 1.0,
+      "case": "ko_short",
+      "name": "v4",
+      "float32_bitidentical": true
+    },
+    {
+      "voice": "M1",
+      "speed": 1.0,
+      "case": "ko_short",
+      "name": "coverage",
+      "float32_bitidentical": true
+    },
+    {
+      "voice": "M1",
+      "speed": 1.0,
+      "case": "ko_short",
+      "name": "combined",
+      "float32_bitidentical": true
+    },
+    {
+      "voice": "M1",
+      "speed": 1.0,
+      "case": "en_short",
+      "name": "v4",
+      "float32_bitidentical": true
+    },
+    {
+      "voice": "M1",
+      "speed": 1.0,
+      "case": "en_short",
+      "name": "coverage",
+      "float32_bitidentical": true
+    },
+    {
+      "voice": "M1",
+      "speed": 1.0,
+      "case": "en_short",
+      "name": "combined",
+      "float32_bitidentical": true
+    },
+    {
+      "voice": "M1",
+      "speed": 2.0,
+      "case": "ko_short",
+      "name": "v4",
+      "float32_bitidentical": true
+    },
+    {
+      "voice": "M1",
+      "speed": 2.0,
+      "case": "ko_short",
+      "name": "coverage",
+      "float32_bitidentical": true
+    },
+    {
+      "voice": "M1",
+      "speed": 2.0,
+      "case": "ko_short",
+      "name": "combined",
+      "float32_bitidentical": true
+    },
+    {
+      "voice": "M1",
+      "speed": 2.0,
+      "case": "en_short",
+      "name": "v4",
+      "float32_bitidentical": true
+    },
+    {
+      "voice": "M1",
+      "speed": 2.0,
+      "case": "en_short",
+      "name": "coverage",
+      "float32_bitidentical": true
+    },
+    {
+      "voice": "M1",
+      "speed": 2.0,
+      "case": "en_short",
+      "name": "combined",
+      "float32_bitidentical": true
+    }
+  ],
+  "complete": true
+}

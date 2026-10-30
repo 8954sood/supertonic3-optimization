@@ -1,0 +1,23 @@
+{
+  "source": "experiments/exact_int8_joined_flags.c",
+  "source_sha256": "357ba396db8d0ef543c1ee66bdc70fdcde2390895a84531a26007684f41a3ea1",
+  "library": "libexact_joined_flags.so",
+  "library_sha256": "4836e8c30810336193c3287b00be160cac1dc97c6f754a03ab0ab28cd405d372",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "ziglang",
+    "cc",
+    "-target",
+    "x86_64-linux-gnu.2.28",
+    "-mcpu=znver1",
+    "-O3",
+    "-fPIC",
+    "-shared",
+    "experiments/exact_int8_joined_flags.c",
+    "-I",
+    "native/include",
+    "-o",
+    "native/libexact_joined_flags.so"
+  ]
+}

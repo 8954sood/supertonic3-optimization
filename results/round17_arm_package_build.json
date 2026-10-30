@@ -1,0 +1,12 @@
+{
+  "conversion": {
+    "nodes": 36,
+    "source_graph_sha256": "176fad95c50582afe6124dcc07641ee54c5c72d3047167266473fe2da6eb6b04",
+    "initializer_bitidentity": true,
+    "width": 512,
+    "preserved_inferred_shapes": false
+  },
+  "initializers_identical_to_baseline": true,
+  "requires": "ARMv8.2 dotprod",
+  "status": "Unselected; full waveform/timing required"
+}

@@ -1,0 +1,244 @@
+{
+  "note": "Microprobe only. FP32 integers are exact only if every partial sum is bounded by 2**24; conservative bound is 255*sum(abs(weight)). Input conversion, weight decoding and output cast included in decoded timing.",
+  "rows": [
+    {
+      "shape": [
+        60,
+        512,
+        512
+      ],
+      "safe": true,
+      "bound": 2794035,
+      "s32_bitidentity": true,
+      "seconds": {
+        "native": 0.000710776075720787,
+        "cached": 0.001654643565416336,
+        "decoded": 0.0018453039228916168
+      },
+      "cached_speedup": 0.42956446365652406,
+      "decoded_speedup": 0.3851810354399459
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1024
+      ],
+      "safe": true,
+      "bound": 2443155,
+      "s32_bitidentity": true,
+      "seconds": {
+        "native": 0.001416333019733429,
+        "cached": 0.0034058913588523865,
+        "decoded": 0.0036703813821077347
+      },
+      "cached_speedup": 0.41584797355681413,
+      "decoded_speedup": 0.3858817033667746
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "safe": true,
+      "bound": 2520165,
+      "s32_bitidentity": true,
+      "seconds": {
+        "native": 0.002147585153579712,
+        "cached": 0.005252895876765251,
+        "decoded": 0.005518831312656403
+      },
+      "cached_speedup": 0.4088383253661981,
+      "decoded_speedup": 0.38913766917547
+    },
+    {
+      "shape": [
+        60,
+        512,
+        2048
+      ],
+      "safe": true,
+      "bound": 2560200,
+      "s32_bitidentity": true,
+      "seconds": {
+        "native": 0.002760147675871849,
+        "cached": 0.0070236604660749435,
+        "decoded": 0.007390568032860756
+      },
+      "cached_speedup": 0.39297851728506344,
+      "decoded_speedup": 0.37346894901709543
+    },
+    {
+      "shape": [
+        60,
+        1024,
+        512
+      ],
+      "safe": true,
+      "bound": 4615755,
+      "s32_bitidentity": true,
+      "seconds": {
+        "native": 0.0013237185776233673,
+        "cached": 0.00291653536260128,
+        "decoded": 0.0031653158366680145
+      },
+      "cached_speedup": 0.4538668018901484,
+      "decoded_speedup": 0.4181947855847416
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "safe": true,
+      "bound": 5620200,
+      "s32_bitidentity": true,
+      "seconds": {
+        "native": 0.002066943794488907,
+        "cached": 0.004948602989315987,
+        "decoded": 0.005081092938780785
+      },
+      "cached_speedup": 0.4176822830506771,
+      "decoded_speedup": 0.4067911804393944
+    },
+    {
+      "shape": [
+        60,
+        2048,
+        512
+      ],
+      "safe": true,
+      "bound": 6557835,
+      "s32_bitidentity": true,
+      "seconds": {
+        "native": 0.0027498342096805573,
+        "cached": 0.00634431280195713,
+        "decoded": 0.007073206827044487
+      },
+      "cached_speedup": 0.43343294940190724,
+      "decoded_speedup": 0.3887676801937326
+    },
+    {
+      "shape": [
+        200,
+        512,
+        512
+      ],
+      "safe": true,
+      "bound": 2794035,
+      "s32_bitidentity": true,
+      "seconds": {
+        "native": 0.0023723840713500977,
+        "cached": 0.004302419722080231,
+        "decoded": 0.005177091807126999
+      },
+      "cached_speedup": 0.5514069348406213,
+      "decoded_speedup": 0.458246474996672
+    },
+    {
+      "shape": [
+        200,
+        512,
+        1024
+      ],
+      "safe": true,
+      "bound": 2443155,
+      "s32_bitidentity": true,
+      "seconds": {
+        "native": 0.0046971458941698074,
+        "cached": 0.00815449096262455,
+        "decoded": 0.008179150521755219
+      },
+      "cached_speedup": 0.5760195106842102,
+      "decoded_speedup": 0.5742828526845372
+    },
+    {
+      "shape": [
+        200,
+        512,
+        1536
+      ],
+      "safe": true,
+      "bound": 2520165,
+      "s32_bitidentity": true,
+      "seconds": {
+        "native": 0.007604999467730522,
+        "cached": 0.013361742720007896,
+        "decoded": 0.013578195124864578
+      },
+      "cached_speedup": 0.5691622438099173,
+      "decoded_speedup": 0.5600891280317619
+    },
+    {
+      "shape": [
+        200,
+        512,
+        2048
+      ],
+      "safe": true,
+      "bound": 2560200,
+      "s32_bitidentity": true,
+      "seconds": {
+        "native": 0.009441481903195381,
+        "cached": 0.01693255640566349,
+        "decoded": 0.028553206473588943
+      },
+      "cached_speedup": 0.5575934121818402,
+      "decoded_speedup": 0.3306627545291116
+    },
+    {
+      "shape": [
+        200,
+        1024,
+        512
+      ],
+      "safe": true,
+      "bound": 4615755,
+      "s32_bitidentity": true,
+      "seconds": {
+        "native": 0.004503287374973297,
+        "cached": 0.008031409233808517,
+        "decoded": 0.008106399327516556
+      },
+      "cached_speedup": 0.560709489938147,
+      "decoded_speedup": 0.5555225190655524
+    },
+    {
+      "shape": [
+        200,
+        1536,
+        512
+      ],
+      "safe": true,
+      "bound": 5620200,
+      "s32_bitidentity": true,
+      "seconds": {
+        "native": 0.007258225232362747,
+        "cached": 0.012634968385100365,
+        "decoded": 0.014331510290503502
+      },
+      "cached_speedup": 0.5744553536771744,
+      "decoded_speedup": 0.506452222078246
+    },
+    {
+      "shape": [
+        200,
+        2048,
+        512
+      ],
+      "safe": true,
+      "bound": 6557835,
+      "s32_bitidentity": true,
+      "seconds": {
+        "native": 0.008969245478510857,
+        "cached": 0.01805567368865013,
+        "decoded": 0.01737855188548565
+      },
+      "cached_speedup": 0.49675496097101934,
+      "decoded_speedup": 0.5161100612762712
+    }
+  ],
+  "complete": true
+}

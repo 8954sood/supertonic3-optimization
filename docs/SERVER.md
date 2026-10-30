@@ -16,7 +16,20 @@ python serve.py --model .hf-assets/model/models/round8-latent-retime-g135
 
 정배속만 필요하면 기본 F1200 패키지를 다운로드하고 `python serve.py`로 실행해도 됩니다. 이미 준비한 패키지는 `--model models/round8-latent-retime-g135`처럼 지정합니다. 자동 다운로드나 모델 변환은 서버 시작 시 수행하지 않습니다. Linux AVX2용 exact 패키지도 같은 인자로 지정할 수 있으며, Mac·ARM은 이식 가능한 표준 ORT 패키지를 사용합니다.
 
-### 표준 ORT 조건 캐시 선택
+### Linux x86 AVX2 v5
+
+v5는 기존 F1200 가중치와 실제 8회를 유지합니다. [EPYC 준비 안내](REPRODUCING.md#epyc용-엔진-실험)에서 exact 패키지를 만든 다음 배치 1을 준비하세요. 변환과 커널 빌드는 RAM이 넉넉한 개발 기기에서 수행할 수 있습니다. 빌드의 기본 target은 Linux x86_64이며 생성된 `native/libexact_int8.so`를 서버의 같은 경로에 둡니다.
+
+```bash
+python native/build_exact.py --engine-version 5 --cpu znver1
+python prepare_native_batch.py --source models/F1200-retime-exact \
+  --output models/F1200-retime-v5
+python serve.py --model models/F1200-retime-v5
+```
+
+기존 API·스트리밍·소수점 두 자리 배속을 그대로 사용합니다. `F1200-retime-exact`는 공개 retime 모델을 조건 캐시 포함 exact 변환한 패키지입니다. 빌드 후 서버를 새 프로세스로 시작하세요. v4 대조에는 원래 exact 패키지와 `native/build_exact.py --engine-version 4`를 사용합니다. 이 v5 커널은 Linux x86_64 AVX2용이며, ARM64는 아래의 표준 ORT·행 병렬 정규화 경로를 사용합니다. [v5 실측 범위와 한계](../records/2026-10-30/ROUND17_ENGINE.md)
+
+## 표준 ORT 조건 캐시 선택
 
 같은 문장 안에서 변하지 않는 조건을 한 번 계산해 8스텝이 재사용하는 패키지를 준비할 수 있습니다. 서버 코드를 바꾸거나 가중치를 재학습하지 않습니다. 위에서 다운로드한 패키지에 한 번만 적용하세요.
 
@@ -29,7 +42,7 @@ python serve.py --model models/F1200-portable-cached
 
 기본 F1200에도 같은 도구를 사용할 수 있습니다. `--source`를 다운로드한 `round5-original50-student`로 바꾸세요. 결과 패키지는 원본과 별도 폴더로 만들고, 2배속 보정 등 원본 설정을 유지합니다. 기본은 파일을 복사합니다. 디스크를 아끼려면 준비 명령에 `--link-assets`를 붙여 변경하지 않은 파일을 하드 링크로 공유할 수 있습니다. 이때 두 패키지의 파일을 직접 덮어쓰지 마세요. 서로 다른 파일시스템에서는 복사로 전환합니다.
 
-준비 과정은 ONNX 그래프·가중치 전체를 읽으므로 RAM이 넉넉한 개발 환경에서 수행하세요. Linux v4 등 `condition.onnx`가 이미 있는 패키지는 중복 변환을 거부합니다. 공개된 같은 가중치로 재현하는 엔진 변경이므로 추가 Hugging Face 모델 다운로드는 필요하지 않습니다.
+준비 과정은 ONNX 그래프·가중치 전체를 읽으므로 RAM이 넉넉한 개발 환경에서 수행하세요. Linux v4/v5 등 `condition.onnx`가 이미 있는 패키지는 중복 변환을 거부합니다. 공개된 같은 가중치로 재현하는 엔진 변경이므로 추가 Hugging Face 모델 다운로드는 필요하지 않습니다.
 
 M4 Max·추론 한 스레드에서 원래 retime 패키지와 교대로 비교한 실제 TCP 스트리밍 8조합의 전체 응답 시간 감소율 중앙값은 **3.5%**였습니다. 남성 한국어 1.0×는 차이가 없었고, 다른 7조합은 약 1.1~6.0% 줄었습니다. 같은 입력의 PCM은 전부 일치했습니다. ARM에서의 개선율은 아직 측정하지 않았습니다. [12차 기록](../records/2026-10-30/ROUND12_ENGINE.md) · [원시 HTTP 비교](../results/round12_paired_http.json)
 
@@ -55,7 +68,7 @@ python serve.py --model models/F1200-arm64-allparts
 
 이미 `--all-parts`로 만든 패키지는 중복 변환할 수 없습니다. 기존 벡터 추정기만 바꾸려면 이 옵션을 생략하면 됩니다.
 
-시작 시 설치된 ORT와 네이티브 정규화의 결과를 폭 64·256·512에 대해 샘플 단위로 비교합니다. 호환되지 않거나 컴파일하지 않은 경우 명확한 오류로 중단하므로, 그 기기에서는 앞의 표준 ORT 패키지를 선택하세요. 기본 표준 패키지는 이 라이브러리를 요구하지 않습니다. Linux ARM64용 빌드 경로도 제공하지만 실기기 검증은 아직 없으며, Linux x86 AVX2 v4에는 이 커널을 적용하지 않습니다.
+시작 시 설치된 ORT와 네이티브 정규화의 결과를 폭 64·256·512에 대해 샘플 단위로 비교합니다. 호환되지 않거나 컴파일하지 않은 경우 명확한 오류로 중단하므로, 그 기기에서는 앞의 표준 ORT 패키지를 선택하세요. 기본 표준 패키지는 이 라이브러리를 요구하지 않습니다. Linux ARM64용 빌드 경로도 제공하지만 실기기 검증은 아직 없으며, Linux x86 AVX2 v4/v5에는 이 커널을 적용하지 않습니다.
 
 M4 Max·CPU 한 스레드·8스텝에서 직전 조건 캐시 패키지와 비교했을 때 실제 HTTP 전체 응답 시간 감소율 중앙값은 **9.04%**였고 8조합 모두 개선됐습니다. 생성 시간의 별도 12조합 비교는 **8.24%** 감소했습니다. 파형·PCM 일치, 취소, 1.25/1.30 등 배속 검사 결과는 [13차 기록](../records/2026-10-30/ROUND13_ENGINE.md)에 있습니다. 가중치는 그대로라 HF 모델을 새로 다운로드할 필요가 없습니다.
 

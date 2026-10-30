@@ -115,7 +115,28 @@ python memory_guard.py --max-rss-mb 480 --reserve-mb 80 --seconds 600 \
 
 커널은 상수 가중치를 한 번 packing하고 U8×S8 정수 결과를 정확히 계산합니다. 문장 조건을1회 계산하며 길이가 다른 문장의 memory pattern 누적을 끕니다. CPU arena와 ORT prepacking은 유지합니다. 기본 모델을 먼저 같은 조건으로 측정하고 WAV/JSON을 비교하세요. 감시기는50ms 표본이며 하드 메모리 제한이 아닙니다. [6차 기록](../records/2026-10-29/ROUND6_ENGINE.md)에 실패한 메모리 설정과 재측정도 남깁니다.
 
-현재 `native/build_exact.py`는 엔진v4를 빌드합니다.4행×16열 tile에서도 기존 K8 안전 경계와 S32 fallback을 유지하며 학습 가중치·quantization·8회 계산은 바꾸지 않습니다. 그래프 변환이나 모델 다운로드를 다시 하지 않고 기존 exact 패키지의 라이브러리만 재빌드할 수도 있습니다. 내부2배속 조합도 위에서 준비한 `models/F1200-retime`을 exact 변환의 source로 지정하면 됩니다. 별도 epilogue fusion은 일관된 이득이 없어 미채택이며 기본 그래프에 넣지 않습니다.
+현재 `native/build_exact.py`는 엔진 **v5**를 빌드합니다. 4행×16열 safe-K8 기본 곱에서 드문 unsafe K4 항을 사설 packed 표현으로 분리하고 S32로 정확히 더합니다. 원래 zero-point 열 합계를 유지하며 잔여 1~3행은 M2/M1 safe-K8 경로로 처리합니다. 가중치·quantization·8회 계산은 바꾸지 않습니다. 실패한 빌드는 기존 라이브러리를 덮어쓰지 않습니다. 기존 exact 패키지의 라이브러리만 재빌드할 수도 있지만, 측정한 v5 조합에는 다음 배치 1 준비도 포함됩니다.
+
+```bash
+python prepare_native_batch.py --source models/F1200-exact-cached \
+  --output models/F1200-v5
+python synthesize.py '하나의 스레드로 음성을 만듭니다.' \
+  --model models/F1200-v5 --lang ko --steps 8 --speed 1.0 --output samples/v5.wav
+```
+
+현재 API가 한 번에 한 문장을 처리하므로 배치 크기를 1로 명시합니다. 기존 initializer는 전부 보존하고 정수 shape 상수 하나만 추가합니다. 고정 key 계산은 **현재 CPU의 ORT가 로딩 때 처리**하며 다른 기기에서 계산한 FP 상수를 배포하지 않습니다. 2배속 측정 조합을 재현하려면 위 exact 변환의 source에 공개 `round8-latent-retime-g135`를 사용한 뒤 동일하게 준비하세요. 공개 모델부터 재현한 다섯 그래프의 SHA가 실제 측정 패키지와 모두 같았습니다.
+
+기존 v4와 비교하거나 되돌릴 때는 보존한 `models/F1200-exact-cached`와 다음 빌드를 사용합니다.
+
+```bash
+python native/build_exact.py --engine-version 4 --cpu znver1
+```
+
+빌드 후 새 프로세스로 실행하세요. 준비 도구는 기본적으로 assets를 복사하며 `--link-assets`를 주면 바뀌지 않은 파일을 공유하므로 두 패키지를 읽기 전용으로 유지해야 합니다.
+
+`native/exact_int8_v4.c`는 main `7db1daa`의 원본 소스와 같은 SHA이며 v4/v5 모두 준비 도구의 경계 S32 검사를 통과해야 합니다. 내부2배속 조합도 위에서 준비한 `models/F1200-retime`을 exact 변환의 source로 지정하면 됩니다. 별도 epilogue fusion은 일관된 이득이 없어 미채택이며 기본 그래프에 넣지 않습니다.
+
+17차의 v4→v5 M1·10쌍 교대 비교에서 2배속 KO/EN 시간 감소율 중앙값은 0.89%/1.99%, v5 RTF는 1.349/1.353이었습니다. 정배속 KO는 사실상 같았고 공유 서버 편차가 큽니다. 전체 파형·실패 후보·확대 검증은 [17차 기록](../records/2026-10-30/ROUND17_ENGINE.md)에 남깁니다. 이 커널은 ARM용이 아닙니다.
 
 9차 실제 서버에서2배속 짧은KO/EN의 쌍별 가속비 중앙값은1.042/1.047배이고 RTF는1.351/1.354였습니다. 전체 파형 보존 검사와 정상·장문 조건은 [9차 기록](../records/2026-10-29/ROUND9_ENGINE.md)에 있습니다. ARM 가속 커널로 해석하지 마세요.
 

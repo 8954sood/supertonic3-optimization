@@ -1,0 +1,265 @@
+{
+  "note": "Single ORT integer operator only, not TTS RTF. Same call/allocator settings. Fixed actual FFN weights.",
+  "machine": "arm64",
+  "system": "Darwin",
+  "threads": 1,
+  "library_sha256": {
+    "libexact_arm_dot4.dylib": "1bb07d2b156b5c1404de6af4328d17272a8bcfcf7005d3430b4c37584fad5213",
+    "libexact_arm_dot6.dylib": "3581a3153550da7ea66c5a3fb155199789f57a91744c11768fa3acb6d078cc47"
+  },
+  "rows": [
+    {
+      "shape": [
+        60,
+        512,
+        512
+      ],
+      "s32_bitidentical": true,
+      "seconds": {
+        "ort": 7.443747017532587e-05,
+        "libexact_arm_dot4": 8.185399929061532e-05,
+        "libexact_arm_dot6": 8.595851249992847e-05
+      },
+      "speedup": {
+        "libexact_arm_dot4": 0.9093931978942443,
+        "libexact_arm_dot6": 0.8659697336594535
+      },
+      "weight_sha256": "49f34366d28144a17bb2ddcc4d8f10ab49d90e2dbdbc57365bf269fc0bb95c19"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1024
+      ],
+      "s32_bitidentical": true,
+      "seconds": {
+        "ort": 0.00015222898218780756,
+        "libexact_arm_dot4": 0.00017074999050237238,
+        "libexact_arm_dot6": 0.0001725630136206746
+      },
+      "speedup": {
+        "libexact_arm_dot4": 0.8915314240424073,
+        "libexact_arm_dot6": 0.8821646017520011
+      },
+      "weight_sha256": "5653ec37225a259631b696ff100112a93a323a6cb73ad532bca13bcab7d3b804"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentical": true,
+      "seconds": {
+        "ort": 0.00022704200819134712,
+        "libexact_arm_dot4": 0.0002589579962659627,
+        "libexact_arm_dot6": 0.00025497900787740946
+      },
+      "speedup": {
+        "libexact_arm_dot4": 0.8767522589191017,
+        "libexact_arm_dot6": 0.8904341187981479
+      },
+      "weight_sha256": "499736b548952e9c9aea8d28070976c6acb6e53c7bc4c09c4f386a45c399dfba"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        2048
+      ],
+      "s32_bitidentical": true,
+      "seconds": {
+        "ort": 0.0002893750206567347,
+        "libexact_arm_dot4": 0.00033299950882792473,
+        "libexact_arm_dot6": 0.0003335209912620485
+      },
+      "speedup": {
+        "libexact_arm_dot4": 0.8689953377867212,
+        "libexact_arm_dot6": 0.8676366053055169
+      },
+      "weight_sha256": "81808a0b743eca67c4d8dfdd732f7e7310c1cb7a1004429b3f14f6198178b403"
+    },
+    {
+      "shape": [
+        60,
+        1024,
+        512
+      ],
+      "s32_bitidentical": true,
+      "seconds": {
+        "ort": 0.00014552052016369998,
+        "libexact_arm_dot4": 0.00016345852054655552,
+        "libexact_arm_dot6": 0.00016506251995451748
+      },
+      "speedup": {
+        "libexact_arm_dot4": 0.8902596186306084,
+        "libexact_arm_dot6": 0.8816084972154657
+      },
+      "weight_sha256": "67e852b154a6993c29393b5a47194ec79d8b14a2b03d9d4fb3e2e9fde2d7e707"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentical": true,
+      "seconds": {
+        "ort": 0.0002119374694302678,
+        "libexact_arm_dot4": 0.00024052048684097826,
+        "libexact_arm_dot6": 0.0002501459966879338
+      },
+      "speedup": {
+        "libexact_arm_dot4": 0.8811618179136304,
+        "libexact_arm_dot6": 0.8472550919720194
+      },
+      "weight_sha256": "d5579ce7ed3948e74556c80e237f259050e837783b17bfcaf6f2973ea6862e90"
+    },
+    {
+      "shape": [
+        60,
+        2048,
+        512
+      ],
+      "s32_bitidentical": true,
+      "seconds": {
+        "ort": 0.0002932914940174669,
+        "libexact_arm_dot4": 0.0003193540032953024,
+        "libexact_arm_dot6": 0.00033154149423353374
+      },
+      "speedup": {
+        "libexact_arm_dot4": 0.9183899089759152,
+        "libexact_arm_dot6": 0.8846298249801456
+      },
+      "weight_sha256": "c69e939f4bd92d8789e107eba94e13890e56237d2f40c694b35f8c79d0f7f6eb"
+    },
+    {
+      "shape": [
+        200,
+        512,
+        512
+      ],
+      "s32_bitidentical": true,
+      "seconds": {
+        "ort": 0.0002441659744363278,
+        "libexact_arm_dot4": 0.0002752915024757385,
+        "libexact_arm_dot6": 0.0002900620165746659
+      },
+      "speedup": {
+        "libexact_arm_dot4": 0.8869361104157082,
+        "libexact_arm_dot6": 0.8417716229090484
+      },
+      "weight_sha256": "49f34366d28144a17bb2ddcc4d8f10ab49d90e2dbdbc57365bf269fc0bb95c19"
+    },
+    {
+      "shape": [
+        200,
+        512,
+        1024
+      ],
+      "s32_bitidentical": true,
+      "seconds": {
+        "ort": 0.00047816699952818453,
+        "libexact_arm_dot4": 0.0005406455020420253,
+        "libexact_arm_dot6": 0.0005671455000992864
+      },
+      "speedup": {
+        "libexact_arm_dot4": 0.8844372101906727,
+        "libexact_arm_dot6": 0.8431116872909596
+      },
+      "weight_sha256": "5653ec37225a259631b696ff100112a93a323a6cb73ad532bca13bcab7d3b804"
+    },
+    {
+      "shape": [
+        200,
+        512,
+        1536
+      ],
+      "s32_bitidentical": true,
+      "seconds": {
+        "ort": 0.0007060215284582227,
+        "libexact_arm_dot4": 0.0008025830029509962,
+        "libexact_arm_dot6": 0.0008415000047534704
+      },
+      "speedup": {
+        "libexact_arm_dot4": 0.8796866191562379,
+        "libexact_arm_dot6": 0.8390035941414664
+      },
+      "weight_sha256": "499736b548952e9c9aea8d28070976c6acb6e53c7bc4c09c4f386a45c399dfba"
+    },
+    {
+      "shape": [
+        200,
+        512,
+        2048
+      ],
+      "s32_bitidentical": true,
+      "seconds": {
+        "ort": 0.0009468540083616972,
+        "libexact_arm_dot4": 0.0010835209977813065,
+        "libexact_arm_dot6": 0.00112227100180462
+      },
+      "speedup": {
+        "libexact_arm_dot4": 0.8738677056564126,
+        "libexact_arm_dot6": 0.8436946217439005
+      },
+      "weight_sha256": "81808a0b743eca67c4d8dfdd732f7e7310c1cb7a1004429b3f14f6198178b403"
+    },
+    {
+      "shape": [
+        200,
+        1024,
+        512
+      ],
+      "s32_bitidentical": true,
+      "seconds": {
+        "ort": 0.00046806249883957207,
+        "libexact_arm_dot4": 0.0005343954835552722,
+        "libexact_arm_dot6": 0.0005698750028386712
+      },
+      "speedup": {
+        "libexact_arm_dot4": 0.8758728567943831,
+        "libexact_arm_dot6": 0.8213423935214759
+      },
+      "weight_sha256": "67e852b154a6993c29393b5a47194ec79d8b14a2b03d9d4fb3e2e9fde2d7e707"
+    },
+    {
+      "shape": [
+        200,
+        1536,
+        512
+      ],
+      "s32_bitidentical": true,
+      "seconds": {
+        "ort": 0.0006813750369474292,
+        "libexact_arm_dot4": 0.0007870414992794394,
+        "libexact_arm_dot6": 0.0008514795044902712
+      },
+      "speedup": {
+        "libexact_arm_dot4": 0.8657421972935975,
+        "libexact_arm_dot6": 0.8002248243841487
+      },
+      "weight_sha256": "d5579ce7ed3948e74556c80e237f259050e837783b17bfcaf6f2973ea6862e90"
+    },
+    {
+      "shape": [
+        200,
+        2048,
+        512
+      ],
+      "s32_bitidentical": true,
+      "seconds": {
+        "ort": 0.000910624978132546,
+        "libexact_arm_dot4": 0.0010337914864066988,
+        "libexact_arm_dot6": 0.0011380005162209272
+      },
+      "speedup": {
+        "libexact_arm_dot4": 0.8808594287207173,
+        "libexact_arm_dot6": 0.8001973330878178
+      },
+      "weight_sha256": "c69e939f4bd92d8789e107eba94e13890e56237d2f40c694b35f8c79d0f7f6eb"
+    }
+  ],
+  "complete": true
+}

@@ -1,0 +1,52 @@
+{
+  "rows": [
+    {
+      "name": "likely",
+      "source": "experiments/exact_int8_likely.c",
+      "source_sha256": "f0550a26bf4cba1ff1f21376af3a53f3a9a1037d140af46d55925a323ac8b8eb",
+      "library": "libexact_likely.so",
+      "library_sha256": "592e74a4938eae70227c83f86ccd451cfa91b49edca8690e14c082c87f37a106",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ziglang",
+        "cc",
+        "-target",
+        "x86_64-linux-gnu.2.28",
+        "-mcpu=znver1",
+        "-O3",
+        "-fPIC",
+        "-shared",
+        "experiments/exact_int8_likely.c",
+        "-I",
+        "native/include",
+        "-o",
+        "native/libexact_likely.so"
+      ]
+    },
+    {
+      "name": "likely_unroll",
+      "source": "experiments/exact_int8_likely_unroll.c",
+      "source_sha256": "f710d3e3e5d780f7c52f5adf8ba4242a1ef1e0e0c7d5fb2c4125136bd78aa4e9",
+      "library": "libexact_likely_unroll.so",
+      "library_sha256": "7e746a72f163ef679546806c7d09232a9bb4d72542e605f212786987cbb2b9a5",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ziglang",
+        "cc",
+        "-target",
+        "x86_64-linux-gnu.2.28",
+        "-mcpu=znver1",
+        "-O3",
+        "-fPIC",
+        "-shared",
+        "experiments/exact_int8_likely_unroll.c",
+        "-I",
+        "native/include",
+        "-o",
+        "native/libexact_likely_unroll.so"
+      ]
+    }
+  ]
+}

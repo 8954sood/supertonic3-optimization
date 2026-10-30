@@ -1,0 +1,3381 @@
+{
+  "note": "Prepared actual-weight microprobe only; not a TTS speed or quality score.",
+  "rows": [
+    {
+      "shape": [
+        56,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.000645083375275135,
+        "candidate": 0.0006392160430550575
+      },
+      "speedup": 1.0091789501903539,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "49f34366d28144a17bb2ddcc4d8f10ab49d90e2dbdbc57365bf269fc0bb95c19"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0006044935435056686,
+        "candidate": 0.0005999309942126274
+      },
+      "speedup": 1.0076051234842922,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "5e636c2cf8f760859bc85829bb4b07ea1c6d70cb8bec535fbab66aab581513b9"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.00060251634567976,
+        "candidate": 0.000609896145761013
+      },
+      "speedup": 0.9878999070045856,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.2/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "3d9a6311f6914dd55d117a28872ecb8f1714e249d18c8548755617a178e6c113"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0006272634491324425,
+        "candidate": 0.000605262815952301
+      },
+      "speedup": 1.0363488927459164,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.2/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "f3bb4d9a31f19f821146a719deed01efa5282c92d7b48152403273b76cd0d2a7"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0013734912499785423,
+        "candidate": 0.0013603456318378448
+      },
+      "speedup": 1.0096634398148783,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "5653ec37225a259631b696ff100112a93a323a6cb73ad532bca13bcab7d3b804"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0012402338907122612,
+        "candidate": 0.00121372751891613
+      },
+      "speedup": 1.0218388158651965,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "674bbe6fbe9740932b83b9d85f9815690f0da10340cbec1c07d2a3210f1682af"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001219283789396286,
+        "candidate": 0.001222706399857998
+      },
+      "speedup": 0.9972007912430086,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "820ccaa24699d97cbefef2074631f38ef1ffd11d89e06108953d09ddb8d08f4e"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0012481696903705597,
+        "candidate": 0.0012800563126802444
+      },
+      "speedup": 0.9750896722325294,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.4/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "930f3139752df25bc2de60dfbb5c9da4bb1df614eb863fb2dec5c7c3dd39776e"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.00192178413271904,
+        "candidate": 0.0018949443474411964
+      },
+      "speedup": 1.0141638910472943,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "8ba640c276fef8758b9c04a7f046f005c7eb9936d0b80bf5dd73434f00b8a5b7"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0019401982426643372,
+        "candidate": 0.0019297385588288307
+      },
+      "speedup": 1.0054202595411963,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "0e57cf775e0cd8106cac96166cb0ce690ad980da1114d3adeaec5fd5b6b4ff4e"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001844152808189392,
+        "candidate": 0.0018402040004730225
+      },
+      "speedup": 1.0021458532398335,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "08d432e2171750a88a9ed970713e72bb62e3ec0451491e27dcf7367f5671a1d7"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018566008657217026,
+        "candidate": 0.00189895648509264
+      },
+      "speedup": 0.9776953186113314,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "ed96d1483921fd75f1bf2d49cb238912bac5c716a549246532511c7ea3d6b677"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001867777667939663,
+        "candidate": 0.0019159195944666862
+      },
+      "speedup": 0.9748726790695911,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.10/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "971474a0bd923673d47e36eea53d71ed212a53e7d5d506ba5059adda75ea2e46"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018371650949120522,
+        "candidate": 0.0018668193370103836
+      },
+      "speedup": 0.9841150980652358,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "1dbe061f480b9692161245a7f47e74d96fd9f03c4fe0e3f1ebb5eaf5253d0cf0"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020672865211963654,
+        "candidate": 0.0019934875890612602
+      },
+      "speedup": 1.037020010829291,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "5484afe7bc9d81aa06932d8738ab20408967c5b888a5918de91b067b095cd846"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0019681742414832115,
+        "candidate": 0.00196927972137928
+      },
+      "speedup": 0.999438637444916,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.14/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "fc0768f0c0dd374f6eb7d50fab39587584c6d28ab6ffddf1c559a5e8976e2747"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018803616985678673,
+        "candidate": 0.0018285270780324936
+      },
+      "speedup": 1.028347745657203,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.16/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "3b6618ec6415cb66e1c1a6293a1cbba62bba90e8119d827ea04095b43079c897"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0019136080518364906,
+        "candidate": 0.001928010955452919
+      },
+      "speedup": 0.99252965675548,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "08742c1c1cc1eb30dfb1568765851088f9a79f5e68c77a664bd8266cd55513be"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0019084997475147247,
+        "candidate": 0.0018913093954324722
+      },
+      "speedup": 1.009089127418162,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "2e29da54b7b25b35a2c5166666f2ba3fd09c382e7f273e06e9d170be3759b6b6"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001890496350824833,
+        "candidate": 0.0018770843744277954
+      },
+      "speedup": 1.0071451110987624,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.20/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "212a0aab73ce9752cbee133afe4d4848b49a1704b5b8258d7cc2ad3285600e27"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018255077302455902,
+        "candidate": 0.0018198266625404358
+      },
+      "speedup": 1.003121763089911,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.22/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e6035c8b94788f5736cb2356ff3b4fcaf3f457585252881088bb4074d800071b"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018614046275615692,
+        "candidate": 0.001859116367995739
+      },
+      "speedup": 1.0012308318108656,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "499736b548952e9c9aea8d28070976c6acb6e53c7bc4c09c4f386a45c399dfba"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018958915024995804,
+        "candidate": 0.0018816078081727028
+      },
+      "speedup": 1.0075912176091302,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "a9024dfffc64dee06b3c3e8cd847bbf6dbdecb52f0e1893286ec1cd8696103ad"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018891161307692528,
+        "candidate": 0.001831614412367344
+      },
+      "speedup": 1.031394008484345,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "74fc89e73af199d5ec76268d823e5b7c17c143e907c3593e134b4ab6cfb41370"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001965477131307125,
+        "candidate": 0.0019157640635967255
+      },
+      "speedup": 1.025949472930955,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "b261b033eb1dc4ff61297e14ffb0935458a089e905e2169aca2ab4657ad27ef8"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001906050369143486,
+        "candidate": 0.0019613243639469147
+      },
+      "speedup": 0.9718180246880751,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.8/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "2cccc0eb935be60bce44f6813f0a2a5d05df046d898a561ad7ce90fe163b0e07"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002492319792509079,
+        "candidate": 0.002523200586438179
+      },
+      "speedup": 0.9877612607990504,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "81808a0b743eca67c4d8dfdd732f7e7310c1cb7a1004429b3f14f6198178b403"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002717452123761177,
+        "candidate": 0.002679293043911457
+      },
+      "speedup": 1.014242219579689,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "77e7c024c18fa5b0a955555f1b053cc56881a4aaabf1b883a5d186a4ce919823"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0026099123060703278,
+        "candidate": 0.002702169120311737
+      },
+      "speedup": 0.9658582382768233,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "2ec85a3466ad91984741f0566f5a809f4c5e4dd10f1ea025a3441882e8353276"
+    },
+    {
+      "shape": [
+        56,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025427956134080887,
+        "candidate": 0.00257942546159029
+      },
+      "speedup": 0.9857992220641189,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "132d79f600bffe91e8681efb57646d646b1f43962378266d7d6242328558a327"
+    },
+    {
+      "shape": [
+        56,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0012290235608816147,
+        "candidate": 0.0012093903496861458
+      },
+      "speedup": 1.0162339737542672,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "67e852b154a6993c29393b5a47194ec79d8b14a2b03d9d4fb3e2e9fde2d7e707"
+    },
+    {
+      "shape": [
+        56,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0012105926871299744,
+        "candidate": 0.0011963704600930214
+      },
+      "speedup": 1.0118878119373218,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "18b16225a56e72d889e784f6cbd8d974c891f9fd34cf2213fe8f6270b260dd4b"
+    },
+    {
+      "shape": [
+        56,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001225586049258709,
+        "candidate": 0.0012118257582187653
+      },
+      "speedup": 1.011355007885102,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "4cbb56721148965df3be6f43641be450197c1b2dfb9eef939c973b1bff37dd5e"
+    },
+    {
+      "shape": [
+        56,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001316593959927559,
+        "candidate": 0.0012931451201438904
+      },
+      "speedup": 1.018133185068246,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.4/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "49e980a6534eea5a7a6861822a5754df55e89e65053f0dd33a318cf04bdd1377"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018992219120264053,
+        "candidate": 0.0018613394349813461
+      },
+      "speedup": 1.0203522669391243,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "738e741fe137c96641020a38a652cbcd371282910ac47f23bd04ea144d7164b5"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018630186095833778,
+        "candidate": 0.0019216407090425491
+      },
+      "speedup": 0.969493725240459,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "cf6417540043a3e9f13b9f94fe387d6959116e401033be4ac7eb341babd39c3f"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001853414811193943,
+        "candidate": 0.0018800105899572372
+      },
+      "speedup": 0.9858533888556983,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e1c5616ccb68075103a6c0e825c6916028ca1188f45100a564dd21c577d80cbc"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018528532236814499,
+        "candidate": 0.0018605338409543037
+      },
+      "speedup": 0.9958718207087734,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "a1923af2c09f1b480dfb9c5b28c202b3398f917886d206e232cef4ea79535b1a"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0019574249163269997,
+        "candidate": 0.0019183438271284103
+      },
+      "speedup": 1.0203723069065727,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.10/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "82fac0fd3b2ed30c76f5a67ef5b9e2b69234ba78104baea4e93bc22090b490f6"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0019907550886273384,
+        "candidate": 0.0019946033135056496
+      },
+      "speedup": 0.9980706815975615,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "aa40b2cf1e9349d34f4786d9c1c4c0493d63ca066dc46196a5aa6bfeb2841b73"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018696235492825508,
+        "candidate": 0.0018511703237891197
+      },
+      "speedup": 1.0099684103922213,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e7ac40dec1490a494a26c303d13449ecacd0fae7083fd6924da67a46e7faeebf"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018829330801963806,
+        "candidate": 0.0018870430067181587
+      },
+      "speedup": 0.9978220281640926,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.14/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "b8c3930f0a47ac7ede5e3e2e236de818ccf801d538900dea829dd0cf115d10ad"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001781354658305645,
+        "candidate": 0.0017970139160752296
+      },
+      "speedup": 0.9912859563136911,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.16/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "edb646f85322b2e7e72ee0dcfd2f7394bf8cb6eba63d1959c7c7ac65aa83273e"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001870548352599144,
+        "candidate": 0.0018555987626314163
+      },
+      "speedup": 1.0080564776549688,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "a45570f944743324503e590847ba80e0d505edc2746777837a684fd279cc89b9"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018811961635947227,
+        "candidate": 0.0018786285072565079
+      },
+      "speedup": 1.0013667717317696,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "25f9e6f5a9faf207546be46089c8a4685ac8a59eb2e6e932642dce529227ce00"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018546581268310547,
+        "candidate": 0.0018568914383649826
+      },
+      "speedup": 0.9987972848127867,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.20/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "218143031d0cdf801f9f441495a2019cf87fe19c09687059ee5a8fb262bc9d8d"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0019137142226099968,
+        "candidate": 0.0018837787210941315
+      },
+      "speedup": 1.0158911984622474,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.22/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "70e4f1b28f980237fe578407628e8d1ed0c3e3538dea07767a320424af7c81d4"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018506431952118874,
+        "candidate": 0.0018355725333094597
+      },
+      "speedup": 1.008210333086242,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "d5579ce7ed3948e74556c80e237f259050e837783b17bfcaf6f2973ea6862e90"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0019297944381833076,
+        "candidate": 0.0019267285242676735
+      },
+      "speedup": 1.0015912537116767,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "325865945784e6a70bd5699543447afad9fb420b9240692d9af8f057ddb0d3f4"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001782805658876896,
+        "candidate": 0.0017813798040151596
+      },
+      "speedup": 1.000800421593712,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "23731bad57a6a9c7291ffe692a3910ff62e11254e64169158cc953bf3bbc5241"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001824961043894291,
+        "candidate": 0.0018081683665513992
+      },
+      "speedup": 1.0092871204106504,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "18ce71a352bbd89ad140f6f985bfc7a6554361b1cc117cd3efb4f2bc850c8551"
+    },
+    {
+      "shape": [
+        56,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018491633236408234,
+        "candidate": 0.001827932894229889
+      },
+      "speedup": 1.0116144468311452,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.8/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "c91ad500f4f594e17830ee740a4120562d423f712e3d0f6346cf68770ebf2d41"
+    },
+    {
+      "shape": [
+        56,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0024447105824947357,
+        "candidate": 0.00244156364351511
+      },
+      "speedup": 1.0012889031125543,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "c69e939f4bd92d8789e107eba94e13890e56237d2f40c694b35f8c79d0f7f6eb"
+    },
+    {
+      "shape": [
+        56,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0024481024593114853,
+        "candidate": 0.002499752677977085
+      },
+      "speedup": 0.9793378684536914,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "1ba36bcc87eaf834082ce1a81fe804b6d46f67024028b9ca44f715028e9d7853"
+    },
+    {
+      "shape": [
+        56,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002415461465716362,
+        "candidate": 0.00245684664696455
+      },
+      "speedup": 0.9831551630219494,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e4eae5a845cf26e2e77445823d973a5f799c7e9fe3007820f7c4cf8f07f6801a"
+    },
+    {
+      "shape": [
+        56,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0024530263617634773,
+        "candidate": 0.002435430884361267
+      },
+      "speedup": 1.0072247902887317,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "818f6ed3679c1fcc9b57f28e7c79666fbf6cd1e0c934c00b7a32271a8f3e55b3"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0006520254537463188,
+        "candidate": 0.0006457129493355751
+      },
+      "speedup": 1.009776022638603,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "49f34366d28144a17bb2ddcc4d8f10ab49d90e2dbdbc57365bf269fc0bb95c19"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0006761718541383743,
+        "candidate": 0.0006781304255127907
+      },
+      "speedup": 0.9971118072560521,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "5e636c2cf8f760859bc85829bb4b07ea1c6d70cb8bec535fbab66aab581513b9"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0006695641204714775,
+        "candidate": 0.0006528608500957489
+      },
+      "speedup": 1.0255847327547347,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.2/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "3d9a6311f6914dd55d117a28872ecb8f1714e249d18c8548755617a178e6c113"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0006771925836801529,
+        "candidate": 0.0006788158789277077
+      },
+      "speedup": 0.9976086368955909,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.2/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "f3bb4d9a31f19f821146a719deed01efa5282c92d7b48152403273b76cd0d2a7"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0014199083670973778,
+        "candidate": 0.0014081019908189774
+      },
+      "speedup": 1.0083846030723482,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "5653ec37225a259631b696ff100112a93a323a6cb73ad532bca13bcab7d3b804"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0013293428346514702,
+        "candidate": 0.0013113338500261307
+      },
+      "speedup": 1.013733333143944,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "674bbe6fbe9740932b83b9d85f9815690f0da10340cbec1c07d2a3210f1682af"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001365887001156807,
+        "candidate": 0.0013598715886473656
+      },
+      "speedup": 1.0044235151022052,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "820ccaa24699d97cbefef2074631f38ef1ffd11d89e06108953d09ddb8d08f4e"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0013521956279873848,
+        "candidate": 0.0013598799705505371
+      },
+      "speedup": 0.9943492493973263,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.4/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "930f3139752df25bc2de60dfbb5c9da4bb1df614eb863fb2dec5c7c3dd39776e"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020321430638432503,
+        "candidate": 0.0020355498418211937
+      },
+      "speedup": 0.998326359832636,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "8ba640c276fef8758b9c04a7f046f005c7eb9936d0b80bf5dd73434f00b8a5b7"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020259320735931396,
+        "candidate": 0.002016894519329071
+      },
+      "speedup": 1.0044809255900378,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "0e57cf775e0cd8106cac96166cb0ce690ad980da1114d3adeaec5fd5b6b4ff4e"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002122499980032444,
+        "candidate": 0.0021278290078043938
+      },
+      "speedup": 0.9974955563852151,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "08d432e2171750a88a9ed970713e72bb62e3ec0451491e27dcf7367f5671a1d7"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002099882811307907,
+        "candidate": 0.00206780806183815
+      },
+      "speedup": 1.0155114732656785,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "ed96d1483921fd75f1bf2d49cb238912bac5c716a549246532511c7ea3d6b677"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0019862521439790726,
+        "candidate": 0.0020111333578824997
+      },
+      "speedup": 0.9876282625386791,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.10/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "971474a0bd923673d47e36eea53d71ed212a53e7d5d506ba5059adda75ea2e46"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020325100049376488,
+        "candidate": 0.0020970068871974945
+      },
+      "speedup": 0.9692433617392447,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "1dbe061f480b9692161245a7f47e74d96fd9f03c4fe0e3f1ebb5eaf5253d0cf0"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020358404144644737,
+        "candidate": 0.00202863197773695
+      },
+      "speedup": 1.0035533486638446,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "5484afe7bc9d81aa06932d8738ab20408967c5b888a5918de91b067b095cd846"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002006690949201584,
+        "candidate": 0.0020071864128112793
+      },
+      "speedup": 0.9997531551596139,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.14/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "fc0768f0c0dd374f6eb7d50fab39587584c6d28ab6ffddf1c559a5e8976e2747"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002018042840063572,
+        "candidate": 0.0020288024097681046
+      },
+      "speedup": 0.9946965906326174,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.16/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "3b6618ec6415cb66e1c1a6293a1cbba62bba90e8119d827ea04095b43079c897"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002084027975797653,
+        "candidate": 0.0020996928215026855
+      },
+      "speedup": 0.9925394583700002,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "08742c1c1cc1eb30dfb1568765851088f9a79f5e68c77a664bd8266cd55513be"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002104136161506176,
+        "candidate": 0.0021117106080055237
+      },
+      "speedup": 0.9964131228632215,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "2e29da54b7b25b35a2c5166666f2ba3fd09c382e7f273e06e9d170be3759b6b6"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020244233310222626,
+        "candidate": 0.002014756202697754
+      },
+      "speedup": 1.0047981628306017,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.20/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "212a0aab73ce9752cbee133afe4d4848b49a1704b5b8258d7cc2ad3285600e27"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002146190032362938,
+        "candidate": 0.00204557366669178
+      },
+      "speedup": 1.0491873586903768,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.22/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e6035c8b94788f5736cb2356ff3b4fcaf3f457585252881088bb4074d800071b"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020612385123968124,
+        "candidate": 0.0020503075793385506
+      },
+      "speedup": 1.0053313625567284,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "499736b548952e9c9aea8d28070976c6acb6e53c7bc4c09c4f386a45c399dfba"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020809005945920944,
+        "candidate": 0.0020029013976454735
+      },
+      "speedup": 1.0389431037585342,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "a9024dfffc64dee06b3c3e8cd847bbf6dbdecb52f0e1893286ec1cd8696103ad"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002100869081914425,
+        "candidate": 0.0020856698974967003
+      },
+      "speedup": 1.0072874352916381,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "74fc89e73af199d5ec76268d823e5b7c17c143e907c3593e134b4ab6cfb41370"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0019499324262142181,
+        "candidate": 0.001946011558175087
+      },
+      "speedup": 1.002014822585539,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "b261b033eb1dc4ff61297e14ffb0935458a089e905e2169aca2ab4657ad27ef8"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002023862674832344,
+        "candidate": 0.002041255123913288
+      },
+      "speedup": 0.991479531942288,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.8/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "2cccc0eb935be60bce44f6813f0a2a5d05df046d898a561ad7ce90fe163b0e07"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0027199555188417435,
+        "candidate": 0.0026418669149279594
+      },
+      "speedup": 1.029558114177721,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "81808a0b743eca67c4d8dfdd732f7e7310c1cb7a1004429b3f14f6198178b403"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002790304832160473,
+        "candidate": 0.0027994168922305107
+      },
+      "speedup": 0.9967450149724654,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "77e7c024c18fa5b0a955555f1b053cc56881a4aaabf1b883a5d186a4ce919823"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002797474153339863,
+        "candidate": 0.002805028110742569
+      },
+      "speedup": 0.9973069940462357,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "2ec85a3466ad91984741f0566f5a809f4c5e4dd10f1ea025a3441882e8353276"
+    },
+    {
+      "shape": [
+        60,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0028252433985471725,
+        "candidate": 0.0028598830103874207
+      },
+      "speedup": 0.9878877521512478,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "132d79f600bffe91e8681efb57646d646b1f43962378266d7d6242328558a327"
+    },
+    {
+      "shape": [
+        60,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001363532617688179,
+        "candidate": 0.0013767434284090996
+      },
+      "speedup": 0.990404304499796,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "67e852b154a6993c29393b5a47194ec79d8b14a2b03d9d4fb3e2e9fde2d7e707"
+    },
+    {
+      "shape": [
+        60,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001390167511999607,
+        "candidate": 0.0013688663020730019
+      },
+      "speedup": 1.0155612055716083,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "18b16225a56e72d889e784f6cbd8d974c891f9fd34cf2213fe8f6270b260dd4b"
+    },
+    {
+      "shape": [
+        60,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0013608280569314957,
+        "candidate": 0.0013478975743055344
+      },
+      "speedup": 1.0095930750766604,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "4cbb56721148965df3be6f43641be450197c1b2dfb9eef939c973b1bff37dd5e"
+    },
+    {
+      "shape": [
+        60,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0014337589964270592,
+        "candidate": 0.0014111315831542015
+      },
+      "speedup": 1.0160349421294081,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.4/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "49e980a6534eea5a7a6861822a5754df55e89e65053f0dd33a318cf04bdd1377"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002039126120507717,
+        "candidate": 0.0020443573594093323
+      },
+      "speedup": 0.9974411328442466,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "738e741fe137c96641020a38a652cbcd371282910ac47f23bd04ea144d7164b5"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020204568281769753,
+        "candidate": 0.0019978992640972137
+      },
+      "speedup": 1.011290641367724,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "cf6417540043a3e9f13b9f94fe387d6959116e401033be4ac7eb341babd39c3f"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.00213666632771492,
+        "candidate": 0.0020761508494615555
+      },
+      "speedup": 1.0291479197039364,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e1c5616ccb68075103a6c0e825c6916028ca1188f45100a564dd21c577d80cbc"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020946869626641273,
+        "candidate": 0.0020632361993193626
+      },
+      "speedup": 1.015243413892767,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "a1923af2c09f1b480dfb9c5b28c202b3398f917886d206e232cef4ea79535b1a"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.00200490839779377,
+        "candidate": 0.001935320906341076
+      },
+      "speedup": 1.0359565647354352,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.10/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "82fac0fd3b2ed30c76f5a67ef5b9e2b69234ba78104baea4e93bc22090b490f6"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001982784830033779,
+        "candidate": 0.001993275247514248
+      },
+      "speedup": 0.9947370953943511,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "aa40b2cf1e9349d34f4786d9c1c4c0493d63ca066dc46196a5aa6bfeb2841b73"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0019394177943468094,
+        "candidate": 0.001921393908560276
+      },
+      "speedup": 1.0093806302321624,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e7ac40dec1490a494a26c303d13449ecacd0fae7083fd6924da67a46e7faeebf"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0022984137758612633,
+        "candidate": 0.002324393019080162
+      },
+      "speedup": 0.988823214058189,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.14/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "b8c3930f0a47ac7ede5e3e2e236de818ccf801d538900dea829dd0cf115d10ad"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0019534947350621223,
+        "candidate": 0.0019893674179911613
+      },
+      "speedup": 0.9819677940813655,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.16/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "edb646f85322b2e7e72ee0dcfd2f7394bf8cb6eba63d1959c7c7ac65aa83273e"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002085103653371334,
+        "candidate": 0.0020432360470294952
+      },
+      "speedup": 1.0204908318853845,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "a45570f944743324503e590847ba80e0d505edc2746777837a684fd279cc89b9"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020413920283317566,
+        "candidate": 0.002086155116558075
+      },
+      "speedup": 0.9785427805099304,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "25f9e6f5a9faf207546be46089c8a4685ac8a59eb2e6e932642dce529227ce00"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020430758595466614,
+        "candidate": 0.0020201904699206352
+      },
+      "speedup": 1.0113283326333706,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.20/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "218143031d0cdf801f9f441495a2019cf87fe19c09687059ee5a8fb262bc9d8d"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0019748639315366745,
+        "candidate": 0.001976999454200268
+      },
+      "speedup": 0.9989198162604161,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.22/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "70e4f1b28f980237fe578407628e8d1ed0c3e3538dea07767a320424af7c81d4"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020115599036216736,
+        "candidate": 0.002017526887357235
+      },
+      "speedup": 0.9970424266596132,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "d5579ce7ed3948e74556c80e237f259050e837783b17bfcaf6f2973ea6862e90"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018995171412825584,
+        "candidate": 0.0018976246938109398
+      },
+      "speedup": 1.0009972717354443,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "325865945784e6a70bd5699543447afad9fb420b9240692d9af8f057ddb0d3f4"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002026793546974659,
+        "candidate": 0.0020569898188114166
+      },
+      "speedup": 0.9853201646597328,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "23731bad57a6a9c7291ffe692a3910ff62e11254e64169158cc953bf3bbc5241"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002017817460000515,
+        "candidate": 0.002013453282415867
+      },
+      "speedup": 1.0021675087387236,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "18ce71a352bbd89ad140f6f985bfc7a6554361b1cc117cd3efb4f2bc850c8551"
+    },
+    {
+      "shape": [
+        60,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020686183124780655,
+        "candidate": 0.0019926121458411217
+      },
+      "speedup": 1.0381439844154217,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.8/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "c91ad500f4f594e17830ee740a4120562d423f712e3d0f6346cf68770ebf2d41"
+    },
+    {
+      "shape": [
+        60,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0027107633650302887,
+        "candidate": 0.002753857523202896
+      },
+      "speedup": 0.9843513479511873,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "c69e939f4bd92d8789e107eba94e13890e56237d2f40c694b35f8c79d0f7f6eb"
+    },
+    {
+      "shape": [
+        60,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0026433411985635757,
+        "candidate": 0.002721119672060013
+      },
+      "speedup": 0.9714167391110898,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "1ba36bcc87eaf834082ce1a81fe804b6d46f67024028b9ca44f715028e9d7853"
+    },
+    {
+      "shape": [
+        60,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025911973789334297,
+        "candidate": 0.0026278523728251457
+      },
+      "speedup": 0.9860513496607464,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e4eae5a845cf26e2e77445823d973a5f799c7e9fe3007820f7c4cf8f07f6801a"
+    },
+    {
+      "shape": [
+        60,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0026212437078356743,
+        "candidate": 0.0026443228125572205
+      },
+      "speedup": 0.99127220602116,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "818f6ed3679c1fcc9b57f28e7c79666fbf6cd1e0c934c00b7a32271a8f3e55b3"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.000868750736117363,
+        "candidate": 0.0008581159636378288
+      },
+      "speedup": 1.0123931647122026,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "49f34366d28144a17bb2ddcc4d8f10ab49d90e2dbdbc57365bf269fc0bb95c19"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0008788704872131348,
+        "candidate": 0.0008738702163100243
+      },
+      "speedup": 1.0057219834361955,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "5e636c2cf8f760859bc85829bb4b07ea1c6d70cb8bec535fbab66aab581513b9"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0008570076897740364,
+        "candidate": 0.0008576177060604095
+      },
+      "speedup": 0.9992887083812958,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.2/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "3d9a6311f6914dd55d117a28872ecb8f1714e249d18c8548755617a178e6c113"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0008185086771845818,
+        "candidate": 0.0008159680292010307
+      },
+      "speedup": 1.0031136611884643,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.2/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "f3bb4d9a31f19f821146a719deed01efa5282c92d7b48152403273b76cd0d2a7"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0016999244689941406,
+        "candidate": 0.0017172787338495255
+      },
+      "speedup": 0.9898943226202523,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "5653ec37225a259631b696ff100112a93a323a6cb73ad532bca13bcab7d3b804"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018464075401425362,
+        "candidate": 0.001665603369474411
+      },
+      "speedup": 1.1085517560673397,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "674bbe6fbe9740932b83b9d85f9815690f0da10340cbec1c07d2a3210f1682af"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0017102742567658424,
+        "candidate": 0.0017139362171292305
+      },
+      "speedup": 0.9978634208631627,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "820ccaa24699d97cbefef2074631f38ef1ffd11d89e06108953d09ddb8d08f4e"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0016636736690998077,
+        "candidate": 0.0016447445377707481
+      },
+      "speedup": 1.011508857998529,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.4/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "930f3139752df25bc2de60dfbb5c9da4bb1df614eb863fb2dec5c7c3dd39776e"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0026563555002212524,
+        "candidate": 0.0026736902073025703
+      },
+      "speedup": 0.9935165611057062,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "8ba640c276fef8758b9c04a7f046f005c7eb9936d0b80bf5dd73434f00b8a5b7"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002607329748570919,
+        "candidate": 0.002628922462463379
+      },
+      "speedup": 0.9917864774633837,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "0e57cf775e0cd8106cac96166cb0ce690ad980da1114d3adeaec5fd5b6b4ff4e"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0027718432247638702,
+        "candidate": 0.002739904448390007
+      },
+      "speedup": 1.0116568942368158,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "08d432e2171750a88a9ed970713e72bb62e3ec0451491e27dcf7367f5671a1d7"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025579947978258133,
+        "candidate": 0.002596392296254635
+      },
+      "speedup": 0.9852112107695702,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "ed96d1483921fd75f1bf2d49cb238912bac5c716a549246532511c7ea3d6b677"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025082454085350037,
+        "candidate": 0.002515215426683426
+      },
+      "speedup": 0.9972288583814815,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.10/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "971474a0bd923673d47e36eea53d71ed212a53e7d5d506ba5059adda75ea2e46"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025522438809275627,
+        "candidate": 0.0024863574653863907
+      },
+      "speedup": 1.0264991725680654,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "1dbe061f480b9692161245a7f47e74d96fd9f03c4fe0e3f1ebb5eaf5253d0cf0"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002658580429852009,
+        "candidate": 0.0026843836531043053
+      },
+      "speedup": 0.9903876544537675,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "5484afe7bc9d81aa06932d8738ab20408967c5b888a5918de91b067b095cd846"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025502238422632217,
+        "candidate": 0.002547263167798519
+      },
+      "speedup": 1.0011622962645284,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.14/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "fc0768f0c0dd374f6eb7d50fab39587584c6d28ab6ffddf1c559a5e8976e2747"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025173574686050415,
+        "candidate": 0.0025460263714194298
+      },
+      "speedup": 0.9887397463214785,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.16/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "3b6618ec6415cb66e1c1a6293a1cbba62bba90e8119d827ea04095b43079c897"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025214198976755142,
+        "candidate": 0.0025771167129278183
+      },
+      "speedup": 0.9783879344800694,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "08742c1c1cc1eb30dfb1568765851088f9a79f5e68c77a664bd8266cd55513be"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002687934786081314,
+        "candidate": 0.002614906057715416
+      },
+      "speedup": 1.0279278592630214,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "2e29da54b7b25b35a2c5166666f2ba3fd09c382e7f273e06e9d170be3759b6b6"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002676676958799362,
+        "candidate": 0.00266060046851635
+      },
+      "speedup": 1.0060424293212191,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.20/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "212a0aab73ce9752cbee133afe4d4848b49a1704b5b8258d7cc2ad3285600e27"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025986265391111374,
+        "candidate": 0.0026433924213051796
+      },
+      "speedup": 0.9830649880686504,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.22/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e6035c8b94788f5736cb2356ff3b4fcaf3f457585252881088bb4074d800071b"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025093527510762215,
+        "candidate": 0.0025767162442207336
+      },
+      "speedup": 0.9738568446193482,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "499736b548952e9c9aea8d28070976c6acb6e53c7bc4c09c4f386a45c399dfba"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002622411586344242,
+        "candidate": 0.002581247128546238
+      },
+      "speedup": 1.0159475074442748,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "a9024dfffc64dee06b3c3e8cd847bbf6dbdecb52f0e1893286ec1cd8696103ad"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002608976326882839,
+        "candidate": 0.0025758231058716774
+      },
+      "speedup": 1.012870923059735,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "74fc89e73af199d5ec76268d823e5b7c17c143e907c3593e134b4ab6cfb41370"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002562045119702816,
+        "candidate": 0.0026011215522885323
+      },
+      "speedup": 0.9849770832311409,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "b261b033eb1dc4ff61297e14ffb0935458a089e905e2169aca2ab4657ad27ef8"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0026729321107268333,
+        "candidate": 0.002607191912829876
+      },
+      "speedup": 1.0252149439300777,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.8/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "2cccc0eb935be60bce44f6813f0a2a5d05df046d898a561ad7ce90fe163b0e07"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0034120576456189156,
+        "candidate": 0.003433787263929844
+      },
+      "speedup": 0.993671821624133,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "81808a0b743eca67c4d8dfdd732f7e7310c1cb7a1004429b3f14f6198178b403"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0034880461171269417,
+        "candidate": 0.0034370794892311096
+      },
+      "speedup": 1.0148284693605483,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "77e7c024c18fa5b0a955555f1b053cc56881a4aaabf1b883a5d186a4ce919823"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.003491496667265892,
+        "candidate": 0.003477770835161209
+      },
+      "speedup": 1.0039467327651124,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "2ec85a3466ad91984741f0566f5a809f4c5e4dd10f1ea025a3441882e8353276"
+    },
+    {
+      "shape": [
+        75,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0035707270726561546,
+        "candidate": 0.003625510260462761
+      },
+      "speedup": 0.9848895234405947,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "132d79f600bffe91e8681efb57646d646b1f43962378266d7d6242328558a327"
+    },
+    {
+      "shape": [
+        75,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0017055487260222435,
+        "candidate": 0.0017505306750535965
+      },
+      "speedup": 0.9743038213083722,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "67e852b154a6993c29393b5a47194ec79d8b14a2b03d9d4fb3e2e9fde2d7e707"
+    },
+    {
+      "shape": [
+        75,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0017293943092226982,
+        "candidate": 0.0017842277884483337
+      },
+      "speedup": 0.9692676688589623,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "18b16225a56e72d889e784f6cbd8d974c891f9fd34cf2213fe8f6270b260dd4b"
+    },
+    {
+      "shape": [
+        75,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0017241062596440315,
+        "candidate": 0.00172326248139143
+      },
+      "speedup": 1.0004896400065069,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "4cbb56721148965df3be6f43641be450197c1b2dfb9eef939c973b1bff37dd5e"
+    },
+    {
+      "shape": [
+        75,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0016601728275418282,
+        "candidate": 0.0016251718625426292
+      },
+      "speedup": 1.0215367776208228,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.4/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "49e980a6534eea5a7a6861822a5754df55e89e65053f0dd33a318cf04bdd1377"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002414938062429428,
+        "candidate": 0.0024663396179676056
+      },
+      "speedup": 0.9791587682557137,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "738e741fe137c96641020a38a652cbcd371282910ac47f23bd04ea144d7164b5"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002515423111617565,
+        "candidate": 0.002460009418427944
+      },
+      "speedup": 1.0225258052975394,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "cf6417540043a3e9f13b9f94fe387d6959116e401033be4ac7eb341babd39c3f"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002483638934791088,
+        "candidate": 0.002612282522022724
+      },
+      "speedup": 0.9507543360463072,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e1c5616ccb68075103a6c0e825c6916028ca1188f45100a564dd21c577d80cbc"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0024999743327498436,
+        "candidate": 0.0024561677128076553
+      },
+      "speedup": 1.0178353537153668,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "a1923af2c09f1b480dfb9c5b28c202b3398f917886d206e232cef4ea79535b1a"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002435138449072838,
+        "candidate": 0.00247355829924345
+      },
+      "speedup": 0.9844677806129076,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.10/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "82fac0fd3b2ed30c76f5a67ef5b9e2b69234ba78104baea4e93bc22090b490f6"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025912588462233543,
+        "candidate": 0.002545546740293503
+      },
+      "speedup": 1.017957676913283,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "aa40b2cf1e9349d34f4786d9c1c4c0493d63ca066dc46196a5aa6bfeb2841b73"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025332272052764893,
+        "candidate": 0.002501135692000389
+      },
+      "speedup": 1.012830776586309,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e7ac40dec1490a494a26c303d13449ecacd0fae7083fd6924da67a46e7faeebf"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0024425964802503586,
+        "candidate": 0.0024470603093504906
+      },
+      "speedup": 0.9981758401772628,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.14/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "b8c3930f0a47ac7ede5e3e2e236de818ccf801d538900dea829dd0cf115d10ad"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0024245604872703552,
+        "candidate": 0.002440972253680229
+      },
+      "speedup": 0.9932765452843103,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.16/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "edb646f85322b2e7e72ee0dcfd2f7394bf8cb6eba63d1959c7c7ac65aa83273e"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025971895083785057,
+        "candidate": 0.00261556264013052
+      },
+      "speedup": 0.9929754571845784,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "a45570f944743324503e590847ba80e0d505edc2746777837a684fd279cc89b9"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0024301018565893173,
+        "candidate": 0.002412102185189724
+      },
+      "speedup": 1.0074622341914496,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "25f9e6f5a9faf207546be46089c8a4685ac8a59eb2e6e932642dce529227ce00"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.00242680124938488,
+        "candidate": 0.002454012632369995
+      },
+      "speedup": 0.988911473956499,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.20/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "218143031d0cdf801f9f441495a2019cf87fe19c09687059ee5a8fb262bc9d8d"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0024043479934334755,
+        "candidate": 0.0024025244638323784
+      },
+      "speedup": 1.0007590056328453,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.22/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "70e4f1b28f980237fe578407628e8d1ed0c3e3538dea07767a320424af7c81d4"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0024990933015942574,
+        "candidate": 0.0024681948125362396
+      },
+      "speedup": 1.012518658940972,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "d5579ce7ed3948e74556c80e237f259050e837783b17bfcaf6f2973ea6862e90"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002471359446644783,
+        "candidate": 0.0024728141725063324
+      },
+      "speedup": 0.9994117124215303,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "325865945784e6a70bd5699543447afad9fb420b9240692d9af8f057ddb0d3f4"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.00255503598600626,
+        "candidate": 0.002545245923101902
+      },
+      "speedup": 1.003846411388188,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "23731bad57a6a9c7291ffe692a3910ff62e11254e64169158cc953bf3bbc5241"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0024994583800435066,
+        "candidate": 0.002488303929567337
+      },
+      "speedup": 1.0044827524257092,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "18ce71a352bbd89ad140f6f985bfc7a6554361b1cc117cd3efb4f2bc850c8551"
+    },
+    {
+      "shape": [
+        75,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002634813077747822,
+        "candidate": 0.002652258612215519
+      },
+      "speedup": 0.9934223855896449,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.8/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "c91ad500f4f594e17830ee740a4120562d423f712e3d0f6346cf68770ebf2d41"
+    },
+    {
+      "shape": [
+        75,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0033202525228261948,
+        "candidate": 0.0034485356882214546
+      },
+      "speedup": 0.9628006849882941,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "c69e939f4bd92d8789e107eba94e13890e56237d2f40c694b35f8c79d0f7f6eb"
+    },
+    {
+      "shape": [
+        75,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0033284444361925125,
+        "candidate": 0.00331118144094944
+      },
+      "speedup": 1.005213545542863,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "1ba36bcc87eaf834082ce1a81fe804b6d46f67024028b9ca44f715028e9d7853"
+    },
+    {
+      "shape": [
+        75,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0035899952054023743,
+        "candidate": 0.0036333445459604263
+      },
+      "speedup": 0.988069025656747,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e4eae5a845cf26e2e77445823d973a5f799c7e9fe3007820f7c4cf8f07f6801a"
+    },
+    {
+      "shape": [
+        75,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0034487582743167877,
+        "candidate": 0.0036281421780586243
+      },
+      "speedup": 0.950557642193112,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "818f6ed3679c1fcc9b57f28e7c79666fbf6cd1e0c934c00b7a32271a8f3e55b3"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0008863946422934532,
+        "candidate": 0.0008763102814555168
+      },
+      "speedup": 1.011507751365403,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "49f34366d28144a17bb2ddcc4d8f10ab49d90e2dbdbc57365bf269fc0bb95c19"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0008881418034434319,
+        "candidate": 0.000881783664226532
+      },
+      "speedup": 1.007210543214675,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "5e636c2cf8f760859bc85829bb4b07ea1c6d70cb8bec535fbab66aab581513b9"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0008809184655547142,
+        "candidate": 0.0008752038702368736
+      },
+      "speedup": 1.0065294447524482,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.2/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "3d9a6311f6914dd55d117a28872ecb8f1714e249d18c8548755617a178e6c113"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0008724918588995934,
+        "candidate": 0.0008685607463121414
+      },
+      "speedup": 1.0045260076559333,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.2/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "f3bb4d9a31f19f821146a719deed01efa5282c92d7b48152403273b76cd0d2a7"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018887361511588097,
+        "candidate": 0.0018932297825813293
+      },
+      "speedup": 0.997626473308278,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "5653ec37225a259631b696ff100112a93a323a6cb73ad532bca13bcab7d3b804"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018555251881480217,
+        "candidate": 0.0018939264118671417
+      },
+      "speedup": 0.9797240148938723,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "674bbe6fbe9740932b83b9d85f9815690f0da10340cbec1c07d2a3210f1682af"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002084112726151943,
+        "candidate": 0.002063256688416004
+      },
+      "speedup": 1.0101083097672885,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "820ccaa24699d97cbefef2074631f38ef1ffd11d89e06108953d09ddb8d08f4e"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1024
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0020250342786312103,
+        "candidate": 0.0020278198644518852
+      },
+      "speedup": 0.9986263149555309,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.4/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "930f3139752df25bc2de60dfbb5c9da4bb1df614eb863fb2dec5c7c3dd39776e"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0029985597357153893,
+        "candidate": 0.002956407144665718
+      },
+      "speedup": 1.0142580466718625,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "8ba640c276fef8758b9c04a7f046f005c7eb9936d0b80bf5dd73434f00b8a5b7"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0027749771252274513,
+        "candidate": 0.0028396015986800194
+      },
+      "speedup": 0.9772417111320797,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "0e57cf775e0cd8106cac96166cb0ce690ad980da1114d3adeaec5fd5b6b4ff4e"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0031100809574127197,
+        "candidate": 0.003016287460923195
+      },
+      "speedup": 1.0310956756292775,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "08d432e2171750a88a9ed970713e72bb62e3ec0451491e27dcf7367f5671a1d7"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0028724055737257004,
+        "candidate": 0.0027977731078863144
+      },
+      "speedup": 1.0266756677405373,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "ed96d1483921fd75f1bf2d49cb238912bac5c716a549246532511c7ea3d6b677"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0028093159198760986,
+        "candidate": 0.00283610075712204
+      },
+      "speedup": 0.9905557525843611,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.10/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "971474a0bd923673d47e36eea53d71ed212a53e7d5d506ba5059adda75ea2e46"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002764560282230377,
+        "candidate": 0.002734133042395115
+      },
+      "speedup": 1.0111286610283632,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "1dbe061f480b9692161245a7f47e74d96fd9f03c4fe0e3f1ebb5eaf5253d0cf0"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0027685891836881638,
+        "candidate": 0.0028862059116363525
+      },
+      "speedup": 0.9592486705560431,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "5484afe7bc9d81aa06932d8738ab20408967c5b888a5918de91b067b095cd846"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0029537025839090347,
+        "candidate": 0.003023732453584671
+      },
+      "speedup": 0.9768399252411981,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.14/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "fc0768f0c0dd374f6eb7d50fab39587584c6d28ab6ffddf1c559a5e8976e2747"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002929307520389557,
+        "candidate": 0.002983110025525093
+      },
+      "speedup": 0.9819642907317622,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.16/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "3b6618ec6415cb66e1c1a6293a1cbba62bba90e8119d827ea04095b43079c897"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0030400268733501434,
+        "candidate": 0.003063943237066269
+      },
+      "speedup": 0.9921942536575757,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "08742c1c1cc1eb30dfb1568765851088f9a79f5e68c77a664bd8266cd55513be"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002832057885825634,
+        "candidate": 0.0027581574395298958
+      },
+      "speedup": 1.0267934111507189,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "2e29da54b7b25b35a2c5166666f2ba3fd09c382e7f273e06e9d170be3759b6b6"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0028284722939133644,
+        "candidate": 0.00283042062073946
+      },
+      "speedup": 0.9993116476004239,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.20/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "212a0aab73ce9752cbee133afe4d4848b49a1704b5b8258d7cc2ad3285600e27"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0028447480872273445,
+        "candidate": 0.0028168829157948494
+      },
+      "speedup": 1.009892200799774,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.22/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e6035c8b94788f5736cb2356ff3b4fcaf3f457585252881088bb4074d800071b"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0029338523745536804,
+        "candidate": 0.002801671624183655
+      },
+      "speedup": 1.047179244430025,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "499736b548952e9c9aea8d28070976c6acb6e53c7bc4c09c4f386a45c399dfba"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0027603767812252045,
+        "candidate": 0.00286024808883667
+      },
+      "speedup": 0.9650829912267906,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "a9024dfffc64dee06b3c3e8cd847bbf6dbdecb52f0e1893286ec1cd8696103ad"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.00281379371881485,
+        "candidate": 0.002845614217221737
+      },
+      "speedup": 0.988817704728101,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "74fc89e73af199d5ec76268d823e5b7c17c143e907c3593e134b4ab6cfb41370"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0028262287378311157,
+        "candidate": 0.0027799494564533234
+      },
+      "speedup": 1.016647526188061,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.3/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "b261b033eb1dc4ff61297e14ffb0935458a089e905e2169aca2ab4657ad27ef8"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        1536
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002860086038708687,
+        "candidate": 0.0028460752218961716
+      },
+      "speedup": 1.0049228554132104,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.8/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "2cccc0eb935be60bce44f6813f0a2a5d05df046d898a561ad7ce90fe163b0e07"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0037670955061912537,
+        "candidate": 0.003754344768822193
+      },
+      "speedup": 1.0033962617058902,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.0/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "81808a0b743eca67c4d8dfdd732f7e7310c1cb7a1004429b3f14f6198178b403"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0038019465282559395,
+        "candidate": 0.0037142736837267876
+      },
+      "speedup": 1.0236043038274938,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "77e7c024c18fa5b0a955555f1b053cc56881a4aaabf1b883a5d186a4ce919823"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0037936698645353317,
+        "candidate": 0.003580615855753422
+      },
+      "speedup": 1.0595020570105473,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.1/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "2ec85a3466ad91984741f0566f5a809f4c5e4dd10f1ea025a3441882e8353276"
+    },
+    {
+      "shape": [
+        81,
+        512,
+        2048
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0037317518144845963,
+        "candidate": 0.0037200404331088066
+      },
+      "speedup": 1.0031481865819405,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.2/pwconv1/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "132d79f600bffe91e8681efb57646d646b1f43962378266d7d6242328558a327"
+    },
+    {
+      "shape": [
+        81,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001946907490491867,
+        "candidate": 0.0019644107669591904
+      },
+      "speedup": 0.9910898083223105,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "67e852b154a6993c29393b5a47194ec79d8b14a2b03d9d4fb3e2e9fde2d7e707"
+    },
+    {
+      "shape": [
+        81,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018232977017760277,
+        "candidate": 0.0018541458994150162
+      },
+      "speedup": 0.9833625834683661,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "18b16225a56e72d889e784f6cbd8d974c891f9fd34cf2213fe8f6270b260dd4b"
+    },
+    {
+      "shape": [
+        81,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0018596537411212921,
+        "candidate": 0.0018344605341553688
+      },
+      "speedup": 1.0137333055123603,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.0/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "4cbb56721148965df3be6f43641be450197c1b2dfb9eef939c973b1bff37dd5e"
+    },
+    {
+      "shape": [
+        81,
+        1024,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.001970110461115837,
+        "candidate": 0.0019467826932668686
+      },
+      "speedup": 1.0119827281851486,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.4/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "49e980a6534eea5a7a6861822a5754df55e89e65053f0dd33a318cf04bdd1377"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002686162479221821,
+        "candidate": 0.002622697502374649
+      },
+      "speedup": 1.0241983594332587,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "738e741fe137c96641020a38a652cbcd371282910ac47f23bd04ea144d7164b5"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0028495220467448235,
+        "candidate": 0.0027772700414061546
+      },
+      "speedup": 1.0260154771633538,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "cf6417540043a3e9f13b9f94fe387d6959116e401033be4ac7eb341babd39c3f"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0026594148948788643,
+        "candidate": 0.0026307767257094383
+      },
+      "speedup": 1.010885822764645,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e1c5616ccb68075103a6c0e825c6916028ca1188f45100a564dd21c577d80cbc"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002762553282082081,
+        "candidate": 0.0026502497494220734
+      },
+      "speedup": 1.042374697963653,
+      "actual_weight_name": "/vector_estimator/vector_field/last_convnext/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "a1923af2c09f1b480dfb9c5b28c202b3398f917886d206e232cef4ea79535b1a"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025816336274147034,
+        "candidate": 0.0025785695761442184
+      },
+      "speedup": 1.0011882755845847,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.10/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "82fac0fd3b2ed30c76f5a67ef5b9e2b69234ba78104baea4e93bc22090b490f6"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002672274596989155,
+        "candidate": 0.0026862723752856255
+      },
+      "speedup": 0.9947891440848464,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "aa40b2cf1e9349d34f4786d9c1c4c0493d63ca066dc46196a5aa6bfeb2841b73"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0026181628927588463,
+        "candidate": 0.0026634950190782547
+      },
+      "speedup": 0.9829802098390646,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e7ac40dec1490a494a26c303d13449ecacd0fae7083fd6924da67a46e7faeebf"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002661706879734993,
+        "candidate": 0.0026457440108060837
+      },
+      "speedup": 1.006033413990058,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.14/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "b8c3930f0a47ac7ede5e3e2e236de818ccf801d538900dea829dd0cf115d10ad"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0026683183386921883,
+        "candidate": 0.002676483243703842
+      },
+      "speedup": 0.9969493905740449,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.16/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "edb646f85322b2e7e72ee0dcfd2f7394bf8cb6eba63d1959c7c7ac65aa83273e"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0027676932513713837,
+        "candidate": 0.0027310531586408615
+      },
+      "speedup": 1.0134161038259528,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "a45570f944743324503e590847ba80e0d505edc2746777837a684fd279cc89b9"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0028459904715418816,
+        "candidate": 0.002884669229388237
+      },
+      "speedup": 0.9865916142300453,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "25f9e6f5a9faf207546be46089c8a4685ac8a59eb2e6e932642dce529227ce00"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0025916649028658867,
+        "candidate": 0.002603670582175255
+      },
+      "speedup": 0.9953889407548101,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.20/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "218143031d0cdf801f9f441495a2019cf87fe19c09687059ee5a8fb262bc9d8d"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002578137442469597,
+        "candidate": 0.002654682844877243
+      },
+      "speedup": 0.971165895558727,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.22/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "70e4f1b28f980237fe578407628e8d1ed0c3e3538dea07767a320424af7c81d4"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0027039656415581703,
+        "candidate": 0.0026975153014063835
+      },
+      "speedup": 1.0023912154079067,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "d5579ce7ed3948e74556c80e237f259050e837783b17bfcaf6f2973ea6862e90"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002683130092918873,
+        "candidate": 0.002639179117977619
+      },
+      "speedup": 1.016653274740569,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "325865945784e6a70bd5699543447afad9fb420b9240692d9af8f057ddb0d3f4"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0026997392997145653,
+        "candidate": 0.002676934003829956
+      },
+      "speedup": 1.0085191849526292,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "23731bad57a6a9c7291ffe692a3910ff62e11254e64169158cc953bf3bbc5241"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002816658467054367,
+        "candidate": 0.002821187488734722
+      },
+      "speedup": 0.9983946399527008,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.6/convnext.3/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "18ce71a352bbd89ad140f6f985bfc7a6554361b1cc117cd3efb4f2bc850c8551"
+    },
+    {
+      "shape": [
+        81,
+        1536,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.002872486598789692,
+        "candidate": 0.0027433112263679504
+      },
+      "speedup": 1.0470873924839965,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.8/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "c91ad500f4f594e17830ee740a4120562d423f712e3d0f6346cf68770ebf2d41"
+    },
+    {
+      "shape": [
+        81,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0037505561485886574,
+        "candidate": 0.003796524368226528
+      },
+      "speedup": 0.9878920256583671,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.0/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "c69e939f4bd92d8789e107eba94e13890e56237d2f40c694b35f8c79d0f7f6eb"
+    },
+    {
+      "shape": [
+        81,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.003631938248872757,
+        "candidate": 0.003529595211148262
+      },
+      "speedup": 1.0289956869278503,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.12/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "1ba36bcc87eaf834082ce1a81fe804b6d46f67024028b9ca44f715028e9d7853"
+    },
+    {
+      "shape": [
+        81,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.0037179747596383095,
+        "candidate": 0.0038356930017471313
+      },
+      "speedup": 0.9693097852056455,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.1/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "e4eae5a845cf26e2e77445823d973a5f799c7e9fe3007820f7c4cf8f07f6801a"
+    },
+    {
+      "shape": [
+        81,
+        2048,
+        512
+      ],
+      "s32_bitidentity": true,
+      "seconds": {
+        "reference": 0.003609906882047653,
+        "candidate": 0.0036609740927815437
+      },
+      "speedup": 0.9860509226671171,
+      "actual_weight_name": "/vector_estimator/vector_field/main_blocks.18/convnext.2/pwconv2/Conv/linear/weight_quantized",
+      "actual_weight_sha256": "818f6ed3679c1fcc9b57f28e7c79666fbf6cd1e0c934c00b7a32271a8f3e55b3"
+    }
+  ],
+  "complete": true,
+  "all_weights": true,
+  "weight_count": 56,
+  "row_counts": [
+    56,
+    60,
+    75,
+    81
+  ],
+  "random_seed": 61,
+  "repeats": 19,
+  "discarded_first_repeat": true,
+  "library_sha256": {
+    "reference": "0f0d97f2659831a2bab785a2f20f96977a732170cf5119988499266c7e3a83cf",
+    "candidate": "a0fb192c169308adb8ab2f0be3b8c7096882e1a4ee69ac20a4236525ec99f131"
+  }
+}
