@@ -1,0 +1,342 @@
+{
+  "round": 13,
+  "date": "2026-10-30",
+  "baseline_commit": "dfd138f",
+  "branch": "main",
+  "decision": "Select optional ARM64 row-parallel FP32 normalization after the round12 portable condition cache.",
+  "selected_model": "models/round13-row-norm",
+  "reference": "models/round12-portable-cached",
+  "public_reference": "models/round8-latent-retime-g135",
+  "hardware": {
+    "cpu": "Apple M4 Max",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "provider": "CPUExecutionProvider",
+    "inference_threads": 1,
+    "ort_intra_inter_threads": [
+      1,
+      1
+    ],
+    "oracle_arm_server_measured": false,
+    "epyc_measured": false
+  },
+  "invariants": {
+    "trained_weights": "F1200 unchanged",
+    "quantization_changed": false,
+    "denoising_calls_per_chunk": 8,
+    "speed_strategy_changed": false,
+    "waveform_postprocessing_added": false,
+    "teacher_or_retraining_used": false
+  },
+  "selected_graph": {
+    "nodes": 36,
+    "source_vector_sha256": "0a4102968d90c7f2ae307e5ba7771b1ce600d0cde213433d145e9903b37523a2",
+    "initializer_bitidentity": true,
+    "width": 512,
+    "target": "ARM64; target ORT compatibility check required",
+    "shared_assets": true,
+    "final_builder_reproduces_measured_graph_bytes": true,
+    "vector_sha256": "53c250af66ed48df9338b40e1cc4e30e0dbcfd74c04e2ce147c4bc210593c72b",
+    "source_unchanged": true
+  },
+  "native_build": {
+    "machine": "arm64",
+    "system": "Darwin",
+    "source_sha256": "b9df79a1c04bc2b097a10160e27db206f3ba1e5e50ea317dd2ac1f4b9b64c6d6",
+    "output": "librow_norm.dylib",
+    "ort_api_version": 23,
+    "flags": [
+      "-O3",
+      "-ffp-contract=off",
+      "-DFUSED_M2",
+      "-DFUSED_OUTPUT"
+    ],
+    "note": "Explicit FMA at the same two operations as the measured ORT kernel; no reciprocal approximation."
+  },
+  "implementation": {
+    "custom_norm_nodes": 36,
+    "width": 512,
+    "independent_rows_per_neon_vector": 4,
+    "method": "Welford per-row order retained; explicit FMA at the two sites matching measured ORT; division and square root remain exact instructions.",
+    "compatibility_guard": "At engine load, compare byte representations against installed CPU ORT at rows 1/4/5/81; refuse mismatch.",
+    "cross_platform_scope": "ARM64 source/build path on macOS and Linux. Runtime/performance validation here only on Mac; standard ORT and x86 v4 remain available."
+  },
+  "timings": {
+    "warm_only": true,
+    "profiling_excluded": true,
+    "loading_build_and_compatibility_check_excluded": true,
+    "core": {
+      "combinations": 12,
+      "pairs_each": 6,
+      "median_of_case_paired_time_reductions_percent": 8.239621345789029,
+      "data": "results/round13_row_norm_paired.json"
+    },
+    "http": {
+      "combinations": 8,
+      "pairs_each": 6,
+      "all_cases_improved": true,
+      "median_of_case_paired_synthesis_reductions_percent": 9.347027972512596,
+      "median_of_case_paired_wall_reductions_percent": 9.039179663776645,
+      "median_of_case_paired_first_audio_reductions_percent": 9.033279513807758,
+      "data": "results/round13_row_norm_http.json"
+    },
+    "public_to_selected": {
+      "combinations": 8,
+      "pairs_each": 6,
+      "median_of_case_paired_time_reductions_percent": 11.069117601399494,
+      "data": "results/round13_public_to_selected.json",
+      "note": "Measured directly; do not add previous percentages."
+    }
+  },
+  "exact_waveform_validation": {
+    "combinations": 96,
+    "voices": [
+      "M1",
+      "F1",
+      "M5",
+      "F5"
+    ],
+    "cases": [
+      "ko_short",
+      "en_short",
+      "ko_long",
+      "en_long"
+    ],
+    "speeds": [
+      0.7,
+      1,
+      1.25,
+      1.3,
+      1.5,
+      2
+    ],
+    "byte_comparison": true,
+    "all_identical": true,
+    "actual_vector_calls_per_synthesis": 8,
+    "data": "results/round13_strict_waveforms.json"
+  },
+  "tests": {
+    "native_and_preparation_tests_passed": 6,
+    "native_numerical_subcases": 100,
+    "server_tests_passed": 13,
+    "upstream_runtime_tests_passed": 2,
+    "native_cases": "rows 1/2/3/4/5/7/8/13/81/513, eps 1e-6/1e-5, random/tiny/large/constant/large-offset input; direct byte comparison",
+    "invalid_runtime_refused": true,
+    "source_protection_and_failed_preparation_cleanup": true,
+    "live_streaming": {
+      "model": "round13-row-norm",
+      "scope": "Real ONNX on Mac CPU; local TCP, no Oracle ARM server measurement.",
+      "pre_cancelled_vector_calls": 0,
+      "rows": [
+        {
+          "voice": "M1",
+          "speed": 1.0,
+          "chunks": 3,
+          "complete_vector_calls": 24,
+          "stream_vector_calls": 24,
+          "pcm16_bitidentical": true
+        },
+        {
+          "voice": "M1",
+          "speed": 2.0,
+          "chunks": 3,
+          "complete_vector_calls": 24,
+          "stream_vector_calls": 24,
+          "pcm16_bitidentical": true
+        },
+        {
+          "voice": "F1",
+          "speed": 1.0,
+          "chunks": 3,
+          "complete_vector_calls": 24,
+          "stream_vector_calls": 24,
+          "pcm16_bitidentical": true
+        },
+        {
+          "voice": "F1",
+          "speed": 2.0,
+          "chunks": 3,
+          "complete_vector_calls": 24,
+          "stream_vector_calls": 24,
+          "pcm16_bitidentical": true
+        }
+      ],
+      "complete": true,
+      "cancellation": {
+        "aborted_vector_calls": 8,
+        "full_request_vector_calls": 216,
+        "recovery_status": 200,
+        "recovered_seconds": 0.08629516599467024,
+        "admission_released": true
+      },
+      "onnx_calling_threads": [
+        "tts_0"
+      ],
+      "ort_intra_inter_threads": [
+        1,
+        1
+      ]
+    },
+    "standalone_package": {
+      "model": "round13-row-norm",
+      "reference": "round12-portable-cached",
+      "archive_bytes": 169068834,
+      "contains_native_sources": true,
+      "contains_native_binaries": false,
+      "native_build": {
+        "machine": "arm64",
+        "system": "Darwin",
+        "source_sha256": "b9df79a1c04bc2b097a10160e27db206f3ba1e5e50ea317dd2ac1f4b9b64c6d6",
+        "output": "librow_norm.dylib",
+        "ort_api_version": 23,
+        "flags": [
+          "-O3",
+          "-ffp-contract=off",
+          "-DFUSED_M2",
+          "-DFUSED_OUTPUT"
+        ],
+        "note": "Explicit FMA at the same two operations as the measured ORT kernel; no reciprocal approximation."
+      },
+      "extracted_runtime": {
+        "sha256": "ebb11a1a6e7014cdce36858b345bb52b681d2c997993de507f8fadd371c0f80b",
+        "samples": 80661,
+        "row_norm": true
+      },
+      "float32_bitidentical": true,
+      "temporary_archive_and_extraction_removed": true
+    }
+  },
+  "unselected_trials": [
+    {
+      "name": "GELU layout: remove inverse transposes",
+      "combinations": 8,
+      "pairs_each": 6,
+      "median_of_case_paired_time_reductions_percent": 0.08899068255553699,
+      "selected": false,
+      "reason": "No consistent useful gain or slower; preserve the simpler selected path",
+      "data": "results/round13_layout_paired.json"
+    },
+    {
+      "name": "Explicit BiasGelu",
+      "combinations": 8,
+      "pairs_each": 6,
+      "median_of_case_paired_time_reductions_percent": -1.470936152297353,
+      "selected": false,
+      "reason": "No consistent useful gain or slower; preserve the simpler selected path",
+      "data": "results/round13_bias_gelu_paired.json"
+    },
+    {
+      "name": "Batch-one conditioning cache",
+      "combinations": 12,
+      "pairs_each": 6,
+      "median_of_case_paired_time_reductions_percent": 0.8746030948157651,
+      "selected": false,
+      "reason": "No consistent useful gain or slower; preserve the simpler selected path",
+      "data": "results/round13_batch_paired.json"
+    },
+    {
+      "name": "Batch-one + engine-load timestep cache",
+      "combinations": 12,
+      "pairs_each": 6,
+      "median_of_case_paired_time_reductions_percent": 0.8148384838463474,
+      "selected": false,
+      "reason": "No consistent useful gain or slower; preserve the simpler selected path",
+      "data": "results/round13_step_paired.json"
+    }
+  ],
+  "cleanup": {
+    "note": "Remove only generated unselected round13 packages; frozen public sources, round12 baseline and selected row-norm package are retained. Byte count is file sizes of exclusively-owned inodes, not measured APFS space reclaimed.",
+    "models": [
+      {
+        "model": "round13-gelu-layout",
+        "graphs": {
+          "vector_estimator.onnx": "086b3f561ecf821d28c7f749b60e9327ca4dc357b3e4159a0da9b1342ad0be30",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6",
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251"
+        },
+        "files": 22
+      },
+      {
+        "model": "round13-bias-gelu",
+        "graphs": {
+          "vector_estimator.onnx": "ef8e1fb963de709bc0bf76244fcccd251e9c597436f2b00aa53aca7de4466a2c",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6",
+          "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251"
+        },
+        "files": 22
+      },
+      {
+        "model": "round13-batch-one-cache",
+        "graphs": {
+          "vector_estimator.onnx": "09ac05e488e92b964fbc42bb92f22ed381e20447e911475b420f8c2395be9d7c",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6",
+          "condition.onnx": "ed89e4c142f5214e819b513f5aae45b991515a208814d74d8ac097ef6d581c2a"
+        },
+        "files": 22
+      },
+      {
+        "model": "round13-batch-step-cache",
+        "graphs": {
+          "vector_estimator.onnx": "268e2de98b713e07b8553dfecacf19d69694101642c7d862652319d28153c3bc",
+          "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+          "step_condition.onnx": "b780e606ac398fd2fb944690b1883b810a3137ef3004a5f054c4a37020ca2169",
+          "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+          "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6",
+          "condition.onnx": "ed89e4c142f5214e819b513f5aae45b991515a208814d74d8ac097ef6d581c2a"
+        },
+        "files": 23
+      }
+    ],
+    "exclusive_inode_file_bytes": 190417145,
+    "removed_debug_native_libraries": 3,
+    "removed_initial_package_test_archive": true
+  },
+  "demo": {
+    "model": "models/round13-row-norm",
+    "port": 7788,
+    "health": {
+      "status": "ok",
+      "model": "supertonic-3",
+      "sample_rate": 44100,
+      "version": "1.3.1",
+      "server_version": "0.1.0",
+      "voices_loaded": 10,
+      "steps": 8,
+      "threads": 1,
+      "streaming": "text-chunks",
+      "admitted_requests": 0
+    },
+    "speed_statuses": {
+      "1.25": 200,
+      "1.3": 200,
+      "1.251": 422
+    }
+  },
+  "publication": {
+    "new_learned_model": false,
+    "hugging_face_upload_needed": false,
+    "git_contents": "Source, small JSON measurements and records only; build native library on target."
+  },
+  "commands": [
+    "python native/build_row_norm.py",
+    "python prepare_row_norm.py --source models/round12-portable-cached --output models/round13-row-norm --link-assets",
+    "python tests_row_norm.py",
+    "python serve.py --model models/round13-row-norm",
+    "python experiments/paired_portable.py --reference models/round12-portable-cached --candidate models/round13-row-norm --output results/norm-new.json --pairs 6",
+    "python experiments/paired_http_streaming.py --reference models/round12-portable-cached --candidate models/round13-row-norm --output results/norm-http-new.json --pairs 6",
+    "python experiments/check_portable_cache.py --reference models/round12-portable-cached --candidate models/round13-row-norm --output results/norm-bytes-new.json --cases ko_short en_short ko_long en_long --speeds 0.70 1.0 1.25 1.30 1.50 2.0",
+    "python experiments/check_streaming_runtime.py --model models/round13-row-norm --output results/norm-runtime-new.json",
+    "python experiments/check_runtime_package.py --model models/round13-row-norm --reference models/round12-portable-cached --output results/norm-package-new.json"
+  ],
+  "remaining": [
+    "No Oracle ARM server measurement; user will test that environment later.",
+    "1.5x pronunciation blurring remains: exact output preserves reference quality and limits. No new WER/CER/MOS claim.",
+    "Investigate larger independent-row tiles with unchanged per-row arithmetic; test exact equality and memory before adoption.",
+    "Profile remaining dynamic INT8 matmul and exact GELU; do not enable FastGELU or change quantization without separate quality evidence."
+  ]
+}

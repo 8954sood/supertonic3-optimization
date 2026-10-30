@@ -33,8 +33,13 @@ def options(
     numpy_backend=False,
     native_backend=False,
     exact_int8_backend=False,
+    row_norm_backend=False,
 ):
     opt = ort.SessionOptions()
+    if row_norm_backend:
+        from row_norm_ops import library_path
+
+        opt.register_custom_ops_library(library_path())
     if numpy_backend:
         from numpy_ops import library_path
 
@@ -96,6 +101,7 @@ class Engine:
         self.numpy_backend = metadata.get("backend") == "numpy"
         self.native_backend = metadata.get("backend") == "native-blas"
         self.exact_int8_backend = metadata.get("backend") == "native-exact-int8"
+        self.row_norm_backend = bool(metadata.get("row_norm_backend"))
         self.cfg = json.loads((self.root / "onnx/tts.json").read_text())
         self.processor = UnicodeProcessor(str(self.root / "onnx/unicode_indexer.json"))
         self.style = load_voice_style_from_json_file(
@@ -127,6 +133,7 @@ class Engine:
                     numpy_backend=self.numpy_backend,
                     native_backend=self.native_backend,
                     exact_int8_backend=self.exact_int8_backend,
+                    row_norm_backend=self.row_norm_backend,
                 ),
                 providers=["CPUExecutionProvider"],
             )
@@ -143,9 +150,37 @@ class Engine:
                     numpy_backend=self.numpy_backend,
                     native_backend=self.native_backend,
                     exact_int8_backend=self.exact_int8_backend,
+                    row_norm_backend=self.row_norm_backend,
                 ),
                 providers=["CPUExecutionProvider"],
             )
+        self.step_condition = None
+        self._step_conditions = ()
+        step_path = model_path(
+            Path(variant) if variant else self.root / "onnx", "step_condition"
+        )
+        if step_path.exists():
+            if metadata.get("step_condition_steps") != 8 or self.supported_steps != [8]:
+                raise ValueError("Timestep cache requires an eight-step model package")
+            self.step_condition = ort.InferenceSession(
+                str(step_path),
+                options(profile, low_memory=low_memory,
+                        numpy_backend=self.numpy_backend, native_backend=self.native_backend,
+                        exact_int8_backend=self.exact_int8_backend,
+                        row_norm_backend=self.row_norm_backend),
+                providers=["CPUExecutionProvider"],
+            )
+            names = [value.name for value in self.step_condition.get_outputs()]
+            cached = []
+            for step in range(8):
+                values = self.step_condition.run(None, {
+                    "current_step": np.array([step], np.float32),
+                    "total_step": np.array([8], np.float32),
+                })
+                for value in values:
+                    value.setflags(write=False)
+                cached.append(dict(zip(names, values)))
+            self._step_conditions = tuple(cached)
         self.sample_rate = self.cfg["ae"]["sample_rate"]
         self.load_seconds = time.perf_counter() - start
 
@@ -227,6 +262,8 @@ class Engine:
             feed.update(zip([x.name for x in self.condition.get_outputs()], values))
         for step in range(steps):
             feed.update(noisy_latent=xt, current_step=np.array([step], np.float32))
+            if self._step_conditions:
+                feed.update(self._step_conditions[step])
             xt = run("vector_estimator", feed)[0]
         output_frames = int((output_duration.max() * self.sample_rate + chunk - 1) / chunk)
         wav = run(
@@ -250,5 +287,5 @@ class Engine:
     def finish_profiles(self):
         sessions = list(self.sessions.values()) + (
             [self.condition] if self.condition else []
-        )
+        ) + ([self.step_condition] if self.step_condition else [])
         return [s.end_profiling() for s in sessions]

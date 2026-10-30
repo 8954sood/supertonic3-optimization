@@ -1,0 +1,16 @@
+[
+  {
+    "case": "ko_short",
+    "equal": true,
+    "max_error": 0.0,
+    "base_seconds": 0.21998445800272748,
+    "candidate_seconds": 0.18346333398949355
+  },
+  {
+    "case": "en_short",
+    "equal": true,
+    "max_error": 0.0,
+    "base_seconds": 0.1778482499648817,
+    "candidate_seconds": 0.17879341600928456
+  }
+]

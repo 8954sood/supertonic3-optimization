@@ -81,7 +81,9 @@ def main():
         "variant": a.variant,
         "model": a.model,
         "low_memory": a.low_memory,
-        "backend": "ORT CPU with exact AVX2 integer FFNs"
+        "backend": "ORT CPU with row-parallel FP32 normalization"
+        if engine.row_norm_backend
+        else "ORT CPU with exact AVX2 integer FFNs"
         if engine.exact_int8_backend
         else "native packed-int8 storage with FP32 BLAS"
         if engine.native_backend

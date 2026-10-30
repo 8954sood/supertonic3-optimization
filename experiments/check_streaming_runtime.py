@@ -48,7 +48,7 @@ def main():
         raise AssertionError('Expected cancellation')
     except SynthesisCancelled:
         assert counter.calls==0
-    report=dict(model=Path(a.model).name,scope='Real ONNX on Mac CPU; local TCP, no ARM inference.',
+    report=dict(model=Path(a.model).name,scope='Real ONNX on Mac CPU; local TCP, no Oracle ARM server measurement.',
                 pre_cancelled_vector_calls=counter.calls,rows=[],complete=False)
     with tempfile.TemporaryDirectory() as custom:
         app=create_app(engine=e,custom_styles_dir=custom)

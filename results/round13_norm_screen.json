@@ -1,0 +1,27 @@
+[
+  {
+    "kernel": "plain",
+    "equal": false,
+    "max_error": 1.9073486328125e-06,
+    "differing": 11767,
+    "median_us": 63.562009017914534
+  },
+  {
+    "kernel": "fma",
+    "equal": false,
+    "max_error": 9.5367431640625e-07,
+    "differing": 10131,
+    "median_us": 114.56248466856778
+  },
+  {
+    "kernel": "fullfma",
+    "equal": true,
+    "max_error": 0.0,
+    "differing": 0,
+    "median_us": 89.50001210905612
+  },
+  {
+    "kernel": "ORT",
+    "median_us": 346.4795008767396
+  }
+]

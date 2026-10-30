@@ -18,6 +18,8 @@ def main():
     parser.add_argument("--reference", required=True)
     parser.add_argument("--candidate", required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--cases", nargs="+", choices=list(TEXTS), default=["ko_long", "en_long"])
+    parser.add_argument("--speeds", nargs="+", type=float, default=[0.70, 1.25, 1.30, 1.50, 2.0])
     args = parser.parse_args()
     if args.output.exists():
         parser.error("Choose a new output")
@@ -32,9 +34,9 @@ def main():
     for voice in ["M1", "F1", "M5", "F5"]:
         styles = {name: load_voice_style_from_json_file(engine.root / f"voice_styles/{voice}.json")
                   for name, engine in engines.items()}
-        for case in ["ko_long", "en_long"]:
+        for case in args.cases:
             lang, text = TEXTS[case]
-            for speed in [0.70, 1.25, 1.30, 1.50, 2.0]:
+            for speed in args.speeds:
                 waves, counts = {}, {}
                 for name, engine in engines.items():
                     counter = engine.sessions["vector_estimator"]
@@ -44,8 +46,10 @@ def main():
                     if counts[name] != 8:
                         raise AssertionError(counts)
                 np.testing.assert_array_equal(waves["reference"], waves["candidate"])
+                if waves["reference"].tobytes()!=waves["candidate"].tobytes():
+                    raise AssertionError("Float32 byte mismatch")
                 report["rows"].append(dict(voice=voice, case=case, speed=speed,
-                    vector_calls=counts, float32_bitidentical=True,
+                    vector_calls=counts, float32_bitidentical=True, byte_comparison=True,
                     samples=int(waves["candidate"].size),
                     sha256=hashlib.sha256(waves["candidate"].tobytes()).hexdigest()))
                 args.output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")

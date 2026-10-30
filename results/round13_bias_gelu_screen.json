@@ -1,0 +1,19 @@
+{
+  "note": "Cold screening only, not a speed claim or selected candidate",
+  "rows": [
+    {
+      "case": "ko_short",
+      "equal": true,
+      "max_error": 0.0,
+      "base_seconds": 0.21836508403066546,
+      "candidate_seconds": 0.19305108400294557
+    },
+    {
+      "case": "en_short",
+      "equal": true,
+      "max_error": 0.0,
+      "base_seconds": 0.17099687497830018,
+      "candidate_seconds": 0.17232191696530208
+    }
+  ]
+}

@@ -1,0 +1,3037 @@
+{
+  "reference": "models/round12-portable-cached",
+  "candidate": "models/round13-row-norm",
+  "machine": "macOS-27.0.1-arm64-arm-64bit",
+  "threads_per_inference": 1,
+  "steps_per_chunk": 8,
+  "transport": "Local TCP, alternating complete requests; no concurrent inference.",
+  "note": "Same text/chunk/seed/voice/speed and PCM required. Mac timings are not ARM timings.",
+  "rows": [
+    {
+      "voice": "M1",
+      "lang": "ko",
+      "speed": 1.0,
+      "runs": {
+        "reference": [
+          {
+            "first_audio_seconds": 0.3290543329785578,
+            "server_first_audio_seconds": 0.321666,
+            "wall_seconds": 0.5165832079946995,
+            "synthesis_seconds": 0.5037525419611484,
+            "audio_seconds": 14.991043083900227,
+            "synthesis_rtf": 0.03360356842027612,
+            "http_wall_rtf": 0.0344594572307973,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.3290543329785578,
+                "audio_seconds": 9.76140589569161,
+                "generation_seconds": 0.31971399998292327
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.5157682499848306,
+                "audio_seconds": 5.229637188208617,
+                "generation_seconds": 0.1840385419782251
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.32689795800251886,
+            "server_first_audio_seconds": 0.319563,
+            "wall_seconds": 0.5131098750280216,
+            "synthesis_seconds": 0.5006171250133775,
+            "audio_seconds": 14.991043083900227,
+            "synthesis_rtf": 0.033394415732886526,
+            "http_wall_rtf": 0.03422776334884134,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.32689795800251886,
+                "audio_seconds": 9.76140589569161,
+                "generation_seconds": 0.3177434999961406
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.51225670799613,
+                "audio_seconds": 5.229637188208617,
+                "generation_seconds": 0.18287362501723692
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.32440041698282585,
+            "server_first_audio_seconds": 0.31716,
+            "wall_seconds": 0.5121931250323541,
+            "synthesis_seconds": 0.5002477509551682,
+            "audio_seconds": 14.991043083900227,
+            "synthesis_rtf": 0.033369776082653915,
+            "http_wall_rtf": 0.03416661016620177,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.32440041698282585,
+                "audio_seconds": 9.76140589569161,
+                "generation_seconds": 0.3154335839790292
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.5113517499994487,
+                "audio_seconds": 5.229637188208617,
+                "generation_seconds": 0.18481416697613895
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.3223067079670727,
+            "server_first_audio_seconds": 0.315495,
+            "wall_seconds": 0.5090009999694303,
+            "synthesis_seconds": 0.49744545796420425,
+            "audio_seconds": 14.991043083900227,
+            "synthesis_rtf": 0.03318284492814516,
+            "http_wall_rtf": 0.033953674678987265,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.3223067079670727,
+                "audio_seconds": 9.76140589569161,
+                "generation_seconds": 0.3137599999899976
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.5083583749947138,
+                "audio_seconds": 5.229637188208617,
+                "generation_seconds": 0.18368545797420666
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.3271004590205848,
+            "server_first_audio_seconds": 0.320088,
+            "wall_seconds": 0.5137437500525266,
+            "synthesis_seconds": 0.5021433330257423,
+            "audio_seconds": 14.991043083900227,
+            "synthesis_rtf": 0.033496223726087744,
+            "http_wall_rtf": 0.03427004693250909,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.3271004590205848,
+                "audio_seconds": 9.76140589569161,
+                "generation_seconds": 0.31837524997536093
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.5131297089974396,
+                "audio_seconds": 5.229637188208617,
+                "generation_seconds": 0.1837680830503814
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.32768837502226233,
+            "server_first_audio_seconds": 0.320498,
+            "wall_seconds": 0.5166347090271302,
+            "synthesis_seconds": 0.5048067089519463,
+            "audio_seconds": 14.991043083900227,
+            "synthesis_rtf": 0.0336738882095595,
+            "http_wall_rtf": 0.03446289268436396,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.32768837502226233,
+                "audio_seconds": 9.76140589569161,
+                "generation_seconds": 0.3188328339601867
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.5159383749705739,
+                "audio_seconds": 5.229637188208617,
+                "generation_seconds": 0.18597387499175966
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ],
+        "candidate": [
+          {
+            "first_audio_seconds": 0.2977339579956606,
+            "server_first_audio_seconds": 0.289029,
+            "wall_seconds": 0.47585054096998647,
+            "synthesis_seconds": 0.46211733302334324,
+            "audio_seconds": 14.991043083900227,
+            "synthesis_rtf": 0.03082622939824905,
+            "http_wall_rtf": 0.03174232361996416,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.2977339579956606,
+                "audio_seconds": 9.76140589569161,
+                "generation_seconds": 0.2873182080220431
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.47499499999685213,
+                "audio_seconds": 5.229637188208617,
+                "generation_seconds": 0.17479912500130013
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.29577933298423886,
+            "server_first_audio_seconds": 0.288567,
+            "wall_seconds": 0.465575665992219,
+            "synthesis_seconds": 0.4533592910156585,
+            "audio_seconds": 14.991043083900227,
+            "synthesis_rtf": 0.0302420110781049,
+            "http_wall_rtf": 0.031056922682867107,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.29577933298423886,
+                "audio_seconds": 9.76140589569161,
+                "generation_seconds": 0.286798249988351
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.46471462497720495,
+                "audio_seconds": 5.229637188208617,
+                "generation_seconds": 0.1665610410273075
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.29522141604684293,
+            "server_first_audio_seconds": 0.288158,
+            "wall_seconds": 0.4659186250064522,
+            "synthesis_seconds": 0.4539687079959549,
+            "audio_seconds": 14.991043083900227,
+            "synthesis_rtf": 0.030282663151271903,
+            "http_wall_rtf": 0.031079800277995995,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.29522141604684293,
+                "audio_seconds": 9.76140589569161,
+                "generation_seconds": 0.28637924999929965
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.465083958057221,
+                "audio_seconds": 5.229637188208617,
+                "generation_seconds": 0.16758945799665526
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.2931607080390677,
+            "server_first_audio_seconds": 0.285504,
+            "wall_seconds": 0.4614534580032341,
+            "synthesis_seconds": 0.4489574999897741,
+            "audio_seconds": 14.991043083900227,
+            "synthesis_rtf": 0.029948383009580984,
+            "http_wall_rtf": 0.030781944619905497,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.2931607080390677,
+                "audio_seconds": 9.76140589569161,
+                "generation_seconds": 0.28353433398297057
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.460864125052467,
+                "audio_seconds": 5.229637188208617,
+                "generation_seconds": 0.1654231660068035
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.2967914170003496,
+            "server_first_audio_seconds": 0.289728,
+            "wall_seconds": 0.4662434170022607,
+            "synthesis_seconds": 0.4546869580517523,
+            "audio_seconds": 14.991043083900227,
+            "synthesis_rtf": 0.030330575097877458,
+            "http_wall_rtf": 0.03110146601492909,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.2967914170003496,
+                "audio_seconds": 9.76140589569161,
+                "generation_seconds": 0.2880461660097353
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4655511250020936,
+                "audio_seconds": 5.229637188208617,
+                "generation_seconds": 0.16664079204201698
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.29819983296329156,
+            "server_first_audio_seconds": 0.290046,
+            "wall_seconds": 0.4705900409608148,
+            "synthesis_seconds": 0.4575053339940496,
+            "audio_seconds": 14.991043083900227,
+            "synthesis_rtf": 0.030518579089762726,
+            "http_wall_rtf": 0.03139141408153309,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.29819983296329156,
+                "audio_seconds": 9.76140589569161,
+                "generation_seconds": 0.28822112502530217
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4698697499698028,
+                "audio_seconds": 5.229637188208617,
+                "generation_seconds": 0.1692842089687474
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ]
+      },
+      "summary": {
+        "first_audio_seconds": {
+          "reference": 0.32699920851155184,
+          "candidate": 0.29628537499229424,
+          "paired_reductions_percent": [
+            9.518298908082802,
+            9.519369655420185,
+            8.994748282807441,
+            9.042939289672692,
+            9.265973551668981,
+            8.99895886052332
+          ],
+          "median_reduction_percent": 9.154456420670837
+        },
+        "synthesis_seconds": {
+          "reference": 0.5013802290195599,
+          "candidate": 0.4543278330238536,
+          "paired_reductions_percent": [
+            8.265012177549714,
+            9.439915583482318,
+            9.251224592384178,
+            9.747391839271613,
+            9.450762731038232,
+            9.370195387478397
+          ],
+          "median_reduction_percent": 9.405055485480357
+        },
+        "wall_seconds": {
+          "reference": 0.5134268125402741,
+          "candidate": 0.46608102100435644,
+          "paired_reductions_percent": [
+            7.8850156943411465,
+            9.263943523442563,
+            9.034580466689956,
+            9.341345492258712,
+            9.245919399585755,
+            8.912422503130236
+          ],
+          "median_reduction_percent": 9.140249933137856
+        }
+      },
+      "pcm16_bitidentical": true,
+      "pcm_sha256": "3117be1c580456719e1c2862b947e802d0dc8cb71fedac86629bd76f127039eb"
+    },
+    {
+      "voice": "M1",
+      "lang": "ko",
+      "speed": 2.0,
+      "runs": {
+        "reference": [
+          {
+            "first_audio_seconds": 0.23093324998626485,
+            "server_first_audio_seconds": 0.226529,
+            "wall_seconds": 0.3636109170038253,
+            "synthesis_seconds": 0.356155666988343,
+            "audio_seconds": 7.645510204081632,
+            "synthesis_rtf": 0.04658363634099994,
+            "http_wall_rtf": 0.04755875112294115,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.23093324998626485,
+                "audio_seconds": 5.030702947845805,
+                "generation_seconds": 0.22534337500110269
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.36326295899925753,
+                "audio_seconds": 2.6148072562358275,
+                "generation_seconds": 0.13081229198724031
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.22780079097719863,
+            "server_first_audio_seconds": 0.223487,
+            "wall_seconds": 0.36036287498427555,
+            "synthesis_seconds": 0.353120666986797,
+            "audio_seconds": 7.645510204081632,
+            "synthesis_rtf": 0.04618667133532567,
+            "http_wall_rtf": 0.047133921133463694,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.22780079097719863,
+                "audio_seconds": 5.030702947845805,
+                "generation_seconds": 0.222371416981332
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.359923499985598,
+                "audio_seconds": 2.6148072562358275,
+                "generation_seconds": 0.130749250005465
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.22902949998388067,
+            "server_first_audio_seconds": 0.224397,
+            "wall_seconds": 0.36009091697633266,
+            "synthesis_seconds": 0.3522437510546297,
+            "audio_seconds": 7.645510204081632,
+            "synthesis_rtf": 0.04607197448596443,
+            "http_wall_rtf": 0.04709835019042869,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.22902949998388067,
+                "audio_seconds": 5.030702947845805,
+                "generation_seconds": 0.22314991703024134
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3597560839843936,
+                "audio_seconds": 2.6148072562358275,
+                "generation_seconds": 0.12909383402438834
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.21973400004208088,
+            "server_first_audio_seconds": 0.21537,
+            "wall_seconds": 0.34728625003481284,
+            "synthesis_seconds": 0.34036900103092194,
+            "audio_seconds": 7.645510204081632,
+            "synthesis_rtf": 0.04451880802529209,
+            "http_wall_rtf": 0.04542355457839957,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.21973400004208088,
+                "audio_seconds": 5.030702947845805,
+                "generation_seconds": 0.21434416703414172
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.34694499999750406,
+                "audio_seconds": 2.6148072562358275,
+                "generation_seconds": 0.12602483399678022
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.2184220419730991,
+            "server_first_audio_seconds": 0.214563,
+            "wall_seconds": 0.3451432500150986,
+            "synthesis_seconds": 0.33870899997418746,
+            "audio_seconds": 7.645510204081632,
+            "synthesis_rtf": 0.0443016869944617,
+            "http_wall_rtf": 0.0451432593511994,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.2184220419730991,
+                "audio_seconds": 5.030702947845805,
+                "generation_seconds": 0.2135616249870509
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3447281669941731,
+                "audio_seconds": 2.6148072562358275,
+                "generation_seconds": 0.12514737498713657
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.22302254202077165,
+            "server_first_audio_seconds": 0.218694,
+            "wall_seconds": 0.3532920420402661,
+            "synthesis_seconds": 0.34578091697767377,
+            "audio_seconds": 7.645510204081632,
+            "synthesis_rtf": 0.045226663459696274,
+            "http_wall_rtf": 0.04620908645856722,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.22302254202077165,
+                "audio_seconds": 5.030702947845805,
+                "generation_seconds": 0.2175355419749394
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.35287212498951703,
+                "audio_seconds": 2.6148072562358275,
+                "generation_seconds": 0.12824537500273436
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ],
+        "candidate": [
+          {
+            "first_audio_seconds": 0.21122516604373232,
+            "server_first_audio_seconds": 0.206929,
+            "wall_seconds": 0.33014954102691263,
+            "synthesis_seconds": 0.3227452500141226,
+            "audio_seconds": 7.645510204081632,
+            "synthesis_rtf": 0.04221369684940343,
+            "http_wall_rtf": 0.0431821464119764,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.21122516604373232,
+                "audio_seconds": 5.030702947845805,
+                "generation_seconds": 0.20582050003577024
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3296919160056859,
+                "audio_seconds": 2.6148072562358275,
+                "generation_seconds": 0.11692474997835234
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.20341545896371827,
+            "server_first_audio_seconds": 0.198926,
+            "wall_seconds": 0.3233531669829972,
+            "synthesis_seconds": 0.3155448749894276,
+            "audio_seconds": 7.645510204081632,
+            "synthesis_rtf": 0.041271918624995206,
+            "http_wall_rtf": 0.04229320978610059,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.20341545896371827,
+                "audio_seconds": 5.030702947845805,
+                "generation_seconds": 0.19768275000387803
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3228527089813724,
+                "audio_seconds": 2.6148072562358275,
+                "generation_seconds": 0.1178621249855496
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.2077022090088576,
+            "server_first_audio_seconds": 0.203611,
+            "wall_seconds": 0.33038770902203396,
+            "synthesis_seconds": 0.32307662500534207,
+            "audio_seconds": 7.645510204081632,
+            "synthesis_rtf": 0.04225703927945376,
+            "http_wall_rtf": 0.043213297766008234,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.2077022090088576,
+                "audio_seconds": 5.030702947845805,
+                "generation_seconds": 0.20255800004815683
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.32998695905553177,
+                "audio_seconds": 2.6148072562358275,
+                "generation_seconds": 0.12051862495718524
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.2118974169716239,
+            "server_first_audio_seconds": 0.207491,
+            "wall_seconds": 0.3281415000092238,
+            "synthesis_seconds": 0.3205884579801932,
+            "audio_seconds": 7.645510204081632,
+            "synthesis_rtf": 0.041931597685795234,
+            "http_wall_rtf": 0.042919503244406396,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.2118974169716239,
+                "audio_seconds": 5.030702947845805,
+                "generation_seconds": 0.20638612494803965
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.327725459006615,
+                "audio_seconds": 2.6148072562358275,
+                "generation_seconds": 0.11420233303215355
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.2013735839864239,
+            "server_first_audio_seconds": 0.197244,
+            "wall_seconds": 0.319372083991766,
+            "synthesis_seconds": 0.3123085420229472,
+            "audio_seconds": 7.645510204081632,
+            "synthesis_rtf": 0.04084862012952624,
+            "http_wall_rtf": 0.04177250117608449,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.2013735839864239,
+                "audio_seconds": 5.030702947845805,
+                "generation_seconds": 0.19619066698942333
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3190222500124946,
+                "audio_seconds": 2.6148072562358275,
+                "generation_seconds": 0.11611787503352389
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.20276404201285914,
+            "server_first_audio_seconds": 0.198544,
+            "wall_seconds": 0.3213863749988377,
+            "synthesis_seconds": 0.31417625001631677,
+            "audio_seconds": 7.645510204081632,
+            "synthesis_rtf": 0.04109290833835924,
+            "http_wall_rtf": 0.0420359618155061,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.20276404201285914,
+                "audio_seconds": 5.030702947845805,
+                "generation_seconds": 0.197441374999471
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.32096937496680766,
+                "audio_seconds": 2.6148072562358275,
+                "generation_seconds": 0.11673487501684576
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ]
+      },
+      "summary": {
+        "first_audio_seconds": {
+          "reference": 0.22541166649898514,
+          "candidate": 0.20555883398628794,
+          "paired_reductions_percent": [
+            8.534104094453577,
+            10.704673986808578,
+            9.312027916283316,
+            3.566395309308623,
+            7.805282760233001,
+            9.083610932040088
+          ],
+          "median_reduction_percent": 8.808857513246831
+        },
+        "synthesis_seconds": {
+          "reference": 0.3490123340161517,
+          "candidate": 0.3180666664848104,
+          "paired_reductions_percent": [
+            9.380846655267161,
+            10.641062817989722,
+            8.280381401220104,
+            5.8114995757006955,
+            7.794436508404612,
+            9.140084200597354
+          ],
+          "median_reduction_percent": 8.710232800908729
+        },
+        "wall_seconds": {
+          "reference": 0.3566914795082994,
+          "candidate": 0.3257473334961105,
+          "paired_reductions_percent": [
+            9.202522369965216,
+            10.270122304605678,
+            8.24880788544049,
+            5.512671470197827,
+            7.466802848441989,
+            9.030961143979566
+          ],
+          "median_reduction_percent": 8.639884514710028
+        }
+      },
+      "pcm16_bitidentical": true,
+      "pcm_sha256": "3a2e6822f844175f437d728677fabf64becac6d945263bc9094a374a776d140e"
+    },
+    {
+      "voice": "M1",
+      "lang": "en",
+      "speed": 1.0,
+      "runs": {
+        "reference": [
+          {
+            "first_audio_seconds": 0.1849814170273021,
+            "server_first_audio_seconds": 0.18063,
+            "wall_seconds": 0.4880385000142269,
+            "synthesis_seconds": 0.4763203749898821,
+            "audio_seconds": 14.078956916099774,
+            "synthesis_rtf": 0.033832078457829026,
+            "http_wall_rtf": 0.03466439331568222,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.1849814170273021,
+                "audio_seconds": 5.48031746031746,
+                "generation_seconds": 0.17933608399471268
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.48698200000217184,
+                "audio_seconds": 8.598639455782314,
+                "generation_seconds": 0.29698429099516943
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.18639625003561378,
+            "server_first_audio_seconds": 0.182535,
+            "wall_seconds": 0.4811264169984497,
+            "synthesis_seconds": 0.470220333954785,
+            "audio_seconds": 14.078956916099774,
+            "synthesis_rtf": 0.033398804808975,
+            "http_wall_rtf": 0.03417344195778205,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.18639625003561378,
+                "audio_seconds": 5.48031746031746,
+                "generation_seconds": 0.18138962500961497
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.47991795802954584,
+                "audio_seconds": 8.598639455782314,
+                "generation_seconds": 0.28883070894517004
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.18642395903589204,
+            "server_first_audio_seconds": 0.182893,
+            "wall_seconds": 0.4805341250030324,
+            "synthesis_seconds": 0.4697163740056567,
+            "audio_seconds": 14.078956916099774,
+            "synthesis_rtf": 0.03336300954714335,
+            "http_wall_rtf": 0.03413137264831921,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.18642395903589204,
+                "audio_seconds": 5.48031746031746,
+                "generation_seconds": 0.18179591599619016
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.47949958400567994,
+                "audio_seconds": 8.598639455782314,
+                "generation_seconds": 0.28792045800946653
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.18282487499527633,
+            "server_first_audio_seconds": 0.178787,
+            "wall_seconds": 0.47456437500659376,
+            "synthesis_seconds": 0.4633250000188127,
+            "audio_seconds": 14.078956916099774,
+            "synthesis_rtf": 0.03290904310453458,
+            "http_wall_rtf": 0.03370735330995388,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.18282487499527633,
+                "audio_seconds": 5.48031746031746,
+                "generation_seconds": 0.1775032919831574
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4735414159949869,
+                "audio_seconds": 8.598639455782314,
+                "generation_seconds": 0.2858217080356553
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.18346400000154972,
+            "server_first_audio_seconds": 0.179817,
+            "wall_seconds": 0.47716091602342203,
+            "synthesis_seconds": 0.4660523740458302,
+            "audio_seconds": 14.078956916099774,
+            "synthesis_rtf": 0.03310276299751178,
+            "http_wall_rtf": 0.033891780397294353,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.18346400000154972,
+                "audio_seconds": 5.48031746031746,
+                "generation_seconds": 0.1786045409971848
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.47592341603012756,
+                "audio_seconds": 8.598639455782314,
+                "generation_seconds": 0.2874478330486454
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.18493733298964798,
+            "server_first_audio_seconds": 0.181265,
+            "wall_seconds": 0.48184562497772276,
+            "synthesis_seconds": 0.47144912503426895,
+            "audio_seconds": 14.078956916099774,
+            "synthesis_rtf": 0.033486083368516495,
+            "http_wall_rtf": 0.03422452585437744,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.18493733298964798,
+                "audio_seconds": 5.48031746031746,
+                "generation_seconds": 0.18012124998494983
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.48097466700710356,
+                "audio_seconds": 8.598639455782314,
+                "generation_seconds": 0.2913278750493191
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ],
+        "candidate": [
+          {
+            "first_audio_seconds": 0.17309345898684114,
+            "server_first_audio_seconds": 0.169007,
+            "wall_seconds": 0.4450012089801021,
+            "synthesis_seconds": 0.4334938750253059,
+            "audio_seconds": 14.078956916099774,
+            "synthesis_rtf": 0.03079019828021426,
+            "http_wall_rtf": 0.03160754107225286,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.17309345898684114,
+                "audio_seconds": 5.48031746031746,
+                "generation_seconds": 0.16775533399777487
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.443954374990426,
+                "audio_seconds": 8.598639455782314,
+                "generation_seconds": 0.26573854102753103
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.17299333296250552,
+            "server_first_audio_seconds": 0.168978,
+            "wall_seconds": 0.4378655419568531,
+            "synthesis_seconds": 0.4267048759502359,
+            "audio_seconds": 14.078956916099774,
+            "synthesis_rtf": 0.030307989327127218,
+            "http_wall_rtf": 0.031100708991881262,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.17299333296250552,
+                "audio_seconds": 5.48031746031746,
+                "generation_seconds": 0.16771516698645428
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.436799457995221,
+                "audio_seconds": 8.598639455782314,
+                "generation_seconds": 0.2589897089637816
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.17072229203768075,
+            "server_first_audio_seconds": 0.167121,
+            "wall_seconds": 0.43564354203408584,
+            "synthesis_seconds": 0.4249020420247689,
+            "audio_seconds": 14.078956916099774,
+            "synthesis_rtf": 0.030179937658512096,
+            "http_wall_rtf": 0.03094288480533046,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.17072229203768075,
+                "audio_seconds": 5.48031746031746,
+                "generation_seconds": 0.1660029999911785
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4344746250426397,
+                "audio_seconds": 8.598639455782314,
+                "generation_seconds": 0.2588990420335904
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.16921829199418426,
+            "server_first_audio_seconds": 0.165742,
+            "wall_seconds": 0.43236591696040705,
+            "synthesis_seconds": 0.42169770796317607,
+            "audio_seconds": 14.078956916099774,
+            "synthesis_rtf": 0.029952340253342927,
+            "http_wall_rtf": 0.030710081686945265,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.16921829199418426,
+                "audio_seconds": 5.48031746031746,
+                "generation_seconds": 0.16464887495385483
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.43136999994749203,
+                "audio_seconds": 8.598639455782314,
+                "generation_seconds": 0.25704883300932124
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.1735309170326218,
+            "server_first_audio_seconds": 0.169588,
+            "wall_seconds": 0.4398758330498822,
+            "synthesis_seconds": 0.4289586659288034,
+            "audio_seconds": 14.078956916099774,
+            "synthesis_rtf": 0.030468071497418557,
+            "http_wall_rtf": 0.03124349592595663,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.1735309170326218,
+                "audio_seconds": 5.48031746031746,
+                "generation_seconds": 0.16838554095011204
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4389578330446966,
+                "audio_seconds": 8.598639455782314,
+                "generation_seconds": 0.26057312497869134
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.17047008301597089,
+            "server_first_audio_seconds": 0.166767,
+            "wall_seconds": 0.4414343750104308,
+            "synthesis_seconds": 0.43033604201627895,
+            "audio_seconds": 14.078956916099774,
+            "synthesis_rtf": 0.030565903751305242,
+            "http_wall_rtf": 0.03135419602752214,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.17047008301597089,
+                "audio_seconds": 5.48031746031746,
+                "generation_seconds": 0.16559695900650695
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.44017220800742507,
+                "audio_seconds": 8.598639455782314,
+                "generation_seconds": 0.264739083009772
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ]
+      },
+      "summary": {
+        "first_audio_seconds": {
+          "reference": 0.18495937500847504,
+          "candidate": 0.17185781250009313,
+          "paired_reductions_percent": [
+            6.426568804317434,
+            7.190550813413587,
+            8.422558494848975,
+            7.4424134032328055,
+            5.41418641741378,
+            7.8227850157690515
+          ],
+          "median_reduction_percent": 7.316482108323196
+        },
+        "synthesis_seconds": {
+          "reference": 0.46996835398022085,
+          "candidate": 0.42783177093951963,
+          "paired_reductions_percent": [
+            8.991112329697405,
+            9.254269724697494,
+            9.540721690989661,
+            8.984469228715575,
+            7.959128669384086,
+            8.720576799246693
+          ],
+          "median_reduction_percent": 8.98779077920649
+        },
+        "wall_seconds": {
+          "reference": 0.48083027100074105,
+          "candidate": 0.43887068750336766,
+          "paired_reductions_percent": [
+            8.818421299317613,
+            8.991581736767529,
+            9.341809589207273,
+            8.892040841793147,
+            7.813943204792917,
+            8.386762870195263
+          ],
+          "median_reduction_percent": 8.85523107055538
+        }
+      },
+      "pcm16_bitidentical": true,
+      "pcm_sha256": "47a6c9d75b8acceeda03547c85f754f1e934cc2e8e2ed74b230f64a534c31ed0"
+    },
+    {
+      "voice": "M1",
+      "lang": "en",
+      "speed": 2.0,
+      "runs": {
+        "reference": [
+          {
+            "first_audio_seconds": 0.13230120803928003,
+            "server_first_audio_seconds": 0.129722,
+            "wall_seconds": 0.338297083042562,
+            "synthesis_seconds": 0.3313878760091029,
+            "audio_seconds": 7.189478458049886,
+            "synthesis_rtf": 0.04609345141552735,
+            "http_wall_rtf": 0.04705446786112543,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.13230120803928003,
+                "audio_seconds": 2.8901587301587304,
+                "generation_seconds": 0.1289192090043798
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3375838749925606,
+                "audio_seconds": 4.299319727891157,
+                "generation_seconds": 0.2024686670047231
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.13209570897743106,
+            "server_first_audio_seconds": 0.129602,
+            "wall_seconds": 0.33908958395477384,
+            "synthesis_seconds": 0.3325577500509098,
+            "audio_seconds": 7.189478458049886,
+            "synthesis_rtf": 0.046256171708610225,
+            "http_wall_rtf": 0.04716469851510625,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.13209570897743106,
+                "audio_seconds": 2.8901587301587304,
+                "generation_seconds": 0.12880575004965067
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.33837179199326783,
+                "audio_seconds": 4.299319727891157,
+                "generation_seconds": 0.20375200000125915
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.13189233402954414,
+            "server_first_audio_seconds": 0.129375,
+            "wall_seconds": 0.3379197919857688,
+            "synthesis_seconds": 0.33137712499592453,
+            "audio_seconds": 7.189478458049886,
+            "synthesis_rtf": 0.04609195603401378,
+            "http_wall_rtf": 0.04700198963770566,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.13189233402954414,
+                "audio_seconds": 2.8901587301587304,
+                "generation_seconds": 0.12854666699422523
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.33743404201231897,
+                "audio_seconds": 4.299319727891157,
+                "generation_seconds": 0.2028304580016993
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.1288840409833938,
+            "server_first_audio_seconds": 0.126298,
+            "wall_seconds": 0.33517908299108967,
+            "synthesis_seconds": 0.3283216659910977,
+            "audio_seconds": 7.189478458049886,
+            "synthesis_rtf": 0.045666965678641654,
+            "http_wall_rtf": 0.046620778537252265,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.1288840409833938,
+                "audio_seconds": 2.8901587301587304,
+                "generation_seconds": 0.12546350003685802
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3345239160116762,
+                "audio_seconds": 4.299319727891157,
+                "generation_seconds": 0.20285816595423967
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.13352825003676116,
+            "server_first_audio_seconds": 0.13071,
+            "wall_seconds": 0.33486075000837445,
+            "synthesis_seconds": 0.32783395802835,
+            "audio_seconds": 7.189478458049886,
+            "synthesis_rtf": 0.045599129330623725,
+            "http_wall_rtf": 0.04657650091898376,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.13352825003676116,
+                "audio_seconds": 2.8901587301587304,
+                "generation_seconds": 0.1298411670140922
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.33424712502164766,
+                "audio_seconds": 4.299319727891157,
+                "generation_seconds": 0.19799279101425782
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.13202187500428408,
+            "server_first_audio_seconds": 0.129446,
+            "wall_seconds": 0.33566591603448614,
+            "synthesis_seconds": 0.3287718339706771,
+            "audio_seconds": 7.189478458049886,
+            "synthesis_rtf": 0.04572958050977386,
+            "http_wall_rtf": 0.04668849319085852,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.13202187500428408,
+                "audio_seconds": 2.8901587301587304,
+                "generation_seconds": 0.12861670897109434
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3350268329959363,
+                "audio_seconds": 4.299319727891157,
+                "generation_seconds": 0.20015512499958277
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ],
+        "candidate": [
+          {
+            "first_audio_seconds": 0.12067466700682417,
+            "server_first_audio_seconds": 0.118087,
+            "wall_seconds": 0.30970837501809,
+            "synthesis_seconds": 0.3028927909908816,
+            "audio_seconds": 7.189478458049886,
+            "synthesis_rtf": 0.042130008839756636,
+            "http_wall_rtf": 0.04307800306033562,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.12067466700682417,
+                "audio_seconds": 2.8901587301587304,
+                "generation_seconds": 0.11727104103192687
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3090206250199117,
+                "audio_seconds": 4.299319727891157,
+                "generation_seconds": 0.18562174995895475
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.12037587503436953,
+            "server_first_audio_seconds": 0.117797,
+            "wall_seconds": 0.30620387505041435,
+            "synthesis_seconds": 0.2991876669693738,
+            "audio_seconds": 7.189478458049886,
+            "synthesis_rtf": 0.04161465518189022,
+            "http_wall_rtf": 0.04259055463300891,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.12037587503436953,
+                "audio_seconds": 2.8901587301587304,
+                "generation_seconds": 0.1169304579962045
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3053979999967851,
+                "audio_seconds": 4.299319727891157,
+                "generation_seconds": 0.18225720897316933
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.12408170796697959,
+            "server_first_audio_seconds": 0.121369,
+            "wall_seconds": 0.315082540968433,
+            "synthesis_seconds": 0.3081717509776354,
+            "audio_seconds": 7.189478458049886,
+            "synthesis_rtf": 0.04286427072225008,
+            "http_wall_rtf": 0.043825507344784194,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.12408170796697959,
+                "audio_seconds": 2.8901587301587304,
+                "generation_seconds": 0.12046716699842364
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3145522080012597,
+                "audio_seconds": 4.299319727891157,
+                "generation_seconds": 0.18770458397921175
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.11619595799129456,
+            "server_first_audio_seconds": 0.113668,
+            "wall_seconds": 0.2990632909932174,
+            "synthesis_seconds": 0.29209137498401105,
+            "audio_seconds": 7.189478458049886,
+            "synthesis_rtf": 0.04062761668851839,
+            "http_wall_rtf": 0.041597355460236955,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.11619595799129456,
+                "audio_seconds": 2.8901587301587304,
+                "generation_seconds": 0.11275737499818206
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.2984127080417238,
+                "audio_seconds": 4.299319727891157,
+                "generation_seconds": 0.179333999985829
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.12157483299961314,
+            "server_first_audio_seconds": 0.118899,
+            "wall_seconds": 0.30830179102486,
+            "synthesis_seconds": 0.3015186669654213,
+            "audio_seconds": 7.189478458049886,
+            "synthesis_rtf": 0.04193887897776759,
+            "http_wall_rtf": 0.04288235827171328,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.12157483299961314,
+                "audio_seconds": 2.8901587301587304,
+                "generation_seconds": 0.11795108299702406
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3077748750220053,
+                "audio_seconds": 4.299319727891157,
+                "generation_seconds": 0.18356758396839723
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.1187827920075506,
+            "server_first_audio_seconds": 0.116156,
+            "wall_seconds": 0.30083854199619964,
+            "synthesis_seconds": 0.29385675000958145,
+            "audio_seconds": 7.189478458049886,
+            "synthesis_rtf": 0.04087316649242576,
+            "http_wall_rtf": 0.04184427893505376,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.1187827920075506,
+                "audio_seconds": 2.8901587301587304,
+                "generation_seconds": 0.11532416602130979
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3002804580028169,
+                "audio_seconds": 4.299319727891157,
+                "generation_seconds": 0.17853258398827165
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ]
+      },
+      "summary": {
+        "first_audio_seconds": {
+          "reference": 0.13205879199085757,
+          "candidate": 0.12052527102059685,
+          "paired_reductions_percent": [
+            8.787932630973373,
+            8.872229108565444,
+            5.921971219961087,
+            9.844572605955172,
+            8.951976105323912,
+            10.027946502277663
+          ],
+          "median_reduction_percent": 8.912102606944678
+        },
+        "synthesis_seconds": {
+          "reference": 0.3300744794833008,
+          "candidate": 0.30035316696739756,
+          "paired_reductions_percent": [
+            8.598710780064433,
+            10.03437239890741,
+            7.0027084755999836,
+            11.034998527349394,
+            8.027018073781445,
+            10.61985254010832
+          ],
+          "median_reduction_percent": 9.316541589485922
+        },
+        "wall_seconds": {
+          "reference": 0.3367928540101275,
+          "candidate": 0.3072528330376372,
+          "paired_reductions_percent": [
+            8.450769887624244,
+            9.698236236222947,
+            6.7581868712494835,
+            10.775073335597252,
+            7.931344292470898,
+            10.375606331954291
+          ],
+          "median_reduction_percent": 9.074503061923595
+        }
+      },
+      "pcm16_bitidentical": true,
+      "pcm_sha256": "a4f9afee4bb69b920dea9431ebd6fc88040c49291141a190ce7d2d512d09f6e2"
+    },
+    {
+      "voice": "F1",
+      "lang": "ko",
+      "speed": 1.0,
+      "runs": {
+        "reference": [
+          {
+            "first_audio_seconds": 0.32004404201870784,
+            "server_first_audio_seconds": 0.311928,
+            "wall_seconds": 0.5003833750379272,
+            "synthesis_seconds": 0.4871264579705894,
+            "audio_seconds": 14.97845804988662,
+            "synthesis_rtf": 0.03252180273484671,
+            "http_wall_rtf": 0.033406868275183695,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.32004404201870784,
+                "audio_seconds": 9.751746031746032,
+                "generation_seconds": 0.309931791969575
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4998461250215769,
+                "audio_seconds": 5.2267120181405895,
+                "generation_seconds": 0.1771946660010144
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.3290874580270611,
+            "server_first_audio_seconds": 0.321243,
+            "wall_seconds": 0.5262524170102552,
+            "synthesis_seconds": 0.5131715000607073,
+            "audio_seconds": 14.97845804988662,
+            "synthesis_rtf": 0.03426063606491135,
+            "http_wall_rtf": 0.03513395138922452,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.3290874580270611,
+                "audio_seconds": 9.751746031746032,
+                "generation_seconds": 0.3194342920323834
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.5253860829980113,
+                "audio_seconds": 5.2267120181405895,
+                "generation_seconds": 0.19373720802832395
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.32020433398429304,
+            "server_first_audio_seconds": 0.312924,
+            "wall_seconds": 0.5058677499764599,
+            "synthesis_seconds": 0.4933295409427956,
+            "audio_seconds": 14.97845804988662,
+            "synthesis_rtf": 0.03293593634937141,
+            "http_wall_rtf": 0.033773019111288896,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.32020433398429304,
+                "audio_seconds": 9.751746031746032,
+                "generation_seconds": 0.311146457970608
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.5049195840256289,
+                "audio_seconds": 5.2267120181405895,
+                "generation_seconds": 0.18218308297218755
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.3165554580045864,
+            "server_first_audio_seconds": 0.30942,
+            "wall_seconds": 0.4980920000234619,
+            "synthesis_seconds": 0.48599591600941494,
+            "audio_seconds": 14.97845804988662,
+            "synthesis_rtf": 0.03244632487474862,
+            "http_wall_rtf": 0.03325389024454571,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.3165554580045864,
+                "audio_seconds": 9.751746031746032,
+                "generation_seconds": 0.3076782909920439
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.49737275001825765,
+                "audio_seconds": 5.2267120181405895,
+                "generation_seconds": 0.17831762501737103
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.31349212501663715,
+            "server_first_audio_seconds": 0.306432,
+            "wall_seconds": 0.49397845804924145,
+            "synthesis_seconds": 0.4820904590305872,
+            "audio_seconds": 14.97845804988662,
+            "synthesis_rtf": 0.032185586622131404,
+            "http_wall_rtf": 0.03297925970777617,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.31349212501663715,
+                "audio_seconds": 9.751746031746032,
+                "generation_seconds": 0.30465395899955183
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4931967500015162,
+                "audio_seconds": 5.2267120181405895,
+                "generation_seconds": 0.1774365000310354
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.32809225004166365,
+            "server_first_audio_seconds": 0.320316,
+            "wall_seconds": 0.5122619169997051,
+            "synthesis_seconds": 0.49943958304356784,
+            "audio_seconds": 14.97845804988662,
+            "synthesis_rtf": 0.03334385831840336,
+            "http_wall_rtf": 0.0341999099836303,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.32809225004166365,
+                "audio_seconds": 9.751746031746032,
+                "generation_seconds": 0.31829304102575406
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.5114873750135303,
+                "audio_seconds": 5.2267120181405895,
+                "generation_seconds": 0.18114654201781377
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ],
+        "candidate": [
+          {
+            "first_audio_seconds": 0.28370933298720047,
+            "server_first_audio_seconds": 0.276487,
+            "wall_seconds": 0.4491716669872403,
+            "synthesis_seconds": 0.4373596659861505,
+            "audio_seconds": 14.97845804988662,
+            "synthesis_rtf": 0.029199244977653832,
+            "http_wall_rtf": 0.029987844242127467,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.28370933298720047,
+                "audio_seconds": 9.751746031746032,
+                "generation_seconds": 0.27473050000844523
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.44856762496056035,
+                "audio_seconds": 5.2267120181405895,
+                "generation_seconds": 0.16262916597770527
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.28487845801282674,
+            "server_first_audio_seconds": 0.277719,
+            "wall_seconds": 0.4513452500104904,
+            "synthesis_seconds": 0.4392879579681903,
+            "audio_seconds": 14.97845804988662,
+            "synthesis_rtf": 0.029327982660505934,
+            "http_wall_rtf": 0.03013295817949077,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.28487845801282674,
+                "audio_seconds": 9.751746031746032,
+                "generation_seconds": 0.2759723329800181
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.45060416602063924,
+                "audio_seconds": 5.2267120181405895,
+                "generation_seconds": 0.1633156249881722
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.29375279101077467,
+            "server_first_audio_seconds": 0.286614,
+            "wall_seconds": 0.4616367499693297,
+            "synthesis_seconds": 0.44977308192756027,
+            "audio_seconds": 14.97845804988662,
+            "synthesis_rtf": 0.030027996234963907,
+            "http_wall_rtf": 0.030820044922636347,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.29375279101077467,
+                "audio_seconds": 9.751746031746032,
+                "generation_seconds": 0.2848875409690663
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4609547500149347,
+                "audio_seconds": 5.2267120181405895,
+                "generation_seconds": 0.16488554095849395
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.29167704202700406,
+            "server_first_audio_seconds": 0.284488,
+            "wall_seconds": 0.4594927080324851,
+            "synthesis_seconds": 0.4474122090032324,
+            "audio_seconds": 14.97845804988662,
+            "synthesis_rtf": 0.0298703783468966,
+            "http_wall_rtf": 0.030676903223423802,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.29167704202700406,
+                "audio_seconds": 9.751746031746032,
+                "generation_seconds": 0.2827073339722119
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4588018330396153,
+                "audio_seconds": 5.2267120181405895,
+                "generation_seconds": 0.1647048750310205
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.2841868330142461,
+            "server_first_audio_seconds": 0.277094,
+            "wall_seconds": 0.4486407499643974,
+            "synthesis_seconds": 0.4373555410420522,
+            "audio_seconds": 14.97845804988662,
+            "synthesis_rtf": 0.029198969585882223,
+            "http_wall_rtf": 0.029952398869775076,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.2841868330142461,
+                "audio_seconds": 9.751746031746032,
+                "generation_seconds": 0.2753996250103228
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4479992499691434,
+                "audio_seconds": 5.2267120181405895,
+                "generation_seconds": 0.16195591603172943
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.2949218330322765,
+            "server_first_audio_seconds": 0.287759,
+            "wall_seconds": 0.46703104104381055,
+            "synthesis_seconds": 0.4508661249419674,
+            "audio_seconds": 14.97845804988662,
+            "synthesis_rtf": 0.030100970569889886,
+            "http_wall_rtf": 0.031180181530591242,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.2949218330322765,
+                "audio_seconds": 9.751746031746032,
+                "generation_seconds": 0.2860278749722056
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.46564783301437274,
+                "audio_seconds": 5.2267120181405895,
+                "generation_seconds": 0.16483824996976182
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ]
+      },
+      "summary": {
+        "first_audio_seconds": {
+          "reference": 0.32012418800150044,
+          "candidate": 0.2882777500199154,
+          "paired_reductions_percent": [
+            11.3530340394162,
+            13.433814913298514,
+            8.260832276809815,
+            7.859101888308584,
+            9.34801536109905,
+            10.110088551367769
+          ],
+          "median_reduction_percent": 9.729051956233409
+        },
+        "synthesis_seconds": {
+          "reference": 0.4902279994566925,
+          "candidate": 0.44335008348571137,
+          "paired_reductions_percent": [
+            10.216400930421976,
+            14.397436740695213,
+            8.829079834139897,
+            7.939101077844257,
+            9.27936181904333,
+            9.725592394098081
+          ],
+          "median_reduction_percent": 9.502477106570705
+        },
+        "wall_seconds": {
+          "reference": 0.5031255625071935,
+          "candidate": 0.45541897902148776,
+          "paired_reductions_percent": [
+            10.234494310848197,
+            14.23407562198522,
+            8.74358960601629,
+            7.749430223564846,
+            9.178073931378727,
+            8.829638599880663
+          ],
+          "median_reduction_percent": 9.003856265629695
+        }
+      },
+      "pcm16_bitidentical": true,
+      "pcm_sha256": "17f485d80379d140895741d78b93347beddad8aa97f9148a16a948359b0f9794"
+    },
+    {
+      "voice": "F1",
+      "lang": "ko",
+      "speed": 2.0,
+      "runs": {
+        "reference": [
+          {
+            "first_audio_seconds": 0.2257400419912301,
+            "server_first_audio_seconds": 0.221623,
+            "wall_seconds": 0.3554944589850493,
+            "synthesis_seconds": 0.3483271659933962,
+            "audio_seconds": 7.639229024943311,
+            "synthesis_rtf": 0.045597162338771625,
+            "http_wall_rtf": 0.046535384372467785,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.2257400419912301,
+                "audio_seconds": 5.025873015873016,
+                "generation_seconds": 0.22051766596268862
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3550174169940874,
+                "audio_seconds": 2.6133560090702947,
+                "generation_seconds": 0.12780950003070757
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.22569791600108147,
+            "server_first_audio_seconds": 0.221134,
+            "wall_seconds": 0.35839150001993403,
+            "synthesis_seconds": 0.34900420799385756,
+            "audio_seconds": 7.639229024943311,
+            "synthesis_rtf": 0.04568578934527329,
+            "http_wall_rtf": 0.04691461649463947,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.22569791600108147,
+                "audio_seconds": 5.025873015873016,
+                "generation_seconds": 0.21989737497642636
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.35800804098835215,
+                "audio_seconds": 2.6133560090702947,
+                "generation_seconds": 0.1291068330174312
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.22848849999718368,
+            "server_first_audio_seconds": 0.2241,
+            "wall_seconds": 0.3586761250044219,
+            "synthesis_seconds": 0.35096112499013543,
+            "audio_seconds": 7.639229024943311,
+            "synthesis_rtf": 0.04594195616392583,
+            "http_wall_rtf": 0.046951874833610394,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.22848849999718368,
+                "audio_seconds": 5.025873015873016,
+                "generation_seconds": 0.22296849999111146
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3581466660252772,
+                "audio_seconds": 2.6133560090702947,
+                "generation_seconds": 0.12799262499902397
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.2306784589891322,
+            "server_first_audio_seconds": 0.226187,
+            "wall_seconds": 0.3666712499689311,
+            "synthesis_seconds": 0.359093707986176,
+            "audio_seconds": 7.639229024943311,
+            "synthesis_rtf": 0.04700653780815804,
+            "http_wall_rtf": 0.047998462773100596,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.2306784589891322,
+                "audio_seconds": 5.025873015873016,
+                "generation_seconds": 0.2249954169965349
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3661586249945685,
+                "audio_seconds": 2.6133560090702947,
+                "generation_seconds": 0.1340982909896411
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.2334380840184167,
+            "server_first_audio_seconds": 0.229148,
+            "wall_seconds": 0.37031175004085526,
+            "synthesis_seconds": 0.36290208401624113,
+            "audio_seconds": 7.639229024943311,
+            "synthesis_rtf": 0.047505066654148935,
+            "http_wall_rtf": 0.04847501610852716,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.2334380840184167,
+                "audio_seconds": 5.025873015873016,
+                "generation_seconds": 0.22796641703462228
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3698325000004843,
+                "audio_seconds": 2.6133560090702947,
+                "generation_seconds": 0.13493566698161885
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.23384399997303262,
+            "server_first_audio_seconds": 0.229528,
+            "wall_seconds": 0.37344141700305045,
+            "synthesis_seconds": 0.36598179198335856,
+            "audio_seconds": 7.639229024943311,
+            "synthesis_rtf": 0.04790821047364455,
+            "http_wall_rtf": 0.048884699723454314,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.23384399997303262,
+                "audio_seconds": 5.025873015873016,
+                "generation_seconds": 0.2283876669825986
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.37295345799066126,
+                "audio_seconds": 2.6133560090702947,
+                "generation_seconds": 0.13759412500075996
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ],
+        "candidate": [
+          {
+            "first_audio_seconds": 0.203537666995544,
+            "server_first_audio_seconds": 0.199321,
+            "wall_seconds": 0.3216991670196876,
+            "synthesis_seconds": 0.31446329300524667,
+            "audio_seconds": 7.639229024943311,
+            "synthesis_rtf": 0.04116427089415352,
+            "http_wall_rtf": 0.0421114704074571,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.203537666995544,
+                "audio_seconds": 5.025873015873016,
+                "generation_seconds": 0.19806008401792496
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.32134279201272875,
+                "audio_seconds": 2.6133560090702947,
+                "generation_seconds": 0.1164032089873217
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.20917020802153274,
+            "server_first_audio_seconds": 0.204934,
+            "wall_seconds": 0.3305383750121109,
+            "synthesis_seconds": 0.32236824999563396,
+            "audio_seconds": 7.639229024943311,
+            "synthesis_rtf": 0.042199055551685884,
+            "http_wall_rtf": 0.04326855156886251,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.20917020802153274,
+                "audio_seconds": 5.025873015873016,
+                "generation_seconds": 0.2037309579900466
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3301077079959214,
+                "audio_seconds": 2.6133560090702947,
+                "generation_seconds": 0.11863729200558737
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.20772504102205858,
+            "server_first_audio_seconds": 0.203259,
+            "wall_seconds": 0.3270905829849653,
+            "synthesis_seconds": 0.3192582079791464,
+            "audio_seconds": 7.639229024943311,
+            "synthesis_rtf": 0.041791940906172206,
+            "http_wall_rtf": 0.042817224345148175,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.20772504102205858,
+                "audio_seconds": 5.025873015873016,
+                "generation_seconds": 0.20206095796311274
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3265571660012938,
+                "audio_seconds": 2.6133560090702947,
+                "generation_seconds": 0.11719725001603365
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.20903833297779784,
+            "server_first_audio_seconds": 0.204775,
+            "wall_seconds": 0.3299587499932386,
+            "synthesis_seconds": 0.3226053330581635,
+            "audio_seconds": 7.639229024943311,
+            "synthesis_rtf": 0.04223009049798157,
+            "http_wall_rtf": 0.04319267676304379,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.20903833297779784,
+                "audio_seconds": 5.025873015873016,
+                "generation_seconds": 0.20360666705528274
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3294333330122754,
+                "audio_seconds": 2.6133560090702947,
+                "generation_seconds": 0.11899866600288078
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.21414754196302965,
+            "server_first_audio_seconds": 0.209701,
+            "wall_seconds": 0.33906362496782094,
+            "synthesis_seconds": 0.33155775000341237,
+            "audio_seconds": 7.639229024943311,
+            "synthesis_rtf": 0.043401991080621226,
+            "http_wall_rtf": 0.04438453459907063,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.21414754196302965,
+                "audio_seconds": 5.025873015873016,
+                "generation_seconds": 0.20850533299380913
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.338527207961306,
+                "audio_seconds": 2.6133560090702947,
+                "generation_seconds": 0.12305241700960323
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.2110907079768367,
+            "server_first_audio_seconds": 0.206834,
+            "wall_seconds": 0.33145216602133587,
+            "synthesis_seconds": 0.3242901249905117,
+            "audio_seconds": 7.639229024943311,
+            "synthesis_rtf": 0.042450635258041394,
+            "http_wall_rtf": 0.04338816979293215,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.2110907079768367,
+                "audio_seconds": 5.025873015873016,
+                "generation_seconds": 0.20573525002691895
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3310916660120711,
+                "audio_seconds": 2.6133560090702947,
+                "generation_seconds": 0.11855487496359274
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ]
+      },
+      "summary": {
+        "first_audio_seconds": {
+          "reference": 0.22958347949315794,
+          "candidate": 0.2091042704996653,
+          "paired_reductions_percent": [
+            9.835372935984775,
+            7.322933358174888,
+            9.087310291494333,
+            9.381077932532001,
+            8.263665346852811,
+            9.730115803193529
+          ],
+          "median_reduction_percent": 9.234194112013167
+        },
+        "synthesis_seconds": {
+          "reference": 0.3550274164881557,
+          "candidate": 0.32248679152689874,
+          "paired_reductions_percent": [
+            9.72185815354738,
+            7.63198763457098,
+            9.033170557531156,
+            10.161240399516325,
+            8.637132547143489,
+            11.391732568690916
+          ],
+          "median_reduction_percent": 9.377514355539269
+        },
+        "wall_seconds": {
+          "reference": 0.3626736874866765,
+          "candidate": 0.33024856250267476,
+          "paired_reductions_percent": [
+            9.506559416382633,
+            7.7717035717292156,
+            8.8061456610939,
+            10.012374839533567,
+            8.438329345365581,
+            11.243865589062818
+          ],
+          "median_reduction_percent": 9.156352538738266
+        }
+      },
+      "pcm16_bitidentical": true,
+      "pcm_sha256": "43525c70d309d2a6ab9a5a03ccbb54f482d979c193882fbcb60a606f3b3ec57e"
+    },
+    {
+      "voice": "F1",
+      "lang": "en",
+      "speed": 1.0,
+      "runs": {
+        "reference": [
+          {
+            "first_audio_seconds": 0.1868074160302058,
+            "server_first_audio_seconds": 0.183236,
+            "wall_seconds": 0.4948105000075884,
+            "synthesis_seconds": 0.48247424996225163,
+            "audio_seconds": 14.069705215419502,
+            "synthesis_rtf": 0.03429170992392155,
+            "http_wall_rtf": 0.03516850512726504,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.1868074160302058,
+                "audio_seconds": 5.477414965986394,
+                "generation_seconds": 0.1819732500007376
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4938682080246508,
+                "audio_seconds": 8.592290249433107,
+                "generation_seconds": 0.300500999961514
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.18645395804196596,
+            "server_first_audio_seconds": 0.182727,
+            "wall_seconds": 0.4871626250096597,
+            "synthesis_seconds": 0.47559058404294774,
+            "audio_seconds": 14.069705215419502,
+            "synthesis_rtf": 0.033802455471613625,
+            "http_wall_rtf": 0.03462493474815381,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.18645395804196596,
+                "audio_seconds": 5.477414965986394,
+                "generation_seconds": 0.18153191701276228
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4858770410064608,
+                "audio_seconds": 8.592290249433107,
+                "generation_seconds": 0.29405866703018546
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.18560616701142862,
+            "server_first_audio_seconds": 0.181859,
+            "wall_seconds": 0.4896550420089625,
+            "synthesis_seconds": 0.47887079103384167,
+            "audio_seconds": 14.069705215419502,
+            "synthesis_rtf": 0.034035595181413594,
+            "http_wall_rtf": 0.03480208252496518,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.18560616701142862,
+                "audio_seconds": 5.477414965986394,
+                "generation_seconds": 0.1806625000317581
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4885608329786919,
+                "audio_seconds": 8.592290249433107,
+                "generation_seconds": 0.29820829100208357
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.1935188749921508,
+            "server_first_audio_seconds": 0.190157,
+            "wall_seconds": 0.4772544579464011,
+            "synthesis_seconds": 0.46711454197065905,
+            "audio_seconds": 14.069705215419502,
+            "synthesis_rtf": 0.0332000233706909,
+            "http_wall_rtf": 0.033920714801000985,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.1935188749921508,
+                "audio_seconds": 5.477414965986394,
+                "generation_seconds": 0.18907429196406156
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.47623970796121284,
+                "audio_seconds": 8.592290249433107,
+                "generation_seconds": 0.2780402500065975
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.1764053750084713,
+            "server_first_audio_seconds": 0.172737,
+            "wall_seconds": 0.4782082089805044,
+            "synthesis_seconds": 0.46744208404561505,
+            "audio_seconds": 14.069705215419502,
+            "synthesis_rtf": 0.033223303323606825,
+            "http_wall_rtf": 0.03398850236438633,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.1764053750084713,
+                "audio_seconds": 5.477414965986394,
+                "generation_seconds": 0.17148966703098267
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4769466249854304,
+                "audio_seconds": 8.592290249433107,
+                "generation_seconds": 0.2959524170146324
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.186331250006333,
+            "server_first_audio_seconds": 0.182469,
+            "wall_seconds": 0.48502987500978634,
+            "synthesis_seconds": 0.47400195797672495,
+            "audio_seconds": 14.069705215419502,
+            "synthesis_rtf": 0.033689544359269796,
+            "http_wall_rtf": 0.03447335019345142,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.186331250006333,
+                "audio_seconds": 5.477414965986394,
+                "generation_seconds": 0.1812924579717219
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.48399870801949874,
+                "audio_seconds": 8.592290249433107,
+                "generation_seconds": 0.29270950000500306
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ],
+        "candidate": [
+          {
+            "first_audio_seconds": 0.1747765830368735,
+            "server_first_audio_seconds": 0.171072,
+            "wall_seconds": 0.4488014579983428,
+            "synthesis_seconds": 0.43511595798190683,
+            "audio_seconds": 14.069705215419502,
+            "synthesis_rtf": 0.030925733789009837,
+            "http_wall_rtf": 0.031898426521863796,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.1747765830368735,
+                "audio_seconds": 5.477414965986394,
+                "generation_seconds": 0.16986683302093297
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.44755258300574496,
+                "audio_seconds": 8.592290249433107,
+                "generation_seconds": 0.26524912496097386
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.1715277080074884,
+            "server_first_audio_seconds": 0.167588,
+            "wall_seconds": 0.4440975830075331,
+            "synthesis_seconds": 0.4328658329905011,
+            "audio_seconds": 14.069705215419502,
+            "synthesis_rtf": 0.03076580684264143,
+            "http_wall_rtf": 0.03156410004388936,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.1715277080074884,
+                "audio_seconds": 5.477414965986394,
+                "generation_seconds": 0.166328291001264
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4431971670128405,
+                "audio_seconds": 8.592290249433107,
+                "generation_seconds": 0.26653754198923707
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.17577816697303206,
+            "server_first_audio_seconds": 0.171935,
+            "wall_seconds": 0.4537470839568414,
+            "synthesis_seconds": 0.4428407499799505,
+            "audio_seconds": 14.069705215419502,
+            "synthesis_rtf": 0.03147477102040668,
+            "http_wall_rtf": 0.032249935376013665,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.17577816697303206,
+                "audio_seconds": 5.477414965986394,
+                "generation_seconds": 0.17070870799943805
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.45291241694940254,
+                "audio_seconds": 8.592290249433107,
+                "generation_seconds": 0.27213204198051244
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.174234583042562,
+            "server_first_audio_seconds": 0.170524,
+            "wall_seconds": 0.4459369580144994,
+            "synthesis_seconds": 0.434946957975626,
+            "audio_seconds": 14.069705215419502,
+            "synthesis_rtf": 0.030913722165191622,
+            "http_wall_rtf": 0.03169483306059468,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.174234583042562,
+                "audio_seconds": 5.477414965986394,
+                "generation_seconds": 0.16931479098275304
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.44479345803847536,
+                "audio_seconds": 8.592290249433107,
+                "generation_seconds": 0.26563216699287295
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.17785995797021315,
+            "server_first_audio_seconds": 0.174055,
+            "wall_seconds": 0.4504525829688646,
+            "synthesis_seconds": 0.4395754589349963,
+            "audio_seconds": 14.069705215419502,
+            "synthesis_rtf": 0.031242691456907678,
+            "http_wall_rtf": 0.03201577972473774,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.17785995797021315,
+                "audio_seconds": 5.477414965986394,
+                "generation_seconds": 0.17284991696942598
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.4495567500125617,
+                "audio_seconds": 8.592290249433107,
+                "generation_seconds": 0.2667255419655703
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.17879533302038908,
+            "server_first_audio_seconds": 0.174907,
+            "wall_seconds": 0.44751579203875735,
+            "synthesis_seconds": 0.43653424992226064,
+            "audio_seconds": 14.069705215419502,
+            "synthesis_rtf": 0.031026538455393285,
+            "http_wall_rtf": 0.03180704820654725,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.17879533302038908,
+                "audio_seconds": 5.477414965986394,
+                "generation_seconds": 0.17368216696195304
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.44662075000815094,
+                "audio_seconds": 8.592290249433107,
+                "generation_seconds": 0.2628520829603076
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ]
+      },
+      "summary": {
+        "first_audio_seconds": {
+          "reference": 0.18639260402414948,
+          "candidate": 0.17527737500495277,
+          "paired_reductions_percent": [
+            6.440233074787017,
+            8.005327530305395,
+            5.295082699375719,
+            9.965070306641143,
+            -0.8245683906581647,
+            4.044365604635713
+          ],
+          "median_reduction_percent": 5.867657887081368
+        },
+        "synthesis_seconds": {
+          "reference": 0.47479627100983635,
+          "candidate": 0.43582510395208374,
+          "paired_reductions_percent": [
+            9.815713892306189,
+            8.983514915128854,
+            7.523958806530118,
+            6.886444566534944,
+            5.961513963278375,
+            7.904547106597414
+          ],
+          "median_reduction_percent": 7.714252956563766
+        },
+        "wall_seconds": {
+          "reference": 0.486096250009723,
+          "candidate": 0.4481586250185501,
+          "paired_reductions_percent": [
+            9.298315619523034,
+            8.839972483782532,
+            7.333317329848688,
+            6.562013075091877,
+            5.804088154574394,
+            7.7343860458640945
+          ],
+          "median_reduction_percent": 7.533851687856391
+        }
+      },
+      "pcm16_bitidentical": true,
+      "pcm_sha256": "6082445edf471b2971fd0a0c0e2acc2f6ce7dd07e63c8d3803ed7c432bcae8a0"
+    },
+    {
+      "voice": "F1",
+      "lang": "en",
+      "speed": 2.0,
+      "runs": {
+        "reference": [
+          {
+            "first_audio_seconds": 0.13211912498809397,
+            "server_first_audio_seconds": 0.129637,
+            "wall_seconds": 0.3440699159982614,
+            "synthesis_seconds": 0.3364312910125591,
+            "audio_seconds": 7.18485260770975,
+            "synthesis_rtf": 0.04682507900740363,
+            "http_wall_rtf": 0.047888235818373655,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.13211912498809397,
+                "audio_seconds": 2.888707482993197,
+                "generation_seconds": 0.12883729103486985
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3434372909832746,
+                "audio_seconds": 4.296145124716554,
+                "generation_seconds": 0.20759399997768924
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.12365445803152397,
+            "server_first_audio_seconds": 0.121395,
+            "wall_seconds": 0.3185665000346489,
+            "synthesis_seconds": 0.3125709160231054,
+            "audio_seconds": 7.18485260770975,
+            "synthesis_rtf": 0.04350415145436654,
+            "http_wall_rtf": 0.04433862702942704,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.12365445803152397,
+                "audio_seconds": 2.888707482993197,
+                "generation_seconds": 0.120636707986705
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.31801650003762916,
+                "audio_seconds": 4.296145124716554,
+                "generation_seconds": 0.19193420803640038
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.12417662498774007,
+            "server_first_audio_seconds": 0.121848,
+            "wall_seconds": 0.3172079169889912,
+            "synthesis_seconds": 0.31111600005533546,
+            "audio_seconds": 7.18485260770975,
+            "synthesis_rtf": 0.04330165377665375,
+            "http_wall_rtf": 0.044149537131577245,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.12417662498774007,
+                "audio_seconds": 2.888707482993197,
+                "generation_seconds": 0.12107566703343764
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3166567499865778,
+                "audio_seconds": 4.296145124716554,
+                "generation_seconds": 0.19004033302189782
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.14233987499028444,
+            "server_first_audio_seconds": 0.139707,
+            "wall_seconds": 0.35422654199646786,
+            "synthesis_seconds": 0.3472602090332657,
+            "audio_seconds": 7.18485260770975,
+            "synthesis_rtf": 0.048332266226399134,
+            "http_wall_rtf": 0.04930185229079896,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.14233987499028444,
+                "audio_seconds": 2.888707482993197,
+                "generation_seconds": 0.1388552500284277
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.3536093750153668,
+                "audio_seconds": 4.296145124716554,
+                "generation_seconds": 0.20840495900483802
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.13467029196908697,
+            "server_first_audio_seconds": 0.132204,
+            "wall_seconds": 0.3437527079950087,
+            "synthesis_seconds": 0.33700404199771583,
+            "audio_seconds": 7.18485260770975,
+            "synthesis_rtf": 0.04690479546317924,
+            "http_wall_rtf": 0.04784408626923574,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.13467029196908697,
+                "audio_seconds": 2.888707482993197,
+                "generation_seconds": 0.13135916698956862
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.34307304199319333,
+                "audio_seconds": 4.296145124716554,
+                "generation_seconds": 0.2056448750081472
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.13404116703895852,
+            "server_first_audio_seconds": 0.131525,
+            "wall_seconds": 0.3424460419919342,
+            "synthesis_seconds": 0.33602195797720924,
+            "audio_seconds": 7.18485260770975,
+            "synthesis_rtf": 0.046768107339688336,
+            "http_wall_rtf": 0.04766222227363027,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.13404116703895852,
+                "audio_seconds": 2.888707482993197,
+                "generation_seconds": 0.13070662500103936
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.34195487503893673,
+                "audio_seconds": 4.296145124716554,
+                "generation_seconds": 0.20531533297616988
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ],
+        "candidate": [
+          {
+            "first_audio_seconds": 0.11583308299304917,
+            "server_first_audio_seconds": 0.11351,
+            "wall_seconds": 0.2953779999515973,
+            "synthesis_seconds": 0.28924950101645663,
+            "audio_seconds": 7.18485260770975,
+            "synthesis_rtf": 0.040258237267953925,
+            "http_wall_rtf": 0.04111121216803253,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.11583308299304917,
+                "audio_seconds": 2.888707482993197,
+                "generation_seconds": 0.11276141699636355
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.29476599994814023,
+                "audio_seconds": 4.296145124716554,
+                "generation_seconds": 0.17648808402009308
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.1126395839964971,
+            "server_first_audio_seconds": 0.110354,
+            "wall_seconds": 0.28740637499140576,
+            "synthesis_seconds": 0.281008500023745,
+            "audio_seconds": 7.18485260770975,
+            "synthesis_rtf": 0.03911124074030511,
+            "http_wall_rtf": 0.040001707854521965,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.1126395839964971,
+                "audio_seconds": 2.888707482993197,
+                "generation_seconds": 0.10955066699534655
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.2866220419527963,
+                "audio_seconds": 4.296145124716554,
+                "generation_seconds": 0.17145783302839845
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.11252016696380451,
+            "server_first_audio_seconds": 0.110276,
+            "wall_seconds": 0.28824849997181445,
+            "synthesis_seconds": 0.2824072079965845,
+            "audio_seconds": 7.18485260770975,
+            "synthesis_rtf": 0.03930591529373138,
+            "http_wall_rtf": 0.04011891624088539,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.11252016696380451,
+                "audio_seconds": 2.888707482993197,
+                "generation_seconds": 0.10951862501678988
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.2877222920069471,
+                "audio_seconds": 4.296145124716554,
+                "generation_seconds": 0.1728885829797946
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.11337116605136544,
+            "server_first_audio_seconds": 0.111139,
+            "wall_seconds": 0.30448391602840275,
+            "synthesis_seconds": 0.2974962090374902,
+            "audio_seconds": 7.18485260770975,
+            "synthesis_rtf": 0.04140602810950639,
+            "http_wall_rtf": 0.04237858904741823,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.11337116605136544,
+                "audio_seconds": 2.888707482993197,
+                "generation_seconds": 0.11037624999880791
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.30369158304529265,
+                "audio_seconds": 4.296145124716554,
+                "generation_seconds": 0.18711995903868228
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.1200769169954583,
+            "server_first_audio_seconds": 0.117721,
+            "wall_seconds": 0.3066344169783406,
+            "synthesis_seconds": 0.3000916250166483,
+            "audio_seconds": 7.18485260770975,
+            "synthesis_rtf": 0.04176726251762397,
+            "http_wall_rtf": 0.042677899425425186,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.1200769169954583,
+                "audio_seconds": 2.888707482993197,
+                "generation_seconds": 0.11689337500138208
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.30600041698198766,
+                "audio_seconds": 4.296145124716554,
+                "generation_seconds": 0.18319825001526624
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          },
+          {
+            "first_audio_seconds": 0.12586391699733213,
+            "server_first_audio_seconds": 0.123154,
+            "wall_seconds": 0.3188439169898629,
+            "synthesis_seconds": 0.3116311260382645,
+            "audio_seconds": 7.18485260770975,
+            "synthesis_rtf": 0.04337334988665833,
+            "http_wall_rtf": 0.0443772383928552,
+            "parts": [
+              {
+                "index": 0,
+                "arrival_seconds": 0.12586391699733213,
+                "audio_seconds": 2.888707482993197,
+                "generation_seconds": 0.12225579202640802
+              },
+              {
+                "index": 1,
+                "arrival_seconds": 0.31813904200680554,
+                "audio_seconds": 4.296145124716554,
+                "generation_seconds": 0.18937533401185647
+              }
+            ],
+            "first_audio_precedes_completion": true,
+            "playback_simulation_initial_buffer_seconds": 0.1,
+            "simulated_underrun_seconds": 0,
+            "note": "Playback buffer simulation from complete SSE audio-event arrivals; not an audio-device underrun measurement."
+          }
+        ]
+      },
+      "summary": {
+        "first_audio_seconds": {
+          "reference": 0.13308014601352625,
+          "candidate": 0.1146021245222073,
+          "paired_reductions_percent": [
+            12.326786145845603,
+            8.907785623239551,
+            9.38699857971369,
+            20.351787537326626,
+            10.836372863124499,
+            6.100551212934235
+          ],
+          "median_reduction_percent": 10.111685721419095
+        },
+        "synthesis_seconds": {
+          "reference": 0.33622662449488416,
+          "candidate": 0.2933728550269734,
+          "paired_reductions_percent": [
+            14.024197884239353,
+            10.097681640036937,
+            9.227681010827094,
+            14.330464217110572,
+            10.95310808803821,
+            7.258701807992873
+          ],
+          "median_reduction_percent": 10.525394864037573
+        },
+        "wall_seconds": {
+          "reference": 0.34309937499347143,
+          "candidate": 0.29993095799,
+          "paired_reductions_percent": [
+            14.151750496811866,
+            9.781356495379779,
+            9.129474854242615,
+            14.042602704955154,
+            10.797963231523699,
+            6.892217198593631
+          ],
+          "median_reduction_percent": 10.289659863451739
+        }
+      },
+      "pcm16_bitidentical": true,
+      "pcm_sha256": "5d9c0609a125a7674f4cfb96bd8ac0ad55c2dcae8e23a43ac914e0f4bab3ce60"
+    }
+  ],
+  "complete": true,
+  "servers_stopped": true
+}

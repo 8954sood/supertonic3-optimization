@@ -1,0 +1,4 @@
+{
+  "bias_gelu_reproduction_matches_measured_graph": true,
+  "vector_sha256": "ef8e1fb963de709bc0bf76244fcccd251e9c597436f2b00aa53aca7de4466a2c"
+}

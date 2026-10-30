@@ -1,0 +1,53 @@
+{
+  "note": "Remove only generated unselected round13 packages; frozen public sources, round12 baseline and selected row-norm package are retained. Byte count is file sizes of exclusively-owned inodes, not measured APFS space reclaimed.",
+  "models": [
+    {
+      "model": "round13-gelu-layout",
+      "graphs": {
+        "vector_estimator.onnx": "086b3f561ecf821d28c7f749b60e9327ca4dc357b3e4159a0da9b1342ad0be30",
+        "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+        "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+        "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6",
+        "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251"
+      },
+      "files": 22
+    },
+    {
+      "model": "round13-bias-gelu",
+      "graphs": {
+        "vector_estimator.onnx": "ef8e1fb963de709bc0bf76244fcccd251e9c597436f2b00aa53aca7de4466a2c",
+        "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+        "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+        "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6",
+        "condition.onnx": "4f5f9918423c0a9dbb46bfd8003f0dacb3f6a4a607c2ce2399153a1c79f90251"
+      },
+      "files": 22
+    },
+    {
+      "model": "round13-batch-one-cache",
+      "graphs": {
+        "vector_estimator.onnx": "09ac05e488e92b964fbc42bb92f22ed381e20447e911475b420f8c2395be9d7c",
+        "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+        "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+        "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6",
+        "condition.onnx": "ed89e4c142f5214e819b513f5aae45b991515a208814d74d8ac097ef6d581c2a"
+      },
+      "files": 22
+    },
+    {
+      "model": "round13-batch-step-cache",
+      "graphs": {
+        "vector_estimator.onnx": "268e2de98b713e07b8553dfecacf19d69694101642c7d862652319d28153c3bc",
+        "duration_predictor.onnx": "f9d15d763fdee4daae4b6d8690bea57bd719c59309e3082b5e1446a21bcd08da",
+        "step_condition.onnx": "b780e606ac398fd2fb944690b1883b810a3137ef3004a5f054c4a37020ca2169",
+        "text_encoder.onnx": "7d87efe0d4a0e4e98e4c011f60c845f68b3618669b9161287440b78d01863c1a",
+        "vocoder.onnx": "0f62e11135aefa73c3e3f76321cb337655227026182c14ce0e5f2e5731b506c6",
+        "condition.onnx": "ed89e4c142f5214e819b513f5aae45b991515a208814d74d8ac097ef6d581c2a"
+      },
+      "files": 23
+    }
+  ],
+  "exclusive_inode_file_bytes": 190417145,
+  "removed_debug_native_libraries": 3,
+  "removed_initial_package_test_archive": true
+}

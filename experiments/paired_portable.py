@@ -40,6 +40,7 @@ def main():
                     wave,_=e.synthesize(text,lang,8,speed=speed,voice_style=styles[name])
                     if expected is None:expected=wave.copy()
                     np.testing.assert_array_equal(expected,wave)
+                    if expected.tobytes()!=wave.tobytes():raise AssertionError('Float32 byte mismatch')
                 runs={name:[] for name in engines}
                 for pair in range(a.pairs):
                     names=list(engines)
@@ -49,6 +50,7 @@ def main():
                         wave,metrics=engines[name].synthesize(text,lang,8,speed=speed,voice_style=styles[name])
                         metrics['process_cpu_seconds']=time.process_time()-began
                         np.testing.assert_array_equal(expected,wave)
+                        if expected.tobytes()!=wave.tobytes():raise AssertionError('Float32 byte mismatch')
                         runs[name].append(metrics)
                 speedups=[r['seconds']/c['seconds'] for r,c in zip(runs['reference'],runs['candidate'])]
                 row=dict(case=case,voice=voice,speed=speed,float32_bitidentical=True,

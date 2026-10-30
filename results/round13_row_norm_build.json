@@ -1,0 +1,11 @@
+{
+  "nodes": 36,
+  "source_vector_sha256": "0a4102968d90c7f2ae307e5ba7771b1ce600d0cde213433d145e9903b37523a2",
+  "initializer_bitidentity": true,
+  "width": 512,
+  "target": "ARM64; target ORT compatibility check required",
+  "shared_assets": true,
+  "final_builder_reproduces_measured_graph_bytes": true,
+  "vector_sha256": "53c250af66ed48df9338b40e1cc4e30e0dbcfd74c04e2ce147c4bc210593c72b",
+  "source_unchanged": true
+}

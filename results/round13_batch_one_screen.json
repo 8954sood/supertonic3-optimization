@@ -1,0 +1,19 @@
+{
+  "note": "Cold screening only, not speed proof",
+  "rows": [
+    {
+      "case": "ko_short",
+      "equal": true,
+      "max_error": 0.0,
+      "base_seconds": 0.2163391659851186,
+      "candidate_seconds": 0.19059912499506027
+    },
+    {
+      "case": "en_short",
+      "equal": true,
+      "max_error": 0.0,
+      "base_seconds": 0.17993954196572304,
+      "candidate_seconds": 0.18053637497359887
+    }
+  ]
+}
