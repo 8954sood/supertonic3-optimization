@@ -1,0 +1,61 @@
+{
+  "variants": [
+    {
+      "name": "v1",
+      "model": "models/v4",
+      "library": "../native/libexact_int8_v1.so"
+    },
+    {
+      "name": "v2",
+      "model": "models/v4",
+      "library": "../native/libexact_reference_round9.so"
+    },
+    {
+      "name": "v3-experimental",
+      "model": "models/v4",
+      "library": "native/libexact_round18_v3.so"
+    },
+    {
+      "name": "v4",
+      "model": "models/v4",
+      "library": "../native/libexact_v4.so"
+    },
+    {
+      "name": "v5-kernel",
+      "model": "models/v4",
+      "library": "native/libexact_v5_candidate.so"
+    },
+    {
+      "name": "v5-package",
+      "model": "models/v5",
+      "library": "native/libexact_v5_candidate.so"
+    }
+  ],
+  "groups": [
+    {
+      "name": "main",
+      "variants": [
+        "v1",
+        "v2",
+        "v3-experimental",
+        "v4",
+        "v5-kernel",
+        "v5-package"
+      ],
+      "speeds": [
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "name": "historical",
+      "variants": [
+        "v2",
+        "v5-package"
+      ],
+      "speeds": [
+        1.05
+      ]
+    }
+  ]
+}

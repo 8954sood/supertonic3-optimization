@@ -1,0 +1,54 @@
+{
+  "sources": {
+    "v1": {
+      "commit": "63447b1dc6680df5c87390ad546869bf07cc93d1",
+      "source": "native/exact_int8.c",
+      "source_sha256": "5c6373764ded5cf6f1781ca525844eff1d97dca51ba71d294b6fdf1ae802a2bc"
+    },
+    "v2": {
+      "commit": "35d7ffc013bf12f05b094588eadd671f29a5dfc8",
+      "source": "native/exact_int8.c",
+      "source_sha256": "9365017be861fb0de26ffa5ec670b60414f69a67769efba31b33f41a8d535f93"
+    },
+    "v3-experimental": {
+      "commit": "b7a9bb75da5ee61f785c046a51bb1419ea38b0ea",
+      "source": "experiments/exact_int8_v3.c",
+      "source_sha256": "7161a2cf9d6ec846b1f95d83db03a15ac6a32f602dffe5fa855fdee07f6bd673"
+    },
+    "v4": {
+      "commit": "b7a9bb75da5ee61f785c046a51bb1419ea38b0ea",
+      "source": "native/exact_int8_v4.c",
+      "source_sha256": "f8c863545febca8570bf026c5adb60c90464f919a9bc44d2defd5840ae832162"
+    },
+    "v5": {
+      "commit": "b7a9bb75da5ee61f785c046a51bb1419ea38b0ea",
+      "source": "native/exact_int8.c",
+      "source_sha256": "2f4a362467fcb11b0389c199da34e91aac1c74bd3d8dea3881a4529b40d0aff3"
+    }
+  },
+  "v2_selected_binary_sha256": "7beea5a751d8572338417934201b9e21d775fa124601e5bd2c11926c494c3dc1",
+  "v2_selected_receipt": "results/round6_engine_build_v2.json",
+  "v2_alternate_preflight_binary_sha256": "4237f3af0af50636ad9447b899cd127a93ddc019a4d7715d4d9c9e5499e99096",
+  "preflight": {
+    "complete": false,
+    "completed_processes": 11,
+    "raw_sha256": "897a47104527d56e1b092bf2c97f6b0b2f7c0a419de8a2d1a248d6991de6f191",
+    "reason_excluded": "Alternate legacy v2 build differs from the published round6 build. Entire incomplete preflight excluded, regardless of timing; full balanced protocol restarted with published v2 hash. Raw preflight retained privately locally and on the task server."
+  },
+  "v3_build": {
+    "target": "x86_64-linux-gnu.2.28",
+    "cpu": "znver1",
+    "flags": [
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fPIC",
+      "-shared"
+    ],
+    "source": "experiments/exact_int8_v3.c",
+    "binary_sha256": "f98749580b07e52f454171ef2f7f2ed326eb5a03094dd2898cc69655025922f8",
+    "source_sha256": "7161a2cf9d6ec846b1f95d83db03a15ac6a32f602dffe5fa855fdee07f6bd673",
+    "validation": "results/round18_v3_abi.json"
+  }
+}

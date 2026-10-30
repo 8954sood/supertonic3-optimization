@@ -1,0 +1,10 @@
+{
+  "completed_processes": 84,
+  "timed_syntheses": 168,
+  "all_original_benchmark_fields_reconstructed": true,
+  "all_rtfs_recomputed_from_seconds_and_audio_samples": true,
+  "all_summary_medians_recomputed": true,
+  "all_inference_affinities_zero_nice19_threads1": true,
+  "all_main_orders_position_balanced": true,
+  "raw_sha256": "07a98a0823224c62bcb4854af91b43afed2bfcd47c355c0e5c2a2b12334e1528"
+}

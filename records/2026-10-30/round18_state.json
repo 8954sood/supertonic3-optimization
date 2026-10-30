@@ -1,0 +1,50 @@
+{
+  "round": 18,
+  "status": "Complete: matched engine RTF remeasurement; no engine selection change",
+  "baseline_commit": "b7a9bb75da5ee61f785c046a51bb1419ea38b0ea",
+  "branch": "main",
+  "model": "F1200 unchanged",
+  "steps": 8,
+  "threads": 1,
+  "target": "Shared Linux x86 EPYC7551, one logical CPU, about1GB RAM",
+  "primary": {
+    "fresh_processes": 84,
+    "timed_syntheses": 168,
+    "repetitions_per_setting": 6,
+    "speeds": [
+      1.0,
+      2.0
+    ],
+    "historical_check_speed": 1.05,
+    "summary": "results/round18_summary.json",
+    "raw": "results/round18_engine_versions.json",
+    "config": "results/round18_config.json",
+    "driver": "experiments/remeasure_engine_versions.py",
+    "exporter": "experiments/summarize_round18.py"
+  },
+  "diagnostic": {
+    "purpose": "Same v5 kernel, native graph versus batch-one; shared frontend, not production benchmark",
+    "pairs": 10,
+    "case": "M1 EN short 1.0x",
+    "raw": "results/round18_batch_diagnostic.json",
+    "median_paired_time_reduction_percent": -0.18754679619183978
+  },
+  "validation": [
+    "results/round18_data_checks.json",
+    "results/round18_provenance.json",
+    "results/round18_v3_abi.json",
+    "results/round18_server_integrity.json"
+  ],
+  "handoff": "records/2026-10-30/ROUND18_REMEASUREMENT.md",
+  "limits": [
+    "Extremely limited shared server with other processes; inconsistent comparisons",
+    "Do not claim universal speedup or rank tiny differences",
+    "Current package EN1x was slower in primary runs; near neutral in separate shared-frontend diagnostic",
+    "Short M1 only; no new WER/CER/MOS, F1/long or actual ARM measurement"
+  ],
+  "pending": [],
+  "next": [
+    "Recheck with dedicated CPU/RAM and F1/long inputs",
+    "Separate fresh-process layout and shared-frontend timing before adopting more graph changes"
+  ]
+}
