@@ -1,0 +1,2513 @@
+{
+  "status": "Local generated assets removed after remote backup verification",
+  "removed": [
+    {
+      "path": "models",
+      "files": 1631,
+      "logical_bytes": 3144264754
+    },
+    {
+      "path": "samples",
+      "files": 1699,
+      "logical_bytes": 1163705697
+    },
+    {
+      "path": "dist",
+      "files": 6,
+      "logical_bytes": 511904574
+    },
+    {
+      "path": ".private",
+      "files": 4567,
+      "logical_bytes": 2585382841
+    },
+    {
+      "path": ".venv",
+      "files": 46916,
+      "logical_bytes": 1581027152
+    },
+    {
+      "path": "references",
+      "files": 2,
+      "logical_bytes": 10243622
+    },
+    {
+      "path": ".ruff_cache",
+      "files": 26,
+      "logical_bytes": 12406
+    },
+    {
+      "path": "distill/round4-public-repro-smoke",
+      "files": 1,
+      "logical_bytes": 1004
+    },
+    {
+      "path": "distill/native-speed-round8-audio-v1",
+      "files": 0,
+      "logical_bytes": 0
+    },
+    {
+      "path": "distill/joint-cfg-1024-v1",
+      "files": 1,
+      "logical_bytes": 2874
+    },
+    {
+      "path": "distill/original50-round5-listening-preview",
+      "files": 0,
+      "logical_bytes": 0
+    },
+    {
+      "path": "distill/fast-inversion-round8-main",
+      "files": 39,
+      "logical_bytes": 743874
+    },
+    {
+      "path": "distill/latent-rate-head-round8-main",
+      "files": 1,
+      "logical_bytes": 2064
+    },
+    {
+      "path": "distill/joint-cfg1024-round4",
+      "files": 1,
+      "logical_bytes": 2544
+    },
+    {
+      "path": "distill/joint1536-v1",
+      "files": 1,
+      "logical_bytes": 2396
+    },
+    {
+      "path": "distill/student1024",
+      "files": 1,
+      "logical_bytes": 134366
+    },
+    {
+      "path": "distill/.DS_Store",
+      "files": 1,
+      "logical_bytes": 43012
+    },
+    {
+      "path": "distill/joint-cfg-mixed-v1",
+      "files": 1,
+      "logical_bytes": 2893
+    },
+    {
+      "path": "distill/trajectories-balanced-round5",
+      "files": 2049,
+      "logical_bytes": 382064205
+    },
+    {
+      "path": "distill/trajectories-v2",
+      "files": 1665,
+      "logical_bytes": 299688726
+    },
+    {
+      "path": "distill/round4-relocation-smoke",
+      "files": 1,
+      "logical_bytes": 938
+    },
+    {
+      "path": "distill/rollout-cfg1024-round5-audio",
+      "files": 1,
+      "logical_bytes": 3564
+    },
+    {
+      "path": "distill/balanced-pruned-light-round5",
+      "files": 1,
+      "logical_bytes": 8207
+    },
+    {
+      "path": "distill/balanced-activation-round5",
+      "files": 92,
+      "logical_bytes": 605785378
+    },
+    {
+      "path": "distill/latent-rate-head-round8-zero",
+      "files": 0,
+      "logical_bytes": 0
+    },
+    {
+      "path": "distill/student512",
+      "files": 1,
+      "logical_bytes": 191404
+    },
+    {
+      "path": "distill/balanced-pruned-round5",
+      "files": 1,
+      "logical_bytes": 8180
+    },
+    {
+      "path": "distill/joint1024-v1",
+      "files": 1,
+      "logical_bytes": 1679
+    },
+    {
+      "path": "distill/decoder1024-v1",
+      "files": 1,
+      "logical_bytes": 47666
+    },
+    {
+      "path": "distill/rollout1536-v2",
+      "files": 1,
+      "logical_bytes": 2460
+    },
+    {
+      "path": "distill/__pycache__",
+      "files": 36,
+      "logical_bytes": 289597
+    },
+    {
+      "path": "distill/fast-original50-round8",
+      "files": 290,
+      "logical_bytes": 124791091
+    },
+    {
+      "path": "distill/joint-balanced-round5",
+      "files": 1,
+      "logical_bytes": 2543
+    },
+    {
+      "path": "distill/original50-attention-round8",
+      "files": 9,
+      "logical_bytes": 257505941
+    },
+    {
+      "path": "distill/rollout1024-v1",
+      "files": 1,
+      "logical_bytes": 2385
+    },
+    {
+      "path": "distill/decoder-data-v1",
+      "files": 44,
+      "logical_bytes": 646706421
+    },
+    {
+      "path": "distill/rate-flow-round8-pilot",
+      "files": 1,
+      "logical_bytes": 2661
+    },
+    {
+      "path": "distill/student1536",
+      "files": 1,
+      "logical_bytes": 135085
+    },
+    {
+      "path": "distill/trajectories-original50-round5",
+      "files": 771,
+      "logical_bytes": 144025223
+    },
+    {
+      "path": "distill/fast-inversion-round8-pilot",
+      "files": 5,
+      "logical_bytes": 80620
+    },
+    {
+      "path": "distill/decoder-joint1024-v1",
+      "files": 1,
+      "logical_bytes": 2166
+    },
+    {
+      "path": "distill/partial-original-round5",
+      "files": 2,
+      "logical_bytes": 169439084
+    },
+    {
+      "path": "distill/joint-mixed-v1",
+      "files": 1,
+      "logical_bytes": 2787
+    },
+    {
+      "path": "distill/native-speed-round8-attention-v1",
+      "files": 1,
+      "logical_bytes": 2691
+    },
+    {
+      "path": "distill/trajectories-v1",
+      "files": 386,
+      "logical_bytes": 69211597
+    },
+    {
+      "path": "distill/joint-original50-round5",
+      "files": 2,
+      "logical_bytes": 169417434
+    },
+    {
+      "path": "distill/native-speed-round8-audio-filtered-v1",
+      "files": 1,
+      "logical_bytes": 2628
+    },
+    {
+      "path": "distill/latent-rate-head-round8-pilot",
+      "files": 1,
+      "logical_bytes": 2061
+    },
+    {
+      "path": "distill/pilot1024",
+      "files": 1,
+      "logical_bytes": 2144
+    },
+    {
+      "path": "distill/mixed-v1",
+      "files": 1,
+      "logical_bytes": 2860
+    },
+    {
+      "path": "distill/data",
+      "files": 116,
+      "logical_bytes": 2370537825
+    },
+    {
+      "path": "distill/trajectories-round4",
+      "files": 2049,
+      "logical_bytes": 381932342
+    },
+    {
+      "path": "distill/rollout-cfg1024-round5",
+      "files": 1,
+      "logical_bytes": 2076
+    },
+    {
+      "path": "distill/rollout-cfg-mixed-v1",
+      "files": 1,
+      "logical_bytes": 2641
+    },
+    {
+      "path": "distill/balanced-pruned-medium-round5",
+      "files": 1,
+      "logical_bytes": 8491
+    },
+    {
+      "path": "distill/student256",
+      "files": 1,
+      "logical_bytes": 247817
+    },
+    {
+      "path": "distill/original50-attention-round8-v2",
+      "files": 69,
+      "logical_bytes": 292059477
+    },
+    {
+      "path": "distill/rollout1536-v1",
+      "files": 1,
+      "logical_bytes": 2452
+    },
+    {
+      "path": "distill/latent-rate-head-round8-audio-v2",
+      "files": 1,
+      "logical_bytes": 2178
+    },
+    {
+      "path": "native/libexact_adaptive_m3.so",
+      "files": 1,
+      "logical_bytes": 86448
+    },
+    {
+      "path": "native/librow_norm_round13.dylib",
+      "files": 1,
+      "logical_bytes": 50760
+    },
+    {
+      "path": "native/libpacked_blas.so.json",
+      "files": 1,
+      "logical_bytes": 564
+    },
+    {
+      "path": "native/libexact_sparse_tails_memones.so",
+      "files": 1,
+      "logical_bytes": 95880
+    },
+    {
+      "path": "native/libexact_sparse_correction.so",
+      "files": 1,
+      "logical_bytes": 88488
+    },
+    {
+      "path": "native/libexact_mixed.so",
+      "files": 1,
+      "logical_bytes": 92728
+    },
+    {
+      "path": "native/libexact_aligned.so",
+      "files": 1,
+      "logical_bytes": 84984
+    },
+    {
+      "path": "native/libexact_panel16.so",
+      "files": 1,
+      "logical_bytes": 99872
+    },
+    {
+      "path": "native/libexact_v4.so.json",
+      "files": 1,
+      "logical_bytes": 788
+    },
+    {
+      "path": "native/librow_norm.dylib",
+      "files": 1,
+      "logical_bytes": 50808
+    },
+    {
+      "path": "native/libexact_v5_candidate.so.json",
+      "files": 1,
+      "logical_bytes": 949
+    },
+    {
+      "path": "native/libexact_epilogue.so",
+      "files": 1,
+      "logical_bytes": 82992
+    },
+    {
+      "path": "native/librow_norm_r32.dylib",
+      "files": 1,
+      "logical_bytes": 50760
+    },
+    {
+      "path": "native/libexact_adaptive.so",
+      "files": 1,
+      "logical_bytes": 84704
+    },
+    {
+      "path": "native/librow_norm_r16.dylib",
+      "files": 1,
+      "logical_bytes": 50760
+    },
+    {
+      "path": "native/libexact_selective_memones.so",
+      "files": 1,
+      "logical_bytes": 92392
+    },
+    {
+      "path": "native/libexact_likely_unroll.so",
+      "files": 1,
+      "logical_bytes": 93416
+    },
+    {
+      "path": "native/libexact_combined.so",
+      "files": 1,
+      "logical_bytes": 89512
+    },
+    {
+      "path": "native/libexact_m12n8.so",
+      "files": 1,
+      "logical_bytes": 94480
+    },
+    {
+      "path": "native/libexact_block32.so",
+      "files": 1,
+      "logical_bytes": 85808
+    },
+    {
+      "path": "native/libexact_arm_dot4.dylib",
+      "files": 1,
+      "logical_bytes": 51352
+    },
+    {
+      "path": "native/libexact_arm_packed8.dylib",
+      "files": 1,
+      "logical_bytes": 51512
+    },
+    {
+      "path": "native/libexact_arm_dot6.dylib",
+      "files": 1,
+      "logical_bytes": 51352
+    },
+    {
+      "path": "native/librow_norm_round14.dylib",
+      "files": 1,
+      "logical_bytes": 50808
+    },
+    {
+      "path": "native/libexact_group64.so",
+      "files": 1,
+      "logical_bytes": 97200
+    },
+    {
+      "path": "native/libexact_memones_ordered.so",
+      "files": 1,
+      "logical_bytes": 84064
+    },
+    {
+      "path": "native/libexact_tails.so",
+      "files": 1,
+      "logical_bytes": 91776
+    },
+    {
+      "path": "native/libexact_xmm.so",
+      "files": 1,
+      "logical_bytes": 83840
+    },
+    {
+      "path": "native/librow_norm_shape.dylib",
+      "files": 1,
+      "logical_bytes": 50856
+    },
+    {
+      "path": "native/librow_norm_h16.dylib",
+      "files": 1,
+      "logical_bytes": 50808
+    },
+    {
+      "path": "native/libexact_group32.so",
+      "files": 1,
+      "logical_bytes": 92392
+    },
+    {
+      "path": "native/librow_norm_h32.dylib",
+      "files": 1,
+      "logical_bytes": 50808
+    },
+    {
+      "path": "native/libexact_arm_packed4.dylib",
+      "files": 1,
+      "logical_bytes": 51512
+    },
+    {
+      "path": "native/libexact_gcc.so",
+      "files": 1,
+      "logical_bytes": 20696
+    },
+    {
+      "path": "native/libexact_m10n8.so",
+      "files": 1,
+      "logical_bytes": 93056
+    },
+    {
+      "path": "native/libexact_rebuilt_v4.so",
+      "files": 1,
+      "logical_bytes": 84520
+    },
+    {
+      "path": "native/libexact_int8.so",
+      "files": 1,
+      "logical_bytes": 78024
+    },
+    {
+      "path": "native/libexact_tilev2.so",
+      "files": 1,
+      "logical_bytes": 84552
+    },
+    {
+      "path": "native/librow_norm_r8.dylib",
+      "files": 1,
+      "logical_bytes": 50760
+    },
+    {
+      "path": "native/libexact_m3n16.so",
+      "files": 1,
+      "logical_bytes": 83424
+    },
+    {
+      "path": "native/libexact_memones.so",
+      "files": 1,
+      "logical_bytes": 84664
+    },
+    {
+      "path": "native/libexact_v4_public.so.json",
+      "files": 1,
+      "logical_bytes": 876
+    },
+    {
+      "path": "native/libexact_int8.so.json",
+      "files": 1,
+      "logical_bytes": 716
+    },
+    {
+      "path": "native/libexact_round18_v3.so",
+      "files": 1,
+      "logical_bytes": 94992
+    },
+    {
+      "path": "native/libexact_arm_packed12.dylib",
+      "files": 1,
+      "logical_bytes": 51512
+    },
+    {
+      "path": "native/libexact_v4_public.so",
+      "files": 1,
+      "logical_bytes": 84568
+    },
+    {
+      "path": "native/libpacked_blas.so",
+      "files": 1,
+      "logical_bytes": 57928
+    },
+    {
+      "path": "native/libexact_v4.so",
+      "files": 1,
+      "logical_bytes": 84552
+    },
+    {
+      "path": "native/librow_norm_transpose.dylib",
+      "files": 1,
+      "logical_bytes": 50808
+    },
+    {
+      "path": "native/libexact_joined_flags.so",
+      "files": 1,
+      "logical_bytes": 86216
+    },
+    {
+      "path": "native/libexact_safe_panels.so",
+      "files": 1,
+      "logical_bytes": 87552
+    },
+    {
+      "path": "native/libexact_likely.so",
+      "files": 1,
+      "logical_bytes": 84792
+    },
+    {
+      "path": "native/libexact_specialized.so",
+      "files": 1,
+      "logical_bytes": 131312
+    },
+    {
+      "path": "native/libexact_v5_candidate.so",
+      "files": 1,
+      "logical_bytes": 95408
+    },
+    {
+      "path": "native/libexact_spans.so",
+      "files": 1,
+      "logical_bytes": 86768
+    },
+    {
+      "path": "native/libexact_sparse_tails.so",
+      "files": 1,
+      "logical_bytes": 95424
+    },
+    {
+      "path": "results/round8_retime_g135_regression.log",
+      "files": 1,
+      "logical_bytes": 72
+    },
+    {
+      "path": "results/round9_grouped_probe.log",
+      "files": 1,
+      "logical_bytes": 2332
+    },
+    {
+      "path": "results/round6_profile_guard.json",
+      "files": 1,
+      "logical_bytes": 295
+    },
+    {
+      "path": "results/round17_sparse_tails_abi.log",
+      "files": 1,
+      "logical_bytes": 2564
+    },
+    {
+      "path": "results/round8_export_head_audio_v2.log",
+      "files": 1,
+      "logical_bytes": 1028
+    },
+    {
+      "path": "results/round12_paired_http.log",
+      "files": 1,
+      "logical_bytes": 257
+    },
+    {
+      "path": "results/round17_selective_all_weights.log",
+      "files": 1,
+      "logical_bytes": 84932
+    },
+    {
+      "path": "results/round13_bias_reproduction.log",
+      "files": 1,
+      "logical_bytes": 293
+    },
+    {
+      "path": "results/round8_export_audio80.log",
+      "files": 1,
+      "logical_bytes": 117
+    },
+    {
+      "path": "results/round17_sparse_tails_probe.log",
+      "files": 1,
+      "logical_bytes": 7665
+    },
+    {
+      "path": "results/equivalence_mixed_cache_v1.log",
+      "files": 1,
+      "logical_bytes": 329
+    },
+    {
+      "path": "results/round8_rate500_fit_generation.log",
+      "files": 1,
+      "logical_bytes": 39
+    },
+    {
+      "path": "results/distill_mixed_selected_test_v1.log",
+      "files": 1,
+      "logical_bytes": 2847
+    },
+    {
+      "path": "results/round4_epyc_candidate_asr.log",
+      "files": 1,
+      "logical_bytes": 674
+    },
+    {
+      "path": "results/round17_arm_dot6_abi.log",
+      "files": 1,
+      "logical_bytes": 2645
+    },
+    {
+      "path": "results/round8_export_head_main.log",
+      "files": 1,
+      "logical_bytes": 1025
+    },
+    {
+      "path": "results/round17_sparse_tails_memones_probe.log",
+      "files": 1,
+      "logical_bytes": 5690
+    },
+    {
+      "path": "results/round10_mixed_pair.log",
+      "files": 1,
+      "logical_bytes": 3044
+    },
+    {
+      "path": "results/ort_profile_2026-10-30_09-58-52_226.json",
+      "files": 1,
+      "logical_bytes": 750859
+    },
+    {
+      "path": "results/round14_streaming_runtime.log",
+      "files": 1,
+      "logical_bytes": 924
+    },
+    {
+      "path": "results/round17_tails_probe.log",
+      "files": 1,
+      "logical_bytes": 7659
+    },
+    {
+      "path": "results/acoustic_mixed_preview_v1.log",
+      "files": 1,
+      "logical_bytes": 193
+    },
+    {
+      "path": "results/round13_public_to_selected.log",
+      "files": 1,
+      "logical_bytes": 246
+    },
+    {
+      "path": "results/round8_rate500_asr.log",
+      "files": 1,
+      "logical_bytes": 934
+    },
+    {
+      "path": "results/round14_r16_paired.log",
+      "files": 1,
+      "logical_bytes": 371
+    },
+    {
+      "path": "results/round10_aligned_probe.log",
+      "files": 1,
+      "logical_bytes": 4496
+    },
+    {
+      "path": "results/round13_bias_gelu_paired.log",
+      "files": 1,
+      "logical_bytes": 1175
+    },
+    {
+      "path": "results/distill_cfg_controls_test_v3.log",
+      "files": 1,
+      "logical_bytes": 4297
+    },
+    {
+      "path": "results/train_rollout1024_v1.log",
+      "files": 1,
+      "logical_bytes": 6058
+    },
+    {
+      "path": "results/asr_cfg_mixed_preview_v1.log",
+      "files": 1,
+      "logical_bytes": 706
+    },
+    {
+      "path": "results/acoustic_cfg_mixed_final_v1.log",
+      "files": 1,
+      "logical_bytes": 180
+    },
+    {
+      "path": "results/round8_export_rate500.log",
+      "files": 1,
+      "logical_bytes": 115
+    },
+    {
+      "path": "results/round5_rollout_audio_train.log",
+      "files": 1,
+      "logical_bytes": 8730
+    },
+    {
+      "path": "results/asr_cfg_mixed_final_v1.log",
+      "files": 1,
+      "logical_bytes": 699
+    },
+    {
+      "path": "results/round8_retime_long_generation.log",
+      "files": 1,
+      "logical_bytes": 60
+    },
+    {
+      "path": "results/train_joint1536_v1.log",
+      "files": 1,
+      "logical_bytes": 8313
+    },
+    {
+      "path": "results/acoustic_server_cfg_v1.log",
+      "files": 1,
+      "logical_bytes": 115
+    },
+    {
+      "path": "results/round13_package.log",
+      "files": 1,
+      "logical_bytes": 115
+    },
+    {
+      "path": "results/round8_retime_native_asr.log",
+      "files": 1,
+      "logical_bytes": 928
+    },
+    {
+      "path": "results/quality_cfg_mixed_final_v1.log",
+      "files": 1,
+      "logical_bytes": 212
+    },
+    {
+      "path": "results/round4_selected_holdout_acoustics.log",
+      "files": 1,
+      "logical_bytes": 781
+    },
+    {
+      "path": "results/train256.log",
+      "files": 1,
+      "logical_bytes": 53573
+    },
+    {
+      "path": "results/asr_cfg_mixed_rollout_v1.log",
+      "files": 1,
+      "logical_bytes": 707
+    },
+    {
+      "path": "results/round14_public_to_selected.log",
+      "files": 1,
+      "logical_bytes": 244
+    },
+    {
+      "path": "results/distill_cfg_selected_validation_v1.log",
+      "files": 1,
+      "logical_bytes": 1857
+    },
+    {
+      "path": "results/round9_retime_profile.json",
+      "files": 1,
+      "logical_bytes": 4771
+    },
+    {
+      "path": "results/round5_balanced_prune.log",
+      "files": 1,
+      "logical_bytes": 6484
+    },
+    {
+      "path": "results/round4_selected_profile.log",
+      "files": 1,
+      "logical_bytes": 55
+    },
+    {
+      "path": "results/round12_mac_profile.log",
+      "files": 1,
+      "logical_bytes": 112
+    },
+    {
+      "path": "results/acoustic_rollout1024_v1.log",
+      "files": 1,
+      "logical_bytes": 185
+    },
+    {
+      "path": "results/round13_row_norm_runtime.log",
+      "files": 1,
+      "logical_bytes": 909
+    },
+    {
+      "path": "results/round13_strict_waveforms.log",
+      "files": 1,
+      "logical_bytes": 42
+    },
+    {
+      "path": "results/ort_profile_2026-10-30_10-55-54_500.json",
+      "files": 1,
+      "logical_bytes": 24462780
+    },
+    {
+      "path": "results/round5_balanced_light_export.log",
+      "files": 1,
+      "logical_bytes": 332
+    },
+    {
+      "path": "results/round11_server_final.log",
+      "files": 1,
+      "logical_bytes": 975
+    },
+    {
+      "path": "results/distill_mixed_selected_validation_v1.log",
+      "files": 1,
+      "logical_bytes": 1794
+    },
+    {
+      "path": "results/round8_head_zero_generation.log",
+      "files": 1,
+      "logical_bytes": 64
+    },
+    {
+      "path": "results/round10_mixed_trial.log",
+      "files": 1,
+      "logical_bytes": 2503
+    },
+    {
+      "path": "results/round9_finalize_v4.log",
+      "files": 1,
+      "logical_bytes": 5998
+    },
+    {
+      "path": "results/ort_profile_2026-10-30_09-58-51_799.json",
+      "files": 1,
+      "logical_bytes": 1598794
+    },
+    {
+      "path": "results/round8_retime_g135_prepare.log",
+      "files": 1,
+      "logical_bytes": 947
+    },
+    {
+      "path": "results/round8_audio320_asr.log",
+      "files": 1,
+      "logical_bytes": 900
+    },
+    {
+      "path": "results/acoustic_ablation_v2.log",
+      "files": 1,
+      "logical_bytes": 1172
+    },
+    {
+      "path": "results/round4_train_expanded.log",
+      "files": 1,
+      "logical_bytes": 15058
+    },
+    {
+      "path": "results/train_decoder_joint1024_v1.log",
+      "files": 1,
+      "logical_bytes": 3677
+    },
+    {
+      "path": "results/round8_oracle_attention.log",
+      "files": 1,
+      "logical_bytes": 48
+    },
+    {
+      "path": "results/round4_expanded_final_acoustics.log",
+      "files": 1,
+      "logical_bytes": 811
+    },
+    {
+      "path": "results/round14_h16_h32_paired.log",
+      "files": 1,
+      "logical_bytes": 369
+    },
+    {
+      "path": "results/round17_safe_panels_probe.log",
+      "files": 1,
+      "logical_bytes": 4030
+    },
+    {
+      "path": "results/ort_profile_2026-10-28_15-23-14_728.json",
+      "files": 1,
+      "logical_bytes": 11889103
+    },
+    {
+      "path": "results/acoustic_mixed_selected_v1.log",
+      "files": 1,
+      "logical_bytes": 177
+    },
+    {
+      "path": "results/round8_head_pilot_native_asr.log",
+      "files": 1,
+      "logical_bytes": 969
+    },
+    {
+      "path": "results/round17_joined_flags_probe.log",
+      "files": 1,
+      "logical_bytes": 4033
+    },
+    {
+      "path": "results/round8_latent_schedule_asr.log",
+      "files": 1,
+      "logical_bytes": 2439
+    },
+    {
+      "path": "results/ort_profile_2026-10-28_06-45-32_146.json",
+      "files": 1,
+      "logical_bytes": 901616
+    },
+    {
+      "path": "results/round14_package_check.log",
+      "files": 1,
+      "logical_bytes": 76
+    },
+    {
+      "path": "results/round17_m10n8_abi.log",
+      "files": 1,
+      "logical_bytes": 3054
+    },
+    {
+      "path": "results/round5_balanced_joint.log",
+      "files": 1,
+      "logical_bytes": 7091
+    },
+    {
+      "path": "results/asr_rollout1536_v1.log",
+      "files": 1,
+      "logical_bytes": 702
+    },
+    {
+      "path": "results/round8_export_audio320.log",
+      "files": 1,
+      "logical_bytes": 119
+    },
+    {
+      "path": "results/round4_relocation_smoke.log",
+      "files": 1,
+      "logical_bytes": 226
+    },
+    {
+      "path": "results/round8_collect_attention.log",
+      "files": 1,
+      "logical_bytes": 928
+    },
+    {
+      "path": "results/round5_balanced_teacher_export.log",
+      "files": 1,
+      "logical_bytes": 123
+    },
+    {
+      "path": "results/round17_shared.log",
+      "files": 1,
+      "logical_bytes": 527
+    },
+    {
+      "path": "results/round8_collect_attention_v2.log",
+      "files": 1,
+      "logical_bytes": 1568
+    },
+    {
+      "path": "results/round9_F1200_normal_server.log",
+      "files": 1,
+      "logical_bytes": 557
+    },
+    {
+      "path": "results/round13_norm_tests_final.log",
+      "files": 1,
+      "logical_bytes": 330
+    },
+    {
+      "path": "results/round5_quantization_acoustics.log",
+      "files": 1,
+      "logical_bytes": 170
+    },
+    {
+      "path": "results/ort_profile_2026-10-29_09-40-27_640.json",
+      "files": 1,
+      "logical_bytes": 534286
+    },
+    {
+      "path": "results/round8_latent_schedule.log",
+      "files": 1,
+      "logical_bytes": 736
+    },
+    {
+      "path": "results/round17_v5_abi.log",
+      "files": 1,
+      "logical_bytes": 3053
+    },
+    {
+      "path": "results/round17_target_folding.log",
+      "files": 1,
+      "logical_bytes": 1391
+    },
+    {
+      "path": "results/round5_original50_preview.log",
+      "files": 1,
+      "logical_bytes": 455
+    },
+    {
+      "path": "results/round10_panel16_probe.log",
+      "files": 1,
+      "logical_bytes": 4498
+    },
+    {
+      "path": "results/round15_tests.log",
+      "files": 1,
+      "logical_bytes": 347
+    },
+    {
+      "path": "results/quality_cfg_mixed_rollout_v1.log",
+      "files": 1,
+      "logical_bytes": 220
+    },
+    {
+      "path": "results/round13_batch_prepare.log",
+      "files": 1,
+      "logical_bytes": 1915
+    },
+    {
+      "path": "results/round8_inverse_main.log",
+      "files": 1,
+      "logical_bytes": 7046
+    },
+    {
+      "path": "results/round8_export_head_zero.log",
+      "files": 1,
+      "logical_bytes": 1025
+    },
+    {
+      "path": "results/acoustic_components_v2.log",
+      "files": 1,
+      "logical_bytes": 452
+    },
+    {
+      "path": "results/round14_profile_runs.json",
+      "files": 1,
+      "logical_bytes": 4329
+    },
+    {
+      "path": "results/round8_audio80_generation.log",
+      "files": 1,
+      "logical_bytes": 132
+    },
+    {
+      "path": "results/round17_integer_float.log",
+      "files": 1,
+      "logical_bytes": 6111
+    },
+    {
+      "path": "results/acoustic_joint1536_v1.log",
+      "files": 1,
+      "logical_bytes": 178
+    },
+    {
+      "path": "results/train_joint_cfg1024_v1.log",
+      "files": 1,
+      "logical_bytes": 18044
+    },
+    {
+      "path": "results/round17_specialized_abi.log",
+      "files": 1,
+      "logical_bytes": 2257
+    },
+    {
+      "path": "results/round8_rate500_generation.log",
+      "files": 1,
+      "logical_bytes": 132
+    },
+    {
+      "path": "results/round8_retime_g105_validation_asr.log",
+      "files": 1,
+      "logical_bytes": 3449
+    },
+    {
+      "path": "results/acoustic_mixed_test_v1.log",
+      "files": 1,
+      "logical_bytes": 536
+    },
+    {
+      "path": "results/acoustic_cfg_selected_test_v3.log",
+      "files": 1,
+      "logical_bytes": 583
+    },
+    {
+      "path": "results/quality_cfg_mixed_preview_v1.log",
+      "files": 1,
+      "logical_bytes": 220
+    },
+    {
+      "path": "results/ort_profile_2026-10-30_09-58-51_862.json",
+      "files": 1,
+      "logical_bytes": 2807513
+    },
+    {
+      "path": "results/round17_matrix.log",
+      "files": 1,
+      "logical_bytes": 4818
+    },
+    {
+      "path": "results/round8_attention160_generation.log",
+      "files": 1,
+      "logical_bytes": 132
+    },
+    {
+      "path": "results/round10_m3n16_probe.log",
+      "files": 1,
+      "logical_bytes": 6057
+    },
+    {
+      "path": "results/round8_retime_g135_validation_asr.log",
+      "files": 1,
+      "logical_bytes": 1651
+    },
+    {
+      "path": "results/round5_original50_preview_pilot.log",
+      "files": 1,
+      "logical_bytes": 562
+    },
+    {
+      "path": "results/round4_expanded_frozen_test.log",
+      "files": 1,
+      "logical_bytes": 8829
+    },
+    {
+      "path": "results/round15_demo_server.log",
+      "files": 1,
+      "logical_bytes": 506
+    },
+    {
+      "path": "results/round11_mac_first_sentence.log",
+      "files": 1,
+      "logical_bytes": 230
+    },
+    {
+      "path": "results/round8_rate250_generation.log",
+      "files": 1,
+      "logical_bytes": 132
+    },
+    {
+      "path": "results/ort_profile_2026-10-28_06-45-33_356.json",
+      "files": 1,
+      "logical_bytes": 9035805
+    },
+    {
+      "path": "results/round17_tails_abi.log",
+      "files": 1,
+      "logical_bytes": 2563
+    },
+    {
+      "path": "results/round5_balanced_prune_light.log",
+      "files": 1,
+      "logical_bytes": 5788
+    },
+    {
+      "path": "results/round16_epyc_summary.log",
+      "files": 1,
+      "logical_bytes": 24279
+    },
+    {
+      "path": "results/quality_components_v2.log",
+      "files": 1,
+      "logical_bytes": 276
+    },
+    {
+      "path": "results/quality_joint1024_v1.log",
+      "files": 1,
+      "logical_bytes": 208
+    },
+    {
+      "path": "results/round17_sparse_tails_all_weights.log",
+      "files": 1,
+      "logical_bytes": 84957
+    },
+    {
+      "path": "results/round8_head_main_native_asr.log",
+      "files": 1,
+      "logical_bytes": 952
+    },
+    {
+      "path": "results/round4_vocoder_delta_acoustics.log",
+      "files": 1,
+      "logical_bytes": 588
+    },
+    {
+      "path": "results/round8_retime_g135_validation_generation.log",
+      "files": 1,
+      "logical_bytes": 150
+    },
+    {
+      "path": "results/round8_head_blend010_generation.log",
+      "files": 1,
+      "logical_bytes": 64
+    },
+    {
+      "path": "results/round8_head_audio_v2_generation.log",
+      "files": 1,
+      "logical_bytes": 132
+    },
+    {
+      "path": "results/acoustic_reducedrange_mixed_v1.log",
+      "files": 1,
+      "logical_bytes": 129
+    },
+    {
+      "path": "results/acoustic_mixed_final_v1.log",
+      "files": 1,
+      "logical_bytes": 335
+    },
+    {
+      "path": "results/round14_native_tests.log",
+      "files": 1,
+      "logical_bytes": 330
+    },
+    {
+      "path": "results/round9_engine_trials.log",
+      "files": 1,
+      "logical_bytes": 2855
+    },
+    {
+      "path": "results/train1536.log",
+      "files": 1,
+      "logical_bytes": 28486
+    },
+    {
+      "path": "results/round5_original50_listening.log",
+      "files": 1,
+      "logical_bytes": 0
+    },
+    {
+      "path": "results/round6_profile_F.json",
+      "files": 1,
+      "logical_bytes": 4413
+    },
+    {
+      "path": "results/round4_build_head.log",
+      "files": 1,
+      "logical_bytes": 345
+    },
+    {
+      "path": "results/round4_build_cache.log",
+      "files": 1,
+      "logical_bytes": 2836
+    },
+    {
+      "path": "results/round8_head_main.log",
+      "files": 1,
+      "logical_bytes": 3153
+    },
+    {
+      "path": "results/round8_head_blend010_acoustics.log",
+      "files": 1,
+      "logical_bytes": 269
+    },
+    {
+      "path": "results/round4_expanded_preview_validation.log",
+      "files": 1,
+      "logical_bytes": 8073
+    },
+    {
+      "path": "results/round17_sparse_tails_memones_abi.log",
+      "files": 1,
+      "logical_bytes": 3054
+    },
+    {
+      "path": "results/round13_package_check.log",
+      "files": 1,
+      "logical_bytes": 76
+    },
+    {
+      "path": "results/round17_arm_dot4_abi.log",
+      "files": 1,
+      "logical_bytes": 2645
+    },
+    {
+      "path": "results/round13_row_norm_http.log",
+      "files": 1,
+      "logical_bytes": 256
+    },
+    {
+      "path": "results/round8_train_attention_v1.log",
+      "files": 1,
+      "logical_bytes": 3272
+    },
+    {
+      "path": "results/round17_arm_packed4_abi.log",
+      "files": 1,
+      "logical_bytes": 2645
+    },
+    {
+      "path": "results/round9_paired_tile_speed2.log",
+      "files": 1,
+      "logical_bytes": 3709
+    },
+    {
+      "path": "results/ort_profile_2026-10-28_15-23-14_850.json",
+      "files": 1,
+      "logical_bytes": 79661882
+    },
+    {
+      "path": "results/ort_profile_2026-10-30_10-55-54_418.json",
+      "files": 1,
+      "logical_bytes": 2804730
+    },
+    {
+      "path": "results/round14_h16_http.log",
+      "files": 1,
+      "logical_bytes": 256
+    },
+    {
+      "path": "results/ort_profile_2026-10-29_09-40-27_781.json",
+      "files": 1,
+      "logical_bytes": 8663918
+    },
+    {
+      "path": "results/round17_selective_checks.log",
+      "files": 1,
+      "logical_bytes": 6287
+    },
+    {
+      "path": "results/mac_avx2_range_crossplatform_v1.log",
+      "files": 1,
+      "logical_bytes": 56
+    },
+    {
+      "path": "results/round8_retime_long_asr.log",
+      "files": 1,
+      "logical_bytes": 1264
+    },
+    {
+      "path": "results/round8_inverse_main_asr.log",
+      "files": 1,
+      "logical_bytes": 4561
+    },
+    {
+      "path": "results/quality_rollout1536_v1.log",
+      "files": 1,
+      "logical_bytes": 216
+    },
+    {
+      "path": "results/epyc_avx2_int8_profile_8.json",
+      "files": 1,
+      "logical_bytes": 4361
+    },
+    {
+      "path": "results/acoustic_cfg1024_final_v1.log",
+      "files": 1,
+      "logical_bytes": 172
+    },
+    {
+      "path": "results/torch_graph_parity_suite.log",
+      "files": 1,
+      "logical_bytes": 1394
+    },
+    {
+      "path": "results/round8_retime_rate_acoustics.log",
+      "files": 1,
+      "logical_bytes": 1014
+    },
+    {
+      "path": "results/round8_prepare_retime.log",
+      "files": 1,
+      "logical_bytes": 1068
+    },
+    {
+      "path": "results/round12_prepare_portable_cache.log",
+      "files": 1,
+      "logical_bytes": 1443
+    },
+    {
+      "path": "results/round4_epyc_reference_asr.log",
+      "files": 1,
+      "logical_bytes": 674
+    },
+    {
+      "path": "results/round8_retime_g135_long_asr.log",
+      "files": 1,
+      "logical_bytes": 1268
+    },
+    {
+      "path": "results/eval512.log",
+      "files": 1,
+      "logical_bytes": 2672
+    },
+    {
+      "path": "results/round14_profile.log",
+      "files": 1,
+      "logical_bytes": 112
+    },
+    {
+      "path": "results/round8_rate250_fit_asr.log",
+      "files": 1,
+      "logical_bytes": 304
+    },
+    {
+      "path": "results/round17_m12n8_probe.log",
+      "files": 1,
+      "logical_bytes": 5689
+    },
+    {
+      "path": "results/round8_train_audio_filtered_v1.log",
+      "files": 1,
+      "logical_bytes": 4314
+    },
+    {
+      "path": "results/round4_candidates_validation.log",
+      "files": 1,
+      "logical_bytes": 3741
+    },
+    {
+      "path": "results/round8_prepare_audio.log",
+      "files": 1,
+      "logical_bytes": 1780
+    },
+    {
+      "path": "results/round8_audio160_asr.log",
+      "files": 1,
+      "logical_bytes": 909
+    },
+    {
+      "path": "results/round4_collect_expanded.log",
+      "files": 1,
+      "logical_bytes": 2504
+    },
+    {
+      "path": "results/tests_runtime_round3.log",
+      "files": 1,
+      "logical_bytes": 100
+    },
+    {
+      "path": "results/round17_memones_shared.log",
+      "files": 1,
+      "logical_bytes": 526
+    },
+    {
+      "path": "results/round5_original50_collect.log",
+      "files": 1,
+      "logical_bytes": 3358
+    },
+    {
+      "path": "results/round10_mixed_confirm.log",
+      "files": 1,
+      "logical_bytes": 3709
+    },
+    {
+      "path": "results/asr_epyc_cfg_mixed_preview_v1.log",
+      "files": 1,
+      "logical_bytes": 686
+    },
+    {
+      "path": "results/round4_build_head_fast.log",
+      "files": 1,
+      "logical_bytes": 94
+    },
+    {
+      "path": "results/acoustic_server_original_mixed_v1.log",
+      "files": 1,
+      "logical_bytes": 321
+    },
+    {
+      "path": "results/round17_control_all_weights.log",
+      "files": 1,
+      "logical_bytes": 84953
+    },
+    {
+      "path": "results/round8_rate250_fit_generation.log",
+      "files": 1,
+      "logical_bytes": 39
+    },
+    {
+      "path": "results/round14_strict_waveforms.log",
+      "files": 1,
+      "logical_bytes": 42
+    },
+    {
+      "path": "results/round8_retime_g135_long_generation.log",
+      "files": 1,
+      "logical_bytes": 60
+    },
+    {
+      "path": "results/quality_joint1536_v1.log",
+      "files": 1,
+      "logical_bytes": 208
+    },
+    {
+      "path": "results/round11_api_checks.log",
+      "files": 1,
+      "logical_bytes": 112
+    },
+    {
+      "path": "results/round4_vocoder_candidates_validation.log",
+      "files": 1,
+      "logical_bytes": 2973
+    },
+    {
+      "path": "results/round17_gcc_prepare.log",
+      "files": 1,
+      "logical_bytes": 1056
+    },
+    {
+      "path": "results/remote_avx2_model_hashes_v1.txt",
+      "files": 1,
+      "logical_bytes": 449
+    },
+    {
+      "path": "results/round13_step_paired.log",
+      "files": 1,
+      "logical_bytes": 638
+    },
+    {
+      "path": "results/ort_profile_2026-10-30_10-55-54_378.json",
+      "files": 1,
+      "logical_bytes": 1597586
+    },
+    {
+      "path": "results/round10_paired_aligned_speed2.log",
+      "files": 1,
+      "logical_bytes": 2554
+    },
+    {
+      "path": "results/round8_F1200_native2_validation_asr.log",
+      "files": 1,
+      "logical_bytes": 1187
+    },
+    {
+      "path": "results/round13_batch_paired.log",
+      "files": 1,
+      "logical_bytes": 637
+    },
+    {
+      "path": "results/round8_train_audio_v1.log",
+      "files": 1,
+      "logical_bytes": 1234
+    },
+    {
+      "path": "results/collect_vectors_v2.log",
+      "files": 1,
+      "logical_bytes": 1540
+    },
+    {
+      "path": "results/round17_fractional_v5.log",
+      "files": 1,
+      "logical_bytes": 704
+    },
+    {
+      "path": "results/round17_fractional_v4.log",
+      "files": 1,
+      "logical_bytes": 472
+    },
+    {
+      "path": "results/round8_F1200_native2_validation_generation.log",
+      "files": 1,
+      "logical_bytes": 150
+    },
+    {
+      "path": "results/round8_head_audio_v2.log",
+      "files": 1,
+      "logical_bytes": 3144
+    },
+    {
+      "path": "results/round4_export_preview.log",
+      "files": 1,
+      "logical_bytes": 320
+    },
+    {
+      "path": "results/quality_mixed_selected_v1.log",
+      "files": 1,
+      "logical_bytes": 208
+    },
+    {
+      "path": "results/init_mixed_v1.log",
+      "files": 1,
+      "logical_bytes": 2315
+    },
+    {
+      "path": "results/quality_ablation_v2.log",
+      "files": 1,
+      "logical_bytes": 956
+    },
+    {
+      "path": "results/round17_arm_packed8_abi.log",
+      "files": 1,
+      "logical_bytes": 2645
+    },
+    {
+      "path": "results/round8_retime_rate_sweep_asr.log",
+      "files": 1,
+      "logical_bytes": 1826
+    },
+    {
+      "path": "results/round5_original50_B_acoustics.log",
+      "files": 1,
+      "logical_bytes": 75
+    },
+    {
+      "path": "results/train_decoder1024_v1.log",
+      "files": 1,
+      "logical_bytes": 10066
+    },
+    {
+      "path": "results/round17_joined_flags_abi.log",
+      "files": 1,
+      "logical_bytes": 2257
+    },
+    {
+      "path": "results/round13_row_norm_paired.log",
+      "files": 1,
+      "logical_bytes": 372
+    },
+    {
+      "path": "results/round17_hint_checks.log",
+      "files": 1,
+      "logical_bytes": 12578
+    },
+    {
+      "path": "results/round9_epilogue_prepare.log",
+      "files": 1,
+      "logical_bytes": 1019
+    },
+    {
+      "path": "results/round8_retime_g135_long_server.log",
+      "files": 1,
+      "logical_bytes": 556
+    },
+    {
+      "path": "results/round13_norm_tests_bytes.log",
+      "files": 1,
+      "logical_bytes": 330
+    },
+    {
+      "path": "results/round5_balanced_collect.log",
+      "files": 1,
+      "logical_bytes": 2199
+    },
+    {
+      "path": "results/collect_vectors_v1.log",
+      "files": 1,
+      "logical_bytes": 454
+    },
+    {
+      "path": "results/round9_tile_probe.log",
+      "files": 1,
+      "logical_bytes": 1754
+    },
+    {
+      "path": "results/round17_safe_panels_abi.log",
+      "files": 1,
+      "logical_bytes": 2255
+    },
+    {
+      "path": "results/asr_epyc_mixed_selected_v1.log",
+      "files": 1,
+      "logical_bytes": 680
+    },
+    {
+      "path": "results/round5_original50_pipeline.log",
+      "files": 1,
+      "logical_bytes": 11299
+    },
+    {
+      "path": "results/round4_public_repro_smoke.log",
+      "files": 1,
+      "logical_bytes": 443
+    },
+    {
+      "path": "results/round9_hf_public_download.log",
+      "files": 1,
+      "logical_bytes": 1930
+    },
+    {
+      "path": "results/round8_inverse_pilot_acoustics.log",
+      "files": 1,
+      "logical_bytes": 200
+    },
+    {
+      "path": "results/round4_export_expanded.log",
+      "files": 1,
+      "logical_bytes": 322
+    },
+    {
+      "path": "results/round8_retime_native_gather_generation.log",
+      "files": 1,
+      "logical_bytes": 132
+    },
+    {
+      "path": "results/round9_v4_build.log",
+      "files": 1,
+      "logical_bytes": 22
+    },
+    {
+      "path": "results/asr_mixed_final_v1.log",
+      "files": 1,
+      "logical_bytes": 1036
+    },
+    {
+      "path": "results/round13_row_norm_regression.log",
+      "files": 1,
+      "logical_bytes": 42
+    },
+    {
+      "path": "results/ort_profile_2026-10-28_06-45-31_561.json",
+      "files": 1,
+      "logical_bytes": 522392
+    },
+    {
+      "path": "results/acoustic_joint1024_v1.log",
+      "files": 1,
+      "logical_bytes": 178
+    },
+    {
+      "path": "results/round17_specialized_probe.log",
+      "files": 1,
+      "logical_bytes": 4030
+    },
+    {
+      "path": "results/asr_mixed_preview_v1.log",
+      "files": 1,
+      "logical_bytes": 711
+    },
+    {
+      "path": "results/round8_head_main_generation.log",
+      "files": 1,
+      "logical_bytes": 132
+    },
+    {
+      "path": "results/round9_retime_normal_server.log",
+      "files": 1,
+      "logical_bytes": 556
+    },
+    {
+      "path": "results/round17_sparse_correction_probe.log",
+      "files": 1,
+      "logical_bytes": 4034
+    },
+    {
+      "path": "results/round9_retime_profile.log",
+      "files": 1,
+      "logical_bytes": 499
+    },
+    {
+      "path": "results/mac_mixed_selected_crossplatform_v1.log",
+      "files": 1,
+      "logical_bytes": 112
+    },
+    {
+      "path": "results/ort_profile_2026-10-30_09-58-52_018.json",
+      "files": 1,
+      "logical_bytes": 25997983
+    },
+    {
+      "path": "results/train_joint_mixed_v1.log",
+      "files": 1,
+      "logical_bytes": 10019
+    },
+    {
+      "path": "results/round8_head_zero_acoustics.log",
+      "files": 1,
+      "logical_bytes": 249
+    },
+    {
+      "path": "results/ort_profile_2026-10-30_10-55-54_573.json",
+      "files": 1,
+      "logical_bytes": 750268
+    },
+    {
+      "path": "results/round8_retime_g135_server_asr.log",
+      "files": 1,
+      "logical_bytes": 884
+    },
+    {
+      "path": "results/round12_mac_profile_runs.json",
+      "files": 1,
+      "logical_bytes": 4066
+    },
+    {
+      "path": "results/round5_balanced_validation.log",
+      "files": 1,
+      "logical_bytes": 22
+    },
+    {
+      "path": "results/round8_prepare_retime_gather.log",
+      "files": 1,
+      "logical_bytes": 942
+    },
+    {
+      "path": "results/round5_balanced_retarget.log",
+      "files": 1,
+      "logical_bytes": 397
+    },
+    {
+      "path": "results/round8_head_audio_v2_native_asr.log",
+      "files": 1,
+      "logical_bytes": 984
+    },
+    {
+      "path": "results/round8_rate250_asr.log",
+      "files": 1,
+      "logical_bytes": 848
+    },
+    {
+      "path": "results/round8_head_blend010_native_asr.log",
+      "files": 1,
+      "logical_bytes": 478
+    },
+    {
+      "path": "results/distill_cfg1024_validation_v1.log",
+      "files": 1,
+      "logical_bytes": 1777
+    },
+    {
+      "path": "results/round4_selected_profile.json",
+      "files": 1,
+      "logical_bytes": 2011
+    },
+    {
+      "path": "results/round8_rate500_fit_asr.log",
+      "files": 1,
+      "logical_bytes": 365
+    },
+    {
+      "path": "results/round4_expanded_preview_acoustics.log",
+      "files": 1,
+      "logical_bytes": 2267
+    },
+    {
+      "path": "results/ort_profile_2026-10-30_10-55-54_617.json",
+      "files": 1,
+      "logical_bytes": 592009
+    },
+    {
+      "path": "results/asr_cfg1024_preview_v1.log",
+      "files": 1,
+      "logical_bytes": 697
+    },
+    {
+      "path": "results/round14_h32_paired.log",
+      "files": 1,
+      "logical_bytes": 371
+    },
+    {
+      "path": "results/acoustic_cfg1024_preview_v1.log",
+      "files": 1,
+      "logical_bytes": 180
+    },
+    {
+      "path": "results/round8_export_audio160.log",
+      "files": 1,
+      "logical_bytes": 119
+    },
+    {
+      "path": "results/round17_m10n8_probe.log",
+      "files": 1,
+      "logical_bytes": 5689
+    },
+    {
+      "path": "results/round16_epyc_benchmark.log",
+      "files": 1,
+      "logical_bytes": 9848
+    },
+    {
+      "path": "results/round8_export_head_pilot.log",
+      "files": 1,
+      "logical_bytes": 1026
+    },
+    {
+      "path": "results/round5_rollout_train.log",
+      "files": 1,
+      "logical_bytes": 3069
+    },
+    {
+      "path": "results/round13_runtime_tests.log",
+      "files": 1,
+      "logical_bytes": 100
+    },
+    {
+      "path": "results/round17_m12n8_abi.log",
+      "files": 1,
+      "logical_bytes": 3054
+    },
+    {
+      "path": "results/quality_cfg1024_final_v1.log",
+      "files": 1,
+      "logical_bytes": 204
+    },
+    {
+      "path": "results/round8_retime_g105_server.log",
+      "files": 1,
+      "logical_bytes": 558
+    },
+    {
+      "path": "results/round15_paired.log",
+      "files": 1,
+      "logical_bytes": 1621
+    },
+    {
+      "path": "results/round9_runtime_regression.log",
+      "files": 1,
+      "logical_bytes": 100
+    },
+    {
+      "path": "results/round17_xmm_abi.log",
+      "files": 1,
+      "logical_bytes": 2257
+    },
+    {
+      "path": "results/quality_cfg1024_preview_v1.log",
+      "files": 1,
+      "logical_bytes": 212
+    },
+    {
+      "path": "results/round17_arm_packed12_abi.log",
+      "files": 1,
+      "logical_bytes": 2645
+    },
+    {
+      "path": "results/round8_prepare_retime_fixed.log",
+      "files": 1,
+      "logical_bytes": 1068
+    },
+    {
+      "path": "results/round8_reference_asr.log",
+      "files": 1,
+      "logical_bytes": 10067
+    },
+    {
+      "path": "results/quality_rollout1024_v1.log",
+      "files": 1,
+      "logical_bytes": 216
+    },
+    {
+      "path": "results/round17_xmm_probe.log",
+      "files": 1,
+      "logical_bytes": 4037
+    },
+    {
+      "path": "results/asr_mixed_selected_v1.log",
+      "files": 1,
+      "logical_bytes": 695
+    },
+    {
+      "path": "results/quality_mixed_final_v1.log",
+      "files": 1,
+      "logical_bytes": 308
+    },
+    {
+      "path": "results/round4_candidate_delta_acoustics.log",
+      "files": 1,
+      "logical_bytes": 461
+    },
+    {
+      "path": "results/round17_v5_long_2.log",
+      "files": 1,
+      "logical_bytes": 700
+    },
+    {
+      "path": "results/train_joint1024_v1.log",
+      "files": 1,
+      "logical_bytes": 5012
+    },
+    {
+      "path": "results/collect_decoder_v1.log",
+      "files": 1,
+      "logical_bytes": 444
+    },
+    {
+      "path": "results/round8_export_rate250.log",
+      "files": 1,
+      "logical_bytes": 115
+    },
+    {
+      "path": "results/round13_server_tests.log",
+      "files": 1,
+      "logical_bytes": 112
+    },
+    {
+      "path": "results/round8_retime_g135_all_corpus_generation.log",
+      "files": 1,
+      "logical_bytes": 940
+    },
+    {
+      "path": "results/asr_cfg1024_final_v1.log",
+      "files": 1,
+      "logical_bytes": 691
+    },
+    {
+      "path": "results/round11_server.log",
+      "files": 1,
+      "logical_bytes": 4311
+    },
+    {
+      "path": "results/round8_head_pilot_generation.log",
+      "files": 1,
+      "logical_bytes": 132
+    },
+    {
+      "path": "results/round10_block32_probe.log",
+      "files": 1,
+      "logical_bytes": 6050
+    },
+    {
+      "path": "results/train_rollout1536_v1.log",
+      "files": 1,
+      "logical_bytes": 6063
+    },
+    {
+      "path": "results/round8_runtime_regression.log",
+      "files": 1,
+      "logical_bytes": 100
+    },
+    {
+      "path": "results/round17_register_gcc_checks.log",
+      "files": 1,
+      "logical_bytes": 18862
+    },
+    {
+      "path": "results/round8_audio160_generation.log",
+      "files": 1,
+      "logical_bytes": 132
+    },
+    {
+      "path": "results/round4_build_vocoder_gelu.log",
+      "files": 1,
+      "logical_bytes": 94
+    },
+    {
+      "path": "results/round8_retime_g135_server.log",
+      "files": 1,
+      "logical_bytes": 554
+    },
+    {
+      "path": "results/round8_audio320_generation.log",
+      "files": 1,
+      "logical_bytes": 132
+    },
+    {
+      "path": "results/round11_streaming_runtime.log",
+      "files": 1,
+      "logical_bytes": 918
+    },
+    {
+      "path": "results/round8_attention160_asr.log",
+      "files": 1,
+      "logical_bytes": 951
+    },
+    {
+      "path": "results/acoustic_crossplatform_mixed_v1.log",
+      "files": 1,
+      "logical_bytes": 187
+    },
+    {
+      "path": "results/train512.log",
+      "files": 1,
+      "logical_bytes": 41084
+    },
+    {
+      "path": "results/round8_control_generation.log",
+      "files": 1,
+      "logical_bytes": 256
+    },
+    {
+      "path": "results/round9_profile_guard.json",
+      "files": 1,
+      "logical_bytes": 463
+    },
+    {
+      "path": "results/round4_baseline_holdout.log",
+      "files": 1,
+      "logical_bytes": 8457
+    },
+    {
+      "path": "results/round11_runtime_checks.log",
+      "files": 1,
+      "logical_bytes": 100
+    },
+    {
+      "path": "results/round17_v5_long_1.log",
+      "files": 1,
+      "logical_bytes": 699
+    },
+    {
+      "path": "results/round17_v4_fallback_abi.log",
+      "files": 1,
+      "logical_bytes": 3050
+    },
+    {
+      "path": "results/ort_profile_2026-10-28_15-23-14_770.json",
+      "files": 1,
+      "logical_bytes": 21206436
+    },
+    {
+      "path": "results/mac_full_int8_crossplatform_v1.log",
+      "files": 1,
+      "logical_bytes": 112
+    },
+    {
+      "path": "results/round4_public_download.log",
+      "files": 1,
+      "logical_bytes": 1614
+    },
+    {
+      "path": "results/round4_published_graph_parity.log",
+      "files": 1,
+      "logical_bytes": 1634
+    },
+    {
+      "path": "results/round17_f1_ko1_confirm.log",
+      "files": 1,
+      "logical_bytes": 671
+    },
+    {
+      "path": "results/round8_inverse_pilot.log",
+      "files": 1,
+      "logical_bytes": 703
+    },
+    {
+      "path": "results/train_rollout1536_v2.log",
+      "files": 1,
+      "logical_bytes": 10633
+    },
+    {
+      "path": "results/acoustic_cfg_mixed_rollout_v1.log",
+      "files": 1,
+      "logical_bytes": 190
+    },
+    {
+      "path": "results/acoustic_cfg_mixed_preview_v1.log",
+      "files": 1,
+      "logical_bytes": 192
+    },
+    {
+      "path": "results/round5_audio_validation.log",
+      "files": 1,
+      "logical_bytes": 3877
+    },
+    {
+      "path": "results/round17_sparse_tails_memones_all_weights.log",
+      "files": 1,
+      "logical_bytes": 84941
+    },
+    {
+      "path": "results/round5_audio_acoustics.log",
+      "files": 1,
+      "logical_bytes": 760
+    },
+    {
+      "path": "results/round8_retime_source_acoustics.log",
+      "files": 1,
+      "logical_bytes": 263
+    },
+    {
+      "path": "results/round17_adaptive_checks.log",
+      "files": 1,
+      "logical_bytes": 12573
+    },
+    {
+      "path": "results/round14_hierarchy_micro.log",
+      "files": 1,
+      "logical_bytes": 880
+    },
+    {
+      "path": "results/round8_oracle_attention_asr.log",
+      "files": 1,
+      "logical_bytes": 575
+    },
+    {
+      "path": "results/round4_expanded_final_validation.log",
+      "files": 1,
+      "logical_bytes": 3972
+    },
+    {
+      "path": "results/quality_mixed_preview_v1.log",
+      "files": 1,
+      "logical_bytes": 224
+    },
+    {
+      "path": "results/round8_head_zero_native_asr.log",
+      "files": 1,
+      "logical_bytes": 470
+    },
+    {
+      "path": "results/round5_audio_export.log",
+      "files": 1,
+      "logical_bytes": 316
+    },
+    {
+      "path": "results/ort_profile_2026-10-29_09-40-27_926.json",
+      "files": 1,
+      "logical_bytes": 178541
+    },
+    {
+      "path": "results/round8_head_main_acoustics.log",
+      "files": 1,
+      "logical_bytes": 249
+    },
+    {
+      "path": "results/asr_rollout1024_v1.log",
+      "files": 1,
+      "logical_bytes": 701
+    },
+    {
+      "path": "results/round8_retime_rate_sweep.log",
+      "files": 1,
+      "logical_bytes": 264
+    },
+    {
+      "path": "results/train_joint_cfg_mixed_v1.log",
+      "files": 1,
+      "logical_bytes": 18015
+    },
+    {
+      "path": "results/round14_h16_paired.log",
+      "files": 1,
+      "logical_bytes": 369
+    },
+    {
+      "path": "results/round17_f1_fresh.log",
+      "files": 1,
+      "logical_bytes": 2998
+    },
+    {
+      "path": "results/round4_expanded_frozen_acoustics.log",
+      "files": 1,
+      "logical_bytes": 2293
+    },
+    {
+      "path": "results/round5_original50_preview_asr.log",
+      "files": 1,
+      "logical_bytes": 194
+    },
+    {
+      "path": "results/ort_profile_2026-10-28_15-23-15_032.json",
+      "files": 1,
+      "logical_bytes": 3939817
+    },
+    {
+      "path": "results/round8_head_blend010_export.log",
+      "files": 1,
+      "logical_bytes": 1026
+    },
+    {
+      "path": "results/round8_retime_generation.log",
+      "files": 1,
+      "logical_bytes": 132
+    },
+    {
+      "path": "results/install_acoustic.log",
+      "files": 1,
+      "logical_bytes": 694
+    },
+    {
+      "path": "results/round8_head_pilot.log",
+      "files": 1,
+      "logical_bytes": 1713
+    },
+    {
+      "path": "results/round8_train_rate_pilot.log",
+      "files": 1,
+      "logical_bytes": 1342
+    },
+    {
+      "path": "results/init_cfg_distill_v1.log",
+      "files": 1,
+      "logical_bytes": 907
+    },
+    {
+      "path": "results/ort_profile_2026-10-28_06-45-37_185.json",
+      "files": 1,
+      "logical_bytes": 167241
+    },
+    {
+      "path": "results/asr_ablation_v2.log",
+      "files": 1,
+      "logical_bytes": 2901
+    },
+    {
+      "path": "results/round17_batch_one_shared.log",
+      "files": 1,
+      "logical_bytes": 758
+    },
+    {
+      "path": "results/round17_sparse_shared.log",
+      "files": 1,
+      "logical_bytes": 527
+    },
+    {
+      "path": "results/round17_combined_confirm.log",
+      "files": 1,
+      "logical_bytes": 759
+    },
+    {
+      "path": "results/round17_default_smoke.log",
+      "files": 1,
+      "logical_bytes": 674
+    },
+    {
+      "path": "results/round5_fp32_export.log",
+      "files": 1,
+      "logical_bytes": 127
+    },
+    {
+      "path": "results/round11_mac_streaming.log",
+      "files": 1,
+      "logical_bytes": 230
+    },
+    {
+      "path": "results/round17_f1_en2_confirm.log",
+      "files": 1,
+      "logical_bytes": 669
+    },
+    {
+      "path": "results/round9_paired_tile_combined_speed2.log",
+      "files": 1,
+      "logical_bytes": 2559
+    },
+    {
+      "path": "results/acoustic_rollout1536_v1.log",
+      "files": 1,
+      "logical_bytes": 186
+    },
+    {
+      "path": "results/round8_retime_g105_validation_generation.log",
+      "files": 1,
+      "logical_bytes": 316
+    },
+    {
+      "path": "results/round13_norm_tests.log",
+      "files": 1,
+      "logical_bytes": 327
+    },
+    {
+      "path": "results/distill_cfg_selected_test_v3.log",
+      "files": 1,
+      "logical_bytes": 2912
+    },
+    {
+      "path": "results/round8_inverse_pilot_asr.log",
+      "files": 1,
+      "logical_bytes": 433
+    },
+    {
+      "path": "results/round17_sparse_correction_abi.log",
+      "files": 1,
+      "logical_bytes": 2255
+    },
+    {
+      "path": "results/round8_audio80_asr.log",
+      "files": 1,
+      "logical_bytes": 890
+    },
+    {
+      "path": "results/round4_build_gelu.log",
+      "files": 1,
+      "logical_bytes": 131
+    },
+    {
+      "path": "results/round4_reexport.log",
+      "files": 1,
+      "logical_bytes": 324
+    },
+    {
+      "path": "results/round8_export_attention160.log",
+      "files": 1,
+      "logical_bytes": 127
+    },
+    {
+      "path": "results/ort_profile_2026-10-29_09-40-27_697.json",
+      "files": 1,
+      "logical_bytes": 938218
+    },
+    {
+      "path": "results/round12_paired_portable_cache.log",
+      "files": 1,
+      "logical_bytes": 370
+    },
+    {
+      "path": "results/eval1024.log",
+      "files": 1,
+      "logical_bytes": 2703
+    },
+    {
+      "path": "results/train_rollout_cfg_mixed_v1.log",
+      "files": 1,
+      "logical_bytes": 5999
+    },
+    {
+      "path": "results/round9_v4_actual_probe.log",
+      "files": 1,
+      "logical_bytes": 2516
+    },
+    {
+      "path": "results/round8_control_asr.log",
+      "files": 1,
+      "logical_bytes": 3123
+    },
+    {
+      "path": "__pycache__",
+      "files": 30,
+      "logical_bytes": 235682
+    },
+    {
+      "path": ".DS_Store",
+      "files": 1,
+      "logical_bytes": 24580
+    },
+    {
+      "path": "records/.DS_Store",
+      "files": 1,
+      "logical_bytes": 12292
+    },
+    {
+      "path": "tools/__pycache__",
+      "files": 1,
+      "logical_bytes": 5436
+    },
+    {
+      "path": "native/__pycache__",
+      "files": 3,
+      "logical_bytes": 8523
+    },
+    {
+      "path": "native/.DS_Store",
+      "files": 1,
+      "logical_bytes": 10244
+    },
+    {
+      "path": "experiments/__pycache__",
+      "files": 61,
+      "logical_bytes": 379642
+    },
+    {
+      "path": "experiments/.DS_Store",
+      "files": 1,
+      "logical_bytes": 6148
+    },
+    {
+      "path": "distill/.DS_Store",
+      "files": 1,
+      "logical_bytes": 43012
+    },
+    {
+      "path": "docs/.DS_Store",
+      "files": 1,
+      "logical_bytes": 6148
+    }
+  ],
+  "removed_files": 63033,
+  "removed_logical_bytes": 15116490881,
+  "available_bytes_before": 32196153344,
+  "available_bytes_after": 44204257280,
+  "observed_available_increase_bytes": 12008103936,
+  "tracked_files_preserved": 937,
+  "personal_credential_files_preserved": 1,
+  "local_notes_archive": {
+    "path": "local-archive/closeout-local-notes-2026-11-02.tar.gz",
+    "files": 1996,
+    "uncompressed_bytes": 305700044,
+    "bytes": 87871780,
+    "sha256": "1e52f4b9c4370c7dc55bae966ee8643d8e166e6e95ff3a54a016cc2e42a05b0e",
+    "scope": "Untracked small experiment notes only; local private archive, not uploaded or committed; excludes environments, credentials and weights."
+  },
+  "server_notes_archive": {
+    "path": "local-archive/closeout-server-notes-2026-11-02.tar.gz",
+    "files": 2531,
+    "bytes": 5371889,
+    "sha256": "4d34dad83de71342a91b01d54f4e90d2d63d134bec6fca36ada5741bcb20dd73"
+  },
+  "global_caches_modified": false,
+  "hf_backup_revision": "cbef65027ca699895cdeb1acd3308eeeee2a7a63"
+}

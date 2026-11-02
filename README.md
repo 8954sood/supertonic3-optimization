@@ -1,5 +1,7 @@
 # supertonic3-optimization
 
+> **작업 종료 · 2026-11-02:** 최종 Linux v5·Mac ARM64 모델과 필수 학습 재현 자료를 Hugging Face에 보관하고 로컬/검증 서버의 생성 산출물을 정리했습니다. [최종 모델·복원 방법](docs/FINAL_STATE.md) · [종료·정리 기록](records/2026-11-02/CLOSEOUT.md)
+
 [Supertonic 3](https://huggingface.co/Supertone/supertonic-3)를 **CPU 한 스레드·실제 denoising 8회**로 실행하기 위한 최적화 프로젝트입니다. 현재 기준 모델은 **F1200**, Linux x86 AVX2의 최신 엔진은 **v5**입니다. 기존 v4도 대조용으로 보존합니다. Mac ARM64에서는 조건 캐시와 행 병렬 정규화를 선택할 수 있습니다.
 
 [모델 다운로드](https://huggingface.co/babihoba/supertonic3-optimization) · [학습 데이터](https://huggingface.co/datasets/babihoba/supertonic3-optimization-data) · [재현 안내](docs/REPRODUCING.md) · [전체 실험 기록](WORK_LOG.md)

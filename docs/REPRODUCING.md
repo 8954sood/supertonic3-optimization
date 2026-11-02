@@ -1,12 +1,14 @@
 # F1200 다운로드·재현·엔진 측정
 
+> **2026-11-02 작업 종료:** 로컬 가중치·학습 산출물·가상환경은 정리했습니다. 최종 Linux v5와 Mac ARM64 내보낸 모델은 `cbef65027ca699895cdeb1acd3308eeeee2a7a63`에 보관했으며, [최종 상태와 바로 복원하는 명령](FINAL_STATE.md)을 우선 확인하세요. 아래 과거 고정 revision도 계속 사용할 수 있습니다.
+
 현재 사용자가 선택한 모델은 **F1200** (`round5-original50-student`)입니다. 구조와 가중치를 고정하고 엔진만 최적화합니다. E400은 청취 비교용입니다. 새 teacher target은 pinned 원본 FP32·CFG4·50스텝으로만 만들며 학생은 실제8회 추론합니다.
 
 [모델·체크포인트](https://huggingface.co/babihoba/supertonic3-optimization/tree/d33f1094c6057d8c613f2c45987ba45e57c4b3af) revision은 `d33f1094c6057d8c613f2c45987ba45e57c4b3af`, [교사 데이터](https://huggingface.co/datasets/babihoba/supertonic3-optimization-data/tree/e56d93c9959647c850b639a614e629e4e4ac1593)는 `e56d93c9959647c850b639a614e629e4e4ac1593`입니다. 파일 크기·SHA256을 확인하고 공개 다운로드에 토큰을 사용하지 않습니다.
 
 ## 추론만 실행
 
-2배속 완성 패키지를 추가한 현재 모델 다운로드 revision은 **`f1d05bdb691d8769557e19644f3a63089992daf0`**입니다. 이전 revision의 기존118개 파일은 변경하지 않았으며 교사 데이터 revision도 그대로입니다. 기본 선택은 F1200을 유지합니다. [선택2배속 패키지](https://huggingface.co/babihoba/supertonic3-optimization/tree/f1d05bdb691d8769557e19644f3a63089992daf0/models/round8-latent-retime-g135), [공개 검증](../records/2026-10-29/PUBLICATION_RETIME.md).
+2배속 완성 패키지를 처음 추가한 모델 revision은 **`f1d05bdb691d8769557e19644f3a63089992daf0`**입니다. 현재 다운로드 도구는 최종 내보낸 모델까지 추가한 **`cbef65027ca699895cdeb1acd3308eeeee2a7a63`**에 고정돼 있습니다. 기존 모델과 교사 데이터는 유지하며 기본 선택은 F1200입니다. [선택2배속 패키지](https://huggingface.co/babihoba/supertonic3-optimization/tree/cbef65027ca699895cdeb1acd3308eeeee2a7a63/models/round8-latent-retime-g135), [공개 검증](../records/2026-10-29/PUBLICATION_RETIME.md).
 
 ```bash
 python -m pip install -r requirements.txt
@@ -140,7 +142,7 @@ python native/build_exact.py --engine-version 4 --cpu znver1
 
 9차 실제 서버에서2배속 짧은KO/EN의 쌍별 가속비 중앙값은1.042/1.047배이고 RTF는1.351/1.354였습니다. 전체 파형 보존 검사와 정상·장문 조건은 [9차 기록](../records/2026-10-29/ROUND9_ENGINE.md)에 있습니다. ARM 가속 커널로 해석하지 마세요.
 
-로컬 정리로 오래된 실험 가중치 대부분을 삭제했으므로 과거 기록의 경로에 manifest만 남아 있을 수 있습니다. 보존한 F1200·원본 교사·선택 retime 후보·초기/최종 checkpoint 외의 가중치가 필요하면 고정된 공개 HF revision에서 **새 폴더**로 받거나 해당 실험 코드를 재실행하세요. 기존 데이터·결과 기록·청취 파일은 유지했습니다.
+2026-11-02 종료 정리로 로컬 모델·학습 데이터·생성 음성·가상환경을 제거했습니다. 필수 F1200·선택 retime·최종 Linux/Mac export·초기/최종 checkpoint·원본50 교사 데이터는 고정된 공개 HF revision에서 복원합니다. 과거 기록의 `models/`·`distill/` 산출물 경로는 당시 경로이며 현재 파일의 존재를 뜻하지 않습니다. 소스와 공개 실험 결과는 유지하며, [최종 상태 안내](FINAL_STATE.md)에 정리 범위와 최소 복원 명령을 남겼습니다.
 
 ## 과거 B 모델 재현
 

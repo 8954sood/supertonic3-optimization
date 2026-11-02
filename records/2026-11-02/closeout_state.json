@@ -1,0 +1,27 @@
+{
+  "status": "stopped_by_owner",
+  "date": "2026-11-02",
+  "further_work_scheduled": false,
+  "final_model_revision": "cbef65027ca699895cdeb1acd3308eeeee2a7a63",
+  "dataset_revision": "e56d93c9959647c850b639a614e629e4e4ac1593",
+  "final_exports": [
+    "F1200-retime-v5",
+    "F1200-retime-arm64"
+  ],
+  "learned_weights_changed": false,
+  "steps": 8,
+  "verified_final_export_files": 44,
+  "public_download_verified_objects": 30,
+  "public_download_verified_bytes": 865247478,
+  "local_generated_assets_removed": true,
+  "server_generated_assets_removed": true,
+  "local_observed_available_increase_bytes": 12008103936,
+  "server_observed_available_increase_bytes": 7707914240,
+  "local_listening_ports_running": false,
+  "server_inference_jobs_running": false,
+  "private_notes_archive_bytes": 93243669,
+  "restart_document": "docs/FINAL_STATE.md",
+  "handoff": "records/2026-11-02/CLOSEOUT.md",
+  "verification": "results/closeout_2026-11-02_hf_verification.json",
+  "pending_work": []
+}

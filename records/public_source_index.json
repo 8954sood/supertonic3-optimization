@@ -235,6 +235,21 @@
     "sha256": "be1b99c5365a553fe1c626622c86653847364562ff368135a513e33210542558"
   },
   {
+    "path": "results/closeout_2026-11-02_hf_verification.json",
+    "bytes": 21129,
+    "sha256": "e0301e6c6cd5b0544d91e0abb519cecae1117171b9cb494db41a130c8de4aad7"
+  },
+  {
+    "path": "results/closeout_2026-11-02_local_cleanup.json",
+    "bytes": 56247,
+    "sha256": "a73cfa45ca9345ec30cc7c8600df0a0ac3f2f15506abc747e2f31b555e6ea416"
+  },
+  {
+    "path": "results/closeout_2026-11-02_server_cleanup.json",
+    "bytes": 7330,
+    "sha256": "d00f0d39e667d7f179429df86aaea18a8f1cdba3506af84acf3beb218fe83b28"
+  },
+  {
     "path": "results/crossplatform_mixed_v1.json",
     "bytes": 1456,
     "sha256": "d5e500f16e101836b03279f60764c1e3f0148248e2e4885a69aebb1599a08818"

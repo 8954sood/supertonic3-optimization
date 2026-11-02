@@ -1,0 +1,322 @@
+{
+  "scope": "Only generated assets inside the existing task directory; source, small results, and notes archive retained",
+  "active_task_processes_before": 0,
+  "removed": [
+    {
+      "path": "models",
+      "files": 790,
+      "logical_bytes": 7120945401
+    },
+    {
+      "path": "samples",
+      "files": 270,
+      "logical_bytes": 182332392
+    },
+    {
+      "path": ".venv",
+      "files": 6068,
+      "logical_bytes": 304192237
+    },
+    {
+      "path": "supertonic-linux-wheels",
+      "files": 52,
+      "logical_bytes": 59043277
+    },
+    {
+      "path": "ort120",
+      "files": 309,
+      "logical_bytes": 37940512
+    },
+    {
+      "path": ".private",
+      "files": 9,
+      "logical_bytes": 96473193
+    },
+    {
+      "path": "round16-eval/models",
+      "files": 110,
+      "logical_bytes": 968791468
+    },
+    {
+      "path": "round6-model-overlays.tar.gz",
+      "files": 1,
+      "logical_bytes": 75077705
+    },
+    {
+      "path": "onnxruntime_extensions-0.15.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "files": 1,
+      "logical_bytes": 2644100
+    },
+    {
+      "path": "round6-engine-overlays.tar.gz",
+      "files": 1,
+      "logical_bytes": 75093932
+    },
+    {
+      "path": "libexact_accum.so",
+      "files": 1,
+      "logical_bytes": 78000
+    },
+    {
+      "path": "round4-server-candidates.tar.gz",
+      "files": 1,
+      "logical_bytes": 263328803
+    },
+    {
+      "path": "onnxruntime-1.20.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "files": 1,
+      "logical_bytes": 13333903
+    },
+    {
+      "path": "round4-vocoder-followup.tar.gz",
+      "files": 1,
+      "logical_bytes": 185593495
+    },
+    {
+      "path": "supertonic-linux-wheels.tar.gz",
+      "files": 1,
+      "logical_bytes": 58358158
+    },
+    {
+      "path": "libexact_v3.so",
+      "files": 1,
+      "logical_bytes": 94992
+    },
+    {
+      "path": "libexact_col.so",
+      "files": 1,
+      "logical_bytes": 71040
+    },
+    {
+      "path": "libexact_4x16.so",
+      "files": 1,
+      "logical_bytes": 73800
+    },
+    {
+      "path": "round4-selected-fast.tar.gz",
+      "files": 1,
+      "logical_bytes": 26839966
+    },
+    {
+      "path": "native/libexact_int8.so",
+      "files": 1,
+      "logical_bytes": 84552
+    },
+    {
+      "path": "native/libexact_reference_round9.so",
+      "files": 1,
+      "logical_bytes": 78024
+    },
+    {
+      "path": "native/libexact_combined.so",
+      "files": 1,
+      "logical_bytes": 89512
+    },
+    {
+      "path": "native/libexact_v4.so",
+      "files": 1,
+      "logical_bytes": 84552
+    },
+    {
+      "path": "native/libexact_group32.so",
+      "files": 1,
+      "logical_bytes": 92392
+    },
+    {
+      "path": "native/libexact_group64.so",
+      "files": 1,
+      "logical_bytes": 97200
+    },
+    {
+      "path": "native/libexact_tilev2.so",
+      "files": 1,
+      "logical_bytes": 84552
+    },
+    {
+      "path": "native/libexact_mixed.so",
+      "files": 1,
+      "logical_bytes": 92728
+    },
+    {
+      "path": "native/libpacked_blas.so",
+      "files": 1,
+      "logical_bytes": 57896
+    },
+    {
+      "path": "native/libexact_block32.so",
+      "files": 1,
+      "logical_bytes": 85808
+    },
+    {
+      "path": "native/libexact_int8_v1.so",
+      "files": 1,
+      "logical_bytes": 68928
+    },
+    {
+      "path": "native/libexact_aligned.so",
+      "files": 1,
+      "logical_bytes": 84984
+    },
+    {
+      "path": "native/libexact_int8_v2.so",
+      "files": 1,
+      "logical_bytes": 78008
+    },
+    {
+      "path": "native/libexact_epilogue.so",
+      "files": 1,
+      "logical_bytes": 82992
+    },
+    {
+      "path": "native/libexact_m3n16.so",
+      "files": 1,
+      "logical_bytes": 83424
+    },
+    {
+      "path": "native/libexact_panel16.so",
+      "files": 1,
+      "logical_bytes": 99872
+    },
+    {
+      "path": "round16-eval/native/libexact_gcc.so",
+      "files": 1,
+      "logical_bytes": 20696
+    },
+    {
+      "path": "round16-eval/native/libexact_xmm.so",
+      "files": 1,
+      "logical_bytes": 83840
+    },
+    {
+      "path": "round16-eval/native/libexact_int8.so",
+      "files": 1,
+      "logical_bytes": 95408
+    },
+    {
+      "path": "round16-eval/native/libexact_safe_panels.so",
+      "files": 1,
+      "logical_bytes": 87552
+    },
+    {
+      "path": "round16-eval/native/libexact_likely_unroll.so",
+      "files": 1,
+      "logical_bytes": 93416
+    },
+    {
+      "path": "round16-eval/native/libexact_tails.so",
+      "files": 1,
+      "logical_bytes": 91776
+    },
+    {
+      "path": "round16-eval/native/libexact_spans.so",
+      "files": 1,
+      "logical_bytes": 86768
+    },
+    {
+      "path": "round16-eval/native/libexact_v4_public.so",
+      "files": 1,
+      "logical_bytes": 84568
+    },
+    {
+      "path": "round16-eval/native/libexact_sparse_correction.so",
+      "files": 1,
+      "logical_bytes": 88488
+    },
+    {
+      "path": "round16-eval/native/libexact_selective_memones.so",
+      "files": 1,
+      "logical_bytes": 92392
+    },
+    {
+      "path": "round16-eval/native/libexact_v5_candidate.so",
+      "files": 1,
+      "logical_bytes": 95408
+    },
+    {
+      "path": "round16-eval/native/libexact_adaptive_m3.so",
+      "files": 1,
+      "logical_bytes": 86448
+    },
+    {
+      "path": "round16-eval/native/libexact_likely.so",
+      "files": 1,
+      "logical_bytes": 84792
+    },
+    {
+      "path": "round16-eval/native/libexact_joined_flags.so",
+      "files": 1,
+      "logical_bytes": 86216
+    },
+    {
+      "path": "round16-eval/native/libexact_sparse_tails.so",
+      "files": 1,
+      "logical_bytes": 95424
+    },
+    {
+      "path": "round16-eval/native/libexact_round18_v3.so",
+      "files": 1,
+      "logical_bytes": 94992
+    },
+    {
+      "path": "round16-eval/native/libexact_adaptive.so",
+      "files": 1,
+      "logical_bytes": 84704
+    },
+    {
+      "path": "round16-eval/native/libexact_m12n8.so",
+      "files": 1,
+      "logical_bytes": 94480
+    },
+    {
+      "path": "round16-eval/native/libexact_memones.so",
+      "files": 1,
+      "logical_bytes": 84664
+    },
+    {
+      "path": "round16-eval/native/libexact_specialized.so",
+      "files": 1,
+      "logical_bytes": 131312
+    },
+    {
+      "path": "round16-eval/native/libexact_memones_ordered.so",
+      "files": 1,
+      "logical_bytes": 84064
+    },
+    {
+      "path": "round16-eval/native/libexact_m10n8.so",
+      "files": 1,
+      "logical_bytes": 93056
+    },
+    {
+      "path": "round16-eval/native/libexact_sparse_tails_memones.so",
+      "files": 1,
+      "logical_bytes": 95880
+    },
+    {
+      "path": "round16-eval/experiments/__pycache__",
+      "files": 1,
+      "logical_bytes": 16470
+    },
+    {
+      "path": "round16-eval/__pycache__",
+      "files": 4,
+      "logical_bytes": 32139
+    },
+    {
+      "path": "__pycache__",
+      "files": 6,
+      "logical_bytes": 29516
+    }
+  ],
+  "removed_logical_bytes": 9473766267,
+  "available_bytes_before": 34796027904,
+  "available_bytes_after": 42503942144,
+  "observed_available_increase_bytes": 7707914240,
+  "private_notes_archive": {
+    "files": 2531,
+    "bytes": 5371889,
+    "sha256": "4d34dad83de71342a91b01d54f4e90d2d63d134bec6fca36ada5741bcb20dd73"
+  },
+  "outside_task_directory_modified": false,
+  "background_work_remaining": false
+}

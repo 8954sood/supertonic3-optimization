@@ -1,5 +1,6 @@
 # Credentials and local machine state
 .private/
+/local-archive/
 .hf-assets/
 .env
 .env.*

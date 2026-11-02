@@ -1,5 +1,8 @@
 # 작업 기록 색인
 
+- [2026-11-02 작업 종료: 최종 Linux/Mac export 공개·백업 검증·로컬/서버 정리](records/2026-11-02/CLOSEOUT.md)
+- [최종 보관 상태와 복원 방법](docs/FINAL_STATE.md)
+
 - [18차: 엔진 v1~v5 동일 조건 RTF·84프로세스·전체 편차·추가 그래프 진단](records/2026-10-30/ROUND18_REMEASUREMENT.md)
 - [18차 상태·설정·검증·후속 과제](records/2026-10-30/round18_state.json)
 
